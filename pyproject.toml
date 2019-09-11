@@ -1,0 +1,25 @@
+[tool.black]
+line-length = 120
+target-version = ["py36", "py37"]
+include = "(json_schema_for_humans|tests).*\\.pyi?$|setup.py"
+exclude = """
+(
+  /( \
+     \\.eggs \
+    |\\.git \
+    |\\.hg \
+    |\\.mypy_cache \
+    |\\.pytest_cache \
+    |py\\d+_venv \
+    |\\.tox \
+    |\\.venv \
+    |_build \
+    |buck-out \
+    |build \
+    |dist \
+    |html-coverage \
+    |docs \
+    |target
+  )/
+)
+"""

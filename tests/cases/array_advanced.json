@@ -1,0 +1,23 @@
+{
+  "$id": "https://example.com/arrays.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "A little food fun",
+  "type": "object",
+  "properties": {
+    "fruits": {
+      "type": "array",
+      "description": "5 to 8 fruits that you like",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 5,
+      "maxItems": 8,
+      "uniqueItems": true
+    },
+    "vegetables": {
+      "type": "array",
+      "items": {},
+      "contains": {"const":  "eggplant"}
+    }
+  }
+}

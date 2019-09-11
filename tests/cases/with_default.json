@@ -1,0 +1,23 @@
+{
+  "$id": "https://example.com/person.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "User Preference",
+  "type": "object",
+  "properties": {
+    "favorite_os": {
+      "enum": ["Windows", "Mac", "Linux"],
+      "default": "Linux"
+    },
+    "favorite_colors": {
+      "type": "array",
+      "items": {"enum": ["green", "blue", "orange", "red", "white", "black"]},
+      "default": ["white", "blue"]
+    },
+    "desired_number_of_shoes": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2,
+      "default": 2
+    }
+  }
+}
