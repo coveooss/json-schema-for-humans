@@ -28,4 +28,4 @@ jobs:
     - name: Test with tox
       run: |
         pip install tox
-        tox
+        tox -e py${{ matrix.python-version }}
