@@ -120,13 +120,13 @@
         {%- endif -%}
         {%- if type.startswith("array") -%}
             {%- if "minItems" in property -%}
-                {{ restriction("Must contain a minimum of <code>" ~ property.minItems ~ "</code> items", "min-items") }}}
+                {{ restriction("Must contain a minimum of <code>" ~ property.minItems ~ "</code> items", "min-items") }}
             {%- endif -%}
             {%- if "maxItems" in property -%}
-                {{ restriction("Must contain a maximum of <code>" ~ property.maxItems ~ "</code> items", "max-items") }}}
+                {{ restriction("Must contain a maximum of <code>" ~ property.maxItems ~ "</code> items", "max-items") }}
             {%- endif -%}
             {%- if "uniqueItems" in property and property.uniqueItems == True -%}
-                {{ restriction("All items must be unique", "unique-items") }}}
+                {{ restriction("All items must be unique", "unique-items") }}
             {%- endif -%}
             {%- if "items" in property and property["items"] is mapping and property["items"] != {} -%}
                 <h4>Each item of this array must be:</h4>

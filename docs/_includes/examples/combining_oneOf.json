@@ -1,0 +1,24 @@
+{
+  "$id": "http://example.com/entry-schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "JSON Schema for an fstab entry",
+  "type": "object",
+  "required": [ "storage" ],
+  "properties": {
+    "storage": {
+      "type": "object",
+      "oneOf": [
+        { "$ref": "#/definitions/diskDevice" },
+        { "$ref": "#/definitions/diskUUID" },
+        { "$ref": "#/definitions/nfs" },
+        { "$ref": "#/definitions/tmpfs" }
+      ]
+    }
+  },
+  "definitions": {
+    "diskDevice": {},
+    "diskUUID": {},
+    "nfs": {},
+    "tmpfs": {}
+  }
+}

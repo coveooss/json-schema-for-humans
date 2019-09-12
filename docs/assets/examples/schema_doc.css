@@ -1,0 +1,57 @@
+body {
+  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+  color: #333;
+  font-weight: 300;
+  padding: 40px;
+}
+
+.btn.btn-link {
+    font-size: 18px;
+}
+
+.description.collapse:not(.show) {
+    max-height: 100px !important;
+    overflow: hidden;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.description.collapsing {
+    min-height: 100px !important;
+}
+
+.collapse-description-link.collapsed:after  {
+    content: '+ Read More';
+}
+
+.collapse-description-link:not(.collapsed):after {
+    content: '- Read Less';
+}
+
+.badge {
+    font-size: 100%;
+}
+
+.badge.value-type {
+    font-size: 120%;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+
+.badge.default-value {
+    font-size: 120%;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.badge.restriction {
+    display: inline-block;
+}
+
+.badge.required-property,.badge.deprecated-property {
+    font-size: 100%;
+    margin-left: 10px;
+}

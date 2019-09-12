@@ -2,6 +2,8 @@
 
 Quickly generate a beautiful HTML static page documenting a JSON schema
 
+[Documentation](https://coveooss.github.io/json-schema-for-humans)
+
 ## Installation
 ```
 pip install json-schema-for-humans
@@ -70,3 +72,11 @@ References to schemas in other files are not supported for now.
 Just run tox
 
 `tox`
+
+### Generating doc
+The documentation is generated using jekyll and hosted on GitHub Pages
+
+- Change your current working directory to `docs`
+- Run ``python generate_examples.py``. This will get all examples from `tests/cases`, render the resulting HTML and
+ include it in the appropriate folders in the jekyll site.
+- If you have added an example, add the file name (without `.json`), the display name and description in `_data/examples.yaml`
