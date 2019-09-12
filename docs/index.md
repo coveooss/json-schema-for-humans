@@ -2,6 +2,8 @@
 title: JSON Schema for Humans
 ---
 
+{% include README.md %}
+
 # Examples
 {% for example in site.data.examples %}
 ## {{ example.display_name }}
