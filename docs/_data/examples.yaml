@@ -1,6 +1,9 @@
 - name: basic
   display_name: Basic schema
   description: A very simple example
+- name: multiple_types
+  display_name: Multiple Types
+  description: This one has several options for the type
 - name: geo
   display_name: Geographical coordinates
   description: Introduces numerical values that have restrictions

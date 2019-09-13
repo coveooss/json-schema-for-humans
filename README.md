@@ -12,16 +12,18 @@ pip install json-schema-for-humans
 ## Usage
 
 ```
-generate-schema-doc [OPTIONS] SCHEMA_FILE RESULT_FILE
+generate-schema-doc [OPTIONS] SCHEMA_FILE [RESULT_FILE]
 ```
 
 `SCHEMA_FILE` must be a valid JSON Schema
 
 A CSS file will be copied in the same directory as `RESULT_FILE`
 
+The default value for `RESULT_FILE` is `schema_doc.html`
+
 ## Options
 
-### --minify
+### --minify/--no-minify
 On by default
 
 Minify the output HTML document

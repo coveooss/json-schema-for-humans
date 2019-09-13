@@ -96,7 +96,14 @@ def test_basic() -> None:
     _assert_required(soup, [False] * 3)
 
 
-def test_geo():
+def test_multiple_types() -> None:
+    """Test rendering a schema with type being an array."""
+    soup = _generate_case("multiple_types")
+
+    _assert_types(soup, ["string", "string or null", "integer or number", "integer, string, number or null"])
+
+
+def test_geo() -> None:
     """Test rendering a schema with numerical values that have restrictions"""
     soup = _generate_case("geo")
 

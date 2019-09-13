@@ -129,29 +129,37 @@ def get_type_name(property_dict: Dict[str, Any]) -> str:
 
         return TYPE_ENUM
 
+    def _add_subtype_if_array(type_name: str):
+        if type_name == TYPE_ARRAY:
+            items = property_dict.get(ITEMS, {})
+            if not items:
+                return type_name
+
+            subtype = items.get(TYPE)
+            if TYPE_ENUM in items:
+                subtype = _enum_type(items[TYPE_ENUM])
+
+            if not subtype:
+                # Too complex to guess items
+                return type_name
+
+            type_name = f"{type_name} of {subtype}"
+
+        return type_name
+
     if TYPE_CONST in property_dict:
         return TYPE_CONST
     if TYPE_ENUM in property_dict:
         return _enum_type(property_dict[TYPE_ENUM])
 
-    type_name = property_dict.get(TYPE) or TYPE_OBJECT
+    type_names: Union[str, List[str]] = property_dict.get(TYPE) or TYPE_OBJECT
 
-    if type_name == TYPE_ARRAY:
-        items = property_dict.get(ITEMS, {})
-        if not items:
-            return type_name
+    if isinstance(type_names, str):
+        type_names = [type_names]
 
-        subtype = items.get(TYPE)
-        if TYPE_ENUM in items:
-            subtype = _enum_type(items[TYPE_ENUM])
+    type_names = [_add_subtype_if_array(type_name) for type_name in type_names]
 
-        if not subtype:
-            # Too complex to guess items
-            return type_name
-
-        type_name = f"{type_name} of {subtype}"
-
-    return type_name
+    return ", ".join(type_names[:-1]) + (" or " if len(type_names) > 1 else "") + type_names[-1]
 
 
 def get_description(description: Optional[str]) -> str:
@@ -337,7 +345,7 @@ def copy_css_to_target(result_file_path: str) -> None:
 
 @click.command()
 @click.argument("schema_file", nargs=1, type=click.File("r", encoding="utf-8"))
-@click.argument("result_file", nargs=1, type=click.File("w+", encoding="utf-8"))
+@click.argument("result_file", nargs=1, type=click.File("w+", encoding="utf-8"), default="schema_doc.html")
 @click.option("--minify/--no-minify", default=True, help="Run minification om the HTML result")
 @click.option(
     "--deprecated-from-description", is_flag=True, help="Look in the description to find if an attribute is deprecated"
