@@ -54,6 +54,14 @@ def _assert_numeric_restrictions(soup: BeautifulSoup, restrictions: List[str]) -
     _assert_soup_results_text(soup, "numeric-restriction", restrictions)
 
 
+def _assert_string_format(soup: BeautifulSoup, string_formats: List[str]) -> None:
+    _assert_soup_results_text(
+        soup,
+        "string-format-restriction",
+        [f"Must respect the format {format_string}" for format_string in string_formats],
+    )
+
+
 def _assert_one_of_options(soup: BeautifulSoup, nb_options: int) -> None:
     _assert_soup_results_text(soup, "oneOf-option", [f"Option {str(i + 1)}" for i in range(nb_options)])
 
@@ -117,6 +125,13 @@ def test_geo() -> None:
         ],
     )
     _assert_required(soup, [True] * 2)
+
+
+def test_string_format() -> None:
+    """Test rendering a schema that uses the "format" keyword on strings"""
+    soup = _generate_case("string_format")
+
+    _assert_string_format(soup, ["date-time"])
 
 
 def test_array() -> None:

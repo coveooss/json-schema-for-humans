@@ -2,6 +2,50 @@
     <p><span class="badge badge-light restriction {{ css_class_name }}-restriction">{{ inner_text }}</span></p>
 {%- endmacro -%}
 
+{%- macro string_restriction(string_format) -%}
+{%- set restriction_text = "Must respect the format <code>" ~ string_format ~ "</code>" -%}
+{%- if string_format == "date-time" -%}
+    {%- set restriction_text = "Format <code>date-time</code>: Date and time together, for example, <code>2018-11-13T20:20:39+00:00</code>." -%}
+{%- endif -%}
+{%- if string_format == "time" -%}
+    {%- set restriction_text = "Format <code>time</code>: Time, for example, <code>20:20:39+00:00</code>" -%}
+{%- endif -%}
+{%- if string_format == "date" -%}
+    {%- set restriction_text = "Format <code>date</code>: Date, for example, <code>2018-11-13</code>" -%}
+{%- endif -%}
+{%- if string_format == "email" -%}
+    {%- set restriction_text = "Format <code>email</code>: Internet email address, see <a href=\"http://tools.ietf.org/html/rfc5322#section-3.4.1\">RFC 5322, section 3.4.1</a>." -%}
+{%- endif -%}
+{%- if string_format == "idn-email" -%}
+    {%- set restriction_text = "Format <code>idn-email</code>: The internationalized form of an Internet email address, see <a href=\"https://tools.ietf.org/html/rfc6531\">RFC 6531</a>." -%}
+{%- endif -%}
+{%- if string_format == "hostname" -%}
+{%- set restriction_text = "Format <code>hostname</code>: Internet host name, see <a href=\"http://tools.ietf.org/html/rfc1034#section-3.1\">RFC 1034, section 3.1</a>." -%}
+{%- endif -%}
+{%- if string_format == "idn-hostname" -%}
+    {%- set restriction_text = "Format <code>idn-hostname</code>: An internationalized Internet host name, see <a href=\"https://tools.ietf.org/html/rfc5890#section-2.3.2.3\">RFC5890, section 2.3.2.3</a>." -%}
+{%- endif -%}
+{%- if string_format == "ipv4" -%}
+    {%- set restriction_text = "Format <code>ipv4</code>: IPv4 address, according to dotted-quad ABNF syntax as defined in <a href=\"http://tools.ietf.org/html/rfc2673#section-3.2\">RFC 2673, section 3.2</a>." -%}
+{%- endif -%}
+{%- if string_format == "ipv6" -%}
+    {%- set restriction_text = "Format <code>ipv6</code>: An internationalized Internet host name, see <a href=\"https://tools.ietf.org/html/rfc5890#section-2.3.2.3\">RFC5890, section 2.3.2.3</a>." -%}
+{%- endif -%}
+{%- if string_format == "uri" -%}
+    {%- set restriction_text = "Format <code>uri</code>: A universal resource identifier (URI), according to <a href=\"http://tools.ietf.org/html/rfc3986\">RFC3986</a>." -%}
+{%- endif -%}
+{%- if string_format == "uri-reference" -%}
+    {%- set restriction_text = "Format <code>uri-reference</code>: A URI Reference (either a URI or a relative-reference), according to <a href=\"http://tools.ietf.org/html/rfc3986#section-4.1\">RFC3986, section 4.1</a>." -%}
+{%- endif -%}
+{%- if string_format == "iri" -%}
+    {%- set restriction_text = "Format <code>iri</code>: The internationalized equivalent of a \"uri\", according to <a href=\"https://tools.ietf.org/html/rfc3987\">RFC3987</a>." -%}
+{%- endif -%}
+{%- if string_format == "iri-reference" -%}
+    {%- set restriction_text = "Format <code>iri-reference</code>: The internationalized equivalent of a \"uri-reference\", according to <a href=\"https://tools.ietf.org/html/rfc3987\">RFC3987</a>" -%}
+{%- endif -%}
+{{ restriction(restriction_text, "string-format") }}
+{%- endmacro -%}
+
 {%- macro tabbed_section(operator, property, index) -%}
     <h2 class="handle">
       <label>{% if operator == "allOf" -%}All of{% elif operator == "anyOf" -%}Any of{% elif operator == "oneOf" -%}One of{% endif -%}</label>
@@ -110,6 +154,9 @@
             {%- endif -%}
             {%- if "maxLength" in property -%}
                 {{ restriction("Must be at most <code>" ~ property.maxLength ~ "</code> characters long", "max-length") }}
+            {%- endif -%}
+            {%- if "format" in property -%}
+                {{ string_restriction(property["format"]) }}
             {%- endif -%}
         {%- endif -%}
         {%- if type in ["integer", "number"] -%}
