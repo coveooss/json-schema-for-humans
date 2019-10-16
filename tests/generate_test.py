@@ -56,9 +56,7 @@ def _assert_numeric_restrictions(soup: BeautifulSoup, restrictions: List[str]) -
 
 def _assert_string_format(soup: BeautifulSoup, string_formats: List[str]) -> None:
     _assert_soup_results_text(
-        soup,
-        "string-format-restriction",
-        [f"Must respect the format {format_string}" for format_string in string_formats],
+        soup, "string-format-restriction", [f"Format {format_string}" for format_string in string_formats]
     )
 
 
@@ -131,7 +129,15 @@ def test_string_format() -> None:
     """Test rendering a schema that uses the "format" keyword on strings"""
     soup = _generate_case("string_format")
 
-    _assert_string_format(soup, ["date-time"])
+    _assert_string_format(
+        soup,
+        [
+            "date-time: Date and time together, for example, 2018-11-13T20:20:39+00:00.",
+            "email: Internet email address, see RFC 5322, section 3.4.1.",
+            "hostname: Internet host name, see RFC 1034, section 3.1.",
+            "ipv6: An internationalized Internet host name, see RFC5890, section 2.3.2.3.",
+        ],
+    )
 
 
 def test_array() -> None:

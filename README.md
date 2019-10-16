@@ -2,7 +2,7 @@
 
 Quickly generate a beautiful HTML static page documenting a JSON schema
 
-[Documentation](https://coveooss.github.io/json-schema-for-humans)
+[Documentation with examples](https://coveooss.github.io/json-schema-for-humans)
 
 ## Installation
 ```

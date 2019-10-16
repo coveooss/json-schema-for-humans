@@ -18,7 +18,7 @@
       "minimum": 0
     },
     "anything": {
-      "description": "Ay other info you like",
+      "description": "Any other info you like",
       "type": ["integer", "string", "number", "null"]
     }
   }
