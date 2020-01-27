@@ -158,6 +158,21 @@ def test_with_definitions():
     _assert_required(soup, [False] * 8)
 
 
+def test_with_multiple_descriptions():
+    """Test rendering a schema that uses multiple descriptions including with the $ref keyword"""
+    soup = _generate_case("with_descriptions")
+
+    _assert_descriptions(
+        soup,
+        [
+            "Exact address",
+            "Exact address",
+            "Delivery info depending on the delivery type",
+            "The delivery is a gift, no prices displayed",
+        ],
+    )
+
+
 def test_combining_one_of():
     """Test rendering of oneOf schema attribute in tabs"""
     soup = _generate_case("combining_oneOf")
