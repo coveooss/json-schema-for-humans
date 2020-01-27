@@ -37,6 +37,12 @@ def _assert_property_names(soup: BeautifulSoup, property_names: List[str]) -> No
     _assert_soup_results_text(soup, "property-name", property_names)
 
 
+def _assert_title(soup: BeautifulSoup, title: str) -> None:
+    """Assert the result file contains the provided title"""
+    assert soup.head.title.string == title
+    assert soup.head.h1.string == title
+
+
 def _assert_descriptions(soup: BeautifulSoup, descriptions: List[str]) -> None:
     """Assert the result file contains exactly the provided descriptions in the same order"""
     _assert_soup_results_text(soup, "description", descriptions)
@@ -80,7 +86,7 @@ def _assert_required(soup: BeautifulSoup, is_required_properties: List[bool]) ->
 
 
 def test_basic() -> None:
-    """Test rendering a basic schema"""
+    """Test rendering a basic schema with title"""
     soup = _generate_case("basic")
 
     _assert_property_names(soup, ["firstName", "lastName", "age"])
@@ -92,6 +98,7 @@ def test_basic() -> None:
             "Age in years which must be equal to or greater than zero.",
         ],
     )
+    _assert_title(soup, "Person")
     _assert_numeric_restrictions(soup, ["Value must be greater or equal to 0"])
     _assert_required(soup, [False] * 3)
 
