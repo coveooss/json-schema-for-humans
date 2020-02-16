@@ -65,8 +65,8 @@
         {%- endif -%}
         {%- if "properties" in property -%}
             {%- set required_properties = property.get("required") or [] -%}
-            {%- for property_name, property in property["properties"].items() -%}
-                {{ subsection(False, index ~ "_" ~ loop.index, property_name, property) }}
+            {%- for sub_property_name, sub_property in property["properties"].items() -%}
+                {{ subsection(False, index ~ "_" ~ loop.index, sub_property_name, sub_property, required_properties) }}
             {%- endfor -%}
         {%- endif -%}
 
@@ -151,7 +151,7 @@
     {%- endif -%}
 {%- endmacro -%}
 
-{%- macro subsection(expanded, index, property_name, property) -%}
+{%- macro subsection(expanded, index, property_name, property, required_properties) -%}
     {# Resolve reference #}
     {%- set property = (property | resolve_ref(schema)) -%}
 
@@ -206,7 +206,7 @@
     {%- if properties -%}
         {%- set required_properties = schema.get("required") or [] -%}
         {%- for property_name, property in properties.items() -%}
-            {{ subsection(False, loop.index, property_name, property) }}
+            {{ subsection(False, loop.index, property_name, property, required_properties) }}
         {%- endfor -%}
     {%- endif -%}
 </body>
