@@ -133,7 +133,7 @@ def test_array() -> None:
     _assert_property_names(soup, ["fruits", "vegetables", "veggieName", "veggieLike"])
     _assert_descriptions(soup, ["The name of the vegetable.", "Do I like this vegetable?"])
     _assert_types(soup, ["array of string", "string", "array", "object", "string", "boolean"])
-    _assert_required(soup, [False] * 4)
+    _assert_required(soup, [False, False, True, True])
 
 
 def test_array_advanced():
@@ -155,7 +155,7 @@ def test_with_definitions():
         ["billing_address", "street_address", "city", "state", "shipping_address", "street_address", "city", "state"],
     )
     _assert_types(soup, ["object", "string", "string", "string"] * 2)
-    _assert_required(soup, [False] * 8)
+    _assert_required(soup, [False, True, True, True, False, True, True, True])
 
 
 def test_with_multiple_descriptions():
