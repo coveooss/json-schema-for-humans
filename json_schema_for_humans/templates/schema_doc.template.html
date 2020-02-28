@@ -31,7 +31,7 @@
 {%- endmacro -%}
 
 {%- macro content(index, property_name, property) -%}
-    {%- set property = (property | resolve_ref(schema)) -%}
+    {%- set property = (property | resolve_ref(schema, schema_path)) -%}
 
     {%- set description = property.get("description") | get_description -%}
     {# Display description #}
@@ -153,7 +153,7 @@
 
 {%- macro subsection(expanded, index, property_name, property, required_properties) -%}
     {# Resolve reference #}
-    {%- set property = (property | resolve_ref(schema)) -%}
+    {%- set property = (property | resolve_ref(schema, schema_path)) -%}
 
     {%- set is_required = property_name in required_properties -%}
     <div class="accordion" id="accordion{{ index }}">
