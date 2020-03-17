@@ -1,29 +1,31 @@
 import json
 import os
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Tuple
 
 from bs4 import BeautifulSoup
 
 from json_schema_for_humans.generate import generate_from_schema
 
 
-def _get_test_case(name: str) -> Dict[str, Any]:
+def _get_test_case(name: str) -> Tuple[Dict[str, Any], List[str]]:
     """Get the loaded JSON schema for a test case"""
-    with open(os.path.join(os.path.dirname(__file__), "cases", f"{name}.json")) as test_case_file:
-        return json.load(test_case_file)
+    test_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "cases", f"{name}.json"))
+    with open(test_path) as test_case_file:
+        return (json.load(test_case_file), test_path.split(os.path.sep))
 
 
 def _generate_case(case_name: str, find_deprecated: bool = False, find_default: bool = False) -> BeautifulSoup:
     """Get the BeautifulSoup object for a test case"""
+    test_contents, test_path = _get_test_case(case_name)
     return BeautifulSoup(
-        generate_from_schema(_get_test_case(case_name), False, find_deprecated, find_default), "html.parser"
+        generate_from_schema(test_contents, test_path, False, find_deprecated, find_default), "html.parser"
     )
 
 
 def _assert_soup_results_text(soup: BeautifulSoup, class_name: str, texts: List[str]) -> None:
     """Assert that all the HTML elements with the provided class found in the schema has the supplied text
 
-    There must be exactly has many elements as the length of the supplied values and they must be in the same order
+    There must be exactly as many elements as the length of the supplied values and they must be in the same order
     """
     elements = soup.find_all(class_=class_name)
 
@@ -124,6 +126,46 @@ def test_geo() -> None:
         ],
     )
     _assert_required(soup, [True] * 2)
+
+
+def test_references() -> None:
+    """Test rendering a schema with references"""
+    soup = _generate_case("references")
+
+    _assert_property_names(
+        soup,
+        [
+            "anchor_with_slash",
+            "propertyA",
+            "anchor_no_slash",
+            "anchor_nested_reference",
+            "same_file_anchor_with_slash",
+            "same_file_anchor_no_slash",
+            "propertyA",
+            "same_file_nested_reference",
+            "other_file_anchor",
+            "with_wrap",
+            "other_file_dot_anchor",
+            "with_wrap",
+            "other_file_dot_dot_anchor",
+            "with_wrap",
+            "other_file_only",
+            "not_a_string"
+        ]
+    )
+    _assert_descriptions(
+        soup,
+        [
+            "Description for object_def/items/propertyA",
+            "Description for array_def",
+            "Description for string_def",
+            "Description for object_def/items/propertyA",
+            "The delivery is a gift, no prices displayed",
+            "The delivery is a gift, no prices displayed",
+            "The delivery is a gift, no prices displayed",
+            "Test schema with a not"
+        ],
+    )
 
 
 def test_array() -> None:

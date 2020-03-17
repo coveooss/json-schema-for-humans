@@ -63,10 +63,8 @@ These are **not** supported at the moment (PRs welcome!):
 - Media
 - Conditional subschemas
 
-References from inside a schema are supported (for example `{ $ref: "#/definitions/something" }` will be replaced by the 
-content of `schema["definitions"]["something"]`)
-
-References to schemas in other files are not supported for now.
+References from inside a schema and to schemas in other files are supported (for example `{ $ref: "#/definitions/something" }` will be replaced by the 
+content of `schema["definitions"]["something"]`).
 
 ## Development
 

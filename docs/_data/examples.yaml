@@ -30,3 +30,6 @@
   description: |
     When using `--deprecated-from-description`, a deprecation notice is added if `[Deprecated` is found in
     the description of an attribute
+- name: references
+  display_name: With references
+  description: ''
