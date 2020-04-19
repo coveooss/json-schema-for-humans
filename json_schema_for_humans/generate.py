@@ -65,19 +65,19 @@ def is_deprecated_look_in_description(property_dict: Dict[str, Any]) -> bool:
     return bool(re.match(DEPRECATED_PATTERN, property_dict[DESCRIPTION]))
 
 
-def resolve_ref(property_dict: Dict[str, Any], full_schema: Dict[str, Any], schema_path: List[str]) -> Dict[str, Any]:
+def resolve_ref(property_dict: Dict[str, Any], full_schema: Dict[str, Any], schema_path: List[str]) -> Tuple[Dict[str, Any], List[str]]:
     """Filter. Resolve references in the supplied property. Return the property unchanged if no references found.
 
     See https://json-schema.org/understanding-json-schema/structuring.html#reuse
     """
     if REF not in property_dict:
-        return property_dict
+        return property_dict, schema_path
 
     # Reference found, resolve the path (format "#/a/b/c" or "file.json#/a/b/c", usually "#/definitions/some name")
     pound_split = property_dict[REF].split('#')
     ref_file_path = [x for x in pound_split[0].split('/') if x != '']
     ref_anchor_path = [x for x in pound_split[1].split('/') if x != ''] if len(pound_split) > 1 else []
-    target = full_schema if ref_anchor_path else None
+    target = full_schema if ref_anchor_path else {}
 
     # Resolve file path portion of reference and open schema file
     if ref_file_path:
@@ -91,16 +91,18 @@ def resolve_ref(property_dict: Dict[str, Any], full_schema: Dict[str, Any], sche
                 target_path.append(ref_path_segment)
         with open(os.path.sep.join(target_path)) as schema_markdown:
             target = json.load(schema_markdown)
+    else:
+        target_path = schema_path
 
     # Resolve anchor portion of reference
     for ref_path_segment in ref_anchor_path:
         if ref_path_segment in target:
-            target = (target or {}).get(ref_path_segment)
+            target = target[ref_path_segment]
         else:
-            target = None
+            target = property_dict
             break
 
-    return target or property_dict
+    return target, target_path
 
 
 def python_to_json(value: Any) -> Any:
