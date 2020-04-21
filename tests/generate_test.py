@@ -152,8 +152,8 @@ def test_references() -> None:
             "other_file_only",
             "not_a_string",
             "multi_hierarchy_reference",
-            "propertyA"
-        ]
+            "propertyA",
+        ],
     )
     _assert_descriptions(
         soup,
@@ -166,9 +166,26 @@ def test_references() -> None:
             "The delivery is a gift, no prices displayed",
             "The delivery is a gift, no prices displayed",
             "Test schema with a not",
-            "Contents of propertyA in final.json"
+            "Contents of propertyA in final.json",
         ],
     )
+
+
+def test_top_level_array() -> None:
+    """Test rendering a schema with an array instead of an object at the top level"""
+    soup = _generate_case("top_level_array")
+
+    _assert_title(soup, "Array at top level")
+    _assert_descriptions(soup, ["Sometimes there are no properties", "A string"])
+
+
+def test_top_level_combining() -> None:
+    """Test rendering a schema with a combining property at the top level"""
+    soup = _generate_case("top_level_combining")
+
+    _assert_title(soup, "Combining at top level")
+    _assert_descriptions(soup, ["For the combine"])
+    _assert_types(soup, ["object"] * 4)
 
 
 def test_array() -> None:

@@ -2,7 +2,7 @@ import json
 import os
 import re
 import shutil
-from typing import Any, Dict, List, Optional, Tuple, Type, Union, TextIO
+from typing import Any, Dict, List, Optional, TextIO, Tuple, Type, Union
 
 import click
 import htmlmin
@@ -65,7 +65,9 @@ def is_deprecated_look_in_description(property_dict: Dict[str, Any]) -> bool:
     return bool(re.match(DEPRECATED_PATTERN, property_dict[DESCRIPTION]))
 
 
-def resolve_ref(property_dict: Dict[str, Any], full_schema: Dict[str, Any], schema_path: List[str]) -> Tuple[Dict[str, Any], List[str]]:
+def resolve_ref(
+    property_dict: Dict[str, Any], full_schema: Dict[str, Any], schema_path: List[str]
+) -> Tuple[Dict[str, Any], List[str]]:
     """Filter. Resolve references in the supplied property. Return the property unchanged if no references found.
 
     See https://json-schema.org/understanding-json-schema/structuring.html#reuse
@@ -74,18 +76,18 @@ def resolve_ref(property_dict: Dict[str, Any], full_schema: Dict[str, Any], sche
         return property_dict, schema_path
 
     # Reference found, resolve the path (format "#/a/b/c" or "file.json#/a/b/c", usually "#/definitions/some name")
-    pound_split = property_dict[REF].split('#')
-    ref_file_path = [x for x in pound_split[0].split('/') if x != '']
-    ref_anchor_path = [x for x in pound_split[1].split('/') if x != ''] if len(pound_split) > 1 else []
+    pound_split = property_dict[REF].split("#")
+    ref_file_path = [x for x in pound_split[0].split("/") if x != ""]
+    ref_anchor_path = [x for x in pound_split[1].split("/") if x != ""] if len(pound_split) > 1 else []
     target = full_schema if ref_anchor_path else {}
 
     # Resolve file path portion of reference and open schema file
     if ref_file_path:
         target_path = schema_path[:-1]
         for ref_path_segment in ref_file_path:
-            if ref_path_segment in ('.', ''):
+            if ref_path_segment in (".", ""):
                 continue
-            elif ref_path_segment == '..':
+            elif ref_path_segment == "..":
                 target_path.pop()
             else:
                 target_path.append(ref_path_segment)
@@ -287,6 +289,7 @@ def generate_from_schema(
     minify: bool = False,
     deprecated_from_description: bool = False,
     default_from_description: bool = False,
+    expand_buttons: bool = False,
 ) -> str:
     md = markdown2.Markdown(extras=["fenced-code-blocks"])
     env = jinja2.Environment()
@@ -305,7 +308,7 @@ def generate_from_schema(
     with open(template_path, "r") as template_fp:
         template = env.from_string(template_fp.read())
 
-    rendered = template.render(schema=schema, schema_path=schema_path)
+    rendered = template.render(schema=schema, schema_path=schema_path, expand_buttons=expand_buttons)
     if minify:
         rendered = htmlmin.minify(rendered)
 
@@ -343,12 +346,20 @@ def generate_from_file_object(
     minify: bool,
     deprecated_from_description: bool,
     default_from_description: bool,
+    expand_buttons: bool,
 ) -> None:
     """Generate the JSON schema documentation from opened file objects for both input and output files. The
     result_file should be opened in write mode.
     """
     schema_path = os.path.abspath(schema_file.name).split(os.path.sep)
-    result = generate_from_schema(json.load(schema_file), schema_path, minify, deprecated_from_description, default_from_description)
+    result = generate_from_schema(
+        json.load(schema_file),
+        schema_path,
+        minify,
+        deprecated_from_description,
+        default_from_description,
+        expand_buttons,
+    )
 
     copy_css_to_target(result_file.name)
 
@@ -360,7 +371,10 @@ def copy_css_to_target(result_file_path: str) -> None:
     target_directory = os.path.dirname(result_file_path)
     css_directory = os.path.dirname(__file__)
     if target_directory != css_directory:
-        shutil.copy(os.path.join(css_directory, CSS_FILE_NAME), os.path.join(target_directory, CSS_FILE_NAME))
+        try:
+            shutil.copy(os.path.join(css_directory, CSS_FILE_NAME), os.path.join(target_directory, CSS_FILE_NAME))
+        except shutil.SameFileError:
+            print(f"Not copying {CSS_FILE_NAME} to {os.path.abspath(target_directory)}, file already exists")
 
 
 @click.command()
@@ -373,14 +387,18 @@ def copy_css_to_target(result_file_path: str) -> None:
 @click.option(
     "--default-from-description", is_flag=True, help="Look in the description to find an attribute default value"
 )
+@click.option("--expand-buttons", is_flag=True, help="Add 'Expand all' and 'Collapse all' buttons at the top")
 def main(
     schema_file: TextIO,
     result_file: TextIO,
     minify: bool,
     deprecated_from_description: bool,
     default_from_description: bool,
+    expand_buttons: bool,
 ) -> None:
-    generate_from_file_object(schema_file, result_file, minify, deprecated_from_description, default_from_description)
+    generate_from_file_object(
+        schema_file, result_file, minify, deprecated_from_description, default_from_description, expand_buttons
+    )
 
 
 if __name__ == "__main__":
