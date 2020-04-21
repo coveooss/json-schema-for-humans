@@ -1,0 +1,11 @@
+{
+    "$id": "https://example.com/arrays.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "Schema with reference to final.json",
+    "type": "object",
+    "properties": {
+      "cross_file_reference": {
+        "$ref": "final.json#/definitions/final_object_content"
+      }
+    }
+  }

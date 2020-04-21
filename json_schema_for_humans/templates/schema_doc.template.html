@@ -2,7 +2,7 @@
     <p><span class="badge badge-light restriction {{ css_class_name }}-restriction">{{ inner_text }}</span></p>
 {%- endmacro -%}
 
-{%- macro tabbed_section(operator, property, index) -%}
+{%- macro tabbed_section(operator, property, property_path, index) -%}
     <h2 class="handle">
       <label>{% if operator == "allOf" -%}All of{% elif operator == "anyOf" -%}Any of{% elif operator == "oneOf" -%}One of{% endif -%}</label>
     </h2>
@@ -24,14 +24,14 @@
         {%- for element in property[operator] -%}
             <div class="tab-pane fade card-body {% if loop.index == 1 -%}active show{% endif -%}"
                  id="tab-pane{{ index }}_{{ operator }}_element{{ loop.index }}" role="tabpanel">
-                {{ content(index ~ "_" ~ loop.index, tab_label ~ " " ~ loop.index, element) }}
+                {{ content(index ~ "_" ~ loop.index, tab_label ~ " " ~ loop.index, element, property_path) }}
             </div>
         {%- endfor -%}
     </div>
 {%- endmacro -%}
 
-{%- macro content(index, property_name, property) -%}
-    {%- set property = (property | resolve_ref(schema, schema_path)) -%}
+{%- macro content(index, property_name, property, property_path) -%}
+    {%- set property, property_path = (property | resolve_ref(schema, property_path)) -%}
 
     {%- set description = property.get("description") | get_description -%}
     {# Display description #}
@@ -48,9 +48,9 @@
 
     {# Handle having oneOf or allOf with only one condition #}
     {%- if "allOf" in property and (property["allOf"] | length) == 1 -%}
-        {{ content(index, property_name, property["allOf"][0]) }}
+        {{ content(index, property_name, property["allOf"][0], property_path) }}
     {%- elif "anyOf" in property and (property["anyOf"] | length) == 1 -%}
-        {{ content(index, property_name, property["anyOf"][0]) }}
+        {{ content(index, property_name, property["anyOf"][0], property_path) }}
     {%- else -%}
         {# Resolve type #}
         {%- set default, has_default = property | get_default -%}
@@ -66,26 +66,26 @@
         {%- if "properties" in property -%}
             {%- set required_properties = property.get("required") or [] -%}
             {%- for sub_property_name, sub_property in property["properties"].items() -%}
-                {{ subsection(False, index ~ "_" ~ loop.index, sub_property_name, sub_property, required_properties) }}
+                {{ subsection(False, index ~ "_" ~ loop.index, sub_property_name, sub_property, required_properties, property_path) }}
             {%- endfor -%}
         {%- endif -%}
 
         {# Handle actual requirement #}
         {%- if "allOf" in property -%}
-            <div class="all-of-value">{{ tabbed_section("allOf", property, index) }}</div>
+            <div class="all-of-value">{{ tabbed_section("allOf", property, property_path, index) }}</div>
         {%- endif -%}
         {%- if "anyOf" in property -%}
-            <div class="any-of-value">{{ tabbed_section("anyOf", property, index) }}</div>
+            <div class="any-of-value">{{ tabbed_section("anyOf", property, property_path, index) }}</div>
         {%- endif -%}
         {%- if "oneOf" in property -%}
-            <div class="one-of-value">{{ tabbed_section("oneOf", property, index) }}</div>
+            <div class="one-of-value">{{ tabbed_section("oneOf", property, property_path, index) }}</div>
         {%- endif -%}
         {%- if "not" in property -%}
             <div class="not-value">
             <h4>Must <strong>not</strong> be:</h4>
             <div class="card">
                 <div class="card-body">
-                {{ content(index ~ "_not", property_name, property["not"]) }}
+                {{ content(index ~ "_not", property_name, property["not"], property_path) }}
                 </div>
             </div>
             </div>
@@ -135,7 +135,7 @@
                 <div class="card">
                     <div class="card-body items-definition">
                         {# Note that property["items"] is needed here because property.items is a function #}
-                        {{ content(index ~ "_items", property_name ~ " Items", property["items"]) }}
+                        {{ content(index ~ "_items", property_name ~ " Items", property["items"], property_path) }}
                     </div>
                 </div>
             {%- endif -%}
@@ -143,7 +143,7 @@
                 <h4>At least one of the items must be:</h4>
                 <div class="card">
                     <div class="card-body items-contain-definition">
-                    {{ content(index ~ "_not", property_name, property["contains"]) }}
+                    {{ content(index ~ "_not", property_name, property["contains"], property_path) }}
                     </div>
                 </div>
             {%- endif -%}
@@ -151,9 +151,9 @@
     {%- endif -%}
 {%- endmacro -%}
 
-{%- macro subsection(expanded, index, property_name, property, required_properties) -%}
+{%- macro subsection(expanded, index, property_name, property, required_properties, property_path) -%}
     {# Resolve reference #}
-    {%- set property = (property | resolve_ref(schema, schema_path)) -%}
+    {%- set property, property_path = (property | resolve_ref(schema, property_path)) -%}
 
     {%- set is_required = property_name in required_properties -%}
     <div class="accordion" id="accordion{{ index }}">
@@ -177,7 +177,7 @@
                  class="collapse {% if expanded %}show{% endif %} property-definition-div" aria-labelledby="heading{{ index }}"
                  data-parent="#accordion{{ index }}">
               <div class="card-body">
-                {{ content(index, property_name, property) }}
+                {{ content(index, property_name, property, property_path) }}
               </div>
             </div>
         </div>
@@ -206,7 +206,7 @@
     {%- if properties -%}
         {%- set required_properties = schema.get("required") or [] -%}
         {%- for property_name, property in properties.items() -%}
-            {{ subsection(False, loop.index, property_name, property, required_properties) }}
+            {{ subsection(False, loop.index, property_name, property, required_properties, schema_path) }}
         {%- endfor -%}
     {%- endif -%}
 </body>

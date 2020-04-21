@@ -61,6 +61,9 @@
     },
     "other_file_only": {
       "$ref": "combining_not.json"
+    },
+    "multi_hierarchy_reference": {
+      "$ref": "reference_schemas/intermediate.json#/properties/cross_file_reference"
     }
   }
 }

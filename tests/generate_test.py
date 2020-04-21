@@ -150,7 +150,9 @@ def test_references() -> None:
             "other_file_dot_dot_anchor",
             "with_wrap",
             "other_file_only",
-            "not_a_string"
+            "not_a_string",
+            "multi_hierarchy_reference",
+            "propertyA"
         ]
     )
     _assert_descriptions(
@@ -163,7 +165,8 @@ def test_references() -> None:
             "The delivery is a gift, no prices displayed",
             "The delivery is a gift, no prices displayed",
             "The delivery is a gift, no prices displayed",
-            "Test schema with a not"
+            "Test schema with a not",
+            "Contents of propertyA in final.json"
         ],
     )
 
