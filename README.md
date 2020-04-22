@@ -23,6 +23,11 @@ The default value for `RESULT_FILE` is `schema_doc.html`
 
 ## Options
 
+### --expand-buttons
+Off by default
+
+Add an `Expand all` and a `Collapse all` button at the top of the generated documentation
+
 ### --minify/--no-minify
 On by default
 

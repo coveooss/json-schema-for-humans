@@ -9,6 +9,10 @@ body {
     font-size: 18px;
 }
 
+.btn.btn-primary {
+    margin: 10px;
+}
+
 .description.collapse:not(.show) {
     max-height: 100px !important;
     overflow: hidden;
@@ -54,4 +58,8 @@ body {
 .badge.required-property,.badge.deprecated-property {
     font-size: 100%;
     margin-left: 10px;
+}
+
+.accordion div.card:only-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
