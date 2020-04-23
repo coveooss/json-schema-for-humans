@@ -66,43 +66,48 @@ def is_deprecated_look_in_description(property_dict: Dict[str, Any]) -> bool:
 
 
 def resolve_ref(
-    property_dict: Dict[str, Any], full_schema: Dict[str, Any], schema_path: List[str]
-) -> Tuple[Dict[str, Any], List[str]]:
-    """Filter. Resolve references in the supplied property. Return the property unchanged if no references found.
+    property_dict: Dict[str, Any], full_schema: Dict[str, Any], schema_path: str
+) -> Tuple[Dict[str, Any], str]:
+    """Filter. Resolve references in the supplied property.
 
     See https://json-schema.org/understanding-json-schema/structuring.html#reuse
+
+    :param property_dict: The dict for the current property that can contain a "$ref" key
+    :param full_schema: The complete current schema, used for references inside the same file
+    :param schema_path: Path to the current schema
+    :return: The resolved schema at reference (property_dict unchanged if no references found)
+             and the path to the schema that contained the references
     """
-    if REF not in property_dict:
+    reference_path = property_dict.get(REF)
+    if not reference_path:
         return property_dict, schema_path
 
-    # Reference found, resolve the path (format "#/a/b/c" or "file.json#/a/b/c", usually "#/definitions/some name")
-    pound_split = property_dict[REF].split("#")
-    ref_file_path = [x for x in pound_split[0].split("/") if x != ""]
-    ref_anchor_path = [x for x in pound_split[1].split("/") if x != ""] if len(pound_split) > 1 else []
-    target = full_schema if ref_anchor_path else {}
+    # Reference found, resolve the path (format "#/a/b/c", "file.json#/a/b/c", or "file.json")
+    if "#" not in reference_path:
+        file_path_part = reference_path
+        anchor_part = ""
+    else:
+        file_path_part, anchor_part = reference_path.split("#", maxsplit=1)
 
     # Resolve file path portion of reference and open schema file
-    if ref_file_path:
-        target_path = schema_path[:-1]
-        for ref_path_segment in ref_file_path:
-            if ref_path_segment in (".", ""):
-                continue
-            elif ref_path_segment == "..":
-                target_path.pop()
-            else:
-                target_path.append(ref_path_segment)
-        with open(os.path.sep.join(target_path)) as schema_markdown:
+    if file_path_part:
+        target_path = os.path.abspath(os.path.join(os.path.dirname(schema_path), file_path_part))
+        with open(target_path) as schema_markdown:
             target = json.load(schema_markdown)
     else:
         target_path = schema_path
+        target = full_schema if anchor_part else {}
 
-    # Resolve anchor portion of reference
-    for ref_path_segment in ref_anchor_path:
-        if ref_path_segment in target:
-            target = target[ref_path_segment]
-        else:
-            target = property_dict
-            break
+    if anchor_part:
+        # Resolve anchor portion of reference
+        for ref_path_segment in anchor_part.split("/"):
+            if not ref_path_segment:
+                continue
+            if ref_path_segment in target:
+                target = target[ref_path_segment]
+            else:
+                target = property_dict
+                break
 
     return target, target_path
 
@@ -285,7 +290,7 @@ def get_numeric_restrictions_text(property_dict: Dict[str, Any], before_value: s
 
 def generate_from_schema(
     schema: Dict[str, Any],
-    schema_path: List[str],
+    schema_path: str,
     minify: bool = False,
     deprecated_from_description: bool = False,
     default_from_description: bool = False,
@@ -308,6 +313,11 @@ def generate_from_schema(
     with open(template_path, "r") as template_fp:
         template = env.from_string(template_fp.read())
 
+    if isinstance(schema_path, list):
+        # Backward compatibility
+        schema_path = os.path.sep.join(schema_path)
+    schema_path = os.path.abspath(schema_path)
+
     rendered = template.render(schema=schema, schema_path=schema_path, expand_buttons=expand_buttons)
     if minify:
         rendered = htmlmin.minify(rendered)
@@ -324,11 +334,10 @@ def generate_from_filename(
 ) -> None:
     with open(schema_file_name) as schema_markdown:
         schema = json.load(schema_markdown)
-        schema_path = os.path.abspath(schema_file_name).split(os.path.sep)
 
     rendered_schema_doc = generate_from_schema(
         schema,
-        schema_path,
+        os.path.abspath(schema_file_name),
         minify=minify,
         deprecated_from_description=deprecated_from_description,
         default_from_description=default_from_description,
@@ -351,10 +360,9 @@ def generate_from_file_object(
     """Generate the JSON schema documentation from opened file objects for both input and output files. The
     result_file should be opened in write mode.
     """
-    schema_path = os.path.abspath(schema_file.name).split(os.path.sep)
     result = generate_from_schema(
         json.load(schema_file),
-        schema_path,
+        os.path.abspath(schema_file.name),
         minify,
         deprecated_from_description,
         default_from_description,

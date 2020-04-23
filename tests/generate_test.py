@@ -7,11 +7,11 @@ from bs4 import BeautifulSoup
 from json_schema_for_humans.generate import generate_from_schema
 
 
-def _get_test_case(name: str) -> Tuple[Dict[str, Any], List[str]]:
+def _get_test_case(name: str) -> Tuple[Dict[str, Any], str]:
     """Get the loaded JSON schema for a test case"""
     test_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "cases", f"{name}.json"))
     with open(test_path) as test_case_file:
-        return (json.load(test_case_file), test_path.split(os.path.sep))
+        return (json.load(test_case_file), os.path.abspath(test_path))
 
 
 def _generate_case(case_name: str, find_deprecated: bool = False, find_default: bool = False) -> BeautifulSoup:
