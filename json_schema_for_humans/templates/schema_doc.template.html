@@ -221,7 +221,7 @@
             {{ subsection(False, loop.index, "", property_name, property, required_properties, schema_path) }}
         {%- endfor -%}
     {% else %}
-        {{ content(0, schema.get("title", "Main schema"), schema, "") }}
+        {{ content(0, schema.get("title", "Main schema"), schema, schema_path) }}
     {%- endif -%}
 
 </body>
