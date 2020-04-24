@@ -42,7 +42,7 @@ def _assert_property_names(soup: BeautifulSoup, property_names: List[str]) -> No
 def _assert_title(soup: BeautifulSoup, title: str) -> None:
     """Assert the result file contains the provided title"""
     assert soup.head.title.string == title
-    assert soup.head.h1.string == title
+    assert soup.body.h1.string == title
 
 
 def _assert_descriptions(soup: BeautifulSoup, descriptions: List[str]) -> None:
@@ -158,6 +158,7 @@ def test_references() -> None:
     _assert_descriptions(
         soup,
         [
+            "Testing $ref",
             "Description for object_def/items/propertyA",
             "Description for array_def",
             "Description for string_def",
@@ -193,7 +194,14 @@ def test_array() -> None:
     soup = _generate_case("array")
 
     _assert_property_names(soup, ["fruits", "vegetables", "veggieName", "veggieLike"])
-    _assert_descriptions(soup, ["The name of the vegetable.", "Do I like this vegetable?"])
+    _assert_descriptions(
+        soup,
+        [
+            "A representation of a person, company, organization, or place",
+            "The name of the vegetable.",
+            "Do I like this vegetable?",
+        ],
+    )
     _assert_types(soup, ["array of string", "string", "array", "object", "string", "boolean"])
     _assert_required(soup, [False, False, True, True])
 
@@ -202,7 +210,7 @@ def test_array_advanced():
     """Test rendering a schema that uses minItems, maxItems, and uniqueItems for arrays"""
     soup = _generate_case("array_advanced")
 
-    _assert_descriptions(soup, ["5 to 8 fruits that you like"])
+    _assert_descriptions(soup, ["A little food fun", "5 to 8 fruits that you like"])
     _assert_property_names(soup, ["fruits", "vegetables"])
     _assert_const(soup, ["eggplant"])
     _assert_required(soup, [False] * 2)
