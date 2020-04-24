@@ -10,7 +10,7 @@ from json_schema_for_humans.generate import generate_from_schema
 def _get_test_case(name: str) -> Tuple[Dict[str, Any], str]:
     """Get the loaded JSON schema for a test case"""
     test_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "cases", f"{name}.json"))
-    with open(test_path) as test_case_file:
+    with open(test_path, encoding="utf-8") as test_case_file:
         return (json.load(test_case_file), os.path.abspath(test_path))
 
 
@@ -274,3 +274,14 @@ def test_deprecated_not_in_description() -> None:
     soup = _generate_case("deprecated", find_deprecated=False)
 
     _assert_deprecated(soup, [False] * 3)
+
+
+def test_with_special_chars() -> None:
+    soup = _generate_case("with_special_chars", find_deprecated=False)
+
+    _assert_property_names(soup, ["prénom", "nomDeFamille", "âge", "0 de quoi d'autre"])
+
+    buttons = soup.find_all("button", attrs={"aria-controls": True})
+    expected_targets = ["#pr_nom", "#nomDeFamille", "#a_ge", "#a0_de_quoi_d_autre"]
+    for i, expected_target in enumerate(expected_targets):
+        assert buttons[i].attrs["data-target"] == expected_target

@@ -11,6 +11,7 @@ import markdown2
 
 TEMPLATE_FILE_NAME = "templates/schema_doc.template.html"
 CSS_FILE_NAME = "schema_doc.css"
+JS_FILE_NAME = "schema_doc.min.js"
 
 DEFAULT_PATTERN = r"(\[Default - `([^`]+)`\])"
 DEPRECATED_PATTERN = r"\[Deprecated"
@@ -288,6 +289,15 @@ def get_numeric_restrictions_text(property_dict: Dict[str, Any], before_value: s
     return result if touched else ""
 
 
+def escape_property_name_for_id(property_name: str) -> str:
+    """Filter. Escape unsafe characters in a property name so that it can be used in a HTML id"""
+
+    escaped = re.sub("[^0-9a-zA-Z_,.-]", "_", property_name)
+    if not escaped[0].isalpha():
+        escaped = "a" + escaped
+    return escaped
+
+
 def generate_from_schema(
     schema: Dict[str, Any],
     schema_path: str,
@@ -305,6 +315,7 @@ def generate_from_schema(
     env.filters["get_description"] = get_description_remove_default if default_from_description else get_description
     env.filters["resolve_ref"] = resolve_ref
     env.filters["get_numeric_restrictions_text"] = get_numeric_restrictions_text
+    env.filters["escape_property_name_for_id"] = escape_property_name_for_id
     env.tests["combining"] = is_combining
     env.tests["description_short"] = is_description_short
     env.tests["deprecated"] = is_deprecated_look_in_description if deprecated_from_description else is_deprecated
@@ -331,6 +342,8 @@ def generate_from_filename(
     minify: bool = True,
     deprecated_from_description: bool = False,
     default_from_description: bool = False,
+    copy_css: bool = True,
+    copy_js: bool = True,
 ) -> None:
     with open(schema_file_name) as schema_markdown:
         schema = json.load(schema_markdown)
@@ -343,7 +356,7 @@ def generate_from_filename(
         default_from_description=default_from_description,
     )
 
-    copy_css_to_target(result_file_name)
+    copy_css_and_js_to_target(result_file_name, copy_css, copy_js)
 
     with open(result_file_name, "w") as result_schema_doc:
         result_schema_doc.write(rendered_schema_doc)
@@ -356,6 +369,8 @@ def generate_from_file_object(
     deprecated_from_description: bool,
     default_from_description: bool,
     expand_buttons: bool,
+    copy_css: bool = True,
+    copy_js: bool = True,
 ) -> None:
     """Generate the JSON schema documentation from opened file objects for both input and output files. The
     result_file should be opened in write mode.
@@ -369,20 +384,31 @@ def generate_from_file_object(
         expand_buttons,
     )
 
-    copy_css_to_target(result_file.name)
+    copy_css_and_js_to_target(result_file.name, copy_css, copy_js)
 
     result_file.write(result)
 
 
-def copy_css_to_target(result_file_path: str) -> None:
-    """Copy the CSS file needed to display the resulting page to the directory containing the result file"""
+def copy_css_and_js_to_target(result_file_path: str, copy_css: bool, copy_js: bool) -> None:
+    """Copy the CSS and JS files needed to display the resulting page to the directory containing the result file"""
+    files_to_copy = []
+    if copy_css:
+        files_to_copy.append(CSS_FILE_NAME)
+    if copy_js:
+        files_to_copy.append(JS_FILE_NAME)
+    if not files_to_copy:
+        return
+
     target_directory = os.path.dirname(result_file_path)
-    css_directory = os.path.dirname(__file__)
-    if target_directory != css_directory:
+    source_directory = os.path.dirname(__file__)
+    if target_directory == source_directory:
+        return
+
+    for file_to_copy in files_to_copy:
         try:
-            shutil.copy(os.path.join(css_directory, CSS_FILE_NAME), os.path.join(target_directory, CSS_FILE_NAME))
+            shutil.copy(os.path.join(source_directory, file_to_copy), os.path.join(target_directory, file_to_copy))
         except shutil.SameFileError:
-            print(f"Not copying {CSS_FILE_NAME} to {os.path.abspath(target_directory)}, file already exists")
+            print(f"Not copying {file_to_copy} to {os.path.abspath(target_directory)}, file already exists")
 
 
 @click.command()
@@ -396,6 +422,8 @@ def copy_css_to_target(result_file_path: str) -> None:
     "--default-from-description", is_flag=True, help="Look in the description to find an attribute default value"
 )
 @click.option("--expand-buttons", is_flag=True, help="Add 'Expand all' and 'Collapse all' buttons at the top")
+@click.option("--copy-css/--no-copy-css", default=True, help=f"Copy {CSS_FILE_NAME} to the folder of the result_file")
+@click.option("--copy-js/--no-copy-js", default=True, help=f"Copy {JS_FILE_NAME} to the folder of the result_file")
 def main(
     schema_file: TextIO,
     result_file: TextIO,
@@ -403,9 +431,18 @@ def main(
     deprecated_from_description: bool,
     default_from_description: bool,
     expand_buttons: bool,
+    copy_css: bool,
+    copy_js: bool,
 ) -> None:
     generate_from_file_object(
-        schema_file, result_file, minify, deprecated_from_description, default_from_description, expand_buttons
+        schema_file,
+        result_file,
+        minify,
+        deprecated_from_description,
+        default_from_description,
+        expand_buttons,
+        copy_css,
+        copy_js,
     )
 
 

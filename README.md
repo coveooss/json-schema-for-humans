@@ -2,7 +2,7 @@
 
 Quickly generate a beautiful HTML static page documenting a JSON schema
 
-[Documentation](https://coveooss.github.io/json-schema-for-humans)
+[Documentation (with visual examples)](https://coveooss.github.io/json-schema-for-humans)
 
 ## Installation
 ```
@@ -16,8 +16,6 @@ generate-schema-doc [OPTIONS] SCHEMA_FILE [RESULT_FILE]
 ```
 
 `SCHEMA_FILE` must be a valid JSON Schema
-
-A CSS file will be copied in the same directory as `RESULT_FILE`
 
 The default value for `RESULT_FILE` is `schema_doc.html`
 
@@ -45,6 +43,18 @@ Extract the default value of a property from the description like this: ``[Defau
 
 The default value from the "default" attribute will be used in priority
 
+### --copy-css/--no-copy-css
+On by default
+
+Copy `schema_doc.css` to the same directory as `RESULT_FILE`.
+
+### --copy-js/--no-copy-js
+On by default.
+
+Copy `schema_doc.min.js` to the same directory as `RESULT_FILE`.
+
+This file contains the logic for the anchor links
+
 ## What's supported
 
 See the excellent [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/index.html) to understand what are those checks
@@ -71,12 +81,20 @@ These are **not** supported at the moment (PRs welcome!):
 References from inside a schema and to schemas in other files are supported (for example `{ $ref: "#/definitions/something" }` will be replaced by the 
 content of `schema["definitions"]["something"]`).
 
+## Anchor links
+Clicking on a property or tab in the output documentation will set the hash of the current window. Opening this anchor link will expand all needed properties and scroll to this section of the schema. Useful for pointing your users to a specific setting.
+
+For this feature to work, you need to include the Javascript file (`schema_doc.js`) that is automatically copied next to the output HTML file (`schema_doc.html` by default).
+
 ## Development
 
 ### Testing
 Just run tox
 
 `tox`
+
+### Modifying Javascript
+`schema_doc.js` is not minified automatically, you are responsible for doing it yourself
 
 ### Generating doc
 The documentation is generated using jekyll and hosted on GitHub Pages

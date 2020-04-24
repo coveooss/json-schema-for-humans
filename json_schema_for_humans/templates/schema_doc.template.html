@@ -12,19 +12,21 @@
     {%- endif -%}
     <ul class="nav nav-tabs" id="tabs{{ index }}_{{ operator }}" role="tablist">
         {%- for _ in property[operator] -%}
+            {%- set tab_id = index ~ "__option" ~ loop.index -%}
             <li class="nav-item">
                 <a class="nav-link {% if loop.index == 1 -%}active {% endif -%} {{ operator }}-option"
-                   id="tab{{ index }}_{{ operator }}_element{{ loop.index }}"
-                   data-toggle="tab" href="#tab-pane{{ index }}_{{ operator }}_element{{ loop.index }}" role="tab"
+                   id="{{ tab_id }}" data-toggle="tab" href="#tab-pane_{{ tab_id }}" role="tab"
+                   onclick="setAnchor('#{{ tab_id }}')"
                 >{{ tab_label }} {{ loop.index }}</a>
             </li>
         {%- endfor -%}
     </ul>
     <div class="tab-content card">
         {%- for element in property[operator] -%}
+            {%- set tab_id = index ~ "__option" ~ loop.index -%}
             <div class="tab-pane fade card-body {% if loop.index == 1 -%}active show{% endif -%}"
-                 id="tab-pane{{ index }}_{{ operator }}_element{{ loop.index }}" role="tabpanel">
-                {{ content(index ~ "_" ~ loop.index, tab_label ~ " " ~ loop.index, element, property_path) }}
+                 id="tab-pane_{{ tab_id }}" role="tabpanel">
+                {{ content(tab_id, tab_label ~ " " ~ loop.index, element, property_path) }}
             </div>
         {%- endfor -%}
     </div>
@@ -155,9 +157,9 @@
     {# Resolve reference #}
     {%- set property, property_path = (property | resolve_ref(schema, property_path)) -%}
 
-    {%- set suffix = index -%}
+    {%- set suffix = property_name | escape_property_name_for_id -%}
     {%- if parent != "" -%}
-        {%- set suffix = parent ~ "_" ~ suffix -%}
+        {%- set suffix = parent ~ "__" ~ suffix -%}
     {%- endif -%}
 
     {%- set is_required = property_name in required_properties -%}
@@ -165,8 +167,8 @@
         <div class="card">
             <div class="card-header" id="heading{{ suffix }}">
                 <h2 class="mb-0">
-                    <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#collapse{{ suffix }}"
-                            aria-expanded="{{ expanded }}" aria-controls="collapse{{ suffix }}">
+                    <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#{{ suffix }}"
+                            aria-expanded="{{ expanded }}" aria-controls="{{ suffix }}" onclick="setAnchor('#{{ suffix }}')">
                         <span class="property-name">{{ property_name }}</span>
                         {%- if is_required -%}
                             {{ " " }}<span class="badge badge-warning required-property">Required</span>
@@ -178,7 +180,7 @@
                 </h2>
             </div>
 
-            <div id="collapse{{ suffix }}"
+            <div id="{{ suffix }}"
                  class="collapse{% if expanded %} show{% endif %} property-definition-div" aria-labelledby="heading{{ suffix }}"
                  data-parent="#accordion{{ suffix }}">
               <div class="card-body">
@@ -198,6 +200,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="schema_doc.css">
     <script src="https://use.fontawesome.com/facf9fa52c.js"></script>
+    <script src="schema_doc.min.js"></script>
     {%- set title = schema.get("title") -%}
     {%- if title -%}
         <title>{{ title }}</title>
@@ -206,7 +209,7 @@
         <title>Schema Docs</title>
     {%- endif -%}
 </head>
-<body>
+<body onload="anchorOnLoad()">
     {%- set properties = schema.get("properties") -%}
     {%- if schema.get("type") == "object" and properties -%}
         {%- if expand_buttons -%}
