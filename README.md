@@ -84,7 +84,7 @@ content of `schema["definitions"]["something"]`).
 ## Anchor links
 Clicking on a property or tab in the output documentation will set the hash of the current window. Opening this anchor link will expand all needed properties and scroll to this section of the schema. Useful for pointing your users to a specific setting.
 
-For this feature to work, you need to include the Javascript file (`schema_doc.js`) that is automatically copied next to the output HTML file (`schema_doc.html` by default).
+For this feature to work, you need to include the Javascript file (`schema_doc.min.js`) that is automatically copied next to the output HTML file (`schema_doc.html` by default).
 
 ## Development
 
