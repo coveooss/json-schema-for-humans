@@ -51,7 +51,7 @@ Copy `schema_doc.css` to the same directory as `RESULT_FILE`.
 ### --copy-js/--no-copy-js
 On by default.
 
-Copy `schema_doc.js` to the same directory as `RESULT_FILE`.
+Copy `schema_doc.min.js` to the same directory as `RESULT_FILE`.
 
 This file contains the logic for the anchor links
 
@@ -92,6 +92,9 @@ For this feature to work, you need to include the Javascript file (`schema_doc.j
 Just run tox
 
 `tox`
+
+### Modifying Javascript
+`schema_doc.js` is not minified automatically, you are responsible for doing it yourself
 
 ### Generating doc
 The documentation is generated using jekyll and hosted on GitHub Pages

@@ -11,7 +11,7 @@ import markdown2
 
 TEMPLATE_FILE_NAME = "templates/schema_doc.template.html"
 CSS_FILE_NAME = "schema_doc.css"
-JS_FILE_NAME = "schema_doc.js"
+JS_FILE_NAME = "schema_doc.min.js"
 
 DEFAULT_PATTERN = r"(\[Default - `([^`]+)`\])"
 DEPRECATED_PATTERN = r"\[Deprecated"

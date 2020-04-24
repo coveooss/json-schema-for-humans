@@ -9,7 +9,7 @@ function setAnchor(anchorLinkDestination) {
 }
 
 function anchorOnLoad() {
-    // Added to onload on body, checks if there is an anchor link and if so, expan
+    // Added to onload on body, checks if there is an anchor link and if so, expand
     let linkTarget = window.location.hash.split("?")[0].split("&")[0];
     if (linkTarget[0] === "#") {
         linkTarget = linkTarget.substr(1);
