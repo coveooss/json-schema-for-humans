@@ -202,16 +202,18 @@
     <script src="https://use.fontawesome.com/facf9fa52c.js"></script>
     <script src="schema_doc.min.js"></script>
     {%- set title = schema.get("title") -%}
-    {%- if title -%}
-        <title>{{ title }}</title>
-        <h1>{{ title }}</h1>
-    {%- else -%}
-        <title>Schema Docs</title>
-    {%- endif -%}
+    <title>{%- if title -%}{{ title }}{%- else -%}Schema Docs{%- endif -%}</title>
 </head>
 <body onload="anchorOnLoad()">
+    {%- if title -%}
+        <h1>{{ title }}</h1>
+    {%- endif -%}
     {%- set properties = schema.get("properties") -%}
     {%- if schema.get("type") == "object" and properties -%}
+        {%- set description = schema.get("description") -%}
+        {%- if description -%}
+            <span class="description">{{ description | markdown }}</span>
+        {%- endif -%}
         {%- if expand_buttons -%}
             <div class="text-right">
                 <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
