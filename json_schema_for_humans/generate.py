@@ -1,3 +1,4 @@
+import copy
 import json
 import os
 import re
@@ -110,7 +111,15 @@ def resolve_ref(
                 target = property_dict
                 break
 
-    return target, target_path
+    # Apply other attributes (description, title, etc.) from the referencing schema to the referenced schema
+    # The JSON schema specification does not say if we should do that or not, but I think it is useful
+    result_schema = copy.deepcopy(target)
+    for k, v in property_dict.items():
+        if k == REF:
+            continue
+        result_schema[k] = v
+
+    return result_schema, target_path
 
 
 def python_to_json(value: Any) -> Any:
