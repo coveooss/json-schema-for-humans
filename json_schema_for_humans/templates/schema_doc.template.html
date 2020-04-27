@@ -157,10 +157,11 @@
     {# Resolve reference #}
     {%- set property, property_path = (property | resolve_ref(schema, property_path)) -%}
 
-    {%- set suffix = property_name | escape_property_name_for_id -%}
+    {%- set suffix = property_name -%}
     {%- if parent != "" -%}
         {%- set suffix = parent ~ "__" ~ suffix -%}
     {%- endif -%}
+    {%- set suffix = suffix | escape_property_name_for_id -%}
 
     {%- set is_required = property_name in required_properties -%}
     <div class="accordion" id="accordion{{ suffix }}">
@@ -209,18 +210,17 @@
         <h1>{{ title }}</h1>
     {%- endif -%}
     {%- set properties = schema.get("properties") -%}
+    {%- if expand_buttons -%}
+        <div class="text-right">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
+        </div>
+    {%- endif -%}
     {%- if schema.get("type") == "object" and properties -%}
         {%- set description = schema.get("description") -%}
         {%- if description -%}
             <span class="description">{{ description | markdown }}</span>
         {%- endif -%}
-        {%- if expand_buttons -%}
-            <div class="text-right">
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
-            </div>
-        {%- endif -%}
-
         {%- set required_properties = schema.get("required") or [] -%}
         {%- for property_name, property in properties.items() -%}
             {{ subsection(False, loop.index, "", property_name, property, required_properties, schema_path) }}
