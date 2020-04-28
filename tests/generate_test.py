@@ -293,3 +293,14 @@ def test_with_special_chars() -> None:
     expected_targets = ["#pr_nom", "#nomDeFamille", "#a_ge", "#a0_de_quoi_d_autre"]
     for i, expected_target in enumerate(expected_targets):
         assert buttons[i].attrs["data-target"] == expected_target
+
+
+def test_description_with_ref() -> None:
+    """Test that having a description next to a $ref in an object uses that description and not the one from the
+    referenced object
+    """
+    soup = _generate_case("description_with_ref")
+
+    _assert_descriptions(
+        soup, ["We should see this", "inner description", "We should see this too", "inner description"]
+    )
