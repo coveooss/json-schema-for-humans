@@ -65,13 +65,27 @@
         {%- if has_default -%}
             {{ " " }}<span class="badge badge-success default-value">Default: {{ default | python_to_json }}</span>
         {%- endif -%}
-        {%- if "properties" in property -%}
+		
+		{%- set examples = property.get("examples") | get_examples -%}
+		{# Display examples #}
+		{%- if examples -%}
+			<br>
+			<div class="badge badge-secondary">Example(s):</div>
+			<a onclick="if(this.getAttribute('aria-expanded') == 'true') { this.innerHTML = 'show' } else { this.innerHTML = 'hide' };" class="badge badge-light" data-toggle="collapse" href="#examples{{ index }}" role="button" aria-expanded="false" aria-controls="examples{{ index }}">
+				show
+			</a>
+			<div id="examples{{ index }}" class="collapse jumbotron examples">
+				<pre>{{ examples | tojson }}</pre>
+			</div>
+		{%- endif -%}
+
+		{%- if "properties" in property -%}
             {%- set required_properties = property.get("required") or [] -%}
             {%- for sub_property_name, sub_property in property["properties"].items() -%}
                 {{ subsection(False, loop.index, index, sub_property_name, sub_property, required_properties, property_path) }}
             {%- endfor -%}
         {%- endif -%}
-
+    
         {# Handle actual requirement #}
         {%- if "allOf" in property -%}
             <div class="all-of-value">{{ tabbed_section("allOf", property, property_path, index) }}</div>
@@ -199,13 +213,28 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="schema_doc.css">
+	<link href="jsonTree.css" rel="stylesheet">
+	<script src="jsonTree.js"></script>
+	<link rel="stylesheet" type="text/css" href="schema_doc.css">
     <script src="https://use.fontawesome.com/facf9fa52c.js"></script>
     <script src="schema_doc.min.js"></script>
+	<script>
+	// pretty-print all Examples
+		function prettifyJSONexamples(){
+			examples = document.getElementsByClassName("examples");
+			for (var i = 0; i < examples.length; i++) {
+				raw_json_str =  examples.item(i).textContent;
+				parsed_json = JSON.parse(raw_json_str);
+				for (e = 0; e < parsed_json.length; e++) {
+					examples.item(i).innerHTML = ('<pre>').concat(JSON.stringify(parsed_json[e], undefined, 4)).concat('</pre>');
+				}
+			};
+		}	
+	</script>
     {%- set title = schema.get("title") -%}
     <title>{%- if title -%}{{ title }}{%- else -%}Schema Docs{%- endif -%}</title>
 </head>
-<body onload="anchorOnLoad()">
+<body onload="anchorOnLoad(); prettifyJSONexamples();">
     {%- if title -%}
         <h1>{{ title }}</h1>
     {%- endif -%}
@@ -228,6 +257,5 @@
     {% else %}
         {{ content(0, schema.get("title", "Main schema"), schema, schema_path) }}
     {%- endif -%}
-
 </body>
 </html>

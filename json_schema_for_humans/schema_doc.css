@@ -36,6 +36,7 @@ body {
 
 .badge {
     font-size: 100%;
+	margin-bottom: 0.5rem;
 }
 
 .badge.value-type {
@@ -62,4 +63,8 @@ body {
 
 .accordion div.card:only-child {
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.examples {
+	padding: 1rem !important;
 }

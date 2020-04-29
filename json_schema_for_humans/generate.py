@@ -28,6 +28,7 @@ TYPE_STRING = "string"
 
 DESCRIPTION = "description"
 DEFAULT = "default"
+EXAMPLES = "examples"
 ITEMS = "items"
 TYPE = "type"
 REF = "$ref"
@@ -112,12 +113,12 @@ def resolve_ref(
                 break
 
     # Apply other attributes (description, title, etc.) from the referencing schema to the referenced schema
-    # The JSON schema specification does not say if we should do that or not, but I think it is useful
-    result_schema = copy.deepcopy(target)
-    for k, v in property_dict.items():
-        if k == REF:
-            continue
-        result_schema[k] = v
+    # The JSON schema specification does not say if we should do that or not, but I think it is useful	
+    result_schema = copy.deepcopy(target)	
+    for k, v in property_dict.items():	
+        if k == REF:	
+            continue	
+        result_schema[k] = v	
 
     return result_schema, target_path
 
@@ -220,7 +221,7 @@ def get_default(property_dict: Dict[str, Any]) -> Tuple[Optional[Any], bool]:
         return property_dict[DEFAULT], True
 
     return None, False
-
+    
 
 def get_default_look_in_description(property_dict: Dict[str, Any]) -> Tuple[Optional[Any], bool]:
     """Filter. Get the default value of a JSON Schema property. If not set, look for it in the description.
@@ -244,6 +245,13 @@ def get_default_look_in_description(property_dict: Dict[str, Any]) -> Tuple[Opti
     except json.decoder.JSONDecodeError:
         pass
     return default, True
+    
+#new filter for Examples
+def get_examples(examples: Optional[dict]) -> dict:
+    """Filter. Get the examples value of a JSON Schema property.
+    Return the found examples value or "" if no examples value found.
+    """
+    return examples if examples != "null" else ""
 
 
 def get_numeric_restrictions_text(property_dict: Dict[str, Any], before_value: str = "", after_value: str = "") -> str:
@@ -322,6 +330,8 @@ def generate_from_schema(
     env.filters["get_default"] = get_default_look_in_description if default_from_description else get_default
     env.filters["get_type_name"] = get_type_name
     env.filters["get_description"] = get_description_remove_default if default_from_description else get_description
+    #new filter for Examples
+    env.filters["get_examples"] = get_examples
     env.filters["resolve_ref"] = resolve_ref
     env.filters["get_numeric_restrictions_text"] = get_numeric_restrictions_text
     env.filters["escape_property_name_for_id"] = escape_property_name_for_id
@@ -332,13 +342,14 @@ def generate_from_schema(
     template_path = os.path.join(os.path.dirname(__file__), TEMPLATE_FILE_NAME)
     with open(template_path, "r") as template_fp:
         template = env.from_string(template_fp.read())
-
+        
     if isinstance(schema_path, list):
         # Backward compatibility
         schema_path = os.path.sep.join(schema_path)
     schema_path = os.path.abspath(schema_path)
-
+    
     rendered = template.render(schema=schema, schema_path=schema_path, expand_buttons=expand_buttons)
+    
     if minify:
         rendered = htmlmin.minify(rendered)
 
@@ -394,8 +405,9 @@ def generate_from_file_object(
     )
 
     copy_css_and_js_to_target(result_file.name, copy_css, copy_js)
-
-    result_file.write(result)
+       
+    #changed for UTF-8-compatibility   
+    result_file.write(result.replace("\\/", "/").encode().decode('unicode_escape'))
 
 
 def copy_css_and_js_to_target(result_file_path: str, copy_css: bool, copy_js: bool) -> None:
