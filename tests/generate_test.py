@@ -304,3 +304,26 @@ def test_description_with_ref() -> None:
     _assert_descriptions(
         soup, ["We should see this", "inner description", "We should see this too", "inner description"]
     )
+
+
+def test_with_examples() -> None:
+    soup = _generate_case("with_examples")
+
+    examples_label = soup.find_all("div", class_=["badge", "badge-secondary"])
+    examples_label_text = [ex.text for ex in examples_label]
+    assert examples_label_text == ["Examples:", "Example:", "Example:", "Example:"]
+
+    examples_content = soup.find_all("div", class_="examples")
+    examples_content_text = [ex.findChildren()[0].text for ex in examples_content]
+    assert examples_content_text == [
+        '"Guido"',
+        '"BDFL"',
+        '"Van Rossum"',
+        "64",
+        """{
+    "birthplace": "Haarlem, Netherlands",
+    "gender": "male",
+    "height_cm": 175,
+    "motto": "Beautiful is better than ugly.\\\\nExplicit is better than implicit.\\\\nSimple is better than complex.\\\\nComplex is better than complicated.\\\\nFlat is better than nested.\\\\nSparse is better than dense.\\\\nReadability counts.\\\\nSpecial cases aren\\u0027t special enough to break the rules.\\\\nAlthough practicality beats purity.\\\\nErrors should never pass silently.\\\\nUnless explicitly silenced.\\\\nIn the face of ambiguity, refuse the temptation to guess.\\\\nThere should be one-- and preferably only one --obvious way to do it.\\\\nAlthough that way may not be obvious at first unless you\\u0027re Dutch.\\\\nNow is better than never.\\\\nAlthough never is often better than *right* now.\\\\nIf the implementation is hard to explain, it\\u0027s a bad idea.\\\\nIf the implementation is easy to explain, it may be a good idea.\\\\nNamespaces are one honking great idea -- let\\u0027s do more of those!"
+}""",
+    ]

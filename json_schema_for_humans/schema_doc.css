@@ -13,6 +13,14 @@ body {
     margin: 10px;
 }
 
+.btn.example-show.collapsed:before {
+    content: "show"
+}
+
+.btn.example-show:before {
+    content: "hide"
+}
+
 .description.collapse:not(.show) {
     max-height: 100px !important;
     overflow: hidden;

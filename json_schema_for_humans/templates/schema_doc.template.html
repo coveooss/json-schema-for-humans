@@ -32,9 +32,7 @@
     </div>
 {%- endmacro -%}
 
-{%- macro content(index, property_name, property, property_path) -%}
-    {%- set property, property_path = (property | resolve_ref(schema, property_path)) -%}
-
+{%- macro add_description(property) -%}
     {%- set description = property.get("description") | get_description -%}
     {# Display description #}
     {%- if description -%}
@@ -47,11 +45,17 @@
             <a class="collapse-description-link collapsed" data-toggle="collapse" href="#collapseDescription{{ index }}" aria-expanded="false" aria-controls="collapseDescription{{ index }}"></a>
         {%- endif -%}
     {%- endif -%}
+{%- endmacro -%}
+
+{%- macro content(index, property_name, property, property_path) -%}
+    {%- set property, property_path = (property | resolve_ref(schema, property_path)) -%}
 
     {# Handle having oneOf or allOf with only one condition #}
     {%- if "allOf" in property and (property["allOf"] | length) == 1 -%}
+        {{ add_description(property) }}
         {{ content(index, property_name, property["allOf"][0], property_path) }}
     {%- elif "anyOf" in property and (property["anyOf"] | length) == 1 -%}
+        {{ add_description(property) }}
         {{ content(index, property_name, property["anyOf"][0], property_path) }}
     {%- else -%}
         {# Resolve type #}
@@ -65,26 +69,8 @@
         {%- if has_default -%}
             {{ " " }}<span class="badge badge-success default-value">Default: {{ default | python_to_json }}</span>
         {%- endif -%}
-		
-		{%- set examples = property.get("examples") | get_examples -%}
-		{# Display examples #}
-		{%- if examples -%}
-			<br>
-			<div class="badge badge-secondary">Example(s):</div>
-			<a onclick="if(this.getAttribute('aria-expanded') == 'true') { this.innerHTML = 'show' } else { this.innerHTML = 'hide' };" class="badge badge-light" data-toggle="collapse" href="#examples{{ index }}" role="button" aria-expanded="false" aria-controls="examples{{ index }}">
-				show
-			</a>
-			<div id="examples{{ index }}" class="collapse jumbotron examples">
-				<pre>{{ examples | tojson }}</pre>
-			</div>
-		{%- endif -%}
 
-		{%- if "properties" in property -%}
-            {%- set required_properties = property.get("required") or [] -%}
-            {%- for sub_property_name, sub_property in property["properties"].items() -%}
-                {{ subsection(False, loop.index, index, sub_property_name, sub_property, required_properties, property_path) }}
-            {%- endfor -%}
-        {%- endif -%}
+        {{ add_description(property) }}
     
         {# Handle actual requirement #}
         {%- if "allOf" in property -%}
@@ -164,6 +150,31 @@
                 </div>
             {%- endif -%}
         {%- endif -%}
+
+        {%- set examples = (property.get("examples") or []) -%}
+		{# Display examples #}
+		{%- if examples -%}
+            <br/>
+            <div class="badge badge-secondary">Example{% if examples|length > 1 %}s{% endif %}:</div>
+            <br/>
+
+            {%- for example in examples -%}
+                {%- set example_is_long = example is not description_short -%}
+                {%- if example_is_long -%}
+                    <button class="btn btn-light example-show collapsed" data-toggle="collapse" data-target="#{{ index }}_ex{{ loop.index }}" aria-controls="{{ index }}_ex{{ loop.index }}"></button>
+                {%- endif -%}
+                <div id="{{ index }}_ex{{ loop.index }}" class="{% if example_is_long %}collapse {% endif %}jumbotron examples">
+                    <pre>{{ example | tojson(4) }}</pre>
+                </div>
+            {%- endfor -%}
+		{%- endif -%}
+
+        {%- if "properties" in property -%}
+            {%- set required_properties = property.get("required") or [] -%}
+            {%- for sub_property_name, sub_property in property["properties"].items() -%}
+                {{ subsection(False, loop.index, index, sub_property_name, sub_property, required_properties, property_path) }}
+            {%- endfor -%}
+        {%- endif -%}
     {%- endif -%}
 {%- endmacro -%}
 
@@ -213,28 +224,13 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<link href="jsonTree.css" rel="stylesheet">
-	<script src="jsonTree.js"></script>
 	<link rel="stylesheet" type="text/css" href="schema_doc.css">
     <script src="https://use.fontawesome.com/facf9fa52c.js"></script>
     <script src="schema_doc.min.js"></script>
-	<script>
-	// pretty-print all Examples
-		function prettifyJSONexamples(){
-			examples = document.getElementsByClassName("examples");
-			for (var i = 0; i < examples.length; i++) {
-				raw_json_str =  examples.item(i).textContent;
-				parsed_json = JSON.parse(raw_json_str);
-				for (e = 0; e < parsed_json.length; e++) {
-					examples.item(i).innerHTML = ('<pre>').concat(JSON.stringify(parsed_json[e], undefined, 4)).concat('</pre>');
-				}
-			};
-		}	
-	</script>
     {%- set title = schema.get("title") -%}
     <title>{%- if title -%}{{ title }}{%- else -%}Schema Docs{%- endif -%}</title>
 </head>
-<body onload="anchorOnLoad(); prettifyJSONexamples();">
+<body onload="anchorOnLoad();">
     {%- if title -%}
         <h1>{{ title }}</h1>
     {%- endif -%}
