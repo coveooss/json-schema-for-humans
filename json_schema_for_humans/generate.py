@@ -28,6 +28,7 @@ TYPE_STRING = "string"
 
 DESCRIPTION = "description"
 DEFAULT = "default"
+EXAMPLES = "examples"
 ITEMS = "items"
 TYPE = "type"
 REF = "$ref"
@@ -47,11 +48,11 @@ def is_combining(property_dict: Dict[str, Any]) -> bool:
     return bool({"anyOf", "allOf", "oneOf", "not"}.intersection(property_dict.keys()))
 
 
-def is_description_short(description: str) -> bool:
-    """Check if a description element is short so that we can decide to make the section expandable.
+def is_text_short(text: str) -> bool:
+    """Check if a string is short so that we can decide whether to make the section containing it expandable or not.
     The heuristic is counting 1 for each line + 1 for each group of 80 characters a line has
     """
-    return sum((len(line) / 80 + 1) for line in description.splitlines()) < SHORT_DESCRIPTION_NUMBER_OF_LINES
+    return sum((len(line) / 80 + 1) for line in str(text).splitlines()) < SHORT_DESCRIPTION_NUMBER_OF_LINES
 
 
 def is_deprecated(property_dict: Dict[str, Any]) -> bool:
@@ -138,6 +139,17 @@ def python_to_json(value: Any) -> Any:
         return f'"{value}"'
 
     return value
+
+
+def to_pretty_json(value: Any) -> str:
+    """Filter. Return a pretty printed JSON representation of an object
+
+    Used instead of the built-in tojson filter to be able to display special characters (ensure_ascii parameter)
+    """
+    try:
+        return json.dumps(value, indent=4, separators=(",", ": "), ensure_ascii=False)
+    except:
+        return str(value)
 
 
 def get_type_name(property_dict: Dict[str, Any]) -> str:
@@ -325,8 +337,9 @@ def generate_from_schema(
     env.filters["resolve_ref"] = resolve_ref
     env.filters["get_numeric_restrictions_text"] = get_numeric_restrictions_text
     env.filters["escape_property_name_for_id"] = escape_property_name_for_id
+    env.filters["to_pretty_json"] = to_pretty_json
     env.tests["combining"] = is_combining
-    env.tests["description_short"] = is_description_short
+    env.tests["description_short"] = is_text_short
     env.tests["deprecated"] = is_deprecated_look_in_description if deprecated_from_description else is_deprecated
 
     template_path = os.path.join(os.path.dirname(__file__), TEMPLATE_FILE_NAME)
@@ -339,6 +352,7 @@ def generate_from_schema(
     schema_path = os.path.abspath(schema_path)
 
     rendered = template.render(schema=schema, schema_path=schema_path, expand_buttons=expand_buttons)
+
     if minify:
         rendered = htmlmin.minify(rendered)
 
