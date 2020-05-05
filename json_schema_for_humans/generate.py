@@ -141,6 +141,17 @@ def python_to_json(value: Any) -> Any:
     return value
 
 
+def to_pretty_json(value: Any) -> str:
+    """Filter. Return a pretty printed JSON representation of an object
+
+    Used instead of the built-in tojson filter to be able to display special characters (ensure_ascii parameter)
+    """
+    try:
+        return json.dumps(value, indent=4, separators=(",", ": "), ensure_ascii=False)
+    except:
+        return str(value)
+
+
 def get_type_name(property_dict: Dict[str, Any]) -> str:
     """Filter. Return the type of a property taking into account the type of items for array and enum"""
 
@@ -326,6 +337,7 @@ def generate_from_schema(
     env.filters["resolve_ref"] = resolve_ref
     env.filters["get_numeric_restrictions_text"] = get_numeric_restrictions_text
     env.filters["escape_property_name_for_id"] = escape_property_name_for_id
+    env.filters["to_pretty_json"] = to_pretty_json
     env.tests["combining"] = is_combining
     env.tests["description_short"] = is_text_short
     env.tests["deprecated"] = is_deprecated_look_in_description if deprecated_from_description else is_deprecated

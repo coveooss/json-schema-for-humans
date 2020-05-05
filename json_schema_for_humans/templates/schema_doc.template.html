@@ -164,7 +164,7 @@
                     <button class="btn btn-light example-show collapsed" data-toggle="collapse" data-target="#{{ index }}_ex{{ loop.index }}" aria-controls="{{ index }}_ex{{ loop.index }}"></button>
                 {%- endif -%}
                 <div id="{{ index }}_ex{{ loop.index }}" class="{% if example_is_long %}collapse {% endif %}jumbotron examples">
-                    <pre>{{ example | tojson(4) }}</pre>
+                    <pre>{{ example | to_pretty_json }}</pre>
                 </div>
             {%- endfor -%}
 		{%- endif -%}
