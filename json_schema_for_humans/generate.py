@@ -397,8 +397,7 @@ def generate_from_file_object(
 
     copy_css_and_js_to_target(result_file.name, copy_css, copy_js)
 
-    # changed for UTF-8-compatibility
-    result_file.write(result.replace("\\/", "/").encode().decode("unicode_escape"))
+    result_file.write(result)
 
 
 def copy_css_and_js_to_target(result_file_path: str, copy_css: bool, copy_js: bool) -> None:
