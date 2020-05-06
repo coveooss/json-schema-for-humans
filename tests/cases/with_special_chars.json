@@ -18,7 +18,8 @@
       "minimum": 0
     },
     "0 de quoi d'autre": {
-      "type": "string"
+      "type": "string",
+      "examples": ["🖖", "صباح الخير", "你好"]
     }
   }
 }

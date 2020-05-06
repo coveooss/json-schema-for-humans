@@ -158,12 +158,14 @@
             <div class="badge badge-secondary">Example{% if examples|length > 1 %}s{% endif %}:</div>
             <br/>
 
+            {%- set sanitized_index = index | escape_property_name_for_id -%}
             {%- for example in examples -%}
+                {%- set example_id = sanitized_index ~ "_ex" ~ loop.index -%}
                 {%- set example_is_long = example is not description_short -%}
                 {%- if example_is_long -%}
-                    <button class="btn btn-light example-show collapsed" data-toggle="collapse" data-target="#{{ index }}_ex{{ loop.index }}" aria-controls="{{ index }}_ex{{ loop.index }}"></button>
+                    <button class="btn btn-light example-show collapsed" data-toggle="collapse" data-target="#{{ example_id }}" aria-controls="{{ example_id }}"></button>
                 {%- endif -%}
-                <div id="{{ index }}_ex{{ loop.index }}" class="{% if example_is_long %}collapse {% endif %}jumbotron examples">
+                <div id="{{ example_id }}" class="{% if example_is_long %}collapse {% endif %}jumbotron examples">
                     <pre>{{ example | to_pretty_json }}</pre>
                 </div>
             {%- endfor -%}
