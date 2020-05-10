@@ -326,3 +326,28 @@ def test_with_examples() -> None:
     "motto": "Beautiful is better than ugly.\\\\nExplicit is better than implicit.\\\\nSimple is better than complex.\\\\nComplex is better than complicated.\\\\nFlat is better than nested.\\\\nSparse is better than dense.\\\\nReadability counts.\\\\nSpecial cases aren't special enough to break the rules.\\\\nAlthough practicality beats purity.\\\\nErrors should never pass silently.\\\\nUnless explicitly silenced.\\\\nIn the face of ambiguity, refuse the temptation to guess.\\\\nThere should be one-- and preferably only one --obvious way to do it.\\\\nAlthough that way may not be obvious at first unless you're Dutch.\\\\nNow is better than never.\\\\nAlthough never is often better than *right* now.\\\\nIf the implementation is hard to explain, it's a bad idea.\\\\nIf the implementation is easy to explain, it may be a good idea.\\\\nNamespaces are one honking great idea -- let's do more of those!"
 }""",
     ]
+
+
+def test_pattern_properties() -> None:
+    soup = _generate_case("pattern_properties")
+
+    pattern_label = soup.find_all("span", class_=["badge-info"])
+    pattern_label_text = [ex.text for ex in pattern_label]
+    assert pattern_label_text == ["Pattern Property"]
+
+    pattern_content = soup.find_all("span", class_="pattern-value")
+    pattern_content_text = [ex.findChildren()[0].text for ex in pattern_content]
+    assert pattern_content_text == ["$[a-c][0-9]^"]
+
+    _assert_property_names(soup, ["firstName", "lastName", "paperSize", "rating", "review"])
+
+    _assert_descriptions(
+        soup,
+        [
+            "The person's first name.",
+            "The person's last name.",
+            "Review of a paper size.",
+            "Numerical rating for paper size.",
+            "Narrative review of the paper size.",
+        ],
+    )

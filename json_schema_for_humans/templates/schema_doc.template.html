@@ -26,7 +26,7 @@
             {%- set tab_id = index ~ "__option" ~ loop.index -%}
             <div class="tab-pane fade card-body {% if loop.index == 1 -%}active show{% endif -%}"
                  id="tab-pane_{{ tab_id }}" role="tabpanel">
-                {{ content(tab_id, tab_label ~ " " ~ loop.index, element, property_path) }}
+                {{ content(tab_id, tab_label ~ " " ~ loop.index, element, property_path, False) }}
             </div>
         {%- endfor -%}
     </div>
@@ -47,16 +47,16 @@
     {%- endif -%}
 {%- endmacro -%}
 
-{%- macro content(index, property_name, property, property_path) -%}
+{%- macro content(index, property_name, property, property_path, named_property) -%}
     {%- set property, property_path = (property | resolve_ref(schema, property_path)) -%}
 
     {# Handle having oneOf or allOf with only one condition #}
     {%- if "allOf" in property and (property["allOf"] | length) == 1 -%}
         {{ add_description(property) }}
-        {{ content(index, property_name, property["allOf"][0], property_path) }}
+        {{ content(index, property_name, property["allOf"][0], property_path, True) }}
     {%- elif "anyOf" in property and (property["anyOf"] | length) == 1 -%}
         {{ add_description(property) }}
-        {{ content(index, property_name, property["anyOf"][0], property_path) }}
+        {{ content(index, property_name, property["anyOf"][0], property_path, True) }}
     {%- else -%}
         {# Resolve type #}
         {%- set default, has_default = property | get_default -%}
@@ -87,7 +87,7 @@
             <h4>Must <strong>not</strong> be:</h4>
             <div class="card">
                 <div class="card-body">
-                {{ content(index ~ "_not", property_name, property["not"], property_path) }}
+                {{ content(index ~ "_not", property_name, property["not"], property_path, True) }}
                 </div>
             </div>
             </div>
@@ -107,6 +107,9 @@
         {%- endif -%}
         {%- if "pattern" in property -%}
             <span class="pattern-value">Must match regular expression: <code>{{ property.pattern }}</code></span>
+        {%- endif -%}
+        {%- if not named_property -%}
+            <span class="pattern-value">Property name must match regular expression: <code>{{ property_name }}</code></span>
         {%- endif -%}
         {%- if type == "string" -%}
             {%- if "minLength" in property -%}
@@ -137,7 +140,7 @@
                 <div class="card">
                     <div class="card-body items-definition">
                         {# Note that property["items"] is needed here because property.items is a function #}
-                        {{ content(index ~ "_items", property_name ~ " Items", property["items"], property_path) }}
+                        {{ content(index ~ "_items", property_name ~ " Items", property["items"], property_path, True) }}
                     </div>
                 </div>
             {%- endif -%}
@@ -145,7 +148,7 @@
                 <h4>At least one of the items must be:</h4>
                 <div class="card">
                     <div class="card-body items-contain-definition">
-                    {{ content(index ~ "_not", property_name, property["contains"], property_path) }}
+                    {{ content(index ~ "_not", property_name, property["contains"], property_path, True) }}
                     </div>
                 </div>
             {%- endif -%}
@@ -174,13 +177,18 @@
         {%- if "properties" in property -%}
             {%- set required_properties = property.get("required") or [] -%}
             {%- for sub_property_name, sub_property in property["properties"].items() -%}
-                {{ subsection(False, loop.index, index, sub_property_name, sub_property, required_properties, property_path) }}
+                {{ subsection(False, loop.index, index, sub_property_name, sub_property, required_properties, property_path, True) }}
+            {%- endfor -%}
+        {%- endif -%}
+        {%- if "patternProperties" in property -%}
+            {%- for sub_property_name, sub_property in property["patternProperties"].items() -%}
+                {{ subsection(False, loop.index, index, sub_property_name, sub_property, [], property_path, False) }}
             {%- endfor -%}
         {%- endif -%}
     {%- endif -%}
 {%- endmacro -%}
 
-{%- macro subsection(expanded, index, parent, property_name, property, required_properties, property_path) -%}
+{%- macro subsection(expanded, index, parent, property_name, property, required_properties, property_path, named_property) -%}
     {# Resolve reference #}
     {%- set property, property_path = (property | resolve_ref(schema, property_path)) -%}
 
@@ -188,7 +196,16 @@
     {%- if parent != "" -%}
         {%- set suffix = parent ~ "__" ~ suffix -%}
     {%- endif -%}
-    {%- set suffix = suffix | escape_property_name_for_id -%}
+    {%- if named_property -%}
+        {%- set suffix = suffix | escape_property_name_for_id -%}
+    {%- else -%}
+        {%- set suffix = parent | generate_id_for_pattern_property(index) -%}
+        {%- if "title" in property -%}
+            {%- set property_title = property['title'] -%}
+        {%- else -%}
+            {%- set property_title = property_name -%}
+        {%- endif -%}
+    {%- endif -%}
 
     {%- set is_required = property_name in required_properties -%}
     <div class="accordion" id="accordion{{ suffix }}">
@@ -197,12 +214,19 @@
                 <h2 class="mb-0">
                     <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#{{ suffix }}"
                             aria-expanded="{{ expanded }}" aria-controls="{{ suffix }}" onclick="setAnchor('#{{ suffix }}')">
-                        <span class="property-name">{{ property_name }}</span>
+                        {%- if named_property -%}
+                            <span class="property-name">{{ property_name }}</span>
+                        {%- else -%}
+                            <span class="property-name">{{ property_title }}</span>
+                        {%- endif -%}
                         {%- if is_required -%}
                             {{ " " }}<span class="badge badge-warning required-property">Required</span>
                         {%- endif -%}
                         {%- if property is deprecated -%}
                             {{ " " }}<span class="badge badge-danger deprecated-property">Deprecated</span>
+                        {%- endif -%}
+                        {%- if not named_property -%}
+                            {{ " " }}<span class="badge badge-info pattern-property">Pattern Property</span>
                         {%- endif -%}
                     </button>
                 </h2>
@@ -212,7 +236,7 @@
                  class="collapse{% if expanded %} show{% endif %} property-definition-div" aria-labelledby="heading{{ suffix }}"
                  data-parent="#accordion{{ suffix }}">
               <div class="card-body">
-                {{ content(suffix, property_name, property, property_path) }}
+                {{ content(suffix, property_name, property, property_path, named_property) }}
               </div>
             </div>
         </div>
@@ -238,23 +262,31 @@
         <h1>{{ title }}</h1>
     {%- endif -%}
     {%- set properties = schema.get("properties") -%}
+    {%- set patternProperties = schema.get("patternProperties") -%}
     {%- if expand_buttons -%}
         <div class="text-right">
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
         </div>
     {%- endif -%}
-    {%- if schema.get("type") == "object" and properties -%}
+    {%- if schema.get("type") == "object" and (properties or patternProperties)-%}
         {%- set description = schema.get("description") -%}
         {%- if description -%}
             <span class="description">{{ description | markdown }}</span>
         {%- endif -%}
         {%- set required_properties = schema.get("required") or [] -%}
-        {%- for property_name, property in properties.items() -%}
-            {{ subsection(False, loop.index, "", property_name, property, required_properties, schema_path) }}
-        {%- endfor -%}
+        {%- if properties -%}
+            {%- for property_name, property in properties.items() -%}
+                {{ subsection(False, loop.index, "", property_name, property, required_properties, schema_path, True) }}
+            {%- endfor -%}
+        {%- endif -%}
+        {%- if patternProperties -%}
+            {%- for property_name, property in patternProperties.items() -%}
+                {{ subsection(False, loop.index, "", property_name, property, required_properties, schema_path, False) }}
+            {%- endfor -%}
+        {%- endif -%}
     {% else %}
-        {{ content(0, schema.get("title", "Main schema"), schema, schema_path) }}
+        {{ content(0, schema.get("title", "Main schema"), schema, schema_path, False) }}
     {%- endif -%}
 </body>
 </html>

@@ -33,3 +33,6 @@
 - name: references
   display_name: With references
   description: ''
+- name: pattern_properties
+  display_name: Using pattern properties
+  description: The schema permits property names matching a regex, using the pattern properties tag

@@ -1,0 +1,38 @@
+{
+  "$id": "https://example.com/person.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Person",
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "description": "The person's first name.",
+      "title": "Person"
+    },
+    "lastName": {
+      "type": "string",
+      "description": "The person's last name.",
+      "title": "Person"
+    }
+  },
+  "patternProperties": {
+    "$[a-c][0-9]^": {
+      "type": "object",
+      "description": "Review of a paper size.",
+      "title": "paperSize",
+      "required": ["rating", "review"],
+      "properties": {
+        "rating": {
+          "type": "integer",
+          "title": "Rating",
+          "description": "Numerical rating for paper size."
+        },
+        "review": {
+          "type": "string",
+          "title": "Review",
+          "description": "Narrative review of the paper size."
+        }
+      }
+    }
+  }
+}
