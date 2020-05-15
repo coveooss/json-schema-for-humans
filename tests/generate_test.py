@@ -328,6 +328,28 @@ def test_with_examples() -> None:
     ]
 
 
+def test_recursive() -> None:
+    """Test a schema having a recursive definition"""
+    soup = _generate_case("recursive")
+
+    _assert_descriptions(soup, ["A human being", "The children they had"])
+
+    recursive_definition_link = soup.find("a", href="#person")
+    assert recursive_definition_link
+    assert recursive_definition_link.text == "Recursive definition of person"
+
+
+def test_recursive_array() -> None:
+    """Test a schema having a recursive definition pointing to array items"""
+    soup = _generate_case("recursive_array")
+
+    _assert_descriptions(soup, ["A list of people", "A human being", "The children they had"])
+
+    recursive_definition_link = soup.find("a", href="#person_array_items")
+    assert recursive_definition_link
+    assert recursive_definition_link.text == "Recursive definition of person"
+
+
 def test_pattern_properties() -> None:
     soup = _generate_case("pattern_properties")
 

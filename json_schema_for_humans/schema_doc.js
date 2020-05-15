@@ -1,7 +1,16 @@
 $(document).on('click', 'a[href^="#"]', function(event) {
   event.preventDefault();
   history.pushState({}, '', this.href);
+  anchorClick(this.href);
 });
+
+function flashElement(elementId) {
+    $( "#" + elementId ).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+}
+
+function anchorClick(linkTarget) {
+    flashElement(linkTarget.split("#")[1]);
+}
 
 function setAnchor(anchorLinkDestination) {
     // Set anchor link without reloading
@@ -45,6 +54,13 @@ function anchorLink(linkTarget) {
     // Or maybe it is to be sure everything is expanded before scrolling and I was not able to bind to the bootstrap
     // events in a way that works all the time, we may never know
     setTimeout(function() {
-        document.getElementById(linkTarget).scrollIntoView({ block: "center", behavior:"smooth" });
+        let targetElement = document.getElementById(linkTarget);
+        if (targetElement) {
+            targetElement.scrollIntoView({ block: "center", behavior:"smooth" });
+            // Flash the element so that the user notices where the link points to
+            setTimeout(function() {
+                flashElement(linkTarget);
+            }, 500);
+        }
     }, 1000);
 }

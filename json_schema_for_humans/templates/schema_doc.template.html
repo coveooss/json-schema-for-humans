@@ -1,8 +1,11 @@
-{%- macro restriction(inner_text, css_class_name) -%}
-    <p><span class="badge badge-light restriction {{ css_class_name }}-restriction">{{ inner_text }}</span></p>
+{%- macro restriction(inner_text, css_class_name, current_path, span_id) -%}
+    {%- set current_path = current_path ~ "/number" -%}
+    {%- set _none = current_path | record_path_id(span_id) -%}
+    {%- set span_id = span_id -%}
+    <p><span class="badge badge-light restriction {{ css_class_name }}-restriction" id="{{ span_id }}">{{ inner_text }}</span></p>
 {%- endmacro -%}
 
-{%- macro tabbed_section(operator, property, property_path, index) -%}
+{%- macro tabbed_section(operator, property, property_path, index, current_path) -%}
     <h2 class="handle">
       <label>{% if operator == "allOf" -%}All of{% elif operator == "anyOf" -%}Any of{% elif operator == "oneOf" -%}One of{% endif -%}</label>
     </h2>
@@ -14,6 +17,7 @@
         {%- for _ in property[operator] -%}
             {%- set tab_id = index ~ "__option" ~ loop.index -%}
             <li class="nav-item">
+                {%- set _none = current_path | record_path_id(tab_id) -%}
                 <a class="nav-link {% if loop.index == 1 -%}active {% endif -%} {{ operator }}-option"
                    id="{{ tab_id }}" data-toggle="tab" href="#tab-pane_{{ tab_id }}" role="tab"
                    onclick="setAnchor('#{{ tab_id }}')"
@@ -26,7 +30,8 @@
             {%- set tab_id = index ~ "__option" ~ loop.index -%}
             <div class="tab-pane fade card-body {% if loop.index == 1 -%}active show{% endif -%}"
                  id="tab-pane_{{ tab_id }}" role="tabpanel">
-                {{ content(tab_id, tab_label ~ " " ~ loop.index, element, property_path, True) }}
+                {%- set current_path = current_path ~ "/" ~ loop.index0 -%}
+                {{ content(tab_id, tab_label ~ " " ~ loop.index, element, property_path, current_path, True) }}
             </div>
         {%- endfor -%}
     </div>
@@ -47,150 +52,197 @@
     {%- endif -%}
 {%- endmacro -%}
 
-{%- macro content(index, property_name, property, property_path, named_property) -%}
-    {%- set property, property_path = (property | resolve_ref(schema, property_path)) -%}
+{%- macro content(index, property_name, property, property_path, current_path, named_property) -%}
+    {%- set property, property_path, current_path, is_recursive = (property | resolve_ref(schema, property_path, current_path)) -%}
+    {# index should already be escaped unless it's the first call #}
+    {%- set index = index | escape_property_name_for_id -%}
 
-    {# Handle having oneOf or allOf with only one condition #}
-    {%- if "allOf" in property and (property["allOf"] | length) == 1 -%}
-        {{ add_description(property) }}
-        {{ content(index, property_name, property["allOf"][0], property_path, True) }}
-    {%- elif "anyOf" in property and (property["anyOf"] | length) == 1 -%}
-        {{ add_description(property) }}
-        {{ content(index, property_name, property["anyOf"][0], property_path, True) }}
+    {%- if is_recursive -%}
+        {%- set anchor_link, is_link_retrieved = current_path | get_path_id -%}
+        {%- if is_link_retrieved -%}
+            <a href="#{{ anchor_link }}">Recursive definition of {{ current_path.split("/")[-1] }}</a>
+        {%- else -%}
+            <p>Recursive definition, see #/{{ current_path }}</p>
+        {%- endif -%}
     {%- else -%}
-        {# Resolve type #}
-        {%- set default, has_default = property | get_default -%}
-        {%- set type = property | get_type_name -%}
+        {# Handle having oneOf or allOf with only one condition #}
+        {%- if "allOf" in property and (property["allOf"] | length) == 1 -%}
+            {%- set current_path = current_path ~ "/allOf/0" -%}
+            {{ add_description(property) }}
+            {{ content(index, property_name, property["allOf"][0], property_path, current_path, True) }}
+        {%- elif "anyOf" in property and (property["anyOf"] | length) == 1 -%}
+            {%- set current_path = current_path ~ "/anyOf/0" -%}
+            {{ add_description(property) }}
+            {{ content(index, property_name, property["anyOf"][0], property_path, current_path, True) }}
+        {%- else -%}
+            {# Resolve type #}
+            {%- set default, has_default = property | get_default -%}
+            {%- set type = property | get_type_name -%}
 
-        {# Display type #}
-        {%- if not property is combining -%}
-            <span class="badge badge-dark value-type">Type: {{ type }}</span>
-        {%- endif -%}
-        {%- if has_default -%}
-            {{ " " }}<span class="badge badge-success default-value">Default: {{ default | python_to_json }}</span>
-        {%- endif -%}
+            {# Display type #}
+            {%- if not property is combining -%}
+                <span class="badge badge-dark value-type">Type: {{ type }}</span>
+            {%- endif -%}
+            {%- if has_default -%}
+                {{ " " }}<span class="badge badge-success default-value">Default: {{ default | python_to_json }}</span>
+            {%- endif -%}
 
-        {{ add_description(property) }}
-    
-        {# Handle actual requirement #}
-        {%- if "allOf" in property -%}
-            <div class="all-of-value">{{ tabbed_section("allOf", property, property_path, index) }}</div>
-        {%- endif -%}
-        {%- if "anyOf" in property -%}
-            <div class="any-of-value">{{ tabbed_section("anyOf", property, property_path, index) }}</div>
-        {%- endif -%}
-        {%- if "oneOf" in property -%}
-            <div class="one-of-value">{{ tabbed_section("oneOf", property, property_path, index) }}</div>
-        {%- endif -%}
-        {%- if "not" in property -%}
-            <div class="not-value">
-            <h4>Must <strong>not</strong> be:</h4>
-            <div class="card">
-                <div class="card-body">
-                {{ content(index ~ "_not", property_name, property["not"], property_path, True) }}
-                </div>
-            </div>
-            </div>
-        {%- endif -%}
-        {%- if "enum" in property -%}
-            <div class="enum-value">
-            <h4>Must be one of:</h4>
-            <ul class="list-group">
-            {%- for enum_choice in property.enum -%}
-                <li class="list-group-item">{{ enum_choice | python_to_json }}</li>
-            {%- endfor -%}
-            </ul>
-            </div>
-        {%- endif -%}
-        {%- if "const" in property -%}
-            <span class="const-value">Specific value: <code>{{ property.const | python_to_json }}</code></span>
-        {%- endif -%}
-        {%- if "pattern" in property -%}
-            <span class="pattern-value">Must match regular expression: <code>{{ property.pattern }}</code></span>
-        {%- endif -%}
-        {%- if not named_property -%}
-            <span class="pattern-value">Property name must match regular expression: <code>{{ property_name }}</code></span>
-        {%- endif -%}
-        {%- if type == "string" -%}
-            {%- if "minLength" in property -%}
-                {{ restriction("Must be at least <code>" ~ property.minLength ~ "</code> characters long", "min-length") }}
+            {{ add_description(property) }}
+
+            {# Handle actual requirement #}
+            {%- if "allOf" in property -%}
+                {%- set current_path = current_path ~ "/allOf" -%}
+                {%- set tab_section_id = index ~ "_allOf" -%}
+                {%- set _none = current_path | record_path_id(tab_section_id) -%}
+                <div class="all-of-value" id="{{ tab_section_id }}">{{ tabbed_section("allOf", property, property_path, index) }}</div>
             {%- endif -%}
-            {%- if "maxLength" in property -%}
-                {{ restriction("Must be at most <code>" ~ property.maxLength ~ "</code> characters long", "max-length") }}
+            {%- if "anyOf" in property -%}
+                {%- set current_path = current_path ~ "/anyOf" -%}
+                {%- set tab_section_id = index ~ "_anyOf" -%}
+                {%- set _none = current_path | record_path_id(tab_section_id) -%}
+                <div class="any-of-value" id="{{ tab_section_id }}">{{ tabbed_section("anyOf", property, property_path, index) }}</div>
             {%- endif -%}
-        {%- endif -%}
-        {%- if type in ["integer", "number"] -%}
-            {%- set restriction_text = (property | get_numeric_restrictions_text("<code>", "</code>")) -%}
-            {%- if restriction_text -%}
-                {{ restriction(property | get_numeric_restrictions_text("<code>", "</code>"), "numeric") }}
+            {%- if "oneOf" in property -%}
+                {%- set current_path = current_path ~ "/oneOf" -%}
+                {%- set tab_section_id = index ~ "_oneOf" -%}
+                {%- set _none = current_path | record_path_id(tab_section_id) -%}
+                <div class="one-of-value" id="{{ tab_section_id }}">{{ tabbed_section("oneOf", property, property_path, index) }}</div>
             {%- endif -%}
-        {%- endif -%}
-        {%- if type.startswith("array") -%}
-            {%- if "minItems" in property -%}
-                {{ restriction("Must contain a minimum of <code>" ~ property.minItems ~ "</code> items", "min-items") }}
-            {%- endif -%}
-            {%- if "maxItems" in property -%}
-                {{ restriction("Must contain a maximum of <code>" ~ property.maxItems ~ "</code> items", "max-items") }}
-            {%- endif -%}
-            {%- if "uniqueItems" in property and property.uniqueItems == True -%}
-                {{ restriction("All items must be unique", "unique-items") }}
-            {%- endif -%}
-            {%- if "items" in property and property["items"] is mapping and property["items"] != {} -%}
-                <h4>Each item of this array must be:</h4>
+            {%- if "not" in property -%}
+                <div class="not-value">
+                <h4>Must <strong>not</strong> be:</h4>
                 <div class="card">
-                    <div class="card-body items-definition">
-                        {# Note that property["items"] is needed here because property.items is a function #}
-                        {{ content(index ~ "_items", property_name ~ " Items", property["items"], property_path, True) }}
+                    {%- set current_path = current_path ~ "/not" -%}
+                    {%- set card_id = index ~ "_not" -%}
+                    {%- set _none = current_path | record_path_id(card_id) -%}
+                    <div class="card-body" id="{{ card_id }}">
+                    {{ content(card_id, property_name, property["not"], property_path, current_path, True) }}
                     </div>
                 </div>
-            {%- endif -%}
-            {%- if "contains" in property and property["contains"] != {} -%}
-                <h4>At least one of the items must be:</h4>
-                <div class="card">
-                    <div class="card-body items-contain-definition">
-                    {{ content(index ~ "_not", property_name, property["contains"], property_path, True) }}
-                    </div>
                 </div>
             {%- endif -%}
-        {%- endif -%}
-
-        {%- set examples = (property.get("examples") or []) -%}
-		{# Display examples #}
-		{%- if examples -%}
-            <br/>
-            <div class="badge badge-secondary">Example{% if examples|length > 1 %}s{% endif %}:</div>
-            <br/>
-
-            {%- set sanitized_index = index | escape_property_name_for_id -%}
-            {%- for example in examples -%}
-                {%- set example_id = sanitized_index ~ "_ex" ~ loop.index -%}
-                {%- set example_is_long = example is not description_short -%}
-                {%- if example_is_long -%}
-                    <button class="btn btn-light example-show collapsed" data-toggle="collapse" data-target="#{{ example_id }}" aria-controls="{{ example_id }}"></button>
+            {%- if "enum" in property -%}
+                {%- set current_path = current_path ~ "/enum" -%}
+                {%- set enum_id = index ~ "_enum" -%}
+                {%- set _none = current_path | record_path_id(enum_id) -%}
+                <div class="enum-value" id="{{ enum_id }}">
+                <h4>Must be one of:</h4>
+                <ul class="list-group">
+                {%- for enum_choice in property.enum -%}
+                    <li class="list-group-item">{{ enum_choice | python_to_json }}</li>
+                {%- endfor -%}
+                </ul>
+                </div>
+            {%- endif -%}
+            {%- if "const" in property -%}
+                {%- set current_path = current_path ~ "/const" -%}
+                {%- set const_id = index ~ "_const" -%}
+                {%- set _none = current_path | record_path_id(const_id) -%}
+                <span class="const-value" id="{{ const_id }}">Specific value: <code>{{ property.const | python_to_json }}</code></span>
+            {%- endif -%}
+            {%- if "pattern" in property -%}
+                {%- set current_path = current_path ~ "/pattern" -%}
+                {%- set pattern_id = index ~ "_pattern" -%}
+                {%- set _none = current_path | record_path_id(pattern_id) -%}
+                <span class="pattern-value" id ="{{ pattern_id }}">Must match regular expression: <code>{{ property.pattern }}</code></span>
+            {%- endif -%}
+            {%- if not named_property -%}
+                <span class="pattern-value">Property name must match regular expression: <code>{{ property_name }}</code></span>
+            {%- endif -%}
+            {%- if type == "string" -%}
+                {%- if "minLength" in property -%}
+                    {{ restriction("Must be at least <code>" ~ property.minLength ~ "</code> characters long", "min-length", current_path, index ~ "_minLength") }}
                 {%- endif -%}
-                <div id="{{ example_id }}" class="{% if example_is_long %}collapse {% endif %}jumbotron examples">
-                    <pre>{{ example | to_pretty_json }}</pre>
-                </div>
-            {%- endfor -%}
-		{%- endif -%}
+                {%- if "maxLength" in property -%}
+                    {{ restriction("Must be at most <code>" ~ property.maxLength ~ "</code> characters long", "max-length", current_path, index ~ "_maxLength") }}
+                {%- endif -%}
+            {%- endif -%}
+            {%- if type in ["integer", "number"] -%}
+                {%- set restriction_text = (property | get_numeric_restrictions_text("<code>", "</code>")) -%}
+                {%- if restriction_text -%}
+                    {{ restriction(property | get_numeric_restrictions_text("<code>", "</code>"), "numeric", current_path, index ~ "_number") }}
+                {%- endif -%}
+            {%- endif -%}
+            {%- if type.startswith("array") -%}
+                {%- set current_path = current_path ~ "/array" -%}
+                {%- set array_id = index ~ "_array" -%}
+                {%- set _none = current_path | record_path_id(array_id) -%}
+                {%- if "minItems" in property -%}
+                    {{ restriction("Must contain a minimum of <code>" ~ property.minItems ~ "</code> items", "min-items", current_path, index ~ "_minItems") }}
+                {%- endif -%}
+                {%- if "maxItems" in property -%}
+                    {{ restriction("Must contain a maximum of <code>" ~ property.maxItems ~ "</code> items", "max-items", current_path, index ~ "maxItems") }}
+                {%- endif -%}
+                {%- if "uniqueItems" in property and property.uniqueItems == True -%}
+                    {{ restriction("All items must be unique", "unique-items", current_path, index ~ "uniqueItems") }}
+                {%- endif -%}
+                {%- if "items" in property and property["items"] is mapping and property["items"] != {} -%}
+                    <h4>Each item of this array must be:</h4>
+                    <div class="card">
+                        {%- set current_path = current_path ~ "/items" -%}
+                        {%- set card_id = array_id ~ "_items" -%}
+                        {%- set _none = current_path | record_path_id(card_id) -%}
+                        <div class="card-body items-definition" id="{{ card_id }}">
+                            {# Note that property["items"] is needed here because property.items is a function #}
+                            {{ content(card_id, property_name ~ " Items", property["items"], property_path, current_path, True) }}
+                        </div>
+                    </div>
+                {%- endif -%}
+                {%- if "contains" in property and property["contains"] != {} -%}
+                    {%- set current_path = current_path ~ "/contains" -%}
+                    {%- set card_id = array_id ~ "_contains" -%}
+                    {%- set _none = current_path | record_path_id(card_id) -%}
+                    <h4>At least one of the items must be:</h4>
+                    <div class="card">
+                        <div class="card-body items-contain-definition" id="{{ card_id }}">
+                            {%- set current_path = current_path ~ "/contains" -%}
+                            {{ content(index ~ "_not", property_name, property["contains"], property_path, current_path, True) }}
+                        </div>
+                    </div>
+                {%- endif -%}
+            {%- endif -%}
 
-        {%- if "properties" in property -%}
-            {%- set required_properties = property.get("required") or [] -%}
-            {%- for sub_property_name, sub_property in property["properties"].items() -%}
-                {{ subsection(False, loop.index, index, sub_property_name, sub_property, required_properties, property_path, True) }}
-            {%- endfor -%}
-        {%- endif -%}
-        {%- if "patternProperties" in property -%}
-            {%- for sub_property_name, sub_property in property["patternProperties"].items() -%}
-                {{ subsection(False, loop.index, index, sub_property_name, sub_property, [], property_path, False) }}
-            {%- endfor -%}
+            {%- set examples = (property.get("examples") or []) -%}
+            {# Display examples #}
+            {%- if examples -%}
+                <br/>
+                <div class="badge badge-secondary">Example{% if examples|length > 1 %}s{% endif %}:</div>
+                <br/>
+
+                {%- for example in examples -%}
+                    {%- set example_id = index ~ "_ex" ~ loop.index -%}
+                    {%- set example_is_long = example is not description_short -%}
+                    {%- if example_is_long -%}
+                        <button class="btn btn-light example-show collapsed" data-toggle="collapse" data-target="#{{ example_id }}" aria-controls="{{ example_id }}"></button>
+                    {%- endif -%}
+                    <div id="{{ example_id }}" class="{% if example_is_long %}collapse {% endif %}jumbotron examples">
+                        <pre>{{ example | to_pretty_json }}</pre>
+                    </div>
+                {%- endfor -%}
+            {%- endif -%}
+
+            {%- if "properties" in property -%}
+                {%- set required_properties = property.get("required") or [] -%}
+                {%- set current_path = current_path ~ "/properties" -%}
+                {%- for sub_property_name, sub_property in property["properties"].items() -%}
+                    {%- set current_path_property = current_path ~ "/" ~ sub_property_name -%}
+                    {{ subsection(False, loop.index, index, sub_property_name, sub_property, required_properties, property_path, current_path_property, True) }}
+                {%- endfor -%}
+            {%- endif -%}
+            {%- if "patternProperties" in property -%}
+                {%- set current_path = current_path ~ "/patternProperties" -%}
+                {%- for sub_property_name, sub_property in property["patternProperties"].items() -%}
+                    {%- set current_path_property = current_path ~ "/" ~ sub_property_name -%}
+                    {{ subsection(False, loop.index, index, sub_property_name, sub_property, [], property_path, current_path_property, False) }}
+                {%- endfor -%}
+            {%- endif -%}
         {%- endif -%}
     {%- endif -%}
 {%- endmacro -%}
 
-{%- macro subsection(expanded, index, parent, property_name, property, required_properties, property_path, named_property) -%}
+{%- macro subsection(expanded, index, parent, property_name, property, required_properties, property_path, current_path, named_property) -%}
     {# Resolve reference #}
-    {%- set property, property_path = (property | resolve_ref(schema, property_path)) -%}
+    {%- set property, property_path, current_path, is_recursive = (property | resolve_ref(schema, property_path, current_path)) -%}
 
     {%- set suffix = property_name -%}
     {%- if parent != "" -%}
@@ -212,6 +264,7 @@
         <div class="card">
             <div class="card-header" id="heading{{ suffix }}">
                 <h2 class="mb-0">
+                    {%- set _none = current_path | record_path_id(suffix) -%}
                     <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#{{ suffix }}"
                             aria-expanded="{{ expanded }}" aria-controls="{{ suffix }}" onclick="setAnchor('#{{ suffix }}')">
                         {%- if named_property -%}
@@ -236,7 +289,7 @@
                  class="collapse{% if expanded %} show{% endif %} property-definition-div" aria-labelledby="heading{{ suffix }}"
                  data-parent="#accordion{{ suffix }}">
               <div class="card-body">
-                {{ content(suffix, property_name, property, property_path, named_property) }}
+                {{ content(suffix, property_name, property, property_path, current_path, named_property) }}
               </div>
             </div>
         </div>
@@ -263,6 +316,7 @@
     {%- endif -%}
     {%- set properties = schema.get("properties") -%}
     {%- set patternProperties = schema.get("patternProperties") -%}
+    {%- set current_path = "" -%}
     {%- if expand_buttons -%}
         <div class="text-right">
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
@@ -270,6 +324,7 @@
         </div>
     {%- endif -%}
     {%- if schema.get("type") == "object" and (properties or patternProperties)-%}
+        {%- set current_path = current_path ~ "properties" -%}
         {%- set description = schema.get("description") -%}
         {%- if description -%}
             <span class="description">{{ description | markdown }}</span>
@@ -277,16 +332,18 @@
         {%- set required_properties = schema.get("required") or [] -%}
         {%- if properties -%}
             {%- for property_name, property in properties.items() -%}
-                {{ subsection(False, loop.index, "", property_name, property, required_properties, schema_path, True) }}
+                {%- set current_path_property = current_path ~ "/" ~ property_name -%}
+                {{ subsection(False, loop.index, "", property_name, property, required_properties, schema_path, current_path_property, True) }}
             {%- endfor -%}
         {%- endif -%}
         {%- if patternProperties -%}
             {%- for property_name, property in patternProperties.items() -%}
-                {{ subsection(False, loop.index, "", property_name, property, required_properties, schema_path, False) }}
+                {%- set current_path_property = current_path ~ "/" ~ property_name -%}
+                {{ subsection(False, loop.index, "", property_name, property, required_properties, schema_path, current_path_property, False) }}
             {%- endfor -%}
         {%- endif -%}
     {% else %}
-        {{ content(0, schema.get("title", "Main schema"), schema, schema_path, False) }}
+        {{ content(0, schema.get("title", "Main schema"), schema, schema_path, current_path, False) }}
     {%- endif -%}
 </body>
 </html>

@@ -3,6 +3,7 @@ import json
 import os
 import re
 import shutil
+from collections import defaultdict
 from typing import Any, Dict, List, Optional, TextIO, Tuple, Type, Union
 
 import click
@@ -43,6 +44,10 @@ EXCLUSIVE_MINIMUM = "exclusiveMinimum"
 SHORT_DESCRIPTION_NUMBER_OF_LINES = 8
 
 
+paths_to_id: Dict[str, str] = {}
+resolved_references: Dict[str, List[str]] = defaultdict(list)
+
+
 def is_combining(property_dict: Dict[str, Any]) -> bool:
     """Test if a schema is one of the combining schema keyword"""
     return bool({"anyOf", "allOf", "oneOf", "not"}.intersection(property_dict.keys()))
@@ -69,8 +74,8 @@ def is_deprecated_look_in_description(property_dict: Dict[str, Any]) -> bool:
 
 
 def resolve_ref(
-    property_dict: Dict[str, Any], full_schema: Dict[str, Any], schema_path: str
-) -> Tuple[Dict[str, Any], str]:
+    property_dict: Dict[str, Any], full_schema: Dict[str, Any], schema_path: str, current_path: str
+) -> Tuple[Dict[str, Any], str, str, bool]:
     """Filter. Resolve references in the supplied property.
 
     See https://json-schema.org/understanding-json-schema/structuring.html#reuse
@@ -78,12 +83,17 @@ def resolve_ref(
     :param property_dict: The dict for the current property that can contain a "$ref" key
     :param full_schema: The complete current schema, used for references inside the same file
     :param schema_path: Path to the current schema
-    :return: The resolved schema at reference (property_dict unchanged if no references found)
-             and the path to the schema that contained the references
+    :param current_path: Path to property_dict from full_schema. Used to detect recursive definitions
+    :return: The resolved schema at reference (property_dict unchanged if no references found),
+             the path to the schema that contained the references,
+             the path to the resolved property from the root of the schema,
+             and whether the resolved reference is recursive
     """
+    current_path = current_path.lstrip("/")
+
     reference_path = property_dict.get(REF)
     if not reference_path:
-        return property_dict, schema_path
+        return property_dict, schema_path, current_path, False
 
     # Reference found, resolve the path (format "#/a/b/c", "file.json#/a/b/c", or "file.json")
     if "#" not in reference_path:
@@ -91,6 +101,11 @@ def resolve_ref(
         anchor_part = ""
     else:
         file_path_part, anchor_part = reference_path.split("#", maxsplit=1)
+        anchor_part = anchor_part.lstrip("/")
+
+    if anchor_part:
+        global resolved_references
+        resolved_references[anchor_part].append(current_path)
 
     # Resolve file path portion of reference and open schema file
     if file_path_part:
@@ -100,6 +115,10 @@ def resolve_ref(
     else:
         target_path = schema_path
         target = full_schema if anchor_part else {}
+        if anchor_part:
+            # Check for recursive definition
+            if anchor_part in current_path:
+                return property_dict, schema_path, anchor_part, True
 
     if anchor_part:
         # Resolve anchor portion of reference
@@ -120,7 +139,39 @@ def resolve_ref(
             continue
         result_schema[k] = v
 
-    return result_schema, target_path
+    return result_schema, target_path, anchor_part, False
+
+
+def record_path_id(path: str, html_id: str) -> None:
+    """Filter. Record the link between a path to an element in the schema and the HTML id added to the documentation
+    element for it
+
+    Used for recursive definitions, where an anchor link is needed
+
+    :param path: path to an element in the schema. The format is a list of dictionary keys and array index joined by '/'
+    :param html_id: Unique HTML id of the element that documents the schema at this path
+    """
+    global paths_to_id
+    paths_to_id[path] = html_id
+
+
+def get_path_id(path: str) -> Tuple[str, bool]:
+    """Filter. Get the HTML id for a schema path.
+
+    Uses links recorded using the filter "record_path_id"
+
+    :param path: path to an element in the schema. The format is a list of dictionary keys and array index joined by '/'
+    :return: The HTML id to the documentation section for the provided schema path, if found.
+             The path itself if not found
+    """
+    if path in paths_to_id:
+        return paths_to_id[path], True
+
+    for referenced_path in resolved_references[path]:
+        if referenced_path in paths_to_id:
+            return paths_to_id[referenced_path], True
+
+    return path, False
 
 
 def python_to_json(value: Any) -> Any:
@@ -313,7 +364,7 @@ def get_numeric_restrictions_text(property_dict: Dict[str, Any], before_value: s
 def escape_property_name_for_id(property_name: str) -> str:
     """Filter. Escape unsafe characters in a property name so that it can be used in a HTML id"""
 
-    escaped = re.sub("[^0-9a-zA-Z_,.-]", "_", property_name)
+    escaped = re.sub("[^0-9a-zA-Z_,.-]", "_", str(property_name))
     if not escaped[0].isalpha():
         escaped = "a" + escaped
     return escaped
@@ -335,6 +386,11 @@ def generate_from_schema(
     default_from_description: bool = False,
     expand_buttons: bool = False,
 ) -> str:
+    global resolved_references
+    resolved_references = defaultdict(list)
+    global paths_to_id
+    paths_to_id = {}
+
     md = markdown2.Markdown(extras=["fenced-code-blocks"])
     env = jinja2.Environment()
     env.filters["markdown"] = lambda text: jinja2.Markup(md.convert(text))
@@ -347,6 +403,8 @@ def generate_from_schema(
     env.filters["escape_property_name_for_id"] = escape_property_name_for_id
     env.filters["generate_id_for_pattern_property"] = generate_id_for_pattern_property
     env.filters["to_pretty_json"] = to_pretty_json
+    env.filters["record_path_id"] = record_path_id
+    env.filters["get_path_id"] = get_path_id
     env.tests["combining"] = is_combining
     env.tests["description_short"] = is_text_short
     env.tests["deprecated"] = is_deprecated_look_in_description if deprecated_from_description else is_deprecated

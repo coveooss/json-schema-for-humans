@@ -1,0 +1,30 @@
+{
+  "$id": "https://example.com/person.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Person",
+  "type": "object",
+  "properties": {
+    "person": {
+      "type": "array",
+      "description": "A list of people",
+      "items": {
+        "$ref": "#/definitions/person"
+      }
+    }
+  },
+  "definitions": {
+    "person": {
+      "type": "object",
+      "description": "A human being",
+      "properties": {
+        "children": {
+          "type": "array",
+          "description": "The children they had",
+          "items": {
+            "$ref": "#/definitions/person"
+          }
+        }
+      }
+    }
+  }
+}
