@@ -65,13 +65,14 @@ The following are supported:
 - Numeric types multiples and range
 - Constant and enumerated values
 - Required properties
+- Pattern properties
 - Default values
 - Array `minItems`, `maxItems`, `uniqueItems`, `items` (schema that must apply to all of the array items), and `contains`
 - Combining schema with `oneOf`, `allOf`, `anyOf`, and `not`
 
 These are **not** supported at the moment (PRs welcome!):
 - String length and format
-- Property names, size, and pattern
+- Property names and size
 - Array items at specific index (for example, first item must be a string and second must be an integer)
 - Property dependencies
 - Examples

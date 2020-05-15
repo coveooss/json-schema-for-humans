@@ -9,6 +9,18 @@ body {
     font-size: 18px;
 }
 
+.btn.btn-primary {
+    margin: 10px;
+}
+
+.btn.example-show.collapsed:before {
+    content: "show"
+}
+
+.btn.example-show:before {
+    content: "hide"
+}
+
 .description.collapse:not(.show) {
     max-height: 100px !important;
     overflow: hidden;
@@ -32,6 +44,7 @@ body {
 
 .badge {
     font-size: 100%;
+	margin-bottom: 0.5rem;
 }
 
 .badge.value-type {
@@ -51,7 +64,15 @@ body {
     display: inline-block;
 }
 
-.badge.required-property,.badge.deprecated-property {
+.badge.required-property,.badge.deprecated-property,.badge.pattern-property {
     font-size: 100%;
     margin-left: 10px;
+}
+
+.accordion div.card:only-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.examples {
+	padding: 1rem !important;
 }

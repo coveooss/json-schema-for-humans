@@ -36,3 +36,6 @@
 - name: pattern_properties
   display_name: Using pattern properties
   description: The schema permits property names matching a regex, using the pattern properties tag
+- name: with_examples
+  display_name: With examples
+  description: Display examples. Longer examples are collapsed by default.

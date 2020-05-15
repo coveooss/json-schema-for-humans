@@ -377,7 +377,7 @@ def generate_from_filename(
     copy_css: bool = True,
     copy_js: bool = True,
 ) -> None:
-    with open(schema_file_name) as schema_markdown:
+    with open(schema_file_name, encoding="utf-8") as schema_markdown:
         schema = json.load(schema_markdown)
 
     rendered_schema_doc = generate_from_schema(
@@ -390,7 +390,7 @@ def generate_from_filename(
 
     copy_css_and_js_to_target(result_file_name, copy_css, copy_js)
 
-    with open(result_file_name, "w") as result_schema_doc:
+    with open(result_file_name, "w", encoding="utf-8") as result_schema_doc:
         result_schema_doc.write(rendered_schema_doc)
 
 
