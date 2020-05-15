@@ -64,7 +64,7 @@ body {
     display: inline-block;
 }
 
-.badge.required-property,.badge.deprecated-property {
+.badge.required-property,.badge.deprecated-property,.badge.pattern-property {
     font-size: 100%;
     margin-left: 10px;
 }

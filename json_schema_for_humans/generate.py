@@ -319,6 +319,14 @@ def escape_property_name_for_id(property_name: str) -> str:
     return escaped
 
 
+def generate_id_for_pattern_property(parent_property_name: str, current_index: int):
+    """Filter. Generate a unique identifier for a pattern property that can be used in a HTML id"""
+    id_string = parent_property_name + "_" + str(current_index)
+    if not id_string[0].isalpha():
+        id_string = "a" + id_string
+    return id_string
+
+
 def generate_from_schema(
     schema: Dict[str, Any],
     schema_path: str,
@@ -337,6 +345,7 @@ def generate_from_schema(
     env.filters["resolve_ref"] = resolve_ref
     env.filters["get_numeric_restrictions_text"] = get_numeric_restrictions_text
     env.filters["escape_property_name_for_id"] = escape_property_name_for_id
+    env.filters["generate_id_for_pattern_property"] = generate_id_for_pattern_property
     env.filters["to_pretty_json"] = to_pretty_json
     env.tests["combining"] = is_combining
     env.tests["description_short"] = is_text_short
