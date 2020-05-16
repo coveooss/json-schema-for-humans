@@ -26,7 +26,7 @@
             {%- set tab_id = index ~ "__option" ~ loop.index -%}
             <div class="tab-pane fade card-body {% if loop.index == 1 -%}active show{% endif -%}"
                  id="tab-pane_{{ tab_id }}" role="tabpanel">
-                {{ content(tab_id, tab_label ~ " " ~ loop.index, element, property_path, False) }}
+                {{ content(tab_id, tab_label ~ " " ~ loop.index, element, property_path, True) }}
             </div>
         {%- endfor -%}
     </div>
