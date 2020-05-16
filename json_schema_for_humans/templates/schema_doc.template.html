@@ -1,6 +1,6 @@
-{%- macro restriction(inner_text, css_class_name, current_path, span_id) -%}
+{%- macro restriction(inner_text, css_class_name, current_path, schema_path, span_id) -%}
     {%- set current_path = current_path ~ "/number" -%}
-    {%- set _none = current_path | record_path_id(span_id) -%}
+    {%- set _none = current_path | record_path_id(schema_path, span_id) -%}
     {%- set span_id = span_id -%}
     <p><span class="badge badge-light restriction {{ css_class_name }}-restriction" id="{{ span_id }}">{{ inner_text }}</span></p>
 {%- endmacro -%}
@@ -17,7 +17,7 @@
         {%- for _ in property[operator] -%}
             {%- set tab_id = index ~ "__option" ~ loop.index -%}
             <li class="nav-item">
-                {%- set _none = current_path | record_path_id(tab_id) -%}
+                {%- set _none = current_path | record_path_id(property_path, tab_id) -%}
                 <a class="nav-link {% if loop.index == 1 -%}active {% endif -%} {{ operator }}-option"
                    id="{{ tab_id }}" data-toggle="tab" href="#tab-pane_{{ tab_id }}" role="tab"
                    onclick="setAnchor('#{{ tab_id }}')"
@@ -53,16 +53,15 @@
 {%- endmacro -%}
 
 {%- macro content(index, property_name, property, property_path, current_path, named_property) -%}
-    {%- set property, property_path, current_path, is_recursive = (property | resolve_ref(schema, property_path, current_path)) -%}
+    {%- set property, property_path, current_path, recursive_id = (property | resolve_ref(schema, property_path, current_path)) -%}
     {# index should already be escaped unless it's the first call #}
     {%- set index = index | escape_property_name_for_id -%}
 
-    {%- if is_recursive -%}
-        {%- set anchor_link, is_link_retrieved = current_path | get_path_id -%}
-        {%- if is_link_retrieved -%}
-            <a href="#{{ anchor_link }}">Recursive definition of {{ current_path.split("/")[-1] }}</a>
+    {%- if recursive_id -%}
+        {%- if recursive_id != current_path -%}
+            <a href="#{{ recursive_id }}" onclick="anchorLink('{{ recursive_id }}')">Same definition as {{ recursive_id }}</a>
         {%- else -%}
-            <p>Recursive definition, see #/{{ current_path }}</p>
+            <p>Recursive definition, see #/{{ recursive_id }}</p>
         {%- endif -%}
     {%- else -%}
         {# Handle having oneOf or allOf with only one condition #}
@@ -93,19 +92,19 @@
             {%- if "allOf" in property -%}
                 {%- set current_path = current_path ~ "/allOf" -%}
                 {%- set tab_section_id = index ~ "_allOf" -%}
-                {%- set _none = current_path | record_path_id(tab_section_id) -%}
+                {%- set _none = current_path | record_path_id(property_path, tab_section_id) -%}
                 <div class="all-of-value" id="{{ tab_section_id }}">{{ tabbed_section("allOf", property, property_path, index) }}</div>
             {%- endif -%}
             {%- if "anyOf" in property -%}
                 {%- set current_path = current_path ~ "/anyOf" -%}
                 {%- set tab_section_id = index ~ "_anyOf" -%}
-                {%- set _none = current_path | record_path_id(tab_section_id) -%}
+                {%- set _none = current_path | record_path_id(property_path, tab_section_id) -%}
                 <div class="any-of-value" id="{{ tab_section_id }}">{{ tabbed_section("anyOf", property, property_path, index) }}</div>
             {%- endif -%}
             {%- if "oneOf" in property -%}
                 {%- set current_path = current_path ~ "/oneOf" -%}
                 {%- set tab_section_id = index ~ "_oneOf" -%}
-                {%- set _none = current_path | record_path_id(tab_section_id) -%}
+                {%- set _none = current_path | record_path_id(property_path, tab_section_id) -%}
                 <div class="one-of-value" id="{{ tab_section_id }}">{{ tabbed_section("oneOf", property, property_path, index) }}</div>
             {%- endif -%}
             {%- if "not" in property -%}
@@ -114,7 +113,7 @@
                 <div class="card">
                     {%- set current_path = current_path ~ "/not" -%}
                     {%- set card_id = index ~ "_not" -%}
-                    {%- set _none = current_path | record_path_id(card_id) -%}
+                    {%- set _none = current_path | record_path_id(property_path, card_id) -%}
                     <div class="card-body" id="{{ card_id }}">
                     {{ content(card_id, property_name, property["not"], property_path, current_path, True) }}
                     </div>
@@ -124,7 +123,7 @@
             {%- if "enum" in property -%}
                 {%- set current_path = current_path ~ "/enum" -%}
                 {%- set enum_id = index ~ "_enum" -%}
-                {%- set _none = current_path | record_path_id(enum_id) -%}
+                {%- set _none = current_path | record_path_id(property_path, enum_id) -%}
                 <div class="enum-value" id="{{ enum_id }}">
                 <h4>Must be one of:</h4>
                 <ul class="list-group">
@@ -137,13 +136,13 @@
             {%- if "const" in property -%}
                 {%- set current_path = current_path ~ "/const" -%}
                 {%- set const_id = index ~ "_const" -%}
-                {%- set _none = current_path | record_path_id(const_id) -%}
+                {%- set _none = current_path | record_path_id(property_path, const_id) -%}
                 <span class="const-value" id="{{ const_id }}">Specific value: <code>{{ property.const | python_to_json }}</code></span>
             {%- endif -%}
             {%- if "pattern" in property -%}
                 {%- set current_path = current_path ~ "/pattern" -%}
                 {%- set pattern_id = index ~ "_pattern" -%}
-                {%- set _none = current_path | record_path_id(pattern_id) -%}
+                {%- set _none = current_path | record_path_id(property_path, pattern_id) -%}
                 <span class="pattern-value" id ="{{ pattern_id }}">Must match regular expression: <code>{{ property.pattern }}</code></span>
             {%- endif -%}
             {%- if not named_property -%}
@@ -151,37 +150,37 @@
             {%- endif -%}
             {%- if type == "string" -%}
                 {%- if "minLength" in property -%}
-                    {{ restriction("Must be at least <code>" ~ property.minLength ~ "</code> characters long", "min-length", current_path, index ~ "_minLength") }}
+                    {{ restriction("Must be at least <code>" ~ property.minLength ~ "</code> characters long", "min-length", current_path, property_path, index ~ "_minLength") }}
                 {%- endif -%}
                 {%- if "maxLength" in property -%}
-                    {{ restriction("Must be at most <code>" ~ property.maxLength ~ "</code> characters long", "max-length", current_path, index ~ "_maxLength") }}
+                    {{ restriction("Must be at most <code>" ~ property.maxLength ~ "</code> characters long", "max-length", current_path, property_path, index ~ "_maxLength") }}
                 {%- endif -%}
             {%- endif -%}
             {%- if type in ["integer", "number"] -%}
                 {%- set restriction_text = (property | get_numeric_restrictions_text("<code>", "</code>")) -%}
                 {%- if restriction_text -%}
-                    {{ restriction(property | get_numeric_restrictions_text("<code>", "</code>"), "numeric", current_path, index ~ "_number") }}
+                    {{ restriction(property | get_numeric_restrictions_text("<code>", "</code>"), "numeric", current_path, property_path, index ~ "_number") }}
                 {%- endif -%}
             {%- endif -%}
             {%- if type.startswith("array") -%}
                 {%- set current_path = current_path ~ "/array" -%}
                 {%- set array_id = index ~ "_array" -%}
-                {%- set _none = current_path | record_path_id(array_id) -%}
+                {%- set _none = current_path | record_path_id(property_path, array_id) -%}
                 {%- if "minItems" in property -%}
-                    {{ restriction("Must contain a minimum of <code>" ~ property.minItems ~ "</code> items", "min-items", current_path, index ~ "_minItems") }}
+                    {{ restriction("Must contain a minimum of <code>" ~ property.minItems ~ "</code> items", "min-items", current_path, property_path, index ~ "_minItems") }}
                 {%- endif -%}
                 {%- if "maxItems" in property -%}
-                    {{ restriction("Must contain a maximum of <code>" ~ property.maxItems ~ "</code> items", "max-items", current_path, index ~ "maxItems") }}
+                    {{ restriction("Must contain a maximum of <code>" ~ property.maxItems ~ "</code> items", "max-items", current_path, property_path, index ~ "maxItems") }}
                 {%- endif -%}
                 {%- if "uniqueItems" in property and property.uniqueItems == True -%}
-                    {{ restriction("All items must be unique", "unique-items", current_path, index ~ "uniqueItems") }}
+                    {{ restriction("All items must be unique", "unique-items", current_path, property_path, index ~ "uniqueItems") }}
                 {%- endif -%}
                 {%- if "items" in property and property["items"] is mapping and property["items"] != {} -%}
                     <h4>Each item of this array must be:</h4>
                     <div class="card">
                         {%- set current_path = current_path ~ "/items" -%}
                         {%- set card_id = array_id ~ "_items" -%}
-                        {%- set _none = current_path | record_path_id(card_id) -%}
+                        {%- set _none = current_path | record_path_id(property_path, card_id) -%}
                         <div class="card-body items-definition" id="{{ card_id }}">
                             {# Note that property["items"] is needed here because property.items is a function #}
                             {{ content(card_id, property_name ~ " Items", property["items"], property_path, current_path, True) }}
@@ -191,7 +190,7 @@
                 {%- if "contains" in property and property["contains"] != {} -%}
                     {%- set current_path = current_path ~ "/contains" -%}
                     {%- set card_id = array_id ~ "_contains" -%}
-                    {%- set _none = current_path | record_path_id(card_id) -%}
+                    {%- set _none = current_path | record_path_id(property_path, card_id) -%}
                     <h4>At least one of the items must be:</h4>
                     <div class="card">
                         <div class="card-body items-contain-definition" id="{{ card_id }}">
@@ -264,7 +263,7 @@
         <div class="card">
             <div class="card-header" id="heading{{ suffix }}">
                 <h2 class="mb-0">
-                    {%- set _none = current_path | record_path_id(suffix) -%}
+                    {%- set _none = current_path | record_path_id(property_path, suffix) -%}
                     <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#{{ suffix }}"
                             aria-expanded="{{ expanded }}" aria-controls="{{ suffix }}" onclick="setAnchor('#{{ suffix }}')">
                         {%- if named_property -%}

@@ -44,8 +44,12 @@ EXCLUSIVE_MINIMUM = "exclusiveMinimum"
 SHORT_DESCRIPTION_NUMBER_OF_LINES = 8
 
 
-paths_to_id: Dict[str, str] = {}
-resolved_references: Dict[str, List[str]] = defaultdict(list)
+def defaultdict_list() -> Dict[Any, List]:
+    return defaultdict(list)
+
+
+paths_to_id: Dict[str, Dict[str, str]] = defaultdict(defaultdict)
+resolved_references_by_file: Dict[str, Dict[str, List[Tuple[str, str]]]] = defaultdict(defaultdict_list)
 
 
 def is_combining(property_dict: Dict[str, Any]) -> bool:
@@ -75,7 +79,7 @@ def is_deprecated_look_in_description(property_dict: Dict[str, Any]) -> bool:
 
 def resolve_ref(
     property_dict: Dict[str, Any], full_schema: Dict[str, Any], schema_path: str, current_path: str
-) -> Tuple[Dict[str, Any], str, str, bool]:
+) -> Tuple[Dict[str, Any], str, str, Optional[str]]:
     """Filter. Resolve references in the supplied property.
 
     See https://json-schema.org/understanding-json-schema/structuring.html#reuse
@@ -93,7 +97,7 @@ def resolve_ref(
 
     reference_path = property_dict.get(REF)
     if not reference_path:
-        return property_dict, schema_path, current_path, False
+        return property_dict, schema_path, current_path, None
 
     # Reference found, resolve the path (format "#/a/b/c", "file.json#/a/b/c", or "file.json")
     if "#" not in reference_path:
@@ -103,28 +107,51 @@ def resolve_ref(
         file_path_part, anchor_part = reference_path.split("#", maxsplit=1)
         anchor_part = anchor_part.lstrip("/")
 
-    if anchor_part:
-        global resolved_references
-        resolved_references[anchor_part].append(current_path)
-
-    # Resolve file path portion of reference and open schema file
+    # Resolve file path portion of reference
     if file_path_part:
-        target_path = os.path.abspath(os.path.join(os.path.dirname(schema_path), file_path_part))
-        with open(target_path) as schema_markdown:
+        referenced_schema_path = os.path.abspath(os.path.join(os.path.dirname(schema_path), file_path_part))
+    else:
+        referenced_schema_path = os.path.abspath(schema_path)
+
+    if anchor_part:
+        # Check if the referenced part was already documented elsewhere
+        resolved_schema, resolved_html_id, is_recursive = get_path_id(referenced_schema_path, anchor_part)
+        if is_recursive:
+            return property_dict, resolved_schema, current_path, resolved_html_id
+
+        # Record that this reference was documented here
+        global resolved_references
+        resolved_references_by_file[resolved_schema][anchor_part].append((os.path.abspath(schema_path), current_path))
+
+    # Open schema file
+    if file_path_part:
+        with open(referenced_schema_path) as schema_markdown:
             target = json.load(schema_markdown)
     else:
-        target_path = schema_path
         target = full_schema if anchor_part else {}
-        if anchor_part:
-            # Check for recursive definition
-            if anchor_part in current_path:
-                return property_dict, schema_path, anchor_part, True
+
+    # TODO: current_path does not carry the filename, should it?
+    if anchor_part:
+        # Check for definition referencing a parent element
+        split_anchor_part = anchor_part.split("/")
+        split_current_path = current_path.split("/")
+        is_parent = True
+        for i, anchor_part_segment in enumerate(split_anchor_part):
+            if len(split_current_path) <= i:
+                break
+            if anchor_part_segment != split_current_path[i]:
+                is_parent = False
+                break
+
+        if is_parent:
+            return property_dict, schema_path, anchor_part, get_path_id(referenced_schema_path, anchor_part)[0]
 
     if anchor_part:
         # Resolve anchor portion of reference
         for ref_path_segment in anchor_part.split("/"):
             if not ref_path_segment:
                 continue
+
             if ref_path_segment in target:
                 target = target[ref_path_segment]
             else:
@@ -139,10 +166,10 @@ def resolve_ref(
             continue
         result_schema[k] = v
 
-    return result_schema, target_path, anchor_part, False
+    return result_schema, referenced_schema_path, anchor_part, None
 
 
-def record_path_id(path: str, html_id: str) -> None:
+def record_path_id(path: str, schema_path: str, html_id: str) -> None:
     """Filter. Record the link between a path to an element in the schema and the HTML id added to the documentation
     element for it
 
@@ -152,26 +179,29 @@ def record_path_id(path: str, html_id: str) -> None:
     :param html_id: Unique HTML id of the element that documents the schema at this path
     """
     global paths_to_id
-    paths_to_id[path] = html_id
+    paths_to_id[os.path.abspath(schema_path)][path] = html_id
 
 
-def get_path_id(path: str) -> Tuple[str, bool]:
-    """Filter. Get the HTML id for a schema path.
+def get_path_id(schema_path: str, path: str) -> Tuple[str, str, bool]:
+    """Get the HTML id for a schema path.
 
     Uses links recorded using the filter "record_path_id"
 
+    :param schema_path: Path to the current schema on the file system
     :param path: path to an element in the schema. The format is a list of dictionary keys and array index joined by '/'
     :return: The HTML id to the documentation section for the provided schema path, if found.
              The path itself if not found
     """
-    if path in paths_to_id:
-        return paths_to_id[path], True
+    paths_to_id_for_this_schema = paths_to_id[schema_path]
 
-    for referenced_path in resolved_references[path]:
-        if referenced_path in paths_to_id:
-            return paths_to_id[referenced_path], True
+    if path in paths_to_id_for_this_schema:
+        return schema_path, paths_to_id_for_this_schema[path], True
 
-    return path, False
+    for referenced_schema, referenced_path in resolved_references_by_file[schema_path][path]:
+        if referenced_path in paths_to_id[referenced_schema]:
+            return referenced_schema, paths_to_id[referenced_schema][referenced_path], True
+
+    return schema_path, path, False
 
 
 def python_to_json(value: Any) -> Any:
@@ -387,9 +417,9 @@ def generate_from_schema(
     expand_buttons: bool = False,
 ) -> str:
     global resolved_references
-    resolved_references = defaultdict(list)
+    resolved_references = defaultdict(defaultdict_list)
     global paths_to_id
-    paths_to_id = {}
+    paths_to_id = defaultdict(defaultdict)
 
     md = markdown2.Markdown(extras=["fenced-code-blocks"])
     env = jinja2.Environment()
@@ -404,7 +434,6 @@ def generate_from_schema(
     env.filters["generate_id_for_pattern_property"] = generate_id_for_pattern_property
     env.filters["to_pretty_json"] = to_pretty_json
     env.filters["record_path_id"] = record_path_id
-    env.filters["get_path_id"] = get_path_id
     env.tests["combining"] = is_combining
     env.tests["description_short"] = is_text_short
     env.tests["deprecated"] = is_deprecated_look_in_description if deprecated_from_description else is_deprecated

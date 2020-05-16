@@ -1,15 +1,10 @@
 $(document).on('click', 'a[href^="#"]', function(event) {
   event.preventDefault();
   history.pushState({}, '', this.href);
-  anchorClick(this.href);
 });
 
 function flashElement(elementId) {
     $( "#" + elementId ).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
-}
-
-function anchorClick(linkTarget) {
-    flashElement(linkTarget.split("#")[1]);
 }
 
 function setAnchor(anchorLinkDestination) {

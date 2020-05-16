@@ -29,9 +29,16 @@
     },
     "reference_def": {
       "$ref": "#/definitions/array_def/items"
+    },
+    "gift": {
+      "type": "string",
+      "description": "A gift, or is it?"
     }
   },
   "properties": {
+    "a_gift": {
+      "$ref": "#/definitions/gift"
+    },
     "anchor_with_slash": {
       "$ref": "#/definitions/object_def"
     },

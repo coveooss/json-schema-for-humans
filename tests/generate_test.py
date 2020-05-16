@@ -336,7 +336,7 @@ def test_recursive() -> None:
 
     recursive_definition_link = soup.find("a", href="#person")
     assert recursive_definition_link
-    assert recursive_definition_link.text == "Recursive definition of person"
+    assert recursive_definition_link.text == "Same definition as person"
 
 
 def test_recursive_array() -> None:
@@ -347,7 +347,7 @@ def test_recursive_array() -> None:
 
     recursive_definition_link = soup.find("a", href="#person_array_items")
     assert recursive_definition_link
-    assert recursive_definition_link.text == "Recursive definition of person"
+    assert recursive_definition_link.text == "Same definition as person_array_items"
 
 
 def test_pattern_properties() -> None:
