@@ -2,6 +2,7 @@ import json
 import os
 from typing import Any, Dict, List, Tuple
 
+import pytest
 from bs4 import BeautifulSoup
 
 from json_schema_for_humans.generate import generate_from_schema
@@ -14,11 +15,16 @@ def _get_test_case(name: str) -> Tuple[Dict[str, Any], str]:
         return (json.load(test_case_file), os.path.abspath(test_path))
 
 
-def _generate_case(case_name: str, find_deprecated: bool = False, find_default: bool = False) -> BeautifulSoup:
+def _generate_case(
+    case_name: str, find_deprecated: bool = False, find_default: bool = False, link_to_reused_ref: bool = True
+) -> BeautifulSoup:
     """Get the BeautifulSoup object for a test case"""
     test_contents, test_path = _get_test_case(case_name)
     return BeautifulSoup(
-        generate_from_schema(test_contents, test_path, False, find_deprecated, find_default, True), "html.parser"
+        generate_from_schema(
+            test_contents, test_path, False, find_deprecated, find_default, True, link_to_reused_ref=link_to_reused_ref
+        ),
+        "html.parser",
     )
 
 
@@ -298,6 +304,15 @@ def test_description_with_ref() -> None:
     _assert_descriptions(soup, ["We should see this", "inner description", "We should see this too"])
 
 
+def test_description_with_ref_link_to_reused_ref() -> None:
+    """Same as "test_description_with_ref", but do not allow reusing references."""
+    soup = _generate_case("description_with_ref", link_to_reused_ref=False)
+
+    _assert_descriptions(
+        soup, ["We should see this", "inner description", "We should see this too", "inner description"]
+    )
+
+
 def test_with_examples() -> None:
     soup = _generate_case("with_examples")
 
@@ -320,9 +335,10 @@ def test_with_examples() -> None:
     ]
 
 
-def test_recursive() -> None:
+@pytest.mark.parametrize("link_to_reused_ref", [True, False])
+def test_recursive(link_to_reused_ref: bool) -> None:
     """Test a schema having a recursive definition"""
-    soup = _generate_case("recursive")
+    soup = _generate_case("recursive", link_to_reused_ref=link_to_reused_ref)
 
     _assert_descriptions(soup, ["A human being", "The children they had"])
 
@@ -331,9 +347,10 @@ def test_recursive() -> None:
     assert recursive_definition_link.text == "Same definition as person"
 
 
-def test_recursive_array() -> None:
+@pytest.mark.parametrize("link_to_reused_ref", [True, False])
+def test_recursive_array(link_to_reused_ref: bool) -> None:
     """Test a schema having a recursive definition pointing to array items"""
-    soup = _generate_case("recursive_array")
+    soup = _generate_case("recursive_array", link_to_reused_ref=link_to_reused_ref)
 
     _assert_descriptions(soup, ["A list of people", "A human being", "The children they had"])
 

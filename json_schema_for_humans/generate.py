@@ -78,7 +78,11 @@ def is_deprecated_look_in_description(property_dict: Dict[str, Any]) -> bool:
 
 
 def resolve_ref(
-    property_dict: Dict[str, Any], full_schema: Dict[str, Any], schema_path: str, current_path: str
+    property_dict: Dict[str, Any],
+    full_schema: Dict[str, Any],
+    schema_path: str,
+    current_path: str,
+    link_to_reused_ref: bool,
 ) -> Tuple[Dict[str, Any], str, str, Optional[str]]:
     """Filter. Resolve references in the supplied property.
 
@@ -88,6 +92,8 @@ def resolve_ref(
     :param full_schema: The complete current schema, used for references inside the same file
     :param schema_path: Path to the current schema
     :param current_path: Path to property_dict from full_schema. Used to detect recursive definitions
+    :param link_to_reused_ref: If True, will attempt to resolve a reference as being reused.
+                               If False, will only resolve references if they are recursive
     :return: The resolved schema at reference (property_dict unchanged if no references found),
              the path to the schema that contained the references,
              the path to the resolved property from the root of the schema,
@@ -114,24 +120,19 @@ def resolve_ref(
         referenced_schema_path = os.path.abspath(schema_path)
 
     if anchor_part:
-        # Check if the referenced part was already documented elsewhere
-        resolved_schema, resolved_html_id, is_recursive = get_path_id(referenced_schema_path, anchor_part)
-        if is_recursive:
-            return property_dict, resolved_schema, current_path, resolved_html_id
+        if link_to_reused_ref:
+            # Check if the referenced part was already documented elsewhere
+            resolved_schema, resolved_html_id, is_recursive = get_path_id(referenced_schema_path, anchor_part)
+            if is_recursive:
+                return property_dict, resolved_schema, current_path, resolved_html_id
 
-        # Record that this reference was documented here
-        global resolved_references
-        resolved_references_by_file[resolved_schema][anchor_part].append((os.path.abspath(schema_path), current_path))
+            # Record that this reference was documented here
+            global resolved_references
+            resolved_references_by_file[resolved_schema][anchor_part].append(
+                (os.path.abspath(schema_path), current_path)
+            )
 
-    # Open schema file
-    if file_path_part:
-        with open(referenced_schema_path) as schema_markdown:
-            target = json.load(schema_markdown)
-    else:
-        target = full_schema if anchor_part else {}
-
-    # TODO: current_path does not carry the filename, should it?
-    if anchor_part:
+        # TODO: current_path does not carry the filename, should it?
         # Check for definition referencing a parent element
         split_anchor_part = anchor_part.split("/")
         split_current_path = current_path.split("/")
@@ -144,7 +145,14 @@ def resolve_ref(
                 break
 
         if is_parent:
-            return property_dict, schema_path, anchor_part, get_path_id(referenced_schema_path, anchor_part)[0]
+            return property_dict, schema_path, anchor_part, get_path_id(referenced_schema_path, anchor_part)[1]
+
+    # Open schema file
+    if file_path_part:
+        with open(referenced_schema_path) as schema_markdown:
+            target = json.load(schema_markdown)
+    else:
+        target = full_schema if anchor_part else {}
 
     if anchor_part:
         # Resolve anchor portion of reference
@@ -176,6 +184,7 @@ def record_path_id(path: str, schema_path: str, html_id: str) -> None:
     Used for recursive definitions, where an anchor link is needed
 
     :param path: path to an element in the schema. The format is a list of dictionary keys and array index joined by '/'
+    :param schema_path: File path to the current schema
     :param html_id: Unique HTML id of the element that documents the schema at this path
     """
     global paths_to_id
@@ -415,6 +424,7 @@ def generate_from_schema(
     deprecated_from_description: bool = False,
     default_from_description: bool = False,
     expand_buttons: bool = False,
+    link_to_reused_ref: bool = True,
 ) -> str:
     global resolved_references
     resolved_references = defaultdict(defaultdict_list)
@@ -447,7 +457,9 @@ def generate_from_schema(
         schema_path = os.path.sep.join(schema_path)
     schema_path = os.path.abspath(schema_path)
 
-    rendered = template.render(schema=schema, schema_path=schema_path, expand_buttons=expand_buttons)
+    rendered = template.render(
+        schema=schema, schema_path=schema_path, expand_buttons=expand_buttons, link_to_reused_ref=link_to_reused_ref
+    )
 
     if minify:
         rendered = htmlmin.minify(rendered)
@@ -464,6 +476,7 @@ def generate_from_filename(
     expand_buttons: bool = False,
     copy_css: bool = True,
     copy_js: bool = True,
+    link_to_reused_ref: bool = True,
 ) -> None:
     with open(schema_file_name, encoding="utf-8") as schema_markdown:
         schema = json.load(schema_markdown)
@@ -475,6 +488,7 @@ def generate_from_filename(
         deprecated_from_description=deprecated_from_description,
         default_from_description=default_from_description,
         expand_buttons=expand_buttons,
+        link_to_reused_ref=link_to_reused_ref,
     )
 
     copy_css_and_js_to_target(result_file_name, copy_css, copy_js)
@@ -492,6 +506,7 @@ def generate_from_file_object(
     expand_buttons: bool,
     copy_css: bool = True,
     copy_js: bool = True,
+    link_to_reused_ref: bool = True,
 ) -> None:
     """Generate the JSON schema documentation from opened file objects for both input and output files. The
     result_file should be opened in write mode.
@@ -503,6 +518,7 @@ def generate_from_file_object(
         deprecated_from_description,
         default_from_description,
         expand_buttons,
+        link_to_reused_ref,
     )
 
     copy_css_and_js_to_target(result_file.name, copy_css, copy_js)
@@ -545,6 +561,12 @@ def copy_css_and_js_to_target(result_file_path: str, copy_css: bool, copy_js: bo
 @click.option("--expand-buttons", is_flag=True, help="Add 'Expand all' and 'Collapse all' buttons at the top")
 @click.option("--copy-css/--no-copy-css", default=True, help=f"Copy {CSS_FILE_NAME} to the folder of the result_file")
 @click.option("--copy-js/--no-copy-js", default=True, help=f"Copy {JS_FILE_NAME} to the folder of the result_file")
+@click.option(
+    "--link-to-reused-ref/--no-link-to-reused-ref",
+    default=True,
+    help="If set and 2 parts of the schema refer to the same definition, the definition will only be rendered once "
+    "and all other references will be replaced by a link.",
+)
 def main(
     schema_file: TextIO,
     result_file: TextIO,
@@ -554,6 +576,7 @@ def main(
     expand_buttons: bool,
     copy_css: bool,
     copy_js: bool,
+    link_to_reused_ref: bool,
 ) -> None:
     generate_from_file_object(
         schema_file,
@@ -564,6 +587,7 @@ def main(
         expand_buttons,
         copy_css,
         copy_js,
+        link_to_reused_ref,
     )
 
 

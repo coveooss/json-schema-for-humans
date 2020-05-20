@@ -53,7 +53,7 @@
 {%- endmacro -%}
 
 {%- macro content(index, property_name, property, property_path, current_path, named_property) -%}
-    {%- set property, property_path, current_path, recursive_id = (property | resolve_ref(schema, property_path, current_path)) -%}
+    {%- set property, property_path, current_path, recursive_id = (property | resolve_ref(schema, property_path, current_path, link_to_reused_ref)) -%}
     {# index should already be escaped unless it's the first call #}
     {%- set index = index | escape_property_name_for_id -%}
 
@@ -243,7 +243,7 @@
 
 {%- macro subsection(expanded, index, parent, property_name, property, required_properties, property_path, current_path, named_property) -%}
     {# Resolve reference #}
-    {%- set property, property_path, current_path, is_recursive = (property | resolve_ref(schema, property_path, current_path)) -%}
+    {%- set property, property_path, current_path, is_recursive = (property | resolve_ref(schema, property_path, current_path, link_to_reused_ref)) -%}
 
     {%- set suffix = property_name -%}
     {%- if parent != "" -%}
