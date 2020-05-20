@@ -79,8 +79,16 @@ These are **not** supported at the moment (PRs welcome!):
 - Media
 - Conditional subschemas
 
+## References
+
 References from inside a schema and to schemas in other files are supported (for example `{ $ref: "#/definitions/something" }` will be replaced by the 
 content of `schema["definitions"]["something"]`).
+
+You _can_ have a `description` next to a `$ref`, it will be displayed in priority to the description from the referenced element.
+
+If you have several attributes using the same definition, the definition will only be rendered once.
+All other usages of the same definition will be replaced with an anchor link to the first render of the definition.
+See `With references` in the examples.
 
 ## Anchor links
 Clicking on a property or tab in the output documentation will set the hash of the current window. Opening this anchor link will expand all needed properties and scroll to this section of the schema. Useful for pointing your users to a specific setting.

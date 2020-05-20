@@ -58,6 +58,8 @@
     {%- set index = index | escape_property_name_for_id -%}
 
     {%- if recursive_id -%}
+        {# There can be a description next to $ref, so let's display it #}
+        {{ add_description(property) }}
         {%- if recursive_id != current_path -%}
             <a href="#{{ recursive_id }}" onclick="anchorLink('{{ recursive_id }}')">Same definition as {{ recursive_id }}</a>
         {%- else -%}

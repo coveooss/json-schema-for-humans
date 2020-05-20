@@ -461,6 +461,7 @@ def generate_from_filename(
     minify: bool = True,
     deprecated_from_description: bool = False,
     default_from_description: bool = False,
+    expand_buttons: bool = False,
     copy_css: bool = True,
     copy_js: bool = True,
 ) -> None:
@@ -473,6 +474,7 @@ def generate_from_filename(
         minify=minify,
         deprecated_from_description=deprecated_from_description,
         default_from_description=default_from_description,
+        expand_buttons=expand_buttons,
     )
 
     copy_css_and_js_to_target(result_file_name, copy_css, copy_js)

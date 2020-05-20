@@ -18,7 +18,7 @@ def _generate_case(case_name: str, find_deprecated: bool = False, find_default: 
     """Get the BeautifulSoup object for a test case"""
     test_contents, test_path = _get_test_case(case_name)
     return BeautifulSoup(
-        generate_from_schema(test_contents, test_path, False, find_deprecated, find_default), "html.parser"
+        generate_from_schema(test_contents, test_path, False, find_deprecated, find_default, True), "html.parser"
     )
 
 
@@ -135,20 +135,18 @@ def test_references() -> None:
     _assert_property_names(
         soup,
         [
+            "a_gift",
             "anchor_with_slash",
             "propertyA",
             "anchor_no_slash",
             "anchor_nested_reference",
             "same_file_anchor_with_slash",
             "same_file_anchor_no_slash",
-            "propertyA",
             "same_file_nested_reference",
             "other_file_anchor",
             "with_wrap",
             "other_file_dot_anchor",
-            "with_wrap",
             "other_file_dot_dot_anchor",
-            "with_wrap",
             "other_file_only",
             "not_a_string",
             "multi_hierarchy_reference",
@@ -159,12 +157,10 @@ def test_references() -> None:
         soup,
         [
             "Testing $ref",
+            "A gift, or is it?",
             "Description for object_def/items/propertyA",
             "Description for array_def",
             "Description for string_def",
-            "Description for object_def/items/propertyA",
-            "The delivery is a gift, no prices displayed",
-            "The delivery is a gift, no prices displayed",
             "The delivery is a gift, no prices displayed",
             "Test schema with a not",
             "Contents of propertyA in final.json",
@@ -221,11 +217,10 @@ def test_with_definitions():
     soup = _generate_case("with_definitions")
 
     _assert_property_names(
-        soup,
-        ["billing_address", "street_address", "city", "state", "shipping_address", "street_address", "city", "state"],
+        soup, ["billing_address", "street_address", "city", "state", "shipping_address"],
     )
-    _assert_types(soup, ["object", "string", "string", "string"] * 2)
-    _assert_required(soup, [False, True, True, True, False, True, True, True])
+    _assert_types(soup, ["object", "string", "string", "string"])
+    _assert_required(soup, [False, True, True, True, False])
 
 
 def test_with_multiple_descriptions():
@@ -235,7 +230,6 @@ def test_with_multiple_descriptions():
     _assert_descriptions(
         soup,
         [
-            "Exact address",
             "Exact address",
             "Delivery info depending on the delivery type",
             "The delivery is a gift, no prices displayed",
@@ -301,9 +295,7 @@ def test_description_with_ref() -> None:
     """
     soup = _generate_case("description_with_ref")
 
-    _assert_descriptions(
-        soup, ["We should see this", "inner description", "We should see this too", "inner description"]
-    )
+    _assert_descriptions(soup, ["We should see this", "inner description", "We should see this too"])
 
 
 def test_with_examples() -> None:
