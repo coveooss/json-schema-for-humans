@@ -32,5 +32,8 @@ for case_name in os.listdir(cases_source_dir):
     print(f"Generating example {name}")
 
     generate_from_filename(
-        case_source, os.path.join(results_example_dir, f"{name}.html"), deprecated_from_description=True
+        case_source,
+        os.path.join(results_example_dir, f"{name}.html"),
+        deprecated_from_description=True,
+        expand_buttons=True,
     )

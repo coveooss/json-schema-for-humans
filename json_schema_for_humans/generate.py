@@ -3,6 +3,7 @@ import json
 import os
 import re
 import shutil
+from collections import defaultdict
 from typing import Any, Dict, List, Optional, TextIO, Tuple, Type, Union
 
 import click
@@ -43,6 +44,14 @@ EXCLUSIVE_MINIMUM = "exclusiveMinimum"
 SHORT_DESCRIPTION_NUMBER_OF_LINES = 8
 
 
+def defaultdict_list() -> Dict[Any, List]:
+    return defaultdict(list)
+
+
+paths_to_id: Dict[str, Dict[str, str]] = defaultdict(defaultdict)
+resolved_references_by_file: Dict[str, Dict[str, List[Tuple[str, str]]]] = defaultdict(defaultdict_list)
+
+
 def is_combining(property_dict: Dict[str, Any]) -> bool:
     """Test if a schema is one of the combining schema keyword"""
     return bool({"anyOf", "allOf", "oneOf", "not"}.intersection(property_dict.keys()))
@@ -69,8 +78,8 @@ def is_deprecated_look_in_description(property_dict: Dict[str, Any]) -> bool:
 
 
 def resolve_ref(
-    property_dict: Dict[str, Any], full_schema: Dict[str, Any], schema_path: str
-) -> Tuple[Dict[str, Any], str]:
+    property_dict: Dict[str, Any], full_schema: Dict[str, Any], schema_path: str, current_path: str
+) -> Tuple[Dict[str, Any], str, str, Optional[str]]:
     """Filter. Resolve references in the supplied property.
 
     See https://json-schema.org/understanding-json-schema/structuring.html#reuse
@@ -78,12 +87,17 @@ def resolve_ref(
     :param property_dict: The dict for the current property that can contain a "$ref" key
     :param full_schema: The complete current schema, used for references inside the same file
     :param schema_path: Path to the current schema
-    :return: The resolved schema at reference (property_dict unchanged if no references found)
-             and the path to the schema that contained the references
+    :param current_path: Path to property_dict from full_schema. Used to detect recursive definitions
+    :return: The resolved schema at reference (property_dict unchanged if no references found),
+             the path to the schema that contained the references,
+             the path to the resolved property from the root of the schema,
+             and whether the resolved reference is recursive
     """
+    current_path = current_path.lstrip("/")
+
     reference_path = property_dict.get(REF)
     if not reference_path:
-        return property_dict, schema_path
+        return property_dict, schema_path, current_path, None
 
     # Reference found, resolve the path (format "#/a/b/c", "file.json#/a/b/c", or "file.json")
     if "#" not in reference_path:
@@ -91,21 +105,53 @@ def resolve_ref(
         anchor_part = ""
     else:
         file_path_part, anchor_part = reference_path.split("#", maxsplit=1)
+        anchor_part = anchor_part.lstrip("/")
 
-    # Resolve file path portion of reference and open schema file
+    # Resolve file path portion of reference
     if file_path_part:
-        target_path = os.path.abspath(os.path.join(os.path.dirname(schema_path), file_path_part))
-        with open(target_path) as schema_markdown:
+        referenced_schema_path = os.path.abspath(os.path.join(os.path.dirname(schema_path), file_path_part))
+    else:
+        referenced_schema_path = os.path.abspath(schema_path)
+
+    if anchor_part:
+        # Check if the referenced part was already documented elsewhere
+        resolved_schema, resolved_html_id, is_recursive = get_path_id(referenced_schema_path, anchor_part)
+        if is_recursive:
+            return property_dict, resolved_schema, current_path, resolved_html_id
+
+        # Record that this reference was documented here
+        global resolved_references
+        resolved_references_by_file[resolved_schema][anchor_part].append((os.path.abspath(schema_path), current_path))
+
+    # Open schema file
+    if file_path_part:
+        with open(referenced_schema_path) as schema_markdown:
             target = json.load(schema_markdown)
     else:
-        target_path = schema_path
         target = full_schema if anchor_part else {}
+
+    # TODO: current_path does not carry the filename, should it?
+    if anchor_part:
+        # Check for definition referencing a parent element
+        split_anchor_part = anchor_part.split("/")
+        split_current_path = current_path.split("/")
+        is_parent = True
+        for i, anchor_part_segment in enumerate(split_anchor_part):
+            if len(split_current_path) <= i:
+                break
+            if anchor_part_segment != split_current_path[i]:
+                is_parent = False
+                break
+
+        if is_parent:
+            return property_dict, schema_path, anchor_part, get_path_id(referenced_schema_path, anchor_part)[0]
 
     if anchor_part:
         # Resolve anchor portion of reference
         for ref_path_segment in anchor_part.split("/"):
             if not ref_path_segment:
                 continue
+
             if ref_path_segment in target:
                 target = target[ref_path_segment]
             else:
@@ -120,7 +166,42 @@ def resolve_ref(
             continue
         result_schema[k] = v
 
-    return result_schema, target_path
+    return result_schema, referenced_schema_path, anchor_part, None
+
+
+def record_path_id(path: str, schema_path: str, html_id: str) -> None:
+    """Filter. Record the link between a path to an element in the schema and the HTML id added to the documentation
+    element for it
+
+    Used for recursive definitions, where an anchor link is needed
+
+    :param path: path to an element in the schema. The format is a list of dictionary keys and array index joined by '/'
+    :param html_id: Unique HTML id of the element that documents the schema at this path
+    """
+    global paths_to_id
+    paths_to_id[os.path.abspath(schema_path)][path] = html_id
+
+
+def get_path_id(schema_path: str, path: str) -> Tuple[str, str, bool]:
+    """Get the HTML id for a schema path.
+
+    Uses links recorded using the filter "record_path_id"
+
+    :param schema_path: Path to the current schema on the file system
+    :param path: path to an element in the schema. The format is a list of dictionary keys and array index joined by '/'
+    :return: The HTML id to the documentation section for the provided schema path, if found.
+             The path itself if not found
+    """
+    paths_to_id_for_this_schema = paths_to_id[schema_path]
+
+    if path in paths_to_id_for_this_schema:
+        return schema_path, paths_to_id_for_this_schema[path], True
+
+    for referenced_schema, referenced_path in resolved_references_by_file[schema_path][path]:
+        if referenced_path in paths_to_id[referenced_schema]:
+            return referenced_schema, paths_to_id[referenced_schema][referenced_path], True
+
+    return schema_path, path, False
 
 
 def python_to_json(value: Any) -> Any:
@@ -313,7 +394,7 @@ def get_numeric_restrictions_text(property_dict: Dict[str, Any], before_value: s
 def escape_property_name_for_id(property_name: str) -> str:
     """Filter. Escape unsafe characters in a property name so that it can be used in a HTML id"""
 
-    escaped = re.sub("[^0-9a-zA-Z_,.-]", "_", property_name)
+    escaped = re.sub("[^0-9a-zA-Z_,.-]", "_", str(property_name))
     if not escaped[0].isalpha():
         escaped = "a" + escaped
     return escaped
@@ -335,6 +416,11 @@ def generate_from_schema(
     default_from_description: bool = False,
     expand_buttons: bool = False,
 ) -> str:
+    global resolved_references
+    resolved_references = defaultdict(defaultdict_list)
+    global paths_to_id
+    paths_to_id = defaultdict(defaultdict)
+
     md = markdown2.Markdown(extras=["fenced-code-blocks"])
     env = jinja2.Environment()
     env.filters["markdown"] = lambda text: jinja2.Markup(md.convert(text))
@@ -347,6 +433,7 @@ def generate_from_schema(
     env.filters["escape_property_name_for_id"] = escape_property_name_for_id
     env.filters["generate_id_for_pattern_property"] = generate_id_for_pattern_property
     env.filters["to_pretty_json"] = to_pretty_json
+    env.filters["record_path_id"] = record_path_id
     env.tests["combining"] = is_combining
     env.tests["description_short"] = is_text_short
     env.tests["deprecated"] = is_deprecated_look_in_description if deprecated_from_description else is_deprecated
@@ -374,6 +461,7 @@ def generate_from_filename(
     minify: bool = True,
     deprecated_from_description: bool = False,
     default_from_description: bool = False,
+    expand_buttons: bool = False,
     copy_css: bool = True,
     copy_js: bool = True,
 ) -> None:
@@ -386,6 +474,7 @@ def generate_from_filename(
         minify=minify,
         deprecated_from_description=deprecated_from_description,
         default_from_description=default_from_description,
+        expand_buttons=expand_buttons,
     )
 
     copy_css_and_js_to_target(result_file_name, copy_css, copy_js)
