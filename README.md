@@ -77,6 +77,7 @@ The following are supported:
 - Array `minItems`, `maxItems`, `uniqueItems`, `items` (schema that must apply to all of the array items), and `contains`
 - Combining schema with `oneOf`, `allOf`, `anyOf`, and `not`
 - Examples
+- Conditional subschemas
 
 These are **not** supported at the moment (PRs welcome!):
 - String format
@@ -84,7 +85,6 @@ These are **not** supported at the moment (PRs welcome!):
 - Array items at specific index (for example, first item must be a string and second must be an integer)
 - Property dependencies
 - Media
-- Conditional subschemas
 
 ## References
 
