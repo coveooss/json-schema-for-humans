@@ -143,10 +143,10 @@
                 {%- set current_path = current_path ~ "/pattern" -%}
                 {%- set pattern_id = current_id ~ "_pattern" -%}
                 {%- set _none = current_path | record_path_id(property_path, pattern_id) -%}
-                <span class="pattern-value" id="{{ pattern_id }}">Must match regular expression: <code>{{ property.pattern }}</code></span>
+                <span class="pattern-value" id="{{ pattern_id }}">Must match regular expression: <code>{{ property.pattern | escape }}</code></span>
             {%- endif -%}
             {%- if not named_property -%}
-                <span class="pattern-value">Property name must match regular expression: <code>{{ property_name }}</code></span>
+                <span class="pattern-value">Property name must match regular expression: <code>{{ property_name | escape }}</code></span>
             {%- endif -%}
             {%- if "if" in property and "then" in property -%}
                 {%- set has_else = "else" in property -%}
@@ -344,9 +344,9 @@
                     <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#{{ suffix }}"
                             aria-expanded="{{ expanded }}" aria-controls="{{ suffix }}" onclick="setAnchor('#{{ suffix }}')">
                         {%- if named_property -%}
-                            <span class="property-name">{{ property_name }}</span>
+                            <span class="property-name">{{ property_name | escape }}</span>
                         {%- else -%}
-                            <span class="property-name">{{ property_title }}</span>
+                            <span class="property-name">{{ property_title |escape }}</span>
                         {%- endif -%}
                         {%- if is_required -%}
                             {{ " " }}<span class="badge badge-warning required-property">Required</span>
