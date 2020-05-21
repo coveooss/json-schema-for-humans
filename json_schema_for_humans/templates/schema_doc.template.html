@@ -37,7 +37,7 @@
     </div>
 {%- endmacro -%}
 
-{%- macro add_description(property) -%}
+{%- macro add_description(property, current_id) -%}
     {%- set description = property.get("description") | get_description -%}
     {# Display description #}
     {%- if description -%}
@@ -47,7 +47,7 @@
             <div class="description collapse" id="collapseDescription_{{ current_id }}">
                 {{ description | markdown }}
             </div>
-            <a class="collapse-description-link collapsed" data-toggle="collapse" href="#collapseDescription_{{ current_id }}" aria-expanded="false" aria-controls="collapseDescription{{ index }}"></a>
+            <a class="collapse-description-link collapsed" data-toggle="collapse" href="#collapseDescription_{{ current_id }}" aria-expanded="false" aria-controls="collapseDescription{{ current_id }}"></a>
         {%- endif -%}
     {%- endif -%}
 {%- endmacro -%}
@@ -57,7 +57,7 @@
 
     {%- if recursive_id -%}
         {# There can be a description next to $ref, so let's display it #}
-        {{ add_description(property) }}
+        {{ add_description(property, current_id) }}
         {%- if recursive_id != current_path -%}
             <a href="#{{ recursive_id }}" onclick="anchorLink('{{ recursive_id }}')">Same definition as {{ recursive_id }}</a>
         {%- else -%}
@@ -67,11 +67,11 @@
         {# Handle having oneOf or allOf with only one condition #}
         {%- if "allOf" in property and (property["allOf"] | length) == 1 -%}
             {%- set current_path = current_path ~ "/allOf/0" -%}
-            {{ add_description(property) }}
+            {{ add_description(property, current_id) }}
             {{ content(current_id, property_name, property["allOf"][0], property_path, current_path, True) }}
         {%- elif "anyOf" in property and (property["anyOf"] | length) == 1 -%}
             {%- set current_path = current_path ~ "/anyOf/0" -%}
-            {{ add_description(property) }}
+            {{ add_description(property, current_id) }}
             {{ content(current_id, property_name, property["anyOf"][0], property_path, current_path, True) }}
         {%- else -%}
             {# Resolve type #}
@@ -86,7 +86,7 @@
                 {{ " " }}<span class="badge badge-success default-value">Default: {{ default | python_to_json }}</span>
             {%- endif -%}
 
-            {{ add_description(property) }}
+            {{ add_description(property, current_id) }}
 
             {# Handle actual requirement #}
             {%- if "allOf" in property -%}
