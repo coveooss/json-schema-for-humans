@@ -213,6 +213,18 @@ def get_path_id(schema_path: str, path: str) -> Tuple[str, str, bool]:
     return schema_path, path, False
 
 
+def get_undocumented_required_properties(property_dict: Dict[str, Any]) -> List[str]:
+    required_properties = property_dict.get("required", [])
+    documented_properties = property_dict.get("properties", {}).keys()
+
+    undocumented = []
+    for property_name in required_properties:
+        if property_name not in documented_properties:
+            undocumented.append(property_name)
+
+    return undocumented
+
+
 def python_to_json(value: Any) -> Any:
     """Filter. Return the value as it needs to be displayed in JSON
 
@@ -444,6 +456,7 @@ def generate_from_schema(
     env.filters["generate_id_for_pattern_property"] = generate_id_for_pattern_property
     env.filters["to_pretty_json"] = to_pretty_json
     env.filters["record_path_id"] = record_path_id
+    env.filters["get_undocumented_required_properties"] = get_undocumented_required_properties
     env.tests["combining"] = is_combining
     env.tests["description_short"] = is_text_short
     env.tests["deprecated"] = is_deprecated_look_in_description if deprecated_from_description else is_deprecated

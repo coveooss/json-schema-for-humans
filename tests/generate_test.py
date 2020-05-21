@@ -115,7 +115,7 @@ def test_multiple_types() -> None:
     """Test rendering a schema with type being an array."""
     soup = _generate_case("multiple_types")
 
-    _assert_types(soup, ["string", "string or null", "integer or number", "integer, string, number or null"])
+    _assert_types(soup, ["object", "string", "string or null", "integer or number", "integer, string, number or null"])
 
 
 def test_geo() -> None:
@@ -123,7 +123,7 @@ def test_geo() -> None:
     soup = _generate_case("geo")
 
     _assert_property_names(soup, ["latitude", "longitude"])
-    _assert_types(soup, ["number"] * 2)
+    _assert_types(soup, ["object", "number", "number"])
     _assert_numeric_restrictions(
         soup,
         [
@@ -204,7 +204,7 @@ def test_array() -> None:
             "Do I like this vegetable?",
         ],
     )
-    _assert_types(soup, ["array of string", "string", "array", "object", "string", "boolean"])
+    _assert_types(soup, ["object", "array of string", "string", "array", "object", "string", "boolean"])
     _assert_required(soup, [False, False, True, True])
 
 
@@ -225,7 +225,7 @@ def test_with_definitions():
     _assert_property_names(
         soup, ["billing_address", "street_address", "city", "state", "shipping_address"],
     )
-    _assert_types(soup, ["object", "string", "string", "string"])
+    _assert_types(soup, ["object", "object", "string", "string", "string"])
     _assert_required(soup, [False, True, True, True, False])
 
 
@@ -248,7 +248,7 @@ def test_combining_one_of():
     soup = _generate_case("combining_oneOf")
 
     _assert_one_of_options(soup, 4)
-    _assert_types(soup, ["object"] * 4)
+    _assert_types(soup, ["object"] * 5)
     _assert_required(soup, [True])
 
 
@@ -381,4 +381,12 @@ def test_pattern_properties() -> None:
             "Numerical rating for paper size.",
             "Narrative review of the paper size.",
         ],
+    )
+
+
+def test_conditional_subschema() -> None:
+    soup = _generate_case("conditional_subschema")
+
+    _assert_types(
+        soup, ["object", "object", "const", "object", "object", "object", "object", "string", "enum (of string)"]
     )
