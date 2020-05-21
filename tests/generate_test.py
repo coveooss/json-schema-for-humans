@@ -390,3 +390,15 @@ def test_conditional_subschema() -> None:
     _assert_types(
         soup, ["object", "object", "const", "object", "object", "object", "object", "string", "enum (of string)"]
     )
+
+
+def test_html_in_patterns() -> None:
+    soup = _generate_case("html_in_patterns")
+
+    code_blocks = soup.find_all("code")
+    assert list(block.text for block in code_blocks) == [
+        "^(<<variable:([-+/*0-9A-Za-z_]+)>>|<<auto>>)$",
+        "$[a-c][0-9]^<a>",
+    ]
+
+    _assert_property_names(soup, ["$[a-c][0-9]^<a>"])
