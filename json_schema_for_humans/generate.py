@@ -4,12 +4,15 @@ import os
 import re
 import shutil
 from collections import defaultdict
+from datetime import datetime
 from typing import Any, Dict, List, Optional, TextIO, Tuple, Type, Union
 
 import click
 import htmlmin
 import jinja2
 import markdown2
+from pytz import reference
+
 
 TEMPLATE_FILE_NAME = "templates/schema_doc.template.html"
 CSS_FILE_NAME = "schema_doc.css"
@@ -429,6 +432,10 @@ def generate_id_for_pattern_property(parent_property_name: str, current_index: i
     return id_string
 
 
+def get_local_time() -> str:
+    return datetime.now(tz=reference.LocalTimezone()).strftime("%Y-%m-%d at %H:%M:%S %z")
+
+
 def generate_from_schema(
     schema: Dict[str, Any],
     schema_path: str,
@@ -460,6 +467,7 @@ def generate_from_schema(
     env.tests["combining"] = is_combining
     env.tests["description_short"] = is_text_short
     env.tests["deprecated"] = is_deprecated_look_in_description if deprecated_from_description else is_deprecated
+    env.globals["get_local_time"] = get_local_time
 
     template_path = os.path.join(os.path.dirname(__file__), TEMPLATE_FILE_NAME)
     with open(template_path, "r") as template_fp:

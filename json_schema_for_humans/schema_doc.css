@@ -76,3 +76,8 @@ body {
 .examples {
 	padding: 1rem !important;
 }
+
+.generated-by-footer {
+    margin-top: 1em;
+    text-align: right;
+}
