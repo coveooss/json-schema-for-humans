@@ -1,0 +1,108 @@
+{% from "macro_restriction.html" import restriction with context %}
+
+{%- macro tabbed_section(operator, property, property_path, current_id, current_path) -%}
+    {% include "tabbed_section.html" %}
+{%- endmacro -%}
+
+{%- macro subsection(expanded, current_id, parent, property_name, property, required_properties, property_path, current_path, named_property) -%}
+    {% include "subsection.html" %}
+{%- endmacro -%}
+
+{%- macro content(current_id, property_name, property, property_path, current_path, named_property) -%}
+    {%- set property, property_path, current_path, recursive_id = (property | resolve_ref(schema, property_path, current_path, link_to_reused_ref)) -%}
+
+    {%- if recursive_id -%}
+        {# There can be a description next to $ref, so let's display it #}
+        {%  include "section_description.html" %}
+        {%- if recursive_id != current_path -%}
+            <a href="#{{ recursive_id }}" onclick="anchorLink('{{ recursive_id }}')">Same definition as {{ recursive_id }}</a>
+        {%- else -%}
+            <p>Recursive definition, see #/{{ recursive_id }}</p>
+        {%- endif -%}
+    {%- else -%}
+        {# Handle having oneOf or allOf with only one condition #}
+        {%- if "allOf" in property and (property["allOf"] | length) == 1 -%}
+            {%- set current_path = current_path ~ "/allOf/0" -%}
+            {%  include "section_description.html" %}
+            {{ content(current_id, property_name, property["allOf"][0], property_path, current_path, True) }}
+        {%- elif "anyOf" in property and (property["anyOf"] | length) == 1 -%}
+            {%- set current_path = current_path ~ "/anyOf/0" -%}
+            {%  include "section_description.html" %}
+            {{ content(current_id, property_name, property["anyOf"][0], property_path, current_path, True) }}
+        {%- else -%}
+            {# Resolve type #}
+            {%- set default, has_default = property | get_default -%}
+            {%- set type = property | get_type_name -%}
+
+            {# Display type #}
+            {%- if not property is combining -%}
+                <span class="badge badge-dark value-type">Type: {{ type }}</span>
+            {%- endif -%}
+            {%- if has_default -%}
+                {{ " " }}<span class="badge badge-success default-value">Default: {{ default | python_to_json }}</span>
+            {%- endif -%}
+
+            {%  include "section_description.html" %}
+
+            {# Handle actual requirement #}
+            {%- if "allOf" in property -%}
+                {%- set current_path = current_path ~ "/allOf" -%}
+                {%- set tab_section_id = current_id ~ "_allOf" -%}
+                {%- set _none = current_path | record_path_id(property_path, tab_section_id) -%}
+                <div class="all-of-value" id="{{ tab_section_id }}">{{ tabbed_section("allOf", property, property_path, current_id) }}</div>
+            {%- endif -%}
+            {%- if "anyOf" in property -%}
+                {%- set current_path = current_path ~ "/anyOf" -%}
+                {%- set tab_section_id = current_id ~ "_anyOf" -%}
+                {%- set _none = current_path | record_path_id(property_path, tab_section_id) -%}
+                <div class="any-of-value" id="{{ tab_section_id }}">{{ tabbed_section("anyOf", property, property_path, current_id) }}</div>
+            {%- endif -%}
+            {%- if "oneOf" in property -%}
+                {%- set current_path = current_path ~ "/oneOf" -%}
+                {%- set tab_section_id = current_id ~ "_oneOf" -%}
+                {%- set _none = current_path | record_path_id(property_path, tab_section_id) -%}
+                <div class="one-of-value" id="{{ tab_section_id }}">{{ tabbed_section("oneOf", property, property_path, current_id) }}</div>
+            {%- endif -%}
+            {%- if "not" in property -%}
+                {% include "section_not.html" %}
+            {%- endif -%}
+            {%- if "enum" in property -%}
+                {% include "section_enum.html" %}
+            {%- endif -%}
+            {%- if "const" in property -%}
+                {%- set current_path = current_path ~ "/const" -%}
+                {%- set const_id = current_id ~ "_const" -%}
+                {%- set _none = current_path | record_path_id(property_path, const_id) -%}
+                <span class="const-value" id="{{ const_id }}">Specific value: <code>{{ property.const | python_to_json }}</code></span>
+            {%- endif -%}
+            {%- if "pattern" in property -%}
+                {%- set current_path = current_path ~ "/pattern" -%}
+                {%- set pattern_id = current_id ~ "_pattern" -%}
+                {%- set _none = current_path | record_path_id(property_path, pattern_id) -%}
+                <span class="pattern-value" id="{{ pattern_id }}">Must match regular expression: <code>{{ property.pattern | escape }}</code></span>
+            {%- endif -%}
+            {%- if not named_property -%}
+                <span class="pattern-value">Property name must match regular expression: <code>{{ property_name | escape }}</code></span>
+            {%- endif -%}
+
+            {# Conditional subschema, or if-then-else section #}
+            {%- if "if" in property and "then" in property -%}
+                {% include "section_conditional_subschema.html" %}
+            {%- endif -%}
+
+            {# Required properties that do not have a subsection. They will only be listed #}
+            {% include "section_undocumented_required_properties.html" %}
+
+            {# Show the requested type(s) #}
+            {% include "badge_type.html" %}
+
+            {# Display examples #}
+            {%- set examples = (property.get("examples") or []) -%}
+            {%- if examples -%}
+                {% include "section_examples.html" %}
+            {%- endif -%}
+
+            {% include "section_properties.html" %}
+        {%- endif -%}
+    {%- endif -%}
+{%- endmacro -%}

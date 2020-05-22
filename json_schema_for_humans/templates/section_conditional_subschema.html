@@ -1,0 +1,61 @@
+{%- set has_else = "else" in property -%}
+<h2 class="handle">
+    <label>Conditional Subschema</label>
+</h2>
+<p>If the conditions in the "If" tab are respected, then the conditions in the "Then" tab should be respected.
+    Otherwise, the conditions in the "Else" tab should be respected.</p>
+<ul class="nav nav-tabs" id="tabs{{ current_id }}_if" role="tablist">
+    {%- set tab_id = current_id ~ "__if" -%}
+    <li class="nav-item">
+        {%- set _none = current_path | record_path_id(property_path, tab_id) -%}
+        <a class="nav-link active"
+           id="{{ tab_id }}" data-toggle="tab" href="#tab-pane_{{ tab_id }}" role="tab"
+           onclick="setAnchor('#{{ tab_id }}')"
+        >If</a>
+    </li>
+
+    {%- set tab_id = current_id ~ "__then" -%}
+    <li class="nav-item">
+        {%- set _none = current_path | record_path_id(property_path, tab_id) -%}
+        <a class="nav-link"
+           id="{{ tab_id }}" data-toggle="tab" href="#tab-pane_{{ tab_id }}" role="tab"
+           onclick="setAnchor('#{{ tab_id }}')"
+        >Then</a>
+    </li>
+
+    {%- if has_else -%}
+        {%- set tab_id = current_id ~ "__else" -%}
+        <li class="nav-item">
+            {%- set _none = current_path | record_path_id(property_path, tab_id) -%}
+            <a class="nav-link"
+               id="{{ tab_id }}" data-toggle="tab" href="#tab-pane_{{ tab_id }}" role="tab"
+               onclick="setAnchor('#{{ tab_id }}')"
+            >Else</a>
+        </li>
+    {%- endif -%}
+</ul>
+
+<div class="tab-content card">
+    {%- set tab_id = current_id ~ "__if" -%}
+    <div class="tab-pane fade card-body active show"
+         id="tab-pane_{{ tab_id }}" role="tabpanel">
+        {%- set current_path = current_path ~ "/if" -%}
+        {{ content(tab_id, tab_label ~ " if", property["if"], property_path, current_path, True) }}
+    </div>
+
+    {%- set tab_id = current_id ~ "__then" -%}
+    <div class="tab-pane fade card-body"
+         id="tab-pane_{{ tab_id }}" role="tabpanel">
+        {%- set current_path = current_path ~ "/then" -%}
+        {{ content(tab_id, tab_label ~ " then", property["then"], property_path, current_path, True) }}
+    </div>
+
+    {%- if has_else -%}
+        {%- set tab_id = current_id ~ "__else" -%}
+        <div class="tab-pane fade card-body"
+             id="tab-pane_{{ tab_id }}" role="tabpanel">
+            {%- set current_path = current_path ~ "/else" -%}
+            {{ content(tab_id, tab_label ~ " else", property["else"], property_path, current_path, True) }}
+        </div>
+    {%- endif -%}
+</div>

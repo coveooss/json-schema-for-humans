@@ -1,0 +1,17 @@
+{%- if type == "string" -%}
+    {%- if "minLength" in property -%}
+        {{ restriction("Must be at least <code>" ~ property.minLength ~ "</code> characters long", "min-length", current_path, property_path, current_id ~ "_minLength") }}
+    {%- endif -%}
+    {%- if "maxLength" in property -%}
+        {{ restriction("Must be at most <code>" ~ property.maxLength ~ "</code> characters long", "max-length", current_path, property_path, current_id ~ "_maxLength") }}
+    {%- endif -%}
+{%- endif -%}
+{%- if type in ["integer", "number"] -%}
+    {%- set restriction_text = (property | get_numeric_restrictions_text("<code>", "</code>")) -%}
+    {%- if restriction_text -%}
+        {{ restriction(property | get_numeric_restrictions_text("<code>", "</code>"), "numeric", current_path, property_path, current_id ~ "_number") }}
+    {%- endif -%}
+{%- endif -%}
+{%- if type.startswith("array") -%}
+    {% include "section_array.html" %}
+{%- endif -%}

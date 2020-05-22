@@ -1,0 +1,16 @@
+{%- if "properties" in property -%}
+    {%- set required_properties = property.get("required") or [] -%}
+    {%- set current_path = current_path ~ "/properties" -%}
+
+    {%- for sub_property_name, sub_property in property["properties"].items() -%}
+        {%- set current_path_property = current_path ~ "/" ~ sub_property_name -%}
+        {{ subsection(False, loop.index, current_id, sub_property_name, sub_property, required_properties, property_path, current_path_property, True) }}
+    {%- endfor -%}
+{%- endif -%}
+{%- if "patternProperties" in property -%}
+    {%- set current_path = current_path ~ "/patternProperties" -%}
+    {%- for sub_property_name, sub_property in property["patternProperties"].items() -%}
+        {%- set current_path_property = current_path ~ "/" ~ sub_property_name -%}
+        {{ subsection(False, loop.index, current_id, sub_property_name, sub_property, [], property_path, current_path_property, False) }}
+    {%- endfor -%}
+{%- endif -%}

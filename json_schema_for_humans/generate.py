@@ -11,10 +11,12 @@ import click
 import htmlmin
 import jinja2
 import markdown2
+from jinja2 import FileSystemLoader
 from pytz import reference
 
 
-TEMPLATE_FILE_NAME = "templates/schema_doc.template.html"
+TEMPLATE_FOLDER = "templates"
+TEMPLATE_FILE_NAME = "base.html"
 CSS_FILE_NAME = "schema_doc.css"
 JS_FILE_NAME = "schema_doc.min.js"
 
@@ -318,8 +320,8 @@ def get_description(description: Optional[str]) -> str:
 
 
 def get_description_remove_default(description: Optional[str]) -> str:
-    """Filter. From the description attribute of a property, return the description without any default values in it. Will also convert None to an
-    empty string.
+    """Filter. From the description attribute of a property, return the description without any default values in it.
+    Will also convert None to an empty string.
     """
     if not description:
         return ""
@@ -450,8 +452,12 @@ def generate_from_schema(
     global paths_to_id
     paths_to_id = defaultdict(defaultdict)
 
+    template_folder = os.path.join(os.path.dirname(__file__), TEMPLATE_FOLDER)
+    base_template_path = os.path.join(template_folder, TEMPLATE_FILE_NAME)
+
     md = markdown2.Markdown(extras=["fenced-code-blocks"])
-    env = jinja2.Environment()
+    loader = FileSystemLoader(template_folder)
+    env = jinja2.Environment(loader=loader)
     env.filters["markdown"] = lambda text: jinja2.Markup(md.convert(text))
     env.filters["python_to_json"] = python_to_json
     env.filters["get_default"] = get_default_look_in_description if default_from_description else get_default
@@ -469,8 +475,7 @@ def generate_from_schema(
     env.tests["deprecated"] = is_deprecated_look_in_description if deprecated_from_description else is_deprecated
     env.globals["get_local_time"] = get_local_time
 
-    template_path = os.path.join(os.path.dirname(__file__), TEMPLATE_FILE_NAME)
-    with open(template_path, "r") as template_fp:
+    with open(base_template_path, "r") as template_fp:
         template = env.from_string(template_fp.read())
 
     if isinstance(schema_path, list):

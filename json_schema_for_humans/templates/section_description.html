@@ -1,0 +1,15 @@
+
+{%- set description = property.get("description") | get_description -%}
+{# Display description #}
+{%- if description -%}
+    {%- if description is description_short -%}
+        <span class="description">{{ description | markdown }}</span>
+    {%- else -%}
+        <div class="description collapse" id="collapseDescription_{{ current_id }}">
+            {{ description | markdown }}
+        </div>
+        <a class="collapse-description-link collapsed" data-toggle="collapse" href="#collapseDescription_{{ current_id }}"
+           aria-expanded="false" aria-controls="collapseDescription{{ current_id }}"
+        ></a>
+    {%- endif -%}
+{%- endif -%}
