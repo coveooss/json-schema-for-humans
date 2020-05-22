@@ -1,0 +1,36 @@
+{%- set current_path = current_path ~ "/array" -%}
+{%- set array_id = current_id ~ "_array" -%}
+{%- set _none = current_path | record_path_id(property_path, array_id) -%}
+{%- if "minItems" in property -%}
+    {{ restriction("Must contain a minimum of <code>" ~ property.minItems ~ "</code> items", "min-items", current_path, property_path, current_id ~ "_minItems") }}
+{%- endif -%}
+{%- if "maxItems" in property -%}
+    {{ restriction("Must contain a maximum of <code>" ~ property.maxItems ~ "</code> items", "max-items", current_path, property_path, current_id ~ "_maxItems") }}
+{%- endif -%}
+{%- if "uniqueItems" in property and property.uniqueItems == True -%}
+    {{ restriction("All items must be unique", "unique-items", current_path, property_path, current_id ~ "_uniqueItems") }}
+{%- endif -%}
+{%- if "items" in property and property["items"] is mapping and property["items"] != {} -%}
+    <h4>Each item of this array must be:</h4>
+    <div class="card">
+        {%- set current_path = current_path ~ "/items" -%}
+        {%- set card_id = array_id ~ "_items" -%}
+        {%- set _none = current_path | record_path_id(property_path, card_id) -%}
+        <div class="card-body items-definition" id="{{ card_id }}">
+            {# Note that property["items"] is needed here because property.items is a function #}
+            {{ content(card_id, property_name ~ " Items", property["items"], property_path, current_path, True) }}
+        </div>
+    </div>
+{%- endif -%}
+{%- if "contains" in property and property["contains"] != {} -%}
+    {%- set current_path = current_path ~ "/contains" -%}
+    {%- set card_id = array_id ~ "_contains" -%}
+    {%- set _none = current_path | record_path_id(property_path, card_id) -%}
+    <h4>At least one of the items must be:</h4>
+    <div class="card">
+        <div class="card-body items-contain-definition" id="{{ card_id }}">
+            {%- set current_path = current_path ~ "/contains" -%}
+            {{ content(current_id ~ "_not", property_name, property["contains"], property_path, current_path, True) }}
+        </div>
+    </div>
+{%- endif -%}

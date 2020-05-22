@@ -1,0 +1,53 @@
+{# Resolve reference #}
+{%- set property, property_path, current_path, is_recursive = (property | resolve_ref(schema, property_path, current_path, link_to_reused_ref)) -%}
+
+{%- set suffix = property_name -%}
+{%- if parent != "" -%}
+    {%- set suffix = parent ~ "__" ~ suffix -%}
+{%- endif -%}
+{%- if named_property -%}
+    {%- set suffix = suffix | escape_property_name_for_id -%}
+{%- else -%}
+    {%- set suffix = parent | generate_id_for_pattern_property(current_id) -%}
+    {%- if "title" in property -%}
+        {%- set property_title = property['title'] -%}
+    {%- else -%}
+        {%- set property_title = property_name -%}
+    {%- endif -%}
+{%- endif -%}
+
+{%- set is_required = property_name in required_properties -%}
+<div class="accordion" id="accordion{{ suffix }}">
+    <div class="card">
+        <div class="card-header" id="heading{{ suffix }}">
+            <h2 class="mb-0">
+                {%- set _none = current_path | record_path_id(property_path, suffix) -%}
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#{{ suffix }}"
+                        aria-expanded="{{ expanded }}" aria-controls="{{ suffix }}" onclick="setAnchor('#{{ suffix }}')">
+                    {%- if named_property -%}
+                        <span class="property-name">{{ property_name | escape }}</span>
+                    {%- else -%}
+                        <span class="property-name">{{ property_title |escape }}</span>
+                    {%- endif -%}
+                    {%- if is_required -%}
+                        {{ " " }}<span class="badge badge-warning required-property">Required</span>
+                    {%- endif -%}
+                    {%- if property is deprecated -%}
+                        {{ " " }}<span class="badge badge-danger deprecated-property">Deprecated</span>
+                    {%- endif -%}
+                    {%- if not named_property -%}
+                        {{ " " }}<span class="badge badge-info pattern-property">Pattern Property</span>
+                    {%- endif -%}
+                </button>
+            </h2>
+        </div>
+
+        <div id="{{ suffix }}"
+             class="collapse{% if expanded %} show{% endif %} property-definition-div" aria-labelledby="heading{{ suffix }}"
+             data-parent="#accordion{{ suffix }}">
+          <div class="card-body">
+            {{ content(suffix, property_name, property, property_path, current_path, named_property) }}
+          </div>
+        </div>
+    </div>
+</div>
