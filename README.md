@@ -15,7 +15,7 @@ pip install json-schema-for-humans
 generate-schema-doc [OPTIONS] SCHEMA_FILE [RESULT_FILE]
 ```
 
-`SCHEMA_FILE` must be a valid JSON Schema
+`SCHEMA_FILE` must be a valid JSON Schema (in JSON or YAML format)
 
 The default value for `RESULT_FILE` is `schema_doc.html`
 

@@ -12,6 +12,7 @@ import htmlmin
 import jinja2
 import markdown2
 from jinja2 import FileSystemLoader
+import yaml
 from pytz import reference
 
 
@@ -155,7 +156,7 @@ def resolve_ref(
     # Open schema file
     if file_path_part:
         with open(referenced_schema_path) as schema_markdown:
-            target = json.load(schema_markdown)
+            target = yaml.safe_load(schema_markdown)
     else:
         target = full_schema if anchor_part else {}
 
@@ -504,8 +505,8 @@ def generate_from_filename(
     copy_js: bool = True,
     link_to_reused_ref: bool = True,
 ) -> None:
-    with open(schema_file_name, encoding="utf-8") as schema_markdown:
-        schema = json.load(schema_markdown)
+    with open(schema_file_name, encoding="utf-8") as schema:
+        schema = yaml.safe_load(schema)
 
     rendered_schema_doc = generate_from_schema(
         schema,
@@ -538,7 +539,7 @@ def generate_from_file_object(
     result_file should be opened in write mode.
     """
     result = generate_from_schema(
-        json.load(schema_file),
+        yaml.safe_load(schema_file),
         os.path.abspath(schema_file.name),
         minify,
         deprecated_from_description,
