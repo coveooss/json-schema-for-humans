@@ -1,18 +1,19 @@
 import json
 import os
+import tempfile
 from typing import Any, Dict, List, Tuple
 
 import pytest
 from bs4 import BeautifulSoup
 
-from json_schema_for_humans.generate import generate_from_schema
+from json_schema_for_humans.generate import generate_from_file_object, generate_from_schema, generate_from_filename
 
 
 def _get_test_case(name: str) -> Tuple[Dict[str, Any], str]:
     """Get the loaded JSON schema for a test case"""
     test_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "cases", f"{name}.json"))
     with open(test_path, encoding="utf-8") as test_case_file:
-        return (json.load(test_case_file), os.path.abspath(test_path))
+        return json.load(test_case_file), os.path.abspath(test_path)
 
 
 def _generate_case(
@@ -402,3 +403,20 @@ def test_html_in_patterns() -> None:
     ]
 
     _assert_property_names(soup, ["$[a-c][0-9]^<a>"])
+
+
+def test_yaml() -> None:
+    """Test loading the schema from a YAML file. The schema is the same as the case "with_definitions"."""
+    with tempfile.NamedTemporaryFile(mode="w+") as temp_file:
+        with open(os.path.abspath(os.path.join(os.path.dirname(__file__), "cases", f"yaml.yaml"))) as schema_fp:
+            generate_from_file_object(schema_fp, temp_file, True, False, False, True)
+
+        temp_file.seek(0)
+        soup = BeautifulSoup(temp_file.read(), "html.parser")
+
+    # Order of properties is only preserved in Python 3.7+
+    _assert_property_names(
+        soup, ["billing_address", "street_address", "city", "state", "shipping_address"],
+    )
+    _assert_types(soup, ["object", "object", "string", "string", "string"])
+    _assert_required(soup, [False, True, True, True, False])
