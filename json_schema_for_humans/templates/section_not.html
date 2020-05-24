@@ -1,11 +1,8 @@
 <div class="not-value">
 <h4>Must <strong>not</strong> be:</h4>
 <div class="card">
-    {%- set current_path = current_path ~ "/not" -%}
-    {%- set card_id = current_id ~ "_not" -%}
-    {%- set _none = current_path | record_path_id(property_path, card_id) -%}
     <div class="card-body" id="{{ card_id }}">
-    {{ content(card_id, property_name, property["not"], property_path, current_path, True) }}
+    {{ content(keys["not"]) }}
     </div>
 </div>
 </div>
