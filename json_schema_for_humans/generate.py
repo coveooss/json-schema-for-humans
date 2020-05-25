@@ -91,7 +91,11 @@ class SchemaNode:
         self.array_items = array_items or []
         self.refers_to = refers_to
         self.is_displayed = is_displayed
-        self.html_id = html_id
+        self.html_id = html_id or "_".join(path_to_element) or "root"
+
+    @property
+    def is_definition(self) -> bool:
+        return self.path_to_element and self.path_to_element[0] != "definitions"
 
     def __eq__(self, other: object) -> bool:
         """For two schema nodes to be considered equals they must represent the same element in the same file"""
@@ -118,7 +122,7 @@ def build_intermediate_representation(schema_path: str) -> SchemaNode:
     loaded_schemas: Dict[str, Any] = {}
 
     def _record_ref(schema_real_path: str, path_to_element: List[Union[str, int]], current_node: SchemaNode) -> None:
-        """Record the already loaded schema for a reference file and path in schema"""
+        """Record that the node is describing the schema at the provided path"""
         resolved_references[schema_real_path]["/".join(str(e) for e in path_to_element)] = current_node
 
     def _resolve_ref(current_node: SchemaNode, schema: Union[Dict, List, int, str]) -> Optional[SchemaNode]:
@@ -173,6 +177,8 @@ def build_intermediate_representation(schema_path: str) -> SchemaNode:
             reference_users[referenced_schema_path][anchor_part].append(current_node)
             if reference_users_for_this_schema:
                 other_user = None
+                other_is_better = False
+                i_am_better = False
                 for user in reference_users_for_this_schema:
                     if user == current_node or not user.is_displayed:
                         continue
@@ -180,11 +186,34 @@ def build_intermediate_representation(schema_path: str) -> SchemaNode:
                     if not other_user:
                         other_user = user
 
-                    if user.depth < other_user.depth and user.depth < current_node.depth:
+                    if user.depth < other_user.depth:
                         other_user = user
 
-                # The referenced schema is documented elsewhere, link to it
-                if other_user:
+                    if other_user.depth < current_node.depth:
+                        other_user = user
+                        other_is_better = True
+                        i_am_better = False
+                    elif other_user.depth > current_node.depth:
+                        other_is_better = False
+                        i_am_better = True
+
+                # There is at least on other node having the same reference as the current node.
+                if other_is_better:
+                    # The other referencing node is nearer to the user, so it will now be displayed
+                    # We mark the current node as being hidden and linking to the other one
+                    other_user.is_displayed = True
+                    current_node.is_displayed = False
+                    return other_user
+                elif i_am_better:
+                    # The other referencing node is more nested, it should be hidden and link to the current node
+                    # The current node will documented the element referenced by both
+                    other_user.is_displayed = False
+                    other_user.refers_to = current_node
+                    current_node.is_displayed = True
+                    return found_reference
+                else:
+                    # Both nodes are the same depth. The other having been seen first,
+                    # this node will be hidden and link to it
                     current_node.is_displayed = False
                     return other_user
 
@@ -195,7 +224,7 @@ def build_intermediate_representation(schema_path: str) -> SchemaNode:
         # Not an existing reference, so it shall be built
         referenced_schema_path_to_element = anchor_part.split("/")
         return _build_node(
-            len(referenced_schema_path_to_element),
+            current_node.depth,
             current_node.html_id,
             referenced_schema_path,
             referenced_schema_path_to_element,
@@ -246,6 +275,8 @@ def build_intermediate_representation(schema_path: str) -> SchemaNode:
         schema_file_path = os.path.realpath(schema_file_path)
 
         new_node = SchemaNode(depth, file=schema_file_path, path_to_element=path_to_element, html_id=html_id)
+        if html_id == "root":
+            html_id = ""
 
         _record_ref(schema_file_path, path_to_element, new_node)
 
@@ -273,12 +304,14 @@ def build_intermediate_representation(schema_path: str) -> SchemaNode:
 
                 # Add the property name (correctly escaped) to the ID
                 new_html_id = html_id
+                new_depth = depth
                 if schema_key != "properties":
+                    new_depth += 1
                     new_html_id = new_html_id + ("_" if html_id else "") + escape_property_name_for_id(schema_key)
 
                 property_path = copy.deepcopy(path_to_element) + [schema_key]
                 keywords[schema_key] = _build_node(
-                    depth + 1, new_html_id, schema_file_path, property_path, schema_value
+                    new_depth, new_html_id, schema_file_path, property_path, schema_value
                 )
             new_node.keywords = keywords
         elif isinstance(schema, list):

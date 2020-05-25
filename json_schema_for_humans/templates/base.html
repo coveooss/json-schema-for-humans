@@ -17,7 +17,7 @@
     {% endif %}
     <title>{%- if title -%}{{ title }}{%- else -%}Schema Docs{%- endif -%}</title>
 </head>
-<body onload="anchorOnLoad();">
+<body onload="anchorOnLoad();" id="root">
     {%- if title -%}
         <h1>{{ title }}</h1>
     {%- endif -%}
