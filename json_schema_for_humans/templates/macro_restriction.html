@@ -1,5 +1,3 @@
-{%- macro restriction(inner_text, css_class_name, current_path, schema_path, span_id) -%}
-    {%- set current_path = current_path ~ "/number" -%}
-    {%- set _none = current_path | record_path_id(schema_path, span_id) -%}
-    <p><span class="badge badge-light restriction {{ css_class_name }}-restriction" id="{{ span_id }}">{{ inner_text }}</span></p>
+{%- macro restriction(inner_text, css_class_name, html_id) -%}
+    <p><span class="badge badge-light restriction {{ css_class_name }}-restriction" id="{{ html_id }}">{{ inner_text }}</span></p>
 {%- endmacro -%}

@@ -1,0 +1,19 @@
+{
+  "definitions": {
+    "filled_string": {
+      "description": "a filled string",
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "$ref": "#/definitions/filled_string"
+    },
+    "alignment": {
+      "$ref": "#/definitions/filled_string"
+    }
+  }
+}

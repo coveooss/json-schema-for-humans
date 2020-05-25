@@ -169,6 +169,8 @@ def test_references() -> None:
             "Description for array_def",
             "Description for string_def",
             "The delivery is a gift, no prices displayed",
+            "The delivery is a gift, no prices displayed",
+            "The delivery is a gift, no prices displayed",
             "Test schema with a not",
             "Contents of propertyA in final.json",
         ],
@@ -238,6 +240,7 @@ def test_with_multiple_descriptions():
         soup,
         [
             "Exact address",
+            "Exact address",
             "Delivery info depending on the delivery type",
             "The delivery is a gift, no prices displayed",
         ],
@@ -267,7 +270,7 @@ def test_with_default() -> None:
     """Test rendering of default values"""
     soup = _generate_case("with_default")
 
-    _assert_default_values(soup, ['"Linux"', "['white', 'blue']", "2"])
+    _assert_default_values(soup, ['"Linux"', '["white", "blue"]', "2"])
 
 
 def test_deprecated_in_description() -> None:
@@ -305,13 +308,20 @@ def test_description_with_ref() -> None:
     _assert_descriptions(soup, ["We should see this", "inner description", "We should see this too"])
 
 
+def test_description_from_ref() -> None:
+    """Test that having a description next to a $ref in an object uses that description and not the one from the
+    referenced object
+    """
+    soup = _generate_case("description_from_ref")
+
+    _assert_descriptions(soup, ["a filled string"] * 2)
+
+
 def test_description_with_ref_link_to_reused_ref() -> None:
     """Same as "test_description_with_ref", but do not allow reusing references."""
     soup = _generate_case("description_with_ref", link_to_reused_ref=False)
 
-    _assert_descriptions(
-        soup, ["We should see this", "inner description", "We should see this too", "inner description"]
-    )
+    _assert_descriptions(soup, ["We should see this", "inner description", "We should see this too"])
 
 
 def test_with_examples() -> None:
@@ -341,7 +351,7 @@ def test_recursive(link_to_reused_ref: bool) -> None:
     """Test a schema having a recursive definition"""
     soup = _generate_case("recursive", link_to_reused_ref=link_to_reused_ref)
 
-    _assert_descriptions(soup, ["A human being", "The children they had"])
+    _assert_descriptions(soup, ["A human being", "The children they had", "A human being"])
 
     recursive_definition_link = soup.find("a", href="#person")
     assert recursive_definition_link
@@ -353,11 +363,11 @@ def test_recursive_array(link_to_reused_ref: bool) -> None:
     """Test a schema having a recursive definition pointing to array items"""
     soup = _generate_case("recursive_array", link_to_reused_ref=link_to_reused_ref)
 
-    _assert_descriptions(soup, ["A list of people", "A human being", "The children they had"])
+    _assert_descriptions(soup, ["A list of people", "A human being", "The children they had", "A human being"])
 
-    recursive_definition_link = soup.find("a", href="#person_array_items")
+    recursive_definition_link = soup.find("a", href="#person_items")
     assert recursive_definition_link
-    assert recursive_definition_link.text == "Same definition as person_array_items"
+    assert recursive_definition_link.text == "Same definition as person_items"
 
 
 def test_pattern_properties() -> None:

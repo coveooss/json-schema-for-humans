@@ -1,108 +1,119 @@
 {% from "macro_restriction.html" import restriction with context %}
 
-{%- macro tabbed_section(operator, property, property_path, current_id, current_path) -%}
+{%- macro tabbed_section(operator, current_node) -%}
     {% include "tabbed_section.html" %}
 {%- endmacro -%}
 
-{%- macro subsection(expanded, current_id, parent, property_name, property, required_properties, property_path, current_path, named_property) -%}
-    {% include "subsection.html" %}
-{%- endmacro -%}
+{%- macro content(schema, description="") -%}
+    {% set keys = schema.keywords %}
 
-{%- macro content(current_id, property_name, property, property_path, current_path, named_property) -%}
-    {%- set property, property_path, current_path, recursive_id = (property | resolve_ref(schema, property_path, current_path, link_to_reused_ref)) -%}
+    {%- set description = (schema | get_description) if not description else description -%}
 
-    {%- if recursive_id -%}
-        {# There can be a description next to $ref, so let's display it #}
-        {%  include "section_description.html" %}
-        {%- if recursive_id != current_path -%}
-            <a href="#{{ recursive_id }}" onclick="anchorLink('{{ recursive_id }}')">Same definition as {{ recursive_id }}</a>
-        {%- else -%}
-            <p>Recursive definition, see #/{{ recursive_id }}</p>
-        {%- endif -%}
+    {%- if schema.refers_to and not schema.is_displayed -%}
+        {# There can be a description next to $ref, so let's display it. Fallback to description of referenced element #}
+        {% include "section_description.html" %}
+
+        <a href="#{{ schema.refers_to.html_id }}" onclick="anchorLink('{{ schema.refers_to.html_id }}')">Same definition as {{ schema.refers_to.html_id }}</a>
+    {%- elif schema.refers_to -%}
+        {{ content(schema.refers_to, description) }}
     {%- else -%}
         {# Handle having oneOf or allOf with only one condition #}
-        {%- if "allOf" in property and (property["allOf"] | length) == 1 -%}
-            {%- set current_path = current_path ~ "/allOf/0" -%}
+        {%- if "allOf" in keys and (keys["allOf"].array_items | length) == 1 -%}
             {%  include "section_description.html" %}
-            {{ content(current_id, property_name, property["allOf"][0], property_path, current_path, True) }}
-        {%- elif "anyOf" in property and (property["anyOf"] | length) == 1 -%}
-            {%- set current_path = current_path ~ "/anyOf/0" -%}
+            {{ content(keys["allOf"][0]) }}
+        {%- elif "anyOf" in keys and (keys["anyOf"].array_items | length) == 1 -%}
             {%  include "section_description.html" %}
-            {{ content(current_id, property_name, property["anyOf"][0], property_path, current_path, True) }}
+            {{ content(keys["anyOf"][0]) }}
         {%- else -%}
             {# Resolve type #}
-            {%- set default, has_default = property | get_default -%}
-            {%- set type = property | get_type_name -%}
+            {%- set type = schema | get_type_name -%}
 
             {# Display type #}
-            {%- if not property is combining -%}
+            {%- if not schema is combining -%}
                 <span class="badge badge-dark value-type">Type: {{ type }}</span>
             {%- endif -%}
-            {%- if has_default -%}
-                {{ " " }}<span class="badge badge-success default-value">Default: {{ default | python_to_json }}</span>
+            {%- if "default" in keys -%}
+                {{ " " }}<span class="badge badge-success default-value">Default: {{ schema | get_default }}</span>
             {%- endif -%}
 
             {%  include "section_description.html" %}
 
-            {# Handle actual requirement #}
-            {%- if "allOf" in property -%}
-                {%- set current_path = current_path ~ "/allOf" -%}
-                {%- set tab_section_id = current_id ~ "_allOf" -%}
-                {%- set _none = current_path | record_path_id(property_path, tab_section_id) -%}
-                <div class="all-of-value" id="{{ tab_section_id }}">{{ tabbed_section("allOf", property, property_path, current_id) }}</div>
+            {# Combining: allOf, anyOf, oneOf, not #}
+            {%- if "allOf" in keys -%}
+                {% set current_node = keys["allOf"] %}
+                <div class="all-of-value" id="{{ current_node.html_id }}">{{ tabbed_section("allOf", current_node) }}</div>
             {%- endif -%}
-            {%- if "anyOf" in property -%}
-                {%- set current_path = current_path ~ "/anyOf" -%}
-                {%- set tab_section_id = current_id ~ "_anyOf" -%}
-                {%- set _none = current_path | record_path_id(property_path, tab_section_id) -%}
-                <div class="any-of-value" id="{{ tab_section_id }}">{{ tabbed_section("anyOf", property, property_path, current_id) }}</div>
+            {%- if "anyOf" in keys -%}
+                {% set current_node = keys["anyOf"] %}
+                <div class="any-of-value" id="{{ current_node.html_id }}">{{ tabbed_section("anyOf", current_node) }}</div>
             {%- endif -%}
-            {%- if "oneOf" in property -%}
-                {%- set current_path = current_path ~ "/oneOf" -%}
-                {%- set tab_section_id = current_id ~ "_oneOf" -%}
-                {%- set _none = current_path | record_path_id(property_path, tab_section_id) -%}
-                <div class="one-of-value" id="{{ tab_section_id }}">{{ tabbed_section("oneOf", property, property_path, current_id) }}</div>
+            {%- if "oneOf" in keys -%}
+                {% set current_node = keys["oneOf"] %}
+                <div class="one-of-value" id="{{ current_node.html_id }}">{{ tabbed_section("oneOf", current_node) }}</div>
             {%- endif -%}
-            {%- if "not" in property -%}
+            {%- if "not" in keys -%}
                 {% include "section_not.html" %}
             {%- endif -%}
-            {%- if "enum" in property -%}
-                {% include "section_enum.html" %}
+
+            {# Enum and const #}
+            {%- if "enum" in keys -%}
+                <div class="enum-value" id="{{ keys["enum"].html_id }}">
+                <h4>Must be one of:</h4>
+                <ul class="list-group">
+                {%- for enum_choice in keys["enum"].array_items -%}
+                    <li class="list-group-item">{{ enum_choice.literal | python_to_json }}</li>
+                {%- endfor -%}
+                </ul>
+                </div>
             {%- endif -%}
-            {%- if "const" in property -%}
-                {%- set current_path = current_path ~ "/const" -%}
-                {%- set const_id = current_id ~ "_const" -%}
-                {%- set _none = current_path | record_path_id(property_path, const_id) -%}
-                <span class="const-value" id="{{ const_id }}">Specific value: <code>{{ property.const | python_to_json }}</code></span>
+            {%- if "const" in keys -%}
+                <span class="const-value" id="{{ keys["const"].html_id }}">Specific value: <code>{{ keys["const"].literal | python_to_json }}</code></span>
             {%- endif -%}
-            {%- if "pattern" in property -%}
-                {%- set current_path = current_path ~ "/pattern" -%}
-                {%- set pattern_id = current_id ~ "_pattern" -%}
-                {%- set _none = current_path | record_path_id(property_path, pattern_id) -%}
-                <span class="pattern-value" id="{{ pattern_id }}">Must match regular expression: <code>{{ property.pattern | escape }}</code></span>
-            {%- endif -%}
-            {%- if not named_property -%}
-                <span class="pattern-value">Property name must match regular expression: <code>{{ property_name | escape }}</code></span>
+
+            {# Pattern (Regular Expression) #}
+            {%- if "pattern" in keys -%}
+                <span class="pattern-value" id="{{ keys["pattern"].html_id }}">Must match regular expression: <code>{{ keys["pattern"].literal | escape }}</code></span>
             {%- endif -%}
 
             {# Conditional subschema, or if-then-else section #}
-            {%- if "if" in property and "then" in property -%}
+            {%- if "if" in keys and ("then" in keys or "else" in keys) -%}
                 {% include "section_conditional_subschema.html" %}
             {%- endif -%}
 
-            {# Required properties that do not have a subsection. They will only be listed #}
+            {# Required properties that are not defined under "properties". They will only be listed #}
             {% include "section_undocumented_required_properties.html" %}
 
             {# Show the requested type(s) #}
             {% include "badge_type.html" %}
 
+            {# Show array restrictions #}
+            {%- if type.startswith("array") -%}
+                {% include "section_array.html" %}
+            {%- endif -%}
+
             {# Display examples #}
-            {%- set examples = (property.get("examples") or []) -%}
+            {%- set examples = (keys.get("examples") or []) -%}
             {%- if examples -%}
                 {% include "section_examples.html" %}
             {%- endif -%}
 
-            {% include "section_properties.html" %}
+            {%- set required_properties = schema | get_required_properties -%}
+            {%- if "properties" in keys -%}
+                {% set is_pattern_property = False %}
+
+                {%- for sub_property_name, sub_property in keys["properties"].keywords.items() -%}
+                    {% include "section_properties.html" %}
+                {%- endfor -%}
+            {%- endif -%}
+
+            {%- if "patternProperties" in keys -%}
+                {% set is_pattern_property = True %}
+
+                {%- for sub_property_name, sub_property in keys["patternProperties"].keywords.items() -%}
+                    {% include "section_properties.html" %}
+                {%- endfor -%}
+            {%- endif -%}
+
         {%- endif -%}
     {%- endif -%}
 {%- endmacro -%}

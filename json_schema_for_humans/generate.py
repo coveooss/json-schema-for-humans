@@ -3,6 +3,7 @@ import json
 import os
 import re
 import shutil
+import sys
 from collections import defaultdict
 from datetime import datetime
 from typing import Any, Dict, List, Optional, TextIO, Tuple, Type, Union
@@ -50,17 +51,295 @@ EXCLUSIVE_MINIMUM = "exclusiveMinimum"
 SHORT_DESCRIPTION_NUMBER_OF_LINES = 8
 
 
-def defaultdict_list() -> Dict[Any, List]:
-    return defaultdict(list)
+class SchemaNode:
+    """
+    Represents a part of a JSON schema with additional metadata to help with documentation
+    """
+
+    def __init__(
+        self,
+        depth: int,
+        file: str,
+        path_to_element: List[Union[str, int]],
+        html_id: str,
+        literal: Union[str, int] = None,
+        keywords: Dict[str, "SchemaNode"] = None,
+        array_items: List["SchemaNode"] = None,
+        refers_to: "SchemaNode" = None,
+        is_displayed: bool = True,
+    ):
+        """
+
+        :param depth: Number of levels from the root of the schema to this node.
+        :param file: Real path to the schema file
+        :param path_to_element: Path from the root of the schema to the current element
+        :param html_id: HTML ID for the current element. Used for anchor links.
+        :param literal: If the schema is neither a dict nor an array, it will be kept here
+                        Useful for things like description, types, const, enum, etc.
+        :param keywords: If the schema is a dict, this will be filled. Otherwise, this stays empty
+        :param array_items: If the schema is an array, this will be filled. Otherwise, this stays empty
+        :param refers_to: If there is a $ref, this should contain the SchemaNode object for it
+        :param is_displayed: Instructs the templates if this part should be fully documented.
+                             If false, the description and a link to the referenced element will be generated instead.
+                             If false, refers_to needs to be set
+        """
+        self.depth = depth
+        self.file = file
+        self.path_to_element = path_to_element
+        self.literal = literal
+        self.keywords = keywords or {}
+        self.array_items = array_items or []
+        self.refers_to = refers_to
+        self.is_displayed = is_displayed
+        self.html_id = html_id or "_".join(path_to_element) or "root"
+
+    @property
+    def is_definition(self) -> bool:
+        return self.path_to_element and self.path_to_element[0] != "definitions"
+
+    def __eq__(self, other: object) -> bool:
+        """For two schema nodes to be considered equals they must represent the same element in the same file"""
+        if other is None:
+            return False
+
+        if not isinstance(other, SchemaNode):
+            return NotImplemented
+
+        return self.file == other.file and self.path_to_element == other.path_to_element
 
 
-paths_to_id: Dict[str, Dict[str, str]] = defaultdict(defaultdict)
-resolved_references_by_file: Dict[str, Dict[str, List[Tuple[str, str]]]] = defaultdict(defaultdict_list)
+def build_intermediate_representation(schema_path: str) -> SchemaNode:
+    """Build a SchemaNode object representing a JSON schema with added metadata to help rendering as a documentation.
+
+    The representation will resolve references and generate HTML ids for elements
+    """
+    resolved_references: Dict[str, Dict[str, SchemaNode]] = defaultdict(dict)
+
+    def defaultdict_list() -> Dict[Any, List]:
+        return defaultdict(list)
+
+    reference_users: Dict[str, Dict[str, List[SchemaNode]]] = defaultdict(defaultdict_list)
+    loaded_schemas: Dict[str, Any] = {}
+
+    def _record_ref(schema_real_path: str, path_to_element: List[Union[str, int]], current_node: SchemaNode) -> None:
+        """Record that the node is describing the schema at the provided path"""
+        resolved_references[schema_real_path]["/".join(str(e) for e in path_to_element)] = current_node
+
+    def _resolve_ref(current_node: SchemaNode, schema: Union[Dict, List, int, str]) -> Optional[SchemaNode]:
+        """Resolve the $ref keyword
+
+        If there is no $ref, return None.
+        If there is a referenced element that was never encountered before, build that element and return it.
+        If there is a referenced element that was already encountered, return it.
+
+        This method also makes sure that the final element to be fully documented is the one that is the less nested
+        so that the information is closer to the user.
+        """
+        if not isinstance(schema, Dict) or REF not in schema:
+            return None
+
+        reference_path = schema.get(REF)
+        if not reference_path:
+            return None
+
+        # Reference found, resolve the path (format "#/a/b/c", "file.json#/a/b/c", or "file.json")
+        if "#" not in reference_path:
+            file_path_part = reference_path
+            anchor_part = ""
+        else:
+            file_path_part, anchor_part = reference_path.split("#", maxsplit=1)
+            anchor_part = anchor_part.strip("/")
+
+        # Resolve file path portion of reference
+        if file_path_part:
+            referenced_schema_path = os.path.realpath(os.path.join(os.path.dirname(current_node.file), file_path_part))
+        else:
+            referenced_schema_path = os.path.realpath(current_node.file)
+
+        def _find_reference(path: str, anchor_path: str) -> Optional[SchemaNode]:
+            resolved_references_for_this_schema = resolved_references[path]
+            return resolved_references_for_this_schema.get(anchor_path)
+
+        # Check if already loaded
+        found_reference = _find_reference(referenced_schema_path, anchor_part)
+
+        if found_reference == current_node:
+            found_reference = None
+
+        if found_reference:
+            while not found_reference.is_displayed and found_reference.refers_to:
+                if found_reference.refers_to == current_node:
+                    break
+                found_reference = found_reference.refers_to
+
+            # Is someone else using the reference?
+            reference_users_for_this_schema = reference_users[found_reference.file][anchor_part]
+            reference_users[referenced_schema_path][anchor_part].append(current_node)
+            if reference_users_for_this_schema:
+                other_user = None
+                other_is_better = False
+                i_am_better = False
+                for user in reference_users_for_this_schema:
+                    if user == current_node or not user.is_displayed:
+                        continue
+
+                    if not other_user:
+                        other_user = user
+
+                    if user.depth < other_user.depth:
+                        other_user = user
+
+                    if other_user.depth < current_node.depth:
+                        other_user = user
+                        other_is_better = True
+                        i_am_better = False
+                    elif other_user.depth > current_node.depth:
+                        other_is_better = False
+                        i_am_better = True
+
+                # There is at least on other node having the same reference as the current node.
+                if other_is_better:
+                    # The other referencing node is nearer to the user, so it will now be displayed
+                    # We mark the current node as being hidden and linking to the other one
+                    other_user.is_displayed = True
+                    current_node.is_displayed = False
+                    return other_user
+                elif i_am_better:
+                    # The other referencing node is more nested, it should be hidden and link to the current node
+                    # The current node will documented the element referenced by both
+                    other_user.is_displayed = False
+                    other_user.refers_to = current_node
+                    current_node.is_displayed = True
+                    return found_reference
+                else:
+                    # Both nodes are the same depth. The other having been seen first,
+                    # this node will be hidden and link to it
+                    current_node.is_displayed = False
+                    return other_user
+
+            return found_reference
+        else:
+            reference_users[referenced_schema_path][anchor_part].append(current_node)
+
+        # Not an existing reference, so it shall be built
+        referenced_schema_path_to_element = anchor_part.split("/")
+        return _build_node(
+            current_node.depth,
+            current_node.html_id,
+            referenced_schema_path,
+            referenced_schema_path_to_element,
+            _load_schema(referenced_schema_path, referenced_schema_path_to_element),
+        )
+
+    def _load_schema(schema_file_path: str, path_to_element: List[Union[str, int]]) -> Union[Dict, List, int, str]:
+        """Load the schema at the provided path. The path must be a "realpath", meaning absolute and with symlinks
+        resolved.
+
+        Loaded paths are kept in memory as to ensure never loading the same file twice
+        """
+        if schema_file_path in loaded_schemas:
+            loaded_schema = loaded_schemas[schema_file_path]
+        else:
+            with open(schema_file_path, encoding="utf-8") as schema_fp:
+                loaded_schema = yaml.safe_load(schema_fp)
+
+        if path_to_element:
+            for path_part in path_to_element:
+                if not path_part:
+                    # Empty string
+                    continue
+                if isinstance(path_part, str):
+                    loaded_schema = loaded_schema[path_part]
+                elif isinstance(path_part, int):
+                    loaded_schema = loaded_schema[path_part]
+
+        return loaded_schema
+
+    def _build_node(
+        depth: int,
+        html_id: str,
+        schema_file_path: str,
+        path_to_element: List[Union[str, int]],
+        schema: Union[Dict, List, int, str],
+    ) -> SchemaNode:
+        """Recursively build a schema representation
+
+        :param depth: Number of levels from the root of the schema to this node. Used when there are references to
+                      figure out the less nested one in order to display it.
+        :param html_id: HTML ID for the current element. Used for anchor links.
+        :param schema_file_path: Real path to the schema (absolute path with symlinks resolved)
+        :param path_to_element: Path from the root of the schema to the current element
+        :param schema: The JSON schema part being represented
+        :return: A representation of the schema
+        """
+        schema_file_path = os.path.realpath(schema_file_path)
+
+        new_node = SchemaNode(depth, file=schema_file_path, path_to_element=path_to_element, html_id=html_id)
+        if html_id == "root":
+            html_id = ""
+
+        _record_ref(schema_file_path, path_to_element, new_node)
+
+        if isinstance(schema, dict):
+            keywords = {}
+            for schema_key, schema_value in schema.items():
+                # These won't be needed to render the documentation.
+                # The definitions will be reached from references, otherwise they are useless
+                if schema_key in ["$id", "$ref", "$schema", "definitions"]:
+                    continue
+
+                # Examples are rendered in JSON because they will be represented that way in the documentation,
+                # no need for a SchemaNode object
+                if schema_key == "examples":
+                    keywords[schema_key] = [
+                        json.dumps(example, indent=4, separators=(",", ": "), ensure_ascii=False)
+                        for example in schema_value
+                    ]
+                    continue
+
+                # The default value will be printed as-is, no need for a SchemaNode object
+                if schema_key == "default":
+                    keywords[schema_key] = json.dumps(schema_value, ensure_ascii=False)
+                    continue
+
+                # Add the property name (correctly escaped) to the ID
+                new_html_id = html_id
+                new_depth = depth
+                if schema_key != "properties":
+                    new_depth += 1
+                    new_html_id = new_html_id + ("_" if html_id else "") + escape_property_name_for_id(schema_key)
+
+                property_path = copy.deepcopy(path_to_element) + [schema_key]
+                keywords[schema_key] = _build_node(
+                    new_depth, new_html_id, schema_file_path, property_path, schema_value
+                )
+            new_node.keywords = keywords
+        elif isinstance(schema, list):
+            array_items = []
+            for i, element in enumerate(schema):
+                # Add the property name (correctly escaped) to the ID
+                new_html_id = html_id + ("_" if html_id else "") + "i" + str(i)
+
+                array_items.append(
+                    _build_node(depth + 1, new_html_id, schema_file_path, path_to_element + [i], element)
+                )
+            new_node.array_items = array_items
+
+        else:
+            new_node.literal = schema
+
+        new_node.refers_to = _resolve_ref(new_node, schema)
+
+        return new_node
+
+    intermediate_representation = _build_node(0, "", schema_path, [], _load_schema(schema_path, []))
+
+    return intermediate_representation
 
 
-def is_combining(property_dict: Dict[str, Any]) -> bool:
+def is_combining(schema_node: SchemaNode) -> bool:
     """Test if a schema is one of the combining schema keyword"""
-    return bool({"anyOf", "allOf", "oneOf", "not"}.intersection(property_dict.keys()))
+    return bool({"anyOf", "allOf", "oneOf", "not"}.intersection(schema_node.keywords.keys()))
 
 
 def is_text_short(text: str) -> bool:
@@ -75,153 +354,27 @@ def is_deprecated(property_dict: Dict[str, Any]) -> bool:
     return False
 
 
-def is_deprecated_look_in_description(property_dict: Dict[str, Any]) -> bool:
+def is_deprecated_look_in_description(schema_node: SchemaNode) -> bool:
     """Test. Check if a property is deprecated looking in description"""
-    if DESCRIPTION not in property_dict:
+    if DESCRIPTION not in schema_node.keywords:
         return False
 
-    return bool(re.match(DEPRECATED_PATTERN, property_dict[DESCRIPTION]))
+    return bool(re.match(DEPRECATED_PATTERN, schema_node.keywords[DESCRIPTION].literal))
 
 
-def resolve_ref(
-    property_dict: Dict[str, Any],
-    full_schema: Dict[str, Any],
-    schema_path: str,
-    current_path: str,
-    link_to_reused_ref: bool,
-) -> Tuple[Dict[str, Any], str, str, Optional[str]]:
-    """Filter. Resolve references in the supplied property.
+def get_required_properties(schema_node: SchemaNode) -> List[str]:
+    required_properties = schema_node.keywords.get("required") or []
+    if required_properties:
+        required_properties = [p.literal for p in required_properties.array_items]
 
-    See https://json-schema.org/understanding-json-schema/structuring.html#reuse
-
-    :param property_dict: The dict for the current property that can contain a "$ref" key
-    :param full_schema: The complete current schema, used for references inside the same file
-    :param schema_path: Path to the current schema
-    :param current_path: Path to property_dict from full_schema. Used to detect recursive definitions
-    :param link_to_reused_ref: If True, will attempt to resolve a reference as being reused.
-                               If False, will only resolve references if they are recursive
-    :return: The resolved schema at reference (property_dict unchanged if no references found),
-             the path to the schema that contained the references,
-             the path to the resolved property from the root of the schema,
-             and whether the resolved reference is recursive
-    """
-    current_path = current_path.lstrip("/")
-
-    reference_path = property_dict.get(REF)
-    if not reference_path:
-        return property_dict, schema_path, current_path, None
-
-    # Reference found, resolve the path (format "#/a/b/c", "file.json#/a/b/c", or "file.json")
-    if "#" not in reference_path:
-        file_path_part = reference_path
-        anchor_part = ""
-    else:
-        file_path_part, anchor_part = reference_path.split("#", maxsplit=1)
-        anchor_part = anchor_part.lstrip("/")
-
-    # Resolve file path portion of reference
-    if file_path_part:
-        referenced_schema_path = os.path.abspath(os.path.join(os.path.dirname(schema_path), file_path_part))
-    else:
-        referenced_schema_path = os.path.abspath(schema_path)
-
-    if anchor_part:
-        if link_to_reused_ref:
-            # Check if the referenced part was already documented elsewhere
-            resolved_schema, resolved_html_id, is_recursive = get_path_id(referenced_schema_path, anchor_part)
-            if is_recursive:
-                return property_dict, resolved_schema, current_path, resolved_html_id
-
-            # Record that this reference was documented here
-            global resolved_references
-            resolved_references_by_file[resolved_schema][anchor_part].append(
-                (os.path.abspath(schema_path), current_path)
-            )
-
-        # TODO: current_path does not carry the filename, should it?
-        # Check for definition referencing a parent element
-        split_anchor_part = anchor_part.split("/")
-        split_current_path = current_path.split("/")
-        is_parent = True
-        for i, anchor_part_segment in enumerate(split_anchor_part):
-            if len(split_current_path) <= i:
-                break
-            if anchor_part_segment != split_current_path[i]:
-                is_parent = False
-                break
-
-        if is_parent:
-            return property_dict, schema_path, anchor_part, get_path_id(referenced_schema_path, anchor_part)[1]
-
-    # Open schema file
-    if file_path_part:
-        with open(referenced_schema_path) as schema_markdown:
-            target = yaml.safe_load(schema_markdown)
-    else:
-        target = full_schema if anchor_part else {}
-
-    if anchor_part:
-        # Resolve anchor portion of reference
-        for ref_path_segment in anchor_part.split("/"):
-            if not ref_path_segment:
-                continue
-
-            if ref_path_segment in target:
-                target = target[ref_path_segment]
-            else:
-                target = property_dict
-                break
-
-    # Apply other attributes (description, title, etc.) from the referencing schema to the referenced schema
-    # The JSON schema specification does not say if we should do that or not, but I think it is useful
-    result_schema = copy.deepcopy(target)
-    for k, v in property_dict.items():
-        if k == REF:
-            continue
-        result_schema[k] = v
-
-    return result_schema, referenced_schema_path, anchor_part, None
+    return required_properties
 
 
-def record_path_id(path: str, schema_path: str, html_id: str) -> None:
-    """Filter. Record the link between a path to an element in the schema and the HTML id added to the documentation
-    element for it
+def get_undocumented_required_properties(schema_node: SchemaNode) -> List[str]:
+    required_properties = get_required_properties(schema_node)
 
-    Used for recursive definitions, where an anchor link is needed
-
-    :param path: path to an element in the schema. The format is a list of dictionary keys and array index joined by '/'
-    :param schema_path: File path to the current schema
-    :param html_id: Unique HTML id of the element that documents the schema at this path
-    """
-    global paths_to_id
-    paths_to_id[os.path.abspath(schema_path)][path] = html_id
-
-
-def get_path_id(schema_path: str, path: str) -> Tuple[str, str, bool]:
-    """Get the HTML id for a schema path.
-
-    Uses links recorded using the filter "record_path_id"
-
-    :param schema_path: Path to the current schema on the file system
-    :param path: path to an element in the schema. The format is a list of dictionary keys and array index joined by '/'
-    :return: The HTML id to the documentation section for the provided schema path, if found.
-             The path itself if not found
-    """
-    paths_to_id_for_this_schema = paths_to_id[schema_path]
-
-    if path in paths_to_id_for_this_schema:
-        return schema_path, paths_to_id_for_this_schema[path], True
-
-    for referenced_schema, referenced_path in resolved_references_by_file[schema_path][path]:
-        if referenced_path in paths_to_id[referenced_schema]:
-            return referenced_schema, paths_to_id[referenced_schema][referenced_path], True
-
-    return schema_path, path, False
-
-
-def get_undocumented_required_properties(property_dict: Dict[str, Any]) -> List[str]:
-    required_properties = property_dict.get("required", [])
-    documented_properties = property_dict.get("properties", {}).keys()
+    documented_properties = schema_node.keywords.get("properties")
+    documented_properties = documented_properties.keywords.keys() if documented_properties else []
 
     undocumented = []
     for property_name in required_properties:
@@ -249,18 +402,7 @@ def python_to_json(value: Any) -> Any:
     return value
 
 
-def to_pretty_json(value: Any) -> str:
-    """Filter. Return a pretty printed JSON representation of an object
-
-    Used instead of the built-in tojson filter to be able to display special characters (ensure_ascii parameter)
-    """
-    try:
-        return json.dumps(value, indent=4, separators=(",", ": "), ensure_ascii=False)
-    except:
-        return str(value)
-
-
-def get_type_name(property_dict: Dict[str, Any]) -> str:
+def get_type_name(schema_node: SchemaNode) -> str:
     """Filter. Return the type of a property taking into account the type of items for array and enum"""
 
     def _python_type_to_json_type(python_type: Type[Union[str, int, float, bool, list, dict]]) -> str:
@@ -273,9 +415,10 @@ def get_type_name(property_dict: Dict[str, Any]) -> str:
             dict: TYPE_OBJECT,
         }.get(python_type, TYPE_STRING)
 
-    def _enum_type(enum_values: List[Any]) -> str:
+    def _enum_type(enum_values: List[SchemaNode]) -> str:
         enum_type_names = [
-            _python_type_to_json_type(python_type_name) for python_type_name in set(type(v) for v in enum_values)
+            _python_type_to_json_type(python_type_name)
+            for python_type_name in set(type(v.literal) for v in enum_values)
         ]
         if enum_type_names:
             return f"{TYPE_ENUM} (of {' or '.join(enum_type_names)})"
@@ -284,13 +427,15 @@ def get_type_name(property_dict: Dict[str, Any]) -> str:
 
     def _add_subtype_if_array(type_name: str):
         if type_name == TYPE_ARRAY:
-            items = property_dict.get(ITEMS, {})
+            items = schema_node.keywords.get(ITEMS, None)
             if not items:
                 return type_name
 
-            subtype = items.get(TYPE)
-            if TYPE_ENUM in items:
-                subtype = _enum_type(items[TYPE_ENUM])
+            subtype = items.keywords.get(TYPE)
+            if subtype:
+                subtype = subtype.literal
+            if TYPE_ENUM in items.keywords:
+                subtype = _enum_type(items.keywords[TYPE_ENUM].array_items)
 
             if not subtype:
                 # Too complex to guess items
@@ -300,30 +445,56 @@ def get_type_name(property_dict: Dict[str, Any]) -> str:
 
         return type_name
 
-    if TYPE_CONST in property_dict:
+    if TYPE_CONST in schema_node.keywords:
         return TYPE_CONST
-    if TYPE_ENUM in property_dict:
-        return _enum_type(property_dict[TYPE_ENUM])
+    if TYPE_ENUM in schema_node.keywords:
+        return _enum_type(schema_node.keywords[TYPE_ENUM].array_items)
 
-    type_names: Union[str, List[str]] = property_dict.get(TYPE) or TYPE_OBJECT
-
-    if isinstance(type_names, str):
-        type_names = [type_names]
+    type_node = schema_node.keywords.get(TYPE)
+    if type_node:
+        if type_node.array_items:
+            type_names = [node.literal for node in type_node.array_items]
+        else:
+            type_names = [type_node.literal]
+    else:
+        type_names = [TYPE_OBJECT]
 
     type_names = [_add_subtype_if_array(type_name) for type_name in type_names]
 
     return ", ".join(type_names[:-1]) + (" or " if len(type_names) > 1 else "") + type_names[-1]
 
 
-def get_description(description: Optional[str]) -> str:
+def _get_description(schema_node: SchemaNode) -> str:
+    description = ""
+    description_node = schema_node.keywords.get(DESCRIPTION)
+    if description_node:
+        description = description_node.literal
+
+    seen = set()
+    current_node = schema_node
+    while not description and current_node.refers_to:
+        if current_node.html_id in seen:
+            break
+        seen.add(current_node.html_id)
+        referenced_schema = current_node.refers_to
+        referenced_description_node = referenced_schema.keywords.get(DESCRIPTION)
+        if referenced_description_node:
+            description = referenced_description_node.literal
+        current_node = referenced_schema
+
+    return description
+
+
+def get_description(schema_node: SchemaNode) -> str:
     """Filter. Get the description of a property or an empty string"""
-    return description or ""
+    return _get_description(schema_node)
 
 
-def get_description_remove_default(description: Optional[str]) -> str:
+def get_description_remove_default(schema_node: SchemaNode) -> str:
     """Filter. From the description attribute of a property, return the description without any default values in it.
     Will also convert None to an empty string.
     """
+    description = _get_description(schema_node)
     if not description:
         return ""
 
@@ -334,45 +505,45 @@ def get_description_remove_default(description: Optional[str]) -> str:
     return description[match.span(1)[1] :].lstrip()
 
 
-def get_default(property_dict: Dict[str, Any]) -> Tuple[Optional[Any], bool]:
+def get_default(schema_node: SchemaNode) -> str:
     """Filter. Return the default value for a property"""
-    if DEFAULT in property_dict:
-        return property_dict[DEFAULT], True
-
-    return None, False
+    return schema_node.keywords.get(DEFAULT) or ""
 
 
-def get_default_look_in_description(property_dict: Dict[str, Any]) -> Tuple[Optional[Any], bool]:
-    """Filter. Get the default value of a JSON Schema property. If not set, look for it in the description.
+def get_default_look_in_description(schema_node: SchemaNode) -> str:
+    """Filter. Get the default value of a JSON Schema property. If not set, look for it in the description."""
+    default_value = get_default(schema_node)
+    if default_value:
+        return default_value
 
-    Return the found default value if any and whether it has found one
-    """
-    if DEFAULT in property_dict:
-        return property_dict[DEFAULT], True
-
-    description = property_dict.get(DESCRIPTION)
+    description = schema_node.keywords.get(DESCRIPTION).literal
     if not description:
-        return None, False
+        return ""
 
     match = re.match(DEFAULT_PATTERN, description)
     if not match:
-        return None, False
+        return ""
 
-    default = match.group(2)
-    try:
-        default = json.loads(default)
-    except json.decoder.JSONDecodeError:
-        pass
-    return default, True
+    return match.group(2)
 
 
-def get_numeric_restrictions_text(property_dict: Dict[str, Any], before_value: str = "", after_value: str = "") -> str:
+def get_numeric_restrictions_text(schema_node: SchemaNode, before_value: str = "", after_value: str = "") -> str:
     """Filter. Get the text to display about restrictions on a numeric type(integer or number)"""
-    multiple_of = property_dict.get(MULTIPLE_OF)
-    maximum = property_dict.get(MAXIMUM)
-    exclusive_maximum = property_dict.get(EXCLUSIVE_MAXIMUM)
-    minimum = property_dict.get(MINIMUM)
-    exclusive_minimum = property_dict.get(EXCLUSIVE_MINIMUM)
+    multiple_of = schema_node.keywords.get(MULTIPLE_OF)
+    if multiple_of:
+        multiple_of = multiple_of.literal
+    maximum = schema_node.keywords.get(MAXIMUM)
+    if maximum:
+        maximum = maximum.literal
+    exclusive_maximum = schema_node.keywords.get(EXCLUSIVE_MAXIMUM)
+    if exclusive_maximum:
+        exclusive_maximum = exclusive_maximum.literal
+    minimum = schema_node.keywords.get(MINIMUM)
+    if minimum:
+        minimum = minimum.literal
+    exclusive_minimum = schema_node.keywords.get(EXCLUSIVE_MINIMUM)
+    if exclusive_minimum:
+        exclusive_minimum = exclusive_minimum.literal
 
     # Fix minimum and exclusive_minimum both there
     if minimum is not None and exclusive_minimum is not None:
@@ -427,14 +598,6 @@ def escape_property_name_for_id(property_name: str) -> str:
     return escaped
 
 
-def generate_id_for_pattern_property(parent_property_name: str, current_index: int):
-    """Filter. Generate a unique identifier for a pattern property that can be used in a HTML id"""
-    id_string = parent_property_name + "_" + str(current_index)
-    if not id_string[0].isalpha():
-        id_string = "a" + id_string
-    return id_string
-
-
 def get_local_time() -> str:
     return datetime.now(tz=reference.LocalTimezone()).strftime("%Y-%m-%d at %H:%M:%S %z")
 
@@ -448,10 +611,6 @@ def generate_from_schema(
     expand_buttons: bool = False,
     link_to_reused_ref: bool = True,
 ) -> str:
-    global resolved_references
-    resolved_references = defaultdict(defaultdict_list)
-    global paths_to_id
-    paths_to_id = defaultdict(defaultdict)
 
     template_folder = os.path.join(os.path.dirname(__file__), TEMPLATE_FOLDER)
     base_template_path = os.path.join(template_folder, TEMPLATE_FILE_NAME)
@@ -464,12 +623,8 @@ def generate_from_schema(
     env.filters["get_default"] = get_default_look_in_description if default_from_description else get_default
     env.filters["get_type_name"] = get_type_name
     env.filters["get_description"] = get_description_remove_default if default_from_description else get_description
-    env.filters["resolve_ref"] = resolve_ref
     env.filters["get_numeric_restrictions_text"] = get_numeric_restrictions_text
-    env.filters["escape_property_name_for_id"] = escape_property_name_for_id
-    env.filters["generate_id_for_pattern_property"] = generate_id_for_pattern_property
-    env.filters["to_pretty_json"] = to_pretty_json
-    env.filters["record_path_id"] = record_path_id
+    env.filters["get_required_properties"] = get_required_properties
     env.filters["get_undocumented_required_properties"] = get_undocumented_required_properties
     env.tests["combining"] = is_combining
     env.tests["description_short"] = is_text_short
@@ -484,8 +639,10 @@ def generate_from_schema(
         schema_path = os.path.sep.join(schema_path)
     schema_path = os.path.abspath(schema_path)
 
+    intermediate_schema = build_intermediate_representation(schema_path)
+
     rendered = template.render(
-        schema=schema, schema_path=schema_path, expand_buttons=expand_buttons, link_to_reused_ref=link_to_reused_ref
+        schema=intermediate_schema, expand_buttons=expand_buttons, link_to_reused_ref=link_to_reused_ref
     )
 
     if minify:
