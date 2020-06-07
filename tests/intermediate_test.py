@@ -1,11 +1,7 @@
 import os
 
 from json_schema_for_humans.generate import build_intermediate_representation
-
-
-def _get_test_case_path(name: str) -> str:
-    """Get the loaded JSON schema for a test case"""
-    return os.path.abspath(os.path.join(os.path.dirname(__file__), "cases", f"{name}.json"))
+from tests.test_utils import _get_test_case_path
 
 
 def test_basic() -> None:
