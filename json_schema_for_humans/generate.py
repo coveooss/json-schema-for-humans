@@ -6,6 +6,7 @@ import shutil
 import sys
 from collections import defaultdict
 from datetime import datetime
+from pathlib import Path
 from typing import Any, Dict, List, Optional, TextIO, Tuple, Type, Union
 
 import click
@@ -108,7 +109,9 @@ class SchemaNode:
         return self.file == other.file and self.path_to_element == other.path_to_element
 
 
-def build_intermediate_representation(schema_path: str) -> SchemaNode:
+def build_intermediate_representation(
+    schema_path: Union[str, TextIO], loaded_schemas: Optional[Dict[str, Any]] = None
+) -> SchemaNode:
     """Build a SchemaNode object representing a JSON schema with added metadata to help rendering as a documentation.
 
     The representation will resolve references and generate HTML ids for elements
@@ -119,7 +122,23 @@ def build_intermediate_representation(schema_path: str) -> SchemaNode:
         return defaultdict(list)
 
     reference_users: Dict[str, Dict[str, List[SchemaNode]]] = defaultdict(defaultdict_list)
-    loaded_schemas: Dict[str, Any] = {}
+    _loaded_schemas: Dict[str, Any]
+    if loaded_schemas is None:
+        _loaded_schemas = {}
+    else:
+        assert isinstance(loaded_schemas, dict) and all(
+            isinstance(k, str) for k in loaded_schemas.keys()
+        ), "loaded_schemas must be Dict[str, Any]"
+        _loaded_schemas = loaded_schemas
+
+    # Make sure schema_path is absolute, all symlinks are resolved
+    if isinstance(schema_path, Path):
+        schema_path = str(schema_path.resolve())
+    elif isinstance(schema_path, str):
+        schema_path = os.path.realpath(schema_path)
+    else:
+        # Assuming schema_path is a file object (TextIO)
+        schema_path = os.path.realpath(schema_path.name)
 
     def _record_ref(schema_real_path: str, path_to_element: List[Union[str, int]], current_node: SchemaNode) -> None:
         """Record that the node is describing the schema at the provided path"""
@@ -237,11 +256,12 @@ def build_intermediate_representation(schema_path: str) -> SchemaNode:
 
         Loaded paths are kept in memory as to ensure never loading the same file twice
         """
-        if schema_file_path in loaded_schemas:
-            loaded_schema = loaded_schemas[schema_file_path]
+        if schema_file_path in _loaded_schemas:
+            loaded_schema = _loaded_schemas[schema_file_path]
         else:
             with open(schema_file_path, encoding="utf-8") as schema_fp:
                 loaded_schema = yaml.safe_load(schema_fp)
+            _loaded_schemas[schema_file_path] = loaded_schema
 
         if path_to_element:
             for path_part in path_to_element:
@@ -603,8 +623,8 @@ def get_local_time() -> str:
 
 
 def generate_from_schema(
-    schema: Dict[str, Any],
-    schema_path: str,
+    schema_file: Union[str, Path, TextIO],
+    loaded_schemas: Optional[Dict[str, Any]] = None,
     minify: bool = False,
     deprecated_from_description: bool = False,
     default_from_description: bool = False,
@@ -634,12 +654,11 @@ def generate_from_schema(
     with open(base_template_path, "r") as template_fp:
         template = env.from_string(template_fp.read())
 
-    if isinstance(schema_path, list):
+    if isinstance(schema_file, list):
         # Backward compatibility
-        schema_path = os.path.sep.join(schema_path)
-    schema_path = os.path.abspath(schema_path)
+        schema_file = os.path.sep.join(schema_file)
 
-    intermediate_schema = build_intermediate_representation(schema_path)
+    intermediate_schema = build_intermediate_representation(schema_file, loaded_schemas)
 
     rendered = template.render(
         schema=intermediate_schema, expand_buttons=expand_buttons, link_to_reused_ref=link_to_reused_ref
@@ -652,7 +671,7 @@ def generate_from_schema(
 
 
 def generate_from_filename(
-    schema_file_name: str,
+    schema_file_name: Union[str, Path],
     result_file_name: str,
     minify: bool = True,
     deprecated_from_description: bool = False,
@@ -662,12 +681,13 @@ def generate_from_filename(
     copy_js: bool = True,
     link_to_reused_ref: bool = True,
 ) -> None:
-    with open(schema_file_name, encoding="utf-8") as schema:
-        schema = yaml.safe_load(schema)
+    if isinstance(schema_file_name, str):
+        schema_file_name = os.path.realpath(schema_file_name)
+    elif isinstance(schema_file_name, Path):
+        schema_file_name = str(schema_file_name.resolve())
 
     rendered_schema_doc = generate_from_schema(
-        schema,
-        os.path.abspath(schema_file_name),
+        schema_file_name,
         minify=minify,
         deprecated_from_description=deprecated_from_description,
         default_from_description=default_from_description,
@@ -696,13 +716,12 @@ def generate_from_file_object(
     result_file should be opened in write mode.
     """
     result = generate_from_schema(
-        yaml.safe_load(schema_file),
-        os.path.abspath(schema_file.name),
-        minify,
-        deprecated_from_description,
-        default_from_description,
-        expand_buttons,
-        link_to_reused_ref,
+        schema_file,
+        minify=minify,
+        deprecated_from_description=deprecated_from_description,
+        default_from_description=default_from_description,
+        expand_buttons=expand_buttons,
+        link_to_reused_ref=link_to_reused_ref,
     )
 
     copy_css_and_js_to_target(result_file.name, copy_css, copy_js)

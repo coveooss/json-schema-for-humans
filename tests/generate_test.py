@@ -1,29 +1,27 @@
-import json
 import os
 import tempfile
-from typing import Any, Dict, List, Tuple
+from typing import List
 
 import pytest
 from bs4 import BeautifulSoup
 
-from json_schema_for_humans.generate import generate_from_file_object, generate_from_schema, generate_from_filename
-
-
-def _get_test_case(name: str) -> Tuple[Dict[str, Any], str]:
-    """Get the loaded JSON schema for a test case"""
-    test_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "cases", f"{name}.json"))
-    with open(test_path, encoding="utf-8") as test_case_file:
-        return json.load(test_case_file), os.path.abspath(test_path)
+from json_schema_for_humans.generate import generate_from_file_object, generate_from_schema
+from tests.test_utils import _get_test_case_path
 
 
 def _generate_case(
     case_name: str, find_deprecated: bool = False, find_default: bool = False, link_to_reused_ref: bool = True
 ) -> BeautifulSoup:
     """Get the BeautifulSoup object for a test case"""
-    test_contents, test_path = _get_test_case(case_name)
     return BeautifulSoup(
         generate_from_schema(
-            test_contents, test_path, False, find_deprecated, find_default, True, link_to_reused_ref=link_to_reused_ref
+            _get_test_case_path(case_name),
+            None,
+            False,
+            find_deprecated,
+            find_default,
+            True,
+            link_to_reused_ref=link_to_reused_ref,
         ),
         "html.parser",
     )
@@ -94,10 +92,8 @@ def _assert_required(soup: BeautifulSoup, is_required_properties: List[bool]) ->
     _assert_badges(soup, "required", is_required_properties)
 
 
-def test_basic() -> None:
-    """Test rendering a basic schema with title"""
-    soup = _generate_case("basic")
-
+def _assert_basic_case(soup: BeautifulSoup) -> None:
+    """Assert the rendered result of the basic test case"""
     _assert_property_names(soup, ["firstName", "lastName", "age"])
     _assert_descriptions(
         soup,
@@ -110,6 +106,13 @@ def test_basic() -> None:
     _assert_title(soup, "Person")
     _assert_numeric_restrictions(soup, ["Value must be greater or equal to 0"])
     _assert_required(soup, [False] * 3)
+
+
+def test_basic() -> None:
+    """Test rendering a basic schema with title"""
+    soup = _generate_case("basic")
+
+    _assert_basic_case(soup)
 
 
 def test_multiple_types() -> None:

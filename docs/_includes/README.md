@@ -11,55 +11,77 @@ pip install json-schema-for-humans
 
 ## Usage
 
+### From CLI
+
 ```
 generate-schema-doc [OPTIONS] SCHEMA_FILE [RESULT_FILE]
 ```
 
-`SCHEMA_FILE` must be a valid JSON Schema
+`SCHEMA_FILE` must be a valid JSON Schema (in JSON or YAML format)
 
 The default value for `RESULT_FILE` is `schema_doc.html`
 
-## Options
+#### CLI options
 
-### --expand-buttons
+##### --expand-buttons
 Off by default
 
 Add an `Expand all` and a `Collapse all` button at the top of the generated documentation
 
-### --link-to-reused-ref/--no-link-to-reused-ref
+##### --link-to-reused-ref/--no-link-to-reused-ref
 On by default
 
 If several `$ref` points to the same definition, only render the documentation for this definition the first time.
 All other occurrences are replaced by an achor link to the first occurrence.
 
-### --minify/--no-minify
+##### --minify/--no-minify
 On by default
 
 Minify the output HTML document
 
-### --deprecated-from-description
+##### --deprecated-from-description
 Off by default
 
 Mark a property as deprecated (with a big red badge) if the description contains the string `[Deprecated`
 
-### --default-from-description
+##### --default-from-description
 Off by default
 
 Extract the default value of a property from the description like this: ``[Default `the_default_value`]``
 
 The default value from the "default" attribute will be used in priority
 
-### --copy-css/--no-copy-css
+##### --copy-css/--no-copy-css
 On by default
 
 Copy `schema_doc.css` to the same directory as `RESULT_FILE`.
 
-### --copy-js/--no-copy-js
+##### --copy-js/--no-copy-js
 On by default.
 
 Copy `schema_doc.min.js` to the same directory as `RESULT_FILE`.
 
 This file contains the logic for the anchor links
+
+### From code
+
+There are 3 methods that one could use:
+
+Method Name | Schema input | Output | CSS and JS copied?
+--- | --- | --- | ---
+generate_from_schema | `schema_file` as str, Path (from pathlib) or a file object | Rendered HTML as a str | No
+generate_from_filename | `schema_file_name` as a str or Path | Rendered HTML written to the file at path `result_file_name` | Yes
+generate_from_file_object | `schema_file` as an open file object (read mode) | Rendered HTML written to the file at `result_file`, which must be an open file object (in write mode) | Yes
+
+Notes:
+- When using file objects, it is assumed that files are opened with encoding "utf-8"
+- CSS and JS files are copied to the current working directory with names "schema_doc.css" and "schema_doc.min.js" respectively
+- Other parameters of these methods are analogous to the CLI parameters documented above.
+
+#### Pre-load schemas
+`generate_from_schema` has a `loaded_schemas` parameter that can be used to pre-load schemas. This must be a dict with the key being the real path of the schema file and the value being the result of loading the schema (with `json.load` or `yaml.safe_load`, for example).
+
+This should not be necessary in normal scenarios.
 
 ## What's supported
 
