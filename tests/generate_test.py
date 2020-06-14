@@ -398,6 +398,29 @@ def test_pattern_properties() -> None:
     )
 
 
+def test_pattern_properties_html_id() -> None:
+    """Test the HTML IDs generated for patterns under patternProperties"""
+    soup = _generate_case("pattern_properties_html_id")
+
+    pattern_label = soup.find_all("span", class_=["badge-info"])
+    pattern_label_text = [ex.text for ex in pattern_label]
+    assert pattern_label_text == ["Pattern Property"] * 4
+
+    pattern_content = soup.find_all("span", class_="pattern-value")
+    pattern_content_text = [ex.findChildren()[0].text for ex in pattern_content]
+    assert pattern_content_text == [".$", ".*", "..", "^."]
+
+    _assert_property_names(soup, ["not_a_pattern", "Title 4", "Title 1", "Title 2", "Title 3"])
+
+    _assert_descriptions(
+        soup, ["Description 4", "Description 1", "Description 2", "Description 3"],
+    )
+
+    property_divs = soup.find_all("div", class_="property-definition-div")
+    property_divs_id = [div.attrs["id"] for div in property_divs]
+    assert property_divs_id == ["not_a_pattern", "not_a_pattern_pattern1", "pattern1", "pattern2", "pattern3"]
+
+
 def test_conditional_subschema() -> None:
     soup = _generate_case("conditional_subschema")
 

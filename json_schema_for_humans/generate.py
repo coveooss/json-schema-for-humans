@@ -281,6 +281,7 @@ def build_intermediate_representation(
         schema_file_path: str,
         path_to_element: List[Union[str, int]],
         schema: Union[Dict, List, int, str],
+        is_pattern_properties: bool = False,
     ) -> SchemaNode:
         """Recursively build a schema representation
 
@@ -290,6 +291,7 @@ def build_intermediate_representation(
         :param schema_file_path: Real path to the schema (absolute path with symlinks resolved)
         :param path_to_element: Path from the root of the schema to the current element
         :param schema: The JSON schema part being represented
+        :param is_pattern_properties: True if this node is under the keyword "patternProperties"
         :return: A representation of the schema
         """
         schema_file_path = os.path.realpath(schema_file_path)
@@ -302,6 +304,7 @@ def build_intermediate_representation(
 
         if isinstance(schema, dict):
             keywords = {}
+            pattern_id = 1
             for schema_key, schema_value in schema.items():
                 # These won't be needed to render the documentation.
                 # The definitions will be reached from references, otherwise they are useless
@@ -325,13 +328,23 @@ def build_intermediate_representation(
                 # Add the property name (correctly escaped) to the ID
                 new_html_id = html_id
                 new_depth = depth
-                if schema_key != "properties":
+                if schema_key not in ["properties", "patternProperties"]:
                     new_depth += 1
-                    new_html_id = new_html_id + ("_" if html_id else "") + escape_property_name_for_id(schema_key)
+                    new_html_id += "_" if html_id else ""
+                    if not is_pattern_properties:
+                        new_html_id += escape_property_name_for_id(schema_key)
+                    else:
+                        new_html_id += f"pattern{pattern_id}"
+                        pattern_id += 1
 
                 property_path = copy.deepcopy(path_to_element) + [schema_key]
                 keywords[schema_key] = _build_node(
-                    new_depth, new_html_id, schema_file_path, property_path, schema_value
+                    new_depth,
+                    new_html_id,
+                    schema_file_path,
+                    property_path,
+                    schema_value,
+                    is_pattern_properties=schema_key == "patternProperties",
                 )
             new_node.keywords = keywords
         elif isinstance(schema, list):
