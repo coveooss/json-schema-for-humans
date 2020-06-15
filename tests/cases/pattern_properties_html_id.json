@@ -1,0 +1,34 @@
+{
+  "$id": "https://example.com/pattern_properties_name_conflict.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Person",
+  "type": "object",
+  "patternProperties": {
+    ".*": {
+      "type": "object",
+      "description": "Description 1",
+      "title": "Title 1"
+    },
+    "..": {
+      "type": "object",
+      "description": "Description 2",
+      "title": "Title 2"
+    },
+    "^.": {
+      "type": "object",
+      "description": "Description 3",
+      "title": "Title 3"
+    }
+  },
+  "properties": {
+    "not_a_pattern": {
+      "patternProperties": {
+        ".$": {
+          "type": "object",
+          "description": "Description 4",
+          "title": "Title 4"
+        }
+      }
+    }
+  }
+}
