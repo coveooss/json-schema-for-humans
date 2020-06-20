@@ -456,3 +456,19 @@ def test_yaml() -> None:
     )
     _assert_types(soup, ["object", "object", "string", "string", "string"])
     _assert_required(soup, [False, True, True, True, False])
+
+def test_json_with_tabs() -> None:
+    """Test loading the schema when tabs are present rather than spaces. Regression test for #45"""
+    temp_schema_file = tempfile.NamedTemporaryFile(mode="w+", delete=False, suffix=".json")
+    created_filename = temp_schema_file.name
+    with open(os.path.abspath(os.path.join(os.path.dirname(__file__), "cases", f"basic.json"))) as schema_fp:
+        for line in schema_fp:
+            temp_schema_file.write(line.replace("  ", "\t"))
+    with tempfile.NamedTemporaryFile(mode="w+") as temp_html_file:
+        temp_schema_file.seek(0)
+        generate_from_file_object(temp_schema_file, temp_html_file, True, False, False, True)
+        temp_schema_file.close()
+        os.remove(created_filename)
+        temp_html_file.seek(0)
+        soup = BeautifulSoup(temp_html_file.read(), "html.parser")
+        _assert_basic_case(soup)
