@@ -456,3 +456,11 @@ def test_yaml() -> None:
     )
     _assert_types(soup, ["object", "object", "string", "string", "string"])
     _assert_required(soup, [False, True, True, True, False])
+
+
+def test_single_element_allOf() -> None:
+    """Test loading schema that has a single-element allOf property"""
+    soup = _generate_case("single_element_allOf")
+
+    _assert_title(soup, "Schema containing a single-element allOf")
+    _assert_descriptions(soup, ["Schema containing a single-element allOf", "My string definition"])

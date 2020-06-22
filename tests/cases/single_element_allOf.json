@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Schema containing a single-element allOf",
+    "description": "Schema containing a single-element allOf",
+    "definitions": {
+        "my_reference": {
+            "type": "string",
+            "description": "My string definition"
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#/definitions/my_reference"
+        }
+    ]
+}
