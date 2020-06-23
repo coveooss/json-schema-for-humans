@@ -260,7 +260,11 @@ def build_intermediate_representation(
             loaded_schema = _loaded_schemas[schema_file_path]
         else:
             with open(schema_file_path, encoding="utf-8") as schema_fp:
-                loaded_schema = yaml.safe_load(schema_fp)
+                _, extension = os.path.splitext(schema_file_path)
+                if extension == ".json":
+                    loaded_schema = json.load(schema_fp)
+                else:
+                    loaded_schema = yaml.safe_load(schema_fp)
             _loaded_schemas[schema_file_path] = loaded_schema
 
         if path_to_element:
