@@ -20,10 +20,10 @@
         {# Handle having oneOf or allOf with only one condition #}
         {%- if "allOf" in keys and (keys["allOf"].array_items | length) == 1 -%}
             {%  include "section_description.html" %}
-            {{ content(keys["allOf"][0]) }}
+            {{ content(keys["allOf"].array_items[0]) }}
         {%- elif "anyOf" in keys and (keys["anyOf"].array_items | length) == 1 -%}
             {%  include "section_description.html" %}
-            {{ content(keys["anyOf"][0]) }}
+            {{ content(keys["anyOf"].array_items[0]) }}
         {%- else -%}
             {# Resolve type #}
             {%- set type = schema | get_type_name -%}
