@@ -3,20 +3,18 @@ import json
 import os
 import re
 import shutil
-import sys
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List, Optional, TextIO, Tuple, Type, Union
+from typing import Any, Dict, List, Optional, TextIO, Type, Union
 
 import click
 import htmlmin
 import jinja2
 import markdown2
-from jinja2 import FileSystemLoader
 import yaml
+from jinja2 import FileSystemLoader
 from pytz import reference
-
 
 TEMPLATE_FOLDER = "templates"
 TEMPLATE_FILE_NAME = "base.html"
