@@ -324,7 +324,9 @@ def test_description_with_ref_link_to_reused_ref() -> None:
     """Same as "test_description_with_ref", but do not allow reusing references."""
     soup = _generate_case("description_with_ref", link_to_reused_ref=False)
 
-    _assert_descriptions(soup, ["We should see this", "inner description", "We should see this too"])
+    _assert_descriptions(
+        soup, ["We should see this", "inner description", "We should see this too", "inner description"]
+    )
 
 
 def test_with_examples() -> None:
@@ -349,10 +351,9 @@ def test_with_examples() -> None:
     ]
 
 
-@pytest.mark.parametrize("link_to_reused_ref", [True, False])
-def test_recursive(link_to_reused_ref: bool) -> None:
+def test_recursive() -> None:
     """Test a schema having a recursive definition"""
-    soup = _generate_case("recursive", link_to_reused_ref=link_to_reused_ref)
+    soup = _generate_case("recursive", link_to_reused_ref=True)
 
     _assert_descriptions(soup, ["A human being", "The children they had", "A human being"])
 
@@ -361,16 +362,21 @@ def test_recursive(link_to_reused_ref: bool) -> None:
     assert recursive_definition_link.text == "Same definition as person"
 
 
-@pytest.mark.parametrize("link_to_reused_ref", [True, False])
-def test_recursive_array(link_to_reused_ref: bool) -> None:
+def test_recursive_array() -> None:
     """Test a schema having a recursive definition pointing to array items"""
-    soup = _generate_case("recursive_array", link_to_reused_ref=link_to_reused_ref)
+    soup = _generate_case("recursive_array", link_to_reused_ref=True)
 
     _assert_descriptions(soup, ["A list of people", "A human being", "The children they had", "A human being"])
 
     recursive_definition_link = soup.find("a", href="#person_items")
     assert recursive_definition_link
     assert recursive_definition_link.text == "Same definition as person_items"
+
+
+def test_recursive_no_reuse() -> None:
+    """Test that disallowing reusing of references breaks creating schemas with recursive definitions"""
+    with pytest.raises(RecursionError):
+        _ = _generate_case("recursive", link_to_reused_ref=False)
 
 
 def test_pattern_properties() -> None:
