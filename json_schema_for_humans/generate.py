@@ -14,6 +14,9 @@ import jinja2
 import markdown2
 import yaml
 from jinja2 import FileSystemLoader
+from pygments import highlight
+from pygments.formatters.html import HtmlFormatter
+from pygments.lexers.javascript import JavascriptLexer
 from pytz import reference
 
 TEMPLATE_FOLDER = "templates"
@@ -633,6 +636,11 @@ def escape_property_name_for_id(property_name: str) -> str:
     return escaped
 
 
+def highlight_json_example(example_text: str) -> str:
+    """Filter. Return an highlighted version of the provided JSON text"""
+    return highlight(example_text, JavascriptLexer(), HtmlFormatter())
+
+
 def get_local_time() -> str:
     return datetime.now(tz=reference.LocalTimezone()).strftime("%Y-%m-%d at %H:%M:%S %z")
 
@@ -650,7 +658,7 @@ def generate_from_schema(
     template_folder = os.path.join(os.path.dirname(__file__), TEMPLATE_FOLDER)
     base_template_path = os.path.join(template_folder, TEMPLATE_FILE_NAME)
 
-    md = markdown2.Markdown(extras=["fenced-code-blocks"])
+    md = markdown2.Markdown(extras={"fenced-code-blocks": {"cssclass": "highlight jumbotron"}})
     loader = FileSystemLoader(template_folder)
     env = jinja2.Environment(loader=loader)
     env.filters["markdown"] = lambda text: jinja2.Markup(md.convert(text))
@@ -661,6 +669,7 @@ def generate_from_schema(
     env.filters["get_numeric_restrictions_text"] = get_numeric_restrictions_text
     env.filters["get_required_properties"] = get_required_properties
     env.filters["get_undocumented_required_properties"] = get_undocumented_required_properties
+    env.filters["highlight_json_example"] = highlight_json_example
     env.tests["combining"] = is_combining
     env.tests["description_short"] = is_text_short
     env.tests["deprecated"] = is_deprecated_look_in_description if deprecated_from_description else is_deprecated
