@@ -32,7 +32,9 @@ Add an `Expand all` and a `Collapse all` button at the top of the generated docu
 On by default
 
 If several `$ref` points to the same definition, only render the documentation for this definition the first time.
-All other occurrences are replaced by an achor link to the first occurrence.
+All other occurrences are replaced by an anchor link to the first occurrence.
+
+If the feature is off (`--no-link-to-reused-ref`) and there is a recursive definition, the generation will crash with a `RecursionError`.
 
 ##### --minify/--no-minify
 On by default
