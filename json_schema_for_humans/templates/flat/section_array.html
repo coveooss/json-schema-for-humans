@@ -1,0 +1,26 @@
+{%- if "minItems" in keys -%}
+    {{ restriction("Must contain a minimum of <code>" ~ keys["minItems"].literal ~ "</code> items", "min-items", keys["minItems"].html_id) }}
+{%- endif -%}
+{%- if "maxItems" in keys -%}
+    {{ restriction("Must contain a maximum of <code>" ~ keys["maxItems"].literal ~ "</code> items", "max-items", keys["maxItems"].html_id) }}
+{%- endif -%}
+{%- if "uniqueItems" in keys and keys["uniqueItems"] == True -%}
+    {{ restriction("All items must be unique", "unique-items", keys["uniqueItems"].html_id) }}
+{%- endif -%}
+{%- if "items" in keys and keys["items"] is not none -%}
+    <h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="{{ keys["items"].html_id }}">
+            {# Note that we must use keys["items"] here because keys.items is a function #}
+            {{ content(keys["items"]) }}
+        </div>
+    </div>
+{%- endif -%}
+{%- if "contains" in keys and keys["contains"] != {} -%}
+    <h4>At least one of the items must be:</h4>
+    <div class="card">
+        <div class="card-body items-contain-definition" id="{{ keys["contains"].html_id }}">
+            {{ content(keys["contains"]) }}
+        </div>
+    </div>
+{%- endif -%}

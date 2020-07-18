@@ -1,0 +1,119 @@
+{% from "macro_restriction.html" import restriction with context %}
+
+{%- macro tabbed_section(operator, current_node) -%}
+    {% include "tabbed_section.html" %}
+{%- endmacro -%}
+
+{%- macro content(schema, description="") -%}
+    {% set keys = schema.keywords %}
+
+    {%- set description = (schema | get_description) if not description else description -%}
+
+    {%- if link_to_reused_ref and schema.refers_to and not schema.is_displayed -%}
+        {# There can be a description next to $ref, so let's display it. Fallback to description of referenced element #}
+        {% include "section_description.html" %}
+
+        <a href="#{{ schema.refers_to.html_id }}">Same definition as {{ schema.refers_to.html_id }}</a>
+    {%- elif schema.refers_to -%}
+        {{ content(schema.refers_to, description) }}
+    {%- else -%}
+        {# Handle having oneOf or allOf with only one condition #}
+        {%- if "allOf" in keys and (keys["allOf"].array_items | length) == 1 -%}
+            {%  include "section_description.html" %}
+            {{ content(keys["allOf"].array_items[0]) }}
+        {%- elif "anyOf" in keys and (keys["anyOf"].array_items | length) == 1 -%}
+            {%  include "section_description.html" %}
+            {{ content(keys["anyOf"].array_items[0]) }}
+        {%- else -%}
+            {# Resolve type #}
+            {%- set type = schema | get_type_name -%}
+
+            {# Display type #}
+            {%- if not schema is combining -%}
+                <span class="badge badge-dark value-type">Type: {{ type }}</span>
+            {%- endif -%}
+            {%- if "default" in keys -%}
+                {{ " " }}<span class="badge badge-success default-value">Default: {{ schema | get_default }}</span>
+            {%- endif -%}
+
+            {%  include "section_description.html" %}
+
+            {# Combining: allOf, anyOf, oneOf, not #}
+            {%- if "allOf" in keys -%}
+                {% set current_node = keys["allOf"] %}
+                <div class="all-of-value" id="{{ current_node.html_id }}">{{ tabbed_section("allOf", current_node) }}</div>
+            {%- endif -%}
+            {%- if "anyOf" in keys -%}
+                {% set current_node = keys["anyOf"] %}
+                <div class="any-of-value" id="{{ current_node.html_id }}">{{ tabbed_section("anyOf", current_node) }}</div>
+            {%- endif -%}
+            {%- if "oneOf" in keys -%}
+                {% set current_node = keys["oneOf"] %}
+                <div class="one-of-value" id="{{ current_node.html_id }}">{{ tabbed_section("oneOf", current_node) }}</div>
+            {%- endif -%}
+            {%- if "not" in keys -%}
+                {% include "section_not.html" %}
+            {%- endif -%}
+
+            {# Enum and const #}
+            {%- if "enum" in keys -%}
+                <div class="enum-value" id="{{ keys["enum"].html_id }}">
+                <h4>Must be one of:</h4>
+                <ul class="list-group">
+                {%- for enum_choice in keys["enum"].array_items -%}
+                    <li class="list-group-item">{{ enum_choice.literal | python_to_json }}</li>
+                {%- endfor -%}
+                </ul>
+                </div>
+            {%- endif -%}
+            {%- if "const" in keys -%}
+                <span class="const-value" id="{{ keys["const"].html_id }}">Specific value: <code>{{ keys["const"].literal | python_to_json }}</code></span>
+            {%- endif -%}
+
+            {# Pattern (Regular Expression) #}
+            {%- if "pattern" in keys -%}
+                <span class="pattern-value" id="{{ keys["pattern"].html_id }}">Must match regular expression: <code>{{ keys["pattern"].literal | escape }}</code></span>
+            {%- endif -%}
+
+            {# Conditional subschema, or if-then-else section #}
+            {%- if "if" in keys and ("then" in keys or "else" in keys) -%}
+                {% include "section_conditional_subschema.html" %}
+            {%- endif -%}
+
+            {# Required properties that are not defined under "properties". They will only be listed #}
+            {% include "section_undocumented_required_properties.html" %}
+
+            {# Show the requested type(s) #}
+            {% include "badge_type.html" %}
+
+            {# Show array restrictions #}
+            {%- if type.startswith("array") -%}
+                {% include "section_array.html" %}
+            {%- endif -%}
+
+            {# Display examples #}
+            {%- set examples = (keys.get("examples") or []) -%}
+            {%- if examples -%}
+                {% include "section_examples.html" %}
+            {%- endif -%}
+
+            {%- set required_properties = schema | get_required_properties -%}
+            {%- if "properties" in keys -%}
+                {% set is_pattern_property = False %}
+
+                {%- for sub_property_name, sub_property in keys["properties"].keywords.items() -%}
+                    {% include "section_properties.html" %}
+                {%- endfor -%}
+            {%- endif -%}
+
+            {%- if "patternProperties" in keys -%}
+                {% set is_pattern_property = True %}
+
+                {%- for sub_property_name, sub_property in keys["patternProperties"].keywords.items() -%}
+                    {% include "section_properties.html" %}
+                {%- endfor -%}
+            {%- endif -%}
+
+        {%- endif -%}
+    {%- endif -%}
+{%- endmacro -%}

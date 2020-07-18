@@ -19,6 +19,9 @@ from pygments.formatters.html import HtmlFormatter
 from pygments.lexers.javascript import JavascriptLexer
 from pytz import reference
 
+DEFAULT_TEMPLATE = "bootstrap"
+TEMPLATES = [DEFAULT_TEMPLATE, "flat"]
+
 TEMPLATE_FOLDER = "templates"
 TEMPLATE_FILE_NAME = "base.html"
 CSS_FILE_NAME = "schema_doc.css"
@@ -97,7 +100,18 @@ class SchemaNode:
 
     @property
     def is_definition(self) -> bool:
-        return self.path_to_element and self.path_to_element[0] != "definitions"
+        return self.path_to_element and self.path_to_element[0] == "definitions"
+
+    @property
+    def definition_name(self) -> str:
+        if not self.is_definition or len(self.path_to_element) < 2:
+            return ""
+        return self.path_to_element[-1]
+
+    @property
+    def path_to_property(self) -> str:
+        path_without_properties = [p for p in self.path_to_element if p != "properties"]
+        return " -> ".join([p if isinstance(p, str) else f"Item {p}" for p in path_without_properties])
 
     def __eq__(self, other: object) -> bool:
         """For two schema nodes to be considered equals they must represent the same element in the same file"""
@@ -653,9 +667,10 @@ def generate_from_schema(
     default_from_description: bool = False,
     expand_buttons: bool = False,
     link_to_reused_ref: bool = True,
+    template_name: str = DEFAULT_TEMPLATE,
 ) -> str:
 
-    template_folder = os.path.join(os.path.dirname(__file__), TEMPLATE_FOLDER)
+    template_folder = os.path.join(os.path.dirname(__file__), TEMPLATE_FOLDER, template_name)
     base_template_path = os.path.join(template_folder, TEMPLATE_FILE_NAME)
 
     md = markdown2.Markdown(extras={"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": None})
@@ -704,6 +719,7 @@ def generate_from_filename(
     copy_css: bool = True,
     copy_js: bool = True,
     link_to_reused_ref: bool = True,
+    template_name: str = DEFAULT_TEMPLATE,
 ) -> None:
     if isinstance(schema_file_name, str):
         schema_file_name = os.path.realpath(schema_file_name)
@@ -719,7 +735,7 @@ def generate_from_filename(
         link_to_reused_ref=link_to_reused_ref,
     )
 
-    copy_css_and_js_to_target(result_file_name, copy_css, copy_js)
+    copy_css_and_js_to_target(result_file_name, template_name, copy_css, copy_js)
 
     with open(result_file_name, "w", encoding="utf-8") as result_schema_doc:
         result_schema_doc.write(rendered_schema_doc)
@@ -735,6 +751,7 @@ def generate_from_file_object(
     copy_css: bool = True,
     copy_js: bool = True,
     link_to_reused_ref: bool = True,
+    template_name: str = DEFAULT_TEMPLATE,
 ) -> None:
     """Generate the JSON schema documentation from opened file objects for both input and output files. The
     result_file should be opened in write mode.
@@ -746,14 +763,15 @@ def generate_from_file_object(
         default_from_description=default_from_description,
         expand_buttons=expand_buttons,
         link_to_reused_ref=link_to_reused_ref,
+        template_name=template_name,
     )
 
-    copy_css_and_js_to_target(result_file.name, copy_css, copy_js)
+    copy_css_and_js_to_target(result_file.name, template_name, copy_css, copy_js)
 
     result_file.write(result)
 
 
-def copy_css_and_js_to_target(result_file_path: str, copy_css: bool, copy_js: bool) -> None:
+def copy_css_and_js_to_target(result_file_path: str, template_name: str, copy_css: bool, copy_js: bool) -> None:
     """Copy the CSS and JS files needed to display the resulting page to the directory containing the result file"""
     files_to_copy = []
     if copy_css:
@@ -764,13 +782,16 @@ def copy_css_and_js_to_target(result_file_path: str, copy_css: bool, copy_js: bo
         return
 
     target_directory = os.path.dirname(result_file_path)
-    source_directory = os.path.dirname(__file__)
+    source_directory = os.path.join(os.path.dirname(__file__), TEMPLATE_FOLDER, template_name)
     if target_directory == source_directory:
         return
 
     for file_to_copy in files_to_copy:
+        source_file_path = os.path.join(source_directory, file_to_copy)
+        if not os.path.exists(source_file_path):
+            continue
         try:
-            shutil.copy(os.path.join(source_directory, file_to_copy), os.path.join(target_directory, file_to_copy))
+            shutil.copy(source_file_path, os.path.join(target_directory, file_to_copy))
         except shutil.SameFileError:
             print(f"Not copying {file_to_copy} to {os.path.abspath(target_directory)}, file already exists")
 
@@ -778,6 +799,7 @@ def copy_css_and_js_to_target(result_file_path: str, copy_css: bool, copy_js: bo
 @click.command()
 @click.argument("schema_file", nargs=1, type=click.File("r", encoding="utf-8"))
 @click.argument("result_file", nargs=1, type=click.File("w+", encoding="utf-8"), default="schema_doc.html")
+@click.option("--template-name", default="bootstrap", type=click.Choice(TEMPLATES))
 @click.option("--minify/--no-minify", default=True, help="Run minification om the HTML result")
 @click.option(
     "--deprecated-from-description", is_flag=True, help="Look in the description to find if an attribute is deprecated"
@@ -797,6 +819,7 @@ def copy_css_and_js_to_target(result_file_path: str, copy_css: bool, copy_js: bo
 def main(
     schema_file: TextIO,
     result_file: TextIO,
+    template_name: str,
     minify: bool,
     deprecated_from_description: bool,
     default_from_description: bool,
@@ -815,6 +838,7 @@ def main(
         copy_css,
         copy_js,
         link_to_reused_ref,
+        template_name,
     )
 
 

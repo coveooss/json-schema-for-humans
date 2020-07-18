@@ -1,0 +1,12 @@
+
+{# Display description #}
+{%- if description -%}
+    {%- if description is description_short -%}
+        <span class="description">{{ description | markdown }}</span>
+    {%- else -%}
+        <div class="description" id="collapseDescription_{{ schema.html_id }}">
+            {{ description | markdown }}
+        </div>
+        <a class="collapse-description-link" href="#collapseDescription_{{ schema.html_id }}"></a>
+    {%- endif -%}
+{%- endif -%}

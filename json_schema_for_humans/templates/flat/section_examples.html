@@ -1,0 +1,10 @@
+<br/>
+<div class="badge badge-secondary">Example{% if examples|length > 1 %}s{% endif %}:</div>
+<br/>
+
+{%- for example in examples -%}
+    {%- set example_id = schema.html_id ~ "_ex" ~ loop.index -%}
+    <div id="{{ example_id }}" class="jumbotron examples">
+        {{ example | highlight_json_example }}
+    </div>
+{%- endfor -%}
