@@ -658,7 +658,7 @@ def generate_from_schema(
     template_folder = os.path.join(os.path.dirname(__file__), TEMPLATE_FOLDER)
     base_template_path = os.path.join(template_folder, TEMPLATE_FILE_NAME)
 
-    md = markdown2.Markdown(extras={"fenced-code-blocks": {"cssclass": "highlight jumbotron"}})
+    md = markdown2.Markdown(extras={"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": None})
     loader = FileSystemLoader(template_folder)
     env = jinja2.Environment(loader=loader)
     env.filters["markdown"] = lambda text: jinja2.Markup(md.convert(text))
