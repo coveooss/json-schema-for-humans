@@ -19,7 +19,7 @@
       "default": false,
       "description": "Add an `Expand all` and a `Collapse all` button at the top of the generated documentation"
     },
-    "link_to_reused_def": {
+    "link_to_reused_ref": {
       "type": "boolean",
       "default": true,
       "description": "If several `$ref` points to the same definition, only render the documentation for this definition the first time. All other occurrences are replaced by an anchor link to the first occurrence. The first occurrence is the one that is the least nested from the top of the schema and appears first in that nesting level.\n\n*Note*: If this option is off and the schema contains recursive definitions, the generation will crash!"

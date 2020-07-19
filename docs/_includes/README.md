@@ -1,3 +1,5 @@
+[![PyPI version](https://badge.fury.io/py/json-schema-for-humans.svg)](https://badge.fury.io/py/json-schema-for-humans)
+
 # JSON Schema for Humans
 
 Quickly generate a beautiful HTML static page documenting a JSON schema
