@@ -3,7 +3,7 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-from generate import generate_from_schema
+from json_schema_for_humans.generate import generate_from_schema
 
 
 def assert_css_and_js_not_copied(path: Path) -> None:
