@@ -9,7 +9,7 @@
 
     {%- set description = (schema | get_description) if not description else description -%}
 
-    {%- if link_to_reused_ref and schema.refers_to and not schema.is_displayed -%}
+    {%- if config.link_to_reused_ref and schema.refers_to and not schema.is_displayed -%}
         {# There can be a description next to $ref, so let's display it. Fallback to description of referenced element #}
         {% include "section_description.html" %}
 

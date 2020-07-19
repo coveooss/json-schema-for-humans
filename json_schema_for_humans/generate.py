@@ -1,12 +1,15 @@
 import copy
 import json
+import logging
 import os
 import re
 import shutil
 from collections import defaultdict
+from dataclasses import dataclass
+from dataclasses_json import dataclass_json
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List, Optional, TextIO, Type, Union
+from typing import Any, Dict, List, Optional, TextIO, Tuple, Type, Union
 
 import click
 import htmlmin
@@ -51,6 +54,26 @@ EXCLUSIVE_MINIMUM = "exclusiveMinimum"
 
 
 SHORT_DESCRIPTION_NUMBER_OF_LINES = 8
+
+
+CONFIG_DEPRECATION_MESSAGE = (
+    "JSON Schema for humans: Please supply a GenerationConfiguration object instead of individual options"
+)
+
+
+@dataclass_json
+@dataclass
+class GenerationConfiguration:
+    """Configuration for generating documentation for a schema"""
+
+    minify: bool = True
+    description_is_markdown: bool = True
+    deprecated_from_description: bool = False
+    default_from_description: bool = False
+    expand_buttons: bool = False
+    copy_css: bool = True
+    copy_js: bool = True
+    link_to_reused_ref: bool = True
 
 
 class SchemaNode:
@@ -111,7 +134,7 @@ class SchemaNode:
 
 
 def build_intermediate_representation(
-    schema_path: Union[str, TextIO], loaded_schemas: Optional[Dict[str, Any]] = None
+    schema_path: Union[str, TextIO], config: GenerationConfiguration, loaded_schemas: Optional[Dict[str, Any]] = None,
 ) -> SchemaNode:
     """Build a SchemaNode object representing a JSON schema with added metadata to help rendering as a documentation.
 
@@ -217,7 +240,7 @@ def build_intermediate_representation(
                         other_is_better = False
                         i_am_better = True
 
-                # There is at least on other node having the same reference as the current node.
+                # There is at least one other node having the same reference as the current node.
                 if other_is_better:
                     # The other referencing node is nearer to the user, so it will now be displayed
                     # We mark the current node as being hidden and linking to the other one
@@ -387,7 +410,7 @@ def is_text_short(text: str) -> bool:
     return sum((len(line) / 80 + 1) for line in str(text).splitlines()) < SHORT_DESCRIPTION_NUMBER_OF_LINES
 
 
-def is_deprecated(property_dict: Dict[str, Any]) -> bool:
+def is_deprecated(_property_dict: Dict[str, Any]) -> bool:
     """Test. Check if a property is deprecated without looking in description"""
     return False
 
@@ -648,12 +671,22 @@ def get_local_time() -> str:
 def generate_from_schema(
     schema_file: Union[str, Path, TextIO],
     loaded_schemas: Optional[Dict[str, Any]] = None,
-    minify: bool = False,
+    minify: bool = True,
     deprecated_from_description: bool = False,
     default_from_description: bool = False,
     expand_buttons: bool = False,
     link_to_reused_ref: bool = True,
+    config: GenerationConfiguration = None,
 ) -> str:
+    config = config or _get_final_config(
+        minify=minify,
+        deprecated_from_description=deprecated_from_description,
+        default_from_description=default_from_description,
+        expand_buttons=expand_buttons,
+        copy_css=False,
+        copy_js=False,
+        link_to_reused_ref=link_to_reused_ref,
+    )
 
     template_folder = os.path.join(os.path.dirname(__file__), TEMPLATE_FOLDER)
     base_template_path = os.path.join(template_folder, TEMPLATE_FILE_NAME)
@@ -661,18 +694,22 @@ def generate_from_schema(
     md = markdown2.Markdown(extras={"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": None})
     loader = FileSystemLoader(template_folder)
     env = jinja2.Environment(loader=loader)
-    env.filters["markdown"] = lambda text: jinja2.Markup(md.convert(text))
+    env.filters["markdown"] = (
+        lambda text: jinja2.Markup(md.convert(text)) if config.description_is_markdown else lambda t: t
+    )
     env.filters["python_to_json"] = python_to_json
-    env.filters["get_default"] = get_default_look_in_description if default_from_description else get_default
+    env.filters["get_default"] = get_default_look_in_description if config.default_from_description else get_default
     env.filters["get_type_name"] = get_type_name
-    env.filters["get_description"] = get_description_remove_default if default_from_description else get_description
+    env.filters["get_description"] = (
+        get_description_remove_default if config.default_from_description else get_description
+    )
     env.filters["get_numeric_restrictions_text"] = get_numeric_restrictions_text
     env.filters["get_required_properties"] = get_required_properties
     env.filters["get_undocumented_required_properties"] = get_undocumented_required_properties
     env.filters["highlight_json_example"] = highlight_json_example
     env.tests["combining"] = is_combining
     env.tests["description_short"] = is_text_short
-    env.tests["deprecated"] = is_deprecated_look_in_description if deprecated_from_description else is_deprecated
+    env.tests["deprecated"] = is_deprecated_look_in_description if config.deprecated_from_description else is_deprecated
     env.globals["get_local_time"] = get_local_time
 
     with open(base_template_path, "r") as template_fp:
@@ -682,11 +719,9 @@ def generate_from_schema(
         # Backward compatibility
         schema_file = os.path.sep.join(schema_file)
 
-    intermediate_schema = build_intermediate_representation(schema_file, loaded_schemas)
+    intermediate_schema = build_intermediate_representation(schema_file, config, loaded_schemas)
 
-    rendered = template.render(
-        schema=intermediate_schema, expand_buttons=expand_buttons, link_to_reused_ref=link_to_reused_ref
-    )
+    rendered = template.render(schema=intermediate_schema, config=config)
 
     if minify:
         rendered = htmlmin.minify(rendered)
@@ -704,7 +739,19 @@ def generate_from_filename(
     copy_css: bool = True,
     copy_js: bool = True,
     link_to_reused_ref: bool = True,
+    config: GenerationConfiguration = None,
 ) -> None:
+    """Generate the schema documentation from a filename"""
+    config = config or _get_final_config(
+        minify=minify,
+        deprecated_from_description=deprecated_from_description,
+        default_from_description=default_from_description,
+        expand_buttons=expand_buttons,
+        copy_css=copy_css,
+        copy_js=copy_js,
+        link_to_reused_ref=link_to_reused_ref,
+    )
+
     if isinstance(schema_file_name, str):
         schema_file_name = os.path.realpath(schema_file_name)
     elif isinstance(schema_file_name, Path):
@@ -717,6 +764,7 @@ def generate_from_filename(
         default_from_description=default_from_description,
         expand_buttons=expand_buttons,
         link_to_reused_ref=link_to_reused_ref,
+        config=config,
     )
 
     copy_css_and_js_to_target(result_file_name, copy_css, copy_js)
@@ -728,27 +776,31 @@ def generate_from_filename(
 def generate_from_file_object(
     schema_file: TextIO,
     result_file: TextIO,
-    minify: bool,
-    deprecated_from_description: bool,
-    default_from_description: bool,
-    expand_buttons: bool,
+    minify: bool = True,
+    deprecated_from_description: bool = False,
+    default_from_description: bool = False,
+    expand_buttons: bool = False,
     copy_css: bool = True,
     copy_js: bool = True,
     link_to_reused_ref: bool = True,
+    config: GenerationConfiguration = None,
 ) -> None:
     """Generate the JSON schema documentation from opened file objects for both input and output files. The
     result_file should be opened in write mode.
     """
-    result = generate_from_schema(
-        schema_file,
+    config = config or _get_final_config(
         minify=minify,
         deprecated_from_description=deprecated_from_description,
         default_from_description=default_from_description,
         expand_buttons=expand_buttons,
+        copy_css=copy_css,
+        copy_js=copy_js,
         link_to_reused_ref=link_to_reused_ref,
     )
 
-    copy_css_and_js_to_target(result_file.name, copy_css, copy_js)
+    result = generate_from_schema(schema_file, config=config)
+
+    copy_css_and_js_to_target(result_file.name, config.copy_css, config.copy_js)
 
     result_file.write(result)
 
@@ -775,9 +827,106 @@ def copy_css_and_js_to_target(result_file_path: str, copy_css: bool, copy_js: bo
             print(f"Not copying {file_to_copy} to {os.path.abspath(target_directory)}, file already exists")
 
 
+def _get_final_config(
+    minify: bool,
+    deprecated_from_description: bool,
+    default_from_description: bool,
+    expand_buttons: bool,
+    copy_css: bool,
+    copy_js: bool,
+    link_to_reused_ref: bool,
+    config: Union[str, Path, TextIO, Dict[str, Any], GenerationConfiguration] = None,
+    config_parameters: List[str] = None,
+) -> GenerationConfiguration:
+    if config:
+        final_config = _load_config(config)
+    else:
+        final_config = GenerationConfiguration(
+            minify=minify,
+            deprecated_from_description=deprecated_from_description,
+            default_from_description=default_from_description,
+            expand_buttons=expand_buttons,
+            link_to_reused_ref=link_to_reused_ref,
+            copy_css=copy_css,
+            copy_js=copy_js,
+        )
+        if (
+            not minify
+            or deprecated_from_description
+            or default_from_description
+            or expand_buttons
+            or not link_to_reused_ref
+        ):
+            logging.info(CONFIG_DEPRECATION_MESSAGE)
+
+    if config_parameters:
+        final_config = _apply_config_cli_parameters(final_config, config_parameters)
+
+    return final_config
+
+
+def _load_config(
+    config_parameter: Optional[Union[str, Path, TextIO, Dict[str, Any], GenerationConfiguration]]
+) -> GenerationConfiguration:
+    """Load the configuration from either the path (as str or Path) to a config file, the open config file object,
+    The loaded config as a dict or the GenerateConfiguration object directly.
+    """
+    if config_parameter is None:
+        return GenerationConfiguration()
+
+    if isinstance(config_parameter, GenerationConfiguration):
+        return config_parameter
+
+    if isinstance(config_parameter, dict):
+        config_dict = config_parameter
+    elif isinstance(config_parameter, (str, Path)):
+        if isinstance(config_parameter, str):
+            real_path = os.path.realpath(config_parameter)
+        else:
+            real_path = str(config_parameter.resolve())
+        with open(os.path.realpath(real_path), encoding="utf-8") as config_fp:
+            config_dict = yaml.safe_load(config_fp.read())
+    else:
+        config_dict = yaml.safe_load(config_parameter.read())
+
+    return GenerationConfiguration.from_dict(config_dict)
+
+
+def _apply_config_cli_parameters(
+    current_configuration: GenerationConfiguration, config_cli_parameters: List[str]
+) -> GenerationConfiguration:
+    if not config_cli_parameters:
+        return current_configuration
+
+    current_configuration_as_dict = current_configuration.to_dict()
+    for parameter in config_cli_parameters:
+        if "=" in parameter:
+            parameter_name, parameter_value = parameter.split("=")
+            parameter_value = json.loads(parameter_value)
+        else:
+            parameter_name = parameter
+            if parameter_name.startswith("no_"):
+                parameter_value = False
+                parameter_name = parameter_name[3:]  # Strip the `no_`
+            else:
+                parameter_value = True
+        current_configuration_as_dict[parameter_name] = parameter_value
+
+    return GenerationConfiguration.from_dict(current_configuration_as_dict)
+
+
 @click.command()
 @click.argument("schema_file", nargs=1, type=click.File("r", encoding="utf-8"))
 @click.argument("result_file", nargs=1, type=click.File("w+", encoding="utf-8"), default="schema_doc.html")
+@click.option(
+    "--config-file", type=click.File("r", encoding="utf-8"), help="JSON or YAML file containing generation parameters"
+)
+@click.option(
+    "--config",
+    multiple=True,
+    help="Override generation parameters from the configuration file. "
+    "Format is parameter_name=parameter_value. For example: --config minify=false. Can be repeated.",
+)
 @click.option("--minify/--no-minify", default=True, help="Run minification om the HTML result")
 @click.option(
     "--deprecated-from-description", is_flag=True, help="Look in the description to find if an attribute is deprecated"
@@ -797,6 +946,8 @@ def copy_css_and_js_to_target(result_file_path: str, copy_css: bool, copy_js: bo
 def main(
     schema_file: TextIO,
     result_file: TextIO,
+    config_file: TextIO,
+    config: List[str],
     minify: bool,
     deprecated_from_description: bool,
     default_from_description: bool,
@@ -805,17 +956,19 @@ def main(
     copy_js: bool,
     link_to_reused_ref: bool,
 ) -> None:
-    generate_from_file_object(
-        schema_file,
-        result_file,
-        minify,
-        deprecated_from_description,
-        default_from_description,
-        expand_buttons,
-        copy_css,
-        copy_js,
-        link_to_reused_ref,
+    config = _get_final_config(
+        minify=minify,
+        deprecated_from_description=deprecated_from_description,
+        default_from_description=default_from_description,
+        expand_buttons=expand_buttons,
+        copy_css=copy_css,
+        copy_js=copy_js,
+        link_to_reused_ref=link_to_reused_ref,
+        config=config_file,
+        config_parameters=config,
     )
+
+    generate_from_file_object(schema_file, result_file, config=config)
 
 
 if __name__ == "__main__":

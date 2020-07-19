@@ -1,4 +1,5 @@
 click
+dataclasses-json
 htmlmin
 jinja2
 markdown2

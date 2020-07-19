@@ -6,7 +6,7 @@ import pytest
 from bs4 import BeautifulSoup
 
 from json_schema_for_humans.generate import generate_from_file_object, generate_from_schema
-from tests.test_utils import _get_test_case_path
+from tests.test_utils import get_test_case_path
 
 
 def _generate_case(
@@ -15,7 +15,7 @@ def _generate_case(
     """Get the BeautifulSoup object for a test case"""
     return BeautifulSoup(
         generate_from_schema(
-            _get_test_case_path(case_name),
+            get_test_case_path(case_name),
             None,
             False,
             find_deprecated,
