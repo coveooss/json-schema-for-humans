@@ -88,8 +88,9 @@ class SchemaNode:
         file: str,
         path_to_element: List[Union[str, int]],
         html_id: str,
+        is_property: bool = False,
         literal: Union[str, int] = None,
-        keywords: Dict[str, "SchemaNode"] = None,
+        keywords: Dict[str, Union["SchemaNode", str, List[str]]] = None,
         array_items: List["SchemaNode"] = None,
         refers_to: "SchemaNode" = None,
         is_displayed: bool = True,
@@ -100,6 +101,7 @@ class SchemaNode:
         :param file: Real path to the schema file
         :param path_to_element: Path from the root of the schema to the current element
         :param html_id: HTML ID for the current element. Used for anchor links.
+        :param is_property: If True, then this node is under "properties" and it should not be treated as a keyword
         :param literal: If the schema is neither a dict nor an array, it will be kept here
                         Useful for things like description, types, const, enum, etc.
         :param keywords: If the schema is a dict, this will be filled. Otherwise, this stays empty
@@ -118,6 +120,7 @@ class SchemaNode:
         self.refers_to = refers_to
         self.is_displayed = is_displayed
         self.html_id = html_id or "_".join(path_to_element) or "root"
+        self.is_property = is_property
 
     @property
     def is_definition(self) -> bool:
@@ -127,6 +130,32 @@ class SchemaNode:
     def flat_path(self) -> str:
         """String representation of the path to this node from the root of the current schema"""
         return "/".join(str(part) for part in self.path_to_element)
+
+    @property
+    def default_value(self) -> Optional[Any]:
+        possible_default = self.keywords.get(DEFAULT)
+        if not possible_default:
+            return None
+        if isinstance(possible_default, SchemaNode) and possible_default.is_property:
+            return None
+        return possible_default
+
+    @property
+    def examples(self) -> List[str]:
+        possible_examples = self.keywords.get(EXAMPLES)
+        if not possible_examples:
+            return []
+
+        if isinstance(possible_examples, SchemaNode) and possible_examples.is_property:
+            return []
+
+        return possible_examples
+
+    def get_keyword(self, keyword: str) -> Optional["SchemaNode"]:
+        possible_keyword = self.keywords.get(keyword)
+        if possible_keyword and isinstance(possible_keyword, SchemaNode) and not possible_keyword.is_property:
+            return possible_keyword
+        return None
 
     def should_be_a_link(self, config: GenerationConfiguration) -> bool:
         """Check if this node should be displayed as a link to another section of the schema in the context of
@@ -638,18 +667,19 @@ def get_description_remove_default(schema_node: SchemaNode) -> str:
 
 def get_default(schema_node: SchemaNode) -> str:
     """Filter. Return the default value for a property"""
-    return schema_node.keywords.get(DEFAULT) or ""
+    return schema_node.default_value
 
 
 def get_default_look_in_description(schema_node: SchemaNode) -> str:
     """Filter. Get the default value of a JSON Schema property. If not set, look for it in the description."""
-    default_value = get_default(schema_node)
+    default_value = schema_node.default_value
     if default_value:
         return default_value
 
-    description = schema_node.keywords.get(DESCRIPTION).literal
+    description = schema_node.keywords.get(DESCRIPTION)
     if not description:
         return ""
+    description = description.literal
 
     match = re.match(DEFAULT_PATTERN, description)
     if not match:

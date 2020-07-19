@@ -371,3 +371,11 @@ def test_json_with_tabs() -> None:
         temp_html_file.seek(0)
         soup = BeautifulSoup(temp_html_file.read(), "html.parser")
         tests.html_schema_doc_asserts.assert_basic_case(soup)
+
+
+def test_schema_with_keywords_as_properties() -> None:
+    """Test rendering a schema in which properties are named the same as JSON schema keywords"""
+    soup = generate_case("with_keywords")
+    keywords = ["default", "examples", "if", "then", "else", "anyOf", "allOf", "not", "properties", "patternProperties"]
+    tests.html_schema_doc_asserts.assert_property_names(soup, keywords)
+    tests.html_schema_doc_asserts.assert_descriptions(soup, keywords)
