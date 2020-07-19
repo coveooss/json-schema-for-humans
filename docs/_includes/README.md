@@ -11,6 +11,15 @@ pip install json-schema-for-humans
 
 ## Usage
 
+[Options for generation of the doc are documented using this very library](https://coveooss.github.io/json-schema-for-humans/assets/config_schema.html)
+
+They can be supplied in various ways:
+- Using a JSON or YAML configuration file with the CLI option `--config-file`
+- Using the CLI option `--config`
+- Using a `ConfigurationOption` from code
+
+More details in appropriate sections below
+
 ### From CLI
 
 ```
@@ -24,7 +33,7 @@ The default value for `RESULT_FILE` is `schema_doc.html`
 #### CLI options
 
 #### --config
-Supply config parameters. The parameters are documented in the JSON schema `config_schema.json` at the root of the repo.
+Supply generation config parameters. The parameters are documented in the JSON schema `config_schema.json` at the root of the repo.
 
 Each parameter is in the format `--config parameter_name=parameter_value`. Example: `--config expand_buttons=true`. The parameter value must be valid JSON.
 

@@ -5,7 +5,7 @@ title: JSON Schema for Humans
 {% include README.md %}
 
 # Configuration options
-<iframe style="width: 100%; height: 60vh" src="assets/schema_config.html"></iframe>
+<iframe style="width: 100%; height: 60vh" src="assets/config_schema.html"></iframe>
 
 # Examples
 {% for example in site.data.examples %}
