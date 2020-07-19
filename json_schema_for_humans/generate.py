@@ -74,6 +74,7 @@ class GenerationConfiguration:
     copy_css: bool = True
     copy_js: bool = True
     link_to_reused_ref: bool = True
+    recursive_detection_depth: int = 25
 
 
 class SchemaNode:
@@ -122,6 +123,45 @@ class SchemaNode:
     def is_definition(self) -> bool:
         return self.path_to_element and self.path_to_element[0] != "definitions"
 
+    @property
+    def flat_path(self) -> str:
+        """String representation of the path to this node from the root of the current schema"""
+        return "/".join(str(part) for part in self.path_to_element)
+
+    def should_be_a_link(self, config: GenerationConfiguration) -> bool:
+        """Check if this node should be displayed as a link to another section of the schema in the context of
+        the provided configuration.
+        """
+        return self.refers_to and not self.is_displayed and (config.link_to_reused_ref or self.refers_to_parent(config))
+
+    def refers_to_parent(self, config: GenerationConfiguration) -> bool:
+        """Check if the schema is a reference to another section that is a parent of itself.
+
+        The check is recursive up to RECURSIVE_DETECTION_DEPTH levels, meaning that if the node refers to another node
+        that refers to another node that refers to a parent of itself, this will still return True if, and only if,
+        it takes less than RECURSIVE_DETECTION_DEPTH steps to get to the parent.
+        """
+        if not self.refers_to:
+            return False
+
+        def _path_is_parent(checked_path: List[Union[int, str]], parent_path: List[Union[str, int]]) -> bool:
+            for i, path_part in enumerate(parent_path):
+                if len(checked_path) <= i:
+                    return False
+                if checked_path[i] != path_part:
+                    return False
+            return True
+
+        iteration_count = 0
+        current_node = self.refers_to
+        while current_node and iteration_count < config.recursive_detection_depth:
+            if current_node.file == self.file and _path_is_parent(self.path_to_element, current_node.path_to_element):
+                return True
+            current_node = current_node.refers_to
+            iteration_count += 1
+
+        return False
+
     def __eq__(self, other: object) -> bool:
         """For two schema nodes to be considered equals they must represent the same element in the same file"""
         if other is None:
@@ -131,6 +171,9 @@ class SchemaNode:
             return NotImplemented
 
         return self.file == other.file and self.path_to_element == other.path_to_element
+
+    def __str__(self) -> str:
+        return self.flat_path
 
 
 def build_intermediate_representation(
@@ -256,7 +299,7 @@ def build_intermediate_representation(
                     return found_reference
                 else:
                     # Both nodes are the same depth. The other having been seen first,
-                    # this node will be hidden and link to it
+                    # this node will be hidden and linked to the other node
                     current_node.is_displayed = False
                     return other_user
 

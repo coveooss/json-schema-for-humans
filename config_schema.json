@@ -24,6 +24,11 @@
       "default": true,
       "description": "If several `$ref` points to the same definition, only render the documentation for this definition the first time. All other occurrences are replaced by an anchor link to the first occurrence. The first occurrence is the one that is the least nested from the top of the schema and appears first in that nesting level.\n\n*Note*: If this option is off and the schema contains recursive definitions, the generation will crash!"
     },
+    "recursive_detection_depth": {
+      "type": "integer",
+      "default": 25,
+      "description": "*Advanced option*\nIf `link_to_reused_ref` is false and a `$ref` in the schema refers to a parent of itself, we would get a `RecursionError` trying to render the documentation. To avoid this, each reference is checked for references to its parent.\n\nThis option determines the number of times to recursively follow definitions looking for a circular reference.\n\nIn other words, if a schema has a deeply nested element that refers to itself, this option may need to be increased."
+    },
     "deprecated_from_description": {
       "type": "boolean",
       "default": false,

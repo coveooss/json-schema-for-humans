@@ -15,7 +15,7 @@ from json_schema_for_humans.generate import (
     generate_from_filename,
     generate_from_schema,
 )
-from tests.generate_test import _assert_basic_case
+from tests.html_schema_doc_asserts import assert_basic_case
 from tests.test_utils import assert_css_and_js_not_copied, get_test_case_path
 
 
@@ -25,7 +25,7 @@ def test_generate_from_schema_using_path(tmp_path: Path) -> None:
 
     soup = BeautifulSoup(rendered, "html.parser")
 
-    _assert_basic_case(soup)
+    assert_basic_case(soup)
 
     assert_css_and_js_not_copied(tmp_path)
 
@@ -37,7 +37,7 @@ def test_generate_from_schema_using_file_object(tmp_path: Path) -> None:
 
     soup = BeautifulSoup(rendered, "html.parser")
 
-    _assert_basic_case(soup)
+    assert_basic_case(soup)
 
     assert_css_and_js_not_copied(tmp_path)
 
@@ -58,7 +58,7 @@ def test_generate_from_schema_using_path_already_loaded(tmp_path: Path) -> None:
 
     soup = BeautifulSoup(rendered, "html.parser")
 
-    _assert_basic_case(soup)
+    assert_basic_case(soup)
 
     assert_css_and_js_not_copied(tmp_path)
 
@@ -80,7 +80,7 @@ def test_generate_from_schema_using_file_object_already_loaded(tmp_path: Path) -
 
     soup = BeautifulSoup(rendered, "html.parser")
 
-    _assert_basic_case(soup)
+    assert_basic_case(soup)
 
     assert_css_and_js_not_copied(tmp_path)
 
@@ -96,7 +96,7 @@ def test_generate_from_file_object(tmp_path: Path) -> None:
     with result_file_path.open(encoding="utf-8") as result_fp:
         soup = BeautifulSoup(result_fp.read(), "html.parser")
 
-    _assert_basic_case(soup)
+    assert_basic_case(soup)
 
     assert (tmp_path / "result_with_another_name.html").exists()
 
