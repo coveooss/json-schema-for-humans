@@ -27,7 +27,7 @@
     "recursive_detection_depth": {
       "type": "integer",
       "default": 25,
-      "description": "*Advanced option*\nIf `link_to_reused_ref` is false and a `$ref` in the schema refers to a parent of itself, we would get a `RecursionError` trying to render the documentation. To avoid this, each reference is checked for references to its parent.\n\nThis option determines the number of times to recursively follow definitions looking for a circular reference.\n\nIn other words, if a schema has a deeply nested element that refers to itself, this option may need to be increased."
+      "description": "*Advanced option*\nIf `link_to_reused_ref` is false and a `$ref` in the schema refers to a parent of itself, we would get a `RecursionError` trying to render the documentation. To avoid this, each reference is checked for circular references.\n\nThis option determines the number of times to recursively follow definitions looking for a circular reference.\n\nIn other words, if a schema has a deeply nested element that refers to itself, this option may need to be increased."
     },
     "deprecated_from_description": {
       "type": "boolean",

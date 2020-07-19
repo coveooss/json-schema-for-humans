@@ -26,11 +26,11 @@
             {{ content(keys["anyOf"].array_items[0]) }}
         {%- else -%}
             {# Resolve type #}
-            {%- set type = schema | get_type_name -%}
+            {%- set type_name = schema | get_type_name -%}
 
             {# Display type #}
             {%- if not schema is combining -%}
-                <span class="badge badge-dark value-type">Type: {{ type }}</span>
+                <span class="badge badge-dark value-type">Type: {{ type_name }}</span>
             {%- endif -%}
             {%- if "default" in keys -%}
                 {{ " " }}<span class="badge badge-success default-value">Default: {{ schema | get_default }}</span>
@@ -87,7 +87,7 @@
             {% include "badge_type.html" %}
 
             {# Show array restrictions #}
-            {%- if type.startswith("array") -%}
+            {%- if type_name.startswith("array") -%}
                 {% include "section_array.html" %}
             {%- endif -%}
 

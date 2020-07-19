@@ -6,16 +6,16 @@ import re
 import shutil
 from collections import defaultdict
 from dataclasses import dataclass
-from dataclasses_json import dataclass_json
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List, Optional, TextIO, Tuple, Type, Union
+from typing import Any, Dict, List, Optional, Set, TextIO, Type, Union
 
 import click
 import htmlmin
 import jinja2
 import markdown2
 import yaml
+from dataclasses_json import dataclass_json
 from jinja2 import FileSystemLoader
 from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
@@ -132,13 +132,17 @@ class SchemaNode:
         """Check if this node should be displayed as a link to another section of the schema in the context of
         the provided configuration.
         """
-        return self.refers_to and not self.is_displayed and (config.link_to_reused_ref or self.refers_to_parent(config))
+        return (
+            self.refers_to
+            and not self.is_displayed
+            and (config.link_to_reused_ref or self.has_circular_reference(config))
+        )
 
-    def refers_to_parent(self, config: GenerationConfiguration) -> bool:
-        """Check if the schema is a reference to another section that is a parent of itself.
+    def has_circular_reference(self, config: GenerationConfiguration) -> bool:
+        """Check if the current schema is a reference to another section that references the current schema.
 
-        The check is recursive up to RECURSIVE_DETECTION_DEPTH levels, meaning that if the node refers to another node
-        that refers to another node that refers to a parent of itself, this will still return True if, and only if,
+        The check is recursive up to config.recursive_detection_depth levels, meaning that if the node refers to another
+        node that refers to another node that refers to a parent of itself, this will still return True if, and only if,
         it takes less than RECURSIVE_DETECTION_DEPTH steps to get to the parent.
         """
         if not self.refers_to:
@@ -153,11 +157,27 @@ class SchemaNode:
             return True
 
         iteration_count = 0
-        current_node = self.refers_to
-        while current_node and iteration_count < config.recursive_detection_depth:
-            if current_node.file == self.file and _path_is_parent(self.path_to_element, current_node.path_to_element):
-                return True
-            current_node = current_node.refers_to
+        to_check = {self.refers_to}
+        while to_check and iteration_count < config.recursive_detection_depth:
+            for node_to_check in to_check:
+                # If the node reached via reference, keywords, or array items is the node itself, we have a circular
+                # reference.
+                # We also check if the path is for a parent to save on cycles
+                if node_to_check == self or (
+                    node_to_check.file == self.file
+                    and _path_is_parent(self.path_to_element, node_to_check.path_to_element)
+                ):
+                    return True
+
+            new_to_check: Set[SchemaNode] = set()
+            for node_to_check in to_check:
+                if node_to_check.refers_to:
+                    new_to_check.add(node_to_check.refers_to)
+                new_to_check = new_to_check.union(
+                    set(n for n in node_to_check.keywords.values() if isinstance(n, SchemaNode))
+                )
+                new_to_check = new_to_check.union(set(node_to_check.array_items))
+            to_check = new_to_check
             iteration_count += 1
 
         return False
@@ -171,6 +191,9 @@ class SchemaNode:
             return NotImplemented
 
         return self.file == other.file and self.path_to_element == other.path_to_element
+
+    def __hash__(self) -> int:
+        return hash(self.file + self.flat_path)
 
     def __str__(self) -> str:
         return self.flat_path
@@ -352,6 +375,7 @@ def build_intermediate_representation(
         schema_file_path: str,
         path_to_element: List[Union[str, int]],
         schema: Union[Dict, List, int, str],
+        is_property: bool = False,
         is_pattern_properties: bool = False,
     ) -> SchemaNode:
         """Recursively build a schema representation
@@ -362,6 +386,7 @@ def build_intermediate_representation(
         :param schema_file_path: Real path to the schema (absolute path with symlinks resolved)
         :param path_to_element: Path from the root of the schema to the current element
         :param schema: The JSON schema part being represented
+        :param is_property: The node is a property. Even if it is a required keyword, it should be treated as such
         :param is_pattern_properties: True if this node is under the keyword "patternProperties"
         :return: A representation of the schema
         """
@@ -379,12 +404,12 @@ def build_intermediate_representation(
             for schema_key, schema_value in schema.items():
                 # These won't be needed to render the documentation.
                 # The definitions will be reached from references, otherwise they are useless
-                if schema_key in ["$id", "$ref", "$schema", "definitions"]:
+                if not is_property and schema_key in ["$id", "$ref", "$schema", "definitions"]:
                     continue
 
                 # Examples are rendered in JSON because they will be represented that way in the documentation,
                 # no need for a SchemaNode object
-                if schema_key == "examples":
+                if not is_property and schema_key == "examples":
                     keywords[schema_key] = [
                         json.dumps(example, indent=4, separators=(",", ": "), ensure_ascii=False)
                         for example in schema_value
@@ -392,14 +417,15 @@ def build_intermediate_representation(
                     continue
 
                 # The default value will be printed as-is, no need for a SchemaNode object
-                if schema_key == "default":
+                if not is_property and schema_key == "default":
                     keywords[schema_key] = json.dumps(schema_value, ensure_ascii=False)
                     continue
 
                 # Add the property name (correctly escaped) to the ID
                 new_html_id = html_id
                 new_depth = depth
-                if schema_key not in ["properties", "patternProperties"]:
+                key_is_property = schema_key in ["properties", "patternProperties"]
+                if not key_is_property:
                     new_depth += 1
                     new_html_id += "_" if html_id else ""
                     if not is_pattern_properties:
@@ -415,6 +441,7 @@ def build_intermediate_representation(
                     schema_file_path,
                     property_path,
                     schema_value,
+                    is_property=key_is_property,
                     is_pattern_properties=schema_key == "patternProperties",
                 )
             new_node.keywords = keywords
