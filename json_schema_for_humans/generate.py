@@ -349,7 +349,7 @@ def build_intermediate_representation(
                     other_user.refers_to = current_node
                     current_node.is_displayed = True
                     return found_reference
-                else:
+                elif other_user and other_user.refers_to:
                     # Both nodes are the same depth. The other having been seen first,
                     # this node will be hidden and linked to the other node
                     current_node.is_displayed = False

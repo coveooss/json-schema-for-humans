@@ -80,6 +80,25 @@ def test_references() -> None:
             "Contents of propertyA in final.json",
         ],
     )
+    tests.html_schema_doc_asserts.assert_types(
+        soup,
+        [
+            "object",  # root
+            "string",  # a_gift
+            "object",  # anchor_with_slash
+            "string",  # anchor_with_slash -> propertyA
+            "array of string",  # anchor_no_slash
+            "string",  # anchor_no_slash items
+            "string",  # anchor_nested_reference
+            "string",  # same_file_anchor_with_slash
+            "object",  # other_file_anchor
+            "boolean",  # with_wrap
+            "object",  # other_file_only
+            "string",  # not_a_string, not
+            "object",  # multi_hierarchy_reference
+            "string",  # multi_hierarchy_reference -> propertyA
+        ],
+    )
 
 
 def test_top_level_array() -> None:
