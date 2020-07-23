@@ -52,7 +52,7 @@
                 {{ " " }}<span class="badge badge-success default-value">Default: {{ default_value }}</span>
             {%- endif -%}
 
-            {%- if kw_additional_properties and kw_additional_properties.literal == false -%}
+            {%- if kw_additional_properties and kw_additional_properties.literal == False -%}
                 {{ " " }}<span class="badge badge-info no-additional">No Additional Properties</span>
             {%- endif -%}
 
@@ -136,10 +136,10 @@
                 {%- endfor -%}
             {%- endif -%}
 
-            {%- if kw_additional_properties and kw_additional_properties.literal != false -%}
+            {%- if kw_additional_properties and kw_additional_properties.literal != False -%}
                 {%- set is_pattern_property = False -%}
                 {%- set is_additional_properties = True -%}
-                {%- set additional_properties_schema = kw_additional_properties.literal != true -%}
+                {%- set additional_properties_schema = kw_additional_properties.literal != True -%}
 
                 {%- set sub_property_name = "Additional Properties" -%}
                 {%- set sub_property = kw_additional_properties -%}
