@@ -1,0 +1,37 @@
+{
+  "$id": "https://example.com/person.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Person",
+  "type": "object",
+  "properties": {
+    "subType1": {
+      "type": "object",
+      "description": "A sub type with additionalProperties false.",
+      "properties": {
+        "subProp1": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "subType2": {
+      "type": "object",
+      "description": "A sub type with additionalProperties true.",
+      "properties": {
+        "subProp2": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": {
+    "type": "object",
+    "description": "additionalProperties schema.",
+    "properties": {
+      "propA": {
+        "type": "number"
+      }
+    }
+  }
+}
