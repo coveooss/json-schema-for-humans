@@ -39,3 +39,6 @@
 - name: with_examples
   display_name: With examples
   description: Display examples. Longer examples are collapsed by default.
+- name: additional_properties
+  display_name: Additional Properties
+  description: A schema using additionalProperties true, false and a complex type.
