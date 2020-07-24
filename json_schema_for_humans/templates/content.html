@@ -30,6 +30,7 @@
         {%- set kw_pattern = schema.get_keyword("pattern") -%}
         {%- set kw_properties = schema.get_keyword("properties") -%}
         {%- set kw_pattern_properties = schema.get_keyword("patternProperties") -%}
+        {%- set kw_additional_properties = schema.get_keyword("additionalProperties") -%}
 
         {# Handle having oneOf or allOf with only one condition #}
         {%- if kw_all_of and (kw_all_of.array_items | length) == 1 -%}
@@ -49,6 +50,10 @@
             {%-  set default_value = schema | get_default -%}
             {%- if default_value -%}
                 {{ " " }}<span class="badge badge-success default-value">Default: {{ default_value }}</span>
+            {%- endif -%}
+
+            {%- if kw_additional_properties and kw_additional_properties.literal == False -%}
+                {{ " " }}<span class="badge badge-info no-additional">No Additional Properties</span>
             {%- endif -%}
 
             {%  include "section_description.html" %}
@@ -115,6 +120,7 @@
             {%- set required_properties = schema | get_required_properties -%}
             {%- if kw_properties -%}
                 {% set is_pattern_property = False %}
+                {% set is_additional_properties = False %}
 
                 {%- for sub_property_name, sub_property in kw_properties.keywords.items() -%}
                     {% include "section_properties.html" %}
@@ -123,10 +129,22 @@
 
             {%- if kw_pattern_properties -%}
                 {% set is_pattern_property = True %}
+                {% set is_additional_properties = False %}
 
                 {%- for sub_property_name, sub_property in kw_pattern_properties.keywords.items() -%}
                     {% include "section_properties.html" %}
                 {%- endfor -%}
+            {%- endif -%}
+
+            {%- if kw_additional_properties and kw_additional_properties.literal != False -%}
+                {%- set is_pattern_property = False -%}
+                {%- set is_additional_properties = True -%}
+                {%- set additional_properties_schema = kw_additional_properties.literal != True -%}
+
+                {%- set sub_property_name = "Additional Properties" -%}
+                {%- set sub_property = kw_additional_properties -%}
+
+                {% include "section_properties.html" %}
             {%- endif -%}
 
         {%- endif -%}

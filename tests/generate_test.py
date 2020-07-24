@@ -101,6 +101,38 @@ def test_references() -> None:
     )
 
 
+def test_additional_properties() -> None:
+    """Test rendering a schema with additionalProperties: true, false, and a complex schema"""
+    soup = generate_case("additional_properties")
+
+    tests.html_schema_doc_asserts.assert_property_names(
+        soup,
+        [
+            "subType1",
+            "subProp1",
+            "subType2",
+            "subProp2",
+            "Additional Properties",  # from subType2
+            "Additional Properties",  # from top level of schema
+            "propA",  # schema for top level additionalProperties
+        ],
+    )
+    tests.html_schema_doc_asserts.assert_descriptions(
+        soup,
+        [
+            "A sub type with additionalProperties false.",
+            "A sub type with additionalProperties true.",
+            "additionalProperties schema.",
+        ],
+    )
+
+    # badge for the first sub type with additionalProperties: false
+    badges = soup.find_all("span", class_=["no-additional"])
+    assert len(badges) == 1
+    badge = badges[0]
+    assert badge.text == "No Additional Properties"
+
+
 def test_top_level_array() -> None:
     """Test rendering a schema with an array instead of an object at the top level"""
     soup = generate_case("top_level_array")

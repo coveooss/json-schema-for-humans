@@ -89,7 +89,7 @@ class SchemaNode:
         path_to_element: List[Union[str, int]],
         html_id: str,
         is_property: bool = False,
-        literal: Union[str, int] = None,
+        literal: Union[str, int, bool] = None,
         keywords: Dict[str, Union["SchemaNode", str, List[str]]] = None,
         array_items: List["SchemaNode"] = None,
         refers_to: "SchemaNode" = None,
