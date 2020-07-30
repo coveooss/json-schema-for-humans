@@ -101,6 +101,26 @@ def test_references() -> None:
     )
 
 
+def test_references_url() -> None:
+    """Test rendering a schema with references as URL"""
+
+    soup = generate_case("references_url")
+
+    tests.html_schema_doc_asserts.assert_property_names(soup, ["firstName"])
+    tests.html_schema_doc_asserts.assert_descriptions(soup, ["Testing $ref with URL", "The person's first name."])
+    tests.html_schema_doc_asserts.assert_types(soup, ["object", "string"])
+
+
+def test_references_url_yaml() -> None:
+    """Test rendering a schema with references as URL pointing to a YAML file"""
+
+    soup = generate_case("references_url_yaml")
+
+    tests.html_schema_doc_asserts.assert_property_names(soup, ["address", "street_address", "city", "state"])
+    tests.html_schema_doc_asserts.assert_descriptions(soup, ["Testing $ref with URL with YAML destination"])
+    tests.html_schema_doc_asserts.assert_types(soup, ["object", "object", "string", "string", "string"])
+
+
 def test_additional_properties() -> None:
     """Test rendering a schema with additionalProperties: true, false, and a complex schema"""
     soup = generate_case("additional_properties")

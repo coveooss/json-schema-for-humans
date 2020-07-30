@@ -1,0 +1,11 @@
+{
+  "$id": "https://example.com/schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Testing $ref with URL with YAML destination",
+  "type": "object",
+  "properties": {
+    "address": {
+      "$ref": "https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/tests/cases/yaml.yaml#/definitions/address"
+    }
+  }
+}

@@ -14,6 +14,7 @@ import click
 import htmlmin
 import jinja2
 import markdown2
+import requests
 import yaml
 from dataclasses_json import dataclass_json
 from jinja2 import FileSystemLoader
@@ -282,15 +283,18 @@ def build_intermediate_representation(
 
         # Reference found, resolve the path (format "#/a/b/c", "file.json#/a/b/c", or "file.json")
         if "#" not in reference_path:
-            file_path_part = reference_path
+            uri_part = reference_path
             anchor_part = ""
         else:
-            file_path_part, anchor_part = reference_path.split("#", maxsplit=1)
+            uri_part, anchor_part = reference_path.split("#", maxsplit=1)
             anchor_part = anchor_part.strip("/")
 
         # Resolve file path portion of reference
-        if file_path_part:
-            referenced_schema_path = os.path.realpath(os.path.join(os.path.dirname(current_node.file), file_path_part))
+        if uri_part:
+            if uri_part.startswith("http"):
+                referenced_schema_path = uri_part
+            else:
+                referenced_schema_path = os.path.realpath(os.path.join(os.path.dirname(current_node.file), uri_part))
         else:
             referenced_schema_path = os.path.realpath(current_node.file)
 
@@ -369,22 +373,29 @@ def build_intermediate_representation(
             _load_schema(referenced_schema_path, referenced_schema_path_to_element),
         )
 
-    def _load_schema(schema_file_path: str, path_to_element: List[Union[str, int]]) -> Union[Dict, List, int, str]:
-        """Load the schema at the provided path. The path must be a "realpath", meaning absolute and with symlinks
-        resolved.
+    def _load_schema(schema_uri: str, path_to_element: List[Union[str, int]]) -> Union[Dict, List, int, str]:
+        """Load the schema at the provided path or URL.
+
+        If the URI is for a local file, it must be a "realpath", meaning absolute and with symlinks resolved.
 
         Loaded paths are kept in memory as to ensure never loading the same file twice
         """
-        if schema_file_path in _loaded_schemas:
-            loaded_schema = _loaded_schemas[schema_file_path]
+        if schema_uri in _loaded_schemas:
+            loaded_schema = _loaded_schemas[schema_uri]
         else:
-            with open(schema_file_path, encoding="utf-8") as schema_fp:
-                _, extension = os.path.splitext(schema_file_path)
-                if extension == ".json":
-                    loaded_schema = json.load(schema_fp)
+            if schema_uri.startswith("http"):
+                if schema_uri.endswith(".yaml"):
+                    loaded_schema = yaml.safe_load(requests.get(schema_uri).text)
                 else:
-                    loaded_schema = yaml.safe_load(schema_fp)
-            _loaded_schemas[schema_file_path] = loaded_schema
+                    loaded_schema = requests.get(schema_uri).json()
+            else:
+                with open(schema_uri, encoding="utf-8") as schema_fp:
+                    _, extension = os.path.splitext(schema_uri)
+                    if extension == ".json":
+                        loaded_schema = json.load(schema_fp)
+                    else:
+                        loaded_schema = yaml.safe_load(schema_fp)
+            _loaded_schemas[schema_uri] = loaded_schema
 
         if path_to_element:
             for path_part in path_to_element:

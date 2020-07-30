@@ -6,3 +6,4 @@ markdown2
 Pygments
 pytz
 pyyaml
+requests

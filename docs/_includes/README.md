@@ -171,8 +171,12 @@ These are **not** supported at the moment (PRs welcome!):
 
 ## References
 
-References from inside a schema and to schemas in other files are supported (for example `{ $ref: "#/definitions/something" }` will be replaced by the 
-content of `schema["definitions"]["something"]`).
+References are supported:
+
+- To another part of the schema, e.g. `{ $ref: "#/definitions/something" }`
+- To a local file, `{"$ref": "references.json"}`, `{"$ref": "references.json#/definitions/something"}`
+- To a URL, `{"$ref": "http://example.com/schema.json"}`, `{"$ref": "http://example.com/schema.json#/definitions/something"}`
+
 
 You _can_ have a `description` next to a `$ref`, it will be displayed in priority to the description from the referenced element.
 
