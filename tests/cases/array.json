@@ -1,7 +1,7 @@
 {
   "$id": "https://example.com/arrays.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "A representation of a person, company, organization, or place",
+  "description": "A schema with an array",
   "type": "object",
   "properties": {
     "fruits": {

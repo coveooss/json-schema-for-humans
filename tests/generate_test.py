@@ -146,6 +146,12 @@ def test_additional_properties() -> None:
         ],
     )
 
+    explanation_nodes = soup.find_all(class_="additional-properties")
+    assert [node.text for node in explanation_nodes] == [
+        "Additional Properties of any type are allowed.",
+        "Each additional property must conform to the following schema",
+    ]
+
     # badge for the first sub type with additionalProperties: false
     badges = soup.find_all("span", class_=["no-additional"])
     assert len(badges) == 1
@@ -176,12 +182,7 @@ def test_array() -> None:
 
     tests.html_schema_doc_asserts.assert_property_names(soup, ["fruits", "vegetables", "veggieName", "veggieLike"])
     tests.html_schema_doc_asserts.assert_descriptions(
-        soup,
-        [
-            "A representation of a person, company, organization, or place",
-            "The name of the vegetable.",
-            "Do I like this vegetable?",
-        ],
+        soup, ["A schema with an array", "The name of the vegetable.", "Do I like this vegetable?",],
     )
     tests.html_schema_doc_asserts.assert_types(
         soup, ["object", "array of string", "string", "array", "object", "string", "boolean"]
@@ -450,3 +451,7 @@ def test_schema_with_keywords_as_properties() -> None:
     keywords = ["default", "examples", "if", "then", "else", "anyOf", "allOf", "not", "properties", "patternProperties"]
     tests.html_schema_doc_asserts.assert_property_names(soup, keywords)
     tests.html_schema_doc_asserts.assert_descriptions(soup, keywords)
+
+
+# TODO: test for uniqueItems
+# TODO: test for contains
