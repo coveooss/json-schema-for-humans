@@ -4,7 +4,12 @@ $(document).on('click', 'a[href^="#"]', function(event) {
 });
 
 function flashElement(elementId) {
-    $( "#" + elementId ).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+    // $( "#" + elementId ).fadeOut(100).fadeIn(200).fadeOut(100).fadeIn(500);
+    myElement = document.getElementById(elementId);
+    myElement.classList.add("jsfh-animated-property");
+    setTimeout(function() {
+        myElement.classList.remove("jsfh-animated-property");
+    }, 1000);
 }
 
 function setAnchor(anchorLinkDestination) {

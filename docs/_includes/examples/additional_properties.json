@@ -1,0 +1,30 @@
+{
+    "$id": "https://example.com/additional-properties",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Additional Properties",
+    "description": "A schema using additionalProperties",
+    "type": "object",
+    "properties": {
+      "prop1": {
+        "type": "object",
+        "properties": {
+            "foo": { "type": "number" },
+            "bar": { "type": "boolean" }
+        },
+        "additionalProperties": false
+      },
+      "prop2": {
+        "type": "object",
+        "properties": {
+            "baz": { "type": "string" }
+        },
+        "additionalProperties": {
+            "type": "object",
+            "properties": {
+                "qux": { "type": "integer" }
+            }
+        }
+      }
+    },
+    "additionalProperties": true
+  }

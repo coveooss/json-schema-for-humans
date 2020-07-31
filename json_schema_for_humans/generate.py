@@ -1,18 +1,22 @@
 import copy
 import json
+import logging
 import os
 import re
 import shutil
 from collections import defaultdict
+from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List, Optional, TextIO, Type, Union
+from typing import Any, Dict, List, Optional, Set, TextIO, Type, Union
 
 import click
 import htmlmin
 import jinja2
 import markdown2
+import requests
 import yaml
+from dataclasses_json import dataclass_json
 from jinja2 import FileSystemLoader
 from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
@@ -56,6 +60,27 @@ EXCLUSIVE_MINIMUM = "exclusiveMinimum"
 SHORT_DESCRIPTION_NUMBER_OF_LINES = 8
 
 
+CONFIG_DEPRECATION_MESSAGE = (
+    "JSON Schema for humans: Please supply a GenerationConfiguration object instead of individual options"
+)
+
+
+@dataclass_json
+@dataclass
+class GenerationConfiguration:
+    """Configuration for generating documentation for a schema"""
+
+    minify: bool = True
+    description_is_markdown: bool = True
+    deprecated_from_description: bool = False
+    default_from_description: bool = False
+    expand_buttons: bool = False
+    copy_css: bool = True
+    copy_js: bool = True
+    link_to_reused_ref: bool = True
+    recursive_detection_depth: int = 25
+
+
 class SchemaNode:
     """
     Represents a part of a JSON schema with additional metadata to help with documentation
@@ -67,8 +92,9 @@ class SchemaNode:
         file: str,
         path_to_element: List[Union[str, int]],
         html_id: str,
-        literal: Union[str, int] = None,
-        keywords: Dict[str, "SchemaNode"] = None,
+        is_property: bool = False,
+        literal: Union[str, int, bool] = None,
+        keywords: Dict[str, Union["SchemaNode", str, List[str]]] = None,
         array_items: List["SchemaNode"] = None,
         refers_to: "SchemaNode" = None,
         is_displayed: bool = True,
@@ -79,6 +105,7 @@ class SchemaNode:
         :param file: Real path to the schema file
         :param path_to_element: Path from the root of the schema to the current element
         :param html_id: HTML ID for the current element. Used for anchor links.
+        :param is_property: If True, then this node is under "properties" and it should not be treated as a keyword
         :param literal: If the schema is neither a dict nor an array, it will be kept here
                         Useful for things like description, types, const, enum, etc.
         :param keywords: If the schema is a dict, this will be filled. Otherwise, this stays empty
@@ -97,6 +124,7 @@ class SchemaNode:
         self.refers_to = refers_to
         self.is_displayed = is_displayed
         self.html_id = html_id or "_".join(path_to_element) or "root"
+        self.is_property = is_property
 
     @property
     def is_definition(self) -> bool:
@@ -113,6 +141,91 @@ class SchemaNode:
         path_without_properties = [p for p in self.path_to_element if p != "properties"]
         return " -> ".join([p if isinstance(p, str) else f"Item {p}" for p in path_without_properties])
 
+    @property
+    def flat_path(self) -> str:
+        """String representation of the path to this node from the root of the current schema"""
+        return "/".join(str(part) for part in self.path_to_element)
+
+    @property
+    def default_value(self) -> Optional[Any]:
+        possible_default = self.keywords.get(DEFAULT)
+        if not possible_default:
+            return None
+        if isinstance(possible_default, SchemaNode) and possible_default.is_property:
+            return None
+        return possible_default
+
+    @property
+    def examples(self) -> List[str]:
+        possible_examples = self.keywords.get(EXAMPLES)
+        if not possible_examples:
+            return []
+
+        if isinstance(possible_examples, SchemaNode) and possible_examples.is_property:
+            return []
+
+        return possible_examples
+
+    def get_keyword(self, keyword: str) -> Optional["SchemaNode"]:
+        possible_keyword = self.keywords.get(keyword)
+        if possible_keyword and isinstance(possible_keyword, SchemaNode) and not possible_keyword.is_property:
+            return possible_keyword
+        return None
+
+    def should_be_a_link(self, config: GenerationConfiguration) -> bool:
+        """Check if this node should be displayed as a link to another section of the schema in the context of
+        the provided configuration.
+        """
+        return (
+            self.refers_to
+            and not self.is_displayed
+            and (config.link_to_reused_ref or self.has_circular_reference(config))
+        )
+
+    def has_circular_reference(self, config: GenerationConfiguration) -> bool:
+        """Check if the current schema is a reference to another section that references the current schema.
+
+        The check is recursive up to config.recursive_detection_depth levels, meaning that if the node refers to another
+        node that refers to another node that refers to a parent of itself, this will still return True if, and only if,
+        it takes less than RECURSIVE_DETECTION_DEPTH steps to get to the parent.
+        """
+        if not self.refers_to:
+            return False
+
+        def _path_is_parent(checked_path: List[Union[int, str]], parent_path: List[Union[str, int]]) -> bool:
+            for i, path_part in enumerate(parent_path):
+                if len(checked_path) <= i:
+                    return False
+                if checked_path[i] != path_part:
+                    return False
+            return True
+
+        iteration_count = 0
+        to_check = {self.refers_to}
+        while to_check and iteration_count < config.recursive_detection_depth:
+            for node_to_check in to_check:
+                # If the node reached via reference, keywords, or array items is the node itself, we have a circular
+                # reference.
+                # We also check if the path is for a parent to save on cycles
+                if node_to_check == self or (
+                    node_to_check.file == self.file
+                    and _path_is_parent(self.path_to_element, node_to_check.path_to_element)
+                ):
+                    return True
+
+            new_to_check: Set[SchemaNode] = set()
+            for node_to_check in to_check:
+                if node_to_check.refers_to:
+                    new_to_check.add(node_to_check.refers_to)
+                new_to_check = new_to_check.union(
+                    set(n for n in node_to_check.keywords.values() if isinstance(n, SchemaNode))
+                )
+                new_to_check = new_to_check.union(set(node_to_check.array_items))
+            to_check = new_to_check
+            iteration_count += 1
+
+        return False
+
     def __eq__(self, other: object) -> bool:
         """For two schema nodes to be considered equals they must represent the same element in the same file"""
         if other is None:
@@ -123,9 +236,15 @@ class SchemaNode:
 
         return self.file == other.file and self.path_to_element == other.path_to_element
 
+    def __hash__(self) -> int:
+        return hash(self.file + self.flat_path)
+
+    def __str__(self) -> str:
+        return self.flat_path
+
 
 def build_intermediate_representation(
-    schema_path: Union[str, TextIO], loaded_schemas: Optional[Dict[str, Any]] = None
+    schema_path: Union[str, TextIO], config: GenerationConfiguration, loaded_schemas: Optional[Dict[str, Any]] = None,
 ) -> SchemaNode:
     """Build a SchemaNode object representing a JSON schema with added metadata to help rendering as a documentation.
 
@@ -178,15 +297,18 @@ def build_intermediate_representation(
 
         # Reference found, resolve the path (format "#/a/b/c", "file.json#/a/b/c", or "file.json")
         if "#" not in reference_path:
-            file_path_part = reference_path
+            uri_part = reference_path
             anchor_part = ""
         else:
-            file_path_part, anchor_part = reference_path.split("#", maxsplit=1)
+            uri_part, anchor_part = reference_path.split("#", maxsplit=1)
             anchor_part = anchor_part.strip("/")
 
         # Resolve file path portion of reference
-        if file_path_part:
-            referenced_schema_path = os.path.realpath(os.path.join(os.path.dirname(current_node.file), file_path_part))
+        if uri_part:
+            if uri_part.startswith("http"):
+                referenced_schema_path = uri_part
+            else:
+                referenced_schema_path = os.path.realpath(os.path.join(os.path.dirname(current_node.file), uri_part))
         else:
             referenced_schema_path = os.path.realpath(current_node.file)
 
@@ -231,7 +353,7 @@ def build_intermediate_representation(
                         other_is_better = False
                         i_am_better = True
 
-                # There is at least on other node having the same reference as the current node.
+                # There is at least one other node having the same reference as the current node.
                 if other_is_better:
                     # The other referencing node is nearer to the user, so it will now be displayed
                     # We mark the current node as being hidden and linking to the other one
@@ -245,9 +367,9 @@ def build_intermediate_representation(
                     other_user.refers_to = current_node
                     current_node.is_displayed = True
                     return found_reference
-                else:
+                elif other_user and other_user.refers_to:
                     # Both nodes are the same depth. The other having been seen first,
-                    # this node will be hidden and link to it
+                    # this node will be hidden and linked to the other node
                     current_node.is_displayed = False
                     return other_user
 
@@ -265,22 +387,29 @@ def build_intermediate_representation(
             _load_schema(referenced_schema_path, referenced_schema_path_to_element),
         )
 
-    def _load_schema(schema_file_path: str, path_to_element: List[Union[str, int]]) -> Union[Dict, List, int, str]:
-        """Load the schema at the provided path. The path must be a "realpath", meaning absolute and with symlinks
-        resolved.
+    def _load_schema(schema_uri: str, path_to_element: List[Union[str, int]]) -> Union[Dict, List, int, str]:
+        """Load the schema at the provided path or URL.
+
+        If the URI is for a local file, it must be a "realpath", meaning absolute and with symlinks resolved.
 
         Loaded paths are kept in memory as to ensure never loading the same file twice
         """
-        if schema_file_path in _loaded_schemas:
-            loaded_schema = _loaded_schemas[schema_file_path]
+        if schema_uri in _loaded_schemas:
+            loaded_schema = _loaded_schemas[schema_uri]
         else:
-            with open(schema_file_path, encoding="utf-8") as schema_fp:
-                _, extension = os.path.splitext(schema_file_path)
-                if extension == ".json":
-                    loaded_schema = json.load(schema_fp)
+            if schema_uri.startswith("http"):
+                if schema_uri.endswith(".yaml"):
+                    loaded_schema = yaml.safe_load(requests.get(schema_uri).text)
                 else:
-                    loaded_schema = yaml.safe_load(schema_fp)
-            _loaded_schemas[schema_file_path] = loaded_schema
+                    loaded_schema = requests.get(schema_uri).json()
+            else:
+                with open(schema_uri, encoding="utf-8") as schema_fp:
+                    _, extension = os.path.splitext(schema_uri)
+                    if extension == ".json":
+                        loaded_schema = json.load(schema_fp)
+                    else:
+                        loaded_schema = yaml.safe_load(schema_fp)
+            _loaded_schemas[schema_uri] = loaded_schema
 
         if path_to_element:
             for path_part in path_to_element:
@@ -300,6 +429,7 @@ def build_intermediate_representation(
         schema_file_path: str,
         path_to_element: List[Union[str, int]],
         schema: Union[Dict, List, int, str],
+        is_property: bool = False,
         is_pattern_properties: bool = False,
     ) -> SchemaNode:
         """Recursively build a schema representation
@@ -310,6 +440,7 @@ def build_intermediate_representation(
         :param schema_file_path: Real path to the schema (absolute path with symlinks resolved)
         :param path_to_element: Path from the root of the schema to the current element
         :param schema: The JSON schema part being represented
+        :param is_property: The node is a property. Even if it is a required keyword, it should be treated as such
         :param is_pattern_properties: True if this node is under the keyword "patternProperties"
         :return: A representation of the schema
         """
@@ -327,12 +458,12 @@ def build_intermediate_representation(
             for schema_key, schema_value in schema.items():
                 # These won't be needed to render the documentation.
                 # The definitions will be reached from references, otherwise they are useless
-                if schema_key in ["$id", "$ref", "$schema", "definitions"]:
+                if not is_property and schema_key in ["$id", "$ref", "$schema", "definitions"]:
                     continue
 
                 # Examples are rendered in JSON because they will be represented that way in the documentation,
                 # no need for a SchemaNode object
-                if schema_key == "examples":
+                if not is_property and schema_key == "examples":
                     keywords[schema_key] = [
                         json.dumps(example, indent=4, separators=(",", ": "), ensure_ascii=False)
                         for example in schema_value
@@ -340,14 +471,15 @@ def build_intermediate_representation(
                     continue
 
                 # The default value will be printed as-is, no need for a SchemaNode object
-                if schema_key == "default":
+                if not is_property and schema_key == "default":
                     keywords[schema_key] = json.dumps(schema_value, ensure_ascii=False)
                     continue
 
                 # Add the property name (correctly escaped) to the ID
                 new_html_id = html_id
                 new_depth = depth
-                if schema_key not in ["properties", "patternProperties"]:
+                key_is_property = schema_key in ["properties", "patternProperties"]
+                if not key_is_property:
                     new_depth += 1
                     new_html_id += "_" if html_id else ""
                     if not is_pattern_properties:
@@ -363,6 +495,7 @@ def build_intermediate_representation(
                     schema_file_path,
                     property_path,
                     schema_value,
+                    is_property=key_is_property,
                     is_pattern_properties=schema_key == "patternProperties",
                 )
             new_node.keywords = keywords
@@ -401,7 +534,7 @@ def is_text_short(text: str) -> bool:
     return sum((len(line) / 80 + 1) for line in str(text).splitlines()) < SHORT_DESCRIPTION_NUMBER_OF_LINES
 
 
-def is_deprecated(property_dict: Dict[str, Any]) -> bool:
+def is_deprecated(_property_dict: Dict[str, Any]) -> bool:
     """Test. Check if a property is deprecated without looking in description"""
     return False
 
@@ -559,18 +692,19 @@ def get_description_remove_default(schema_node: SchemaNode) -> str:
 
 def get_default(schema_node: SchemaNode) -> str:
     """Filter. Return the default value for a property"""
-    return schema_node.keywords.get(DEFAULT) or ""
+    return schema_node.default_value
 
 
 def get_default_look_in_description(schema_node: SchemaNode) -> str:
     """Filter. Get the default value of a JSON Schema property. If not set, look for it in the description."""
-    default_value = get_default(schema_node)
+    default_value = schema_node.default_value
     if default_value:
         return default_value
 
-    description = schema_node.keywords.get(DESCRIPTION).literal
+    description = schema_node.keywords.get(DESCRIPTION)
     if not description:
         return ""
+    description = description.literal
 
     match = re.match(DEFAULT_PATTERN, description)
     if not match:
@@ -662,13 +796,22 @@ def get_local_time() -> str:
 def generate_from_schema(
     schema_file: Union[str, Path, TextIO],
     loaded_schemas: Optional[Dict[str, Any]] = None,
-    minify: bool = False,
+    minify: bool = True,
     deprecated_from_description: bool = False,
     default_from_description: bool = False,
     expand_buttons: bool = False,
     link_to_reused_ref: bool = True,
-    template_name: str = DEFAULT_TEMPLATE,
+    config: GenerationConfiguration = None,
 ) -> str:
+    config = config or _get_final_config(
+        minify=minify,
+        deprecated_from_description=deprecated_from_description,
+        default_from_description=default_from_description,
+        expand_buttons=expand_buttons,
+        copy_css=False,
+        copy_js=False,
+        link_to_reused_ref=link_to_reused_ref,
+    )
 
     template_folder = os.path.join(os.path.dirname(__file__), TEMPLATE_FOLDER, template_name)
     base_template_path = os.path.join(template_folder, TEMPLATE_FILE_NAME)
@@ -676,18 +819,22 @@ def generate_from_schema(
     md = markdown2.Markdown(extras={"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": None})
     loader = FileSystemLoader(template_folder)
     env = jinja2.Environment(loader=loader)
-    env.filters["markdown"] = lambda text: jinja2.Markup(md.convert(text))
+    env.filters["markdown"] = (
+        lambda text: jinja2.Markup(md.convert(text)) if config.description_is_markdown else lambda t: t
+    )
     env.filters["python_to_json"] = python_to_json
-    env.filters["get_default"] = get_default_look_in_description if default_from_description else get_default
+    env.filters["get_default"] = get_default_look_in_description if config.default_from_description else get_default
     env.filters["get_type_name"] = get_type_name
-    env.filters["get_description"] = get_description_remove_default if default_from_description else get_description
+    env.filters["get_description"] = (
+        get_description_remove_default if config.default_from_description else get_description
+    )
     env.filters["get_numeric_restrictions_text"] = get_numeric_restrictions_text
     env.filters["get_required_properties"] = get_required_properties
     env.filters["get_undocumented_required_properties"] = get_undocumented_required_properties
     env.filters["highlight_json_example"] = highlight_json_example
     env.tests["combining"] = is_combining
     env.tests["description_short"] = is_text_short
-    env.tests["deprecated"] = is_deprecated_look_in_description if deprecated_from_description else is_deprecated
+    env.tests["deprecated"] = is_deprecated_look_in_description if config.deprecated_from_description else is_deprecated
     env.globals["get_local_time"] = get_local_time
 
     with open(base_template_path, "r") as template_fp:
@@ -697,11 +844,9 @@ def generate_from_schema(
         # Backward compatibility
         schema_file = os.path.sep.join(schema_file)
 
-    intermediate_schema = build_intermediate_representation(schema_file, loaded_schemas)
+    intermediate_schema = build_intermediate_representation(schema_file, config, loaded_schemas)
 
-    rendered = template.render(
-        schema=intermediate_schema, expand_buttons=expand_buttons, link_to_reused_ref=link_to_reused_ref
-    )
+    rendered = template.render(schema=intermediate_schema, config=config)
 
     if minify:
         rendered = htmlmin.minify(rendered)
@@ -719,8 +864,19 @@ def generate_from_filename(
     copy_css: bool = True,
     copy_js: bool = True,
     link_to_reused_ref: bool = True,
-    template_name: str = DEFAULT_TEMPLATE,
+    config: GenerationConfiguration = None,
 ) -> None:
+    """Generate the schema documentation from a filename"""
+    config = config or _get_final_config(
+        minify=minify,
+        deprecated_from_description=deprecated_from_description,
+        default_from_description=default_from_description,
+        expand_buttons=expand_buttons,
+        copy_css=copy_css,
+        copy_js=copy_js,
+        link_to_reused_ref=link_to_reused_ref,
+    )
+
     if isinstance(schema_file_name, str):
         schema_file_name = os.path.realpath(schema_file_name)
     elif isinstance(schema_file_name, Path):
@@ -733,6 +889,7 @@ def generate_from_filename(
         default_from_description=default_from_description,
         expand_buttons=expand_buttons,
         link_to_reused_ref=link_to_reused_ref,
+        config=config,
     )
 
     copy_css_and_js_to_target(result_file_name, template_name, copy_css, copy_js)
@@ -744,29 +901,32 @@ def generate_from_filename(
 def generate_from_file_object(
     schema_file: TextIO,
     result_file: TextIO,
-    minify: bool,
-    deprecated_from_description: bool,
-    default_from_description: bool,
-    expand_buttons: bool,
+    minify: bool = True,
+    deprecated_from_description: bool = False,
+    default_from_description: bool = False,
+    expand_buttons: bool = False,
     copy_css: bool = True,
     copy_js: bool = True,
     link_to_reused_ref: bool = True,
-    template_name: str = DEFAULT_TEMPLATE,
+    config: GenerationConfiguration = None,
 ) -> None:
     """Generate the JSON schema documentation from opened file objects for both input and output files. The
     result_file should be opened in write mode.
     """
-    result = generate_from_schema(
-        schema_file,
+    config = config or _get_final_config(
         minify=minify,
         deprecated_from_description=deprecated_from_description,
         default_from_description=default_from_description,
         expand_buttons=expand_buttons,
+        copy_css=copy_css,
+        copy_js=copy_js,
         link_to_reused_ref=link_to_reused_ref,
         template_name=template_name,
     )
 
-    copy_css_and_js_to_target(result_file.name, template_name, copy_css, copy_js)
+    result = generate_from_schema(schema_file, config=config)
+
+    copy_css_and_js_to_target(result_file.name, config.copy_css, config.copy_js)
 
     result_file.write(result)
 
@@ -796,10 +956,106 @@ def copy_css_and_js_to_target(result_file_path: str, template_name: str, copy_cs
             print(f"Not copying {file_to_copy} to {os.path.abspath(target_directory)}, file already exists")
 
 
+def _get_final_config(
+    minify: bool,
+    deprecated_from_description: bool,
+    default_from_description: bool,
+    expand_buttons: bool,
+    copy_css: bool,
+    copy_js: bool,
+    link_to_reused_ref: bool,
+    config: Union[str, Path, TextIO, Dict[str, Any], GenerationConfiguration] = None,
+    config_parameters: List[str] = None,
+) -> GenerationConfiguration:
+    if config:
+        final_config = _load_config(config)
+    else:
+        final_config = GenerationConfiguration(
+            minify=minify,
+            deprecated_from_description=deprecated_from_description,
+            default_from_description=default_from_description,
+            expand_buttons=expand_buttons,
+            link_to_reused_ref=link_to_reused_ref,
+            copy_css=copy_css,
+            copy_js=copy_js,
+        )
+        if (
+            not minify
+            or deprecated_from_description
+            or default_from_description
+            or expand_buttons
+            or not link_to_reused_ref
+        ):
+            logging.info(CONFIG_DEPRECATION_MESSAGE)
+
+    if config_parameters:
+        final_config = _apply_config_cli_parameters(final_config, config_parameters)
+
+    return final_config
+
+
+def _load_config(
+    config_parameter: Optional[Union[str, Path, TextIO, Dict[str, Any], GenerationConfiguration]]
+) -> GenerationConfiguration:
+    """Load the configuration from either the path (as str or Path) to a config file, the open config file object,
+    The loaded config as a dict or the GenerateConfiguration object directly.
+    """
+    if config_parameter is None:
+        return GenerationConfiguration()
+
+    if isinstance(config_parameter, GenerationConfiguration):
+        return config_parameter
+
+    if isinstance(config_parameter, dict):
+        config_dict = config_parameter
+    elif isinstance(config_parameter, (str, Path)):
+        if isinstance(config_parameter, str):
+            real_path = os.path.realpath(config_parameter)
+        else:
+            real_path = str(config_parameter.resolve())
+        with open(os.path.realpath(real_path), encoding="utf-8") as config_fp:
+            config_dict = yaml.safe_load(config_fp.read())
+    else:
+        config_dict = yaml.safe_load(config_parameter.read())
+
+    return GenerationConfiguration.from_dict(config_dict)
+
+
+def _apply_config_cli_parameters(
+    current_configuration: GenerationConfiguration, config_cli_parameters: List[str]
+) -> GenerationConfiguration:
+    if not config_cli_parameters:
+        return current_configuration
+
+    current_configuration_as_dict = current_configuration.to_dict()
+    for parameter in config_cli_parameters:
+        if "=" in parameter:
+            parameter_name, parameter_value = parameter.split("=")
+            parameter_value = json.loads(parameter_value)
+        else:
+            parameter_name = parameter
+            if parameter_name.startswith("no_"):
+                parameter_value = False
+                parameter_name = parameter_name[3:]  # Strip the `no_`
+            else:
+                parameter_value = True
+        current_configuration_as_dict[parameter_name] = parameter_value
+
+    return GenerationConfiguration.from_dict(current_configuration_as_dict)
+
+
 @click.command()
 @click.argument("schema_file", nargs=1, type=click.File("r", encoding="utf-8"))
 @click.argument("result_file", nargs=1, type=click.File("w+", encoding="utf-8"), default="schema_doc.html")
-@click.option("--template-name", default="bootstrap", type=click.Choice(TEMPLATES))
+@click.option(
+    "--config-file", type=click.File("r", encoding="utf-8"), help="JSON or YAML file containing generation parameters"
+)
+@click.option(
+    "--config",
+    multiple=True,
+    help="Override generation parameters from the configuration file. "
+    "Format is parameter_name=parameter_value. For example: --config minify=false. Can be repeated.",
+)
 @click.option("--minify/--no-minify", default=True, help="Run minification om the HTML result")
 @click.option(
     "--deprecated-from-description", is_flag=True, help="Look in the description to find if an attribute is deprecated"
@@ -819,7 +1075,8 @@ def copy_css_and_js_to_target(result_file_path: str, template_name: str, copy_cs
 def main(
     schema_file: TextIO,
     result_file: TextIO,
-    template_name: str,
+    config_file: TextIO,
+    config: List[str],
     minify: bool,
     deprecated_from_description: bool,
     default_from_description: bool,
@@ -828,18 +1085,19 @@ def main(
     copy_js: bool,
     link_to_reused_ref: bool,
 ) -> None:
-    generate_from_file_object(
-        schema_file,
-        result_file,
-        minify,
-        deprecated_from_description,
-        default_from_description,
-        expand_buttons,
-        copy_css,
-        copy_js,
-        link_to_reused_ref,
-        template_name,
+    config = _get_final_config(
+        minify=minify,
+        deprecated_from_description=deprecated_from_description,
+        default_from_description=default_from_description,
+        expand_buttons=expand_buttons,
+        copy_css=copy_css,
+        copy_js=copy_js,
+        link_to_reused_ref=link_to_reused_ref,
+        config=config_file,
+        config_parameters=config,
     )
+
+    generate_from_file_object(schema_file, result_file, config=config)
 
 
 if __name__ == "__main__":

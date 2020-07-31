@@ -1,0 +1,40 @@
+{
+  "$id": "https://example.com/person.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Person",
+  "type": "object",
+  "properties": {
+    "default": {
+      "type": "string",
+      "description": "default"
+    },
+    "examples": {
+      "type": "string",
+      "description": "examples"
+    },
+    "if": {
+      "description": "if"
+    },
+    "then": {
+      "description": "then"
+    },
+    "else": {
+      "description": "else"
+    },
+    "anyOf": {
+      "description": "anyOf"
+    },
+    "allOf": {
+      "description": "allOf"
+    },
+    "not": {
+      "description": "not"
+    },
+    "properties": {
+      "description": "properties"
+    },
+    "patternProperties": {
+      "description": "patternProperties"
+    }
+  }
+}

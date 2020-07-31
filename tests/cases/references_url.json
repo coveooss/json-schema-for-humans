@@ -1,0 +1,11 @@
+{
+  "$id": "https://example.com/schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Testing $ref with URL",
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "$ref": "https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/tests/cases/basic.json#/properties/firstName"
+    }
+  }
+}

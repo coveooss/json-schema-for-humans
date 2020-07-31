@@ -9,6 +9,23 @@ body {
     font-size: 18px;
 }
 
+.jsfh-animated-property {
+    animation: eclair;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: .75s;
+
+}
+
+@keyframes eclair {
+    0%,100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+}
+
 .btn.btn-primary {
     margin: 10px;
 }
@@ -64,7 +81,7 @@ body {
     display: inline-block;
 }
 
-.badge.required-property,.badge.deprecated-property,.badge.pattern-property {
+.badge.required-property,.badge.deprecated-property,.badge.pattern-property,.badge.no-additional {
     font-size: 100%;
     margin-left: 10px;
 }

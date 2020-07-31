@@ -1,4 +1,4 @@
-{%- if type == "string" -%}
+{%- if type_name == "string" -%}
     {%- if "minLength" in keys -%}
         {{ restriction("Must be at least <code>" ~ keys["minLength"].literal ~ "</code> characters long", "min-length", keys["minLength"].html_id) }}
     {%- endif -%}
@@ -6,7 +6,7 @@
         {{ restriction("Must be at most <code>" ~ keys["maxLength"].literal ~ "</code> characters long", "max-length", keys["maxLength"].html_id) }}
     {%- endif -%}
 {%- endif -%}
-{%- if type in ["integer", "number"] -%}
+{%- if type_name in ["integer", "number"] -%}
     {%- set restriction_text = (schema | get_numeric_restrictions_text("<code>", "</code>")) -%}
     {%- if restriction_text -%}
         {{ restriction(schema | get_numeric_restrictions_text("<code>", "</code>"), "numeric", schema.html_id ~ "_number") }}

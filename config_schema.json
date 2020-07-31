@@ -1,0 +1,53 @@
+{
+  "$id": "https://github.com/coveooss/json-schema-for-humans/config_schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JSON Schema for Humans configuration file",
+  "description": "Choose how to generate JSON Schema for Humans documentation file",
+  "properties": {
+    "minify": {
+      "type": "boolean",
+      "default": true,
+      "description": "Minify the output HTML document."
+    },
+    "description_is_markdown": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether to consider the description as markdown and render it accordingly"
+    },
+    "expand_buttons": {
+      "type": "boolean",
+      "default": false,
+      "description": "Add an `Expand all` and a `Collapse all` button at the top of the generated documentation"
+    },
+    "link_to_reused_ref": {
+      "type": "boolean",
+      "default": true,
+      "description": "If several `$ref` points to the same definition, only render the documentation for this definition the first time. All other occurrences are replaced by an anchor link to the first occurrence. The first occurrence is the one that is the least nested from the top of the schema and appears first in that nesting level.\n\n*Note*: If this option is off and the schema contains recursive definitions, the generation will crash!"
+    },
+    "recursive_detection_depth": {
+      "type": "integer",
+      "default": 25,
+      "description": "*Advanced option*\nIf `link_to_reused_ref` is false and a `$ref` in the schema refers to a parent of itself, we would get a `RecursionError` trying to render the documentation. To avoid this, each reference is checked for circular references.\n\nThis option determines the number of times to recursively follow definitions looking for a circular reference.\n\nIn other words, if a schema has a deeply nested element that refers to itself, this option may need to be increased."
+    },
+    "deprecated_from_description": {
+      "type": "boolean",
+      "default": false,
+      "description": "Mark a property as deprecated (with a big red badge) if the description contains the string `[Deprecated`"
+    },
+    "default_from_description" : {
+      "type": "boolean",
+      "default": false,
+      "description": "Extract the default value of a property from the description like this: ``[Default `the_default_value`]``.\n\nThe default value from the \"default\" attribute will be used in priority"
+    },
+    "copy_css": {
+      "type": "boolean",
+      "default": true,
+      "description": "Copy `schema_doc.css` to the same directory as `RESULT_FILE` after generation"
+    },
+    "copy_js": {
+      "type": "boolean",
+      "default": true,
+      "description": "Copy `schema_doc.min.js` to the same directory as `RESULT_FILE` after generation.\n\nThis file contains the logic for the anchor links"
+    }
+  }
+}

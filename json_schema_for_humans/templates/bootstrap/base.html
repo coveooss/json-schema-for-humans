@@ -21,7 +21,7 @@
     {%- if title -%}
         <h1>{{ title }}</h1>
     {%- endif -%}
-    {%- if expand_buttons -%}
+    {%- if config.expand_buttons -%}
         <div class="text-right">
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>

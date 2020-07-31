@@ -46,7 +46,6 @@
         {% set tab_id = keys["then"].html_id %}
         <div class="tab-pane fade card-body"
              id="tab-pane_{{ tab_id }}" role="tabpanel">
-            {%- set current_path = current_path ~ "/then" -%}
             {{ content(keys["then"]) }}
         </div>
     {%- endif -%}
@@ -55,7 +54,6 @@
         {% set tab_id = keys["else"].html_id %}
         <div class="tab-pane fade card-body"
              id="tab-pane_{{ tab_id }}" role="tabpanel">
-            {%- set current_path = current_path ~ "/else" -%}
             {{ content(keys["else"]) }}
         </div>
     {%- endif -%}

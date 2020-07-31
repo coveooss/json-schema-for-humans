@@ -9,7 +9,7 @@
 
     {%- set description = (schema | get_description) if not description else description -%}
 
-    {%- if link_to_reused_ref and schema.refers_to and not schema.is_displayed -%}
+    {%- if schema.should_be_a_link(config) -%}
         {# There can be a description next to $ref, so let's display it. Fallback to description of referenced element #}
         {% include "section_description.html" %}
 
@@ -17,66 +17,86 @@
     {%- elif schema.refers_to -%}
         {{ content(schema.refers_to, description) }}
     {%- else -%}
+        {# Get the content of keywords, rejecting those that are under "properties" or "patternProperties" #}
+        {%- set kw_all_of = schema.get_keyword("allOf") -%}
+        {%- set kw_any_of = schema.get_keyword("anyOf") -%}
+        {%- set kw_one_of = schema.get_keyword("oneOf") -%}
+        {%- set kw_not = schema.get_keyword("not") -%}
+        {%- set kw_if = schema.get_keyword("if") -%}
+        {%- set kw_else = schema.get_keyword("else") -%}
+        {%- set kw_then = schema.get_keyword("then") -%}
+        {%- set kw_enum = schema.get_keyword("enum") -%}
+        {%- set kw_const = schema.get_keyword("const") -%}
+        {%- set kw_pattern = schema.get_keyword("pattern") -%}
+        {%- set kw_properties = schema.get_keyword("properties") -%}
+        {%- set kw_pattern_properties = schema.get_keyword("patternProperties") -%}
+        {%- set kw_additional_properties = schema.get_keyword("additionalProperties") -%}
+
         {# Handle having oneOf or allOf with only one condition #}
-        {%- if "allOf" in keys and (keys["allOf"].array_items | length) == 1 -%}
+        {%- if kw_all_of and (kw_all_of.array_items | length) == 1 -%}
             {%  include "section_description.html" %}
-            {{ content(keys["allOf"].array_items[0]) }}
-        {%- elif "anyOf" in keys and (keys["anyOf"].array_items | length) == 1 -%}
+            {{ content(kw_all_of.array_items[0]) }}
+        {%- elif kw_any_of and (kw_any_of.array_items | length) == 1 -%}
             {%  include "section_description.html" %}
-            {{ content(keys["anyOf"].array_items[0]) }}
+            {{ content(kw_any_of.array_items[0]) }}
         {%- else -%}
             {# Resolve type #}
-            {%- set type = schema | get_type_name -%}
+            {%- set type_name = schema | get_type_name -%}
 
             {# Display type #}
             {%- if not schema is combining -%}
-                <span class="badge badge-dark value-type">Type: {{ type }}</span>
+                <span class="badge badge-dark value-type">Type: {{ type_name }}</span>
             {%- endif -%}
-            {%- if "default" in keys -%}
-                {{ " " }}<span class="badge badge-success default-value">Default: {{ schema | get_default }}</span>
+            {%-  set default_value = schema | get_default -%}
+            {%- if default_value -%}
+                {{ " " }}<span class="badge badge-success default-value">Default: {{ default_value }}</span>
+            {%- endif -%}
+
+            {%- if kw_additional_properties and kw_additional_properties.literal == False -%}
+                {{ " " }}<span class="badge badge-info no-additional">No Additional Properties</span>
             {%- endif -%}
 
             {%  include "section_description.html" %}
 
             {# Combining: allOf, anyOf, oneOf, not #}
-            {%- if "allOf" in keys -%}
+            {%- if kw_all_of -%}
                 {% set current_node = keys["allOf"] %}
                 <div class="all-of-value" id="{{ current_node.html_id }}">{{ tabbed_section("allOf", current_node) }}</div>
             {%- endif -%}
-            {%- if "anyOf" in keys -%}
+            {%- if kw_any_of -%}
                 {% set current_node = keys["anyOf"] %}
                 <div class="any-of-value" id="{{ current_node.html_id }}">{{ tabbed_section("anyOf", current_node) }}</div>
             {%- endif -%}
-            {%- if "oneOf" in keys -%}
+            {%- if kw_one_of -%}
                 {% set current_node = keys["oneOf"] %}
                 <div class="one-of-value" id="{{ current_node.html_id }}">{{ tabbed_section("oneOf", current_node) }}</div>
             {%- endif -%}
-            {%- if "not" in keys -%}
+            {%- if kw_not -%}
                 {% include "section_not.html" %}
             {%- endif -%}
 
             {# Enum and const #}
-            {%- if "enum" in keys -%}
-                <div class="enum-value" id="{{ keys["enum"].html_id }}">
+            {%- if kw_enum -%}
+                <div class="enum-value" id="{{ kw_enum.html_id }}">
                 <h4>Must be one of:</h4>
                 <ul class="list-group">
-                {%- for enum_choice in keys["enum"].array_items -%}
+                {%- for enum_choice in kw_enum.array_items -%}
                     <li class="list-group-item">{{ enum_choice.literal | python_to_json }}</li>
                 {%- endfor -%}
                 </ul>
                 </div>
             {%- endif -%}
-            {%- if "const" in keys -%}
-                <span class="const-value" id="{{ keys["const"].html_id }}">Specific value: <code>{{ keys["const"].literal | python_to_json }}</code></span>
+            {%- if kw_const -%}
+                <span class="const-value" id="{{ kw_const.html_id }}">Specific value: <code>{{ kw_const.literal | python_to_json }}</code></span>
             {%- endif -%}
 
             {# Pattern (Regular Expression) #}
-            {%- if "pattern" in keys -%}
-                <span class="pattern-value" id="{{ keys["pattern"].html_id }}">Must match regular expression: <code>{{ keys["pattern"].literal | escape }}</code></span>
+            {%- if kw_pattern -%}
+                <span class="pattern-value" id="{{ kw_pattern.html_id }}">Must match regular expression: <code>{{ kw_pattern.literal | escape }}</code></span>
             {%- endif -%}
 
             {# Conditional subschema, or if-then-else section #}
-            {%- if "if" in keys and ("then" in keys or "else" in keys) -%}
+            {%- if kw_if and (kw_then or kw_else) -%}
                 {% include "section_conditional_subschema.html" %}
             {%- endif -%}
 
@@ -87,31 +107,44 @@
             {% include "badge_type.html" %}
 
             {# Show array restrictions #}
-            {%- if type.startswith("array") -%}
+            {%- if type_name.startswith("array") -%}
                 {% include "section_array.html" %}
             {%- endif -%}
 
             {# Display examples #}
-            {%- set examples = (keys.get("examples") or []) -%}
+            {%- set examples = schema.examples -%}
             {%- if examples -%}
                 {% include "section_examples.html" %}
             {%- endif -%}
 
             {%- set required_properties = schema | get_required_properties -%}
-            {%- if "properties" in keys -%}
+            {%- if kw_properties -%}
                 {% set is_pattern_property = False %}
+                {% set is_additional_properties = False %}
 
-                {%- for sub_property_name, sub_property in keys["properties"].keywords.items() -%}
+                {%- for sub_property_name, sub_property in kw_properties.keywords.items() -%}
                     {% include "section_properties.html" %}
                 {%- endfor -%}
             {%- endif -%}
 
-            {%- if "patternProperties" in keys -%}
+            {%- if kw_pattern_properties -%}
                 {% set is_pattern_property = True %}
+                {% set is_additional_properties = False %}
 
-                {%- for sub_property_name, sub_property in keys["patternProperties"].keywords.items() -%}
+                {%- for sub_property_name, sub_property in kw_pattern_properties.keywords.items() -%}
                     {% include "section_properties.html" %}
                 {%- endfor -%}
+            {%- endif -%}
+
+            {%- if kw_additional_properties and kw_additional_properties.literal != False -%}
+                {%- set is_pattern_property = False -%}
+                {%- set is_additional_properties = True -%}
+                {%- set additional_properties_schema = kw_additional_properties.literal != True -%}
+
+                {%- set sub_property_name = "Additional Properties" -%}
+                {%- set sub_property = kw_additional_properties -%}
+
+                {% include "section_properties.html" %}
             {%- endif -%}
 
         {%- endif -%}
