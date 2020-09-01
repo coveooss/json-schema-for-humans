@@ -75,8 +75,7 @@ def test_config_parameters_flags_yes() -> None:
 
 
 def test_config_parameters_flags_no() -> None:
-    """Test providing configuration parameters using the --config CLI parameter and the special 'no_' syntax for flags
-    """
+    """Test providing configuration parameters using the --config CLI parameter and the special 'no_' syntax for flags"""
     test_path = get_test_case_path("basic")
     runner = CliRunner()
     with runner.isolated_filesystem():
