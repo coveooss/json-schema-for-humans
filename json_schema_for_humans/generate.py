@@ -7,6 +7,7 @@ import shutil
 from collections import defaultdict
 from dataclasses import dataclass
 from datetime import datetime
+from json import JSONDecodeError
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Set, TextIO, Type, Union, cast
 
@@ -113,6 +114,7 @@ class SchemaNode:
         file: str,
         path_to_element: List[Union[str, int]],
         html_id: str,
+        ref_path="",
         parent: "SchemaNode" = None,
         parent_key: str = None,
         literal: Union[str, int, bool] = None,
@@ -153,6 +155,7 @@ class SchemaNode:
             }
             The parent key is "patternProperties"
 
+        :param ref_path: Path of a reference to this element, if any (usually "#/definitions/A name")
         :param literal: If the schema is neither a dict nor an array, it will be kept here
                         Useful for things like description, types, const, enum, etc.
         :param keywords: If the schema is a dict, this will be filled. Otherwise, this stays empty
@@ -168,6 +171,7 @@ class SchemaNode:
         self.html_id = html_id or "_".join(path_to_element) or "root"
         self.parent = parent
         self.parent_key = parent_key
+        self.ref_path = ref_path
         self.literal = literal
         self.keywords = keywords or {}
         self.array_items = array_items or []
@@ -175,14 +179,10 @@ class SchemaNode:
         self.is_displayed = is_displayed
 
     @property
-    def is_definition(self) -> bool:
-        return self.path_to_element and self.path_to_element[0] == "definitions"
-
-    @property
     def definition_name(self) -> str:
-        if not self.is_definition or len(self.path_to_element) < 2:
-            return ""
-        return self.path_to_element[-1]
+        if self.ref_path:
+            return self.ref_path.split("/")[-1]
+        return ""
 
     @property
     def is_property(self) -> bool:
@@ -637,6 +637,11 @@ def build_intermediate_representation(
 
         return loaded_schema
 
+    def _get_node_ref(schema: Union[int, str, List, Dict]) -> str:
+        if isinstance(schema, dict) and REF in schema:
+            return schema[REF]
+        return ""
+
     def _build_node(
         depth: int,
         html_id: str,
@@ -665,6 +670,7 @@ def build_intermediate_representation(
             html_id=html_id,
             parent=parent,
             parent_key=parent_key,
+            ref_path=_get_node_ref(schema),
         )
         if html_id == "root":
             html_id = ""
@@ -1250,7 +1256,10 @@ def _apply_config_cli_parameters(
     for parameter in config_cli_parameters:
         if "=" in parameter:
             parameter_name, parameter_value = parameter.split("=")
-            parameter_value = json.loads(parameter_value)
+            try:
+                parameter_value = json.loads(parameter_value)
+            except JSONDecodeError:
+                pass
         else:
             parameter_name = parameter
             if parameter_name.startswith("no_"):

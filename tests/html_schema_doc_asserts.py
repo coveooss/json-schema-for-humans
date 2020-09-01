@@ -43,8 +43,12 @@ def assert_numeric_restrictions(soup: BeautifulSoup, restrictions: List[str]) ->
     assert_soup_results_text(soup, "numeric-restriction", restrictions)
 
 
-def assert_one_of_options(soup: BeautifulSoup, nb_options: int) -> None:
-    assert_soup_results_text(soup, "oneOf-option", [f"Option {str(i + 1)}" for i in range(nb_options)])
+def assert_one_of_options_names(soup: BeautifulSoup, options_names: List[str]) -> None:
+    assert_soup_results_text(soup, "oneOf-option", options_names)
+
+
+def assert_any_of_options_names(soup: BeautifulSoup, options_names: List[str]) -> None:
+    assert_soup_results_text(soup, "anyOf-option", options_names)
 
 
 def assert_default_values(soup: BeautifulSoup, default_values: List[str]) -> None:

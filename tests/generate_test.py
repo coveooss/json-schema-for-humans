@@ -230,7 +230,7 @@ def test_combining_one_of():
     """Test rendering of oneOf schema attribute in tabs"""
     soup = generate_case("combining_oneOf")
 
-    tests.html_schema_doc_asserts.assert_one_of_options(soup, 4)
+    tests.html_schema_doc_asserts.assert_one_of_options_names(soup, ["diskDevice", "diskUUID", "nfs", "tmpfs"])
     tests.html_schema_doc_asserts.assert_types(soup, ["object"] * 5)
     tests.html_schema_doc_asserts.assert_required(soup, [True])
 
@@ -243,6 +243,12 @@ def test_combining_not():
     assert len(definitions) == 1
 
     assert definitions[0].text.lstrip().startswith("Must not be:")
+
+
+def test_combining_anyOf_option_names():
+    soup = generate_case("anyOf_option_names")
+
+    tests.html_schema_doc_asserts.assert_any_of_options_names(soup, ["diskDevice", "diskUUID", "Option 3", "tmpfs"])
 
 
 def test_with_default() -> None:
