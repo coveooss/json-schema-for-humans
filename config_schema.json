@@ -48,6 +48,12 @@
       "type": "boolean",
       "default": true,
       "description": "Copy `schema_doc.min.js` to the same directory as `RESULT_FILE` after generation.\n\nThis file contains the logic for the anchor links"
+    },
+    "template_name": {
+      "type": "string",
+      "enum": ["js"],
+      "default": "js",
+      "description": "The HTML templates to use to render the documentation.\n\n`js` is the default one (and only one for now), it uses javascript for anchor links, collapsible sections and tabs."
     }
   }
 }

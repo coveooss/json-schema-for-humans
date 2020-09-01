@@ -1,12 +1,10 @@
-{%- set has_then = "then" in keys -%}
-{%- set has_else = "else" in keys -%}
 <h2 class="handle">
     <label>Conditional Subschema</label>
 </h2>
 <p>If the conditions in the "If" tab are respected, then the conditions in the "Then" tab should be respected.
     Otherwise, the conditions in the "Else" tab should be respected.</p>
 <ul class="nav nav-tabs" id="{{ schema.html_id }}_condition_tabs" role="tablist">
-    {% set tab_id = keys["if"].html_id %}
+    {% set tab_id = schema.kw_if.html_id %}
     <li class="nav-item">
         <a class="nav-link active"
            id="{{ tab_id  }}" data-toggle="tab" href="#tab-pane_{{ tab_id }}" role="tab"
@@ -14,8 +12,8 @@
         >If</a>
     </li>
 
-    {% if has_then %}
-        {% set tab_id = keys["then"].html_id %}
+    {% if schema.kw_then %}
+        {% set tab_id = schema.kw_then.html_id %}
         <li class="nav-item">
             <a class="nav-link"
                id="{{ tab_id }}" data-toggle="tab" href="#tab-pane_{{ tab_id }}" role="tab"
@@ -24,8 +22,8 @@
         </li>
     {%- endif -%}
 
-    {%- if has_else -%}
-        {%- set tab_id = keys["else"].html_id -%}
+    {%- if schema.kw_else -%}
+        {%- set tab_id = schema.kw_else.html_id -%}
         <li class="nav-item">
             <a class="nav-link"
                id="{{ tab_id }}" data-toggle="tab" href="#tab-pane_{{ tab_id }}" role="tab"
@@ -36,25 +34,25 @@
 </ul>
 
 <div class="tab-content card">
-    {% set tab_id = keys["if"].html_id %}
+    {% set tab_id = schema.kw_if.html_id %}
     <div class="tab-pane fade card-body active show"
          id="tab-pane_{{ tab_id }}" role="tabpanel">
-        {{ content(keys["if"]) }}
+        {{ content(schema.kw_if) }}
     </div>
 
-    {% if has_then %}
-        {% set tab_id = keys["then"].html_id %}
+    {% if schema.kw_then %}
+        {% set tab_id = schema.kw_then.html_id %}
         <div class="tab-pane fade card-body"
              id="tab-pane_{{ tab_id }}" role="tabpanel">
-            {{ content(keys["then"]) }}
+            {{ content(schema.kw_then) }}
         </div>
     {%- endif -%}
 
-    {%- if has_else -%}
-        {% set tab_id = keys["else"].html_id %}
+    {%- if schema.kw_else -%}
+        {% set tab_id = schema.kw_else.html_id %}
         <div class="tab-pane fade card-body"
              id="tab-pane_{{ tab_id }}" role="tabpanel">
-            {{ content(keys["else"]) }}
+            {{ content(schema.kw_else) }}
         </div>
     {%- endif -%}
 </div>
