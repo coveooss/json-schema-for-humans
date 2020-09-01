@@ -51,9 +51,9 @@
     },
     "template_name": {
       "type": "string",
-      "enum": ["js", "flat"],
+      "enum": ["js"],
       "default": "js",
-      "description": "The HTML templates to use to render the documentation.\n\n`js` is the default one, it uses javascript for anchor links, collapsible sections and tabs.\n`flat` does not have any javascript element."
+      "description": "The HTML templates to use to render the documentation.\n\n`js` is the default one (and only one for now), it uses javascript for anchor links, collapsible sections and tabs."
     }
   }
 }
