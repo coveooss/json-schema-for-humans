@@ -182,6 +182,8 @@ class SchemaNode:
     def definition_name(self) -> str:
         if self.ref_path:
             return self.ref_path.split("/")[-1]
+        if self.title:
+            return self.title
         return ""
 
     @property
