@@ -2,7 +2,7 @@
   "$id": "https://github.com/coveooss/json-schema-for-humans/config_schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "JSON Schema for Humans configuration file",
-  "description": "Choose how to generate JSON Schema for Humans documentation file",
+  "description": "Choose how to generate JSON Schema for Humans documentation file.\n\nConfiguration parameters can be provided in several ways:\n\n- On the CLI using `--config parameter_name=value` (example: `--config template_name=flat`)\n- On the CLI using a config file `--config-file config.json`\n- From code, by providing a GenerationConfiguration object to the called generation method.",
   "properties": {
     "minify": {
       "type": "boolean",
@@ -51,9 +51,9 @@
     },
     "template_name": {
       "type": "string",
-      "enum": ["js"],
+      "enum": ["flat", "js"],
       "default": "js",
-      "description": "The HTML templates to use to render the documentation.\n\n`js` is the default one (and only one for now), it uses javascript for anchor links, collapsible sections and tabs."
+      "description": "The HTML templates to use to render the documentation.\n\n`js` is the default one, it uses javascript for anchor links, collapsible sections and tabs. `flat` uses no javascript, but has no interactivity."
     }
   }
 }

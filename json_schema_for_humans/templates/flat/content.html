@@ -13,7 +13,7 @@
         {# There can be a description next to $ref, so let's display it. Fallback to description of referenced element #}
         {% include "section_description.html" %}
 
-        <a href="#{{ schema.refers_to.html_id }}" onclick="anchorLink('{{ schema.refers_to.html_id }}')">Same definition as {{ schema.refers_to.link_name }}</a>
+        <a href="#{{ schema.refers_to.html_id }}">Same definition as {{ schema.refers_to.link_name }}</a>
     {%- elif schema.refers_to -%}
         {{ content(schema.refers_to, description) }}
     {%- else -%}

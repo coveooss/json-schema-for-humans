@@ -180,11 +180,19 @@ class SchemaNode:
 
     @property
     def definition_name(self) -> str:
-        if self.ref_path:
-            return self.ref_path.split("/")[-1]
+        """The text to display when this node is the title of a section or tab"""
+        if self.is_property and self.parent_key:
+            return self.parent_key
         if self.title:
             return self.title
+        if self.ref_path:
+            return self.ref_path.split("/")[-1]
         return ""
+
+    @property
+    def link_name(self) -> str:
+        """The text to display when linking to this node from somewhere else in the schema"""
+        return self.definition_name or self.html_id
 
     @property
     def is_property(self) -> bool:

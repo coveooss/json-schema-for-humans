@@ -1,0 +1,26 @@
+{% from 'content.html' import content with context %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,800">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="schema_doc.css">
+    <meta charset="utf-8"/>
+    {%- set title = schema.keywords.get("title") -%}
+    {% if title %}
+        {% set title = title.literal %}
+    {% endif %}
+    <title>{%- if title -%}{{ title }}{%- else -%}Schema Docs{%- endif -%}</title>
+</head>
+<body id="root">
+    {%- if title -%}
+        <h1>{{ title }}</h1>
+    {%- endif -%}
+
+    {{ content(schema) }}
+</body>
+<footer>
+    <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on {{ get_local_time() }}</p>
+</footer>
+</html>

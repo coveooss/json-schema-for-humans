@@ -6,6 +6,14 @@ Quickly generate a beautiful HTML static page documenting a JSON schema
 
 [Documentation (with visual examples)](https://coveooss.github.io/json-schema-for-humans)
 
+## Features
+
+- Support for JSON Schema Draft-07
+- Since the result is static, it is easier to host and faster to load
+- Different templates to choose from [(See here)](https://coveooss.github.io/json-schema-for-humans/assets/config_schema.html#template_name)
+- Anchor links, allow to send a user to a specific section of the documentation
+- Support for references (even circular!)
+
 ## Installation
 ```
 pip install json-schema-for-humans
@@ -35,7 +43,7 @@ The default value for `RESULT_FILE` is `schema_doc.html`
 #### CLI options
 
 #### --config
-Supply generation config parameters. The parameters are documented in the JSON schema `config_schema.json` at the root of the repo.
+Supply generation config parameters. The parameters are documented in the JSON schema `config_schema.json` at the root of the repo or see [the generated doc](https://coveooss.github.io/json-schema-for-humans/assets/config_schema.html).
 
 Each parameter is in the format `--config parameter_name=parameter_value`. Example: `--config expand_buttons=true`. The parameter value must be valid JSON.
 
@@ -51,60 +59,6 @@ description_is_markdown: false
 expand_buttons: true
 copy_js: false
 ```
-
-##### --expand-buttons
-*Deprecated* Use `--config expand_buttons` or a config file
-
-Off by default
-
-Add an `Expand all` and a `Collapse all` button at the top of the generated documentation
-
-##### --link-to-reused-ref/--no-link-to-reused-ref
-*Deprecated* Use `--config no_link_to_reused_ref` or a config file
-
-On by default
-
-If several `$ref` points to the same definition, only render the documentation for this definition the first time.
-All other occurrences are replaced by an anchor link to the first occurrence.
-
-##### --minify/--no-minify
-*Deprecated* Use `--config no_minify` or a config file
-
-On by default
-
-Minify the output HTML document
-
-##### --deprecated-from-description
-*Deprecated* Use `--config deprecated_from_description` or a config file
-
-Off by default
-
-Mark a property as deprecated (with a big red badge) if the description contains the string `[Deprecated`
-
-##### --default-from-description
-*Deprecated* Use `--config default_from_description` or a config file
-
-Off by default
-
-Extract the default value of a property from the description like this: ``[Default `the_default_value`]``
-
-The default value from the "default" attribute will be used in priority
-
-##### --copy-css/--no-copy-css
-*Deprecated* Use `--config no_copy_css` or a config file
-
-On by default
-
-Copy `schema_doc.css` to the same directory as `RESULT_FILE`.
-
-##### --copy-js/--no-copy-js
-*Deprecated* Use `--config no_copy_js` or a config file
-
-On by default.
-
-Copy `schema_doc.min.js` to the same directory as `RESULT_FILE`.
-
-This file contains the logic for the anchor links
 
 ### From code
 
@@ -184,25 +138,28 @@ If you have several attributes using the same definition, the definition will on
 All other usages of the same definition will be replaced with an anchor link to the first render of the definition.
 This can be turned off using `--config no_link_to_reused_ref`. See `With references` in the examples.
 
-## Anchor links
-Clicking on a property or tab in the output documentation will set the hash of the current window. Opening this anchor link will expand all needed properties and scroll to this section of the schema. Useful for pointing your users to a specific setting.
+## Templates
 
-For this feature to work, you need to include the Javascript file (`schema_doc.min.js`) that is automatically copied next to the output HTML file (`schema_doc.html` by default).
+Templates control the style of the generated documentation.
 
-## Development
+### js
 
-### Testing
-Just run tox
+This is the default template. It uses Bootstrap along with minimal Javascript to allow for the following:
 
-`tox`
+- Properties are in expandable dynamic sections. You can include a button to expand or collapse all. [(See here)](https://coveooss.github.io/json-schema-for-humans/assets/config_schema.html#expand_buttons)
+- Conditional subschemas (`anyOf`, `oneOf`, `allOf`) are in tabbed sections
+- Anchor links will scroll to, expand, and animate the target section 
+- Long descriptions are collapsed by default
 
-### Modifying Javascript
-`schema_doc.js` is not minified automatically, you are responsible for doing it yourself
+When using this template, you need to include the Javascript file (`schema_doc.min.js`) that is automatically copied next to the output HTML file (`schema_doc.html` by default).
 
-### Generating doc
-The documentation is generated using jekyll and hosted on GitHub Pages
+### flat
 
-- Change your current working directory to `docs`
-- Run ``python generate_examples.py``. This will get all examples from `tests/cases`, render the resulting HTML and
- include it in the appropriate folders in the jekyll site.
-- If you have added an example, add the file name (without `.json`), the display name and description in `_data/examples.yaml`
+*Note*: This template is a work in progress
+
+It is sometimes not possible or desirable to include custom Javascript in documentation. This template addresses this issue by removing interactive elements in favor of simpler HTML.
+
+At the moment, this means the whole documentation is generated without any collapsible sections, which may make it hard to understand the schema structure. Contributions are welcomed to improve it!
+
+# Contributing
+[See CONTRIBUTING.md](https://github.com/coveooss/json-schema-for-humans/blob/master/CONTRIBUTING.md)

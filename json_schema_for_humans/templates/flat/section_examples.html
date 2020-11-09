@@ -1,0 +1,14 @@
+<br/>
+<div class="badge badge-secondary">Example{% if examples|length > 1 %}s{% endif %}:</div>
+<br/>
+
+{%- for example in examples -%}
+    {%- set example_id = schema.html_id ~ "_ex" ~ loop.index -%}
+    {%- set example_is_long = example is not description_short -%}
+    {%- if example_is_long -%}
+        <button class="btn btn-light example-show collapsed" data-toggle="collapse" data-target="#{{ example_id }}" aria-controls="{{ example_id }}"></button>
+    {%- endif -%}
+    <div id="{{ example_id }}" class="{% if example_is_long %}collapse {% endif %}jumbotron examples">
+        {{ example | highlight_json_example }}
+    </div>
+{%- endfor -%}
