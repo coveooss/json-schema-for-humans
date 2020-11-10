@@ -467,5 +467,18 @@ def test_schema_with_keywords_as_properties() -> None:
     tests.html_schema_doc_asserts.assert_descriptions(soup, keywords)
 
 
+def test_ref_merge() -> None:
+    """Test case where a schema has elements next to $ref"""
+    soup = generate_case("ref_merge")
+
+    tests.html_schema_doc_asserts.assert_descriptions(soup, ["This is the description from the definition"])
+    tests.html_schema_doc_asserts.assert_types(soup, ["object", "enum (of string)", "object", "string", "string"])
+    tests.html_schema_doc_asserts.assert_property_names(soup, ["aProperty", "aDictPropertyARequired", "a", "b"])
+    tests.html_schema_doc_asserts.assert_default_values(soup, ['"Default from property"', '{"a": "a", "b": "b"}'])
+    tests.html_schema_doc_asserts.assert_enum_values(soup, [['"value1"', '"value2"']])
+    # a and b are required from the definition, but only a is next to the $ref
+    tests.html_schema_doc_asserts.assert_required(soup, [False, False, True, False])
+
+
 # TODO: test for uniqueItems
 # TODO: test for contains

@@ -15,7 +15,7 @@
 
         <a href="#{{ schema.refers_to.html_id }}">Same definition as {{ schema.refers_to.link_name }}</a>
     {%- elif schema.refers_to -%}
-        {{ content(schema.refers_to, description) }}
+        {{ content(schema.refers_to_merged, description) }}
     {%- else -%}
         {# Handle having oneOf or allOf with only one condition #}
         {%- if schema.kw_all_of and (schema.kw_all_of.array_items | length) == 1 -%}
@@ -63,7 +63,7 @@
                 <h4>Must be one of:</h4>
                 <ul class="list-group">
                 {%- for enum_choice in schema.kw_enum.array_items -%}
-                    <li class="list-group-item">{{ enum_choice.literal | python_to_json }}</li>
+                    <li class="list-group-item enum-item">{{ enum_choice.literal | python_to_json }}</li>
                 {%- endfor -%}
                 </ul>
                 </div>

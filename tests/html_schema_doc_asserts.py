@@ -20,6 +20,15 @@ def assert_property_names(soup: BeautifulSoup, property_names: List[str]) -> Non
     assert_soup_results_text(soup, "property-name", property_names)
 
 
+def assert_enum_values(soup: BeautifulSoup, enum_values: List[List[str]]) -> None:
+    enums = soup.find_all(class_="enum-value")
+
+    assert len(enums) == len(enum_values)
+
+    for i, enum in enumerate(enums):
+        assert_soup_results_text(enum, "enum-item", enum_values[i])
+
+
 def assert_title(soup: BeautifulSoup, title: str) -> None:
     """Assert the result file contains the provided title"""
     assert soup.head.title.string == title

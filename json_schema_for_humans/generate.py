@@ -177,6 +177,7 @@ class SchemaNode:
         self.array_items = array_items or []
         self.refers_to = refers_to
         self.is_displayed = is_displayed
+        self._refers_to_merged = None
 
     @property
     def definition_name(self) -> str:
@@ -271,6 +272,21 @@ class SchemaNode:
             return []
 
         return possible_examples
+
+    @property
+    def refers_to_merged(self) -> Optional["SchemaNode"]:
+        """The referenced node, with values from the current node merged in"""
+        if self._refers_to_merged:
+            return self._refers_to_merged
+
+        if not self.refers_to:
+            return None
+
+        merged_node = copy.deepcopy(self.refers_to)
+        merged_node.keywords.update(self.keywords)
+        self._refers_to_merged = merged_node
+
+        return self._refers_to_merged
 
     def get_keyword(self, keyword: str) -> Optional["SchemaNode"]:
         """Get the value of a keyword if present and it is not a property (to avoid conflicts with properties being
