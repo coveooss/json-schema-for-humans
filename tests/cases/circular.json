@@ -1,0 +1,32 @@
+{
+  "$id": "https://example.com/circular.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Circular reference Schema",
+  "type": "object",
+  "properties": {
+    "person": {
+      "$ref": "#/definitions/a"
+    }
+  },
+  "definitions": {
+    "a": {
+      "type": "object",
+      "properties": {
+        "a1" : {
+          "$ref": "#/definitions/b"
+        }
+      }
+    },
+    "b": {
+      "type": "string",
+      "$ref": "#/definitions/c",
+      "description": "Description from b"
+    },
+    "c": {
+      "type": "string",
+      "$ref": "#/definitions/a/properties/a1",
+      "description": "Description from c",
+      "default": "Default from c"
+    }
+  }
+}

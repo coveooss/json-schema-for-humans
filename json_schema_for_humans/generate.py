@@ -416,18 +416,20 @@ class SchemaNode:
         """Check if this node should be displayed as a link to another section of the schema in the context of
         the provided configuration.
         """
-        return (
-            self.refers_to
-            and not self.is_displayed
-            and (config.link_to_reused_ref or self.has_circular_reference(config))
-        )
+        if not self.refers_to or self.is_displayed:
+            return False
+
+        if config.link_to_reused_ref:
+            return True
+
+        return self.has_circular_reference(config)
 
     def has_circular_reference(self, config: GenerationConfiguration) -> bool:
         """Check if the current schema is a reference to another section that references the current schema.
 
         The check is recursive up to config.recursive_detection_depth levels, meaning that if the node refers to another
         node that refers to another node that refers to a parent of itself, this will still return True if, and only if,
-        it takes less than RECURSIVE_DETECTION_DEPTH steps to get to the parent.
+        it takes less than config.recursive_detection_depth steps to get to the parent.
         """
         if not self.refers_to:
             return False
@@ -565,14 +567,33 @@ def build_intermediate_representation(
             found_reference = None
 
         if found_reference:
+            reference_users_for_this_schema = reference_users[found_reference.file][anchor_part]
+            reference_users[referenced_schema_path][anchor_part].append(current_node)
+
+            # Detect infinite loop
+            ref_by_file = current_node.file
+            ref_by_path = "/".join(current_node.path_to_element)
+            found_users = reference_users.get(ref_by_file, {}).get(ref_by_path)
+            while found_users:
+                new_found_users = []
+                for found_user in found_users:
+                    if found_user == current_node:
+                        # Huh oh, this node refers to the current node, let's break the cycle!
+                        return None
+                    ref_by_file = found_user.file
+                    ref_by_path = "/".join(found_user.path_to_element)
+                    found_users_for_this = reference_users.get(ref_by_file, {}).get(ref_by_path)
+                    if found_users_for_this:
+                        new_found_users += found_users_for_this
+                found_users = new_found_users
+
+            # Find the first displayed node following the references
             while not found_reference.is_displayed and found_reference.refers_to:
                 if found_reference.refers_to == current_node:
                     break
                 found_reference = found_reference.refers_to
 
             # Is someone else using the reference?
-            reference_users_for_this_schema = reference_users[found_reference.file][anchor_part]
-            reference_users[referenced_schema_path][anchor_part].append(current_node)
             if reference_users_for_this_schema:
                 other_user = None
                 other_is_better = False

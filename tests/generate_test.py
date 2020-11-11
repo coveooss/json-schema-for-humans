@@ -480,5 +480,15 @@ def test_ref_merge() -> None:
     tests.html_schema_doc_asserts.assert_required(soup, [False, False, True, False])
 
 
+def test_circular_reference() -> None:
+    """Test that generating a schema that has circular references does not crash"""
+    soup = generate_case("circular")
+
+    tests.html_schema_doc_asserts.assert_types(soup, ["object", "object", "string"])
+    tests.html_schema_doc_asserts.assert_property_names(soup, ["person", "a1"])
+    tests.html_schema_doc_asserts.assert_descriptions(soup, ["Description from b"])
+    tests.html_schema_doc_asserts.assert_default_values(soup, ['"Default from c"'])
+
+
 # TODO: test for uniqueItems
 # TODO: test for contains
