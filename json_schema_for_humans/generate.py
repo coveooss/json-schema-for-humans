@@ -572,7 +572,7 @@ def build_intermediate_representation(
 
             # Detect infinite loop
             ref_by_file = current_node.file
-            ref_by_path = "/".join(current_node.path_to_element)
+            ref_by_path = current_node.flat_path
             found_users = reference_users.get(ref_by_file, {}).get(ref_by_path)
             while found_users:
                 new_found_users = []
@@ -581,7 +581,7 @@ def build_intermediate_representation(
                         # Huh oh, this node refers to the current node, let's break the cycle!
                         return None
                     ref_by_file = found_user.file
-                    ref_by_path = "/".join(found_user.path_to_element)
+                    ref_by_path = found_user.flat_path
                     found_users_for_this = reference_users.get(ref_by_file, {}).get(ref_by_path)
                     if found_users_for_this:
                         new_found_users += found_users_for_this
