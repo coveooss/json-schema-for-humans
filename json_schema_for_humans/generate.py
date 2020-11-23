@@ -86,6 +86,9 @@ CONFIG_DEPRECATION_MESSAGE = (
 )
 
 
+circular_references: Dict["SchemaNode", bool] = {}
+
+
 @dataclass_json
 @dataclass
 class GenerationConfiguration:
@@ -282,7 +285,7 @@ class SchemaNode:
         if not self.refers_to:
             return None
 
-        merged_node = copy.deepcopy(self.refers_to)
+        merged_node = copy.copy(self.refers_to)
         merged_node.keywords.update(self.keywords)
         self._refers_to_merged = merged_node
 
@@ -431,7 +434,11 @@ class SchemaNode:
         node that refers to another node that refers to a parent of itself, this will still return True if, and only if,
         it takes less than config.recursive_detection_depth steps to get to the parent.
         """
+        if self in circular_references:
+            return circular_references[self]
+
         if not self.refers_to:
+            circular_references[self] = False
             return False
 
         def _path_is_parent(checked_path: List[Union[int, str]], parent_path: List[Union[str, int]]) -> bool:
@@ -453,6 +460,7 @@ class SchemaNode:
                     node_to_check.file == self.file
                     and _path_is_parent(self.path_to_element, node_to_check.path_to_element)
                 ):
+                    circular_references[self] = True
                     return True
 
             new_to_check: Set[SchemaNode] = set()
@@ -466,6 +474,7 @@ class SchemaNode:
             to_check = new_to_check
             iteration_count += 1
 
+        circular_references[self] = False
         return False
 
     def __eq__(self, other: object) -> bool:
@@ -1362,6 +1371,7 @@ def main(
     copy_js: bool,
     link_to_reused_ref: bool,
 ) -> None:
+    start = datetime.now()
     config = _get_final_config(
         minify=minify,
         deprecated_from_description=deprecated_from_description,
@@ -1375,6 +1385,8 @@ def main(
     )
 
     generate_from_file_object(schema_file, result_file, config=config)
+    duration = datetime.now() - start
+    print(f"Generated {result_file.name} in {duration}")
 
 
 if __name__ == "__main__":
