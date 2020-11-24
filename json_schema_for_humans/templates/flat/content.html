@@ -4,44 +4,44 @@
     {% include "tabbed_section.html" %}
 {%- endmacro -%}
 
-{%- macro content(schema, description="") -%}
+{%- macro content(schema, skip_headers=False) -%}
     {% set keys = schema.keywords %}
 
-    {%- set description = (schema | get_description) if not description else description -%}
+    {# Resolve type #}
+    {%- set type_name = schema.type_name -%}
+
+    {% if not skip_headers %}
+        {# Display type #}
+        {%- if not schema is combining -%}
+            <span class="badge badge-dark value-type">Type: {{ type_name }}</span>
+        {%- endif -%}
+
+        {# Display default #}
+        {%- set default_value = schema.default_value -%}
+        {%- if default_value -%}
+            {{ " " }}<span class="badge badge-success default-value">Default: {{ default_value }}</span>
+        {%- endif -%}
+        <br/>
+
+        {%- set description = (schema | get_description) -%}
+        {%  include "section_description.html" %}
+    {%- endif -%}
+
 
     {%- if schema.should_be_a_link(config) -%}
-        {# There can be a description next to $ref, so let's display it. Fallback to description of referenced element #}
-        {% include "section_description.html" %}
-
-        <a href="#{{ schema.refers_to.html_id }}">Same definition as {{ schema.refers_to.link_name }}</a>
+        <a href="#{{ schema.links_to.html_id }}" onclick="anchorLink('{{ schema.links_to.html_id }}')">Same definition as {{ schema.links_to.link_name }}</a>
     {%- elif schema.refers_to -%}
-        {{ content(schema.refers_to_merged, description) }}
+        {{ content(schema.refers_to_merged, True) }}
     {%- else -%}
         {# Handle having oneOf or allOf with only one condition #}
         {%- if schema.kw_all_of and (schema.kw_all_of.array_items | length) == 1 -%}
-            {%  include "section_description.html" %}
             {{ content(schema.kw_all_of.array_items[0]) }}
         {%- elif schema.kw_any_of and (schema.kw_any_of.array_items | length) == 1 -%}
-            {%  include "section_description.html" %}
             {{ content(schema.kw_any_of.array_items[0]) }}
         {%- else -%}
-            {# Resolve type #}
-            {%- set type_name = schema | get_type_name -%}
-
-            {# Display type #}
-            {%- if not schema is combining -%}
-                <span class="badge badge-dark value-type">Type: {{ type_name }}</span>
-            {%- endif -%}
-            {%-  set default_value = schema | get_default -%}
-            {%- if default_value -%}
-                {{ " " }}<span class="badge badge-success default-value">Default: {{ default_value }}</span>
-            {%- endif -%}
-
             {%- if schema.kw_additional_properties and schema.kw_additional_properties.literal == False -%}
                 {{ " " }}<span class="badge badge-info no-additional">No Additional Properties</span>
             {%- endif -%}
-
-            {%  include "section_description.html" %}
 
             {# Combining: allOf, anyOf, oneOf, not #}
             {%- if schema.kw_all_of -%}

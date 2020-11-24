@@ -9,7 +9,7 @@ from dataclasses import dataclass
 from datetime import datetime
 from json import JSONDecodeError
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional, Set, TextIO, Type, Union, cast
+from typing import Any, Dict, Iterable, List, Optional, Set, TextIO, Tuple, Type, Union, cast
 
 import click
 import htmlmin
@@ -123,6 +123,7 @@ class SchemaNode:
         literal: Union[str, int, bool] = None,
         keywords: Dict[str, Union["SchemaNode", str, List[str]]] = None,
         array_items: List["SchemaNode"] = None,
+        links_to: "SchemaNode" = None,
         refers_to: "SchemaNode" = None,
         is_displayed: bool = True,
     ):
@@ -163,6 +164,7 @@ class SchemaNode:
                         Useful for things like description, types, const, enum, etc.
         :param keywords: If the schema is a dict, this will be filled. Otherwise, this stays empty
         :param array_items: If the schema is an array, this will be filled. Otherwise, this stays empty
+        :param links_to: If the same node is documented elsewhere, the other SchemaNode that documents it
         :param refers_to: If there is a $ref, this should contain the SchemaNode object for it
         :param is_displayed: Instructs the templates if this part should be fully documented.
                              If false, the description and a link to the referenced element will be generated instead.
@@ -178,6 +180,7 @@ class SchemaNode:
         self.literal = literal
         self.keywords = keywords or {}
         self.array_items = array_items or []
+        self.links_to = links_to
         self.refers_to = refers_to
         self.is_displayed = is_displayed
         self._refers_to_merged = None
@@ -258,11 +261,22 @@ class SchemaNode:
 
     @property
     def default_value(self) -> Optional[Any]:
-        possible_default = self.keywords.get(DEFAULT)
-        if not possible_default:
-            return None
-        if isinstance(possible_default, SchemaNode) and possible_default.is_a_property_node:
-            return None
+        def _default_value(node: SchemaNode) -> Optional[Any]:
+            default = node.keywords.get(DEFAULT)
+            if isinstance(default, SchemaNode) and default.is_a_property_node:
+                return None
+            return default
+
+        seen = set()
+        current_node = self
+        possible_default = _default_value(current_node)
+        while not possible_default and current_node.refers_to:
+            if current_node in seen:
+                break
+            seen.add(current_node)
+            current_node = current_node.refers_to
+            possible_default = _default_value(current_node)
+
         return possible_default
 
     @property
@@ -286,10 +300,17 @@ class SchemaNode:
             return None
 
         merged_node = copy.copy(self.refers_to)
-        merged_node.keywords.update(self.keywords)
-        self._refers_to_merged = merged_node
+        merged_node.keywords = {k: copy.copy(v) for k, v in self.refers_to.keywords.items()}
+        merged_node.array_items = [copy.copy(i) for i in self.refers_to.array_items]
 
-        return self._refers_to_merged
+        merged_node.keywords.update({k: copy.copy(v) for k, v in self.keywords.items()})
+        merged_node.array_items += [copy.copy(i) for i in self.array_items]
+
+        return merged_node
+
+        # self._refers_to_merged = merged_node
+
+        # return self._refers_to_merged
 
     def get_keyword(self, keyword: str) -> Optional["SchemaNode"]:
         """Get the value of a keyword if present and it is not a property (to avoid conflicts with properties being
@@ -415,11 +436,30 @@ class SchemaNode:
             return "Additional Properties"
         return self.parent_key
 
+    @property
+    def type_name(self) -> str:
+        name = get_type_name(self)
+
+        if name:
+            return name
+
+        seen = set()
+        current_node = self
+        while not name and current_node.refers_to:
+            if current_node in seen:
+                break
+            seen.add(current_node)
+            referenced_schema = current_node.refers_to
+            name = get_type_name(referenced_schema)
+            current_node = referenced_schema
+
+        return name or TYPE_OBJECT
+
     def should_be_a_link(self, config: GenerationConfiguration) -> bool:
         """Check if this node should be displayed as a link to another section of the schema in the context of
         the provided configuration.
         """
-        if not self.refers_to or self.is_displayed:
+        if not self.links_to or self.is_displayed:
             return False
 
         if config.link_to_reused_ref:
@@ -437,7 +477,7 @@ class SchemaNode:
         if self in circular_references:
             return circular_references[self]
 
-        if not self.refers_to:
+        if not self.links_to:
             circular_references[self] = False
             return False
 
@@ -450,7 +490,7 @@ class SchemaNode:
             return True
 
         iteration_count = 0
-        to_check = {self.refers_to}
+        to_check = {self.links_to}
         while to_check and iteration_count < config.recursive_detection_depth:
             for node_to_check in to_check:
                 # If the node reached via reference, keywords, or array items is the node itself, we have a circular
@@ -465,8 +505,8 @@ class SchemaNode:
 
             new_to_check: Set[SchemaNode] = set()
             for node_to_check in to_check:
-                if node_to_check.refers_to:
-                    new_to_check.add(node_to_check.refers_to)
+                if node_to_check.links_to:
+                    new_to_check.add(node_to_check.links_to)
                 new_to_check = new_to_check.union(
                     set(n for n in node_to_check.keywords.values() if isinstance(n, SchemaNode))
                 )
@@ -531,22 +571,41 @@ def build_intermediate_representation(
         """Record that the node is describing the schema at the provided path"""
         resolved_references[schema_real_path]["/".join(str(e) for e in path_to_element)] = current_node
 
-    def _resolve_ref(current_node: SchemaNode, schema: Union[Dict, List, int, str]) -> Optional[SchemaNode]:
+    def _resolve_ref(
+        current_node: SchemaNode, schema: Union[Dict, List, int, str]
+    ) -> Tuple[Optional[SchemaNode], Optional[SchemaNode]]:
         """Resolve the $ref keyword
 
-        If there is no $ref, return None.
-        If there is a referenced element that was never encountered before, build that element and return it.
-        If there is a referenced element that was already encountered, return it.
+        2 values are returned:
+         - The "links_to" value, which is the node to which the current node should point to. This is used when several
+           nodes have the same reference.
 
-        This method also makes sure that the final element to be fully documented is the one that is the less nested
-        so that the information is closer to the user.
+           This value cannot be under #/definitions, since those are not displayed.
+
+           If properties a and b both references #/definitions/common, only a will be documented and b will link to a.
+           In that case, the method would return the tuple (a, common).
+
+           This method makes sure that the final element to be fully documented is the one that is the less nested so
+           that the information is closer to the user.
+           If properties a/b and c both references #/definitions/common, then a/b will link to c (c, common) and c will
+           refer to common directly (None, common)
+        - The "refers_to" value which is where the definition is in the schema.
+
+        In general:
+        - If there is no $ref, return (None, None).
+        - If there is a referenced element that was never encountered before, build that element and return it for both
+          "links_to" and "refers_to".
+        - If there is a referenced element that was already encountered:
+          - Check for circular references, if there are, return (None, None)
+          - Check if another built node references the same one. If that node is closer to the user, "links_to" will be
+            that node. Otherwise "links_to" is the same as "refers_to". "refers_to" is the reference that was found.
         """
         if not isinstance(schema, Dict) or REF not in schema:
-            return None
+            return None, None
 
         reference_path = schema.get(REF)
         if not reference_path:
-            return None
+            return None, None
 
         # Reference found, resolve the path (format "#/a/b/c", "file.json#/a/b/c", or "file.json")
         if "#" not in reference_path:
@@ -588,7 +647,7 @@ def build_intermediate_representation(
                 for found_user in found_users:
                     if found_user == current_node:
                         # Huh oh, this node refers to the current node, let's break the cycle!
-                        return None
+                        return None, None
                     ref_by_file = found_user.file
                     ref_by_path = found_user.flat_path
                     found_users_for_this = reference_users.get(ref_by_file, {}).get(ref_by_path)
@@ -631,33 +690,34 @@ def build_intermediate_representation(
                     # We mark the current node as being hidden and linking to the other one
                     other_user.is_displayed = True
                     current_node.is_displayed = False
-                    return other_user
+                    return other_user, found_reference
                 elif i_am_better:
                     # The other referencing node is more nested, it should be hidden and link to the current node
                     # The current node will documented the element referenced by both
                     other_user.is_displayed = False
-                    other_user.refers_to = current_node
+                    other_user.links_to = current_node
                     current_node.is_displayed = True
-                    return found_reference
+                    return found_reference, found_reference
                 elif other_user and other_user.refers_to:
                     # Both nodes are the same depth. The other having been seen first,
                     # this node will be hidden and linked to the other node
                     current_node.is_displayed = False
-                    return other_user
+                    return other_user, found_reference
 
-            return found_reference
+            return found_reference, found_reference
         else:
             reference_users[referenced_schema_path][anchor_part].append(current_node)
 
         # Not an existing reference, so it shall be built
         referenced_schema_path_to_element = anchor_part.split("/")
-        return _build_node(
+        new_reference = _build_node(
             current_node.depth,
             current_node.html_id,
             referenced_schema_path,
             referenced_schema_path_to_element,
             _load_schema(referenced_schema_path, referenced_schema_path_to_element),
         )
+        return new_reference, new_reference
 
     def _load_schema(schema_uri: str, path_to_element: List[Union[str, int]]) -> Union[Dict, List, int, str]:
         """Load the schema at the provided path or URL.
@@ -797,7 +857,7 @@ def build_intermediate_representation(
         else:
             new_node.literal = schema
 
-        new_node.refers_to = _resolve_ref(new_node, schema)
+        new_node.links_to, new_node.refers_to = _resolve_ref(new_node, schema)
 
         return new_node
 
@@ -871,7 +931,7 @@ def python_to_json(value: Any) -> Any:
     return value
 
 
-def get_type_name(schema_node: SchemaNode) -> str:
+def get_type_name(schema_node: SchemaNode) -> Optional[str]:
     """Filter. Return the type of a property taking into account the type of items for array and enum"""
 
     def _python_type_to_json_type(python_type: Type[Union[str, int, float, bool, list, dict]]) -> str:
@@ -926,7 +986,7 @@ def get_type_name(schema_node: SchemaNode) -> str:
         else:
             type_names = [type_node.literal]
     else:
-        type_names = [TYPE_OBJECT]
+        return None
 
     type_names = [_add_subtype_if_array(type_name) for type_name in type_names]
 
@@ -942,9 +1002,9 @@ def _get_description(schema_node: SchemaNode) -> str:
     seen = set()
     current_node = schema_node
     while not description and current_node.refers_to:
-        if current_node.html_id in seen:
+        if current_node in seen:
             break
-        seen.add(current_node.html_id)
+        seen.add(current_node)
         referenced_schema = current_node.refers_to
         referenced_description_node = referenced_schema.keywords.get(DESCRIPTION)
         if referenced_description_node:

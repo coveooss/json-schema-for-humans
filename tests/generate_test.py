@@ -1,10 +1,11 @@
 import os
 import tempfile
 
+import pytest
 from bs4 import BeautifulSoup
 
-from json_schema_for_humans.generate import generate_from_file_object
 import tests.html_schema_doc_asserts
+from json_schema_for_humans.generate import generate_from_file_object
 from tests.test_utils import generate_case
 
 
@@ -91,8 +92,12 @@ def test_references() -> None:
             "string",  # anchor_no_slash items
             "string",  # anchor_nested_reference
             "string",  # same_file_anchor_with_slash
+            "object",  # same_file_anchor_no_slash
+            "string",  # same_file_nested_reference
             "object",  # other_file_anchor
-            "boolean",  # with_wrap
+            "boolean",  # other_file_anchor -> with_wrap
+            "object",  # other_file_dot_anchor
+            "object",  # other_file_dot_dot_anchor
             "object",  # other_file_only
             "string",  # not_a_string, not
             "object",  # multi_hierarchy_reference
@@ -213,7 +218,7 @@ def test_with_definitions():
         soup,
         ["billing_address", "street_address", "city", "state", "shipping_address"],
     )
-    tests.html_schema_doc_asserts.assert_types(soup, ["object", "object", "string", "string", "string"])
+    tests.html_schema_doc_asserts.assert_types(soup, ["object", "object", "string", "string", "string", "object"])
     tests.html_schema_doc_asserts.assert_required(soup, [False, True, True, True, False])
 
 
@@ -428,7 +433,7 @@ def test_yaml() -> None:
         soup,
         ["billing_address", "street_address", "city", "state", "shipping_address"],
     )
-    tests.html_schema_doc_asserts.assert_types(soup, ["object", "object", "string", "string", "string"])
+    tests.html_schema_doc_asserts.assert_types(soup, ["object", "object", "string", "string", "string", "object"])
     tests.html_schema_doc_asserts.assert_required(soup, [False, True, True, True, False])
 
 
@@ -476,8 +481,8 @@ def test_ref_merge() -> None:
     tests.html_schema_doc_asserts.assert_property_names(soup, ["aProperty", "aDictPropertyARequired", "a", "b"])
     tests.html_schema_doc_asserts.assert_default_values(soup, ['"Default from property"', '{"a": "a", "b": "b"}'])
     tests.html_schema_doc_asserts.assert_enum_values(soup, [['"value1"', '"value2"']])
-    # a and b are required from the definition, but only a is next to the $ref
-    tests.html_schema_doc_asserts.assert_required(soup, [False, False, True, False])
+    # a and b are required from the definition
+    tests.html_schema_doc_asserts.assert_required(soup, [False, False, True, True])
 
 
 def test_circular_reference() -> None:
@@ -488,6 +493,17 @@ def test_circular_reference() -> None:
     tests.html_schema_doc_asserts.assert_property_names(soup, ["person", "a1"])
     tests.html_schema_doc_asserts.assert_descriptions(soup, ["Description from b"])
     tests.html_schema_doc_asserts.assert_default_values(soup, ['"Default from c"'])
+
+
+@pytest.mark.parametrize("link_to_reused_ref", [True, False])
+def test_defaults_with_merge(link_to_reused_ref: bool) -> None:
+    """Test default values being displayed correctly when they come from a common ref"""
+    soup = generate_case("defaults", link_to_reused_ref=link_to_reused_ref)
+
+    tests.html_schema_doc_asserts.assert_types(soup, ["object", "object", "object"])
+    tests.html_schema_doc_asserts.assert_descriptions(soup, ["Description of a", "A common description"])
+    tests.html_schema_doc_asserts.assert_property_names(soup, ["a", "b"])
+    tests.html_schema_doc_asserts.assert_default_values(soup, ['"Default from a"', '"Default from b"'])
 
 
 # TODO: test for uniqueItems

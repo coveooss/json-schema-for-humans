@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "a": {
+      "$ref": "#/definitions/common",
+      "description": "Description of a",
+      "default": "Default from a"
+     } ,
+    "b": {
+      "$ref": "#/definitions/common",
+      "default": "Default from b"
+     }
+  },
+  "definitions": {
+    "common": {
+      "description": "A common description"
+    }
+  }
+}
