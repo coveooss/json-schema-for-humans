@@ -621,6 +621,8 @@ def build_intermediate_representation(
                 referenced_schema_path = uri_part
             else:
                 referenced_schema_path = os.path.realpath(os.path.join(os.path.dirname(current_node.file), uri_part))
+        elif current_node.file.startswith("http"):
+            referenced_schema_path = current_node.file
         else:
             referenced_schema_path = os.path.realpath(current_node.file)
 
@@ -779,7 +781,8 @@ def build_intermediate_representation(
         :param schema: The JSON schema part being represented
         :return: A representation of the schema
         """
-        schema_file_path = os.path.realpath(schema_file_path)
+        if not schema_file_path.startswith("http"):
+            schema_file_path = os.path.realpath(schema_file_path)
 
         new_node = SchemaNode(
             depth,

@@ -116,6 +116,14 @@ def test_references_url() -> None:
     tests.html_schema_doc_asserts.assert_types(soup, ["object", "string"])
 
 
+def test_references_url_two_levels() -> None:
+    """Test rendering a schema with references as URL"""
+
+    soup = generate_case("references_url_two_levels")
+
+    tests.html_schema_doc_asserts.assert_descriptions(soup, ["Testing $ref of a remote $ref"] + ["a filled string"] * 2)
+
+
 def test_references_url_yaml() -> None:
     """Test rendering a schema with references as URL pointing to a YAML file"""
 
