@@ -1,0 +1,11 @@
+{
+  "$id": "https://example.com/arrays.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Testing $ref of a remote $ref",
+  "type": "object",
+  "properties": {
+    "described": {
+      "$ref": "https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/tests/cases/description_from_ref.json"
+    }
+  }
+}
