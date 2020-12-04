@@ -1,7 +1,7 @@
 
 {# Display description #}
 {%- if description -%}
-    {%- if description is description_short -%}
+    {%- if not config.collapse_long_descriptions or description is description_short -%}
         <span class="description">{{ description | markdown }}</span>
     {%- else -%}
         <div class="description collapse" id="collapseDescription_{{ schema.html_id }}">

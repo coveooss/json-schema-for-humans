@@ -3,7 +3,7 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-from json_schema_for_humans.generate import generate_from_schema
+from json_schema_for_humans.generate import generate_from_schema, GenerationConfiguration
 
 
 def assert_css_and_js_not_copied(path: Path) -> None:
@@ -27,19 +27,9 @@ def get_test_case_path(name: str) -> str:
     return os.path.realpath(os.path.join(os.path.dirname(__file__), "cases", f"{name}.json"))
 
 
-def generate_case(
-    case_name: str, find_deprecated: bool = False, find_default: bool = False, link_to_reused_ref: bool = True
-) -> BeautifulSoup:
+def generate_case(case_name: str, config: GenerationConfiguration = None) -> BeautifulSoup:
     """Get the BeautifulSoup object for a test case"""
     return BeautifulSoup(
-        generate_from_schema(
-            get_test_case_path(case_name),
-            None,
-            False,
-            find_deprecated,
-            find_default,
-            True,
-            link_to_reused_ref=link_to_reused_ref,
-        ),
+        generate_from_schema(get_test_case_path(case_name), None, config=config),
         "html.parser",
     )

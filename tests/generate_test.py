@@ -5,7 +5,7 @@ import pytest
 from bs4 import BeautifulSoup
 
 import tests.html_schema_doc_asserts
-from json_schema_for_humans.generate import generate_from_file_object
+from json_schema_for_humans.generate import generate_from_file_object, GenerationConfiguration
 from tests.test_utils import generate_case
 
 
@@ -279,7 +279,7 @@ def test_with_default() -> None:
 
 def test_deprecated_in_description() -> None:
     """Test finding whether a property is deprecated from its description"""
-    soup = generate_case("deprecated", find_deprecated=True)
+    soup = generate_case("deprecated", GenerationConfiguration(deprecated_from_description=True))
 
     tests.html_schema_doc_asserts.assert_property_names(soup, ["deprecated1", "deprecated2", "not_deprecated"])
     tests.html_schema_doc_asserts.assert_deprecated(soup, [True, True, False])
@@ -287,13 +287,13 @@ def test_deprecated_in_description() -> None:
 
 def test_deprecated_not_in_description() -> None:
     """Test that the deprecated badge does not get added if the option to get deprecated from description is disabled"""
-    soup = generate_case("deprecated", find_deprecated=False)
+    soup = generate_case("deprecated", GenerationConfiguration(deprecated_from_description=False))
 
     tests.html_schema_doc_asserts.assert_deprecated(soup, [False] * 3)
 
 
 def test_with_special_chars() -> None:
-    soup = generate_case("with_special_chars", find_deprecated=False)
+    soup = generate_case("with_special_chars", GenerationConfiguration(deprecated_from_description=False))
 
     tests.html_schema_doc_asserts.assert_property_names(soup, ["prénom", "nomDeFamille", "âge", "0 de quoi d'autre"])
 
@@ -325,7 +325,7 @@ def test_description_from_ref() -> None:
 
 def test_description_with_ref_link_to_reused_ref() -> None:
     """Same as "test_description_with_ref", but do not allow reusing references."""
-    soup = generate_case("description_with_ref", link_to_reused_ref=False)
+    soup = generate_case("description_with_ref", GenerationConfiguration(link_to_reused_ref=False))
 
     tests.html_schema_doc_asserts.assert_descriptions(
         soup, ["We should see this", "inner description", "We should see this too", "inner description"]
@@ -506,12 +506,24 @@ def test_circular_reference() -> None:
 @pytest.mark.parametrize("link_to_reused_ref", [True, False])
 def test_defaults_with_merge(link_to_reused_ref: bool) -> None:
     """Test default values being displayed correctly when they come from a common ref"""
-    soup = generate_case("defaults", link_to_reused_ref=link_to_reused_ref)
+    soup = generate_case("defaults", GenerationConfiguration(link_to_reused_ref=link_to_reused_ref))
 
     tests.html_schema_doc_asserts.assert_types(soup, ["object", "object", "object"])
     tests.html_schema_doc_asserts.assert_descriptions(soup, ["Description of a", "A common description"])
     tests.html_schema_doc_asserts.assert_property_names(soup, ["a", "b"])
     tests.html_schema_doc_asserts.assert_default_values(soup, ['"Default from a"', '"Default from b"'])
+
+
+@pytest.mark.parametrize("collapse", [True, False])
+def test_long_description(collapse: bool) -> None:
+    soup = generate_case("long_description", GenerationConfiguration(collapse_long_descriptions=collapse))
+
+    read_more = soup.find("a", href="#collapseDescription_it_s_hard_to_explain")
+
+    if collapse:
+        assert read_more
+    else:
+        assert not read_more
 
 
 # TODO: test for uniqueItems

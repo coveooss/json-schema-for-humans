@@ -98,6 +98,7 @@ class GenerationConfiguration:
     description_is_markdown: bool = True
     deprecated_from_description: bool = False
     show_breadcrumbs: bool = True
+    collapse_long_descriptions: bool = True
     default_from_description: bool = False
     expand_buttons: bool = False
     copy_css: bool = True
