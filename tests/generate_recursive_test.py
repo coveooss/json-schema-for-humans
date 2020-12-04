@@ -1,8 +1,8 @@
 import pytest
 
-from generate import GenerationConfiguration
-from tests.test_utils import generate_case
+from json_schema_for_humans.generate import GenerationConfiguration
 from tests.html_schema_doc_asserts import assert_descriptions, assert_ref_link, get_ref_link
+from tests.test_utils import generate_case
 
 
 @pytest.mark.parametrize("link_to_reused_ref", [True, False])
