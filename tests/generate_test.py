@@ -258,13 +258,13 @@ def test_combining_not():
     """Test rendering of the not schema attribute"""
     soup = generate_case("combining_not")
 
-    definitions = soup.find_all(class_="property-definition-div")
-    assert len(definitions) == 1
+    not_value = soup.find_all(class_="not-value")
+    assert len(not_value) == 1
 
-    assert definitions[0].text.lstrip().startswith("Must not be:")
+    assert not_value[0].text.lstrip().startswith("Must not be:")
 
 
-def test_combining_anyOf_option_names():
+def test_combining_any_of_option_names():
     soup = generate_case("anyOf_option_names")
 
     tests.html_schema_doc_asserts.assert_any_of_options_names(soup, ["diskDevice", "diskUUID", "Option 3", "tmpfs"])

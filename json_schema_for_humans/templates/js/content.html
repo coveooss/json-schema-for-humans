@@ -11,6 +11,10 @@
     {%- set type_name = schema.type_name -%}
 
     {% if not skip_headers %}
+        {%- if config.show_breadcrumbs -%}
+            {%- include "breadcrumbs.html" -%}
+        {%- endif -%}
+
         {# Display type #}
         {%- if not schema is combining -%}
             <span class="badge badge-dark value-type">Type: {{ type_name }}</span>
@@ -24,12 +28,12 @@
         <br/>
 
         {%- set description = (schema | get_description) -%}
-        {%  include "section_description.html" %}
+        {%- include "section_description.html" -%}
     {%- endif -%}
 
 
     {%- if schema.should_be_a_link(config) -%}
-        <a href="#{{ schema.links_to.html_id }}" onclick="anchorLink('{{ schema.links_to.html_id }}')">Same definition as {{ schema.links_to.link_name }}</a>
+        <a href="#{{ schema.links_to.html_id }}" onclick="anchorLink('{{ schema.links_to.html_id }}')" class="ref-link">Same definition as {{ schema.links_to.link_name }}</a>
     {%- elif schema.refers_to -%}
         {{ content(schema.refers_to_merged, True) }}
     {%- else -%}

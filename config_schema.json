@@ -19,6 +19,11 @@
       "default": false,
       "description": "Add an `Expand all` and a `Collapse all` button at the top of the generated documentation"
     },
+    "show_breadcrumbs": {
+      "type": "boolean",
+      "default": true,
+      "description": "For each property, show the relative place of that property in the schema."
+    },
     "link_to_reused_ref": {
       "type": "boolean",
       "default": true,

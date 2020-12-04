@@ -66,6 +66,7 @@ body {
 .badge {
     font-size: 100%;
 	margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 .badge.value-type,.badge.no-additional,.badge.default-value {

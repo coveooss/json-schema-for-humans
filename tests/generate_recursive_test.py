@@ -1,7 +1,7 @@
 import pytest
 
 from tests.test_utils import generate_case
-from tests.html_schema_doc_asserts import assert_descriptions
+from tests.html_schema_doc_asserts import assert_descriptions, assert_ref_link, get_ref_link
 
 
 @pytest.mark.parametrize("link_to_reused_ref", [True, False])
@@ -14,9 +14,7 @@ def test_recursive(link_to_reused_ref: bool) -> None:
 
     assert_descriptions(soup, ["A human being", "The children they had", "A human being"])
 
-    recursive_definition_link = soup.find("a", href="#person")
-    assert recursive_definition_link
-    assert recursive_definition_link.text == "Same definition as person"
+    assert_ref_link(soup, "#person", "Same definition as person")
 
 
 def test_recursive_array() -> None:
@@ -25,9 +23,7 @@ def test_recursive_array() -> None:
 
     assert_descriptions(soup, ["A list of people", "A human being", "The children they had", "A human being"])
 
-    recursive_definition_link = soup.find("a", href="#person_items")
-    assert recursive_definition_link
-    assert recursive_definition_link.text == "Same definition as person"
+    assert_ref_link(soup, "#person_items", "Same definition as person")
 
 
 @pytest.mark.parametrize("link_to_reused_ref", [True, False])
@@ -45,9 +41,7 @@ def test_recursive_two_files(link_to_reused_ref: bool) -> None:
         ],
     )
 
-    recursive_definition_link = soup.find("a", href="#person_siblings")
     if link_to_reused_ref:
-        assert recursive_definition_link
-        assert recursive_definition_link.text == "Same definition as siblings"
+        assert_ref_link(soup, "#person_siblings", "Same definition as siblings")
     else:
-        assert not recursive_definition_link
+        assert not get_ref_link(soup, "#person_siblings")

@@ -9,7 +9,7 @@ from dataclasses import dataclass
 from datetime import datetime
 from json import JSONDecodeError
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional, Set, TextIO, Tuple, Type, Union, cast
+from typing import Any, Dict, Iterable, List, Optional, Set, TextIO, Tuple, Type, Union, cast, Iterator
 
 import click
 import htmlmin
@@ -97,6 +97,7 @@ class GenerationConfiguration:
     minify: bool = True
     description_is_markdown: bool = True
     deprecated_from_description: bool = False
+    show_breadcrumbs: bool = True
     default_from_description: bool = False
     expand_buttons: bool = False
     copy_css: bool = True
@@ -117,6 +118,8 @@ class SchemaNode:
         file: str,
         path_to_element: List[Union[str, int]],
         html_id: str,
+        breadcrumb_name: str = "",
+        is_properties: bool = False,
         ref_path="",
         parent: "SchemaNode" = None,
         parent_key: str = None,
@@ -174,6 +177,8 @@ class SchemaNode:
         self.file = file
         self.path_to_element = path_to_element
         self.html_id = html_id or "_".join(path_to_element) or "root"
+        self.breadcrumb_name = breadcrumb_name
+        self.is_properties = is_properties
         self.parent = parent
         self.parent_key = parent_key
         self.ref_path = ref_path
@@ -200,6 +205,10 @@ class SchemaNode:
     def link_name(self) -> str:
         """The text to display when linking to this node from somewhere else in the schema"""
         return self.definition_name or self.html_id
+
+    @property
+    def name_for_breadcrumbs(self) -> str:
+        return self.definition_name or self.breadcrumb_name
 
     @property
     def is_property(self) -> bool:
@@ -247,6 +256,22 @@ class SchemaNode:
     @property
     def is_required_property(self) -> bool:
         return self.parent and self.property_name in self.parent.required_properties
+
+    @property
+    def nodes_from_root(self) -> Iterator["SchemaNode"]:
+        """The list of nodes to reach this node"""
+        nodes: List["SchemaNode"] = [self]
+        current_node = self
+        while current_node.parent:
+            if not current_node.is_properties:
+                nodes.append(current_node.parent)
+            current_node = current_node.parent
+
+        if len(nodes) == 1:
+            # Don't want to display "root" alone at the root
+            return []
+
+        return reversed(nodes)
 
     @property
     def path_to_property(self) -> str:
@@ -715,9 +740,13 @@ def build_intermediate_representation(
         new_reference = _build_node(
             current_node.depth,
             current_node.html_id,
+            current_node.breadcrumb_name,
+            current_node.is_properties,
             referenced_schema_path,
             referenced_schema_path_to_element,
             _load_schema(referenced_schema_path, referenced_schema_path_to_element),
+            current_node.parent,
+            current_node.parent_key,
         )
         return new_reference, new_reference
 
@@ -765,6 +794,8 @@ def build_intermediate_representation(
     def _build_node(
         depth: int,
         html_id: str,
+        breadcrumb_name: str,
+        is_properties: bool,
         schema_file_path: str,
         path_to_element: List[Union[str, int]],
         schema: Union[Dict, List, int, str],
@@ -776,6 +807,9 @@ def build_intermediate_representation(
         :param depth: Number of levels from the root of the schema to this node. Used when there are references to
                       figure out the less nested one in order to display it.
         :param html_id: HTML ID for the current element. Used for anchor links.
+        :param breadcrumb_name: Name of the node in the breadcrumbs
+        :param is_properties: Whether the node is representing properties and thus should not be
+                              displayed in the breadcrumbs
         :param schema_file_path: Real path to the schema (absolute path with symlinks resolved)
         :param path_to_element: Path from the root of the schema to the current element
         :param schema: The JSON schema part being represented
@@ -789,6 +823,8 @@ def build_intermediate_representation(
             file=schema_file_path,
             path_to_element=path_to_element,
             html_id=html_id,
+            breadcrumb_name=breadcrumb_name,
+            is_properties=is_properties,
             parent=parent,
             parent_key=parent_key,
             ref_path=_get_node_ref(schema),
@@ -801,7 +837,9 @@ def build_intermediate_representation(
         if isinstance(schema, dict):
             keywords = {}
             pattern_id = 1
-            is_property = parent_key in [KW_PROPERTIES, KW_PATTERN_PROPERTIES]
+            # This cannot be a property node is the parent is also a property
+            # (you can have a property named "properties")
+            is_property = parent_key in [KW_PROPERTIES, KW_PATTERN_PROPERTIES] and not is_properties
             for schema_key, schema_value in schema.items():
                 # These won't be needed to render the documentation.
                 # The definitions will be reached from references, otherwise they are useless
@@ -837,6 +875,8 @@ def build_intermediate_representation(
                 keywords[schema_key] = _build_node(
                     new_depth,
                     new_html_id,
+                    schema_key,
+                    is_property,
                     schema_file_path,
                     copy.deepcopy(path_to_element) + [schema_key],
                     schema_value,
@@ -852,7 +892,14 @@ def build_intermediate_representation(
 
                 array_items.append(
                     _build_node(
-                        depth + 1, new_html_id, schema_file_path, path_to_element + [i], element, parent=new_node
+                        depth + 1,
+                        new_html_id,
+                        f"item {i}",
+                        False,
+                        schema_file_path,
+                        path_to_element + [i],
+                        element,
+                        parent=new_node,
                     )
                 )
             new_node.array_items = array_items
@@ -864,7 +911,7 @@ def build_intermediate_representation(
 
         return new_node
 
-    intermediate_representation = _build_node(0, "", schema_path, [], _load_schema(schema_path, []))
+    intermediate_representation = _build_node(0, "", "root", False, schema_path, [], _load_schema(schema_path, []))
 
     return intermediate_representation
 
@@ -1383,9 +1430,9 @@ def _apply_config_cli_parameters(
                 pass
         else:
             parameter_name = parameter
-            if parameter_name.startswith("no_"):
+            if parameter_name.startswith("no_") or parameter_name.startswith("no-"):
                 parameter_value = False
-                parameter_name = parameter_name[3:]  # Strip the `no_`
+                parameter_name = parameter_name[3:]  # Strip the `no_`/`no-`
             else:
                 parameter_value = True
         current_configuration_as_dict[parameter_name] = parameter_value

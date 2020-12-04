@@ -1,6 +1,6 @@
-from typing import List
+from typing import List, Optional
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 
 
 def assert_soup_results_text(soup: BeautifulSoup, class_name: str, texts: List[str]) -> None:
@@ -95,3 +95,14 @@ def assert_basic_case(soup: BeautifulSoup) -> None:
     assert_title(soup, "Person")
     assert_numeric_restrictions(soup, ["Value must be greater or equal to 0"])
     assert_required(soup, [False] * 3)
+
+
+def get_ref_link(soup: BeautifulSoup, ref_html_id: str) -> Optional[Tag]:
+    """Get a link for a reused ref that redirects to a specified HTML id"""
+    return soup.find("a", href=ref_html_id, class_="ref-link")
+
+
+def assert_ref_link(soup: BeautifulSoup, ref_link_name: str, expected_text: str) -> None:
+    ref_link = get_ref_link(soup, ref_link_name)
+    assert ref_link
+    assert ref_link.text == expected_text
