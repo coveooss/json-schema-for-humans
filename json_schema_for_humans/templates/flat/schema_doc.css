@@ -92,6 +92,10 @@ body {
 	padding: 1rem !important;
 }
 
+.examples pre {
+    margin-bottom: 0;
+}
+
 .highlight.jumbotron {
     padding: 1rem !important;
 }
