@@ -43,7 +43,7 @@
         {%- elif schema.kw_any_of and (schema.kw_any_of.array_items | length) == 1 -%}
             {{ content(schema.kw_any_of.array_items[0]) }}
         {%- else -%}
-            {%- if schema.kw_additional_properties and schema.kw_additional_properties.literal == False -%}
+            {%- if schema.explicit_no_additional_properties -%}
                 {{ " " }}<span class="badge badge-info no-additional">No Additional Properties</span>
             {%- endif -%}
 

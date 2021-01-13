@@ -120,7 +120,6 @@ class SchemaNode:
         path_to_element: List[Union[str, int]],
         html_id: str,
         breadcrumb_name: str = "",
-        is_properties: bool = False,
         ref_path="",
         parent: "SchemaNode" = None,
         parent_key: str = None,
@@ -179,7 +178,6 @@ class SchemaNode:
         self.path_to_element = path_to_element
         self.html_id = html_id or "_".join(path_to_element) or "root"
         self.breadcrumb_name = breadcrumb_name
-        self.is_properties = is_properties
         self.parent = parent
         self.parent_key = parent_key
         self.ref_path = ref_path
@@ -190,12 +188,27 @@ class SchemaNode:
         self.refers_to = refers_to
         self.is_displayed = is_displayed
         self._refers_to_merged = None
+        self.properties: Dict[str, "SchemaNode"] = {}
+        self.additional_properties: Optional["SchemaNode"] = None
+        # If True, it means additionalProperties is there and false. If False, additionalProperties is either not set
+        # or is set but is not false (depends on self.additional_properties)
+        self.no_additional_properties: bool = False
+        self.pattern_properties: Dict[str, "SchemaNode"] = {}
+
+    @property
+    def explicit_no_additional_properties(self) -> bool:
+        """Return True if additionalProperties is set and false (to differentiate from not set)"""
+        return (
+            (self.properties or self.pattern_properties)
+            and self.no_additional_properties
+            and not self.additional_properties
+        )
 
     @property
     def definition_name(self) -> str:
         """The text to display when this node is the title of a section or tab"""
-        if self.is_property and self.parent_key:
-            return self.parent_key
+        if self.is_property and self.property_name:
+            return self.property_name
         if self.title:
             return self.title
         if self.ref_path:
@@ -213,11 +226,11 @@ class SchemaNode:
 
     @property
     def is_property(self) -> bool:
-        return bool(self.parent and self.parent.parent_key == KW_PROPERTIES)
+        return bool(self.parent and self.property_name in self.parent.properties.keys())
 
     @property
     def is_pattern_property(self) -> bool:
-        return bool(self.parent and self.parent.parent_key == KW_PATTERN_PROPERTIES)
+        return bool(self.parent and self.property_name in self.parent.pattern_properties.keys())
 
     @property
     def is_additional_properties(self) -> bool:
@@ -233,22 +246,19 @@ class SchemaNode:
 
     @property
     def iterate_properties(self) -> Iterable["SchemaNode"]:
-        if self.kw_properties:
-            yield from self.kw_properties.keywords.values()
+        if self.properties:
+            yield from self.properties.values()
 
-        if self.kw_pattern_properties:
-            yield from self.kw_pattern_properties.keywords.values()
+        if self.pattern_properties:
+            yield from self.pattern_properties.values()
 
-        if self.kw_additional_properties is not None and self.kw_additional_properties.literal is not False:
-            yield self.kw_additional_properties
+        if self.additional_properties:
+            yield self.additional_properties
 
     @property
     def required_properties(self) -> List[str]:
         """The required properties for this node"""
-        if not self.parent:
-            return []
-
-        required_properties = self.parent.kw_required
+        required_properties = self.kw_required
         if not required_properties:
             return []
 
@@ -256,6 +266,7 @@ class SchemaNode:
 
     @property
     def is_required_property(self) -> bool:
+        """Check if the current node represents a property and that this property is required by its parent"""
         return self.parent and self.property_name in self.parent.required_properties
 
     @property
@@ -264,8 +275,7 @@ class SchemaNode:
         nodes: List["SchemaNode"] = [self]
         current_node = self
         while current_node.parent:
-            if not current_node.is_properties:
-                nodes.append(current_node.parent)
+            nodes.append(current_node.parent)
             current_node = current_node.parent
 
         if len(nodes) == 1:
@@ -493,6 +503,18 @@ class SchemaNode:
 
         return self.has_circular_reference(config)
 
+    def node_is_parent(self, node_to_check: "SchemaNode") -> bool:
+        """Check if the provided node is a parent of the current node"""
+        if self.file != node_to_check.file:
+            return False
+
+        for i, path_part in enumerate(node_to_check.path_to_element):
+            if len(self.path_to_element) <= i:
+                return False
+            if self.path_to_element[i] != path_part:
+                return False
+        return True
+
     def has_circular_reference(self, config: GenerationConfiguration) -> bool:
         """Check if the current schema is a reference to another section that references the current schema.
 
@@ -507,14 +529,6 @@ class SchemaNode:
             circular_references[self] = False
             return False
 
-        def _path_is_parent(checked_path: List[Union[int, str]], parent_path: List[Union[str, int]]) -> bool:
-            for i, path_part in enumerate(parent_path):
-                if len(checked_path) <= i:
-                    return False
-                if checked_path[i] != path_part:
-                    return False
-            return True
-
         iteration_count = 0
         to_check = {self.links_to}
         while to_check and iteration_count < config.recursive_detection_depth:
@@ -522,10 +536,7 @@ class SchemaNode:
                 # If the node reached via reference, keywords, or array items is the node itself, we have a circular
                 # reference.
                 # We also check if the path is for a parent to save on cycles
-                if node_to_check == self or (
-                    node_to_check.file == self.file
-                    and _path_is_parent(self.path_to_element, node_to_check.path_to_element)
-                ):
+                if node_to_check == self or self.node_is_parent(node_to_check):
                     circular_references[self] = True
                     return True
 
@@ -742,7 +753,6 @@ def build_intermediate_representation(
             current_node.depth,
             current_node.html_id,
             current_node.breadcrumb_name,
-            current_node.is_properties,
             referenced_schema_path,
             referenced_schema_path_to_element,
             _load_schema(referenced_schema_path, referenced_schema_path_to_element),
@@ -796,7 +806,6 @@ def build_intermediate_representation(
         depth: int,
         html_id: str,
         breadcrumb_name: str,
-        is_properties: bool,
         schema_file_path: str,
         path_to_element: List[Union[str, int]],
         schema: Union[Dict, List, int, str],
@@ -809,8 +818,6 @@ def build_intermediate_representation(
                       figure out the less nested one in order to display it.
         :param html_id: HTML ID for the current element. Used for anchor links.
         :param breadcrumb_name: Name of the node in the breadcrumbs
-        :param is_properties: Whether the node is representing properties and thus should not be
-                              displayed in the breadcrumbs
         :param schema_file_path: Real path to the schema (absolute path with symlinks resolved)
         :param path_to_element: Path from the root of the schema to the current element
         :param schema: The JSON schema part being represented
@@ -825,7 +832,6 @@ def build_intermediate_representation(
             path_to_element=path_to_element,
             html_id=html_id,
             breadcrumb_name=breadcrumb_name,
-            is_properties=is_properties,
             parent=parent,
             parent_key=parent_key,
             ref_path=_get_node_ref(schema),
@@ -838,18 +844,15 @@ def build_intermediate_representation(
         if isinstance(schema, dict):
             keywords = {}
             pattern_id = 1
-            # This cannot be a property node is the parent is also a property
-            # (you can have a property named "properties")
-            is_property = parent_key in [KW_PROPERTIES, KW_PATTERN_PROPERTIES] and not is_properties
             for schema_key, schema_value in schema.items():
                 # These won't be needed to render the documentation.
                 # The definitions will be reached from references, otherwise they are useless
-                if not is_property and schema_key in ["$id", "$ref", "$schema", "definitions"]:
+                if schema_key in ["$id", "$ref", "$schema", "definitions"]:
                     continue
 
                 # Examples are rendered in JSON because they will be represented that way in the documentation,
                 # no need for a SchemaNode object
-                if not is_property and schema_key == "examples":
+                if schema_key == "examples":
                     keywords[schema_key] = [
                         json.dumps(example, indent=4, separators=(",", ": "), ensure_ascii=False)
                         for example in schema_value
@@ -857,33 +860,81 @@ def build_intermediate_representation(
                     continue
 
                 # The default value will be printed as-is, no need for a SchemaNode object
-                if not is_property and schema_key == "default":
+                if schema_key == "default":
                     keywords[schema_key] = json.dumps(schema_value, ensure_ascii=False)
                     continue
 
-                # Add the property name (correctly escaped) to the ID
-                new_html_id = html_id
-                new_depth = depth
-                if schema_key not in [KW_PROPERTIES, KW_PATTERN_PROPERTIES]:
-                    new_depth += 1
-                    new_html_id += "_" if html_id else ""
-                    if not parent_key == KW_PATTERN_PROPERTIES:
-                        new_html_id += escape_property_name_for_id(schema_key)
+                if schema_key in KW_PROPERTIES:
+                    for new_property_name, new_property_schema in schema_value.items():
+                        new_html_id = html_id
+                        new_html_id += "_" if html_id else ""
+                        new_html_id += escape_property_name_for_id(new_property_name)
+                        new_node.properties[new_property_name] = _build_node(
+                            depth + 1,
+                            new_html_id,
+                            new_property_name,
+                            schema_file_path,
+                            copy.deepcopy(path_to_element) + [new_property_name],
+                            new_property_schema,
+                            new_node,
+                            new_property_name,
+                        )
+                elif schema_key == KW_ADDITIONAL_PROPERTIES:
+                    if schema_value == False:
+                        new_node.no_additional_properties = True
                     else:
+                        new_html_id = html_id
+                        new_html_id += "_" if html_id else ""
+                        new_html_id += KW_ADDITIONAL_PROPERTIES
+                        new_node.additional_properties = _build_node(
+                            depth + 1,
+                            new_html_id,
+                            KW_ADDITIONAL_PROPERTIES,
+                            schema_file_path,
+                            copy.deepcopy(path_to_element) + [KW_ADDITIONAL_PROPERTIES],
+                            schema_value,
+                            new_node,
+                            KW_ADDITIONAL_PROPERTIES,
+                        )
+                elif schema_key == KW_PATTERN_PROPERTIES:
+                    for new_property_name, new_property_schema in schema_value.items():
+                        new_html_id = html_id
+                        new_html_id += "_" if html_id else ""
                         new_html_id += f"pattern{pattern_id}"
                         pattern_id += 1
+                        new_node.pattern_properties[new_property_name] = _build_node(
+                            depth + 1,
+                            new_html_id,
+                            new_property_name,
+                            schema_file_path,
+                            copy.deepcopy(path_to_element) + [new_property_name],
+                            new_property_schema,
+                            new_node,
+                            new_property_name,
+                        )
+                else:
+                    # Add the property name (correctly escaped) to the ID
+                    new_html_id = html_id
+                    new_depth = depth
+                    if schema_key not in [KW_PROPERTIES, KW_PATTERN_PROPERTIES]:
+                        new_depth += 1
+                        new_html_id += "_" if html_id else ""
+                        if not parent_key == KW_PATTERN_PROPERTIES:
+                            new_html_id += escape_property_name_for_id(schema_key)
+                        else:
+                            new_html_id += f"pattern{pattern_id}"
+                            pattern_id += 1
 
-                keywords[schema_key] = _build_node(
-                    new_depth,
-                    new_html_id,
-                    schema_key,
-                    is_property,
-                    schema_file_path,
-                    copy.deepcopy(path_to_element) + [schema_key],
-                    schema_value,
-                    parent=new_node,
-                    parent_key=schema_key,
-                )
+                    keywords[schema_key] = _build_node(
+                        new_depth,
+                        new_html_id,
+                        schema_key,
+                        schema_file_path,
+                        copy.deepcopy(path_to_element) + [schema_key],
+                        schema_value,
+                        parent=new_node,
+                        parent_key=schema_key,
+                    )
             new_node.keywords = keywords
         elif isinstance(schema, list):
             array_items = []
@@ -896,7 +947,6 @@ def build_intermediate_representation(
                         depth + 1,
                         new_html_id,
                         f"item {i}",
-                        False,
                         schema_file_path,
                         path_to_element + [i],
                         element,
@@ -912,7 +962,7 @@ def build_intermediate_representation(
 
         return new_node
 
-    intermediate_representation = _build_node(0, "", "root", False, schema_path, [], _load_schema(schema_path, []))
+    intermediate_representation = _build_node(0, "", "root", schema_path, [], _load_schema(schema_path, []))
 
     return intermediate_representation
 
@@ -951,17 +1001,7 @@ def get_required_properties(schema_node: SchemaNode) -> List[str]:
 
 
 def get_undocumented_required_properties(schema_node: SchemaNode) -> List[str]:
-    required_properties = get_required_properties(schema_node)
-
-    documented_properties = schema_node.keywords.get(KW_PROPERTIES)
-    documented_properties = documented_properties.keywords.keys() if documented_properties else []
-
-    undocumented = []
-    for property_name in required_properties:
-        if property_name not in documented_properties:
-            undocumented.append(property_name)
-
-    return undocumented
+    return list(set(get_required_properties(schema_node)).difference(schema_node.properties.keys()))
 
 
 def python_to_json(value: Any) -> Any:
