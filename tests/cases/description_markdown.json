@@ -1,0 +1,5 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Delivery Schema",
+  "description": "DOC \n* List 1\n* List 2\n"
+}

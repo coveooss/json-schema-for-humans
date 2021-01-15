@@ -5,7 +5,7 @@ import os
 import re
 import shutil
 from collections import defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime
 from json import JSONDecodeError
 from pathlib import Path
@@ -106,6 +106,13 @@ class GenerationConfiguration:
     link_to_reused_ref: bool = True
     recursive_detection_depth: int = 25
     template_name: str = "js"
+    # markdown2 extra parameters can be added here: https://github.com/trentm/python-markdown2/wiki/Extras
+    markdown_options: Any = field(
+        default_factory=lambda: {
+            "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
+            "tables": None,
+        }
+    )
 
 
 class SchemaNode:
@@ -1251,7 +1258,7 @@ def generate_from_schema(
     template_folder = os.path.join(os.path.dirname(__file__), TEMPLATE_FOLDER, config.template_name)
     base_template_path = os.path.join(template_folder, TEMPLATE_FILE_NAME)
 
-    md = markdown2.Markdown(extras={"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": None})
+    md = markdown2.Markdown(extras=config.markdown_options)
     loader = FileSystemLoader(template_folder)
     env = jinja2.Environment(loader=loader)
     env.filters["markdown"] = (

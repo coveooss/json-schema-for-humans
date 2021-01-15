@@ -331,7 +331,20 @@ def test_description_with_ref_link_to_reused_ref() -> None:
         soup, ["We should see this", "inner description", "We should see this too", "inner description"]
     )
 
+def test_description_markdown_with_default_options() -> None:
+    """Override default options """
+    soup = generate_case("description_markdown", GenerationConfiguration())
 
+    assert soup.find("span", class_="description").p.string == "DOC * List 1 * List 2"
+
+def test_description_markdown_with_custom_options() -> None:
+    """Same as "test_description_markdown_with_default_options" but with option to render list """
+    soup = generate_case("description_markdown", GenerationConfiguration(
+        markdown_options = {"break-on-newline": True, "cuddled-lists": True, 
+    }))
+    
+    assert str(soup.find("span", class_="description")) == """<span class="description"><p>DOC </p> <ul> <li>List 1</li> <li>List 2</li> </ul> </span>"""
+ 
 def test_with_examples() -> None:
     soup = generate_case("with_examples")
 

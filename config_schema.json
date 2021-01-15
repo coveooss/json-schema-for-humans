@@ -64,6 +64,22 @@
       "enum": ["flat", "js"],
       "default": "js",
       "description": "The HTML templates to use to render the documentation.\n\n`js` is the default one, it uses javascript for anchor links, collapsible sections and tabs. `flat` uses no javascript, but has no interactivity."
+    },
+    "markdown_options": {
+      "type": "object",
+      "default": {
+        "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
+        "tables": null
+      },
+      "description": "ability to set [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras)",
+      "examples": [
+        {
+          "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
+          "tables": null,
+          "break-on-newline": true,
+          "cuddled-lists": true
+        } 
+      ]
     }
   }
 }
