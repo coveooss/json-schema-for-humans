@@ -526,5 +526,26 @@ def test_long_description(collapse: bool) -> None:
         assert not read_more
 
 
+def test_break_on_newline() -> None:
+    soup = generate_case("break_on_newline")
+    elements = soup.find_all(class_="description")
+    assert len(elements) == 1
+    description_elements = elements[0].contents[0].contents
+    assert len(description_elements) == 3
+    assert description_elements[1].name == "br"
+
+    tests.html_schema_doc_asserts.assert_descriptions(soup, ["Line1 Line2"])
+
+
+def test_break_on_newline_disabled() -> None:
+    soup = generate_case("break_on_newline", config=GenerationConfiguration(break_on_newline=False))
+    elements = soup.find_all(class_="description")
+    assert len(elements) == 1
+    description_elements = elements[0].contents[0].contents
+    assert len(description_elements) == 1
+
+    tests.html_schema_doc_asserts.assert_descriptions(soup, ["Line1 Line2"])
+
+
 # TODO: test for uniqueItems
 # TODO: test for contains

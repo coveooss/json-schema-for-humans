@@ -106,6 +106,7 @@ class GenerationConfiguration:
     link_to_reused_ref: bool = True
     recursive_detection_depth: int = 25
     template_name: str = "js"
+    break_on_newline: bool = True
 
 
 class SchemaNode:
@@ -198,7 +199,7 @@ class SchemaNode:
     @property
     def explicit_no_additional_properties(self) -> bool:
         """Return True if additionalProperties is set and false (to differentiate from not set)"""
-        return (
+        return bool(
             (self.properties or self.pattern_properties)
             and self.no_additional_properties
             and not self.additional_properties
@@ -1251,7 +1252,10 @@ def generate_from_schema(
     template_folder = os.path.join(os.path.dirname(__file__), TEMPLATE_FOLDER, config.template_name)
     base_template_path = os.path.join(template_folder, TEMPLATE_FILE_NAME)
 
-    md = markdown2.Markdown(extras={"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": None})
+    md_extras = {"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": None}
+    if config.break_on_newline:
+        md_extras["break-on-newline"] = None
+    md = markdown2.Markdown(extras=md_extras)
     loader = FileSystemLoader(template_folder)
     env = jinja2.Environment(loader=loader)
     env.filters["markdown"] = (
