@@ -71,7 +71,7 @@
         "fenced-code-blocks": {"break-on-newline": true, "cssclass": "highlight jumbotron", "tables": null},
         "tables": null
       },
-      "description": "ability to set [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras)",
+      "description": "[Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for the descriptions. `description_is_markdown` must be true for this to have any effect.",
       "examples": [
         {
           "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
