@@ -1217,7 +1217,7 @@ def get_numeric_restrictions_text(schema_node: SchemaNode, before_value: str = "
 def escape_property_name_for_id(property_name: str) -> str:
     """Filter. Escape unsafe characters in a property name so that it can be used in a HTML id"""
 
-    escaped = re.sub("[^0-9a-zA-Z_,.-]", "_", str(property_name))
+    escaped = re.sub("[^0-9a-zA-Z_,-]", "_", str(property_name))
     if not escaped[0].isalpha():
         escaped = "a" + escaped
     return escaped
