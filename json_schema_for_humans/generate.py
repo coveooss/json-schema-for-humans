@@ -108,10 +108,7 @@ class GenerationConfiguration:
     template_name: str = "js"
     # markdown2 extra parameters can be added here: https://github.com/trentm/python-markdown2/wiki/Extras
     markdown_options: Any = field(
-        default_factory=lambda: {
-            "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
-            "tables": None,
-        }
+        default_factory=lambda: {"break-on-newline": True, "cssclass": "highlight jumbotron", "tables": None}
     )
 
 

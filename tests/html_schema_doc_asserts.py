@@ -2,6 +2,7 @@ from typing import List, Optional
 
 from bs4 import BeautifulSoup, Tag
 
+
 def assert_soup_results_text(soup: BeautifulSoup, class_name: str, texts: List[str]) -> None:
     """Assert that all the HTML elements with the provided class found in the schema has the supplied text
 
@@ -13,6 +14,7 @@ def assert_soup_results_text(soup: BeautifulSoup, class_name: str, texts: List[s
 
     for i, element in enumerate(elements):
         assert element.text.strip() == texts[i]
+
 
 def assert_property_names(soup: BeautifulSoup, property_names: List[str]) -> None:
     assert_soup_results_text(soup, "property-name", property_names)

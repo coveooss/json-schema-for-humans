@@ -331,20 +331,34 @@ def test_description_with_ref_link_to_reused_ref() -> None:
         soup, ["We should see this", "inner description", "We should see this too", "inner description"]
     )
 
+
 def test_description_markdown_with_default_options() -> None:
     """Override default options """
     soup = generate_case("description_markdown", GenerationConfiguration())
 
-    assert soup.find("span", class_="description").p.string == "DOC * List 1 * List 2"
+    assert (
+        str(soup.find("span", class_="description"))
+        == '<span class="description"><p>DOC<br/> * List 1<br/> * List 2</p> </span>'
+    )
+
 
 def test_description_markdown_with_custom_options() -> None:
     """Same as "test_description_markdown_with_default_options" but with option to render list """
-    soup = generate_case("description_markdown", GenerationConfiguration(
-        markdown_options = {"break-on-newline": True, "cuddled-lists": True, 
-    }))
-    
-    assert str(soup.find("span", class_="description")) == """<span class="description"><p>DOC </p> <ul> <li>List 1</li> <li>List 2</li> </ul> </span>"""
- 
+    soup = generate_case(
+        "description_markdown",
+        GenerationConfiguration(
+            markdown_options={
+                "cuddled-lists": True,
+            }
+        ),
+    )
+
+    assert (
+        str(soup.find("span", class_="description"))
+        == """<span class="description"><p>DOC </p> <ul> <li>List 1</li> <li>List 2</li> </ul> </span>"""
+    )
+
+
 def test_with_examples() -> None:
     soup = generate_case("with_examples")
 
@@ -537,27 +551,6 @@ def test_long_description(collapse: bool) -> None:
         assert read_more
     else:
         assert not read_more
-
-
-def test_break_on_newline() -> None:
-    soup = generate_case("break_on_newline")
-    elements = soup.find_all(class_="description")
-    assert len(elements) == 1
-    description_elements = elements[0].contents[0].contents
-    assert len(description_elements) == 3
-    assert description_elements[1].name == "br"
-
-    tests.html_schema_doc_asserts.assert_descriptions(soup, ["Line1 Line2"])
-
-
-def test_break_on_newline_disabled() -> None:
-    soup = generate_case("break_on_newline", config=GenerationConfiguration(break_on_newline=False))
-    elements = soup.find_all(class_="description")
-    assert len(elements) == 1
-    description_elements = elements[0].contents[0].contents
-    assert len(description_elements) == 1
-
-    tests.html_schema_doc_asserts.assert_descriptions(soup, ["Line1 Line2"])
 
 
 # TODO: test for uniqueItems
