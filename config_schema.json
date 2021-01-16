@@ -14,6 +14,11 @@
       "default": true,
       "description": "Whether to consider the description as markdown and render it accordingly"
     },
+    "break_on_newline": {
+      "type": "boolean",
+      "default": true,
+      "description": "When description is markdown, replace `\\n` by `<br/>`"
+    },
     "expand_buttons": {
       "type": "boolean",
       "default": false,

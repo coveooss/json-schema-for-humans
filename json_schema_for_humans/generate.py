@@ -205,7 +205,7 @@ class SchemaNode:
     @property
     def explicit_no_additional_properties(self) -> bool:
         """Return True if additionalProperties is set and false (to differentiate from not set)"""
-        return (
+        return bool(
             (self.properties or self.pattern_properties)
             and self.no_additional_properties
             and not self.additional_properties
