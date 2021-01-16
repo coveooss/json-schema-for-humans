@@ -14,11 +14,6 @@
       "default": true,
       "description": "Whether to consider the description as markdown and render it accordingly"
     },
-    "break_on_newline": {
-      "type": "boolean",
-      "default": true,
-      "description": "When description is markdown, replace `\\n` by `<br/>`"
-    },
     "expand_buttons": {
       "type": "boolean",
       "default": false,
@@ -69,6 +64,22 @@
       "enum": ["flat", "js"],
       "default": "js",
       "description": "The HTML templates to use to render the documentation.\n\n`js` is the default one, it uses javascript for anchor links, collapsible sections and tabs. `flat` uses no javascript, but has no interactivity."
+    },
+    "markdown_options": {
+      "type": "object",
+      "default": {
+        "fenced-code-blocks": {"break-on-newline": true, "cssclass": "highlight jumbotron", "tables": null},
+        "tables": null
+      },
+      "description": "ability to set [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras)",
+      "examples": [
+        {
+          "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
+          "tables": null,
+          "break-on-newline": true,
+          "cuddled-lists": true
+        } 
+      ]
     }
   }
 }
