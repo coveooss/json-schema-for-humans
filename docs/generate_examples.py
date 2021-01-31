@@ -4,6 +4,15 @@ import os
 import shutil
 import sys
 
+templateName="js"
+if len( sys.argv ) >= 2:
+    print(sys.argv)
+    templateName=sys.argv[1]
+
+templateExtension="html"
+if templateName == 'md':
+    templateExtension="md"
+
 sys.path.insert(0, os.path.abspath(".."))
 
 from json_schema_for_humans.generate import generate_from_filename, GenerationConfiguration
@@ -13,7 +22,7 @@ includes_dir = os.path.join(os.getcwd(), "_includes")
 json_examples_dir = os.path.join(os.getcwd(), "_includes", "examples")
 os.makedirs(json_examples_dir, exist_ok=True)
 asserts_dir = os.path.join(os.getcwd(), "assets")
-results_example_dir = os.path.join(asserts_dir, "examples")
+results_example_dir = os.path.join(asserts_dir, f"examples_{templateName}")
 os.makedirs(results_example_dir, exist_ok=True)
 
 
@@ -25,7 +34,7 @@ config_schema = "config_schema.json"
 config_schema_location = os.path.abspath(os.path.join(os.path.dirname(os.getcwd()), config_schema))
 generate_from_filename(config_schema_location, os.path.join(asserts_dir, "config_schema.html"), expand_buttons=True)
 
-config = GenerationConfiguration(deprecated_from_description=True, expand_buttons=True)
+config = GenerationConfiguration(deprecated_from_description=True, expand_buttons=True, template_name=templateName)
 
 for case_name in os.listdir(cases_source_dir):
     name, ext = os.path.splitext(case_name)
@@ -33,8 +42,6 @@ for case_name in os.listdir(cases_source_dir):
     if not os.path.isfile(case_source) or ext != ".json":
         continue
 
-    shutil.copyfile(case_source, os.path.join(json_examples_dir, case_name))
-
     print(f"Generating example {name}")
 
-    generate_from_filename(case_source, os.path.join(results_example_dir, f"{name}.html"), config=config)
+    generate_from_filename(case_source, os.path.join(results_example_dir, f"{name}.{templateExtension}"), config=config)
