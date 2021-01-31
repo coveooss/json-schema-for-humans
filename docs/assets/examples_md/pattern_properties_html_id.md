@@ -16,5 +16,74 @@ Type: `object`
 
 Type: `object`
 
+### <a name="not_a_pattern_pattern1"></a> 1.1. Pattern Property `.$`
+  > All property whose name matches the following regular expression must respect the following conditions
+    Property name regular expression: 
+  [`.$`](https://regex101.com/?regex=.$
+
+**Description**:  Description 4
+  > All property whose name matches the following regular expression must respect the following conditions
+    Property name regular expression: 
+  [`.$`](https://regex101.com/?regex=.$
+
+      Person
+ >   not_a_pattern
+ >   Title 4
+
+Type: `object`
+
+**Description:** Description 4
+
+## <a name="pattern1"></a> 2. Pattern Property `.*`
+  > All property whose name matches the following regular expression must respect the following conditions
+    Property name regular expression: 
+  [`.*`](https://regex101.com/?regex=.*
+
+**Description**:  Description 1
+  > All property whose name matches the following regular expression must respect the following conditions
+    Property name regular expression: 
+  [`.*`](https://regex101.com/?regex=.*
+
+      Person
+ >   Title 1
+
+Type: `object`
+
+**Description:** Description 1
+
+## <a name="pattern2"></a> 3. Pattern Property `..`
+  > All property whose name matches the following regular expression must respect the following conditions
+    Property name regular expression: 
+  [`..`](https://regex101.com/?regex=..
+
+**Description**:  Description 2
+  > All property whose name matches the following regular expression must respect the following conditions
+    Property name regular expression: 
+  [`..`](https://regex101.com/?regex=..
+
+      Person
+ >   Title 2
+
+Type: `object`
+
+**Description:** Description 2
+
+## <a name="pattern3"></a> 4. Pattern Property `^.`
+  > All property whose name matches the following regular expression must respect the following conditions
+    Property name regular expression: 
+  [`^.`](https://regex101.com/?regex=^.
+
+**Description**:  Description 3
+  > All property whose name matches the following regular expression must respect the following conditions
+    Property name regular expression: 
+  [`^.`](https://regex101.com/?regex=^.
+
+      Person
+ >   Title 3
+
+Type: `object`
+
+**Description:** Description 3
+
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:00:08 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:30:22 +0100

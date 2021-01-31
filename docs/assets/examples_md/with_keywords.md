@@ -15,7 +15,29 @@ Type: `object`
 | [properties](#properties)|No|object|No|No| No|properties|
 | [patternProperties](#patternProperties)|No|object|No|No| No|patternProperties|
 
-## <a name="if"></a> 1. Property `if`
+## <a name="default"></a> 1. Property `default`
+
+**Description**:  default
+
+      Person
+ >   default
+
+Type: `string`
+
+**Description:** default
+
+## <a name="examples"></a> 2. Property `examples`
+
+**Description**:  examples
+
+      Person
+ >   examples
+
+Type: `string`
+
+**Description:** examples
+
+## <a name="if"></a> 3. Property `if`
 
 **Description**:  if
 
@@ -26,7 +48,7 @@ Type: `object`
 
 **Description:** if
 
-## <a name="then"></a> 2. Property `then`
+## <a name="then"></a> 4. Property `then`
 
 **Description**:  then
 
@@ -37,7 +59,7 @@ Type: `object`
 
 **Description:** then
 
-## <a name="else"></a> 3. Property `else`
+## <a name="else"></a> 5. Property `else`
 
 **Description**:  else
 
@@ -48,7 +70,7 @@ Type: `object`
 
 **Description:** else
 
-## <a name="anyOf"></a> 4. Property `anyOf`
+## <a name="anyOf"></a> 6. Property `anyOf`
 
 **Description**:  anyOf
 
@@ -59,7 +81,7 @@ Type: `object`
 
 **Description:** anyOf
 
-## <a name="allOf"></a> 5. Property `allOf`
+## <a name="allOf"></a> 7. Property `allOf`
 
 **Description**:  allOf
 
@@ -70,7 +92,7 @@ Type: `object`
 
 **Description:** allOf
 
-## <a name="not"></a> 6. Property `not`
+## <a name="not"></a> 8. Property `not`
 
 **Description**:  not
 
@@ -81,7 +103,7 @@ Type: `object`
 
 **Description:** not
 
-## <a name="properties"></a> 7. Property `properties`
+## <a name="properties"></a> 9. Property `properties`
 
 **Description**:  properties
 
@@ -92,7 +114,7 @@ Type: `object`
 
 **Description:** properties
 
-## <a name="patternProperties"></a> 8. Property `patternProperties`
+## <a name="patternProperties"></a> 10. Property `patternProperties`
 
 **Description**:  patternProperties
 
@@ -104,4 +126,4 @@ Type: `object`
 **Description:** patternProperties
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:00:05 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:30:19 +0100

@@ -17,5 +17,18 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 |a1|No|string|No|No| No|Description from b|
 
+### <a name="person_a1"></a> 1.1. Property `a1`
+
+**Description**:  Description from b
+
+      Circular reference Schema
+ >   person
+ >   a1
+
+Type: `string`
+             Default: `"Default from c"`
+
+**Description:** Description from b
+
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:00:06 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:30:20 +0100

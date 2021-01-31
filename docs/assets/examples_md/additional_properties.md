@@ -24,6 +24,14 @@ Type: `object`
 |subProp1|No|number|No|No| No||
 `No Additional Properties`
 
+### <a name="subType1_subProp1"></a> 1.1. Property `subProp1`
+
+      Person
+ >   subType1
+ >   subProp1
+
+Type: `number`
+
 ## <a name="subType2"></a> 2. Property `subType2`
 
 **Description**:  A sub type with additionalProperties true.
@@ -40,7 +48,15 @@ Type: `object`
 |subProp2|No|number|No|No| No||
 | [additionalProperties](#subType2_additionalProperties)|No|object|No|No|  [![made-with-Markdown](https://img.shields.io/badge/Any%20type+allowed-green)](# "Additional Properties of any type are allowed.")||
 
-### <a name="subType2_additionalProperties"></a> 2.1. Property `additionalProperties`
+### <a name="subType2_subProp2"></a> 2.1. Property `subProp2`
+
+      Person
+ >   subType2
+ >   subProp2
+
+Type: `number`
+
+### <a name="subType2_additionalProperties"></a> 2.2. Property `additionalProperties`
 
       Person
  >   subType2
@@ -63,5 +79,13 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 |propA|No|number|No|No| No||
 
+### <a name="additionalProperties_propA"></a> 3.1. Property `propA`
+
+      Person
+ >   additionalProperties
+ >   propA
+
+Type: `number`
+
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:00:08 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:30:22 +0100

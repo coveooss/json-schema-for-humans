@@ -25,6 +25,30 @@ Type: `object`
 |city|No|string|Yes|No| No||
 |state|No|string|Yes|No| No||
 
+### <a name="shipping_address_street_address"></a> 1.1. Property `street_address`
+
+      Delivery Schema
+ >   shipping_address
+ >   street_address
+
+Type: `string`
+
+### <a name="shipping_address_city"></a> 1.2. Property `city`
+
+      Delivery Schema
+ >   shipping_address
+ >   city
+
+Type: `string`
+
+### <a name="shipping_address_state"></a> 1.3. Property `state`
+
+      Delivery Schema
+ >   shipping_address
+ >   state
+
+Type: `string`
+
 ## <a name="billing_address"></a> 2. Property `billing_address`
 
 **Description**:  Exact address
@@ -68,6 +92,16 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 |price|No|number|No|No| No||
 
+## <a name="delivery_info_oneOf_i0_price"></a> 1. Property `price`
+
+      Delivery Schema
+ >   delivery_info
+ >   oneOf
+ >   item 0
+ >   price
+
+Type: `number`
+
         </div>
     </div>
     <div class="card">
@@ -86,9 +120,19 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 |with_wrap|No|boolean|No|No| No||
 
+## <a name="delivery_info_oneOf_i1_with_wrap"></a> 1. Property `with_wrap`
+
+      Delivery Schema
+ >   delivery_info
+ >   oneOf
+ >   item 1
+ >   with_wrap
+
+Type: `boolean`
+
         </div>
     </div>
 ](delivery_info_oneOf)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:00:06 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:30:20 +0100

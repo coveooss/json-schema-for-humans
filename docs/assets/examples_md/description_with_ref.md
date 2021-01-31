@@ -24,6 +24,18 @@ Type: `object`
 |inner|No|string|Yes|No| No|inner description|
 `No Additional Properties`
 
+### <a name="outer_inner"></a> 1.1. Property `inner`
+
+**Description**:  inner description
+
+      root
+ >   outer
+ >   inner
+
+Type: `string`
+
+**Description:** inner description
+
 ## <a name="outer2"></a> 2. Property `outer2`
 
 **Description**:  We should see this too
@@ -37,4 +49,4 @@ Type: `object`
         Same definition as [outer](#outer)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:00:06 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:30:20 +0100

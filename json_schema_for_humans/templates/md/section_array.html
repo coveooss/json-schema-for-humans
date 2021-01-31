@@ -9,9 +9,9 @@
 {% endif %}
 {% if schema.kw_items %}
 #### Each item of this array must be
-{{ content(schema.kw_items) }}
+{{ content(schema.kw_items, base_level=base_level, level=level, depth=depth) }}
 {% endif %}
 {% if schema.kw_contains and schema.kw_contains.literal != {} %}
 #### At least one of the items must be
-{{ content(schema.kw_contains) }}
+{{ content(schema.kw_contains, base_level=base_level, level=level, depth=depth) }}
 {% endif %}

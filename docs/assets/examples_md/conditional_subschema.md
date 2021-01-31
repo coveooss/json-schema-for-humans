@@ -15,6 +15,16 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 |country|No|const|No|No| No||
 
+## <a name="if_country"></a> 1. Property `country`
+
+      root
+ >   if
+ >   country
+
+Type: `const`
+
+                Specific value: `"United States of America"`
+
 **[Then](#tab-pane_then):**
   root
  >   then
@@ -60,5 +70,23 @@ Type: `object`
 |street_address|No|string|No|No| No||
 |country|No|enum (of string)|No|No| No||
 
+## <a name="street_address"></a> 1. Property `street_address`
+
+      root
+ >   street_address
+
+Type: `string`
+
+## <a name="country"></a> 2. Property `country`
+
+      root
+ >   country
+
+Type: `enum (of string)`
+
+                Must be one of:
+                    * "United States of America"
+                    * "Canada"
+
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:00:05 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:30:19 +0100

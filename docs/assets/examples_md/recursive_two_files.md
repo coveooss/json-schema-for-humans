@@ -22,7 +22,30 @@ Type: `object`
 |children|No|array|No|No| No|The children they had|
 | [siblings](#person_siblings)|No|object|No|No| No|Person definition from second file. Not the same!|
 
-## <a name="person_siblings"></a> 1. Property `siblings`
+### <a name="person_children"></a> 1.1. Property `children`
+
+**Description**:  The children they had
+
+      Person
+ >   person
+ >   children
+
+Type: `array`
+
+**Description:** The children they had
+
+#### Each item of this array must be
+  Person
+ >   person
+ >   children
+ >   person
+
+Type: `object`
+
+**Description:** Person definition from second file. Not the same!
+        Same definition as [siblings](#person_siblings)
+
+### <a name="person_siblings"></a> 1.2. Property `siblings`
 
 **Description**:  Person definition from second file. Not the same!
 
@@ -35,4 +58,4 @@ Type: `object`
 **Description:** Person definition from second file. Not the same!
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:00:04 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:30:18 +0100

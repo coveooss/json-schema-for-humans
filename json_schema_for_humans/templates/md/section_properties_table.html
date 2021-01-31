@@ -35,7 +35,7 @@
 {% endif %}
 
 {# properties details #}
-{% for sub_property in schema.iterate_properties if propertiesDetails[sub_property.property_name] %}
+{% for sub_property in schema.iterate_properties %}
   {% set html_id = sub_property.html_id %}
   {% set title_level = base_level ~ loop.index ~ "." %} 
   {% set property_content =  content(sub_property, base_level=title_level, level=0, depth=depth+1) %}

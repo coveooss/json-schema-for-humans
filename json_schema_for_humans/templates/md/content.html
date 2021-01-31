@@ -33,13 +33,13 @@ Reference [mdFile](mdFile)
     {% if schema.should_be_a_link(config) %}
         Same definition as [{{ schema.links_to.link_name }}](#{{ schema.links_to.html_id }})
     {% elif schema.refers_to %}
-        {{ content(schema.refers_to_merged, True) }}
+        {{ content(schema.refers_to_merged, True, base_level=base_level, level=level, depth=depth) }}
     {% else %}
         {# Handle having oneOf or allOf with only one condition #}
         {% if schema.kw_all_of and (schema.kw_all_of.array_items | length) == 1 %}
-            {{ content(schema.kw_all_of.array_items[0]) }}
+            {{ content(schema.kw_all_of.array_items[0], base_level=base_level, level=level, depth=depth) }}
         {% elif schema.kw_any_of and (schema.kw_any_of.array_items | length) == 1 %}
-            {{ content(schema.kw_any_of.array_items[0]) }}
+            {{ content(schema.kw_any_of.array_items[0], base_level=base_level, level=level, depth=depth) }}
         {% else %}
             {# Combining: allOf, anyOf, oneOf, not #}
             {% if schema.kw_all_of %}
