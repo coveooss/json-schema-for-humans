@@ -25,7 +25,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [postal_code](#then_postal_code)|No|object|No|No| No||
 
-## <a name="then_postal_code"></a>Property `postal_code`
+  ## <a name="then_postal_code"></a>Property `postal_code`
 
       root
  >   then
@@ -45,7 +45,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [postal_code](#else_postal_code)|No|object|No|No| No||
 
-## <a name="else_postal_code"></a>Property `postal_code`
+  ## <a name="else_postal_code"></a>Property `postal_code`
 
       root
  >   else
@@ -61,4 +61,4 @@ Type: `object`
 |country|No|enum (of string)|No|No| No||
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 13:13:13 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 20:34:35 +0100

@@ -19,20 +19,19 @@ Type: `object`
 | [other_file_only](#other_file_only)|No|object|No|No| No|Test schema with a not|
 | [multi_hierarchy_reference](#multi_hierarchy_reference)|No|object|No|No| No||
 
-## <a name="anchor_with_slash"></a>Property `anchor_with_slash`
+  ## <a name="anchor_with_slash"></a>Property `anchor_with_slash`
 
       root
  >   anchor_with_slash
 
 Type: `object`
 
-                 `No Additional Properties`
-
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 |propertyA|No|string|No|No| No|Description for object_def/items/propertyA|
+`No Additional Properties`
 
-## <a name="same_file_anchor_no_slash"></a>Property `same_file_anchor_no_slash`
+  ## <a name="same_file_anchor_no_slash"></a>Property `same_file_anchor_no_slash`
 
       root
  >   same_file_anchor_no_slash
@@ -41,9 +40,9 @@ Type: `object`
 
         Same definition as [anchor_with_slash](#anchor_with_slash)
 
-## <a name="other_file_anchor"></a>Property `other_file_anchor`
+  ## <a name="other_file_anchor"></a>Property `other_file_anchor`
 
-**Description**:The delivery is a gift, no prices displayed
+  **Description**:  The delivery is a gift, no prices displayed
 
       root
  >   other_file_anchor
@@ -56,9 +55,9 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 |with_wrap|No|boolean|No|No| No||
 
-## <a name="other_file_dot_anchor"></a>Property `other_file_dot_anchor`
+  ## <a name="other_file_dot_anchor"></a>Property `other_file_dot_anchor`
 
-**Description**:The delivery is a gift, no prices displayed
+  **Description**:  The delivery is a gift, no prices displayed
 
       root
  >   other_file_dot_anchor
@@ -68,9 +67,9 @@ Type: `object`
 **Description:** The delivery is a gift, no prices displayed
         Same definition as [other_file_anchor](#other_file_anchor)
 
-## <a name="other_file_dot_dot_anchor"></a>Property `other_file_dot_dot_anchor`
+  ## <a name="other_file_dot_dot_anchor"></a>Property `other_file_dot_dot_anchor`
 
-**Description**:The delivery is a gift, no prices displayed
+  **Description**:  The delivery is a gift, no prices displayed
 
       root
  >   other_file_dot_dot_anchor
@@ -80,9 +79,9 @@ Type: `object`
 **Description:** The delivery is a gift, no prices displayed
         Same definition as [other_file_anchor](#other_file_anchor)
 
-## <a name="other_file_only"></a>Property `other_file_only`
+  ## <a name="other_file_only"></a>Property `other_file_only`
 
-**Description**:Test schema with a not
+  **Description**:  Test schema with a not
 
       root
  >   other_file_only
@@ -95,7 +94,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [not_a_string](#other_file_only_not_a_string)|No|object|Yes|No| No||
 
-## <a name="other_file_only_not_a_string"></a>Property `not_a_string`
+  ## <a name="other_file_only_not_a_string"></a>Property `not_a_string`
 
       root
  >   other_file_only
@@ -109,18 +108,17 @@ Type: `object`
 
 Type: `string`
 
-## <a name="multi_hierarchy_reference"></a>Property `multi_hierarchy_reference`
+  ## <a name="multi_hierarchy_reference"></a>Property `multi_hierarchy_reference`
 
       root
  >   multi_hierarchy_reference
 
 Type: `object`
 
-                 `No Additional Properties`
-
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 |propertyA|No|string|No|No| No|Contents of propertyA in final.json|
+`No Additional Properties`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 13:13:14 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 20:34:36 +0100

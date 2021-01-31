@@ -1,7 +1,6 @@
 # Combining at top level
 
 **Description:** For the combine
-
                 [[]
 <a id="oneOf" href="#oneOf">
     <h2 class="handle ml-2 mt-2">
@@ -55,4 +54,4 @@ Type: `object`
 ](oneOf)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 13:13:15 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 20:34:37 +0100

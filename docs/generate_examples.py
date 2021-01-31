@@ -43,5 +43,5 @@ for case_name in os.listdir(cases_source_dir):
         continue
 
     print(f"Generating example {name}")
-
+    #if(name == 'array_advanced'):
     generate_from_filename(case_source, os.path.join(results_example_dir, f"{name}.{templateExtension}"), config=config)

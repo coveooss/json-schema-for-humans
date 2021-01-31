@@ -41,10 +41,6 @@ Reference [mdFile](mdFile)
         {% elif schema.kw_any_of and (schema.kw_any_of.array_items | length) == 1 %}
             {{ content(schema.kw_any_of.array_items[0]) }}
         {% else %}
-            {% if schema.explicit_no_additional_properties %}
-                {{ " " }}`No Additional Properties`
-            {% endif %}
-
             {# Combining: allOf, anyOf, oneOf, not #}
             {% if schema.kw_all_of %}
                 [{{ tabbed_section("allOf", schema.kw_all_of) }}]({{ schema.kw_all_of.html_id }})

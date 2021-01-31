@@ -8,7 +8,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [address](#address)|No|object|No|No| No||
 
-## <a name="address"></a>Property `address`
+  ## <a name="address"></a>Property `address`
 
       root
  >   address
@@ -22,4 +22,4 @@ Type: `object`
 |state|No|string|Yes|No| No||
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 13:13:13 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 20:34:34 +0100

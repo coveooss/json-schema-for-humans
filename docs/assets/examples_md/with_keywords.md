@@ -15,9 +15,9 @@ Type: `object`
 | [properties](#properties)|No|object|No|No| No|properties|
 | [patternProperties](#patternProperties)|No|object|No|No| No|patternProperties|
 
-## <a name="if"></a>Property `if`
+  ## <a name="if"></a>Property `if`
 
-**Description**:if
+  **Description**:  if
 
       Person
  >   if
@@ -26,9 +26,9 @@ Type: `object`
 
 **Description:** if
 
-## <a name="then"></a>Property `then`
+  ## <a name="then"></a>Property `then`
 
-**Description**:then
+  **Description**:  then
 
       Person
  >   then
@@ -37,9 +37,9 @@ Type: `object`
 
 **Description:** then
 
-## <a name="else"></a>Property `else`
+  ## <a name="else"></a>Property `else`
 
-**Description**:else
+  **Description**:  else
 
       Person
  >   else
@@ -48,9 +48,9 @@ Type: `object`
 
 **Description:** else
 
-## <a name="anyOf"></a>Property `anyOf`
+  ## <a name="anyOf"></a>Property `anyOf`
 
-**Description**:anyOf
+  **Description**:  anyOf
 
       Person
  >   anyOf
@@ -59,9 +59,9 @@ Type: `object`
 
 **Description:** anyOf
 
-## <a name="allOf"></a>Property `allOf`
+  ## <a name="allOf"></a>Property `allOf`
 
-**Description**:allOf
+  **Description**:  allOf
 
       Person
  >   allOf
@@ -70,9 +70,9 @@ Type: `object`
 
 **Description:** allOf
 
-## <a name="not"></a>Property `not`
+  ## <a name="not"></a>Property `not`
 
-**Description**:not
+  **Description**:  not
 
       Person
  >   not
@@ -81,9 +81,9 @@ Type: `object`
 
 **Description:** not
 
-## <a name="properties"></a>Property `properties`
+  ## <a name="properties"></a>Property `properties`
 
-**Description**:properties
+  **Description**:  properties
 
       Person
  >   properties
@@ -92,9 +92,9 @@ Type: `object`
 
 **Description:** properties
 
-## <a name="patternProperties"></a>Property `patternProperties`
+  ## <a name="patternProperties"></a>Property `patternProperties`
 
-**Description**:patternProperties
+  **Description**:  patternProperties
 
       Person
  >   patternProperties
@@ -104,4 +104,4 @@ Type: `object`
 **Description:** patternProperties
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 13:13:13 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 20:34:35 +0100

@@ -6,9 +6,9 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [relationships](#relationships)|No|object|No|No| No|Relationships between this person and others|
 
-## <a name="relationships"></a>Property `relationships`
+  ## <a name="relationships"></a>Property `relationships`
 
-**Description**:Relationships between this person and others
+  **Description**:  Relationships between this person and others
 
       Person
  >   relationships
@@ -21,9 +21,9 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [mother](#relationships_mother)|No|object|No|No| No|A human being|
 
-## <a name="relationships_mother"></a>Property `mother`
+  ## <a name="relationships_mother"></a>Property `mother`
 
-**Description**:A human being
+  **Description**:  A human being
 
       Person
  >   relationships
@@ -37,9 +37,9 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [relationships](#relationships_mother_relationships)|No|object|No|No| No|Relationships between this person and others|
 
-## <a name="relationships_mother_relationships"></a>Property `relationships`
+  ## <a name="relationships_mother_relationships"></a>Property `relationships`
 
-**Description**:Relationships between this person and others
+  **Description**:  Relationships between this person and others
 
       Person
  >   relationships
@@ -54,9 +54,9 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [mother](#relationships_mother_relationships_mother)|No|object|No|No| No|A human being|
 
-## <a name="relationships_mother_relationships_mother"></a>Property `mother`
+  ## <a name="relationships_mother_relationships_mother"></a>Property `mother`
 
-**Description**:A human being
+  **Description**:  A human being
 
       Person
  >   relationships
@@ -70,4 +70,4 @@ Type: `object`
         Same definition as [mother](#relationships_mother)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 13:13:15 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 20:34:37 +0100

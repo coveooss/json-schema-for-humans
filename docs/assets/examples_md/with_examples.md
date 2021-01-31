@@ -9,9 +9,9 @@ Type: `object`
 |age|No|integer|No|No| No|Age in years which must be equal to or greater than zero.|
 | [moreInfo](#moreInfo)|No|object|No|No| No|Any more info you want as an object|
 
-## <a name="moreInfo"></a>Property `moreInfo`
+  ## <a name="moreInfo"></a>Property `moreInfo`
 
-**Description**:Any more info you want as an object
+  **Description**:  Any more info you want as an object
 
       Person
  >   moreInfo
@@ -33,4 +33,4 @@ Type: `object`
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 13:13:12 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 20:34:34 +0100
