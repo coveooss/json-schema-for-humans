@@ -42,7 +42,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [postal_code](#allOf_i0_then_postal_code)|No|object|No|No| No||
 
-  ## <a name="allOf_i0_then_postal_code"></a>Property `postal_code`
+## <a name="allOf_i0_then_postal_code"></a> 1. Property `postal_code`
 
       root
  >   allOf
@@ -92,7 +92,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [postal_code](#allOf_i1_then_postal_code)|No|object|No|No| No||
 
-  ## <a name="allOf_i1_then_postal_code"></a>Property `postal_code`
+## <a name="allOf_i1_then_postal_code"></a> 1. Property `postal_code`
 
       root
  >   allOf
@@ -142,7 +142,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [postal_code](#allOf_i2_then_postal_code)|No|object|No|No| No||
 
-  ## <a name="allOf_i2_then_postal_code"></a>Property `postal_code`
+## <a name="allOf_i2_then_postal_code"></a> 1. Property `postal_code`
 
       root
  >   allOf
@@ -164,4 +164,4 @@ Type: `object`
 |country|No|enum (of string)|No|No| No||
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 20:34:36 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:00:07 +0100

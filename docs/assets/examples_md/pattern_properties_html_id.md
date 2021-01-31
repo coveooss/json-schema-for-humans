@@ -9,7 +9,7 @@ Type: `object`
 |..|Yes|object|No|No| No|Description 2|
 |^.|Yes|object|No|No| No|Description 3|
 
-  ## <a name="not_a_pattern"></a>Property `not_a_pattern`
+## <a name="not_a_pattern"></a> 1. Property `not_a_pattern`
 
       Person
  >   not_a_pattern
@@ -17,4 +17,4 @@ Type: `object`
 Type: `object`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 20:34:38 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:00:08 +0100

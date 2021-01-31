@@ -7,7 +7,7 @@ Type: `object`
 | [billing_address](#billing_address)|No|object|No|No| No||
 | [shipping_address](#shipping_address)|No|object|No|No| No||
 
-  ## <a name="billing_address"></a>Property `billing_address`
+## <a name="billing_address"></a> 1. Property `billing_address`
 
       root
  >   billing_address
@@ -20,7 +20,7 @@ Type: `object`
 |city|No|string|Yes|No| No||
 |state|No|string|Yes|No| No||
 
-  ## <a name="shipping_address"></a>Property `shipping_address`
+## <a name="shipping_address"></a> 2. Property `shipping_address`
 
       root
  >   shipping_address
@@ -30,4 +30,4 @@ Type: `object`
         Same definition as [billing_address](#billing_address)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 20:34:35 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:00:06 +0100

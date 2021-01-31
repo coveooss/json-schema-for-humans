@@ -10,9 +10,9 @@ Type: `object`
 | [deprecated2](#deprecated2)|No|object|No|No| No|[Deprecated - Use \`not_deprecated\` instead]|
 |not_deprecated|No|string|No|No| No||
 
-  ## <a name="deprecated1"></a>Property `deprecated1`
+## <a name="deprecated1"></a> 1. Property `deprecated1`
 
-  **Description**:  [Deprecated]
+**Description**:  [Deprecated]
 
       root
  >   deprecated1
@@ -21,9 +21,9 @@ Type: `object`
 
 **Description:** [Deprecated]
 
-  ## <a name="deprecated2"></a>Property `deprecated2`
+## <a name="deprecated2"></a> 2. Property `deprecated2`
 
-  **Description**:  [Deprecated - Use `not_deprecated` instead]
+**Description**:  [Deprecated - Use `not_deprecated` instead]
 
       root
  >   deprecated2
@@ -33,4 +33,4 @@ Type: `object`
 **Description:** [Deprecated - Use `not_deprecated` instead]
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 20:34:38 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:00:08 +0100

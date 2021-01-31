@@ -15,6 +15,7 @@ import click
 import htmlmin
 import jinja2
 import markdown2
+from marshmallow.fields import Number
 from . import jinja_write_file_extension
 import requests
 import yaml
@@ -1237,6 +1238,9 @@ def is_multi_line(example_text: str) -> str:
     first_line = example_text.partition("\n")
     return (first_line[1] == "\n")
 
+def repeat_str(example_text: str, count: Number) -> str:
+    """Filter. return str repeated count times """
+    return example_text * count
 
 def highlight_json_example(example_text: str) -> str:
     """Filter. Return an highlighted version of the provided JSON text"""
@@ -1295,6 +1299,7 @@ def generate_from_schema(
     env.filters["escape_for_md"] = escape_for_md
     env.filters["first_line"] = first_line
     env.filters["is_multi_line"] = is_multi_line
+    env.filters["repeat_str"] = repeat_str
 
     env.tests["combining"] = is_combining
     env.tests["description_short"] = is_text_short

@@ -10,4 +10,4 @@ Type: `object`
 |anything|No|integer, string, number or null|No|No| No|Ay other info you like|
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 20:34:37 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:00:07 +0100

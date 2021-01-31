@@ -8,9 +8,9 @@ Type: `object`
 | [billing_address](#billing_address)|No|object|No|No| No|Exact address|
 | [delivery_info](#delivery_info)|No|object|No|No| No|Delivery info depending on the delivery type|
 
-  ## <a name="shipping_address"></a>Property `shipping_address`
+## <a name="shipping_address"></a> 1. Property `shipping_address`
 
-  **Description**:  Exact address
+**Description**:  Exact address
 
       Delivery Schema
  >   shipping_address
@@ -25,9 +25,9 @@ Type: `object`
 |city|No|string|Yes|No| No||
 |state|No|string|Yes|No| No||
 
-  ## <a name="billing_address"></a>Property `billing_address`
+## <a name="billing_address"></a> 2. Property `billing_address`
 
-  **Description**:  Exact address
+**Description**:  Exact address
 
       Delivery Schema
  >   billing_address
@@ -37,9 +37,9 @@ Type: `object`
 **Description:** Exact address
         Same definition as [shipping_address](#shipping_address)
 
-  ## <a name="delivery_info"></a>Property `delivery_info`
+## <a name="delivery_info"></a> 3. Property `delivery_info`
 
-  **Description**:  Delivery info depending on the delivery type
+**Description**:  Delivery info depending on the delivery type
 
       Delivery Schema
  >   delivery_info
@@ -91,4 +91,4 @@ Type: `object`
 ](delivery_info_oneOf)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 20:34:35 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:00:06 +0100

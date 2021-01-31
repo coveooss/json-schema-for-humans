@@ -8,9 +8,9 @@ Type: `object`
 | [subType2](#subType2)|No|object|No|No| No|A sub type with additionalProperties true.|
 | [additionalProperties](#additionalProperties)|No|object|No|No|  [![made-with-Markdown](https://img.shields.io/badge/Should-conform-blue)](# "Each additional property must conform to the following schema")|additionalProperties schema.|
 
-  ## <a name="subType1"></a>Property `subType1`
+## <a name="subType1"></a> 1. Property `subType1`
 
-  **Description**:  A sub type with additionalProperties false.
+**Description**:  A sub type with additionalProperties false.
 
       Person
  >   subType1
@@ -24,9 +24,9 @@ Type: `object`
 |subProp1|No|number|No|No| No||
 `No Additional Properties`
 
-  ## <a name="subType2"></a>Property `subType2`
+## <a name="subType2"></a> 2. Property `subType2`
 
-  **Description**:  A sub type with additionalProperties true.
+**Description**:  A sub type with additionalProperties true.
 
       Person
  >   subType2
@@ -40,7 +40,7 @@ Type: `object`
 |subProp2|No|number|No|No| No||
 | [additionalProperties](#subType2_additionalProperties)|No|object|No|No|  [![made-with-Markdown](https://img.shields.io/badge/Any%20type+allowed-green)](# "Additional Properties of any type are allowed.")||
 
-  ## <a name="subType2_additionalProperties"></a>Property `additionalProperties`
+### <a name="subType2_additionalProperties"></a> 2.1. Property `additionalProperties`
 
       Person
  >   subType2
@@ -48,9 +48,9 @@ Type: `object`
 
 Type: `object`
 
-  ## <a name="additionalProperties"></a>Property `additionalProperties`
+## <a name="additionalProperties"></a> 3. Property `additionalProperties`
 
-  **Description**:  additionalProperties schema.
+**Description**:  additionalProperties schema.
 
       Person
  >   additionalProperties
@@ -64,4 +64,4 @@ Type: `object`
 |propA|No|number|No|No| No||
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 20:34:38 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:00:08 +0100
