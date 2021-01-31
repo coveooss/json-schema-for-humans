@@ -1,0 +1,17 @@
+## Conditional Subschema
+If the conditions in the "If" tab are respected, then the conditions in the "Then" tab should be respected.
+Otherwise, the conditions in the "Else" tab should be respected.
+{% set tab_id = schema.kw_if.html_id %}
+**[If](#tab-pane_{{ tab_id }}"):**
+{% set tab_id = schema.kw_if.html_id %}
+{{ content(schema.kw_if) }}
+{% if schema.kw_then %}
+    {% set tab_id = schema.kw_then.html_id %}
+**[Then](#tab-pane_{{ tab_id }}):**
+{{ content(schema.kw_then) }}
+{% endif %}
+{% if schema.kw_else %}
+{% set tab_id = schema.kw_else.html_id %}
+**[Else](#tab-pane_{{ tab_id }}):**
+{{ content(schema.kw_else) }}
+{% endif %}

@@ -1,0 +1,4 @@
+{% for node in schema.nodes_from_root %}
+  {{ node.name_for_breadcrumbs }}
+  {% if not loop.last %} > {% endif %}
+{% endfor %}

@@ -1,0 +1,11 @@
+{% from 'content.html' import content with context %}
+{% set title = schema.keywords.get("title") %}
+{% if title %}
+    {% set title = title.literal %}
+{% endif %}
+{% if title %}# {{ title }}{% else %}# Schema Docs{% endif %}
+
+{{ content(schema) }}
+
+----------------------------------------------------------------------------------------------------------------------------
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on {{ get_local_time() }}

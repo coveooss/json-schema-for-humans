@@ -15,6 +15,7 @@ import click
 import htmlmin
 import jinja2
 import markdown2
+from . import jinja_write_file_extension
 import requests
 import yaml
 from dataclasses_json import dataclass_json
@@ -1222,6 +1223,20 @@ def escape_property_name_for_id(property_name: str) -> str:
         escaped = "a" + escaped
     return escaped
 
+def escape_for_md(example_text: str) -> str:
+    """Filter. escape characters('|', '`') in string to be insterted into markdown"""
+    return example_text.translate(str.maketrans({'|': '\\|', '`': '\\`'}))
+
+def first_line(example_text: str) -> str:
+    """Filter. retrieve first line of string + add ... at the end if text has multiple lines """
+    first_line = example_text.partition("\n")
+    return first_line[0] + (' ...' if (first_line[1] == "\n") else '')
+
+def is_multi_line(example_text: str) -> str:
+    """Filter. return True if at least 2 lines in string  """
+    first_line = example_text.partition("\n")
+    return (first_line[1] == "\n")
+
 
 def highlight_json_example(example_text: str) -> str:
     """Filter. Return an highlighted version of the provided JSON text"""
@@ -1240,6 +1255,7 @@ def generate_from_schema(
     default_from_description: bool = False,
     expand_buttons: bool = False,
     link_to_reused_ref: bool = True,
+    result_file_name: str = '',
     config: GenerationConfiguration = None,
 ) -> str:
     config = config or _get_final_config(
@@ -1257,7 +1273,12 @@ def generate_from_schema(
 
     md = markdown2.Markdown(extras=config.markdown_options)
     loader = FileSystemLoader(template_folder)
-    env = jinja2.Environment(loader=loader)
+    env = jinja2.Environment(
+        loader=loader, 
+        extensions=[jinja_write_file_extension.WriteFileExtension],
+        trim_blocks=(config.template_name=='md'),
+        lstrip_blocks=(config.template_name=='md')
+    )
     env.filters["markdown"] = (
         lambda text: jinja2.Markup(md.convert(text)) if config.description_is_markdown else lambda t: t
     )
@@ -1271,10 +1292,16 @@ def generate_from_schema(
     env.filters["get_required_properties"] = get_required_properties
     env.filters["get_undocumented_required_properties"] = get_undocumented_required_properties
     env.filters["highlight_json_example"] = highlight_json_example
+    env.filters["escape_for_md"] = escape_for_md
+    env.filters["first_line"] = first_line
+    env.filters["is_multi_line"] = is_multi_line
+
     env.tests["combining"] = is_combining
     env.tests["description_short"] = is_text_short
     env.tests["deprecated"] = is_deprecated_look_in_description if config.deprecated_from_description else is_deprecated
     env.globals["get_local_time"] = get_local_time
+    env.globals["result_file_name"] = result_file_name
+    env.globals["result_dir_name"] = os.path.dirname(result_file_name)
 
     with open(base_template_path, "r") as template_fp:
         template = env.from_string(template_fp.read())
@@ -1288,7 +1315,11 @@ def generate_from_schema(
     rendered = template.render(schema=intermediate_schema, config=config)
 
     if minify:
-        rendered = htmlmin.minify(rendered)
+        if config.template_name=='md':
+            # remove multiple contiguous empty lines
+            rendered = re.sub(r'\n\s*\n', '\n\n', rendered)
+        else:
+            rendered = htmlmin.minify(rendered)
 
     return rendered
 
@@ -1328,6 +1359,7 @@ def generate_from_filename(
         default_from_description=default_from_description,
         expand_buttons=expand_buttons,
         link_to_reused_ref=link_to_reused_ref,
+        result_file_name=result_file_name,
         config=config,
     )
 

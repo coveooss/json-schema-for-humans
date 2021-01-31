@@ -1,0 +1,17 @@
+{% if schema.kw_min_items %}
+    {{ restriction("Must contain a minimum of `" ~ schema.kw_min_items.literal ~ "` items", "min-items", schema.kw_min_items.html_id) }}
+{% endif %}
+{% if schema.kw_max_items %}
+    {{ restriction("Must contain a maximum of `" ~ schema.kw_max_items.literal ~ "` items", "max-items", schema.kw_max_items.html_id) }}
+{% endif %}
+{% if schema.kw_unique_items and schema.kw_unique_items.literal == True %}
+    {{ restriction("All items must be unique", "unique-items", schema.kw_unique_items.html_id) }}
+{% endif %}
+{% if schema.kw_items %}
+#### Each item of this array must be
+{{ content(schema.kw_items) }}
+{% endif %}
+{% if schema.kw_contains and schema.kw_contains.literal != {} %}
+#### At least one of the items must be
+{{ content(schema.kw_contains) }}
+{% endif %}

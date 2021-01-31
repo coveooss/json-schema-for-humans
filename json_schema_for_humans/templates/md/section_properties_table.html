@@ -1,0 +1,61 @@
+{% set propertiesDetails = {} %}
+{% if schema.properties | length > 0 %}
+| Property | Pattern | Type | Required | Deprecated | Additional | Description |
+| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
+{% for sub_property in schema.iterate_properties %}
+  {% set html_id = sub_property.html_id %}
+  {# calculate if property should be displayed in details #}
+  {% if sub_property | get_description | is_multi_line and propertiesDetails.update({sub_property.property_name: True}) %}{% endif %}
+  {% if sub_property.is_additional_properties and propertiesDetails.update({sub_property.property_name: True}) %}{% endif %}
+  {% if sub_property.is_pattern_property or sub_property.type_name == 'object' and propertiesDetails.update({sub_property.property_name: True}) %}{% endif %}
+  
+  {%- if propertiesDetails[sub_property.property_name] -%}
+| [{{- sub_property.property_name | escape_for_md -}}](#{{- html_id -}})
+  {%- else -%}
+| {{- sub_property.property_name | escape_for_md -}}
+  {%- endif -%}
+| {{- 'Yes' if sub_property.is_pattern_property else 'No' -}}
+| {{- sub_property.type_name | escape_for_md -}}
+| {{- 'Yes' if sub_property.is_required_property else 'No' -}}
+| {{- 'Yes' if sub_property.deprecated else 'No' -}}
+  {%- if sub_property.is_additional_properties -%}
+    {%- if sub_property.is_additional_properties_schema -%}
+    | {{ " " }}[![made-with-Markdown](https://img.shields.io/badge/Should-conform-blue)](# "Each additional property must conform to the following schema")
+    {%- else -%}
+    | {{ " " }}[![made-with-Markdown](https://img.shields.io/badge/Any%20type+allowed-green)](# "Additional Properties of any type are allowed.")
+    {%- endif -%}
+  {%- else -%}
+| {{ "No" }}
+  {%- endif -%}
+| {{- sub_property | get_description | first_line | escape_for_md -}} |
+{% endfor %}
+{% endif %}
+
+{# properties details #}
+{% for sub_property in schema.iterate_properties if propertiesDetails[sub_property.property_name] %}
+  {% set html_id = sub_property.html_id %}
+  {% set description = sub_property | get_description %}
+
+  {% if sub_property.is_pattern_property %}
+## <a name="{{ html_id }}"></a>Pattern Property `{{- sub_property.property_name | escape_for_md -}}`
+> All property whose name matches the following regular expression must respect the following conditions
+  Property name regular expression: 
+[`{{ sub_property.property_name | escape }}`](https://regex101.com/?regex={{ sub_property.property_name | escape }}
+  {% else %}
+## <a name="{{ html_id }}"></a>Property `{{- sub_property.property_name | escape_for_md -}}`
+  {% endif %}
+
+  {% if description | length > 0 %}
+**Description**: {{- sub_property | get_description -}}
+  {% endif %}
+
+  {% if sub_property.is_pattern_property %}
+> All property whose name matches the following regular expression must respect the following conditions
+  Property name regular expression: 
+[`{{ sub_property.property_name | escape }}`](https://regex101.com/?regex={{ sub_property.property_name | escape }}
+  {% endif %}
+
+  {% if sub_property.type_name == 'object' %}
+    {{ content(sub_property) }}
+  {% endif %}
+{% endfor %}
