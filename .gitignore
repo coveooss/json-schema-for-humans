@@ -124,7 +124,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# IDEs
 .idea/
+.vscode/
 
 # Manual run results
 result*.html
