@@ -1,5 +1,4 @@
 # Test
-
 Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
@@ -7,14 +6,11 @@ Type: `object`
 |aProperty|No|enum (of string)|No|No| No|This is the description from the definition|
 | [aDictPropertyARequired](#aDictPropertyARequired)|No|object|No|No| No||
 
-## <a name="aProperty"></a> 1. Property `aProperty`
+## <a name="aProperty"></a> 1. Property `Test > aProperty`
 
 **Description**:  This is the description from the definition
 
-      Test
- >   aProperty
-
-Type: `enum (of string)`
+    Type: `enum (of string)`
              Default: `"Default from property"`
 
 **Description:** This is the description from the definition
@@ -23,12 +19,9 @@ Type: `enum (of string)`
                     * "value1"
                     * "value2"
 
-## <a name="aDictPropertyARequired"></a> 2. Property `aDictPropertyARequired`
+## <a name="aDictPropertyARequired"></a> 2. Property `Test > aDictPropertyARequired`
 
-      Test
- >   aDictPropertyARequired
-
-Type: `object`
+    Type: `object`
              Default: `{"a": "a", "b": "b"}`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
@@ -36,21 +29,13 @@ Type: `object`
 |a|No|string|Yes|No| No||
 |b|No|string|Yes|No| No||
 
-### <a name="aDictPropertyARequired_a"></a> 2.1. Property `a`
+### <a name="aDictPropertyARequired_a"></a> 2.1. Property `Test > aDictPropertyARequired > a`
 
-      Test
- >   aDictPropertyARequired
- >   a
+    Type: `string`
 
-Type: `string`
+### <a name="aDictPropertyARequired_b"></a> 2.2. Property `Test > aDictPropertyARequired > b`
 
-### <a name="aDictPropertyARequired_b"></a> 2.2. Property `b`
-
-      Test
- >   aDictPropertyARequired
- >   b
-
-Type: `string`
+    Type: `string`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:30:20 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 09:18:49 +0100

@@ -13,10 +13,6 @@ Reference [mdFile](mdFile)
     {# Resolve type #}
     {% set type_name = schema.type_name %}
     {%- if not skip_headers %}
-        {%- if config.show_breadcrumbs %}
-            {%- include "breadcrumbs.html" %}
-        {% endif %}
-
         {# Display type #}
         {% if not schema is combining %}Type: `{{ type_name }}`{% endif %}
 

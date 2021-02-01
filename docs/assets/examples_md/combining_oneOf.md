@@ -1,5 +1,4 @@
 # Schema Docs
-
 Type: `object`
 
 **Description:** JSON Schema for an fstab entry
@@ -8,10 +7,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [storage](#storage)|No|object|Yes|No| No||
 
-## <a name="storage"></a> 1. Property `storage`
-
-      root
- >   storage
+## <a name="storage"></a> 1. Property `root > storage`
 
                 [[]
 <a id="storage_oneOf" href="#storage_oneOf">
@@ -22,52 +18,32 @@ Type: `object`
     <div class="card">
         <h3 class="ml-2 mt-2"><a id="storage_oneOf_i0" href="#storage_oneOf_i0">diskDevice</a></h3>
         <div class="card-body">
-              root
- >   storage
- >   oneOf
- >   diskDevice
-
-Type: `object`
+            Type: `object`
 
         </div>
     </div>
     <div class="card">
         <h3 class="ml-2 mt-2"><a id="storage_oneOf_i1" href="#storage_oneOf_i1">diskUUID</a></h3>
         <div class="card-body">
-              root
- >   storage
- >   oneOf
- >   diskUUID
-
-Type: `object`
+            Type: `object`
 
         </div>
     </div>
     <div class="card">
         <h3 class="ml-2 mt-2"><a id="storage_oneOf_i2" href="#storage_oneOf_i2">nfs</a></h3>
         <div class="card-body">
-              root
- >   storage
- >   oneOf
- >   nfs
-
-Type: `object`
+            Type: `object`
 
         </div>
     </div>
     <div class="card">
         <h3 class="ml-2 mt-2"><a id="storage_oneOf_i3" href="#storage_oneOf_i3">tmpfs</a></h3>
         <div class="card-body">
-              root
- >   storage
- >   oneOf
- >   tmpfs
-
-Type: `object`
+            Type: `object`
 
         </div>
     </div>
 ](storage_oneOf)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:30:22 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 09:18:50 +0100

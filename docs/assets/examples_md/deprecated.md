@@ -1,5 +1,4 @@
 # Schema Docs
-
 Type: `object`
 
 **Description:** Test schema with deprecated in description
@@ -10,34 +9,25 @@ Type: `object`
 | [deprecated2](#deprecated2)|No|object|No|No| No|[Deprecated - Use \`not_deprecated\` instead]|
 |not_deprecated|No|string|No|No| No||
 
-## <a name="deprecated1"></a> 1. Property `deprecated1`
+## <a name="deprecated1"></a> 1. Property `root > deprecated1`
 
 **Description**:  [Deprecated]
 
-      root
- >   deprecated1
-
-Type: `object`
+    Type: `object`
 
 **Description:** [Deprecated]
 
-## <a name="deprecated2"></a> 2. Property `deprecated2`
+## <a name="deprecated2"></a> 2. Property `root > deprecated2`
 
 **Description**:  [Deprecated - Use `not_deprecated` instead]
 
-      root
- >   deprecated2
-
-Type: `object`
+    Type: `object`
 
 **Description:** [Deprecated - Use `not_deprecated` instead]
 
-## <a name="not_deprecated"></a> 3. Property `not_deprecated`
+## <a name="not_deprecated"></a> 3. Property `root > not_deprecated`
 
-      root
- >   not_deprecated
-
-Type: `string`
+    Type: `string`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:30:22 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 09:18:50 +0100

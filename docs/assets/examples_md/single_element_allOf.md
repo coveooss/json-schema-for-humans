@@ -1,13 +1,9 @@
 # Schema containing a single-element allOf
 
 **Description:** Schema containing a single-element allOf
-              Schema containing a single-element allOf
- >   allOf
- >   my_reference
-
-Type: `string`
+            Type: `string`
 
 **Description:** My string definition
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:30:22 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 09:18:50 +0100

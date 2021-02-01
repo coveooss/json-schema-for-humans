@@ -1,5 +1,4 @@
 # Person
-
 Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
@@ -15,115 +14,85 @@ Type: `object`
 | [properties](#properties)|No|object|No|No| No|properties|
 | [patternProperties](#patternProperties)|No|object|No|No| No|patternProperties|
 
-## <a name="default"></a> 1. Property `default`
+## <a name="default"></a> 1. Property `Person > default`
 
 **Description**:  default
 
-      Person
- >   default
-
-Type: `string`
+    Type: `string`
 
 **Description:** default
 
-## <a name="examples"></a> 2. Property `examples`
+## <a name="examples"></a> 2. Property `Person > examples`
 
 **Description**:  examples
 
-      Person
- >   examples
-
-Type: `string`
+    Type: `string`
 
 **Description:** examples
 
-## <a name="if"></a> 3. Property `if`
+## <a name="if"></a> 3. Property `Person > if`
 
 **Description**:  if
 
-      Person
- >   if
-
-Type: `object`
+    Type: `object`
 
 **Description:** if
 
-## <a name="then"></a> 4. Property `then`
+## <a name="then"></a> 4. Property `Person > then`
 
 **Description**:  then
 
-      Person
- >   then
-
-Type: `object`
+    Type: `object`
 
 **Description:** then
 
-## <a name="else"></a> 5. Property `else`
+## <a name="else"></a> 5. Property `Person > else`
 
 **Description**:  else
 
-      Person
- >   else
-
-Type: `object`
+    Type: `object`
 
 **Description:** else
 
-## <a name="anyOf"></a> 6. Property `anyOf`
+## <a name="anyOf"></a> 6. Property `Person > anyOf`
 
 **Description**:  anyOf
 
-      Person
- >   anyOf
-
-Type: `object`
+    Type: `object`
 
 **Description:** anyOf
 
-## <a name="allOf"></a> 7. Property `allOf`
+## <a name="allOf"></a> 7. Property `Person > allOf`
 
 **Description**:  allOf
 
-      Person
- >   allOf
-
-Type: `object`
+    Type: `object`
 
 **Description:** allOf
 
-## <a name="not"></a> 8. Property `not`
+## <a name="not"></a> 8. Property `Person > not`
 
 **Description**:  not
 
-      Person
- >   not
-
-Type: `object`
+    Type: `object`
 
 **Description:** not
 
-## <a name="properties"></a> 9. Property `properties`
+## <a name="properties"></a> 9. Property `Person > properties`
 
 **Description**:  properties
 
-      Person
- >   properties
-
-Type: `object`
+    Type: `object`
 
 **Description:** properties
 
-## <a name="patternProperties"></a> 10. Property `patternProperties`
+## <a name="patternProperties"></a> 10. Property `Person > patternProperties`
 
 **Description**:  patternProperties
 
-      Person
- >   patternProperties
-
-Type: `object`
+    Type: `object`
 
 **Description:** patternProperties
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:30:19 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 09:18:47 +0100

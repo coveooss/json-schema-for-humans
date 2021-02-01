@@ -1,5 +1,4 @@
 # Person
-
 Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
@@ -9,14 +8,11 @@ Type: `object`
 |age|No|integer|No|No| No|Age in years which must be equal to or greater than zero.|
 | [moreInfo](#moreInfo)|No|object|No|No| No|Any more info you want as an object|
 
-## <a name="firstName"></a> 1. Property `firstName`
+## <a name="firstName"></a> 1. Property `Person > firstName`
 
 **Description**:  the person's first name
 
-      Person
- >   firstName
-
-Type: `string`
+    Type: `string`
 
 **Description:** the person's first name
 
@@ -33,14 +29,11 @@ Type: `string`
 
 ```
 
-## <a name="lastName"></a> 2. Property `lastName`
+## <a name="lastName"></a> 2. Property `Person > lastName`
 
 **Description**:  The person's last name.
 
-      Person
- >   lastName
-
-Type: `string`
+    Type: `string`
 
 **Description:** The person's last name.
 
@@ -52,14 +45,11 @@ Type: `string`
 
 ```
 
-## <a name="age"></a> 3. Property `age`
+## <a name="age"></a> 3. Property `Person > age`
 
 **Description**:  Age in years which must be equal to or greater than zero.
 
-      Person
- >   age
-
-Type: `integer`
+    Type: `integer`
 
 **Description:** Age in years which must be equal to or greater than zero.
 
@@ -73,14 +63,11 @@ Type: `integer`
 
 ```
 
-## <a name="moreInfo"></a> 4. Property `moreInfo`
+## <a name="moreInfo"></a> 4. Property `Person > moreInfo`
 
 **Description**:  Any more info you want as an object
 
-      Person
- >   moreInfo
-
-Type: `object`
+    Type: `object`
 
 **Description:** Any more info you want as an object
 
@@ -97,4 +84,4 @@ Type: `object`
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:30:18 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 09:18:46 +0100

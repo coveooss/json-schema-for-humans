@@ -1,13 +1,9 @@
 # Array at top level
-
 Type: `array of string`
 
 **Description:** Sometimes there are no properties
 
 #### Each item of this array must be
-  Array at top level
- >   items
-
 Type: `string`
 
 **Description:** A string
@@ -21,4 +17,4 @@ Type: `string`
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:30:19 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 09:18:47 +0100

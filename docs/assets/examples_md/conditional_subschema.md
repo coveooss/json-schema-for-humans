@@ -1,67 +1,45 @@
 # Schema Docs
-
 Type: `object`
 
 ## Conditional Subschema
 If the conditions in the "If" tab are respected, then the conditions in the "Then" tab should be respected.
 Otherwise, the conditions in the "Else" tab should be respected.
 **[If](#tab-pane_if"):**
-  root
- >   if
-
 Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 |country|No|const|No|No| No||
 
-## <a name="if_country"></a> 1. Property `country`
+## <a name="if_country"></a> 1. Property `root > if > country`
 
-      root
- >   if
- >   country
-
-Type: `const`
+    Type: `const`
 
                 Specific value: `"United States of America"`
 
 **[Then](#tab-pane_then):**
-  root
- >   then
-
 Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [postal_code](#then_postal_code)|No|object|No|No| No||
 
-## <a name="then_postal_code"></a> 1. Property `postal_code`
+## <a name="then_postal_code"></a> 1. Property `root > then > postal_code`
 
-      root
- >   then
- >   postal_code
-
-Type: `object`
+    Type: `object`
 
                 Must match regular expression: `[0-9]{5}(-[0-9]{4})?` [Test](https://regex101.com/?regex=[0-9]{5}(-[0-9]{4})?)
 
 **[Else](#tab-pane_else):**
-  root
- >   else
-
 Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [postal_code](#else_postal_code)|No|object|No|No| No||
 
-## <a name="else_postal_code"></a> 1. Property `postal_code`
+## <a name="else_postal_code"></a> 1. Property `root > else > postal_code`
 
-      root
- >   else
- >   postal_code
-
-Type: `object`
+    Type: `object`
 
                 Must match regular expression: `[A-Z][0-9][A-Z] [0-9][A-Z][0-9]` [Test](https://regex101.com/?regex=[A-Z][0-9][A-Z] [0-9][A-Z][0-9])
 
@@ -70,23 +48,17 @@ Type: `object`
 |street_address|No|string|No|No| No||
 |country|No|enum (of string)|No|No| No||
 
-## <a name="street_address"></a> 1. Property `street_address`
+## <a name="street_address"></a> 1. Property `root > street_address`
 
-      root
- >   street_address
+    Type: `string`
 
-Type: `string`
+## <a name="country"></a> 2. Property `root > country`
 
-## <a name="country"></a> 2. Property `country`
-
-      root
- >   country
-
-Type: `enum (of string)`
+    Type: `enum (of string)`
 
                 Must be one of:
                     * "United States of America"
                     * "Canada"
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-01-31 at 23:30:19 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 09:18:47 +0100
