@@ -1,14 +1,16 @@
+
+
 # Schema Docs
+
 Type: `object`
 
 **Description:** A little food fun
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-|fruits|No|array of string|No|No| No|5 to 8 fruits that you like|
-|vegetables|No|array|No|No| No||
+| [fruits](#fruits)|No|array of string|No|No| No|5 to 8 fruits that you like|| [vegetables](#vegetables)|No|array|No|No| No||
 
-##<a name="fruits"></a>1.  Property `root > fruits`
+##  <a name="fruits"></a>1.  Property `root > fruits`
 
 **Description**:  5 to 8 fruits that you like
 
@@ -27,10 +29,11 @@ Type: `object`
  	</tr>
 </table>
 
-title_level###title_level Each item of this array must be
+###  1. Each item of this array must be
+
 Type: `string`
 
-##<a name="vegetables"></a>2.  Property `root > vegetables`
+##  <a name="vegetables"></a>2.  Property `root > vegetables`
 
 <table>
  	<tr>
@@ -47,13 +50,15 @@ Type: `string`
  	</tr>
 </table>
 
-title_level###title_level Each item of this array must be
+###  2. Each item of this array must be
+
 Type: `object`
 
-#### At least one of the items must be
+###  2. At least one of the items must be
+
 Type: `const`
 
-                Specific value: `"eggplant"`
+            Specific value: `"eggplant"`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 23:35:34 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 00:44:57 +0100

@@ -1,4 +1,7 @@
+
+
 # Array at top level
+
 Type: `array of string`
 
 **Description:** Sometimes there are no properties
@@ -18,7 +21,8 @@ Type: `array of string`
  	</tr>
 </table>
 
-title_level##title_level Each item of this array must be
+##   Each item of this array must be
+
 Type: `string`
 
 **Description:** A string
@@ -32,4 +36,4 @@ Type: `string`
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 23:35:31 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 00:44:54 +0100

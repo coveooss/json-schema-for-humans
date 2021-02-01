@@ -1,14 +1,14 @@
+
+
 # Person
+
 Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-|firstName|No|string|No|No| No|the person's first name|
-|lastName|No|string|No|No| No|The person's last name.|
-|age|No|integer|No|No| No|Age in years which must be equal to or greater than zero.|
-| [moreInfo](#moreInfo)|No|object|No|No| No|Any more info you want as an object|
+| [firstName](#firstName)|No|string|No|No| No|the person's first name|| [lastName](#lastName)|No|string|No|No| No|The person's last name.|| [age](#age)|No|integer|No|No| No|Age in years which must be equal to or greater than zero.|| [moreInfo](#moreInfo)|No|object|No|No| No|Any more info you want as an object|
 
-##<a name="firstName"></a>1.  Property `Person > firstName`
+##  <a name="firstName"></a>1.  Property `Person > firstName`
 
 **Description**:  the person's first name
 
@@ -25,7 +25,7 @@ Type: `object`
 
 ```
 
-##<a name="lastName"></a>2.  Property `Person > lastName`
+##  <a name="lastName"></a>2.  Property `Person > lastName`
 
 **Description**:  The person's last name.
 
@@ -37,7 +37,7 @@ Type: `object`
 
 ```
 
-##<a name="age"></a>3.  Property `Person > age`
+##  <a name="age"></a>3.  Property `Person > age`
 
 **Description**:  Age in years which must be equal to or greater than zero.
 
@@ -51,7 +51,7 @@ Type: `object`
 
 ```
 
-##<a name="moreInfo"></a>4.  Property `Person > moreInfo`
+##  <a name="moreInfo"></a>4.  Property `Person > moreInfo`
 
 **Description**:  Any more info you want as an object
 
@@ -68,4 +68,4 @@ Type: `object`
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 23:35:30 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 00:44:53 +0100

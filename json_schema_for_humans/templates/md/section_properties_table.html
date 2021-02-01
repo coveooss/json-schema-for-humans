@@ -1,19 +1,9 @@
-{% set propertiesDetails = {} %}
 {% if schema.properties | length > 0 %}
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 {% for sub_property in schema.iterate_properties %}
-  {% set html_id = sub_property.html_id %}
-  {# calculate if property should be displayed in details #}
-  {% if sub_property | get_description | is_multi_line and propertiesDetails.update({sub_property.property_name: True}) %}{% endif %}
-  {% if sub_property.is_additional_properties and propertiesDetails.update({sub_property.property_name: True}) %}{% endif %}
-  {% if sub_property.is_pattern_property or sub_property.type_name == 'object' and propertiesDetails.update({sub_property.property_name: True}) %}{% endif %}
-  
-  {%- if propertiesDetails[sub_property.property_name] -%}
-| [{{- sub_property.property_name | escape_for_md -}}](#{{- html_id -}})
-  {%- else -%}
-| {{- sub_property.property_name | escape_for_md -}}
-  {%- endif -%}
+  {%- set html_id = sub_property.html_id -%}
+| [{{- sub_property.property_name | escape_for_md -}}](#{{- html_id -}}{{- ")" -}}
 | {{- 'Yes' if sub_property.is_pattern_property else 'No' -}}
 | {{- sub_property.type_name | escape_for_md -}}
 | {{- 'Yes' if sub_property.is_required_property else 'No' -}}
@@ -27,7 +17,7 @@
   {%- else -%}
 | {{ "No" }}
   {%- endif -%}
-| {{- sub_property | get_description | first_line | escape_for_md -}} |
+| {{- sub_property | get_description | first_line(80) | escape_for_md -}} {{ "|" -}}
 {% endfor %}
 {% if schema.explicit_no_additional_properties %}
 `No Additional Properties`
@@ -38,7 +28,6 @@
 {% for sub_property in schema.iterate_properties %}
   {% set html_id = sub_property.html_id %}
   {% set title_level = base_level ~ loop.index ~ "." %} 
-  {% set property_content =  content(sub_property, True, title_level, 0, depth+1) %}
   {%- set title -%}
     {%- if config.show_breadcrumbs %}
       {% with schema=sub_property %}
@@ -49,29 +38,29 @@
     {% endif %}
   {%- endset -%}
 
-  {% if property_content != '' %}
-    {% set description = sub_property | get_description %}
-    
-    {% call heading(depth+1, title_level, html_id) -%}
-      {% if sub_property.is_pattern_property %}Pattern{% endif %} Property `{{- title | escape_for_md -}}`
-    {%- endcall %}
-    {% if sub_property.is_pattern_property %}
-  > All property whose name matches the following regular expression must respect the following conditions
-    Property name regular expression: 
-  [`{{ sub_property.property_name | escape }}`](https://regex101.com/?regex={{ sub_property.property_name | escape }}
-    {% endif %}
-
-    {% if description | length > 0 %}
-**Description**: {{ " " }} {{- sub_property | get_description -}}
-    {% endif %}
-
-    {% if sub_property.is_pattern_property %}
-  > All property whose name matches the following regular expression must respect the following conditions
-    Property name regular expression: 
-  [`{{ sub_property.property_name | escape }}`](https://regex101.com/?regex={{ sub_property.property_name | escape }}
-    {% endif %}
-
-    {{ property_content }}
+  {% set description = sub_property | get_description %}
+  
+  {% call heading(depth+1, title_level, html_id) -%}
+    {% if sub_property.is_pattern_property %}Pattern{% endif %} Property `{{- title | escape_for_md -}}`
+  {%- endcall %}
+  {% if sub_property.is_pattern_property %}
+> All property whose name matches the following regular expression must respect the following conditions
+  Property name regular expression: 
+[`{{ sub_property.property_name | escape }}`](https://regex101.com/?regex={{ sub_property.property_name | escape }}
   {% endif %}
+
+  {% if description | length > 0 %}
+**Description**: {{ " " }} {{- sub_property | get_description -}}
+  {% endif %}
+
+  {% if sub_property.is_pattern_property %}
+> All property whose name matches the following regular expression must respect the following conditions
+  Property name regular expression: 
+[`{{ sub_property.property_name | escape }}`](https://regex101.com/?regex={{ sub_property.property_name | escape }}
+  {% endif %}
+
+  {% with schema=sub_property, skip_headers=True, base_level=title_level, level=0, depth=depth+1 %}
+      {% include "content.html" %}
+  {% endwith %}
 
 {% endfor %}

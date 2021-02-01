@@ -1,2 +1,4 @@
 #### Must **not** be
-{{ content(schema.kw_not) }}
+{% with schema=schema.kw_not, skip_headers=False, base_level=base_level, level=level, depth=depth %}
+    {% include "content.html" %}
+{% endwith %}

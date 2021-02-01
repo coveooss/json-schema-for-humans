@@ -1,4 +1,7 @@
+
+
 # Schema Docs
+
 Type: `object`
 
 **Description:** Test schema with a not
@@ -7,10 +10,11 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [not_a_string](#not_a_string)|No|object|Yes|No| No||
 
-##<a name="not_a_string"></a>1.  Property `root > not_a_string`
+##  <a name="not_a_string"></a>1.  Property `root > not_a_string`
 
 #### Must **not** be
+
 Type: `string`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 23:35:32 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 00:44:54 +0100

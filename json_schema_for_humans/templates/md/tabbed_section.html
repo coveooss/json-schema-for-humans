@@ -12,7 +12,9 @@
     <div class="card">
         <h3 class="ml-2 mt-2"><a id="{{ node.html_id }}" href="#{{ node.html_id }}">{{ node.definition_name or tab_label ~ " " ~ loop.index }}</a></h3>
         <div class="card-body">
-            {{ content(node) }}
+            {% with schema=node, skip_headers=False, base_level=base_level, level=level, depth=depth %}
+                {% include "content.html" %}
+            {% endwith %}
         </div>
     </div>
 {% endfor %}

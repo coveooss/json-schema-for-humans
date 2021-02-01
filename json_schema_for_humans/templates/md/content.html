@@ -1,101 +1,106 @@
-{% from "macro_restriction.html" import restriction with context %}
+{# 
+    content is a template and not a macro in md
+        because macro parameters are not through context
+        when rendering a template from the macro  and it caused
+        serious problems when using recursive calls
+    mandatory context parameters: 
+    schema
+#}
+{# context parameters default values #}
+{% set skip_headers = skip_headers or False %}
+{% set base_level = base_level or "" %}
+{% set level = level or 0 %}
+{% set depth = depth or 1 %}
+{# end context parameters #}
 
-{% macro tabbed_section(operator, current_node) %}
-    {% include "tabbed_section.html" %}
-{% endmacro %}
+{% set keys = schema.keywords %}
+{# Resolve type #}
+{% set type_name = schema.type_name %}
+{%- if not skip_headers %}
+    {# Display type #}
+    {% if not schema is combining %}Type: `{{ type_name }}`{% endif %}
 
-{% macro writeFileReference(mdFile, context, body) %}
-Reference [mdFile](mdFile)
-{% endmacro %}
-
-{% macro heading(depth, title_level, html_id=False) %}
-{{ "#" | repeat_str(depth) }} {%- if html_id -%}<a name="{{ html_id }}"></a>{%- endif -%} {{ title_level }} {{ caller() }}
-{% endmacro %}
-
-{%- macro content(schema, skip_headers=False, base_level="", level=0, depth=1) %}
-    {% set keys = schema.keywords %}
-    {# Resolve type #}
-    {% set type_name = schema.type_name %}
-    {%- if not skip_headers %}
-        {# Display type #}
-        {% if not schema is combining %}Type: `{{ type_name }}`{% endif %}
-
-        {# Display default #}
-        {% set default_value = schema.default_value %}
-        {% if default_value %}
-            {{ " " }}Default: `{{ default_value }}`
-        {% endif %}
-
-        {% set description = (schema | get_description) %}
-        {% include "section_description.html" %}
+    {# Display default #}
+    {% set default_value = schema.default_value %}
+    {% if default_value %}
+        {{ " " }}Default: `{{ default_value }}`
     {% endif %}
 
-    {% if schema.should_be_a_link(config) %}
-        Same definition as [{{ schema.links_to.link_name }}](#{{ schema.links_to.html_id }})
-    {% elif schema.refers_to %}
-        {{ content(schema.refers_to_merged, True, base_level=base_level, level=level, depth=depth) }}
+    {% set description = (schema | get_description) %}
+    {% include "section_description.html" %}
+{% endif %}
+
+{% if schema.should_be_a_link(config) %}
+    Same definition as [{{ schema.links_to.link_name }}](#{{ schema.links_to.html_id }})
+{% elif schema.refers_to %}
+    {% with schema=schema.refers_to_merged, skip_headers=True, base_level=base_level, level=level, depth=depth %}
+        {% include "content.html" %}
+    {% endwith %}
+{% else %}
+    {# Handle having oneOf or allOf with only one condition #}
+    {% if schema.kw_all_of and (schema.kw_all_of.array_items | length) == 1 %}
+        {% with schema=schema.kw_all_of.array_items[0], skip_headers=True, base_level=base_level, level=level, depth=depth %}
+            {% include "content.html" %}
+        {% endwith %}
+    {% elif schema.kw_any_of and (schema.kw_any_of.array_items | length) == 1 %}
+        {% with schema=schema.kw_any_of.array_items[0], skip_headers=True, base_level=base_level, level=level, depth=depth %}
+            {% include "content.html" %}
+        {% endwith %}
     {% else %}
-        {# Handle having oneOf or allOf with only one condition #}
-        {% if schema.kw_all_of and (schema.kw_all_of.array_items | length) == 1 %}
-            {{ content(schema.kw_all_of.array_items[0], base_level=base_level, level=level, depth=depth) }}
-        {% elif schema.kw_any_of and (schema.kw_any_of.array_items | length) == 1 %}
-            {{ content(schema.kw_any_of.array_items[0], base_level=base_level, level=level, depth=depth) }}
-        {% else %}
-            {# Combining: allOf, anyOf, oneOf, not #}
-            {% if schema.kw_all_of %}
-                [{{ tabbed_section("allOf", schema.kw_all_of) }}]({{ schema.kw_all_of.html_id }})
-            {% endif %}
-            {% if schema.kw_any_of %}
-                [{{ tabbed_section("anyOf", schema.kw_any_of) }}]({{ schema.kw_any_of.html_id }})
-            {% endif %}
-            {% if schema.kw_one_of %}
-                [{{ tabbed_section("oneOf", schema.kw_one_of) }}]({{ schema.kw_one_of.html_id }})
-            {% endif %}
-            {% if schema.kw_not %}
-                {% include "section_not.html" %}
-            {% endif %}
-
-            {# Enum and const #}
-            {% if schema.kw_enum %}
-                Must be one of:
-                {% for enum_choice in schema.kw_enum.array_items %}
-                    * {{ enum_choice.literal | python_to_json }}
-                {% endfor %}
-            {% endif %}
-            {% if schema.kw_const %}
-                Specific value: `{{ schema.kw_const.literal | python_to_json }}`
-            {% endif %}
-
-            {# Pattern (Regular Expression) #}
-            {% if schema.kw_pattern and schema.examples|length %}
-                Must match regular expression: `{{ schema.kw_pattern.literal | escape }}` [Test](https://regex101.com/?regex={{ schema.kw_pattern.literal | escape }}&test_string={{ schema.examples[0].literal | escape }})
-            {% elif schema.kw_pattern %}
-                Must match regular expression: `{{ schema.kw_pattern.literal | escape }}` [Test](https://regex101.com/?regex={{ schema.kw_pattern.literal | escape }})
-            {% endif %}
-            {# Conditional subschema, or if-then-else section #}
-            {% if schema.has_conditional %}
-                {% include "section_conditional_subschema.html" %}
-            {% endif %}
-
-            {# Required properties that are not defined under "properties". They will only be listed #}
-            {% include "section_undocumented_required_properties.html" %}
-
-            {# Show the requested type(s) #}
-            {% include "badge_type.html" %}
-
-            {# Show array restrictions #}
-            {% if type_name.startswith("array") %}
-                {% include "section_array.html" %}
-            {% endif %}
-
-            {# Display examples #}
-            {% set examples = schema.examples %}
-            {% if examples %}
-                {% include "section_examples.html" %}
-            {% endif %}
-
-            {# Properties, pattern properties, additional properties #}
-            {% include "section_properties_table.html" %}
+        {# Combining: allOf, anyOf, oneOf, not #}
+        {% if schema.kw_all_of %}
+            [{{ tabbed_section("allOf", schema.kw_all_of) }}]({{ schema.kw_all_of.html_id }})
         {% endif %}
+        {% if schema.kw_any_of %}
+            [{{ tabbed_section("anyOf", schema.kw_any_of) }}]({{ schema.kw_any_of.html_id }})
+        {% endif %}
+        {% if schema.kw_one_of %}
+            [{{ tabbed_section("oneOf", schema.kw_one_of) }}]({{ schema.kw_one_of.html_id }})
+        {% endif %}
+        {% if schema.kw_not %}
+            {% include "section_not.html" %}
+        {% endif %}
+
+        {# Enum and const #}
+        {% if schema.kw_enum %}
+            Must be one of:
+            {% for enum_choice in schema.kw_enum.array_items %}
+                * {{ enum_choice.literal | python_to_json }}
+            {% endfor %}
+        {% endif %}
+        {% if schema.kw_const %}
+            Specific value: `{{ schema.kw_const.literal | python_to_json }}`
+        {% endif %}
+
+        {# Pattern (Regular Expression) #}
+        {% if schema.kw_pattern and schema.examples|length %}
+            Must match regular expression: `{{ schema.kw_pattern.literal | escape }}` [Test](https://regex101.com/?regex={{ schema.kw_pattern.literal | escape }}&test_string={{ schema.examples[0].literal | escape }})
+        {% elif schema.kw_pattern %}
+            Must match regular expression: `{{ schema.kw_pattern.literal | escape }}` [Test](https://regex101.com/?regex={{ schema.kw_pattern.literal | escape }})
+        {% endif %}
+        {# Conditional subschema, or if-then-else section #}
+        {% if schema.has_conditional %}
+            {% include "section_conditional_subschema.html" %}
+        {% endif %}
+
+        {# Required properties that are not defined under "properties". They will only be listed #}
+        {% include "section_undocumented_required_properties.html" %}
+
+        {# Show the requested type(s) #}
+        {% include "badge_type.html" %}
+
+        {# Show array restrictions #}
+        {% if type_name.startswith("array") %}
+            {% include "section_array.html" %}
+        {% endif %}
+
+        {# Display examples #}
+        {% set examples = schema.examples %}
+        {% if examples %}
+            {% include "section_examples.html" %}
+        {% endif %}
+
+        {# Properties, pattern properties, additional properties #}
+        {% include "section_properties_table.html" %}
     {% endif %}
-{% endmacro %}
+{% endif %}

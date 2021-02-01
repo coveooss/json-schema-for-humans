@@ -1228,10 +1228,17 @@ def escape_for_md(example_text: str) -> str:
     """Filter. escape characters('|', '`') in string to be insterted into markdown"""
     return example_text.translate(str.maketrans({'|': '\\|', '`': '\\`'}))
 
-def first_line(example_text: str) -> str:
-    """Filter. retrieve first line of string + add ... at the end if text has multiple lines """
-    first_line = example_text.partition("\n")
-    return first_line[0] + (' ...' if (first_line[1] == "\n") else '')
+def first_line(example_text: str, max_length=False) -> str:
+    """
+        Filter. retrieve first line of string + add ... at the end if text has multiple lines
+        cut line at max_length
+    """
+    part_line = example_text.partition("\n")
+    first_line=part_line[0]
+    etc=((part_line[1] == "\n") or (len(first_line) > max_length))
+    if (max_length):
+        first_line=first_line[:max_length]
+    return first_line + (' ...' if etc else '')
 
 def is_multi_line(example_text: str) -> str:
     """Filter. return True if at least 2 lines in string  """
