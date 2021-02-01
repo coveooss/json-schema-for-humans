@@ -8,6 +8,10 @@
 Reference [mdFile](mdFile)
 {% endmacro %}
 
+{% macro heading(depth, title_level, html_id=False) %}
+{{ "#" | repeat_str(depth) }} {%- if html_id -%}<a name="{{ html_id }}"></a>{%- endif -%} {{ title_level }} {{ caller() }}
+{% endmacro %}
+
 {%- macro content(schema, skip_headers=False, base_level="", level=0, depth=1) %}
     {% set keys = schema.keywords %}
     {# Resolve type #}

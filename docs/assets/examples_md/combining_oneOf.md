@@ -7,7 +7,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [storage](#storage)|No|object|Yes|No| No||
 
-## <a name="storage"></a> 1. Property `root > storage`
+##<a name="storage"></a>1.  Property `root > storage`
 
                 [[]
 <a id="storage_oneOf" href="#storage_oneOf">
@@ -46,4 +46,4 @@ Type: `object`
 ](storage_oneOf)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 09:18:50 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 23:35:33 +0100

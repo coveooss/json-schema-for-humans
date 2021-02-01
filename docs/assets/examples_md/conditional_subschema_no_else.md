@@ -21,9 +21,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 |country|No|const|No|No| No||
 
-## <a name="allOf_i0_if_country"></a> 1. Property `root > allOf > item 0 > if > country`
-
-    Type: `const`
+##<a name="allOf_i0_if_country"></a>1.  Property `root > allOf > item 0 > if > country`
 
                 Specific value: `"United States of America"`
 
@@ -34,9 +32,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [postal_code](#allOf_i0_then_postal_code)|No|object|No|No| No||
 
-## <a name="allOf_i0_then_postal_code"></a> 1. Property `root > allOf > item 0 > then > postal_code`
-
-    Type: `object`
+##<a name="allOf_i0_then_postal_code"></a>1.  Property `root > allOf > item 0 > then > postal_code`
 
                 Must match regular expression: `[0-9]{5}(-[0-9]{4})?` [Test](https://regex101.com/?regex=[0-9]{5}(-[0-9]{4})?)
 
@@ -57,9 +53,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 |country|No|const|No|No| No||
 
-## <a name="allOf_i1_if_country"></a> 1. Property `root > allOf > item 1 > if > country`
-
-    Type: `const`
+##<a name="allOf_i1_if_country"></a>1.  Property `root > allOf > item 1 > if > country`
 
                 Specific value: `"Canada"`
 
@@ -70,9 +64,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [postal_code](#allOf_i1_then_postal_code)|No|object|No|No| No||
 
-## <a name="allOf_i1_then_postal_code"></a> 1. Property `root > allOf > item 1 > then > postal_code`
-
-    Type: `object`
+##<a name="allOf_i1_then_postal_code"></a>1.  Property `root > allOf > item 1 > then > postal_code`
 
                 Must match regular expression: `[A-Z][0-9][A-Z] [0-9][A-Z][0-9]` [Test](https://regex101.com/?regex=[A-Z][0-9][A-Z] [0-9][A-Z][0-9])
 
@@ -93,9 +85,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 |country|No|const|No|No| No||
 
-## <a name="allOf_i2_if_country"></a> 1. Property `root > allOf > item 2 > if > country`
-
-    Type: `const`
+##<a name="allOf_i2_if_country"></a>1.  Property `root > allOf > item 2 > if > country`
 
                 Specific value: `"Netherlands"`
 
@@ -106,9 +96,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [postal_code](#allOf_i2_then_postal_code)|No|object|No|No| No||
 
-## <a name="allOf_i2_then_postal_code"></a> 1. Property `root > allOf > item 2 > then > postal_code`
-
-    Type: `object`
+##<a name="allOf_i2_then_postal_code"></a>1.  Property `root > allOf > item 2 > then > postal_code`
 
                 Must match regular expression: `[0-9]{4} [A-Z]{2}` [Test](https://regex101.com/?regex=[0-9]{4} [A-Z]{2})
 
@@ -121,13 +109,9 @@ Type: `object`
 |street_address|No|string|No|No| No||
 |country|No|enum (of string)|No|No| No||
 
-## <a name="street_address"></a> 1. Property `root > street_address`
+##<a name="street_address"></a>1.  Property `root > street_address`
 
-    Type: `string`
-
-## <a name="country"></a> 2. Property `root > country`
-
-    Type: `enum (of string)`
+##<a name="country"></a>2.  Property `root > country`
 
                 Must be one of:
                     * "United States of America"
@@ -135,4 +119,4 @@ Type: `object`
                     * "Netherlands"
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 09:18:48 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 23:35:32 +0100

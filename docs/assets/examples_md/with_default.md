@@ -7,22 +7,31 @@ Type: `object`
 |favorite_colors|No|array of enum (of string)|No|No| No||
 |desired_number_of_shoes|No|integer|No|No| No||
 
-## <a name="favorite_os"></a> 1. Property `User Preference > favorite_os`
-
-    Type: `enum (of string)`
-             Default: `"Linux"`
+##<a name="favorite_os"></a>1.  Property `User Preference > favorite_os`
 
                 Must be one of:
                     * "Windows"
                     * "Mac"
                     * "Linux"
 
-## <a name="favorite_colors"></a> 2. Property `User Preference > favorite_colors`
+##<a name="favorite_colors"></a>2.  Property `User Preference > favorite_colors`
 
-    Type: `array of enum (of string)`
-             Default: `["white", "blue"]`
+<table>
+ 	<tr>
+    <td><b>Min items</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Max items</b></td>
+    <td>N/A</td>
+	</tr>
+	<tr>
+    <td><b>Items unicity</b></td>
+    <td>False</td>
+ 	</tr>
+</table>
 
-#### Each item of this array must be
+title_level###title_level Each item of this array must be
 Type: `enum (of string)`
 
                 Must be one of:
@@ -33,12 +42,9 @@ Type: `enum (of string)`
                     * "white"
                     * "black"
 
-## <a name="desired_number_of_shoes"></a> 3. Property `User Preference > desired_number_of_shoes`
-
-    Type: `integer`
-             Default: `2`
+##<a name="desired_number_of_shoes"></a>3.  Property `User Preference > desired_number_of_shoes`
 
         Value must be greater or equal to `0` and lesser or equal to `2`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 09:18:48 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 23:35:31 +0100

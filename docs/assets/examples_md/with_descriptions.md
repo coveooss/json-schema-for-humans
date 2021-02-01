@@ -7,13 +7,9 @@ Type: `object`
 | [billing_address](#billing_address)|No|object|No|No| No|Exact address|
 | [delivery_info](#delivery_info)|No|object|No|No| No|Delivery info depending on the delivery type|
 
-## <a name="shipping_address"></a> 1. Property `Delivery Schema > shipping_address`
+##<a name="shipping_address"></a>1.  Property `Delivery Schema > shipping_address`
 
 **Description**:  Exact address
-
-    Type: `object`
-
-**Description:** Exact address
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -21,34 +17,21 @@ Type: `object`
 |city|No|string|Yes|No| No||
 |state|No|string|Yes|No| No||
 
-### <a name="shipping_address_street_address"></a> 1.1. Property `Delivery Schema > shipping_address > street_address`
+###<a name="shipping_address_street_address"></a>1.1.  Property `Delivery Schema > shipping_address > street_address`
 
-    Type: `string`
+###<a name="shipping_address_city"></a>1.2.  Property `Delivery Schema > shipping_address > city`
 
-### <a name="shipping_address_city"></a> 1.2. Property `Delivery Schema > shipping_address > city`
+###<a name="shipping_address_state"></a>1.3.  Property `Delivery Schema > shipping_address > state`
 
-    Type: `string`
-
-### <a name="shipping_address_state"></a> 1.3. Property `Delivery Schema > shipping_address > state`
-
-    Type: `string`
-
-## <a name="billing_address"></a> 2. Property `Delivery Schema > billing_address`
+##<a name="billing_address"></a>2.  Property `Delivery Schema > billing_address`
 
 **Description**:  Exact address
 
-    Type: `object`
-
-**Description:** Exact address
         Same definition as [shipping_address](#shipping_address)
 
-## <a name="delivery_info"></a> 3. Property `Delivery Schema > delivery_info`
+##<a name="delivery_info"></a>3.  Property `Delivery Schema > delivery_info`
 
 **Description**:  Delivery info depending on the delivery type
-
-    Type: `object`
-
-**Description:** Delivery info depending on the delivery type
 
                 [[]
 <a id="delivery_info_oneOf" href="#delivery_info_oneOf">
@@ -65,9 +48,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 |price|No|number|No|No| No||
 
-## <a name="delivery_info_oneOf_i0_price"></a> 1. Property `Delivery Schema > delivery_info > oneOf > item 0 > price`
-
-    Type: `number`
+##<a name="delivery_info_oneOf_i0_price"></a>1.  Property `Delivery Schema > delivery_info > oneOf > item 0 > price`
 
         </div>
     </div>
@@ -82,13 +63,11 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 |with_wrap|No|boolean|No|No| No||
 
-## <a name="delivery_info_oneOf_i1_with_wrap"></a> 1. Property `Delivery Schema > delivery_info > oneOf > item 1 > with_wrap`
-
-    Type: `boolean`
+##<a name="delivery_info_oneOf_i1_with_wrap"></a>1.  Property `Delivery Schema > delivery_info > oneOf > item 1 > with_wrap`
 
         </div>
     </div>
 ](delivery_info_oneOf)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 09:18:47 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 23:35:31 +0100

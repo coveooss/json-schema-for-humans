@@ -11,9 +11,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 |country|No|const|No|No| No||
 
-## <a name="if_country"></a> 1. Property `root > if > country`
-
-    Type: `const`
+##<a name="if_country"></a>1.  Property `root > if > country`
 
                 Specific value: `"United States of America"`
 
@@ -24,9 +22,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [postal_code](#then_postal_code)|No|object|No|No| No||
 
-## <a name="then_postal_code"></a> 1. Property `root > then > postal_code`
-
-    Type: `object`
+##<a name="then_postal_code"></a>1.  Property `root > then > postal_code`
 
                 Must match regular expression: `[0-9]{5}(-[0-9]{4})?` [Test](https://regex101.com/?regex=[0-9]{5}(-[0-9]{4})?)
 
@@ -37,9 +33,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [postal_code](#else_postal_code)|No|object|No|No| No||
 
-## <a name="else_postal_code"></a> 1. Property `root > else > postal_code`
-
-    Type: `object`
+##<a name="else_postal_code"></a>1.  Property `root > else > postal_code`
 
                 Must match regular expression: `[A-Z][0-9][A-Z] [0-9][A-Z][0-9]` [Test](https://regex101.com/?regex=[A-Z][0-9][A-Z] [0-9][A-Z][0-9])
 
@@ -48,17 +42,13 @@ Type: `object`
 |street_address|No|string|No|No| No||
 |country|No|enum (of string)|No|No| No||
 
-## <a name="street_address"></a> 1. Property `root > street_address`
+##<a name="street_address"></a>1.  Property `root > street_address`
 
-    Type: `string`
-
-## <a name="country"></a> 2. Property `root > country`
-
-    Type: `enum (of string)`
+##<a name="country"></a>2.  Property `root > country`
 
                 Must be one of:
                     * "United States of America"
                     * "Canada"
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 09:18:47 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 23:35:31 +0100

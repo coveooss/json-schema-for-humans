@@ -7,9 +7,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [address](#address)|No|object|No|No| No||
 
-## <a name="address"></a> 1. Property `root > address`
-
-    Type: `object`
+##<a name="address"></a>1.  Property `root > address`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -17,17 +15,11 @@ Type: `object`
 |city|No|string|Yes|No| No||
 |state|No|string|Yes|No| No||
 
-### <a name="address_street_address"></a> 1.1. Property `root > address > street_address`
+###<a name="address_street_address"></a>1.1.  Property `root > address > street_address`
 
-    Type: `string`
+###<a name="address_city"></a>1.2.  Property `root > address > city`
 
-### <a name="address_city"></a> 1.2. Property `root > address > city`
-
-    Type: `string`
-
-### <a name="address_state"></a> 1.3. Property `root > address > state`
-
-    Type: `string`
+###<a name="address_state"></a>1.3.  Property `root > address > state`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 09:18:47 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 23:35:31 +0100

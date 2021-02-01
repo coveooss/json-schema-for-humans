@@ -1,14 +1,22 @@
-{% if schema.kw_min_items %}
-    {{ restriction("Must contain a minimum of `" ~ schema.kw_min_items.literal ~ "` items", "min-items", schema.kw_min_items.html_id) }}
-{% endif %}
-{% if schema.kw_max_items %}
-    {{ restriction("Must contain a maximum of `" ~ schema.kw_max_items.literal ~ "` items", "max-items", schema.kw_max_items.html_id) }}
-{% endif %}
-{% if schema.kw_unique_items and schema.kw_unique_items.literal == True %}
-    {{ restriction("All items must be unique", "unique-items", schema.kw_unique_items.html_id) }}
-{% endif %}
+<table>
+ 	<tr>
+    <td><b>Min items</b></td>
+    <td>{{ schema.kw_min_items.literal | default('N/A') }}</td>
+ 	</tr>
+	<tr>
+    <td><b>Max items</b></td>
+    <td>{{ schema.kw_max_items.literal | default('N/A') }}</td>
+	</tr>
+	<tr>
+    <td><b>Items unicity</b></td>
+    <td>{{ 'True' if schema.kw_unique_items and schema.kw_unique_items.literal == True else 'False' }}</td>
+ 	</tr>
+</table>
+
 {% if schema.kw_items %}
-#### Each item of this array must be
+{%- call heading(depth+1, "title_level", false) -%}
+Each item of this array must be
+{%- endcall -%}
 {{ content(schema.kw_items, base_level=base_level, level=level, depth=depth) }}
 {% endif %}
 {% if schema.kw_contains and schema.kw_contains.literal != {} %}

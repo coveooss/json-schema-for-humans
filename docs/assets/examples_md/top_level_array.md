@@ -3,7 +3,22 @@ Type: `array of string`
 
 **Description:** Sometimes there are no properties
 
-#### Each item of this array must be
+<table>
+ 	<tr>
+    <td><b>Min items</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Max items</b></td>
+    <td>N/A</td>
+	</tr>
+	<tr>
+    <td><b>Items unicity</b></td>
+    <td>False</td>
+ 	</tr>
+</table>
+
+title_level##title_level Each item of this array must be
 Type: `string`
 
 **Description:** A string
@@ -17,4 +32,4 @@ Type: `string`
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 09:18:47 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-01 at 23:35:31 +0100

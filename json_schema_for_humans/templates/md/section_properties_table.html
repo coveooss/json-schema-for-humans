@@ -22,7 +22,7 @@
     {%- if sub_property.is_additional_properties_schema -%}
     | {{ " " }}[![made-with-Markdown](https://img.shields.io/badge/Should-conform-blue)](# "Each additional property must conform to the following schema")
     {%- else -%}
-    | {{ " " }}[![made-with-Markdown](https://img.shields.io/badge/Any%20type+allowed-green)](# "Additional Properties of any type are allowed.")
+    | {{ " " }}[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")
     {%- endif -%}
   {%- else -%}
 | {{ "No" }}
@@ -38,7 +38,7 @@
 {% for sub_property in schema.iterate_properties %}
   {% set html_id = sub_property.html_id %}
   {% set title_level = base_level ~ loop.index ~ "." %} 
-  {% set property_content =  content(sub_property, base_level=title_level, level=0, depth=depth+1) %}
+  {% set property_content =  content(sub_property, True, title_level, 0, depth+1) %}
   {%- set title -%}
     {%- if config.show_breadcrumbs %}
       {% with schema=sub_property %}
@@ -51,14 +51,14 @@
 
   {% if property_content != '' %}
     {% set description = sub_property | get_description %}
-
+    
+    {% call heading(depth+1, title_level, html_id) -%}
+      {% if sub_property.is_pattern_property %}Pattern{% endif %} Property `{{- title | escape_for_md -}}`
+    {%- endcall %}
     {% if sub_property.is_pattern_property %}
-{{ "#" | repeat_str(depth+1) }} <a name="{{ html_id }}"></a> {{ title_level }} Pattern Property `{{- title | escape_for_md -}}`
   > All property whose name matches the following regular expression must respect the following conditions
     Property name regular expression: 
   [`{{ sub_property.property_name | escape }}`](https://regex101.com/?regex={{ sub_property.property_name | escape }}
-    {% else %}
-{{ "#" | repeat_str(depth+1) }} <a name="{{ html_id }}"></a> {{ title_level }} Property `{{- title | escape_for_md -}}`
     {% endif %}
 
     {% if description | length > 0 %}
