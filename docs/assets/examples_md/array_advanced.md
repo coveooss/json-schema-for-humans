@@ -8,11 +8,14 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [fruits](#fruits)|No|array of string|No|No| No|5 to 8 fruits that you like|| [vegetables](#vegetables)|No|array|No|No| No||
+| [fruits](#fruits)|No|array of string|No|No| No|5 to 8 fruits that you like|
+| [vegetables](#vegetables)|No|array|No|No| No|-|
 
 ##  <a name="fruits"></a>1.  Property `root > fruits`
 
-**Description**:  5 to 8 fruits that you like
+Type: `array of string`
+
+**Description:** 5 to 8 fruits that you like
 
 <table>
  	<tr>
@@ -34,6 +37,8 @@ Type: `object`
 Type: `string`
 
 ##  <a name="vegetables"></a>2.  Property `root > vegetables`
+
+Type: `array`
 
 <table>
  	<tr>
@@ -61,4 +66,4 @@ Type: `const`
             Specific value: `"eggplant"`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 00:44:57 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 21:26:35 +0100

@@ -13,9 +13,11 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [country](#if_country)|No|const|No|No| No||
+| [country](#if_country)|No|const|No|No| No|-|
 
 ##  <a name="if_country"></a>1.  Property `root > if > country`
+
+Type: `const`
 
             Specific value: `"United States of America"`
 
@@ -25,9 +27,11 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [postal_code](#then_postal_code)|No|object|No|No| No||
+| [postal_code](#then_postal_code)|No|object|No|No| No|-|
 
 ##  <a name="then_postal_code"></a>1.  Property `root > then > postal_code`
+
+Type: `object`
 
             Must match regular expression: `[0-9]{5}(-[0-9]{4})?` [Test](https://regex101.com/?regex=[0-9]{5}(-[0-9]{4})?)
 
@@ -37,23 +41,30 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [postal_code](#else_postal_code)|No|object|No|No| No||
+| [postal_code](#else_postal_code)|No|object|No|No| No|-|
 
 ##  <a name="else_postal_code"></a>1.  Property `root > else > postal_code`
+
+Type: `object`
 
             Must match regular expression: `[A-Z][0-9][A-Z] [0-9][A-Z][0-9]` [Test](https://regex101.com/?regex=[A-Z][0-9][A-Z] [0-9][A-Z][0-9])
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [street_address](#street_address)|No|string|No|No| No||| [country](#country)|No|enum (of string)|No|No| No||
+| [street_address](#street_address)|No|string|No|No| No|-|
+| [country](#country)|No|enum (of string)|No|No| No|-|
 
 ##  <a name="street_address"></a>1.  Property `root > street_address`
 
+Type: `string`
+
 ##  <a name="country"></a>2.  Property `root > country`
+
+Type: `enum (of string)`
 
             Must be one of:
                 * "United States of America"
                 * "Canada"
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 00:44:53 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 21:26:32 +0100

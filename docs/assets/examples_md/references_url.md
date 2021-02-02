@@ -12,7 +12,13 @@ Type: `object`
 
 ##  <a name="firstName"></a>1.  Property `root > firstName`
 
-**Description**:  The person's first name.
+Type: `string`
+
+**Description:** The person's first name.
+
+Type: `string`
+
+**Description:** The person's first name.
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 00:44:54 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 21:26:33 +0100

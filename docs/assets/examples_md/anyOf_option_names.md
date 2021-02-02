@@ -8,7 +8,7 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [storage](#storage)|No|object|Yes|No| No||
+| [storage](#storage)|No|object|Yes|No| No|-|
 
 ##  <a name="storage"></a>1.  Property `root > storage`
 
@@ -24,11 +24,15 @@ Type: `object`
 
 Type: `object`
 
+Type: `object`
+
         </div>
     </div>
     <div class="card">
         <h3 class="ml-2 mt-2"><a id="storage_anyOf_i1" href="#storage_anyOf_i1">diskUUID</a></h3>
         <div class="card-body">
+
+Type: `object`
 
 Type: `object`
 
@@ -48,9 +52,11 @@ Type: `object`
 
 Type: `object`
 
+Type: `object`
+
         </div>
     </div>
 ](storage_anyOf)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 00:44:56 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 21:26:34 +0100

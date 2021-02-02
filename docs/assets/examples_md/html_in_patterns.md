@@ -15,5 +15,7 @@ Type: `string`
   Property name regular expression: 
 [`$[a-c][0-9]^&lt;a&gt;`](https://regex101.com/?regex=$[a-c][0-9]^&lt;a&gt;
 
+Type: `string`
+
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 00:44:53 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 21:26:32 +0100

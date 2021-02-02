@@ -10,8 +10,10 @@ Type: `object`
 
 ##  <a name="property1"></a>1.  Property `Hello > property1`
 
-**Description**:  Line1
+Type: `string`
+
+**Description:** Line1
 Line2
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 00:44:55 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 21:26:34 +0100

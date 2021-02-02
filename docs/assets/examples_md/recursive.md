@@ -10,7 +10,13 @@ Type: `object`
 
 ##  <a name="person"></a>1.  Property `Person > person`
 
-**Description**:  A human being
+Type: `object`
+
+**Description:** A human being
+
+Type: `object`
+
+**Description:** A human being
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -18,7 +24,9 @@ Type: `object`
 
 ###  <a name="person_children"></a>1.1.  Property `Person > person > children`
 
-**Description**:  The children they had
+Type: `array`
+
+**Description:** The children they had
 
 <table>
  	<tr>
@@ -43,4 +51,4 @@ Type: `object`
     Same definition as [person](#person)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 00:44:55 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 21:26:34 +0100
