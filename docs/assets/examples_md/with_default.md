@@ -12,6 +12,8 @@ Type: `object`
 
 ##  <a name="favorite_os"></a>1.  Property `User Preference > favorite_os`
 
+      {'depth': 1, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/with_default.json', 'path_to_element': ['favorite_os'], 'html_id': 'favorite_os', 'breadcrumb_name': 'favorite_os', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb122398be0>, 'parent_key': 'favorite_os', 'ref_path': '', 'literal': None, 'keywords': {'enum': <json_schema_for_humans.generate.SchemaNode object at 0x7fb122398190>, 'default': '"Linux"'}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
+
 Type: `enum (of string)`
          Default: `"Linux"`
 
@@ -21,6 +23,8 @@ Type: `enum (of string)`
                 * "Linux"
 
 ##  <a name="favorite_colors"></a>2.  Property `User Preference > favorite_colors`
+
+      {'depth': 1, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/with_default.json', 'path_to_element': ['favorite_colors'], 'html_id': 'favorite_colors', 'breadcrumb_name': 'favorite_colors', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb122398be0>, 'parent_key': 'favorite_colors', 'ref_path': '', 'literal': None, 'keywords': {'type': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1223984f0>, 'items': <json_schema_for_humans.generate.SchemaNode object at 0x7fb122398850>, 'default': '["white", "blue"]'}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
 
 Type: `array of enum (of string)`
          Default: `["white", "blue"]`
@@ -54,10 +58,12 @@ Type: `enum (of string)`
 
 ##  <a name="desired_number_of_shoes"></a>3.  Property `User Preference > desired_number_of_shoes`
 
+      {'depth': 1, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/with_default.json', 'path_to_element': ['desired_number_of_shoes'], 'html_id': 'desired_number_of_shoes', 'breadcrumb_name': 'desired_number_of_shoes', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb122398be0>, 'parent_key': 'desired_number_of_shoes', 'ref_path': '', 'literal': None, 'keywords': {'type': <json_schema_for_humans.generate.SchemaNode object at 0x7fb122398a90>, 'minimum': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1223982e0>, 'maximum': <json_schema_for_humans.generate.SchemaNode object at 0x7fb122398430>, 'default': '2'}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
+
 Type: `integer`
          Default: `2`
 
         Value must be greater or equal to `0` and lesser or equal to `2`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 21:26:32 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 22:00:58 +0100

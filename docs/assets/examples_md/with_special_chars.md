@@ -13,17 +13,23 @@ Type: `object`
 
 ##  <a name="pr_nom"></a>1.  Property `Personne > prénom`
 
+      {'depth': 1, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/with_special_chars.json', 'path_to_element': ['prénom'], 'html_id': 'pr_nom', 'breadcrumb_name': 'prénom', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12248e7f0>, 'parent_key': 'prénom', 'ref_path': '', 'literal': None, 'keywords': {'type': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12248ed60>, 'description': <json_schema_for_humans.generate.SchemaNode object at 0x7fb122460bb0>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
+
 Type: `string`
 
 **Description:** Le prénom de la personne.
 
 ##  <a name="nomDeFamille"></a>2.  Property `Personne > nomDeFamille`
 
+      {'depth': 1, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/with_special_chars.json', 'path_to_element': ['nomDeFamille'], 'html_id': 'nomDeFamille', 'breadcrumb_name': 'nomDeFamille', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12248e7f0>, 'parent_key': 'nomDeFamille', 'ref_path': '', 'literal': None, 'keywords': {'type': <json_schema_for_humans.generate.SchemaNode object at 0x7fb122460040>, 'description': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224600d0>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
+
 Type: `string`
 
 **Description:** Le nom de famille de la personne.
 
 ##  <a name="a_ge"></a>3.  Property `Personne > âge`
+
+      {'depth': 1, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/with_special_chars.json', 'path_to_element': ['âge'], 'html_id': 'a_ge', 'breadcrumb_name': 'âge', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12248e7f0>, 'parent_key': 'âge', 'ref_path': '', 'literal': None, 'keywords': {'description': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224609a0>, 'type': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224603d0>, 'minimum': <json_schema_for_humans.generate.SchemaNode object at 0x7fb122465940>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
 
 Type: `integer`
 
@@ -32,6 +38,8 @@ Type: `integer`
         Value must be greater or equal to `0`
 
 ##  <a name="a0_de_quoi_d_autre"></a>4.  Property `Personne > 0 de quoi d'autre`
+
+      {'depth': 1, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/with_special_chars.json', 'path_to_element': ["0 de quoi d'autre"], 'html_id': 'a0_de_quoi_d_autre', 'breadcrumb_name': "0 de quoi d'autre", 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12248e7f0>, 'parent_key': "0 de quoi d'autre", 'ref_path': '', 'literal': None, 'keywords': {'type': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224652e0>, 'examples': ['"🖖"', '"صباح الخير"', '"你好"']}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
 
 Type: `string`
 
@@ -54,4 +62,4 @@ Type: `string`
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 21:26:32 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 22:00:57 +0100

@@ -13,6 +13,8 @@ Type: `object`
 
 ##  <a name="fruits"></a>1.  Property `root > fruits`
 
+      {'depth': 1, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/array_advanced.json', 'path_to_element': ['fruits'], 'html_id': 'fruits', 'breadcrumb_name': 'fruits', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243ca00>, 'parent_key': 'fruits', 'ref_path': '', 'literal': None, 'keywords': {'type': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243ceb0>, 'description': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243cd90>, 'items': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243c250>, 'minItems': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243cdc0>, 'maxItems': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243c970>, 'uniqueItems': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243c760>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
+
 Type: `array of string`
 
 **Description:** 5 to 8 fruits that you like
@@ -37,6 +39,8 @@ Type: `array of string`
 Type: `string`
 
 ##  <a name="vegetables"></a>2.  Property `root > vegetables`
+
+      {'depth': 1, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/array_advanced.json', 'path_to_element': ['vegetables'], 'html_id': 'vegetables', 'breadcrumb_name': 'vegetables', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243ca00>, 'parent_key': 'vegetables', 'ref_path': '', 'literal': None, 'keywords': {'type': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243c580>, 'items': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243cca0>, 'contains': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243ce20>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
 
 Type: `array`
 
@@ -66,4 +70,4 @@ Type: `const`
             Specific value: `"eggplant"`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 21:26:35 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 22:01:00 +0100

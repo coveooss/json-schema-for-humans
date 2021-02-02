@@ -49,13 +49,19 @@
     {% else %}
         {# Combining: allOf, anyOf, oneOf, not #}
         {% if schema.kw_all_of %}
-            [{{ tabbed_section("allOf", schema.kw_all_of) }}]({{ schema.kw_all_of.html_id }})
+            {% with operator="allOf", title="All of(Requirement)", current_node=schema.kw_all_of %}
+                {% include "tabbed_section.html" %}
+            {% endwith %}
         {% endif %}
         {% if schema.kw_any_of %}
-            [{{ tabbed_section("anyOf", schema.kw_any_of) }}]({{ schema.kw_any_of.html_id }})
+            {% with operator="anyOf", title="Any of(Option)", current_node=schema.kw_any_of %}
+                {% include "tabbed_section.html" %}
+            {% endwith %}
         {% endif %}
         {% if schema.kw_one_of %}
-            [{{ tabbed_section("oneOf", schema.kw_one_of) }}]({{ schema.kw_one_of.html_id }})
+            {% with operator="oneOf", title="One of(Option)",current_node=schema.kw_one_of %}
+                {% include "tabbed_section.html" %}
+            {% endwith %}
         {% endif %}
         {% if schema.kw_not %}
             {% include "section_not.html" %}

@@ -2,15 +2,12 @@
 
 # Schema Docs
 
-            [[]
-<a id="allOf" href="#allOf">
-    <h2 class="handle ml-2 mt-2">
-      <label>All of</label>
-    </h2>
-</a>
-    <div class="card">
-        <h3 class="ml-2 mt-2"><a id="allOf_i0" href="#allOf_i0">Requirement 1</a></h3>
-        <div class="card-body">
+| Node | 
+| ---- |
+| [All of(Requirement) 1](#allOf_i0) |
+| [All of(Requirement) 2](#allOf_i1) |
+| [All of(Requirement) 3](#allOf_i2) |
+##  1.  Property `root > allOf > item 0`
 
 Type: `object`
 
@@ -27,6 +24,8 @@ Type: `object`
 
 ##  <a name="allOf_i0_if_country"></a>1.  Property `root > allOf > item 0 > if > country`
 
+      {'depth': 4, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/conditional_subschema_no_else.json', 'path_to_element': ['allOf', 0, 'if', 'country'], 'html_id': 'allOf_i0_if_country', 'breadcrumb_name': 'country', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224fdc10>, 'parent_key': 'country', 'ref_path': '', 'literal': None, 'keywords': {'const': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224fd4c0>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
+
 Type: `const`
 
             Specific value: `"United States of America"`
@@ -41,15 +40,13 @@ Type: `object`
 
 ##  <a name="allOf_i0_then_postal_code"></a>1.  Property `root > allOf > item 0 > then > postal_code`
 
+      {'depth': 4, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/conditional_subschema_no_else.json', 'path_to_element': ['allOf', 0, 'then', 'postal_code'], 'html_id': 'allOf_i0_then_postal_code', 'breadcrumb_name': 'postal_code', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224fd7f0>, 'parent_key': 'postal_code', 'ref_path': '', 'literal': None, 'keywords': {'pattern': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224fdd60>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
+
 Type: `object`
 
             Must match regular expression: `[0-9]{5}(-[0-9]{4})?` [Test](https://regex101.com/?regex=[0-9]{5}(-[0-9]{4})?)
 
-        </div>
-    </div>
-    <div class="card">
-        <h3 class="ml-2 mt-2"><a id="allOf_i1" href="#allOf_i1">Requirement 2</a></h3>
-        <div class="card-body">
+##  2.  Property `root > allOf > item 1`
 
 Type: `object`
 
@@ -66,6 +63,8 @@ Type: `object`
 
 ##  <a name="allOf_i1_if_country"></a>1.  Property `root > allOf > item 1 > if > country`
 
+      {'depth': 4, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/conditional_subschema_no_else.json', 'path_to_element': ['allOf', 1, 'if', 'country'], 'html_id': 'allOf_i1_if_country', 'breadcrumb_name': 'country', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224fda90>, 'parent_key': 'country', 'ref_path': '', 'literal': None, 'keywords': {'const': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224fdb50>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
+
 Type: `const`
 
             Specific value: `"Canada"`
@@ -80,15 +79,13 @@ Type: `object`
 
 ##  <a name="allOf_i1_then_postal_code"></a>1.  Property `root > allOf > item 1 > then > postal_code`
 
+      {'depth': 4, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/conditional_subschema_no_else.json', 'path_to_element': ['allOf', 1, 'then', 'postal_code'], 'html_id': 'allOf_i1_then_postal_code', 'breadcrumb_name': 'postal_code', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224fd850>, 'parent_key': 'postal_code', 'ref_path': '', 'literal': None, 'keywords': {'pattern': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224fde50>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
+
 Type: `object`
 
             Must match regular expression: `[A-Z][0-9][A-Z] [0-9][A-Z][0-9]` [Test](https://regex101.com/?regex=[A-Z][0-9][A-Z] [0-9][A-Z][0-9])
 
-        </div>
-    </div>
-    <div class="card">
-        <h3 class="ml-2 mt-2"><a id="allOf_i2" href="#allOf_i2">Requirement 3</a></h3>
-        <div class="card-body">
+##  3.  Property `root > allOf > item 2`
 
 Type: `object`
 
@@ -105,6 +102,8 @@ Type: `object`
 
 ##  <a name="allOf_i2_if_country"></a>1.  Property `root > allOf > item 2 > if > country`
 
+      {'depth': 4, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/conditional_subschema_no_else.json', 'path_to_element': ['allOf', 2, 'if', 'country'], 'html_id': 'allOf_i2_if_country', 'breadcrumb_name': 'country', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1223981c0>, 'parent_key': 'country', 'ref_path': '', 'literal': None, 'keywords': {'const': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1223982e0>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
+
 Type: `const`
 
             Specific value: `"Netherlands"`
@@ -119,13 +118,11 @@ Type: `object`
 
 ##  <a name="allOf_i2_then_postal_code"></a>1.  Property `root > allOf > item 2 > then > postal_code`
 
+      {'depth': 4, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/conditional_subschema_no_else.json', 'path_to_element': ['allOf', 2, 'then', 'postal_code'], 'html_id': 'allOf_i2_then_postal_code', 'breadcrumb_name': 'postal_code', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1223988b0>, 'parent_key': 'postal_code', 'ref_path': '', 'literal': None, 'keywords': {'pattern': <json_schema_for_humans.generate.SchemaNode object at 0x7fb122398760>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
+
 Type: `object`
 
             Must match regular expression: `[0-9]{4} [A-Z]{2}` [Test](https://regex101.com/?regex=[0-9]{4} [A-Z]{2})
-
-        </div>
-    </div>
-](allOf)
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -134,9 +131,13 @@ Type: `object`
 
 ##  <a name="street_address"></a>1.  Property `root > street_address`
 
+      {'depth': 1, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/conditional_subschema_no_else.json', 'path_to_element': ['street_address'], 'html_id': 'street_address', 'breadcrumb_name': 'street_address', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224fd370>, 'parent_key': 'street_address', 'ref_path': '', 'literal': None, 'keywords': {'type': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224fd8e0>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
+
 Type: `string`
 
 ##  <a name="country"></a>2.  Property `root > country`
+
+      {'depth': 1, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/conditional_subschema_no_else.json', 'path_to_element': ['country'], 'html_id': 'country', 'breadcrumb_name': 'country', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224fd370>, 'parent_key': 'country', 'ref_path': '', 'literal': None, 'keywords': {'enum': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224fdcd0>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
 
 Type: `enum (of string)`
 
@@ -146,4 +147,4 @@ Type: `enum (of string)`
                 * "Netherlands"
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 21:26:33 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 22:00:58 +0100
