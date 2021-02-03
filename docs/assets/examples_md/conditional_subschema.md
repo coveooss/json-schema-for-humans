@@ -14,14 +14,17 @@ Type: `object`
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [country](#if_country)|No|const|No|No| No|-|
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ##  <a name="if_country"></a>1.  Property `root > if > country`
-
-      {'depth': 2, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/conditional_subschema.json', 'path_to_element': ['if', 'country'], 'html_id': 'if_country', 'breadcrumb_name': 'country', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12248e940>, 'parent_key': 'country', 'ref_path': '', 'literal': None, 'keywords': {'const': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12248ec10>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
 
 Type: `const`
 
             Specific value: `"United States of America"`
+
+| Property | Pattern | Type | Required | Deprecated | Additional | Description |
+| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 **[Then](#tab-pane_then):**
 
@@ -30,14 +33,17 @@ Type: `object`
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [postal_code](#then_postal_code)|No|object|No|No| No|-|
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ##  <a name="then_postal_code"></a>1.  Property `root > then > postal_code`
-
-      {'depth': 2, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/conditional_subschema.json', 'path_to_element': ['then', 'postal_code'], 'html_id': 'then_postal_code', 'breadcrumb_name': 'postal_code', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12248ee20>, 'parent_key': 'postal_code', 'ref_path': '', 'literal': None, 'keywords': {'pattern': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12248eb20>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
 
 Type: `object`
 
             Must match regular expression: `[0-9]{5}(-[0-9]{4})?` [Test](https://regex101.com/?regex=[0-9]{5}(-[0-9]{4})?)
+
+| Property | Pattern | Type | Required | Deprecated | Additional | Description |
+| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 **[Else](#tab-pane_else):**
 
@@ -46,10 +52,9 @@ Type: `object`
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [postal_code](#else_postal_code)|No|object|No|No| No|-|
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ##  <a name="else_postal_code"></a>1.  Property `root > else > postal_code`
-
-      {'depth': 2, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/conditional_subschema.json', 'path_to_element': ['else', 'postal_code'], 'html_id': 'else_postal_code', 'breadcrumb_name': 'postal_code', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12248e280>, 'parent_key': 'postal_code', 'ref_path': '', 'literal': None, 'keywords': {'pattern': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12248e310>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
 
 Type: `object`
 
@@ -57,18 +62,23 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
+
+| Property | Pattern | Type | Required | Deprecated | Additional | Description |
+| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [street_address](#street_address)|No|string|No|No| No|-|
 | [country](#country)|No|enum (of string)|No|No| No|-|
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ##  <a name="street_address"></a>1.  Property `root > street_address`
 
-      {'depth': 1, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/conditional_subschema.json', 'path_to_element': ['street_address'], 'html_id': 'street_address', 'breadcrumb_name': 'street_address', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12248e910>, 'parent_key': 'street_address', 'ref_path': '', 'literal': None, 'keywords': {'type': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12248e730>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
-
 Type: `string`
 
-##  <a name="country"></a>2.  Property `root > country`
+| Property | Pattern | Type | Required | Deprecated | Additional | Description |
+| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-      {'depth': 1, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/conditional_subschema.json', 'path_to_element': ['country'], 'html_id': 'country', 'breadcrumb_name': 'country', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12248e910>, 'parent_key': 'country', 'ref_path': '', 'literal': None, 'keywords': {'enum': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12248ecd0>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
+##  <a name="country"></a>2.  Property `root > country`
 
 Type: `enum (of string)`
 
@@ -76,5 +86,9 @@ Type: `enum (of string)`
                 * "United States of America"
                 * "Canada"
 
+| Property | Pattern | Type | Required | Deprecated | Additional | Description |
+| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
+
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 22:00:57 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-03 at 22:04:47 +0100

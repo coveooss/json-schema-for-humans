@@ -32,8 +32,9 @@
 
 {% if schema.should_be_a_link(config) %}
     Same definition as [{{ schema.links_to.link_name }}](#{{ schema.links_to.html_id }})
-{% elif schema.refers_to %}
-    {% with schema=schema.refers_to_merged, skip_headers=False, base_level=base_level, level=level, depth=depth %}
+{%- elif schema.refers_to -%}
+    Defined in: {{ schema.ref_path }}
+    {%- with schema=schema.refers_to_merged, skip_headers=True, base_level=base_level, level=level, depth=depth -%}
         {% include "content.html" %}
     {% endwith %}
 {% else %}

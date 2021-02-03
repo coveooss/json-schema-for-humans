@@ -9,26 +9,29 @@ Type: `object`
 | [firstName](#firstName)|No|string|No|No| No|The person's first name.|
 | [lastName](#lastName)|No|string|No|No| No|The person's last name.|
 | [age](#age)|No|integer|No|No| No|Age in years which must be equal to or greater than zero.|
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ##  <a name="firstName"></a>1.  Property `Person > firstName`
-
-      {'depth': 1, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/basic.json', 'path_to_element': ['firstName'], 'html_id': 'firstName', 'breadcrumb_name': 'firstName', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224cfcd0>, 'parent_key': 'firstName', 'ref_path': '', 'literal': None, 'keywords': {'type': <json_schema_for_humans.generate.SchemaNode object at 0x7fb122460400>, 'description': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224601c0>, 'title': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224605b0>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
 
 Type: `string`
 
 **Description:** The person's first name.
 
-##  <a name="lastName"></a>2.  Property `Person > lastName`
+| Property | Pattern | Type | Required | Deprecated | Additional | Description |
+| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-      {'depth': 1, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/basic.json', 'path_to_element': ['lastName'], 'html_id': 'lastName', 'breadcrumb_name': 'lastName', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224cfcd0>, 'parent_key': 'lastName', 'ref_path': '', 'literal': None, 'keywords': {'type': <json_schema_for_humans.generate.SchemaNode object at 0x7fb122460af0>, 'description': <json_schema_for_humans.generate.SchemaNode object at 0x7fb122460370>, 'title': <json_schema_for_humans.generate.SchemaNode object at 0x7fb122460b50>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
+##  <a name="lastName"></a>2.  Property `Person > lastName`
 
 Type: `string`
 
 **Description:** The person's last name.
 
-##  <a name="age"></a>3.  Property `Person > age`
+| Property | Pattern | Type | Required | Deprecated | Additional | Description |
+| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-      {'depth': 1, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/basic.json', 'path_to_element': ['age'], 'html_id': 'age', 'breadcrumb_name': 'age', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb1224cfcd0>, 'parent_key': 'age', 'ref_path': '', 'literal': None, 'keywords': {'description': <json_schema_for_humans.generate.SchemaNode object at 0x7fb122460dc0>, 'type': <json_schema_for_humans.generate.SchemaNode object at 0x7fb122460640>, 'minimum': <json_schema_for_humans.generate.SchemaNode object at 0x7fb122460160>, 'title': <json_schema_for_humans.generate.SchemaNode object at 0x7fb122460e80>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
+##  <a name="age"></a>3.  Property `Person > age`
 
 Type: `integer`
 
@@ -36,5 +39,9 @@ Type: `integer`
 
         Value must be greater or equal to `0`
 
+| Property | Pattern | Type | Required | Deprecated | Additional | Description |
+| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
+
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 22:00:59 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-03 at 22:04:48 +0100

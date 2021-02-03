@@ -10,10 +10,9 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [fruits](#fruits)|No|array of string|No|No| No|5 to 8 fruits that you like|
 | [vegetables](#vegetables)|No|array|No|No| No|-|
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ##  <a name="fruits"></a>1.  Property `root > fruits`
-
-      {'depth': 1, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/array_advanced.json', 'path_to_element': ['fruits'], 'html_id': 'fruits', 'breadcrumb_name': 'fruits', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243ca00>, 'parent_key': 'fruits', 'ref_path': '', 'literal': None, 'keywords': {'type': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243ceb0>, 'description': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243cd90>, 'items': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243c250>, 'minItems': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243cdc0>, 'maxItems': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243c970>, 'uniqueItems': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243c760>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
 
 Type: `array of string`
 
@@ -38,9 +37,15 @@ Type: `array of string`
 
 Type: `string`
 
-##  <a name="vegetables"></a>2.  Property `root > vegetables`
+| Property | Pattern | Type | Required | Deprecated | Additional | Description |
+| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-      {'depth': 1, 'file': '/home/vagrant/projects/json-schema-for-humans/tests/cases/array_advanced.json', 'path_to_element': ['vegetables'], 'html_id': 'vegetables', 'breadcrumb_name': 'vegetables', 'parent': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243ca00>, 'parent_key': 'vegetables', 'ref_path': '', 'literal': None, 'keywords': {'type': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243c580>, 'items': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243cca0>, 'contains': <json_schema_for_humans.generate.SchemaNode object at 0x7fb12243ce20>}, 'array_items': [], 'links_to': None, 'refers_to': None, 'is_displayed': True, '_refers_to_merged': None, 'properties': {}, 'additional_properties': None, 'no_additional_properties': False, 'pattern_properties': {}}
+| Property | Pattern | Type | Required | Deprecated | Additional | Description |
+| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
+
+##  <a name="vegetables"></a>2.  Property `root > vegetables`
 
 Type: `array`
 
@@ -63,11 +68,22 @@ Type: `array`
 
 Type: `object`
 
+| Property | Pattern | Type | Required | Deprecated | Additional | Description |
+| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 ###  2. At least one of the items must be
 
 Type: `const`
 
             Specific value: `"eggplant"`
 
+| Property | Pattern | Type | Required | Deprecated | Additional | Description |
+| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
+
+| Property | Pattern | Type | Required | Deprecated | Additional | Description |
+| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
+
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-02 at 22:01:00 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-03 at 22:04:50 +0100
