@@ -1,4 +1,6 @@
-{% from "macro_restriction.html" import restriction with context %}
+{% macro restriction(inner_text, css_class_name, html_id) %}
+{{ inner_text }}
+{% endmacro %}
 
 {% macro writeFileReference(mdFile, context, body) %}
 Reference [mdFile](mdFile)
