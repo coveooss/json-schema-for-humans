@@ -1,6 +1,6 @@
-
-
-# Schema Docs
+# Auto generated title
+- [1. Property `root > name`](#name)
+- [2. Property `root > alignment`](#alignment)
 
 Type: `object`
 
@@ -10,7 +10,7 @@ Type: `object`
 | [alignment](#alignment)|No|string|No|No| No|a filled string|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") | - |
 
-##  <a name="name"></a>1.  Property `root > name`
+## <a name="name"></a>1. Property `root > name`
 
 Type: `string`
 
@@ -23,7 +23,7 @@ Defined in: #/definitions/filled_string
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="alignment"></a>2.  Property `root > alignment`
+## Property `root > alignment`
 
 Type: `string`
 
@@ -31,4 +31,4 @@ Type: `string`
     Same definition as [name](#name)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-03 at 22:04:46 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:05 +0100

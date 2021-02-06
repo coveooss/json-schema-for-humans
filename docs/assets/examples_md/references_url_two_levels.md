@@ -1,6 +1,7 @@
-
-
-# Schema Docs
+# Auto generated title
+- [1. Property `root > described`](#described)
+  - [1.1. Property `root > described > name`](#described_name)
+  - [1.2. Property `root > described > alignment`](#described_alignment)
 
 Type: `object`
 
@@ -11,7 +12,7 @@ Type: `object`
 | [described](#described)|No|object|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="described"></a>1.  Property `root > described`
+## <a name="described"></a>1. Property `root > described`
 
 Type: `object`
 
@@ -23,7 +24,7 @@ Defined in: https://raw.githubusercontent.com/coveooss/json-schema-for-humans/ma
 | [alignment](#described_alignment)|No|string|No|No| No|a filled string|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") | - |
 
-###  <a name="described_name"></a>1.1.  Property `root > described > name`
+### <a name="described_name"></a>1.1. Property `root > described > name`
 
 Type: `string`
 
@@ -36,7 +37,7 @@ Defined in: #/definitions/filled_string
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-###  <a name="described_alignment"></a>1.2.  Property `root > described > alignment`
+### <a name="described_alignment"></a>1.2. Property `root > described > alignment`
 
 Type: `string`
 
@@ -44,4 +45,4 @@ Type: `string`
     Same definition as [name](#described_name)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-03 at 22:04:50 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:09 +0100

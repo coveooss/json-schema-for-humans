@@ -1,6 +1,8 @@
-
-
-# Person
+# Auto generated title
+- [1. Property `Person > firstName`](#firstName)
+- [2. Property `Person > lastName`](#lastName)
+- [3. Property `Person > age`](#age)
+- [4. Property `Person > moreInfo`](#moreInfo)
 
 Type: `object`
 
@@ -12,7 +14,7 @@ Type: `object`
 | [moreInfo](#moreInfo)|No|object|No|No| No|Any more info you want as an object|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="firstName"></a>1.  Property `Person > firstName`
+## <a name="firstName"></a>1. Property `Person > firstName`
 
 Type: `string`
 
@@ -20,12 +22,12 @@ Type: `string`
 
 **Examples:** 
 
-```
+```json
     <div class="highlight"><pre><span></span><span class="s2">&quot;Guido&quot;</span>
 </pre></div>
 
 ```
-```
+```json
     <div class="highlight"><pre><span></span><span class="s2">&quot;BDFL&quot;</span>
 </pre></div>
 
@@ -35,7 +37,7 @@ Type: `string`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="lastName"></a>2.  Property `Person > lastName`
+## Property `Person > lastName`
 
 Type: `string`
 
@@ -43,7 +45,7 @@ Type: `string`
 
 **Example:** 
 
-```
+```json
     <div class="highlight"><pre><span></span><span class="s2">&quot;Van Rossum&quot;</span>
 </pre></div>
 
@@ -53,7 +55,7 @@ Type: `string`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="age"></a>3.  Property `Person > age`
+## Property `Person > age`
 
 Type: `integer`
 
@@ -63,7 +65,7 @@ Type: `integer`
 
 **Example:** 
 
-```
+```json
     <div class="highlight"><pre><span></span><span class="mi">64</span>
 </pre></div>
 
@@ -73,7 +75,7 @@ Type: `integer`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="moreInfo"></a>4.  Property `Person > moreInfo`
+## Property `Person > moreInfo`
 
 Type: `object`
 
@@ -81,7 +83,7 @@ Type: `object`
 
 **Example:** 
 
-```
+```json
     <div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;birthplace&quot;</span><span class="o">:</span> <span class="s2">&quot;Haarlem, Netherlands&quot;</span><span class="p">,</span>
     <span class="s2">&quot;favorite_emoji&quot;</span><span class="o">:</span> <span class="s2">&quot;🐍&quot;</span><span class="p">,</span>
@@ -96,4 +98,4 @@ Type: `object`
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-03 at 22:04:46 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:04 +0100

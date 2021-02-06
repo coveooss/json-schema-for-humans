@@ -1,6 +1,9 @@
-
-
-# Schema Docs
+# Auto generated title
+- [1. Property `root > billing_address`](#billing_address)
+  - [1.1. Property `root > billing_address > street_address`](#billing_address_street_address)
+  - [1.2. Property `root > billing_address > city`](#billing_address_city)
+  - [1.3. Property `root > billing_address > state`](#billing_address_state)
+- [2. Property `root > shipping_address`](#shipping_address)
 
 Type: `object`
 
@@ -10,7 +13,7 @@ Type: `object`
 | [shipping_address](#shipping_address)|No|object|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="billing_address"></a>1.  Property `root > billing_address`
+## <a name="billing_address"></a>1. Property `root > billing_address`
 
 Type: `object`
 
@@ -23,7 +26,7 @@ Defined in: #/definitions/address
 | [state](#billing_address_state)|No|string|Yes|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-###  <a name="billing_address_street_address"></a>1.1.  Property `root > billing_address > street_address`
+### <a name="billing_address_street_address"></a>1.1. Property `root > billing_address > street_address`
 
 Type: `string`
 
@@ -31,7 +34,7 @@ Type: `string`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-###  <a name="billing_address_city"></a>1.2.  Property `root > billing_address > city`
+### <a name="billing_address_city"></a>1.2. Property `root > billing_address > city`
 
 Type: `string`
 
@@ -39,7 +42,7 @@ Type: `string`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-###  <a name="billing_address_state"></a>1.3.  Property `root > billing_address > state`
+### <a name="billing_address_state"></a>1.3. Property `root > billing_address > state`
 
 Type: `string`
 
@@ -47,11 +50,11 @@ Type: `string`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="shipping_address"></a>2.  Property `root > shipping_address`
+## Property `root > shipping_address`
 
 Type: `object`
 
     Same definition as [billing_address](#billing_address)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-03 at 22:04:47 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:05 +0100

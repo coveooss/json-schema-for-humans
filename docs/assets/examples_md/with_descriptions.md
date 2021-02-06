@@ -1,6 +1,14 @@
-
-
-# Delivery Schema
+# Auto generated title
+- [1. Property `Delivery Schema > shipping_address`](#shipping_address)
+  - [1.1. Property `Delivery Schema > shipping_address > street_address`](#shipping_address_street_address)
+  - [1.2. Property `Delivery Schema > shipping_address > city`](#shipping_address_city)
+  - [1.3. Property `Delivery Schema > shipping_address > state`](#shipping_address_state)
+- [2. Property `Delivery Schema > billing_address`](#billing_address)
+- [3. Property `Delivery Schema > delivery_info`](#delivery_info)
+  - [3.1. Property `Delivery Schema > delivery_info > oneOf > classic`](#delivery_info)
+    - [3.1.1. Property `Delivery Schema > delivery_info > oneOf > item 0 > price`](#delivery_info_oneOf_i0_price)
+  - [3.2. Property `Delivery Schema > delivery_info > oneOf > gift`](#delivery_info)
+    - [3.2.1. Property `Delivery Schema > delivery_info > oneOf > item 1 > with_wrap`](#delivery_info_oneOf_i1_with_wrap)
 
 Type: `object`
 
@@ -11,7 +19,7 @@ Type: `object`
 | [delivery_info](#delivery_info)|No|object|No|No| No|Delivery info depending on the delivery type|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="shipping_address"></a>1.  Property `Delivery Schema > shipping_address`
+## <a name="shipping_address"></a>1. Property `Delivery Schema > shipping_address`
 
 Type: `object`
 
@@ -25,7 +33,7 @@ Defined in: #/definitions/address
 | [state](#shipping_address_state)|No|string|Yes|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-###  <a name="shipping_address_street_address"></a>1.1.  Property `Delivery Schema > shipping_address > street_address`
+### <a name="shipping_address_street_address"></a>1.1. Property `Delivery Schema > shipping_address > street_address`
 
 Type: `string`
 
@@ -33,7 +41,7 @@ Type: `string`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-###  <a name="shipping_address_city"></a>1.2.  Property `Delivery Schema > shipping_address > city`
+### <a name="shipping_address_city"></a>1.2. Property `Delivery Schema > shipping_address > city`
 
 Type: `string`
 
@@ -41,7 +49,7 @@ Type: `string`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-###  <a name="shipping_address_state"></a>1.3.  Property `Delivery Schema > shipping_address > state`
+### <a name="shipping_address_state"></a>1.3. Property `Delivery Schema > shipping_address > state`
 
 Type: `string`
 
@@ -49,14 +57,14 @@ Type: `string`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="billing_address"></a>2.  Property `Delivery Schema > billing_address`
+## Property `Delivery Schema > billing_address`
 
 Type: `object`
 
 **Description:** Exact address
     Same definition as [shipping_address](#shipping_address)
 
-##  <a name="delivery_info"></a>3.  Property `Delivery Schema > delivery_info`
+## Property `Delivery Schema > delivery_info`
 
 Type: `object`
 
@@ -67,8 +75,7 @@ Defined in: #/definitions/delivery_info
 | ---- |
 | [classic](#delivery_info_oneOf_i0) |
 | [gift](#delivery_info_oneOf_i1) |
-###  <a name="delivery_info"></a>3.1.  Property `Delivery Schema > delivery_info > oneOf > classic`
-
+### <a name="delivery_info"></a>3.1. Property `Delivery Schema > delivery_info > oneOf > classic`
 Type: `object`
 
 Defined in: #/definitions/classic
@@ -78,7 +85,7 @@ Defined in: #/definitions/classic
 | [price](#delivery_info_oneOf_i0_price)|No|number|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-###  <a name="delivery_info_oneOf_i0_price"></a>3.1.  Property `Delivery Schema > delivery_info > oneOf > item 0 > price`
+#### <a name="delivery_info_oneOf_i0_price"></a>3.1.1. Property `Delivery Schema > delivery_info > oneOf > item 0 > price`
 
 Type: `number`
 
@@ -86,8 +93,7 @@ Type: `number`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-###  <a name="delivery_info"></a>3.2.  Property `Delivery Schema > delivery_info > oneOf > gift`
-
+### <a name="delivery_info"></a>3.2. Property `Delivery Schema > delivery_info > oneOf > gift`
 Type: `object`
 
 **Description:** The delivery is a gift, no prices displayed
@@ -98,7 +104,7 @@ Defined in: #/definitions/gift
 | [with_wrap](#delivery_info_oneOf_i1_with_wrap)|No|boolean|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-###  <a name="delivery_info_oneOf_i1_with_wrap"></a>3.1.  Property `Delivery Schema > delivery_info > oneOf > item 1 > with_wrap`
+#### <a name="delivery_info_oneOf_i1_with_wrap"></a>3.2.1. Property `Delivery Schema > delivery_info > oneOf > item 1 > with_wrap`
 
 Type: `boolean`
 
@@ -111,4 +117,4 @@ Type: `boolean`
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-03 at 22:04:47 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:05 +0100

@@ -1,6 +1,9 @@
-
-
-# Person
+# Auto generated title
+- [1. Property `Person > firstName`](#firstName)
+- [2. Property `Person > lastName`](#lastName)
+- [3. Pattern Property `Person > paperSize`](#pattern1)
+  - [3.1. Property `Person > paperSize > rating`](#pattern1_rating)
+  - [3.2. Property `Person > paperSize > review`](#pattern1_review)
 
 Type: `object`
 
@@ -11,7 +14,7 @@ Type: `object`
 | [$[a-c][0-9]^](#pattern1)|Yes|object|No|No| No|Review of a paper size.|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="firstName"></a>1.  Property `Person > firstName`
+## <a name="firstName"></a>1. Property `Person > firstName`
 
 Type: `string`
 
@@ -21,7 +24,7 @@ Type: `string`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="lastName"></a>2.  Property `Person > lastName`
+## Property `Person > lastName`
 
 Type: `string`
 
@@ -31,8 +34,7 @@ Type: `string`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="pattern1"></a>3. Pattern Property `Person > paperSize`
-> All property whose name matches the following regular expression must respect the following conditions
+## Pattern Property `Person > paperSize`> All property whose name matches the following regular expression must respect the following conditions
   Property name regular expression: 
 [`$[a-c][0-9]^`](https://regex101.com/?regex=$[a-c][0-9]^
 
@@ -50,7 +52,7 @@ Type: `object`
 | [review](#pattern1_review)|No|string|Yes|No| No|Narrative review of the paper size.|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-###  <a name="pattern1_rating"></a>3.1.  Property `Person > paperSize > rating`
+### <a name="pattern1_rating"></a>3.1. Property `Person > paperSize > rating`
 
 Type: `integer`
 
@@ -60,7 +62,7 @@ Type: `integer`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-###  <a name="pattern1_review"></a>3.2.  Property `Person > paperSize > review`
+### <a name="pattern1_review"></a>3.2. Property `Person > paperSize > review`
 
 Type: `string`
 
@@ -71,4 +73,4 @@ Type: `string`
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-03 at 22:04:48 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:06 +0100

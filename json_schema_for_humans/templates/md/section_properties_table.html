@@ -31,7 +31,6 @@
 {# properties details #}
 {% for sub_property in schema.iterate_properties %}
   {% set html_id = sub_property.html_id %}
-  {% set title_level = base_level ~ loop.index ~ "." %} 
   {%- set title -%}
     {%- if config.show_breadcrumbs %}
       {% with schema=sub_property %}
@@ -44,9 +43,9 @@
 
   {% set description = sub_property | get_description %}
   
-  {% call heading(depth+1, title_level, html_id) -%}
+  {% filter md_heading(depth+1, html_id) -%}
     {% if sub_property.is_pattern_property %}Pattern{% endif %} Property `{{- title | escape_for_md -}}`
-  {%- endcall %}
+  {%- endfilter %}
   {% if sub_property.is_pattern_property %}
 > All property whose name matches the following regular expression must respect the following conditions
   Property name regular expression: 
@@ -59,7 +58,7 @@
 [`{{ sub_property.property_name | escape }}`](https://regex101.com/?regex={{ sub_property.property_name | escape }}
   {% endif %}
 
-  {% with schema=sub_property, skip_headers=False, base_level=title_level, level=0, depth=depth+1 %}
+  {% with schema=sub_property, skip_headers=False, depth=depth+1 %}
       {% include "content.html" %}
   {% endwith %}
 

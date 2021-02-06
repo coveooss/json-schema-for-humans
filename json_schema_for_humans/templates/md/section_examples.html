@@ -2,7 +2,7 @@
 
 {% for example in examples %}
 {% set example_id = schema.html_id ~ "_ex" ~ loop.index %}
-```
+```json
     {{ example | highlight_json_example }}
 ```
 {% endfor %}

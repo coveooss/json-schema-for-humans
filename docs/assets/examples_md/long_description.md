@@ -1,6 +1,5 @@
-
-
-# Long description
+# Auto generated title
+- [1. Property `Long description > it_s_hard_to_explain`](#it_s_hard_to_explain)
 
 Type: `object`
 
@@ -9,7 +8,7 @@ Type: `object`
 | [it_s_hard_to_explain](#it_s_hard_to_explain)|No|string|No|No| No|This property is really complicated. To explain it we need a whole lot of text,  ...|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="it_s_hard_to_explain"></a>1.  Property `Long description > it_s_hard_to_explain`
+## <a name="it_s_hard_to_explain"></a>1. Property `Long description > it_s_hard_to_explain`
 
 Type: `string`
 
@@ -20,4 +19,4 @@ Type: `string`
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-03 at 22:04:48 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:06 +0100

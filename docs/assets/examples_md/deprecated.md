@@ -1,6 +1,7 @@
-
-
-# Schema Docs
+# Auto generated title
+- [1. Property `root > deprecated1`](#deprecated1)
+- [2. Property `root > deprecated2`](#deprecated2)
+- [3. Property `root > not_deprecated`](#not_deprecated)
 
 Type: `object`
 
@@ -13,7 +14,7 @@ Type: `object`
 | [not_deprecated](#not_deprecated)|No|string|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="deprecated1"></a>1.  Property `root > deprecated1`
+## <a name="deprecated1"></a>1. Property `root > deprecated1`
 
 Type: `object`
 
@@ -23,7 +24,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="deprecated2"></a>2.  Property `root > deprecated2`
+## Property `root > deprecated2`
 
 Type: `object`
 
@@ -33,7 +34,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="not_deprecated"></a>3.  Property `root > not_deprecated`
+## Property `root > not_deprecated`
 
 Type: `string`
 
@@ -42,4 +43,4 @@ Type: `string`
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-03 at 22:04:50 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:08 +0100

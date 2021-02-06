@@ -1,6 +1,8 @@
-
-
-# Test
+# Auto generated title
+- [1. Property `Test > aProperty`](#aProperty)
+- [2. Property `Test > aDictPropertyARequired`](#aDictPropertyARequired)
+  - [2.1. Property `Test > aDictPropertyARequired > a`](#aDictPropertyARequired_a)
+  - [2.2. Property `Test > aDictPropertyARequired > b`](#aDictPropertyARequired_b)
 
 Type: `object`
 
@@ -10,7 +12,7 @@ Type: `object`
 | [aDictPropertyARequired](#aDictPropertyARequired)|No|object|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="aProperty"></a>1.  Property `Test > aProperty`
+## <a name="aProperty"></a>1. Property `Test > aProperty`
 
 Type: `enum (of string)`
          Default: `"Default from property"`
@@ -26,7 +28,7 @@ Defined in: #/definitions/aProperty
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="aDictPropertyARequired"></a>2.  Property `Test > aDictPropertyARequired`
+## Property `Test > aDictPropertyARequired`
 
 Type: `object`
          Default: `{"a": "a", "b": "b"}`
@@ -39,7 +41,7 @@ Defined in: #/definitions/aDictProperty
 | [b](#aDictPropertyARequired_b)|No|string|Yes|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-###  <a name="aDictPropertyARequired_a"></a>2.1.  Property `Test > aDictPropertyARequired > a`
+### <a name="aDictPropertyARequired_a"></a>2.1. Property `Test > aDictPropertyARequired > a`
 
 Type: `string`
 
@@ -47,7 +49,7 @@ Type: `string`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-###  <a name="aDictPropertyARequired_b"></a>2.2.  Property `Test > aDictPropertyARequired > b`
+### <a name="aDictPropertyARequired_b"></a>2.2. Property `Test > aDictPropertyARequired > b`
 
 Type: `string`
 
@@ -56,4 +58,4 @@ Type: `string`
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-03 at 22:04:48 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:06 +0100

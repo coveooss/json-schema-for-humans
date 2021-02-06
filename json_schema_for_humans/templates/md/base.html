@@ -1,24 +1,29 @@
-{% macro restriction(inner_text, css_class_name, html_id) %}
+{%- macro restriction(inner_text, css_class_name, html_id) -%}
 {{ inner_text }}
-{% endmacro %}
+{%- endmacro -%}
 
-{% macro writeFileReference(mdFile, context, body) %}
+{%- macro writeFileReference(mdFile, context, body) -%}
 Reference [mdFile](mdFile)
-{% endmacro %}
+{%- endmacro -%}
 
-{% macro heading(depth, title_level, html_id=False) %}
-{{ "#" | repeat_str(depth) }} {{ " " }} {%- if html_id -%}<a name="{{ html_id }}"></a>{%- endif -%} {{ title_level }} {{ caller() }}
-{% endmacro %}
-
-{% set title = schema.keywords.get("title") %}
-{% if title %}
-    {% set title = title.literal %}
-{% endif %}
-{% if title %}# {{ title }}{% else %}# Schema Docs{% endif %}
-
-{% with schema=schema, skip_headers=False, base_level="", level=0, depth=0 %}
+{% set depth = 0 %}
+{% filter md_heading(depth) %}
+    {% set title = schema.keywords.get("title") %}
+    {% if title %}
+        {% set title = title.literal %}
+    {% else %}
+        {% set title = "Schema Docs" %}
+    {% endif %}
+{% endfilter %}
+{% set contentBase %}
+{% with schema=schema, skip_headers=False, depth=depth %}
     {% include "content.html" %}
 {% endwith %}
+{% endset %}
+
+{{ md_get_toc() }}
+
+{{ contentBase }}
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on {{ get_local_time() }}

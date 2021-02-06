@@ -14,14 +14,14 @@
 </table>
 
 {% if schema.kw_items %}
-{%- call heading(depth+1, title_level, false) -%}Each item of this array must be{%- endcall -%}
-{% with schema=schema.kw_items, skip_headers=False, base_level=base_level, level=level, depth=depth %}
+{{ "Each item of this array must be" | md_heading(depth+1) }}
+{% with schema=schema.kw_items, skip_headers=False, depth=depth+1 %}
     {% include "content.html" %}
 {% endwith %}
 {% endif %}
 {% if schema.kw_contains and schema.kw_contains.literal != {} %}
-{%- call heading(depth+1, title_level, false) -%}At least one of the items must be{%- endcall -%}
-{% with schema=schema.kw_contains, skip_headers=False, base_level=base_level, level=level, depth=depth %}
+{{ "At least one of the items must be" | md_heading(depth) }}
+{% with schema=schema.kw_contains, skip_headers=False, depth=depth+1 %}
     {% include "content.html" %}
 {% endwith %}
 {% endif %}

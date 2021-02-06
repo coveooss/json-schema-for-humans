@@ -1,6 +1,5 @@
-
-
-# Schema Docs
+# Auto generated title
+- [1. Pattern Property `root > $[a-c][0-9]^<a>`](#pattern1)
 
 Type: `string`
 
@@ -11,8 +10,7 @@ Type: `string`
 | [$[a-c][0-9]^<a>](#pattern1)|Yes|string|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="pattern1"></a>1. Pattern Property `root > $[a-c][0-9]^<a>`
-> All property whose name matches the following regular expression must respect the following conditions
+## <a name="pattern1"></a>1. Pattern Property `root > $[a-c][0-9]^<a>`> All property whose name matches the following regular expression must respect the following conditions
   Property name regular expression: 
 [`$[a-c][0-9]^&lt;a&gt;`](https://regex101.com/?regex=$[a-c][0-9]^&lt;a&gt;
 
@@ -27,4 +25,4 @@ Type: `string`
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-03 at 22:04:47 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:05 +0100

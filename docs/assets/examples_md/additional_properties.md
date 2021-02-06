@@ -1,6 +1,11 @@
-
-
-# Person
+# Auto generated title
+- [1. Property `Person > subType1`](#subType1)
+  - [1.1. Property `Person > subType1 > subProp1`](#subType1_subProp1)
+- [2. Property `Person > subType2`](#subType2)
+  - [2.1. Property `Person > subType2 > subProp2`](#subType2_subProp2)
+  - [2.2. Property `Person > subType2 > additionalProperties`](#subType2_additionalProperties)
+- [3. Property `Person > additionalProperties`](#additionalProperties)
+  - [3.1. Property `Person > additionalProperties > propA`](#additionalProperties_propA)
 
 Type: `object`
 
@@ -10,7 +15,7 @@ Type: `object`
 | [subType2](#subType2)|No|object|No|No| No|A sub type with additionalProperties true.|
 | [additionalProperties](#additionalProperties)|No|object|No|No|  [![made-with-Markdown](https://img.shields.io/badge/Should-conform-blue)](#additionalProperties "Each additional property must conform to the following schema")|additionalProperties schema.|
 
-##  <a name="subType1"></a>1.  Property `Person > subType1`
+## <a name="subType1"></a>1. Property `Person > subType1`
 
 Type: `object`
 
@@ -21,7 +26,7 @@ Type: `object`
 | [subProp1](#subType1_subProp1)|No|number|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") | - |
 
-###  <a name="subType1_subProp1"></a>1.1.  Property `Person > subType1 > subProp1`
+### <a name="subType1_subProp1"></a>1.1. Property `Person > subType1 > subProp1`
 
 Type: `number`
 
@@ -29,7 +34,7 @@ Type: `number`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="subType2"></a>2.  Property `Person > subType2`
+## Property `Person > subType2`
 
 Type: `object`
 
@@ -40,7 +45,7 @@ Type: `object`
 | [subProp2](#subType2_subProp2)|No|number|No|No| No|-|
 | [additionalProperties](#subType2_additionalProperties)|No|object|No|No|  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|-|
 
-###  <a name="subType2_subProp2"></a>2.1.  Property `Person > subType2 > subProp2`
+### <a name="subType2_subProp2"></a>2.1. Property `Person > subType2 > subProp2`
 
 Type: `number`
 
@@ -48,7 +53,7 @@ Type: `number`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-###  <a name="subType2_additionalProperties"></a>2.2.  Property `Person > subType2 > additionalProperties`
+### <a name="subType2_additionalProperties"></a>2.2. Property `Person > subType2 > additionalProperties`
 
 Type: `object`
 
@@ -56,7 +61,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="additionalProperties"></a>3.  Property `Person > additionalProperties`
+## Property `Person > additionalProperties`
 
 Type: `object`
 
@@ -67,7 +72,7 @@ Type: `object`
 | [propA](#additionalProperties_propA)|No|number|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-###  <a name="additionalProperties_propA"></a>3.1.  Property `Person > additionalProperties > propA`
+### <a name="additionalProperties_propA"></a>3.1. Property `Person > additionalProperties > propA`
 
 Type: `number`
 
@@ -76,4 +81,4 @@ Type: `number`
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-03 at 22:04:50 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:08 +0100

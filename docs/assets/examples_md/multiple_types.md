@@ -1,6 +1,8 @@
-
-
-# Person
+# Auto generated title
+- [1. Property `Person > firstName`](#firstName)
+- [2. Property `Person > lastName`](#lastName)
+- [3. Property `Person > age`](#age)
+- [4. Property `Person > anything`](#anything)
 
 Type: `object`
 
@@ -12,7 +14,7 @@ Type: `object`
 | [anything](#anything)|No|integer, string, number or null|No|No| No|Ay other info you like|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="firstName"></a>1.  Property `Person > firstName`
+## <a name="firstName"></a>1. Property `Person > firstName`
 
 Type: `string`
 
@@ -22,7 +24,7 @@ Type: `string`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="lastName"></a>2.  Property `Person > lastName`
+## Property `Person > lastName`
 
 Type: `string or null`
 
@@ -32,7 +34,7 @@ Type: `string or null`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="age"></a>3.  Property `Person > age`
+## Property `Person > age`
 
 Type: `integer or number`
 
@@ -42,7 +44,7 @@ Type: `integer or number`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="anything"></a>4.  Property `Person > anything`
+## Property `Person > anything`
 
 Type: `integer, string, number or null`
 
@@ -53,4 +55,4 @@ Type: `integer, string, number or null`
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-03 at 22:04:49 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:07 +0100

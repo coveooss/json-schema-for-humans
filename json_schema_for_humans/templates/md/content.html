@@ -8,9 +8,7 @@
 #}
 {# context parameters default values #}
 {% set skip_headers = skip_headers or False %}
-{% set base_level = base_level or "" %}
-{% set level = level or 0 %}
-{% set depth = depth or 1 %}
+{% set depth = depth or 0 %}
 {# end context parameters #}
 
 {% set keys = schema.keywords %}
@@ -34,17 +32,17 @@
     Same definition as [{{ schema.links_to.link_name }}](#{{ schema.links_to.html_id }})
 {%- elif schema.refers_to -%}
     Defined in: {{ schema.ref_path }}
-    {%- with schema=schema.refers_to_merged, skip_headers=True, base_level=base_level, level=level, depth=depth -%}
+    {%- with schema=schema.refers_to_merged, skip_headers=True, depth=depth -%}
         {% include "content.html" %}
     {% endwith %}
 {% else %}
     {# Handle having oneOf or allOf with only one condition #}
     {% if schema.kw_all_of and (schema.kw_all_of.array_items | length) == 1 %}
-        {% with schema=schema.kw_all_of.array_items[0], skip_headers=False, base_level=base_level, level=level, depth=depth %}
+        {% with schema=schema.kw_all_of.array_items[0], skip_headers=False, depth=depth+1 %}
             {% include "content.html" %}
         {% endwith %}
     {% elif schema.kw_any_of and (schema.kw_any_of.array_items | length) == 1 %}
-        {% with schema=schema.kw_any_of.array_items[0], skip_headers=False, base_level=base_level, level=level, depth=depth %}
+        {% with schema=schema.kw_any_of.array_items[0], skip_headers=False, depth=depth+1 %}
             {% include "content.html" %}
         {% endwith %}
     {% else %}
@@ -87,7 +85,9 @@
         {% endif %}
         {# Conditional subschema, or if-then-else section #}
         {% if schema.has_conditional %}
-            {% include "section_conditional_subschema.html" %}
+            {% with skip_headers=False, depth=depth+1 %}
+                {% include "section_conditional_subschema.html" %}
+            {% endwith %}
         {% endif %}
 
         {# Required properties that are not defined under "properties". They will only be listed #}

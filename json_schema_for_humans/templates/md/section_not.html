@@ -1,4 +1,4 @@
-#### Must **not** be
-{% with schema=schema.kw_not, skip_headers=False, base_level=base_level, level=level, depth=depth %}
+{{ "Must **not** be" | md_heading(depth+1) }}
+{% with schema=schema.kw_not, skip_headers=False, depth=depth+1 %}
     {% include "content.html" %}
 {% endwith %}

@@ -1,6 +1,9 @@
-
-
-# Schema Docs
+# Auto generated title
+- [1. Property `root > storage`](#storage)
+  - [1.1. Property `root > storage > oneOf > diskDevice`](#storage)
+  - [1.2. Property `root > storage > oneOf > diskUUID`](#storage)
+  - [1.3. Property `root > storage > oneOf > nfs`](#storage)
+  - [1.4. Property `root > storage > oneOf > tmpfs`](#storage)
 
 Type: `object`
 
@@ -11,7 +14,7 @@ Type: `object`
 | [storage](#storage)|No|object|Yes|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="storage"></a>1.  Property `root > storage`
+## <a name="storage"></a>1. Property `root > storage`
 
 | Node | 
 | ---- |
@@ -19,8 +22,7 @@ Type: `object`
 | [diskUUID](#storage_oneOf_i1) |
 | [nfs](#storage_oneOf_i2) |
 | [tmpfs](#storage_oneOf_i3) |
-###  <a name="storage"></a>1.1.  Property `root > storage > oneOf > diskDevice`
-
+### <a name="storage"></a>1.1. Property `root > storage > oneOf > diskDevice`
 Type: `object`
 
 Defined in: #/definitions/diskDevice
@@ -28,8 +30,7 @@ Defined in: #/definitions/diskDevice
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
-###  <a name="storage"></a>1.2.  Property `root > storage > oneOf > diskUUID`
-
+### <a name="storage"></a>1.2. Property `root > storage > oneOf > diskUUID`
 Type: `object`
 
 Defined in: #/definitions/diskUUID
@@ -37,8 +38,7 @@ Defined in: #/definitions/diskUUID
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
-###  <a name="storage"></a>1.3.  Property `root > storage > oneOf > nfs`
-
+### <a name="storage"></a>1.3. Property `root > storage > oneOf > nfs`
 Type: `object`
 
 Defined in: #/definitions/nfs
@@ -46,8 +46,7 @@ Defined in: #/definitions/nfs
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
-###  <a name="storage"></a>1.4.  Property `root > storage > oneOf > tmpfs`
-
+### <a name="storage"></a>1.4. Property `root > storage > oneOf > tmpfs`
 Type: `object`
 
 Defined in: #/definitions/tmpfs
@@ -61,4 +60,4 @@ Defined in: #/definitions/tmpfs
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-03 at 22:04:49 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:07 +0100

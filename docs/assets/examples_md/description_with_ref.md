@@ -1,6 +1,7 @@
-
-
-# Schema Docs
+# Auto generated title
+- [1. Property `root > outer`](#outer)
+  - [1.1. Property `root > outer > inner`](#outer_inner)
+- [2. Property `root > outer2`](#outer2)
 
 Type: `object`
 
@@ -10,7 +11,7 @@ Type: `object`
 | [outer2](#outer2)|No|object|No|No| No|We should see this too|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") | - |
 
-##  <a name="outer"></a>1.  Property `root > outer`
+## <a name="outer"></a>1. Property `root > outer`
 
 Type: `object`
 
@@ -22,7 +23,7 @@ Defined in: #/definitions/inner schema
 | [inner](#outer_inner)|No|string|Yes|No| No|inner description|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") | - |
 
-###  <a name="outer_inner"></a>1.1.  Property `root > outer > inner`
+### <a name="outer_inner"></a>1.1. Property `root > outer > inner`
 
 Type: `string`
 
@@ -32,7 +33,7 @@ Type: `string`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-##  <a name="outer2"></a>2.  Property `root > outer2`
+## Property `root > outer2`
 
 Type: `object`
 
@@ -40,4 +41,4 @@ Type: `object`
     Same definition as [outer](#outer)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-03 at 22:04:48 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:06 +0100
