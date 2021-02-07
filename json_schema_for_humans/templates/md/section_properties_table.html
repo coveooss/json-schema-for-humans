@@ -30,6 +30,10 @@
 
 {# properties details #}
 {% for sub_property in schema.iterate_properties %}
+  {%- if sub_property.is_additional_properties and not sub_property.is_additional_properties_schema -%}
+    {% continue %}
+  {% endif %}
+
   {% set html_id = sub_property.html_id %}
   {%- set title -%}
     {%- if config.show_breadcrumbs %}
@@ -58,8 +62,9 @@
 [`{{ sub_property.property_name | escape }}`](https://regex101.com/?regex={{ sub_property.property_name | escape }}
   {% endif %}
 
+
   {% with schema=sub_property, skip_headers=False, depth=depth+1 %}
-      {% include "content.html" %}
+    {% include "content.html" %}
   {% endwith %}
 
 {% endfor %}

@@ -1,4 +1,5 @@
-# Auto generated title
+# Schema Docs
+
 - [1. Property `root > name`](#name)
 - [2. Property `root > alignment`](#alignment)
 
@@ -19,16 +20,12 @@ Defined in: #/definitions/filled_string
 
         Must be at least `1` characters long
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
-
 ## Property `root > alignment`
 
 Type: `string`
 
 **Description:** a filled string
-    Same definition as [name](#name)
+Same definition as [name](#name)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:05 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:48 +0100

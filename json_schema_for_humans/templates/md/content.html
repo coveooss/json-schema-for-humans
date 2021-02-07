@@ -20,17 +20,17 @@
 
     {# Display default #}
     {% set default_value = schema.default_value %}
-    {% if default_value %}
-        {{ " " }}Default: `{{ default_value }}`
+    {% if default_value -%}
+        Default: `{{ default_value }}`
     {% endif %}
 
     {% set description = (schema | get_description) %}
     {% include "section_description.html" %}
 {% endif %}
 
-{% if schema.should_be_a_link(config) %}
+{% if schema.should_be_a_link(config) -%}
     Same definition as [{{ schema.links_to.link_name }}](#{{ schema.links_to.html_id }})
-{%- elif schema.refers_to -%}
+{% elif schema.refers_to -%}
     Defined in: {{ schema.ref_path }}
     {%- with schema=schema.refers_to_merged, skip_headers=True, depth=depth -%}
         {% include "content.html" %}
@@ -46,6 +46,11 @@
             {% include "content.html" %}
         {% endwith %}
     {% else %}
+        {# Properties, pattern properties, additional properties #}
+        {% if schema.type_name == "object" %}
+        {% include "section_properties_table.html" %}
+        {% endif %}
+        
         {# Combining: allOf, anyOf, oneOf, not #}
         {% if schema.kw_all_of %}
             {% with operator="allOf", title="All of(Requirement)", current_node=schema.kw_all_of %}
@@ -67,15 +72,12 @@
         {% endif %}
 
         {# Enum and const #}
-        {% if schema.kw_enum %}
-            Must be one of:
-            {% for enum_choice in schema.kw_enum.array_items %}
-                * {{ enum_choice.literal | python_to_json }}
-            {% endfor %}
-        {% endif %}
-        {% if schema.kw_const %}
+        {% if schema.kw_enum -%}
+            {% include "section_one_of.html" %}
+        {%- endif %}
+        {%- if schema.kw_const -%}
             Specific value: `{{ schema.kw_const.literal | python_to_json }}`
-        {% endif %}
+        {%- endif -%}
 
         {# Pattern (Regular Expression) #}
         {% if schema.kw_pattern and schema.examples|length %}
@@ -106,8 +108,5 @@
         {% if examples %}
             {% include "section_examples.html" %}
         {% endif %}
-
-        {# Properties, pattern properties, additional properties #}
-        {% include "section_properties_table.html" %}
     {% endif %}
 {% endif %}

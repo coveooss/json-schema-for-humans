@@ -1,9 +1,9 @@
-# Auto generated title
+# Person
+
 - [1. Property `Person > subType1`](#subType1)
   - [1.1. Property `Person > subType1 > subProp1`](#subType1_subProp1)
 - [2. Property `Person > subType2`](#subType2)
   - [2.1. Property `Person > subType2 > subProp2`](#subType2_subProp2)
-  - [2.2. Property `Person > subType2 > additionalProperties`](#subType2_additionalProperties)
 - [3. Property `Person > additionalProperties`](#additionalProperties)
   - [3.1. Property `Person > additionalProperties > propA`](#additionalProperties_propA)
 
@@ -20,7 +20,6 @@ Type: `object`
 Type: `object`
 
 **Description:** A sub type with additionalProperties false.
-
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [subProp1](#subType1_subProp1)|No|number|No|No| No|-|
@@ -30,16 +29,11 @@ Type: `object`
 
 Type: `number`
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
-
 ## Property `Person > subType2`
 
 Type: `object`
 
 **Description:** A sub type with additionalProperties true.
-
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [subProp2](#subType2_subProp2)|No|number|No|No| No|-|
@@ -49,24 +43,11 @@ Type: `object`
 
 Type: `number`
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
-
-### <a name="subType2_additionalProperties"></a>2.2. Property `Person > subType2 > additionalProperties`
-
-Type: `object`
-
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
-
 ## Property `Person > additionalProperties`
 
 Type: `object`
 
 **Description:** additionalProperties schema.
-
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [propA](#additionalProperties_propA)|No|number|No|No| No|-|
@@ -76,9 +57,5 @@ Type: `object`
 
 Type: `number`
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
-
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:08 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:51 +0100

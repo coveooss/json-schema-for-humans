@@ -6,9 +6,9 @@
         {{ restriction("Must be at most `" ~ schema.kw_max_length.literal ~ "` characters long", "max-length", schema.kw_max_length.html_id) }}
     {% endif %}
 {% endif %}
-{% if type_name in ["integer", "number"] %}
+{%- if type_name in ["integer", "number"] -%}
     {% set restriction_text = (schema | get_numeric_restrictions_text("`", "`")) %}
-    {% if restriction_text %}
-        {{ restriction(schema | get_numeric_restrictions_text("`", "`"), "numeric", schema.html_id ~ "_number") }}
+    {%- if restriction_text -%}
+        {{ restriction(restriction_text, "numeric", schema.html_id ~ "_number") }}
     {% endif %}
 {% endif %}

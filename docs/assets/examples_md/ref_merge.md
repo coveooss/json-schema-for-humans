@@ -1,4 +1,5 @@
-# Auto generated title
+# Test
+
 - [1. Property `Test > aProperty`](#aProperty)
 - [2. Property `Test > aDictPropertyARequired`](#aDictPropertyARequired)
   - [2.1. Property `Test > aDictPropertyARequired > a`](#aDictPropertyARequired_a)
@@ -15,23 +16,19 @@ Type: `object`
 ## <a name="aProperty"></a>1. Property `Test > aProperty`
 
 Type: `enum (of string)`
-         Default: `"Default from property"`
+Default: `"Default from property"`
 
 **Description:** This is the description from the definition
 Defined in: #/definitions/aProperty
 
-            Must be one of:
-                * "value1"
-                * "value2"
-
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
+Must be one of:
+* "value1"
+* "value2"
 
 ## Property `Test > aDictPropertyARequired`
 
 Type: `object`
-         Default: `{"a": "a", "b": "b"}`
+Default: `{"a": "a", "b": "b"}`
 
 Defined in: #/definitions/aDictProperty
 
@@ -45,17 +42,9 @@ Defined in: #/definitions/aDictProperty
 
 Type: `string`
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
-
 ### <a name="aDictPropertyARequired_b"></a>2.2. Property `Test > aDictPropertyARequired > b`
 
 Type: `string`
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
-
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:06 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:50 +0100

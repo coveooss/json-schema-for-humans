@@ -1,4 +1,5 @@
-# Auto generated title
+# Schema Docs
+
 - [1. Property `root > deprecated1`](#deprecated1)
 - [2. Property `root > deprecated2`](#deprecated2)
 - [3. Property `root > not_deprecated`](#not_deprecated)
@@ -6,7 +7,6 @@
 Type: `object`
 
 **Description:** Test schema with deprecated in description
-
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [deprecated1](#deprecated1)|No|object|No|No| No|[Deprecated]|
@@ -19,7 +19,6 @@ Type: `object`
 Type: `object`
 
 **Description:** [Deprecated]
-
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
@@ -29,7 +28,6 @@ Type: `object`
 Type: `object`
 
 **Description:** [Deprecated - Use `not_deprecated` instead]
-
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
@@ -38,9 +36,5 @@ Type: `object`
 
 Type: `string`
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
-
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:08 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:51 +0100

@@ -1,4 +1,5 @@
-# Auto generated title
+# Schema Docs
+
 - [1. Property `root > storage`](#storage)
   - [1.1. Property `root > storage > anyOf > diskDevice`](#storage)
   - [1.2. Property `root > storage > anyOf > diskUUID`](#storage)
@@ -8,7 +9,6 @@
 Type: `object`
 
 **Description:** JSON Schema for an fstab entry
-
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [storage](#storage)|No|object|Yes|No| No|-|
@@ -16,7 +16,11 @@ Type: `object`
 
 ## <a name="storage"></a>1. Property `root > storage`
 
-| Node | 
+| Property | Pattern | Type | Required | Deprecated | Additional | Description |
+| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
+
+| Any of(Option) | 
 | ---- |
 | [diskDevice](#storage_anyOf_i0) |
 | [diskUUID](#storage_anyOf_i1) |
@@ -30,6 +34,7 @@ Defined in: #/definitions/diskDevice
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
+
 ### <a name="storage"></a>1.2. Property `root > storage > anyOf > diskUUID`
 Type: `object`
 
@@ -38,12 +43,14 @@ Defined in: #/definitions/diskUUID
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
+
 ### <a name="storage"></a>1.3. Property `root > storage > anyOf > item 2`
 Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
+
 ### <a name="storage"></a>1.4. Property `root > storage > anyOf > tmpfs`
 Type: `object`
 
@@ -53,9 +60,5 @@ Defined in: #/definitions/tmpfs
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
-
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:07 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:50 +0100

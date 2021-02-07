@@ -1,4 +1,5 @@
-# Auto generated title
+# Circular reference Schema
+
 - [1. Property `Circular reference Schema > person`](#person)
   - [1.1. Property `Circular reference Schema > person > a1`](#person_a1)
 
@@ -23,7 +24,7 @@ Defined in: #/definitions/a
 ### <a name="person_a1"></a>1.1. Property `Circular reference Schema > person > a1`
 
 Type: `string`
-         Default: `"Default from c"`
+Default: `"Default from c"`
 
 **Description:** Description from b
 Defined in: #/definitions/b
@@ -32,9 +33,5 @@ Defined in: #/definitions/c
 
 Defined in: #/definitions/a/properties/a1
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
-
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:06 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:49 +0100

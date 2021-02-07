@@ -1,4 +1,5 @@
-# Auto generated title
+# Schema Docs
+
 - [1. Property `root > described`](#described)
   - [1.1. Property `root > described > name`](#described_name)
   - [1.2. Property `root > described > alignment`](#described_alignment)
@@ -6,7 +7,6 @@
 Type: `object`
 
 **Description:** Testing $ref of a remote $ref
-
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [described](#described)|No|object|No|No| No|-|
@@ -33,16 +33,12 @@ Defined in: #/definitions/filled_string
 
         Must be at least `1` characters long
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
-
 ### <a name="described_alignment"></a>1.2. Property `root > described > alignment`
 
 Type: `string`
 
 **Description:** a filled string
-    Same definition as [name](#described_name)
+Same definition as [name](#described_name)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:09 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:51 +0100

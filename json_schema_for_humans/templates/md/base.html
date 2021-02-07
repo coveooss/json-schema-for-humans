@@ -7,14 +7,7 @@ Reference [mdFile](mdFile)
 {%- endmacro -%}
 
 {% set depth = 0 %}
-{% filter md_heading(depth) %}
-    {% set title = schema.keywords.get("title") %}
-    {% if title %}
-        {% set title = title.literal %}
-    {% else %}
-        {% set title = "Schema Docs" %}
-    {% endif %}
-{% endfilter %}
+{{ schema.keywords.get("title").literal | default("Schema Docs") | md_heading(depth) }}
 {% set contentBase %}
 {% with schema=schema, skip_headers=False, depth=depth %}
     {% include "content.html" %}

@@ -1,4 +1,5 @@
-# Auto generated title
+# Person
+
 - [1. Property `Person > firstName`](#firstName)
 - [2. Property `Person > lastName`](#lastName)
 - [3. Pattern Property `Person > paperSize`](#pattern1)
@@ -20,19 +21,11 @@ Type: `string`
 
 **Description:** The person's first name.
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
-
 ## Property `Person > lastName`
 
 Type: `string`
 
 **Description:** The person's last name.
-
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ## Pattern Property `Person > paperSize`> All property whose name matches the following regular expression must respect the following conditions
   Property name regular expression: 
@@ -45,7 +38,6 @@ Type: `string`
 Type: `object`
 
 **Description:** Review of a paper size.
-
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [rating](#pattern1_rating)|No|integer|Yes|No| No|Numerical rating for paper size.|
@@ -58,19 +50,11 @@ Type: `integer`
 
 **Description:** Numerical rating for paper size.
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
-
 ### <a name="pattern1_review"></a>3.2. Property `Person > paperSize > review`
 
 Type: `string`
 
 **Description:** Narrative review of the paper size.
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
-
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:06 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:50 +0100

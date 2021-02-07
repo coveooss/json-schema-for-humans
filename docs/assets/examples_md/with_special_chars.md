@@ -1,4 +1,5 @@
-# Auto generated title
+# Personne
+
 - [1. Property `Personne > prénom`](#pr_nom)
 - [2. Property `Personne > nomDeFamille`](#nomDeFamille)
 - [3. Property `Personne > âge`](#a_ge)
@@ -20,19 +21,11 @@ Type: `string`
 
 **Description:** Le prénom de la personne.
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
-
 ## Property `Personne > nomDeFamille`
 
 Type: `string`
 
 **Description:** Le nom de famille de la personne.
-
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ## Property `Personne > âge`
 
@@ -40,11 +33,7 @@ Type: `integer`
 
 **Description:** L'âge en années qui doit être plus grand ou égal à 0.
 
-        Value must be greater or equal to `0`
-
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
+Value must be greater or equal to `0`
 
 ## Property `Personne > 0 de quoi d'autre`
 
@@ -53,24 +42,14 @@ Type: `string`
 **Examples:** 
 
 ```json
-    <div class="highlight"><pre><span></span><span class="s2">&quot;🖖&quot;</span>
-</pre></div>
-
+"🖖"
 ```
 ```json
-    <div class="highlight"><pre><span></span><span class="s2">&quot;صباح الخير&quot;</span>
-</pre></div>
-
+"صباح الخير"
 ```
 ```json
-    <div class="highlight"><pre><span></span><span class="s2">&quot;你好&quot;</span>
-</pre></div>
-
+"你好"
 ```
-
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:05 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:48 +0100

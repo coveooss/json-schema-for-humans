@@ -1,4 +1,5 @@
-# Auto generated title
+# Person
+
 - [1. Property `Person > firstName`](#firstName)
 - [2. Property `Person > lastName`](#lastName)
 - [3. Property `Person > age`](#age)
@@ -18,19 +19,11 @@ Type: `string`
 
 **Description:** The person's first name.
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
-
 ## Property `Person > lastName`
 
 Type: `string`
 
 **Description:** The person's last name.
-
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ## Property `Person > age`
 
@@ -38,11 +31,7 @@ Type: `integer`
 
 **Description:** Age in years which must be equal to or greater than zero.
 
-        Value must be greater or equal to `0`
-
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
+Value must be greater or equal to `0`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:06 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:50 +0100

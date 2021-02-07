@@ -1,4 +1,5 @@
-# Auto generated title
+# Schema Docs
+
 - [1. Property `root > a`](#a)
 - [2. Property `root > b`](#b)
 
@@ -13,7 +14,7 @@ Type: `object`
 ## <a name="a"></a>1. Property `root > a`
 
 Type: `object`
-         Default: `"Default from a"`
+Default: `"Default from a"`
 
 **Description:** Description of a
 Defined in: #/definitions/common
@@ -25,10 +26,10 @@ Defined in: #/definitions/common
 ## Property `root > b`
 
 Type: `object`
-         Default: `"Default from b"`
+Default: `"Default from b"`
 
 **Description:** A common description
-    Same definition as [a](#a)
+Same definition as [a](#a)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-06 at 22:16:04 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:48 +0100
