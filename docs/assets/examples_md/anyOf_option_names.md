@@ -1,10 +1,10 @@
 # Schema Docs
 
 - [1. Property `root > storage`](#storage)
-  - [1.1. Property `root > storage > anyOf > diskDevice`](#storage)
-  - [1.2. Property `root > storage > anyOf > diskUUID`](#storage)
-  - [1.3. Property `root > storage > anyOf > item 2`](#storage)
-  - [1.4. Property `root > storage > anyOf > tmpfs`](#storage)
+  - [1.1. Property `root > storage > anyOf > diskDevice`](#storage_anyOf_i0)
+  - [1.2. Property `root > storage > anyOf > diskUUID`](#storage_anyOf_i1)
+  - [1.3. Property `root > storage > anyOf > item 2`](#storage_anyOf_i2)
+  - [1.4. Property `root > storage > anyOf > tmpfs`](#storage_anyOf_i3)
 
 Type: `object`
 
@@ -25,9 +25,9 @@ Type: `object`
 | ---- |
 | [diskDevice](#storage_anyOf_i0) |
 | [diskUUID](#storage_anyOf_i1) |
-| [Any of(Option) 3](#storage_anyOf_i2) |
+| [item 2](#storage_anyOf_i2) |
 | [tmpfs](#storage_anyOf_i3) |
-### <a name="storage"></a>1.1. Property `root > storage > anyOf > diskDevice`
+### <a name="storage_anyOf_i0"></a>1.1. Property `root > storage > anyOf > diskDevice`
 Type: `object`
 
 Defined in: #/definitions/diskDevice
@@ -36,7 +36,7 @@ Defined in: #/definitions/diskDevice
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-### <a name="storage"></a>1.2. Property `root > storage > anyOf > diskUUID`
+### <a name="storage_anyOf_i1"></a>1.2. Property `root > storage > anyOf > diskUUID`
 Type: `object`
 
 Defined in: #/definitions/diskUUID
@@ -45,14 +45,14 @@ Defined in: #/definitions/diskUUID
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-### <a name="storage"></a>1.3. Property `root > storage > anyOf > item 2`
+### <a name="storage_anyOf_i2"></a>1.3. Property `root > storage > anyOf > item 2`
 Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-### <a name="storage"></a>1.4. Property `root > storage > anyOf > tmpfs`
+### <a name="storage_anyOf_i3"></a>1.4. Property `root > storage > anyOf > tmpfs`
 Type: `object`
 
 Defined in: #/definitions/tmpfs
@@ -62,4 +62,4 @@ Defined in: #/definitions/tmpfs
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 16:57:11 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 21:29:41 +0100

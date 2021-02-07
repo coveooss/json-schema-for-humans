@@ -6,9 +6,9 @@
   - [1.3. Property `Delivery Schema > shipping_address > state`](#shipping_address_state)
 - [2. Property `Delivery Schema > billing_address`](#billing_address)
 - [3. Property `Delivery Schema > delivery_info`](#delivery_info)
-  - [3.1. Property `Delivery Schema > delivery_info > oneOf > classic`](#delivery_info)
+  - [3.1. Property `Delivery Schema > delivery_info > oneOf > classic`](#delivery_info_oneOf_i0)
     - [3.1.1. Property `Delivery Schema > delivery_info > oneOf > item 0 > price`](#delivery_info_oneOf_i0_price)
-  - [3.2. Property `Delivery Schema > delivery_info > oneOf > gift`](#delivery_info)
+  - [3.2. Property `Delivery Schema > delivery_info > oneOf > gift`](#delivery_info_oneOf_i1)
     - [3.2.1. Property `Delivery Schema > delivery_info > oneOf > item 1 > with_wrap`](#delivery_info_oneOf_i1_with_wrap)
 
 Type: `object`
@@ -116,7 +116,7 @@ Defined in: #/definitions/delivery_info
 | ---- |
 | [classic](#delivery_info_oneOf_i0) |
 | [gift](#delivery_info_oneOf_i1) |
-### <a name="delivery_info"></a>3.1. Property `Delivery Schema > delivery_info > oneOf > classic`
+### <a name="delivery_info_oneOf_i0"></a>3.1. Property `Delivery Schema > delivery_info > oneOf > classic`
 Type: `object`
 
 Defined in: #/definitions/classic
@@ -144,7 +144,7 @@ Type: `number`
  	</tr>
 </table>
 
-### <a name="delivery_info"></a>3.2. Property `Delivery Schema > delivery_info > oneOf > gift`
+### <a name="delivery_info_oneOf_i1"></a>3.2. Property `Delivery Schema > delivery_info > oneOf > gift`
 Type: `object`
 
 **Description:** The delivery is a gift, no prices displayed
@@ -161,4 +161,4 @@ Defined in: #/definitions/gift
 Type: `boolean`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 16:57:09 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 21:29:39 +0100
