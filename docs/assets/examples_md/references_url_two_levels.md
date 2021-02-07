@@ -31,7 +31,16 @@ Type: `string`
 **Description:** a filled string
 Defined in: #/definitions/filled_string
 
-        Must be at least `1` characters long
+<table>
+ 	<tr>
+    <td><b>Min length</b></td>
+    <td>1</td>
+ 	</tr>
+	<tr>
+    <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+</table>
 
 ### <a name="described_alignment"></a>1.2. Property `root > described > alignment`
 
@@ -41,4 +50,4 @@ Type: `string`
 Same definition as [name](#described_name)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:51 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:15 +0100

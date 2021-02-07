@@ -33,13 +33,35 @@ Type: `string`
 
 **Description:** default
 
-## Property `Person > examples`
+<table>
+ 	<tr>
+    <td><b>Min length</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+</table>
+
+## <a name="examples"></a>2. Property `Person > examples`
 
 Type: `string`
 
 **Description:** examples
 
-## Property `Person > if`
+<table>
+ 	<tr>
+    <td><b>Min length</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+</table>
+
+## <a name="if"></a>3. Property `Person > if`
 
 Type: `object`
 
@@ -48,7 +70,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-## Property `Person > then`
+## <a name="then"></a>4. Property `Person > then`
 
 Type: `object`
 
@@ -57,7 +79,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-## Property `Person > else`
+## <a name="else"></a>5. Property `Person > else`
 
 Type: `object`
 
@@ -66,7 +88,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-## Property `Person > anyOf`
+## <a name="anyOf"></a>6. Property `Person > anyOf`
 
 Type: `object`
 
@@ -75,7 +97,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-## Property `Person > allOf`
+## <a name="allOf"></a>7. Property `Person > allOf`
 
 Type: `object`
 
@@ -84,7 +106,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-## Property `Person > not`
+## <a name="not"></a>8. Property `Person > not`
 
 Type: `object`
 
@@ -93,7 +115,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-## Property `Person > properties`
+## <a name="properties"></a>9. Property `Person > properties`
 
 Type: `object`
 
@@ -102,7 +124,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-## Property `Person > patternProperties`
+## <a name="patternProperties"></a>10. Property `Person > patternProperties`
 
 Type: `object`
 
@@ -112,4 +134,4 @@ Type: `object`
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:48 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:13 +0100

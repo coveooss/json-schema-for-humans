@@ -21,6 +21,17 @@ Type: `string`
 
 **Description:** the person's first name
 
+<table>
+ 	<tr>
+    <td><b>Min length</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+</table>
+
 **Examples:** 
 
 ```json
@@ -30,11 +41,22 @@ Type: `string`
 "BDFL"
 ```
 
-## Property `Person > lastName`
+## <a name="lastName"></a>2. Property `Person > lastName`
 
 Type: `string`
 
 **Description:** The person's last name.
+
+<table>
+ 	<tr>
+    <td><b>Min length</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+</table>
 
 **Example:** 
 
@@ -42,13 +64,25 @@ Type: `string`
 "Van Rossum"
 ```
 
-## Property `Person > age`
+## <a name="age"></a>3. Property `Person > age`
 
 Type: `integer`
 
 **Description:** Age in years which must be equal to or greater than zero.
 
-Value must be greater or equal to `0`
+<table>
+ 	<tr>
+    <td><b>Multiple of</b></td>
+    <td>N/A</td>
+ 	</tr>
+    <td><b>Minimum</b></td>
+    <td>&ge; 0</td>
+ 	</tr>
+	<tr>
+    <td><b>Maximum</b></td>
+    <td>N/A</td>
+ 	</tr>
+</table>
 
 **Example:** 
 
@@ -56,7 +90,7 @@ Value must be greater or equal to `0`
 64
 ```
 
-## Property `Person > moreInfo`
+## <a name="moreInfo"></a>4. Property `Person > moreInfo`
 
 Type: `object`
 
@@ -76,4 +110,4 @@ Type: `object`
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:47 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:12 +0100

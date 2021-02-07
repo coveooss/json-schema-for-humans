@@ -1224,6 +1224,53 @@ def get_numeric_restrictions_text(schema_node: SchemaNode, before_value: str = "
 
     return result if touched else ""
 
+def md_get_numeric_minimum_restriction(schema_node: SchemaNode, default: str = "N/A") -> str:
+    """Filter. Get the text to display about minimum restriction on a numeric type(integer or number)"""
+    minimum = schema_node.keywords.get(MINIMUM)
+    if minimum:
+        minimum = minimum.literal
+    exclusive_minimum = schema_node.keywords.get(EXCLUSIVE_MINIMUM)
+    if exclusive_minimum:
+        exclusive_minimum = exclusive_minimum.literal
+
+    # Fix minimum and exclusive_minimum both there
+    if minimum is not None and exclusive_minimum is not None:
+        if minimum <= exclusive_minimum:
+            exclusive_minimum = None
+        else:
+            minimum = None
+
+    minimum_fragment = default
+    if minimum is not None:
+        minimum_fragment = f"&ge; {minimum}"
+    if exclusive_minimum is not None:
+        minimum_fragment = f"&gt; {exclusive_minimum}"
+
+    return minimum_fragment
+
+def md_get_numeric_maximum_restriction(schema_node: SchemaNode, default: str = "N/A") -> str:
+    """Filter. Get the text to display about maximum restriction on a numeric type(integer or number)"""
+    maximum = schema_node.keywords.get(MAXIMUM)
+    if maximum:
+        maximum = maximum.literal
+    exclusive_maximum = schema_node.keywords.get(EXCLUSIVE_MAXIMUM)
+    if exclusive_maximum:
+        exclusive_maximum = exclusive_maximum.literal
+
+    # Fix maximum and exclusive_maximum both there
+    if maximum is not None and exclusive_maximum is not None:
+        if maximum > exclusive_maximum:
+            exclusive_maximum = None
+        else:
+            maximum = None
+
+    maximum_fragment = default
+    if maximum is not None:
+        maximum_fragment = f"&le; {maximum}"
+    if exclusive_maximum is not None:
+        maximum_fragment = f"&lt; {exclusive_maximum}"
+
+    return maximum_fragment
 
 def escape_property_name_for_id(property_name: str) -> str:
     """Filter. Escape unsafe characters in a property name so that it can be used in a HTML id"""
@@ -1278,18 +1325,17 @@ def md_heading(title: str, depth: Number, html_id: Union[bool, str] = False) -> 
         md_headings.pop(curDepth, None)
 
     headingNumbers=''
-    firstDepth=False
-    for curDepth in range(1, depth+1):
+    for curDepth in range(0, depth+1):
         if curDepth in md_headings:
-            if type(firstDepth) == type(False):
-                firstDepth=curDepth
             if curDepth == depth:
                 md_headings[curDepth] = md_headings[curDepth] + 1
         else:   
             md_headings[curDepth]=1
-        headingNumbers += f'{md_headings[curDepth]}.'
+        if curDepth != 0:
+            headingNumbers += f'{md_headings[curDepth]}.'
+
     menu=repeat_str('#', depth+1)
-    if depth == firstDepth:
+    if depth == 0:
         menu+=f' {title}'
     else:
         menu+=f' <a name="{html_id}"></a>{headingNumbers} {title}'
@@ -1377,6 +1423,9 @@ def generate_from_schema(
         get_description_remove_default if config.default_from_description else get_description
     )
     env.filters["get_numeric_restrictions_text"] = get_numeric_restrictions_text
+    env.filters["md_get_numeric_minimum_restriction"] = md_get_numeric_minimum_restriction
+    env.filters["md_get_numeric_maximum_restriction"] = md_get_numeric_maximum_restriction
+    
     env.filters["get_required_properties"] = get_required_properties
     env.filters["get_first_property"] = get_first_property
     env.filters["get_undocumented_required_properties"] = get_undocumented_required_properties

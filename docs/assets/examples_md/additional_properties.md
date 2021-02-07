@@ -29,7 +29,21 @@ Type: `object`
 
 Type: `number`
 
-## Property `Person > subType2`
+<table>
+ 	<tr>
+    <td><b>Multiple of</b></td>
+    <td>N/A</td>
+ 	</tr>
+    <td><b>Minimum</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Maximum</b></td>
+    <td>N/A</td>
+ 	</tr>
+</table>
+
+## <a name="subType2"></a>2. Property `Person > subType2`
 
 Type: `object`
 
@@ -43,7 +57,21 @@ Type: `object`
 
 Type: `number`
 
-## Property `Person > additionalProperties`
+<table>
+ 	<tr>
+    <td><b>Multiple of</b></td>
+    <td>N/A</td>
+ 	</tr>
+    <td><b>Minimum</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Maximum</b></td>
+    <td>N/A</td>
+ 	</tr>
+</table>
+
+## <a name="additionalProperties"></a>3. Property `Person > additionalProperties`
 
 Type: `object`
 
@@ -57,5 +85,19 @@ Type: `object`
 
 Type: `number`
 
+<table>
+ 	<tr>
+    <td><b>Multiple of</b></td>
+    <td>N/A</td>
+ 	</tr>
+    <td><b>Minimum</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Maximum</b></td>
+    <td>N/A</td>
+ 	</tr>
+</table>
+
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:51 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:15 +0100

@@ -21,13 +21,35 @@ Type: `string`
 
 **Description:** The person's first name.
 
-## Property `Person > lastName`
+<table>
+ 	<tr>
+    <td><b>Min length</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+</table>
+
+## <a name="lastName"></a>2. Property `Person > lastName`
 
 Type: `string`
 
 **Description:** The person's last name.
 
-## Pattern Property `Person > paperSize`> All property whose name matches the following regular expression must respect the following conditions
+<table>
+ 	<tr>
+    <td><b>Min length</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+</table>
+
+## <a name="pattern1"></a>3. Pattern Property `Person > paperSize`> All property whose name matches the following regular expression must respect the following conditions
   Property name regular expression: 
 [`$[a-c][0-9]^`](https://regex101.com/?regex=$[a-c][0-9]^
 
@@ -50,11 +72,36 @@ Type: `integer`
 
 **Description:** Numerical rating for paper size.
 
+<table>
+ 	<tr>
+    <td><b>Multiple of</b></td>
+    <td>N/A</td>
+ 	</tr>
+    <td><b>Minimum</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Maximum</b></td>
+    <td>N/A</td>
+ 	</tr>
+</table>
+
 ### <a name="pattern1_review"></a>3.2. Property `Person > paperSize > review`
 
 Type: `string`
 
 **Description:** Narrative review of the paper size.
 
+<table>
+ 	<tr>
+    <td><b>Min length</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+</table>
+
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:50 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:14 +0100

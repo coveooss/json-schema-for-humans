@@ -24,7 +24,7 @@ Must be one of:
 * "Mac"
 * "Linux"
 
-## Property `User Preference > favorite_colors`
+## <a name="favorite_colors"></a>2. Property `User Preference > favorite_colors`
 
 Type: `array of enum (of string)`
 Default: `["white", "blue"]`
@@ -56,12 +56,24 @@ Must be one of:
 * "white"
 * "black"
 
-## Property `User Preference > desired_number_of_shoes`
+## <a name="desired_number_of_shoes"></a>3. Property `User Preference > desired_number_of_shoes`
 
 Type: `integer`
 Default: `2`
 
-Value must be greater or equal to `0` and lesser or equal to `2`
+<table>
+ 	<tr>
+    <td><b>Multiple of</b></td>
+    <td>N/A</td>
+ 	</tr>
+    <td><b>Minimum</b></td>
+    <td>&ge; 0</td>
+ 	</tr>
+	<tr>
+    <td><b>Maximum</b></td>
+    <td>&le; 2</td>
+ 	</tr>
+</table>
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:49 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:13 +0100

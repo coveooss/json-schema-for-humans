@@ -38,22 +38,55 @@ Defined in: #/definitions/address
 
 Type: `string`
 
+<table>
+ 	<tr>
+    <td><b>Min length</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+</table>
+
 ### <a name="shipping_address_city"></a>1.2. Property `Delivery Schema > shipping_address > city`
 
 Type: `string`
+
+<table>
+ 	<tr>
+    <td><b>Min length</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+</table>
 
 ### <a name="shipping_address_state"></a>1.3. Property `Delivery Schema > shipping_address > state`
 
 Type: `string`
 
-## Property `Delivery Schema > billing_address`
+<table>
+ 	<tr>
+    <td><b>Min length</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+</table>
+
+## <a name="billing_address"></a>2. Property `Delivery Schema > billing_address`
 
 Type: `object`
 
 **Description:** Exact address
 Same definition as [shipping_address](#shipping_address)
 
-## Property `Delivery Schema > delivery_info`
+## <a name="delivery_info"></a>3. Property `Delivery Schema > delivery_info`
 
 Type: `object`
 
@@ -82,6 +115,20 @@ Defined in: #/definitions/classic
 
 Type: `number`
 
+<table>
+ 	<tr>
+    <td><b>Multiple of</b></td>
+    <td>N/A</td>
+ 	</tr>
+    <td><b>Minimum</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Maximum</b></td>
+    <td>N/A</td>
+ 	</tr>
+</table>
+
 ### <a name="delivery_info"></a>3.2. Property `Delivery Schema > delivery_info > oneOf > gift`
 Type: `object`
 
@@ -98,4 +145,4 @@ Defined in: #/definitions/gift
 Type: `boolean`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:49 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:13 +0100

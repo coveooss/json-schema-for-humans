@@ -19,19 +19,53 @@ Type: `string`
 
 **Description:** The person's first name.
 
-## Property `Person > lastName`
+<table>
+ 	<tr>
+    <td><b>Min length</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+</table>
+
+## <a name="lastName"></a>2. Property `Person > lastName`
 
 Type: `string`
 
 **Description:** The person's last name.
 
-## Property `Person > age`
+<table>
+ 	<tr>
+    <td><b>Min length</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+</table>
+
+## <a name="age"></a>3. Property `Person > age`
 
 Type: `integer`
 
 **Description:** Age in years which must be equal to or greater than zero.
 
-Value must be greater or equal to `0`
+<table>
+ 	<tr>
+    <td><b>Multiple of</b></td>
+    <td>N/A</td>
+ 	</tr>
+    <td><b>Minimum</b></td>
+    <td>&ge; 0</td>
+ 	</tr>
+	<tr>
+    <td><b>Maximum</b></td>
+    <td>N/A</td>
+ 	</tr>
+</table>
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:50 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:14 +0100

@@ -1,14 +1,27 @@
 {% if type_name == "string" %}
-    {% if schema.kw_min_length %}
-        {{ restriction("Must be at least `" ~ schema.kw_min_length.literal ~ "` characters long", "min-length", schema.kw_min_length.html_id) }}
-    {% endif %}
-    {% if schema.kw_max_length %}
-        {{ restriction("Must be at most `" ~ schema.kw_max_length.literal ~ "` characters long", "max-length", schema.kw_max_length.html_id) }}
-    {% endif %}
+<table>
+ 	<tr>
+    <td><b>Min length</b></td>
+    <td>{% if schema.kw_min_length %}{{ schema.kw_min_length.literal }}{% else %}N/A{% endif %}</td>
+ 	</tr>
+	<tr>
+    <td><b>Max length</b></td>
+    <td>{% if schema.kw_max_length %}{{ schema.kw_max_length.literal }}{% else %}N/A{% endif %}</td>
+	</tr>
+</table>
 {% endif %}
 {%- if type_name in ["integer", "number"] -%}
-    {% set restriction_text = (schema | get_numeric_restrictions_text("`", "`")) %}
-    {%- if restriction_text -%}
-        {{ restriction(restriction_text, "numeric", schema.html_id ~ "_number") }}
-    {% endif %}
+<table>
+ 	<tr>
+    <td><b>Multiple of</b></td>
+    <td>{{ schema.keywords.get("multipleOf").literal | default("N/A") }}</td>
+ 	</tr>
+    <td><b>Minimum</b></td>
+    <td>{{ schema | md_get_numeric_minimum_restriction() }}</td>
+ 	</tr>
+	<tr>
+    <td><b>Maximum</b></td>
+    <td>{{ schema | md_get_numeric_maximum_restriction() }}</td>
+ 	</tr>
+</table>
 {% endif %}

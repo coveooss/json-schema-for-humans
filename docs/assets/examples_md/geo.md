@@ -16,13 +16,37 @@ Type: `object`
 
 Type: `number`
 
-Value must be greater or equal to `-90` and lesser or equal to `90`
+<table>
+ 	<tr>
+    <td><b>Multiple of</b></td>
+    <td>N/A</td>
+ 	</tr>
+    <td><b>Minimum</b></td>
+    <td>&ge; -90</td>
+ 	</tr>
+	<tr>
+    <td><b>Maximum</b></td>
+    <td>&le; 90</td>
+ 	</tr>
+</table>
 
-## Property `Longitude and Latitude Values > longitude`
+## <a name="longitude"></a>2. Property `Longitude and Latitude Values > longitude`
 
 Type: `number`
 
-Value must be greater or equal to `-180` and lesser or equal to `180`
+<table>
+ 	<tr>
+    <td><b>Multiple of</b></td>
+    <td>N/A</td>
+ 	</tr>
+    <td><b>Minimum</b></td>
+    <td>&ge; -180</td>
+ 	</tr>
+	<tr>
+    <td><b>Maximum</b></td>
+    <td>&le; 180</td>
+ 	</tr>
+</table>
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:51 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:15 +0100

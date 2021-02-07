@@ -21,23 +21,34 @@ Type: `string`
 
 **Description:** The person's first name.
 
-## Property `Person > lastName`
+<table>
+ 	<tr>
+    <td><b>Min length</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+</table>
+
+## <a name="lastName"></a>2. Property `Person > lastName`
 
 Type: `string or null`
 
 **Description:** The person's last name.
 
-## Property `Person > age`
+## <a name="age"></a>3. Property `Person > age`
 
 Type: `integer or number`
 
 **Description:** Age in years which must be equal to or greater than zero.
 
-## Property `Person > anything`
+## <a name="anything"></a>4. Property `Person > anything`
 
 Type: `integer, string, number or null`
 
 **Description:** Ay other info you like
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:50 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:14 +0100

@@ -80,11 +80,11 @@
         {%- endif -%}
 
         {# Pattern (Regular Expression) #}
-        {% if schema.kw_pattern and schema.examples|length %}
+        {% if schema.kw_pattern and schema.examples|length -%}
             Must match regular expression: `{{ schema.kw_pattern.literal | escape }}` [Test](https://regex101.com/?regex={{ schema.kw_pattern.literal | escape }}&test_string={{ schema.examples[0].literal | escape }})
-        {% elif schema.kw_pattern %}
+        {% elif schema.kw_pattern -%}
             Must match regular expression: `{{ schema.kw_pattern.literal | escape }}` [Test](https://regex101.com/?regex={{ schema.kw_pattern.literal | escape }})
-        {% endif %}
+        {%- endif %}
         {# Conditional subschema, or if-then-else section #}
         {% if schema.has_conditional %}
             {% with skip_headers=False, depth=depth+1 %}

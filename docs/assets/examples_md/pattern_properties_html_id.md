@@ -40,7 +40,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-## Pattern Property `Person > Title 1`> All property whose name matches the following regular expression must respect the following conditions
+## <a name="pattern1"></a>2. Pattern Property `Person > Title 1`> All property whose name matches the following regular expression must respect the following conditions
   Property name regular expression: 
 [`.*`](https://regex101.com/?regex=.*
 
@@ -55,7 +55,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-## Pattern Property `Person > Title 2`> All property whose name matches the following regular expression must respect the following conditions
+## <a name="pattern2"></a>3. Pattern Property `Person > Title 2`> All property whose name matches the following regular expression must respect the following conditions
   Property name regular expression: 
 [`..`](https://regex101.com/?regex=..
 
@@ -70,7 +70,7 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
-## Pattern Property `Person > Title 3`> All property whose name matches the following regular expression must respect the following conditions
+## <a name="pattern3"></a>4. Pattern Property `Person > Title 3`> All property whose name matches the following regular expression must respect the following conditions
   Property name regular expression: 
 [`^.`](https://regex101.com/?regex=^.
 
@@ -86,4 +86,4 @@ Type: `object`
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:51 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:15 +0100

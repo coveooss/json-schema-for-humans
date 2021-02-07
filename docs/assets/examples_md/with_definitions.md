@@ -31,19 +31,52 @@ Defined in: #/definitions/address
 
 Type: `string`
 
+<table>
+ 	<tr>
+    <td><b>Min length</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+</table>
+
 ### <a name="billing_address_city"></a>1.2. Property `root > billing_address > city`
 
 Type: `string`
+
+<table>
+ 	<tr>
+    <td><b>Min length</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+</table>
 
 ### <a name="billing_address_state"></a>1.3. Property `root > billing_address > state`
 
 Type: `string`
 
-## Property `root > shipping_address`
+<table>
+ 	<tr>
+    <td><b>Min length</b></td>
+    <td>N/A</td>
+ 	</tr>
+	<tr>
+    <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+</table>
+
+## <a name="shipping_address"></a>2. Property `root > shipping_address`
 
 Type: `object`
 
 Same definition as [billing_address](#billing_address)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 02:06:48 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:13 +0100
