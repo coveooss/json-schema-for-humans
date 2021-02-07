@@ -30,6 +30,10 @@ Type: `string`
     <td><b>Max length</b></td>
     <td>N/A</td>
 	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
+    <td>N/A</td>
+	</tr>
 </table>
 
 ## <a name="lastName"></a>2. Property `Person > lastName`
@@ -47,6 +51,10 @@ Type: `string`
     <td><b>Max length</b></td>
     <td>N/A</td>
 	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
+    <td>N/A</td>
+	</tr>
 </table>
 
 ## <a name="pattern1"></a>3. Pattern Property `Person > paperSize`> All property whose name matches the following regular expression must respect the following conditions
@@ -60,6 +68,7 @@ Type: `string`
 Type: `object`
 
 **Description:** Review of a paper size.
+
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [rating](#pattern1_rating)|No|integer|Yes|No| No|Numerical rating for paper size.|
@@ -101,7 +110,11 @@ Type: `string`
     <td><b>Max length</b></td>
     <td>N/A</td>
 	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
+    <td>N/A</td>
+	</tr>
 </table>
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:14 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 16:57:10 +0100

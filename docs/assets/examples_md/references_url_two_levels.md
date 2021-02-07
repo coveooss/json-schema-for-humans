@@ -7,6 +7,7 @@
 Type: `object`
 
 **Description:** Testing $ref of a remote $ref
+
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [described](#described)|No|object|No|No| No|-|
@@ -29,6 +30,7 @@ Defined in: https://raw.githubusercontent.com/coveooss/json-schema-for-humans/ma
 Type: `string`
 
 **Description:** a filled string
+
 Defined in: #/definitions/filled_string
 
 <table>
@@ -40,6 +42,10 @@ Defined in: #/definitions/filled_string
     <td><b>Max length</b></td>
     <td>N/A</td>
 	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
+    <td>N/A</td>
+	</tr>
 </table>
 
 ### <a name="described_alignment"></a>1.2. Property `root > described > alignment`
@@ -47,7 +53,8 @@ Defined in: #/definitions/filled_string
 Type: `string`
 
 **Description:** a filled string
+
 Same definition as [name](#described_name)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:15 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 16:57:11 +0100

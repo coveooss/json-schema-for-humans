@@ -9,6 +9,7 @@
 Type: `object`
 
 **Description:** A little food fun
+
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [fruits](#fruits)|No|array of string|No|No| No|5 to 8 fruits that you like|
@@ -49,6 +50,10 @@ Type: `string`
     <td><b>Max length</b></td>
     <td>N/A</td>
 	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
+    <td>N/A</td>
+	</tr>
 </table>
 
 ## <a name="vegetables"></a>2. Property `root > vegetables`
@@ -85,4 +90,4 @@ Type: `const`
 Specific value: `"eggplant"`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:15 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 16:57:11 +0100

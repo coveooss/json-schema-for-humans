@@ -17,6 +17,7 @@ Type: `object`
 Type: `object`
 
 **Description:** We should see this
+
 Defined in: #/definitions/inner schema
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
@@ -39,6 +40,10 @@ Type: `string`
     <td><b>Max length</b></td>
     <td>N/A</td>
 	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
+    <td>N/A</td>
+	</tr>
 </table>
 
 ## <a name="outer2"></a>2. Property `root > outer2`
@@ -46,7 +51,8 @@ Type: `string`
 Type: `object`
 
 **Description:** We should see this too
+
 Same definition as [outer](#outer)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:14 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 16:57:10 +0100

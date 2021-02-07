@@ -5,6 +5,7 @@
 Type: `object`
 
 **Description:** Testing $ref with URL
+
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [firstName](#firstName)|No|string|No|No| No|The person's first name.|
@@ -15,6 +16,7 @@ Type: `object`
 Type: `string`
 
 **Description:** The person's first name.
+
 Defined in: https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/tests/cases/basic.json#/properties/firstName
 
 <table>
@@ -26,7 +28,11 @@ Defined in: https://raw.githubusercontent.com/coveooss/json-schema-for-humans/ma
     <td><b>Max length</b></td>
     <td>N/A</td>
 	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
+    <td>N/A</td>
+	</tr>
 </table>
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:14 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 16:57:09 +0100

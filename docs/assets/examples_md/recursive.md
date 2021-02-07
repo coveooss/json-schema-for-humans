@@ -16,6 +16,7 @@ Type: `object`
 Type: `object`
 
 **Description:** A human being
+
 Defined in: #/definitions/person
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
@@ -49,7 +50,8 @@ Type: `array`
 Type: `object`
 
 **Description:** A human being
+
 Same definition as [person](#person)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:15 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 16:57:10 +0100

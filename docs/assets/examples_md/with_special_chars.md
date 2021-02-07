@@ -30,6 +30,10 @@ Type: `string`
     <td><b>Max length</b></td>
     <td>N/A</td>
 	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
+    <td>N/A</td>
+	</tr>
 </table>
 
 ## <a name="nomDeFamille"></a>2. Property `Personne > nomDeFamille`
@@ -45,6 +49,10 @@ Type: `string`
  	</tr>
 	<tr>
     <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
     <td>N/A</td>
 	</tr>
 </table>
@@ -82,6 +90,10 @@ Type: `string`
     <td><b>Max length</b></td>
     <td>N/A</td>
 	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
+    <td>N/A</td>
+	</tr>
 </table>
 
 **Examples:** 
@@ -97,4 +109,4 @@ Type: `string`
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:12 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 16:57:08 +0100

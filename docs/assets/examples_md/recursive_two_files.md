@@ -17,6 +17,7 @@ Type: `object`
 Type: `object`
 
 **Description:** A human being
+
 Defined in: #/definitions/person
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
@@ -51,6 +52,7 @@ Type: `array`
 Type: `object`
 
 **Description:** Person definition from second file. Not the same!
+
 Same definition as [siblings](#person_siblings)
 
 ### <a name="person_siblings"></a>1.2. Property `Person > person > siblings`
@@ -58,6 +60,7 @@ Same definition as [siblings](#person_siblings)
 Type: `object`
 
 **Description:** Person definition from second file. Not the same!
+
 Defined in: recursive_two_files2.json#/definitions/person
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
@@ -65,4 +68,4 @@ Defined in: recursive_two_files2.json#/definitions/person
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:12 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 16:57:08 +0100

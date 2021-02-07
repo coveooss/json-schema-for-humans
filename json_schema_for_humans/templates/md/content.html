@@ -28,8 +28,8 @@
     {% include "section_description.html" %}
 {% endif %}
 
-{% if schema.should_be_a_link(config) -%}
-    Same definition as [{{ schema.links_to.link_name }}](#{{ schema.links_to.html_id }})
+{% if schema.should_be_a_link(config) %}
+Same definition as [{{ schema.links_to.link_name }}](#{{ schema.links_to.html_id }})
 {% elif schema.refers_to -%}
     Defined in: {{ schema.ref_path }}
     {%- with schema=schema.refers_to_merged, skip_headers=True, depth=depth -%}
@@ -79,12 +79,6 @@
             Specific value: `{{ schema.kw_const.literal | python_to_json }}`
         {%- endif -%}
 
-        {# Pattern (Regular Expression) #}
-        {% if schema.kw_pattern and schema.examples|length -%}
-            Must match regular expression: `{{ schema.kw_pattern.literal | escape }}` [Test](https://regex101.com/?regex={{ schema.kw_pattern.literal | escape }}&test_string={{ schema.examples[0].literal | escape }})
-        {% elif schema.kw_pattern -%}
-            Must match regular expression: `{{ schema.kw_pattern.literal | escape }}` [Test](https://regex101.com/?regex={{ schema.kw_pattern.literal | escape }})
-        {%- endif %}
         {# Conditional subschema, or if-then-else section #}
         {% if schema.has_conditional %}
             {% with skip_headers=False, depth=depth+1 %}

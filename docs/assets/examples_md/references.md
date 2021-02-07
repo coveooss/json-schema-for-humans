@@ -22,6 +22,7 @@
 Type: `object`
 
 **Description:** Testing $ref
+
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
 | [a_gift](#a_gift)|No|string|No|No| No|A gift, or is it?|
@@ -43,6 +44,7 @@ Type: `object`
 Type: `string`
 
 **Description:** A gift, or is it?
+
 Defined in: #/definitions/gift
 
 <table>
@@ -52,6 +54,10 @@ Defined in: #/definitions/gift
  	</tr>
 	<tr>
     <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
     <td>N/A</td>
 	</tr>
 </table>
@@ -82,6 +88,10 @@ Type: `string`
     <td><b>Max length</b></td>
     <td>N/A</td>
 	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
+    <td>N/A</td>
+	</tr>
 </table>
 
 ## <a name="anchor_no_slash"></a>3. Property `root > anchor_no_slash`
@@ -89,6 +99,7 @@ Type: `string`
 Type: `array of string`
 
 **Description:** Description for array_def
+
 Defined in: #definitions/array_def
 
 <table>
@@ -119,6 +130,10 @@ Type: `string`
     <td><b>Max length</b></td>
     <td>N/A</td>
 	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
+    <td>N/A</td>
+	</tr>
 </table>
 
 ## <a name="anchor_nested_reference"></a>4. Property `root > anchor_nested_reference`
@@ -138,6 +153,10 @@ Defined in: #/definitions/array_def/items
     <td><b>Max length</b></td>
     <td>N/A</td>
 	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
+    <td>N/A</td>
+	</tr>
 </table>
 
 ## <a name="same_file_anchor_with_slash"></a>5. Property `root > same_file_anchor_with_slash`
@@ -145,6 +164,7 @@ Defined in: #/definitions/array_def/items
 Type: `string`
 
 **Description:** Description for string_def
+
 Defined in: references.json#/definitions/string_def
 
 <table>
@@ -154,6 +174,10 @@ Defined in: references.json#/definitions/string_def
  	</tr>
 	<tr>
     <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
     <td>N/A</td>
 	</tr>
 </table>
@@ -175,6 +199,7 @@ Same definition as [anchor_nested_reference](#anchor_nested_reference)
 Type: `object`
 
 **Description:** The delivery is a gift, no prices displayed
+
 Defined in: with_descriptions.json#/definitions/gift
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
@@ -191,6 +216,7 @@ Type: `boolean`
 Type: `object`
 
 **Description:** The delivery is a gift, no prices displayed
+
 Same definition as [other_file_anchor](#other_file_anchor)
 
 ## <a name="other_file_dot_dot_anchor"></a>10. Property `root > other_file_dot_dot_anchor`
@@ -198,6 +224,7 @@ Same definition as [other_file_anchor](#other_file_anchor)
 Type: `object`
 
 **Description:** The delivery is a gift, no prices displayed
+
 Same definition as [other_file_anchor](#other_file_anchor)
 
 ## <a name="other_file_only"></a>11. Property `root > other_file_only`
@@ -205,6 +232,7 @@ Same definition as [other_file_anchor](#other_file_anchor)
 Type: `object`
 
 **Description:** Test schema with a not
+
 Defined in: combining_not.json
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
@@ -229,6 +257,10 @@ Type: `string`
  	</tr>
 	<tr>
     <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
     <td>N/A</td>
 	</tr>
 </table>
@@ -261,7 +293,11 @@ Type: `string`
     <td><b>Max length</b></td>
     <td>N/A</td>
 	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
+    <td>N/A</td>
+	</tr>
 </table>
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:14 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 16:57:10 +0100

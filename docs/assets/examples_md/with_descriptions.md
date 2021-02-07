@@ -25,6 +25,7 @@ Type: `object`
 Type: `object`
 
 **Description:** Exact address
+
 Defined in: #/definitions/address
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
@@ -47,6 +48,10 @@ Type: `string`
     <td><b>Max length</b></td>
     <td>N/A</td>
 	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
+    <td>N/A</td>
+	</tr>
 </table>
 
 ### <a name="shipping_address_city"></a>1.2. Property `Delivery Schema > shipping_address > city`
@@ -60,6 +65,10 @@ Type: `string`
  	</tr>
 	<tr>
     <td><b>Max length</b></td>
+    <td>N/A</td>
+	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
     <td>N/A</td>
 	</tr>
 </table>
@@ -77,6 +86,10 @@ Type: `string`
     <td><b>Max length</b></td>
     <td>N/A</td>
 	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
+    <td>N/A</td>
+	</tr>
 </table>
 
 ## <a name="billing_address"></a>2. Property `Delivery Schema > billing_address`
@@ -84,6 +97,7 @@ Type: `string`
 Type: `object`
 
 **Description:** Exact address
+
 Same definition as [shipping_address](#shipping_address)
 
 ## <a name="delivery_info"></a>3. Property `Delivery Schema > delivery_info`
@@ -91,6 +105,7 @@ Same definition as [shipping_address](#shipping_address)
 Type: `object`
 
 **Description:** Delivery info depending on the delivery type
+
 Defined in: #/definitions/delivery_info
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
@@ -133,6 +148,7 @@ Type: `number`
 Type: `object`
 
 **Description:** The delivery is a gift, no prices displayed
+
 Defined in: #/definitions/gift
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
@@ -145,4 +161,4 @@ Defined in: #/definitions/gift
 Type: `boolean`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 12:13:13 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 16:57:09 +0100

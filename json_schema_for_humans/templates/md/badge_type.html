@@ -8,6 +8,14 @@
     <td><b>Max length</b></td>
     <td>{% if schema.kw_max_length %}{{ schema.kw_max_length.literal }}{% else %}N/A{% endif %}</td>
 	</tr>
+    <tr>
+    <td><b>Must match regular expression</b></td>
+    <td>{% if schema.kw_pattern and schema.examples|length -%}
+        Must match regular expression: <pre>{{ schema.kw_pattern.literal | escape }}</pre> <a href="https://regex101.com/?regex={{ schema.kw_pattern.literal | escape }}&test_string={{ schema.examples[0].literal | escape }}">Test</a>
+    {% elif schema.kw_pattern -%}
+        Must match regular expression: <pre>{{ schema.kw_pattern.literal | escape }}</pre> <a href="https://regex101.com/?regex={{ schema.kw_pattern.literal | escape }}">Test</a>
+    {%- else %}N/A{%- endif %}</td>
+	</tr>
 </table>
 {% endif %}
 {%- if type_name in ["integer", "number"] -%}
