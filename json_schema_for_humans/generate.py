@@ -1501,7 +1501,7 @@ def _apply_config_cli_parameters(
     help="Override generation parameters from the configuration file. "
     "Format is parameter_name=parameter_value. For example: --config minify=false. Can be repeated.",
 )
-@click.option("--minify/--no-minify", default=True, help="Run minification om the HTML result")
+@click.option("--minify/--no-minify", default=True, help="Run minification on the HTML result")
 @click.option(
     "--deprecated-from-description", is_flag=True, help="Look in the description to find if an attribute is deprecated"
 )
