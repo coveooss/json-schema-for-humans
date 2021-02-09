@@ -9,9 +9,9 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [favorite_os](#favorite_os)|No|Combination|No|No| No|-|
-| [favorite_colors](#favorite_colors)|No|Combination|No|No| No|-|
-| [desired_number_of_shoes](#desired_number_of_shoes)|No|Combination|No|No| No|-|
+| [favorite_os](#favorite_os)|No|enum (of string)|No|No| No|-|
+| [favorite_colors](#favorite_colors)|No|array of enum (of string)|No|No| No|-|
+| [desired_number_of_shoes](#desired_number_of_shoes)|No|integer|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="favorite_os"></a>1. Property `User Preference > favorite_os`
@@ -52,10 +52,10 @@ Must be one of:
 Type: `integer`
 Default: `2`
 
-|              | Restrictions |
-| ------------ | ------------ |
+| Restrictions |   |
+| ------------ | - |
 | **Minimum** | &ge; 0 |
 | **Maximum** | &le; 2 |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 19:16:34 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:54 +0100

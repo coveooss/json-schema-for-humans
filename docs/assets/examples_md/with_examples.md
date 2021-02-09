@@ -9,10 +9,10 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [firstName](#firstName)|No|Combination|No|No| No|the person's first name|
-| [lastName](#lastName)|No|Combination|No|No| No|The person's last name.|
-| [age](#age)|No|Combination|No|No| No|Age in years which must be equal to or greater than zero.|
-| [moreInfo](#moreInfo)|No|Combination|No|No| No|Any more info you want as an object|
+| [firstName](#firstName)|No|string|No|No| No|the person's first name|
+| [lastName](#lastName)|No|string|No|No| No|The person's last name.|
+| [age](#age)|No|integer|No|No| No|Age in years which must be equal to or greater than zero.|
+| [moreInfo](#moreInfo)|No|object|No|No| No|Any more info you want as an object|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="firstName"></a>1. Property `Person > firstName`
@@ -48,8 +48,8 @@ Type: `integer`
 
 **Description:** <p>Age in years which must be equal to or greater than zero.</p>
 
-|              | Restrictions |
-| ------------ | ------------ |
+| Restrictions |   |
+| ------------ | - |
 | **Minimum** | &ge; 0 |
 
 **Example:** 
@@ -79,4 +79,4 @@ Type: `object`
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 19:16:32 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:52 +0100

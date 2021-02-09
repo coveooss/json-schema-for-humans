@@ -12,8 +12,8 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [fruits](#fruits)|No|Combination|No|No| No|5 to 8 fruits that you like|
-| [vegetables](#vegetables)|No|Combination|No|No| No|-|
+| [fruits](#fruits)|No|array of string|No|No| No|5 to 8 fruits that you like|
+| [vegetables](#vegetables)|No|array|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="fruits"></a>1. Property `root > fruits`
@@ -57,4 +57,4 @@ Type: `const`
 Specific value: `"eggplant"`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 19:16:36 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:56 +0100

@@ -7,7 +7,7 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [person](#person)|No|Combination|No|No| No|-|
+| [person](#person)|No|object|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="person"></a>1. Property `Circular reference Schema > person`
@@ -18,7 +18,7 @@ Defined in: #/definitions/a
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [a1](#person_a1)|No|Combination|No|No| No|Description from b|
+| [a1](#person_a1)|No|string|No|No| No|Description from b|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ### <a name="person_a1"></a>1.1. Property `Circular reference Schema > person > a1`
@@ -35,4 +35,4 @@ Defined in: #/definitions/c
 Defined in: #/definitions/a/properties/a1
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 19:16:34 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:54 +0100

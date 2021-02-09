@@ -15,8 +15,9 @@
 {# Resolve type #}
 {% set type_name = schema.type_name %}
 {%- if not skip_headers %}
+    {% if schema is deprecated %}![made-with-Markdown](https://img.shields.io/badge/Deprecated-red) {% endif -%}
     {# Display type #}
-    {% if not schema is combining %}Type: `{{ type_name }}`{% endif %}
+    {%- if not schema is combining %}Type: `{{ type_name }}`{% endif %}
 
     {# Display default #}
     {% set default_value = schema.default_value %}

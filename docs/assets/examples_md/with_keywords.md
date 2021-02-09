@@ -15,16 +15,16 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [default](#default)|No|Combination|No|No| No|default|
-| [examples](#examples)|No|Combination|No|No| No|examples|
-| [if](#if)|No|Combination|No|No| No|if|
-| [then](#then)|No|Combination|No|No| No|then|
-| [else](#else)|No|Combination|No|No| No|else|
-| [anyOf](#anyOf)|No|Combination|No|No| No|anyOf|
-| [allOf](#allOf)|No|Combination|No|No| No|allOf|
-| [not](#not)|No|Combination|No|No| No|not|
-| [properties](#properties)|No|Combination|No|No| No|properties|
-| [patternProperties](#patternProperties)|No|Combination|No|No| No|patternProperties|
+| [default](#default)|No|string|No|No| No|default|
+| [examples](#examples)|No|string|No|No| No|examples|
+| [if](#if)|No|object|No|No| No|if|
+| [then](#then)|No|object|No|No| No|then|
+| [else](#else)|No|object|No|No| No|else|
+| [anyOf](#anyOf)|No|object|No|No| No|anyOf|
+| [allOf](#allOf)|No|object|No|No| No|allOf|
+| [not](#not)|No|object|No|No| No|not|
+| [properties](#properties)|No|object|No|No| No|properties|
+| [patternProperties](#patternProperties)|No|object|No|No| No|patternProperties|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="default"></a>1. Property `Person > default`
@@ -120,4 +120,4 @@ Type: `object`
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 19:16:33 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:53 +0100

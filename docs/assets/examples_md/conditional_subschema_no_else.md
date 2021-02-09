@@ -14,8 +14,8 @@
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [street_address](#street_address)|No|string|No|No| No|-|
-| [country](#country)|No|enum (of string)|No|No| No|-|
+| [street_address](#street_address)|No|Combination|No|No| No|-|
+| [country](#country)|No|Combination|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 | All of(Requirement) | 
@@ -35,7 +35,7 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [postal_code](#allOf_i0_then_postal_code)|No|Combination|No|No| No|-|
+| [postal_code](#allOf_i0_then_postal_code)|No|object|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 #### <a name="allOf_i0_then_postal_code"></a>1.1.1. Property `root > allOf > item 0 > then > postal_code`
@@ -46,8 +46,8 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
-|              | Restrictions |
-| ------------ | ------------ |
+| Restrictions |   |
+| ------------ | - |
 | **Must match regular expression** | ```[0-9]{5}(-[0-9]{4})?``` [Test](https://regex101.com/?regex=%5B0-9%5D%7B5%7D%28-%5B0-9%5D%7B4%7D%29%3F) |
 
 ## <a name="allOf_i1"></a>2. Property `root > allOf > item 1`
@@ -62,7 +62,7 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [postal_code](#allOf_i1_then_postal_code)|No|Combination|No|No| No|-|
+| [postal_code](#allOf_i1_then_postal_code)|No|object|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 #### <a name="allOf_i1_then_postal_code"></a>2.1.1. Property `root > allOf > item 1 > then > postal_code`
@@ -73,8 +73,8 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
-|              | Restrictions |
-| ------------ | ------------ |
+| Restrictions |   |
+| ------------ | - |
 | **Must match regular expression** | ```[A-Z][0-9][A-Z] [0-9][A-Z][0-9]``` [Test](https://regex101.com/?regex=%5BA-Z%5D%5B0-9%5D%5BA-Z%5D%20%5B0-9%5D%5BA-Z%5D%5B0-9%5D) |
 
 ## <a name="allOf_i2"></a>3. Property `root > allOf > item 2`
@@ -89,7 +89,7 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [postal_code](#allOf_i2_then_postal_code)|No|Combination|No|No| No|-|
+| [postal_code](#allOf_i2_then_postal_code)|No|object|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 #### <a name="allOf_i2_then_postal_code"></a>3.1.1. Property `root > allOf > item 2 > then > postal_code`
@@ -100,8 +100,8 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
-|              | Restrictions |
-| ------------ | ------------ |
+| Restrictions |   |
+| ------------ | - |
 | **Must match regular expression** | ```[0-9]{4} [A-Z]{2}``` [Test](https://regex101.com/?regex=%5B0-9%5D%7B4%7D%20%5BA-Z%5D%7B2%7D) |
 
 ## <a name="street_address"></a>4. Property `root > street_address`
@@ -118,4 +118,4 @@ Must be one of:
 * "Netherlands"
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 19:16:34 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:55 +0100

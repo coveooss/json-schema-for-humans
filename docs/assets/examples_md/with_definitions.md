@@ -10,8 +10,8 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [billing_address](#billing_address)|No|Combination|No|No| No|-|
-| [shipping_address](#shipping_address)|No|Combination|No|No| No|-|
+| [billing_address](#billing_address)|No|object|No|No| No|-|
+| [shipping_address](#shipping_address)|No|object|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="billing_address"></a>1. Property `root > billing_address`
@@ -22,9 +22,9 @@ Defined in: #/definitions/address
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [street_address](#billing_address_street_address)|No|Combination|Yes|No| No|-|
-| [city](#billing_address_city)|No|Combination|Yes|No| No|-|
-| [state](#billing_address_state)|No|Combination|Yes|No| No|-|
+| [street_address](#billing_address_street_address)|No|string|Yes|No| No|-|
+| [city](#billing_address_city)|No|string|Yes|No| No|-|
+| [state](#billing_address_state)|No|string|Yes|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ### <a name="billing_address_street_address"></a>1.1. Property `root > billing_address > street_address`
@@ -46,4 +46,4 @@ Type: `object`
 Same definition as [billing_address](#billing_address)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 19:16:33 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:53 +0100

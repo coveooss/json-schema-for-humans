@@ -1,7 +1,7 @@
 # Schema Docs
 
-- [1. Property `root > deprecated1`](#deprecated1)
-- [2. Property `root > deprecated2`](#deprecated2)
+- [1. ~~ Property `root > deprecated1`~~](#deprecated1)
+- [2. ~~ Property `root > deprecated2`~~](#deprecated2)
 - [3. Property `root > not_deprecated`](#not_deprecated)
 
 Type: `object`
@@ -10,14 +10,14 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [deprecated1](#deprecated1)|No|Combination|No|No| No|[Deprecated]|
-| [deprecated2](#deprecated2)|No|Combination|No|No| No|[Deprecated - Use \`not_deprecated\` instead]|
-| [not_deprecated](#not_deprecated)|No|Combination|No|No| No|-|
+| [deprecated1](#deprecated1)|No|object|No|![made-with-Markdown](https://img.shields.io/badge/Deprecated-red)| No|[Deprecated]|
+| [deprecated2](#deprecated2)|No|object|No|![made-with-Markdown](https://img.shields.io/badge/Deprecated-red)| No|[Deprecated - Use \`not_deprecated\` instead]|
+| [not_deprecated](#not_deprecated)|No|string|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
-## <a name="deprecated1"></a>1. Property `root > deprecated1`
+## <a name="deprecated1"></a>1. ~~ Property `root > deprecated1`~~
 
-Type: `object`
+![made-with-Markdown](https://img.shields.io/badge/Deprecated-red) Type: `object`
 
 **Description:** <p>[Deprecated]</p>
 
@@ -25,9 +25,9 @@ Type: `object`
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
-## <a name="deprecated2"></a>2. Property `root > deprecated2`
+## <a name="deprecated2"></a>2. ~~ Property `root > deprecated2`~~
 
-Type: `object`
+![made-with-Markdown](https://img.shields.io/badge/Deprecated-red) Type: `object`
 
 **Description:** <p>[Deprecated - Use <code>not_deprecated</code> instead]</p>
 
@@ -40,4 +40,4 @@ Type: `object`
 Type: `string`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 19:16:36 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:56 +0100

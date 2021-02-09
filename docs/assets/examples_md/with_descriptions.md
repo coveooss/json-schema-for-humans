@@ -15,9 +15,9 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [shipping_address](#shipping_address)|No|Combination|No|No| No|Exact address|
-| [billing_address](#billing_address)|No|Combination|No|No| No|Exact address|
-| [delivery_info](#delivery_info)|No|Combination|No|No| No|Delivery info depending on the delivery type|
+| [shipping_address](#shipping_address)|No|object|No|No| No|Exact address|
+| [billing_address](#billing_address)|No|object|No|No| No|Exact address|
+| [delivery_info](#delivery_info)|No|object|No|No| No|Delivery info depending on the delivery type|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="shipping_address"></a>1. Property `Delivery Schema > shipping_address`
@@ -30,9 +30,9 @@ Defined in: #/definitions/address
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [street_address](#shipping_address_street_address)|No|Combination|Yes|No| No|-|
-| [city](#shipping_address_city)|No|Combination|Yes|No| No|-|
-| [state](#shipping_address_state)|No|Combination|Yes|No| No|-|
+| [street_address](#shipping_address_street_address)|No|string|Yes|No| No|-|
+| [city](#shipping_address_city)|No|string|Yes|No| No|-|
+| [state](#shipping_address_state)|No|string|Yes|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ### <a name="shipping_address_street_address"></a>1.1. Property `Delivery Schema > shipping_address > street_address`
@@ -78,7 +78,7 @@ Defined in: #/definitions/classic
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [price](#delivery_info_oneOf_i0_price)|No|Combination|No|No| No|-|
+| [price](#delivery_info_oneOf_i0_price)|No|number|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 #### <a name="delivery_info_oneOf_i0_price"></a>3.1.1. Property `Delivery Schema > delivery_info > oneOf > item 0 > price`
@@ -94,7 +94,7 @@ Defined in: #/definitions/gift
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [with_wrap](#delivery_info_oneOf_i1_with_wrap)|No|Combination|No|No| No|-|
+| [with_wrap](#delivery_info_oneOf_i1_with_wrap)|No|boolean|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 #### <a name="delivery_info_oneOf_i1_with_wrap"></a>3.2.1. Property `Delivery Schema > delivery_info > oneOf > item 1 > with_wrap`
@@ -102,4 +102,4 @@ Defined in: #/definitions/gift
 Type: `boolean`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 19:16:34 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:53 +0100

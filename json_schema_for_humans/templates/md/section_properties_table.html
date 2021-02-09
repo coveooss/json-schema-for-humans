@@ -5,9 +5,9 @@
   {%- set html_id = sub_property.html_id -%}
 | [{{- sub_property.property_name | escape_for_md -}}](#{{- html_id -}}{{- ")" -}}
 | {{- 'Yes' if sub_property.is_pattern_property else 'No' -}}
-| {{- 'Combination' if not schema is combining else sub_property.type_name | escape_for_md -}}
+| {{- 'Combination' if schema is combining else sub_property.type_name | escape_for_md -}}
 | {{- 'Yes' if sub_property.is_required_property else 'No' -}}
-| {{- 'Yes' if sub_property.deprecated else 'No' -}}
+| {{- '![made-with-Markdown](https://img.shields.io/badge/Deprecated-red)' if sub_property is deprecated else 'No' -}}
   {%- if sub_property.is_additional_properties -%}
     {% set ns.additional_properties_property = True %}
     {%- if sub_property.is_additional_properties_schema -%}

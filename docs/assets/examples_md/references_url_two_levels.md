@@ -10,7 +10,7 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [described](#described)|No|Combination|No|No| No|-|
+| [described](#described)|No|object|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="described"></a>1. Property `root > described`
@@ -21,8 +21,8 @@ Defined in: https://raw.githubusercontent.com/coveooss/json-schema-for-humans/ma
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [name](#described_name)|No|Combination|No|No| No|a filled string|
-| [alignment](#described_alignment)|No|Combination|No|No| No|a filled string|
+| [name](#described_name)|No|string|No|No| No|a filled string|
+| [alignment](#described_alignment)|No|string|No|No| No|a filled string|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") | - |        
 
 ### <a name="described_name"></a>1.1. Property `root > described > name`
@@ -33,8 +33,8 @@ Type: `string`
 
 Defined in: #/definitions/filled_string
 
-|              | Restrictions |
-| ------------ | ------------ |
+| Restrictions |   |
+| ------------ | - |
 | **Min length** | 1 |
 
 ### <a name="described_alignment"></a>1.2. Property `root > described > alignment`
@@ -46,4 +46,4 @@ Type: `string`
 Same definition as [name](#described_name)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 19:16:37 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:56 +0100

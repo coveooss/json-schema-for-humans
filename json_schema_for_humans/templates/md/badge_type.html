@@ -7,9 +7,9 @@
 {% endif %}
 {% if schema.kw_pattern %}
 {% if schema.examples|length -%}
-| **Must match regular expression** | ```{{ schema.kw_pattern.literal | escape }}``` [Test](https://regex101.com/?regex={{ schema.kw_pattern.literal | urlencode }}&testString={{ schema.examples[0] | urlencode }}) |
+| **Must match regular expression** | ```{{ schema.kw_pattern.literal | replace('|', '\|') }}``` [Test](https://regex101.com/?regex={{ schema.kw_pattern.literal | urlencode }}&testString={{ schema.examples[0] | urlencode }}) |
 {% else -%}
-| **Must match regular expression** | ```{{ schema.kw_pattern.literal | escape }}``` [Test](https://regex101.com/?regex={{ schema.kw_pattern.literal | urlencode }}) |
+| **Must match regular expression** | ```{{ schema.kw_pattern.literal  | replace('|', '\|')}}``` [Test](https://regex101.com/?regex={{ schema.kw_pattern.literal | urlencode }}) |
 {%- endif %}
 {% endif %}
 {% if schema.keywords.get("multipleOf") %}

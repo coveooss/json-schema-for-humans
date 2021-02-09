@@ -13,8 +13,8 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [fruits](#fruits)|No|Combination|No|No| No|-|
-| [vegetables](#vegetables)|No|Combination|No|No| No|-|
+| [fruits](#fruits)|No|array of string|No|No| No|-|
+| [vegetables](#vegetables)|No|array|No|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="fruits"></a>1. Property `root > fruits`
@@ -49,8 +49,8 @@ Defined in: #/definitions/veggie
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [veggieName](#vegetables_items_veggieName)|No|Combination|Yes|No| No|The name of the vegetable.|
-| [veggieLike](#vegetables_items_veggieLike)|No|Combination|Yes|No| No|Do I like this vegetable?|
+| [veggieName](#vegetables_items_veggieName)|No|string|Yes|No| No|The name of the vegetable.|
+| [veggieLike](#vegetables_items_veggieLike)|No|boolean|Yes|No| No|Do I like this vegetable?|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 #### <a name="vegetables_items_veggieName"></a>2.1.1. Property `root > vegetables > items > veggieName`
@@ -66,4 +66,4 @@ Type: `boolean`
 **Description:** <p>Do I like this vegetable?</p>
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 19:16:35 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:55 +0100
