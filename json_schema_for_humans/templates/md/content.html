@@ -102,5 +102,10 @@ Same definition as [{{ schema.links_to.link_name }}](#{{ schema.links_to.html_id
         {% if examples %}
             {% include "section_examples.html" %}
         {% endif %}
+
+        {# details of Properties, pattern properties, additional properties #}
+        {% if schema.type_name == "object" %}
+        {% include "section_properties_details.html" %}
+        {% endif %}
     {% endif %}
 {% endif %}
