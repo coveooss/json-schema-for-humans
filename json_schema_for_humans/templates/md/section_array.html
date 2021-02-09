@@ -1,17 +1,8 @@
-<table>
- 	<tr>
-    <td><b>Min items</b></td>
-    <td>{{ schema.kw_min_items.literal | default('N/A') }}</td>
- 	</tr>
-	<tr>
-    <td><b>Max items</b></td>
-    <td>{{ schema.kw_max_items.literal | default('N/A') }}</td>
-	</tr>
-	<tr>
-    <td><b>Items unicity</b></td>
-    <td>{{ 'True' if schema.kw_unique_items and schema.kw_unique_items.literal == True else 'False' }}</td>
- 	</tr>
-</table>
+|                    | Array restrictions |
+| ------------------ | ------------------ |
+| **Min items**      | {{ schema.kw_min_items.literal | default('N/A') }} |
+| **Max items**      | {{ schema.kw_max_items.literal | default('N/A') }} |
+| **Items unicity**  | {{ 'True' if schema.kw_unique_items and schema.kw_unique_items.literal == True else 'False' }} |
 
 {% if schema.kw_items %}
 {{ "Each item of this array must be" | md_heading(depth+1) }}

@@ -2,20 +2,9 @@
 
 Type: `string`
 
-<table>
- 	<tr>
-    <td><b>Min length</b></td>
-    <td>N/A</td>
- 	</tr>
-	<tr>
-    <td><b>Max length</b></td>
-    <td>N/A</td>
-	</tr>
-    <tr>
-    <td><b>Must match regular expression</b></td>
-    <td>Must match regular expression: <pre>^(&lt;&lt;variable:([-+/*0-9A-Za-z_]+)&gt;&gt;|&lt;&lt;auto&gt;&gt;)$</pre> <a href="https://regex101.com/?regex=^(&lt;&lt;variable:([-+/*0-9A-Za-z_]+)&gt;&gt;|&lt;&lt;auto&gt;&gt;)$">Test</a></td>
-	</tr>
-</table>
+|              | Restrictions |
+| ------------ | ------------ |
+| **Must match regular expression** | ```^(&lt;&lt;variable:([-+/*0-9A-Za-z_]+)&gt;&gt;|&lt;&lt;auto&gt;&gt;)$``` [Test](https://regex101.com/?regex=%5E%28%3C%3Cvariable%3A%28%5B-%2B/%2A0-9A-Za-z_%5D%2B%29%3E%3E%7C%3C%3Cauto%3E%3E%29%24) |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 21:34:03 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 19:16:33 +0100

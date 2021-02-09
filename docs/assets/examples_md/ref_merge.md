@@ -9,16 +9,16 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [aProperty](#aProperty)|No|enum (of string)|No|No| No|This is the description from the definition|
-| [aDictPropertyARequired](#aDictPropertyARequired)|No|object|No|No| No|-|
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
+| [aProperty](#aProperty)|No|Combination|No|No| No|This is the description from the definition|
+| [aDictPropertyARequired](#aDictPropertyARequired)|No|Combination|No|No| No|-|
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="aProperty"></a>1. Property `Test > aProperty`
 
 Type: `enum (of string)`
 Default: `"Default from property"`
 
-**Description:** This is the description from the definition
+**Description:** <p>This is the description from the definition</p>
 
 Defined in: #/definitions/aProperty
 
@@ -35,47 +35,17 @@ Defined in: #/definitions/aDictProperty
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [a](#aDictPropertyARequired_a)|No|string|Yes|No| No|-|
-| [b](#aDictPropertyARequired_b)|No|string|Yes|No| No|-|
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |
+| [a](#aDictPropertyARequired_a)|No|Combination|Yes|No| No|-|
+| [b](#aDictPropertyARequired_b)|No|Combination|Yes|No| No|-|
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ### <a name="aDictPropertyARequired_a"></a>2.1. Property `Test > aDictPropertyARequired > a`
 
 Type: `string`
 
-<table>
- 	<tr>
-    <td><b>Min length</b></td>
-    <td>N/A</td>
- 	</tr>
-	<tr>
-    <td><b>Max length</b></td>
-    <td>N/A</td>
-	</tr>
-    <tr>
-    <td><b>Must match regular expression</b></td>
-    <td>N/A</td>
-	</tr>
-</table>
-
 ### <a name="aDictPropertyARequired_b"></a>2.2. Property `Test > aDictPropertyARequired > b`
 
 Type: `string`
 
-<table>
- 	<tr>
-    <td><b>Min length</b></td>
-    <td>N/A</td>
- 	</tr>
-	<tr>
-    <td><b>Max length</b></td>
-    <td>N/A</td>
-	</tr>
-    <tr>
-    <td><b>Must match regular expression</b></td>
-    <td>N/A</td>
-	</tr>
-</table>
-
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 21:34:05 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 19:16:35 +0100

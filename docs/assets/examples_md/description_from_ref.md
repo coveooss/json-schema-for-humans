@@ -7,40 +7,29 @@ Type: `object`
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [name](#name)|No|string|No|No| No|a filled string|
-| [alignment](#alignment)|No|string|No|No| No|a filled string|
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") | - |
+| [name](#name)|No|Combination|No|No| No|a filled string|
+| [alignment](#alignment)|No|Combination|No|No| No|a filled string|
+  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") | - |        
 
 ## <a name="name"></a>1. Property `root > name`
 
 Type: `string`
 
-**Description:** a filled string
+**Description:** <p>a filled string</p>
 
 Defined in: #/definitions/filled_string
 
-<table>
- 	<tr>
-    <td><b>Min length</b></td>
-    <td>1</td>
- 	</tr>
-	<tr>
-    <td><b>Max length</b></td>
-    <td>N/A</td>
-	</tr>
-    <tr>
-    <td><b>Must match regular expression</b></td>
-    <td>N/A</td>
-	</tr>
-</table>
+|              | Restrictions |
+| ------------ | ------------ |
+| **Min length** | 1 |
 
 ## <a name="alignment"></a>2. Property `root > alignment`
 
 Type: `string`
 
-**Description:** a filled string
+**Description:** <p>a filled string</p>
 
 Same definition as [name](#name)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-07 at 21:34:03 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 19:16:33 +0100
