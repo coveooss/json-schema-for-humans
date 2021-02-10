@@ -16,7 +16,7 @@ Type: `object`
 
 Type: `object`
 
-**Description:** <p>Relationships between this person and others</p>
+**Description:** Relationships between this person and others
 
 Defined in: #/definitions/person/properties/relationships
 
@@ -29,7 +29,7 @@ Defined in: #/definitions/person/properties/relationships
 
 Type: `object`
 
-**Description:** <p>A human being</p>
+**Description:** A human being
 
 Defined in: #/definitions/person
 
@@ -42,7 +42,7 @@ Defined in: #/definitions/person
 
 Type: `object`
 
-**Description:** <p>Relationships between this person and others</p>
+**Description:** Relationships between this person and others
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -53,9 +53,9 @@ Type: `object`
 
 Type: `object`
 
-**Description:** <p>A human being</p>
+**Description:** A human being
 
 Same definition as [mother](#relationships_mother)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:55 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:30 +0100

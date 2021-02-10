@@ -24,7 +24,7 @@ Type: `object`
 
 Type: `object`
 
-**Description:** <p>Exact address</p>
+**Description:** Exact address
 
 Defined in: #/definitions/address
 
@@ -51,7 +51,7 @@ Type: `string`
 
 Type: `object`
 
-**Description:** <p>Exact address</p>
+**Description:** Exact address
 
 Same definition as [shipping_address](#shipping_address)
 
@@ -59,7 +59,7 @@ Same definition as [shipping_address](#shipping_address)
 
 Type: `object`
 
-**Description:** <p>Delivery info depending on the delivery type</p>
+**Description:** Delivery info depending on the delivery type
 
 Defined in: #/definitions/delivery_info
 
@@ -88,7 +88,7 @@ Type: `number`
 ### <a name="delivery_info_oneOf_i1"></a>3.2. Property `Delivery Schema > delivery_info > oneOf > gift`
 Type: `object`
 
-**Description:** <p>The delivery is a gift, no prices displayed</p>
+**Description:** The delivery is a gift, no prices displayed
 
 Defined in: #/definitions/gift
 
@@ -102,4 +102,4 @@ Defined in: #/definitions/gift
 Type: `boolean`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:53 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:29 +0100

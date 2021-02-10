@@ -1,15 +1,28 @@
-|                    | Array restrictions |
-| ------------------ | ------------------ |
-| **Min items**      | {{ schema.kw_min_items.literal | default('N/A') }} |
-| **Max items**      | {{ schema.kw_max_items.literal | default('N/A') }} |
-| **Items unicity**  | {{ 'True' if schema.kw_unique_items and schema.kw_unique_items.literal == True else 'False' }} |
+|                       | Array restrictions |
+| --------------------- | ------------------ |
+| **Min items**         | {{ schema.kw_min_items.literal | default('N/A') }} |
+| **Max items**         | {{ schema.kw_max_items.literal | default('N/A') }} |
+| **Items unicity**     | {{ 'True' if schema.kw_unique_items and schema.kw_unique_items.literal == True else 'False' }} |
+| **Additional items**  | {{ 'True' if schema.kw_additional_items and schema.kw_additional_items.literal == True else 'False' }} |
+| **Tuple validation**  | {{ 'See below' if schema.kw_items or (schema.kw_contains and schema.kw_contains.literal != {}) else 'N/A' }} |
 
 {% if schema.kw_items %}
-{{ "Each item of this array must be" | md_heading(depth+1) }}
-{% with schema=schema.kw_items, skip_headers=False, depth=depth+1 %}
-    {% include "content.html" %}
-{% endwith %}
+| Each item of this array must be | Description |
+| ------------------------------- | ----------- |
+{% for item in schema.kw_items %}
+| [{{ item.name_for_breadcrumbs or "Array Item " ~ loop.index }}](#{{ item.html_id }}) | {{- item | get_description | first_line(80) | escape_for_md or "-" -}} {{ "|" }}
+{% endfor %}
+
+{% for item in schema.kw_items %}
+    {% filter md_heading(depth+1) %}
+    {% with schema=item %}{%- include "breadcrumbs.html" %}{% endwith %}
+    {% endfilter %}
+    {% with schema=item, skip_headers=False, depth=depth+1 %}
+        {% include "content.html" %}
+    {% endwith %}
+{% endfor %}
 {% endif %}
+
 {% if schema.kw_contains and schema.kw_contains.literal != {} %}
 {{ "At least one of the items must be" | md_heading(depth+1) }}
 {% with schema=schema.kw_contains, skip_headers=False, depth=depth+1 %}

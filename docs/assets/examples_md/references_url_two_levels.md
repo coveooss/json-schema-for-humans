@@ -6,7 +6,7 @@
 
 Type: `object`
 
-**Description:** <p>Testing $ref of a remote $ref</p>
+**Description:** Testing $ref of a remote $ref
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -29,7 +29,7 @@ Defined in: https://raw.githubusercontent.com/coveooss/json-schema-for-humans/ma
 
 Type: `string`
 
-**Description:** <p>a filled string</p>
+**Description:** a filled string
 
 Defined in: #/definitions/filled_string
 
@@ -41,9 +41,9 @@ Defined in: #/definitions/filled_string
 
 Type: `string`
 
-**Description:** <p>a filled string</p>
+**Description:** a filled string
 
 Same definition as [name](#described_name)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:56 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:32 +0100

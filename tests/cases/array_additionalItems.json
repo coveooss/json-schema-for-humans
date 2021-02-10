@@ -2,25 +2,46 @@
   "$id": "https://example.com/arrays.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "A little food fun",
-  "type": "array",
-  "items": [
-    {
-      "type": "number"
+  "properties": {
+    "address": {
+      "type": "array",
+      "items": [
+        {
+          "title": "a number",
+          "type": "number"
+        },
+        {
+          "description": "followed by a string",
+          "type": "string"
+        },
+        {
+          "title": "again a string",
+          "type": "string",
+          "enum": ["Street", "Avenue", "Boulevard"]
+        },
+        {
+          "title": "finally an enum",
+          "type": "string",
+          "enum": ["NW", "NE", "SW", "SE"]
+        }
+      ],
+      "additionalItems": true,
+      "examples": [
+        [1600, "Pennsylvania", "Avenue", "NW", "Washington"]
+      ]
     },
-    {
-      "type": "string"
+    "addressLines": {
+      "description": "list of address lines",
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
     },
-    {
-      "type": "string",
-      "enum": ["Street", "Avenue", "Boulevard"]
-    },
-    {
-      "type": "string",
-      "enum": ["NW", "NE", "SW", "SE"]
+    "arrayEmpty": {
+      "type": "array",
+      "items": []
     }
-  ],
-  "additionalItems": true,
-  "examples": [
-    [1600, "Pennsylvania", "Avenue", "NW", "Washington"]
-  ]
+  }
 }

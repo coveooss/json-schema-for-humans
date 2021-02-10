@@ -32,7 +32,7 @@ must respect the following conditions
 
 Type: `object`
 
-**Description:** <p>Description 4</p>
+**Description:** Description 4
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -45,7 +45,7 @@ must respect the following conditions
 
 Type: `object`
 
-**Description:** <p>Description 1</p>
+**Description:** Description 1
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -58,7 +58,7 @@ must respect the following conditions
 
 Type: `object`
 
-**Description:** <p>Description 2</p>
+**Description:** Description 2
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -71,11 +71,11 @@ must respect the following conditions
 
 Type: `object`
 
-**Description:** <p>Description 3</p>
+**Description:** Description 3
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:56 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:32 +0100

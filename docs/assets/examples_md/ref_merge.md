@@ -18,7 +18,7 @@ Type: `object`
 Type: `enum (of string)`
 Default: `"Default from property"`
 
-**Description:** <p>This is the description from the definition</p>
+**Description:** This is the description from the definition
 
 Defined in: #/definitions/aProperty
 
@@ -48,4 +48,4 @@ Type: `string`
 Type: `string`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:55 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:30 +0100

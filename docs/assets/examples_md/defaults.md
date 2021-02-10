@@ -16,7 +16,7 @@ Type: `object`
 Type: `object`
 Default: `"Default from a"`
 
-**Description:** <p>Description of a</p>
+**Description:** Description of a
 
 Defined in: #/definitions/common
 
@@ -29,9 +29,9 @@ Defined in: #/definitions/common
 Type: `object`
 Default: `"Default from b"`
 
-**Description:** <p>A common description</p>
+**Description:** A common description
 
 Same definition as [a](#a)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:53 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:28 +0100

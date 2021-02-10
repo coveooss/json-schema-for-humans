@@ -4,7 +4,7 @@
 
 Type: `object`
 
-**Description:** <p>Testing $ref with URL</p>
+**Description:** Testing $ref with URL
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -15,9 +15,9 @@ Type: `object`
 
 Type: `string`
 
-**Description:** <p>The person's first name.</p>
+**Description:** The person's first name.
 
 Defined in: https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/tests/cases/basic.json#/properties/firstName
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:54 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:29 +0100

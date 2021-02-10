@@ -16,7 +16,7 @@ Type: `object`
 
 Type: `object`
 
-**Description:** <p>We should see this</p>
+**Description:** We should see this
 
 Defined in: #/definitions/inner schema
 
@@ -29,15 +29,15 @@ Defined in: #/definitions/inner schema
 
 Type: `string`
 
-**Description:** <p>inner description</p>
+**Description:** inner description
 
 ## <a name="outer2"></a>2. Property `root > outer2`
 
 Type: `object`
 
-**Description:** <p>We should see this too</p>
+**Description:** We should see this too
 
 Same definition as [outer](#outer)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:54 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:30 +0100

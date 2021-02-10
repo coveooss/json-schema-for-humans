@@ -31,19 +31,19 @@ Type: `object`
 
 Type: `string`
 
-**Description:** <p>default</p>
+**Description:** default
 
 ## <a name="examples"></a>2. Property `Person > examples`
 
 Type: `string`
 
-**Description:** <p>examples</p>
+**Description:** examples
 
 ## <a name="if"></a>3. Property `Person > if`
 
 Type: `object`
 
-**Description:** <p>if</p>
+**Description:** if
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -53,7 +53,7 @@ Type: `object`
 
 Type: `object`
 
-**Description:** <p>then</p>
+**Description:** then
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -63,7 +63,7 @@ Type: `object`
 
 Type: `object`
 
-**Description:** <p>else</p>
+**Description:** else
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -73,7 +73,7 @@ Type: `object`
 
 Type: `object`
 
-**Description:** <p>anyOf</p>
+**Description:** anyOf
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -83,7 +83,7 @@ Type: `object`
 
 Type: `object`
 
-**Description:** <p>allOf</p>
+**Description:** allOf
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -93,7 +93,7 @@ Type: `object`
 
 Type: `object`
 
-**Description:** <p>not</p>
+**Description:** not
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -103,7 +103,7 @@ Type: `object`
 
 Type: `object`
 
-**Description:** <p>properties</p>
+**Description:** properties
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -113,11 +113,11 @@ Type: `object`
 
 Type: `object`
 
-**Description:** <p>patternProperties</p>
+**Description:** patternProperties
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:53 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:29 +0100

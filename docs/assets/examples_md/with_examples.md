@@ -19,7 +19,7 @@ Type: `object`
 
 Type: `string`
 
-**Description:** <p>the person's first name</p>
+**Description:** the person's first name
 
 **Examples:** 
 
@@ -34,7 +34,7 @@ Type: `string`
 
 Type: `string`
 
-**Description:** <p>The person's last name.</p>
+**Description:** The person's last name.
 
 **Example:** 
 
@@ -46,7 +46,7 @@ Type: `string`
 
 Type: `integer`
 
-**Description:** <p>Age in years which must be equal to or greater than zero.</p>
+**Description:** Age in years which must be equal to or greater than zero.
 
 | Restrictions |   |
 | ------------ | - |
@@ -62,7 +62,7 @@ Type: `integer`
 
 Type: `object`
 
-**Description:** <p>Any more info you want as an object</p>
+**Description:** Any more info you want as an object
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -79,4 +79,4 @@ Type: `object`
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:52 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:28 +0100

@@ -13,8 +13,8 @@ Type: `object`
 
 Type: `string`
 
-**Description:** <p>Line1<br />
-Line2</p>
+**Description:** Line1
+Line2
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:55 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:31 +0100

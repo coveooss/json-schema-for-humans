@@ -19,7 +19,7 @@ Type: `object`
 
 Type: `object`
 
-**Description:** <p>A sub type with additionalProperties false.</p>
+**Description:** A sub type with additionalProperties false.
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -34,7 +34,7 @@ Type: `number`
 
 Type: `object`
 
-**Description:** <p>A sub type with additionalProperties true.</p>
+**Description:** A sub type with additionalProperties true.
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -49,7 +49,7 @@ Type: `number`
 
 Type: `object`
 
-**Description:** <p>additionalProperties schema.</p>
+**Description:** additionalProperties schema.
 
 | Property | Pattern | Type | Required | Deprecated | Additional | Description |
 | -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
@@ -61,4 +61,4 @@ Type: `object`
 Type: `number`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:56 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:32 +0100

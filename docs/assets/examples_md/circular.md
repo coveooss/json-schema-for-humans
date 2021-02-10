@@ -26,7 +26,7 @@ Defined in: #/definitions/a
 Type: `string`
 Default: `"Default from c"`
 
-**Description:** <p>Description from b</p>
+**Description:** Description from b
 
 Defined in: #/definitions/b
 
@@ -35,4 +35,4 @@ Defined in: #/definitions/c
 Defined in: #/definitions/a/properties/a1
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:54 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:29 +0100

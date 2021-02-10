@@ -19,19 +19,19 @@ Type: `object`
 
 Type: `string`
 
-**Description:** <p>The person's first name.</p>
+**Description:** The person's first name.
 
 ## <a name="lastName"></a>2. Property `Person > lastName`
 
 Type: `string or null`
 
-**Description:** <p>The person's last name.</p>
+**Description:** The person's last name.
 
 ## <a name="age"></a>3. Property `Person > age`
 
 Type: `integer or number`
 
-**Description:** <p>Age in years which must be equal to or greater than zero.</p>
+**Description:** Age in years which must be equal to or greater than zero.
 
 | Restrictions |   |
 | ------------ | - |
@@ -41,7 +41,7 @@ Type: `integer or number`
 
 Type: `integer, string, number or null`
 
-**Description:** <p>Ay other info you like</p>
+**Description:** Ay other info you like
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-09 at 22:03:55 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:31 +0100

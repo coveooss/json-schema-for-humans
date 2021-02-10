@@ -11,6 +11,7 @@ from json import JSONDecodeError
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Set, TextIO, Tuple, Type, Union, cast, Iterator
 
+from pprint import pprint
 import click
 import htmlmin
 import jinja2
@@ -48,6 +49,7 @@ KW_TITLE = "title"
 KW_CONTAINS = "contains"
 KW_ITEMS = "items"
 KW_UNIQUE_ITEMS = "uniqueItems"
+KW_ADDITIONAL_ITEMS = "additionalItems"
 KW_MAX_ITEMS = "maxItems"
 KW_MIN_ITEMS = "minItems"
 KW_MAX_LENGTH = "maxLength"
@@ -432,8 +434,10 @@ class SchemaNode:
         return self.get_keyword(KW_MAX_LENGTH)
 
     @property
-    def kw_items(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KW_ITEMS)
+    def kw_items(self) -> Optional[List["SchemaNode"]]:
+        items =  self.get_keyword(KW_ITEMS) or []
+        
+        return items.array_items
 
     @property
     def kw_min_items(self) -> Optional["SchemaNode"]:
@@ -446,6 +450,10 @@ class SchemaNode:
     @property
     def kw_unique_items(self) -> Optional["SchemaNode"]:
         return self.get_keyword(KW_UNIQUE_ITEMS)
+
+    @property
+    def kw_additional_items(self) -> Optional["SchemaNode"]:
+        return self.get_keyword(KW_ADDITIONAL_ITEMS)
 
     @property
     def kw_contains(self) -> Optional["SchemaNode"]:
