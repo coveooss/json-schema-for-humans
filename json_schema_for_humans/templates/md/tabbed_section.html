@@ -5,17 +5,8 @@
 | [{{ node.name_for_breadcrumbs or title ~ " " ~ loop.index }}](#{{ node.html_id }}) |
 {% endfor %}
 {% for node in current_node.array_items %}
-    {%- set title -%}
-        {%- if config.show_breadcrumbs %}
-        {% with schema=node %}
-            {%- include "breadcrumbs.html" %}
-        {% endwith %}
-        {%- else -%}
-        {{- node.property_name -}}
-        {% endif %}
-    {%- endset -%}
     {% filter md_heading(depth+1, node.html_id) -%}
-        {% if node.is_pattern_property %}Pattern{% endif %} Property `{{- title | escape_for_md -}}`
+        {% if node.is_pattern_property %}Pattern{% endif %} Property `{% with schema=node %}{%- include "breadcrumbs.html" %}{% endwith %}`
     {%- endfilter %}
     {% with schema=node, skip_headers=False, depth=depth+1 %}
         {% include "content.html" %}

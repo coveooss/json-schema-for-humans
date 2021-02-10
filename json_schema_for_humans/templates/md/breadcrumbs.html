@@ -1,3 +1,9 @@
-{%- for node in schema.nodes_from_root -%}
-  {{ node.name_for_breadcrumbs }}{%- if not loop.last %} > {% endif -%}
-{%- endfor -%}
+{% filter escape_for_md %}
+{%- if config.show_breadcrumbs %}
+  {%- for node in schema.nodes_from_root -%}
+    {{ node.name_for_breadcrumbs }}{%- if not loop.last %} > {% endif -%}
+  {%- endfor -%}
+{%- else -%}
+  {{- schema.property_name -}}
+{% endif %}
+{% endfilter %}

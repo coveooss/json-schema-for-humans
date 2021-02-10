@@ -4,21 +4,12 @@
   {% endif %}
 
   {% set html_id = sub_property.html_id %}
-  {%- set title -%}
-    {%- if config.show_breadcrumbs %}
-      {% with schema=sub_property %}
-        {%- include "breadcrumbs.html" %}
-      {% endwith %}
-    {%- else -%}
-      {{- sub_property.property_name -}}
-    {% endif %}
-  {%- endset -%}
 
   {% set description = sub_property | get_description %}
   
   {% filter md_heading(depth+1, html_id) -%}
     {%- if sub_property is deprecated -%}~~{%- endif -%}
-    {% if sub_property.is_pattern_property %}Pattern{% endif %} Property `{{- title | escape_for_md -}}`
+    {% if sub_property.is_pattern_property %}Pattern{% endif %} Property `{% with schema=sub_property %}{%- include "breadcrumbs.html" %}{% endwith %}`
     {%- if sub_property is deprecated -%}~~{%- endif -%}
   {%- endfilter %}
 
