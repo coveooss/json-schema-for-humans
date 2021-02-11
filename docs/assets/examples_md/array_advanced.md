@@ -8,14 +8,15 @@ Type: `object`
 
 **Description:** A little food fun
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [fruits](#fruits)|No|array of string|No|No| No|5 to 8 fruits that you like|
-| [vegetables](#vegetables)|No|array|No|No| No|-|
+| Property | Pattern | Type | Deprecated | Additional | Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------- |
+| [fruits](#fruits)|No|array of string|No| No|5 to 8 fruits that you like|
+| [vegetables](#vegetables)|No|array|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="fruits"></a>1. Property `root > fruits`
 
+![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
 Type: `array of string`
 
 **Description:** 5 to 8 fruits that you like
@@ -30,6 +31,7 @@ Type: `array of string`
 
 ## <a name="vegetables"></a>2. Property `root > vegetables`
 
+![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
 Type: `array`
 
 |                       | Array restrictions |
@@ -47,4 +49,4 @@ Type: `const`
 Specific value: `"eggplant"`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:32 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:07 +0100

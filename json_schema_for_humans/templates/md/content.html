@@ -15,9 +15,16 @@
 {# Resolve type #}
 {% set type_name = schema.type_name %}
 {%- if not skip_headers %}
+    {% if not skip_required and schema.property_name %}
+        {% if schema.is_required_property -%}
+        ![made-with-Markdown](https://img.shields.io/badge/Required-blue)
+        {% else -%}
+        ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
+        {% endif -%}
+    {% endif -%}
     {% if schema is deprecated %}![made-with-Markdown](https://img.shields.io/badge/Deprecated-red) {% endif -%}
     {# Display type #}
-    {%- if not schema is combining %}Type: `{{ type_name }}`{% endif %}
+    {% if not schema is combining %}Type: `{{ type_name }}`{% endif %}
 
     {# Display default #}
     {% set default_value = schema.default_value %}
@@ -54,17 +61,17 @@ Same definition as [{{ schema.links_to.link_name }}](#{{ schema.links_to.html_id
         
         {# Combining: allOf, anyOf, oneOf, not #}
         {% if schema.kw_all_of %}
-            {% with operator="allOf", title="All of(Requirement)", current_node=schema.kw_all_of %}
+            {% with operator="allOf", title="All of(Requirement)", current_node=schema.kw_all_of, skip_required=True %}
                 {% include "tabbed_section.html" %}
             {% endwith %}
         {% endif %}
         {% if schema.kw_any_of %}
-            {% with operator="anyOf", title="Any of(Option)", current_node=schema.kw_any_of %}
+            {% with operator="anyOf", title="Any of(Option)", current_node=schema.kw_any_of, skip_required=True %}
                 {% include "tabbed_section.html" %}
             {% endwith %}
         {% endif %}
         {% if schema.kw_one_of %}
-            {% with operator="oneOf", title="One of(Option)",current_node=schema.kw_one_of %}
+            {% with operator="oneOf", title="One of(Option)",current_node=schema.kw_one_of, skip_required=True %}
                 {% include "tabbed_section.html" %}
             {% endwith %}
         {% endif %}

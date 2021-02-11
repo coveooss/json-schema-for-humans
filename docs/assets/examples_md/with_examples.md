@@ -7,16 +7,17 @@
 
 Type: `object`
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [firstName](#firstName)|No|string|No|No| No|the person's first name|
-| [lastName](#lastName)|No|string|No|No| No|The person's last name.|
-| [age](#age)|No|integer|No|No| No|Age in years which must be equal to or greater than zero.|
-| [moreInfo](#moreInfo)|No|object|No|No| No|Any more info you want as an object|
+| Property | Pattern | Type | Deprecated | Additional | Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------- |
+| [firstName](#firstName)|No|string|No| No|the person's first name|
+| [lastName](#lastName)|No|string|No| No|The person's last name.|
+| [age](#age)|No|integer|No| No|Age in years which must be equal to or greater than zero.|
+| [moreInfo](#moreInfo)|No|object|No| No|Any more info you want as an object|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="firstName"></a>1. Property `Person > firstName`
 
+![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
 Type: `string`
 
 **Description:** the person's first name
@@ -32,6 +33,7 @@ Type: `string`
 
 ## <a name="lastName"></a>2. Property `Person > lastName`
 
+![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
 Type: `string`
 
 **Description:** The person's last name.
@@ -44,6 +46,7 @@ Type: `string`
 
 ## <a name="age"></a>3. Property `Person > age`
 
+![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
 Type: `integer`
 
 **Description:** Age in years which must be equal to or greater than zero.
@@ -60,12 +63,13 @@ Type: `integer`
 
 ## <a name="moreInfo"></a>4. Property `Person > moreInfo`
 
+![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
 Type: `object`
 
 **Description:** Any more info you want as an object
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
+| Property | Pattern | Type | Deprecated | Additional | Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------- |
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 **Example:** 
@@ -79,4 +83,4 @@ Type: `object`
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:28 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:03 +0100

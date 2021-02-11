@@ -7,14 +7,15 @@ Type: `object`
 
 **Description:** A schema with an array
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [fruits](#fruits)|No|array of string|No|No| No|-|
-| [vegetables](#vegetables)|No|array|No|No| No|-|
+| Property | Pattern | Type | Deprecated | Additional | Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------- |
+| [fruits](#fruits)|No|array of string|No| No|-|
+| [vegetables](#vegetables)|No|array|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="fruits"></a>1. Property `root > fruits`
 
+![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
 Type: `array of string`
 
 |                       | Array restrictions |
@@ -27,6 +28,7 @@ Type: `array of string`
 
 ## <a name="vegetables"></a>2. Property `root > vegetables`
 
+![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
 Type: `array`
 
 |                       | Array restrictions |
@@ -38,4 +40,4 @@ Type: `array`
 | **Tuple validation**  | N/A |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:31 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:06 +0100

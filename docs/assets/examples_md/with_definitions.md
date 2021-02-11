@@ -8,42 +8,47 @@
 
 Type: `object`
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [billing_address](#billing_address)|No|object|No|No| No|-|
-| [shipping_address](#shipping_address)|No|object|No|No| No|-|
+| Property | Pattern | Type | Deprecated | Additional | Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------- |
+| [billing_address](#billing_address)|No|object|No| No|-|
+| [shipping_address](#shipping_address)|No|object|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="billing_address"></a>1. Property `root > billing_address`
 
+![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
 Type: `object`
 
 Defined in: #/definitions/address
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [street_address](#billing_address_street_address)|No|string|Yes|No| No|-|
-| [city](#billing_address_city)|No|string|Yes|No| No|-|
-| [state](#billing_address_state)|No|string|Yes|No| No|-|
+| Property | Pattern | Type | Deprecated | Additional | Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------- |
+|*  [street_address](#billing_address_street_address)|No|string|No| No|-|
+|*  [city](#billing_address_city)|No|string|No| No|-|
+|*  [state](#billing_address_state)|No|string|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ### <a name="billing_address_street_address"></a>1.1. Property `root > billing_address > street_address`
 
+![made-with-Markdown](https://img.shields.io/badge/Required-blue)
 Type: `string`
 
 ### <a name="billing_address_city"></a>1.2. Property `root > billing_address > city`
 
+![made-with-Markdown](https://img.shields.io/badge/Required-blue)
 Type: `string`
 
 ### <a name="billing_address_state"></a>1.3. Property `root > billing_address > state`
 
+![made-with-Markdown](https://img.shields.io/badge/Required-blue)
 Type: `string`
 
 ## <a name="shipping_address"></a>2. Property `root > shipping_address`
 
+![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
 Type: `object`
 
 Same definition as [billing_address](#billing_address)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:29 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:04 +0100

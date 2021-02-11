@@ -6,15 +6,16 @@
 
 Type: `object`
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [favorite_os](#favorite_os)|No|enum (of string)|No|No| No|-|
-| [favorite_colors](#favorite_colors)|No|array of enum (of string)|No|No| No|-|
-| [desired_number_of_shoes](#desired_number_of_shoes)|No|integer|No|No| No|-|
+| Property | Pattern | Type | Deprecated | Additional | Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------- |
+| [favorite_os](#favorite_os)|No|enum (of string)|No| No|-|
+| [favorite_colors](#favorite_colors)|No|array of enum (of string)|No| No|-|
+| [desired_number_of_shoes](#desired_number_of_shoes)|No|integer|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="favorite_os"></a>1. Property `User Preference > favorite_os`
 
+![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
 Type: `enum (of string)`
 Default: `"Linux"`
 
@@ -25,6 +26,7 @@ Must be one of:
 
 ## <a name="favorite_colors"></a>2. Property `User Preference > favorite_colors`
 
+![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
 Type: `array of enum (of string)`
 Default: `["white", "blue"]`
 
@@ -38,6 +40,7 @@ Default: `["white", "blue"]`
 
 ## <a name="desired_number_of_shoes"></a>3. Property `User Preference > desired_number_of_shoes`
 
+![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
 Type: `integer`
 Default: `2`
 
@@ -47,4 +50,4 @@ Default: `2`
 | **Maximum** | &le; 2 |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:29 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:04 +0100

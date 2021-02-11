@@ -5,14 +5,15 @@
 
 Type: `object`
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [name](#name)|No|string|No|No| No|a filled string|
-| [alignment](#alignment)|No|string|No|No| No|a filled string|
+| Property | Pattern | Type | Deprecated | Additional | Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------- |
+| [name](#name)|No|string|No| No|a filled string|
+| [alignment](#alignment)|No|string|No| No|a filled string|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") | - |        
 
 ## <a name="name"></a>1. Property `root > name`
 
+![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
 Type: `string`
 
 **Description:** a filled string
@@ -25,6 +26,7 @@ Defined in: #/definitions/filled_string
 
 ## <a name="alignment"></a>2. Property `root > alignment`
 
+![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
 Type: `string`
 
 **Description:** a filled string
@@ -32,4 +34,4 @@ Type: `string`
 Same definition as [name](#name)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:28 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:04 +0100

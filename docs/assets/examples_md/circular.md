@@ -5,24 +5,26 @@
 
 Type: `object`
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [person](#person)|No|object|No|No| No|-|
+| Property | Pattern | Type | Deprecated | Additional | Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------- |
+| [person](#person)|No|object|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="person"></a>1. Property `Circular reference Schema > person`
 
+![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
 Type: `object`
 
 Defined in: #/definitions/a
 
-| Property | Pattern | Type | Required | Deprecated | Additional | Description |
-| -------- | ------- | ---- | -------- | ---------- | ---------- | ----------- |
-| [a1](#person_a1)|No|string|No|No| No|Description from b|
+| Property | Pattern | Type | Deprecated | Additional | Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------- |
+| [a1](#person_a1)|No|string|No| No|Description from b|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ### <a name="person_a1"></a>1.1. Property `Circular reference Schema > person > a1`
 
+![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
 Type: `string`
 Default: `"Default from c"`
 
@@ -35,4 +37,4 @@ Defined in: #/definitions/c
 Defined in: #/definitions/a/properties/a1
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 00:42:29 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:05 +0100
