@@ -15,16 +15,16 @@ Type: `object`
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-| [default](#default)|No|string|No| No|default|
-| [examples](#examples)|No|string|No| No|examples|
-| [if](#if)|No|object|No| No|if|
-| [then](#then)|No|object|No| No|then|
-| [else](#else)|No|object|No| No|else|
-| [anyOf](#anyOf)|No|object|No| No|anyOf|
-| [allOf](#allOf)|No|object|No| No|allOf|
-| [not](#not)|No|object|No| No|not|
-| [properties](#properties)|No|object|No| No|properties|
-| [patternProperties](#patternProperties)|No|object|No| No|patternProperties|
+|-  [default](#default)|No|string|No| No|default|
+|-  [examples](#examples)|No|string|No| No|examples|
+|-  [if](#if)|No|object|No| No|if|
+|-  [then](#then)|No|object|No| No|then|
+|-  [else](#else)|No|object|No| No|else|
+|-  [anyOf](#anyOf)|No|object|No| No|anyOf|
+|-  [allOf](#allOf)|No|object|No| No|allOf|
+|-  [not](#not)|No|object|No| No|not|
+|-  [properties](#properties)|No|object|No| No|properties|
+|-  [patternProperties](#patternProperties)|No|object|No| No|patternProperties|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="default"></a>1. Property `Person > default`
@@ -130,4 +130,4 @@ Type: `object`
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:04 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:27 +0100

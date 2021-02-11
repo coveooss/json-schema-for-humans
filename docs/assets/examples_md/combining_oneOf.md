@@ -12,7 +12,7 @@ Type: `object`
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-|*  [storage](#storage)|No|object|No| No|-|
+|+  [storage](#storage)|No|object|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="storage"></a>1. Property `root > storage`
@@ -66,4 +66,4 @@ Defined in: #/definitions/tmpfs
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:06 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:30 +0100

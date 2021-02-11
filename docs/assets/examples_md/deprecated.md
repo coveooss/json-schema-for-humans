@@ -10,9 +10,9 @@ Type: `object`
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-| [deprecated1](#deprecated1)|No|object|![made-with-Markdown](https://img.shields.io/badge/Deprecated-red)| No|[Deprecated]|
-| [deprecated2](#deprecated2)|No|object|![made-with-Markdown](https://img.shields.io/badge/Deprecated-red)| No|[Deprecated - Use \`not_deprecated\` instead]|
-| [not_deprecated](#not_deprecated)|No|string|No| No|-|
+|-  [deprecated1](#deprecated1)|No|object|![made-with-Markdown](https://img.shields.io/badge/Deprecated-red)| No|[Deprecated]|
+|-  [deprecated2](#deprecated2)|No|object|![made-with-Markdown](https://img.shields.io/badge/Deprecated-red)| No|[Deprecated - Use \`not_deprecated\` instead]|
+|-  [not_deprecated](#not_deprecated)|No|string|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="deprecated1"></a>1. ~~ Property `root > deprecated1`~~
@@ -43,4 +43,4 @@ Type: `object`
 Type: `string`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:07 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:30 +0100

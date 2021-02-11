@@ -10,10 +10,10 @@ Type: `object`
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-| [not_a_pattern](#not_a_pattern)|No|object|No| No|-|
-| [.*](#pattern1)|Yes|object|No| No|Description 1|
-| [..](#pattern2)|Yes|object|No| No|Description 2|
-| [^.](#pattern3)|Yes|object|No| No|Description 3|
+|-  [not_a_pattern](#not_a_pattern)|No|object|No| No|-|
+|-  [.*](#pattern1)|Yes|object|No| No|Description 1|
+|-  [..](#pattern2)|Yes|object|No| No|Description 2|
+|-  [^.](#pattern3)|Yes|object|No| No|Description 3|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="not_a_pattern"></a>1. Property `Person > not_a_pattern`
@@ -23,7 +23,7 @@ Type: `object`
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-| [.$](#not_a_pattern_pattern1)|Yes|object|No| No|Description 4|
+|-  [.$](#not_a_pattern_pattern1)|Yes|object|No| No|Description 4|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ### <a name="not_a_pattern_pattern1"></a>1.1. Pattern Property `Person > not_a_pattern > Title 4`
@@ -83,4 +83,4 @@ Type: `object`
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:07 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:30 +0100

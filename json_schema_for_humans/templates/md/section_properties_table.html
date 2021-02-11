@@ -3,7 +3,7 @@
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
 {% for sub_property in schema.iterate_properties %}
   {%- set html_id = sub_property.html_id -%}
-| {{- "* " if sub_property.is_required_property }} [{{- sub_property.property_name | escape_for_md -}}](#{{- html_id -}}{{- ")" -}}
+| {{- "+ " if sub_property.is_required_property else "- " }} [{{- sub_property.property_name | escape_for_md -}}](#{{- html_id -}}{{- ")" -}}
 | {{- 'Yes' if sub_property.is_pattern_property else 'No' -}}
 | {{- 'Combination' if schema is combining else sub_property.type_name | escape_for_md -}}
 | {{- '![made-with-Markdown](https://img.shields.io/badge/Deprecated-red)' if sub_property is deprecated else 'No' -}}

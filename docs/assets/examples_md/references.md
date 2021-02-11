@@ -24,18 +24,18 @@ Type: `object`
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-| [a_gift](#a_gift)|No|string|No| No|A gift, or is it?|
-| [anchor_with_slash](#anchor_with_slash)|No|object|No| No|-|
-| [anchor_no_slash](#anchor_no_slash)|No|array of string|No| No|Description for array_def|
-| [anchor_nested_reference](#anchor_nested_reference)|No|string|No| No|-|
-| [same_file_anchor_with_slash](#same_file_anchor_with_slash)|No|string|No| No|Description for string_def|
-| [same_file_anchor_no_slash](#same_file_anchor_no_slash)|No|object|No| No|-|
-| [same_file_nested_reference](#same_file_nested_reference)|No|string|No| No|-|
-| [other_file_anchor](#other_file_anchor)|No|object|No| No|The delivery is a gift, no prices displayed|
-| [other_file_dot_anchor](#other_file_dot_anchor)|No|object|No| No|The delivery is a gift, no prices displayed|
-| [other_file_dot_dot_anchor](#other_file_dot_dot_anchor)|No|object|No| No|The delivery is a gift, no prices displayed|
-| [other_file_only](#other_file_only)|No|object|No| No|Test schema with a not|
-| [multi_hierarchy_reference](#multi_hierarchy_reference)|No|object|No| No|-|
+|-  [a_gift](#a_gift)|No|string|No| No|A gift, or is it?|
+|-  [anchor_with_slash](#anchor_with_slash)|No|object|No| No|-|
+|-  [anchor_no_slash](#anchor_no_slash)|No|array of string|No| No|Description for array_def|
+|-  [anchor_nested_reference](#anchor_nested_reference)|No|string|No| No|-|
+|-  [same_file_anchor_with_slash](#same_file_anchor_with_slash)|No|string|No| No|Description for string_def|
+|-  [same_file_anchor_no_slash](#same_file_anchor_no_slash)|No|object|No| No|-|
+|-  [same_file_nested_reference](#same_file_nested_reference)|No|string|No| No|-|
+|-  [other_file_anchor](#other_file_anchor)|No|object|No| No|The delivery is a gift, no prices displayed|
+|-  [other_file_dot_anchor](#other_file_dot_anchor)|No|object|No| No|The delivery is a gift, no prices displayed|
+|-  [other_file_dot_dot_anchor](#other_file_dot_dot_anchor)|No|object|No| No|The delivery is a gift, no prices displayed|
+|-  [other_file_only](#other_file_only)|No|object|No| No|Test schema with a not|
+|-  [multi_hierarchy_reference](#multi_hierarchy_reference)|No|object|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="a_gift"></a>1. Property `root > a_gift`
@@ -56,7 +56,7 @@ Defined in: #/definitions/object_def
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-| [propertyA](#anchor_with_slash_propertyA)|No|string|No| No|Description for object_def/items/propertyA|
+|-  [propertyA](#anchor_with_slash_propertyA)|No|string|No| No|Description for object_def/items/propertyA|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") | - |        
 
 ### <a name="anchor_with_slash_propertyA"></a>2.1. Property `root > anchor_with_slash > propertyA`
@@ -126,7 +126,7 @@ Defined in: with_descriptions.json#/definitions/gift
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-| [with_wrap](#other_file_anchor_with_wrap)|No|boolean|No| No|-|
+|-  [with_wrap](#other_file_anchor_with_wrap)|No|boolean|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ### <a name="other_file_anchor_with_wrap"></a>8.1. Property `root > other_file_anchor > with_wrap`
@@ -163,7 +163,7 @@ Defined in: combining_not.json
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-|*  [not_a_string](#other_file_only_not_a_string)|No|object|No| No|-|
+|+  [not_a_string](#other_file_only_not_a_string)|No|object|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ### <a name="other_file_only_not_a_string"></a>11.1. Property `root > other_file_only > not_a_string`
@@ -188,7 +188,7 @@ Defined in: final.json#/definitions/final_object_content
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-| [propertyA](#multi_hierarchy_reference_propertyA)|No|string|No| No|Contents of propertyA in final.json|
+|-  [propertyA](#multi_hierarchy_reference_propertyA)|No|string|No| No|Contents of propertyA in final.json|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") | - |        
 
 ### <a name="multi_hierarchy_reference_propertyA"></a>12.1. Property `root > multi_hierarchy_reference > propertyA`
@@ -199,4 +199,4 @@ Type: `string`
 **Description:** Contents of propertyA in final.json
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:05 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:29 +0100

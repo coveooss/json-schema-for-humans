@@ -10,9 +10,9 @@ Type: `object`
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-| [firstName](#firstName)|No|string|No| No|The person's first name.|
-| [lastName](#lastName)|No|string|No| No|The person's last name.|
-| [$[a-c][0-9]^](#pattern1)|Yes|object|No| No|Review of a paper size.|
+|-  [firstName](#firstName)|No|string|No| No|The person's first name.|
+|-  [lastName](#lastName)|No|string|No| No|The person's last name.|
+|-  [$[a-c][0-9]^](#pattern1)|Yes|object|No| No|Review of a paper size.|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="firstName"></a>1. Property `Person > firstName`
@@ -41,8 +41,8 @@ Type: `object`
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-|*  [rating](#pattern1_rating)|No|integer|No| No|Numerical rating for paper size.|
-|*  [review](#pattern1_review)|No|string|No| No|Narrative review of the paper size.|
+|+  [rating](#pattern1_rating)|No|integer|No| No|Numerical rating for paper size.|
+|+  [review](#pattern1_review)|No|string|No| No|Narrative review of the paper size.|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ### <a name="pattern1_rating"></a>3.1. Property `Person > paperSize > rating`
@@ -60,4 +60,4 @@ Type: `string`
 **Description:** Narrative review of the paper size.
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:06 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:29 +0100

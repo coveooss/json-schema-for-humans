@@ -8,9 +8,9 @@ Type: `object`
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-| [favorite_os](#favorite_os)|No|enum (of string)|No| No|-|
-| [favorite_colors](#favorite_colors)|No|array of enum (of string)|No| No|-|
-| [desired_number_of_shoes](#desired_number_of_shoes)|No|integer|No| No|-|
+|-  [favorite_os](#favorite_os)|No|enum (of string)|No| No|-|
+|-  [favorite_colors](#favorite_colors)|No|array of enum (of string)|No| No|-|
+|-  [desired_number_of_shoes](#desired_number_of_shoes)|No|integer|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="favorite_os"></a>1. Property `User Preference > favorite_os`
@@ -50,4 +50,4 @@ Default: `2`
 | **Maximum** | &le; 2 |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:04 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:28 +0100

@@ -9,10 +9,10 @@ Type: `object`
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-| [firstName](#firstName)|No|string|No| No|the person's first name|
-| [lastName](#lastName)|No|string|No| No|The person's last name.|
-| [age](#age)|No|integer|No| No|Age in years which must be equal to or greater than zero.|
-| [moreInfo](#moreInfo)|No|object|No| No|Any more info you want as an object|
+|-  [firstName](#firstName)|No|string|No| No|the person's first name|
+|-  [lastName](#lastName)|No|string|No| No|The person's last name.|
+|-  [age](#age)|No|integer|No| No|Age in years which must be equal to or greater than zero.|
+|-  [moreInfo](#moreInfo)|No|object|No| No|Any more info you want as an object|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="firstName"></a>1. Property `Person > firstName`
@@ -83,4 +83,4 @@ Type: `object`
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:03 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:26 +0100

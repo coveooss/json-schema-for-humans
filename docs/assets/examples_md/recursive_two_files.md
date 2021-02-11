@@ -8,7 +8,7 @@ Type: `object`
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-| [person](#person)|No|object|No| No|A human being|
+|-  [person](#person)|No|object|No| No|A human being|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="person"></a>1. Property `Person > person`
@@ -22,8 +22,8 @@ Defined in: #/definitions/person
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-| [children](#person_children)|No|array|No| No|The children they had|
-| [siblings](#person_siblings)|No|object|No| No|Person definition from second file. Not the same!|
+|-  [children](#person_children)|No|array|No| No|The children they had|
+|-  [siblings](#person_siblings)|No|object|No| No|Person definition from second file. Not the same!|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ### <a name="person_children"></a>1.1. Property `Person > person > children`
@@ -55,4 +55,4 @@ Defined in: recursive_two_files2.json#/definitions/person
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:03 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:26 +0100

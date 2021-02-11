@@ -7,8 +7,8 @@ Type: `object`
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-| [name](#name)|No|string|No| No|a filled string|
-| [alignment](#alignment)|No|string|No| No|a filled string|
+|-  [name](#name)|No|string|No| No|a filled string|
+|-  [alignment](#alignment)|No|string|No| No|a filled string|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") | - |        
 
 ## <a name="name"></a>1. Property `root > name`
@@ -34,4 +34,4 @@ Type: `string`
 Same definition as [name](#name)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:04 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:27 +0100

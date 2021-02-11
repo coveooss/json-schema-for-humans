@@ -10,7 +10,7 @@ Type: `object`
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-| [described](#described)|No|object|No| No|-|
+|-  [described](#described)|No|object|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="described"></a>1. Property `root > described`
@@ -22,8 +22,8 @@ Defined in: https://raw.githubusercontent.com/coveooss/json-schema-for-humans/ma
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-| [name](#described_name)|No|string|No| No|a filled string|
-| [alignment](#described_alignment)|No|string|No| No|a filled string|
+|-  [name](#described_name)|No|string|No| No|a filled string|
+|-  [alignment](#described_alignment)|No|string|No| No|a filled string|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") | - |        
 
 ### <a name="described_name"></a>1.1. Property `root > described > name`
@@ -49,4 +49,4 @@ Type: `string`
 Same definition as [name](#described_name)
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:07 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:31 +0100

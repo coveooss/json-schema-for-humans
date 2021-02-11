@@ -9,10 +9,10 @@ Type: `object`
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-| [firstName](#firstName)|No|string|No| No|The person's first name.|
-| [lastName](#lastName)|No|string or null|No| No|The person's last name.|
-| [age](#age)|No|integer or number|No| No|Age in years which must be equal to or greater than zero.|
-| [anything](#anything)|No|integer, string, number or null|No| No|Ay other info you like|
+|-  [firstName](#firstName)|No|string|No| No|The person's first name.|
+|-  [lastName](#lastName)|No|string or null|No| No|The person's last name.|
+|-  [age](#age)|No|integer or number|No| No|Age in years which must be equal to or greater than zero.|
+|-  [anything](#anything)|No|integer, string, number or null|No| No|Ay other info you like|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="firstName"></a>1. Property `Person > firstName`
@@ -48,4 +48,4 @@ Type: `integer, string, number or null`
 **Description:** Ay other info you like
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:06 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:29 +0100

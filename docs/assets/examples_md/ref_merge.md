@@ -9,8 +9,8 @@ Type: `object`
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-| [aProperty](#aProperty)|No|enum (of string)|No| No|This is the description from the definition|
-| [aDictPropertyARequired](#aDictPropertyARequired)|No|object|No| No|-|
+|-  [aProperty](#aProperty)|No|enum (of string)|No| No|This is the description from the definition|
+|-  [aDictPropertyARequired](#aDictPropertyARequired)|No|object|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ## <a name="aProperty"></a>1. Property `Test > aProperty`
@@ -37,8 +37,8 @@ Defined in: #/definitions/aDictProperty
 
 | Property | Pattern | Type | Deprecated | Additional | Description |
 | -------- | ------- | ---- | ---------- | ---------- | ----------- |
-|*  [a](#aDictPropertyARequired_a)|No|string|No| No|-|
-|*  [b](#aDictPropertyARequired_b)|No|string|No| No|-|
+|+  [a](#aDictPropertyARequired_a)|No|string|No| No|-|
+|+  [b](#aDictPropertyARequired_b)|No|string|No| No|-|
   | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
 
 ### <a name="aDictPropertyARequired_a"></a>2.1. Property `Test > aDictPropertyARequired > a`
@@ -52,4 +52,4 @@ Type: `string`
 Type: `string`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 01:21:05 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:29 +0100
