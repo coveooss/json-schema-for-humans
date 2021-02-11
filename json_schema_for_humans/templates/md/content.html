@@ -12,34 +12,29 @@
 {# end context parameters #}
 
 {% set keys = schema.keywords %}
-{# Resolve type #}
-{% set type_name = schema.type_name %}
 {%- if not skip_headers %}
-    {% if not skip_required and schema.property_name %}
-        {% if schema.is_required_property -%}
-        ![made-with-Markdown](https://img.shields.io/badge/Required-blue)
-        {% else -%}
-        ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
-        {% endif -%}
-    {% endif -%}
-    {% if schema is deprecated %}![made-with-Markdown](https://img.shields.io/badge/Deprecated-red) {% endif -%}
-    {# Display type #}
-    {% if not schema is combining %}Type: `{{ type_name }}`{% endif %}
+         
+| Type | {% if schema is combining %}`combining`{% else %}`{{ schema.type_name }}`{% endif %} |
+| ---- | --- |
+{% if schema is deprecated %}
+| **Deprecated** | ![made-with-Markdown](https://img.shields.io/badge/Deprecated-red) |
+{% endif -%}
+| **Additional properties** | {%- include "additional_properties.html" -%} |
+{% if schema.default_value -%}
+| **Default** | `{{ schema.default_value }}` |
+{% endif %}
+{% if schema.should_be_a_link(config) %}
+| **Same definition as** | [{{ schema.links_to.link_name }}](#{{ schema.links_to.html_id }}) |
+{% elif schema.refers_to -%}
+| **Defined in** | {{ schema.ref_path }} |
+{% endif %}
 
-    {# Display default #}
-    {% set default_value = schema.default_value %}
-    {% if default_value -%}
-        Default: `{{ default_value }}`
-    {% endif %}
-
-    {% set description = (schema | get_description) %}
-    {% include "section_description.html" %}
+{% set description = (schema | get_description) %}
+{% include "section_description.html" %}
 {% endif %}
 
 {% if schema.should_be_a_link(config) %}
-Same definition as [{{ schema.links_to.link_name }}](#{{ schema.links_to.html_id }})
 {% elif schema.refers_to -%}
-    Defined in: {{ schema.ref_path }}
     {%- with schema=schema.refers_to_merged, skip_headers=True, depth=depth -%}
         {% include "content.html" %}
     {% endwith %}
@@ -101,7 +96,7 @@ Same definition as [{{ schema.links_to.link_name }}](#{{ schema.links_to.html_id
         {% include "badge_type.html" %}
 
         {# Show array restrictions #}
-        {% if type_name.startswith("array") %}
+        {% if schema.type_name.startswith("array") %}
             {% include "section_array.html" %}
         {% endif %}
 

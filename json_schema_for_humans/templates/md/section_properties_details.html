@@ -8,9 +8,18 @@
   {% set description = sub_property | get_description %}
   
   {% filter md_heading(depth+1, html_id) -%}
+    {%- filter replace('\n', '') -%}
+    {%- if not skip_required and sub_property.property_name -%}
+        {% if sub_property.is_required_property -%}
+        ![made-with-Markdown](https://img.shields.io/badge/Required-blue)
+        {% else -%}
+        ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
+        {% endif -%}
+    {%- endif -%}
     {%- if sub_property is deprecated -%}~~{%- endif -%}
-    {% if sub_property.is_pattern_property %}Pattern{% endif %} Property `{% with schema=sub_property %}{%- include "breadcrumbs.html" %}{% endwith %}`
+    {%- if sub_property.is_pattern_property %}Pattern{% endif %} Property `{% with schema=sub_property %}{%- include "breadcrumbs.html" %}{% endwith %}`
     {%- if sub_property is deprecated -%}~~{%- endif -%}
+    {%- endfilter %}
   {%- endfilter %}
 
   {% if sub_property.is_pattern_property %}

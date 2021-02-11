@@ -1,40 +1,36 @@
 # Circular reference Schema
 
-- [1. Property `Circular reference Schema > person`](#person)
-  - [1.1. Property `Circular reference Schema > person > a1`](#person_a1)
+- [1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Circular reference Schema > person`](#person)
+  - [1.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Circular reference Schema > person > a1`](#person_a1)
 
-Type: `object`
+| Type | `object` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
-| Property | Pattern | Type | Deprecated | Additional | Description |
-| -------- | ------- | ---- | ---------- | ---------- | ----------- |
-|-  [person](#person)|No|object|No| No|-|
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
+| Property | Pattern | Type | Deprecated | Description |
+| -------- | ------- | ---- | ---------- | ----------- |
+|-  [person](#person)|No|object|No|-|
 
-## <a name="person"></a>1. Property `Circular reference Schema > person`
+## <a name="person"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Circular reference Schema > person`
 
-![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
-Type: `object`
+| Type | `object` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Defined in** | #/definitions/a |
 
-Defined in: #/definitions/a
+| Property | Pattern | Type | Deprecated | Description |
+| -------- | ------- | ---- | ---------- | ----------- |
+|-  [a1](#person_a1)|No|string|No|Description from b|
 
-| Property | Pattern | Type | Deprecated | Additional | Description |
-| -------- | ------- | ---- | ---------- | ---------- | ----------- |
-|-  [a1](#person_a1)|No|string|No| No|Description from b|
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
+### <a name="person_a1"></a>1.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Circular reference Schema > person > a1`
 
-### <a name="person_a1"></a>1.1. Property `Circular reference Schema > person > a1`
-
-![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
-Type: `string`
-Default: `"Default from c"`
+| Type | `string` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Default** | `"Default from c"` |
+| **Defined in** | #/definitions/b |
 
 **Description:** Description from b
 
-Defined in: #/definitions/b
-
-Defined in: #/definitions/c
-
-Defined in: #/definitions/a/properties/a1
-
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:28 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 22:25:44 +0100

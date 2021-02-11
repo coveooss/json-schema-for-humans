@@ -1,0 +1,24 @@
+{% filter trim %}
+{% set ns = namespace(additional_properties_property="") %}
+{% for sub_property in schema.iterate_properties %}
+  {%- if sub_property.is_additional_properties -%}
+    {% set ns.additional_properties_property %}
+      {%- if sub_property.is_additional_properties_schema -%}
+      [![made-with-Markdown](https://img.shields.io/badge/Should-conform-blue)](#{{- html_id }} "Each additional property must conform to the following schema")
+      {%- else -%}
+      [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")
+      {%- endif -%}
+    {% endset %}
+  {%- endif -%}
+{% endfor %}
+{% if not ns.additional_properties_property|length %}
+  {% set ns.additional_properties_property %}
+    {%- if schema.explicit_no_additional_properties %}
+    [![made-with-Markdown](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.")
+    {%- else %}
+    [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")
+    {%- endif %}
+  {% endset %}
+{% endif %}
+{{ ns.additional_properties_property }}
+{% endfilter %}

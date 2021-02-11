@@ -1,39 +1,39 @@
 # Schema Docs
 
-- [1. Property `root > a`](#a)
-- [2. Property `root > b`](#b)
+- [1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > a`](#a)
+- [2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > b`](#b)
 
-Type: `object`
+| Type | `object` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
-| Property | Pattern | Type | Deprecated | Additional | Description |
-| -------- | ------- | ---- | ---------- | ---------- | ----------- |
-|-  [a](#a)|No|object|No| No|Description of a|
-|-  [b](#b)|No|object|No| No|A common description|
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
+| Property | Pattern | Type | Deprecated | Description |
+| -------- | ------- | ---- | ---------- | ----------- |
+|-  [a](#a)|No|object|No|Description of a|
+|-  [b](#b)|No|object|No|A common description|
 
-## <a name="a"></a>1. Property `root > a`
+## <a name="a"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > a`
 
-![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
-Type: `object`
-Default: `"Default from a"`
+| Type | `object` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Default** | `"Default from a"` |
+| **Defined in** | #/definitions/common |
 
 **Description:** Description of a
 
-Defined in: #/definitions/common
+| Property | Pattern | Type | Deprecated | Description |
+| -------- | ------- | ---- | ---------- | ----------- |
 
-| Property | Pattern | Type | Deprecated | Additional | Description |
-| -------- | ------- | ---- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
+## <a name="b"></a>2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > b`
 
-## <a name="b"></a>2. Property `root > b`
-
-![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
-Type: `object`
-Default: `"Default from b"`
+| Type | `object` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Default** | `"Default from b"` |
+| **Same definition as** | [a](#a) |
 
 **Description:** A common description
 
-Same definition as [a](#a)
-
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:26 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 22:25:42 +0100

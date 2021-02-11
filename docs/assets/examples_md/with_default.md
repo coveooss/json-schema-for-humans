@@ -1,34 +1,37 @@
 # User Preference
 
-- [1. Property `User Preference > favorite_os`](#favorite_os)
-- [2. Property `User Preference > favorite_colors`](#favorite_colors)
-- [3. Property `User Preference > desired_number_of_shoes`](#desired_number_of_shoes)
+- [1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `User Preference > favorite_os`](#favorite_os)
+- [2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `User Preference > favorite_colors`](#favorite_colors)
+- [3. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `User Preference > desired_number_of_shoes`](#desired_number_of_shoes)
 
-Type: `object`
+| Type | `object` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
-| Property | Pattern | Type | Deprecated | Additional | Description |
-| -------- | ------- | ---- | ---------- | ---------- | ----------- |
-|-  [favorite_os](#favorite_os)|No|enum (of string)|No| No|-|
-|-  [favorite_colors](#favorite_colors)|No|array of enum (of string)|No| No|-|
-|-  [desired_number_of_shoes](#desired_number_of_shoes)|No|integer|No| No|-|
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
+| Property | Pattern | Type | Deprecated | Description |
+| -------- | ------- | ---- | ---------- | ----------- |
+|-  [favorite_os](#favorite_os)|No|enum (of string)|No|-|
+|-  [favorite_colors](#favorite_colors)|No|array of enum (of string)|No|-|
+|-  [desired_number_of_shoes](#desired_number_of_shoes)|No|integer|No|-|
 
-## <a name="favorite_os"></a>1. Property `User Preference > favorite_os`
+## <a name="favorite_os"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `User Preference > favorite_os`
 
-![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
-Type: `enum (of string)`
-Default: `"Linux"`
+| Type | `enum (of string)` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Default** | `"Linux"` |
 
 Must be one of:
 * "Windows"
 * "Mac"
 * "Linux"
 
-## <a name="favorite_colors"></a>2. Property `User Preference > favorite_colors`
+## <a name="favorite_colors"></a>2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `User Preference > favorite_colors`
 
-![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
-Type: `array of enum (of string)`
-Default: `["white", "blue"]`
+| Type | `array of enum (of string)` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Default** | `["white", "blue"]` |
 
 |                       | Array restrictions |
 | --------------------- | ------------------ |
@@ -38,11 +41,12 @@ Default: `["white", "blue"]`
 | **Additional items**  | False |
 | **Tuple validation**  | N/A |
 
-## <a name="desired_number_of_shoes"></a>3. Property `User Preference > desired_number_of_shoes`
+## <a name="desired_number_of_shoes"></a>3. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `User Preference > desired_number_of_shoes`
 
-![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
-Type: `integer`
-Default: `2`
+| Type | `integer` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Default** | `2` |
 
 | Restrictions |   |
 | ------------ | - |
@@ -50,4 +54,4 @@ Default: `2`
 | **Maximum** | &le; 2 |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:28 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 22:25:43 +0100

@@ -1,22 +1,24 @@
 # Schema Docs
 
-- [1. Property `root > fruits`](#fruits)
-- [2. Property `root > vegetables`](#vegetables)
+- [1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > fruits`](#fruits)
+- [2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > vegetables`](#vegetables)
 
-Type: `object`
+| Type | `object` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
 **Description:** A schema with an array
 
-| Property | Pattern | Type | Deprecated | Additional | Description |
-| -------- | ------- | ---- | ---------- | ---------- | ----------- |
-|-  [fruits](#fruits)|No|array of string|No| No|-|
-|-  [vegetables](#vegetables)|No|array|No| No|-|
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
+| Property | Pattern | Type | Deprecated | Description |
+| -------- | ------- | ---- | ---------- | ----------- |
+|-  [fruits](#fruits)|No|array of string|No|-|
+|-  [vegetables](#vegetables)|No|array|No|-|
 
-## <a name="fruits"></a>1. Property `root > fruits`
+## <a name="fruits"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > fruits`
 
-![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
-Type: `array of string`
+| Type | `array of string` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
 |                       | Array restrictions |
 | --------------------- | ------------------ |
@@ -26,10 +28,11 @@ Type: `array of string`
 | **Additional items**  | False |
 | **Tuple validation**  | N/A |
 
-## <a name="vegetables"></a>2. Property `root > vegetables`
+## <a name="vegetables"></a>2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > vegetables`
 
-![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
-Type: `array`
+| Type | `array` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
 |                       | Array restrictions |
 | --------------------- | ------------------ |
@@ -40,4 +43,4 @@ Type: `array`
 | **Tuple validation**  | N/A |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:29 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 22:25:45 +0100

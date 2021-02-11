@@ -1,32 +1,35 @@
 # Longitude and Latitude Values
 
-- [1. Property `Longitude and Latitude Values > latitude`](#latitude)
-- [2. Property `Longitude and Latitude Values > longitude`](#longitude)
+- [1. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `Longitude and Latitude Values > latitude`](#latitude)
+- [2. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `Longitude and Latitude Values > longitude`](#longitude)
 
-Type: `object`
+| Type | `object` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
 **Description:** A geographical coordinate.
 
-| Property | Pattern | Type | Deprecated | Additional | Description |
-| -------- | ------- | ---- | ---------- | ---------- | ----------- |
-|+  [latitude](#latitude)|No|number|No| No|-|
-|+  [longitude](#longitude)|No|number|No| No|-|
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
+| Property | Pattern | Type | Deprecated | Description |
+| -------- | ------- | ---- | ---------- | ----------- |
+|+  [latitude](#latitude)|No|number|No|-|
+|+  [longitude](#longitude)|No|number|No|-|
 
-## <a name="latitude"></a>1. Property `Longitude and Latitude Values > latitude`
+## <a name="latitude"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `Longitude and Latitude Values > latitude`
 
-![made-with-Markdown](https://img.shields.io/badge/Required-blue)
-Type: `number`
+| Type | `number` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
 | Restrictions |   |
 | ------------ | - |
 | **Minimum** | &ge; -90 |
 | **Maximum** | &le; 90 |
 
-## <a name="longitude"></a>2. Property `Longitude and Latitude Values > longitude`
+## <a name="longitude"></a>2. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `Longitude and Latitude Values > longitude`
 
-![made-with-Markdown](https://img.shields.io/badge/Required-blue)
-Type: `number`
+| Type | `number` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
 | Restrictions |   |
 | ------------ | - |
@@ -34,4 +37,4 @@ Type: `number`
 | **Maximum** | &le; 180 |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:30 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 22:25:46 +0100

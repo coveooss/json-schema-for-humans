@@ -1,86 +1,87 @@
 # Person
 
-- [1. Property `Person > not_a_pattern`](#not_a_pattern)
-  - [1.1. Pattern Property `Person > not_a_pattern > Title 4`](#not_a_pattern_pattern1)
-- [2. Pattern Property `Person > Title 1`](#pattern1)
-- [3. Pattern Property `Person > Title 2`](#pattern2)
-- [4. Pattern Property `Person > Title 3`](#pattern3)
+- [1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > not_a_pattern`](#not_a_pattern)
+  - [1.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)Pattern Property `Person > not_a_pattern > Title 4`](#not_a_pattern_pattern1)
+- [2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)Pattern Property `Person > Title 1`](#pattern1)
+- [3. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)Pattern Property `Person > Title 2`](#pattern2)
+- [4. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)Pattern Property `Person > Title 3`](#pattern3)
 
-Type: `object`
+| Type | `object` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
-| Property | Pattern | Type | Deprecated | Additional | Description |
-| -------- | ------- | ---- | ---------- | ---------- | ----------- |
-|-  [not_a_pattern](#not_a_pattern)|No|object|No| No|-|
-|-  [.*](#pattern1)|Yes|object|No| No|Description 1|
-|-  [..](#pattern2)|Yes|object|No| No|Description 2|
-|-  [^.](#pattern3)|Yes|object|No| No|Description 3|
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
+| Property | Pattern | Type | Deprecated | Description |
+| -------- | ------- | ---- | ---------- | ----------- |
+|-  [not_a_pattern](#not_a_pattern)|No|object|No|-|
+|-  [.*](#pattern1)|Yes|object|No|Description 1|
+|-  [..](#pattern2)|Yes|object|No|Description 2|
+|-  [^.](#pattern3)|Yes|object|No|Description 3|
 
-## <a name="not_a_pattern"></a>1. Property `Person > not_a_pattern`
+## <a name="not_a_pattern"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > not_a_pattern`
 
-![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
-Type: `object`
+| Type | `object` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
-| Property | Pattern | Type | Deprecated | Additional | Description |
-| -------- | ------- | ---- | ---------- | ---------- | ----------- |
-|-  [.$](#not_a_pattern_pattern1)|Yes|object|No| No|Description 4|
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
+| Property | Pattern | Type | Deprecated | Description |
+| -------- | ------- | ---- | ---------- | ----------- |
+|-  [.$](#not_a_pattern_pattern1)|Yes|object|No|Description 4|
 
-### <a name="not_a_pattern_pattern1"></a>1.1. Pattern Property `Person > not_a_pattern > Title 4`
+### <a name="not_a_pattern_pattern1"></a>1.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)Pattern Property `Person > not_a_pattern > Title 4`
 > All property whose name matches the regular expression 
 ```.$``` ([Test](https://regex101.com/?regex=.%24))
 must respect the following conditions
 
-![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
-Type: `object`
+| Type | `object` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
 **Description:** Description 4
 
-| Property | Pattern | Type | Deprecated | Additional | Description |
-| -------- | ------- | ---- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
+| Property | Pattern | Type | Deprecated | Description |
+| -------- | ------- | ---- | ---------- | ----------- |
 
-## <a name="pattern1"></a>2. Pattern Property `Person > Title 1`
+## <a name="pattern1"></a>2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)Pattern Property `Person > Title 1`
 > All property whose name matches the regular expression 
 ```.*``` ([Test](https://regex101.com/?regex=.%2A))
 must respect the following conditions
 
-![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
-Type: `object`
+| Type | `object` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
 **Description:** Description 1
 
-| Property | Pattern | Type | Deprecated | Additional | Description |
-| -------- | ------- | ---- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
+| Property | Pattern | Type | Deprecated | Description |
+| -------- | ------- | ---- | ---------- | ----------- |
 
-## <a name="pattern2"></a>3. Pattern Property `Person > Title 2`
+## <a name="pattern2"></a>3. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)Pattern Property `Person > Title 2`
 > All property whose name matches the regular expression 
 ```..``` ([Test](https://regex101.com/?regex=..))
 must respect the following conditions
 
-![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
-Type: `object`
+| Type | `object` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
 **Description:** Description 2
 
-| Property | Pattern | Type | Deprecated | Additional | Description |
-| -------- | ------- | ---- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
+| Property | Pattern | Type | Deprecated | Description |
+| -------- | ------- | ---- | ---------- | ----------- |
 
-## <a name="pattern3"></a>4. Pattern Property `Person > Title 3`
+## <a name="pattern3"></a>4. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)Pattern Property `Person > Title 3`
 > All property whose name matches the regular expression 
 ```^.``` ([Test](https://regex101.com/?regex=%5E.))
 must respect the following conditions
 
-![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
-Type: `object`
+| Type | `object` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
 **Description:** Description 3
 
-| Property | Pattern | Type | Deprecated | Additional | Description |
-| -------- | ------- | ---- | ---------- | ---------- | ----------- |
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
+| Property | Pattern | Type | Deprecated | Description |
+| -------- | ------- | ---- | ---------- | ----------- |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:30 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 22:25:46 +0100

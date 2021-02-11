@@ -1,38 +1,42 @@
 # Personne
 
-- [1. Property `Personne > prénom`](#pr_nom)
-- [2. Property `Personne > nomDeFamille`](#nomDeFamille)
-- [3. Property `Personne > âge`](#a_ge)
-- [4. Property `Personne > 0 de quoi d'autre`](#a0_de_quoi_d_autre)
+- [1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Personne > prénom`](#pr_nom)
+- [2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Personne > nomDeFamille`](#nomDeFamille)
+- [3. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Personne > âge`](#a_ge)
+- [4. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Personne > 0 de quoi d'autre`](#a0_de_quoi_d_autre)
 
-Type: `object`
+| Type | `object` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
-| Property | Pattern | Type | Deprecated | Additional | Description |
-| -------- | ------- | ---- | ---------- | ---------- | ----------- |
-|-  [prénom](#pr_nom)|No|string|No| No|Le prénom de la personne.|
-|-  [nomDeFamille](#nomDeFamille)|No|string|No| No|Le nom de famille de la personne.|
-|-  [âge](#a_ge)|No|integer|No| No|L'âge en années qui doit être plus grand ou égal à 0.|
-|-  [0 de quoi d'autre](#a0_de_quoi_d_autre)|No|string|No| No|-|
-  | additionalProperties | - | - | - | - |  [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") | - |        
+| Property | Pattern | Type | Deprecated | Description |
+| -------- | ------- | ---- | ---------- | ----------- |
+|-  [prénom](#pr_nom)|No|string|No|Le prénom de la personne.|
+|-  [nomDeFamille](#nomDeFamille)|No|string|No|Le nom de famille de la personne.|
+|-  [âge](#a_ge)|No|integer|No|L'âge en années qui doit être plus grand ou égal à 0.|
+|-  [0 de quoi d'autre](#a0_de_quoi_d_autre)|No|string|No|-|
 
-## <a name="pr_nom"></a>1. Property `Personne > prénom`
+## <a name="pr_nom"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Personne > prénom`
 
-![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
-Type: `string`
+| Type | `string` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
 **Description:** Le prénom de la personne.
 
-## <a name="nomDeFamille"></a>2. Property `Personne > nomDeFamille`
+## <a name="nomDeFamille"></a>2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Personne > nomDeFamille`
 
-![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
-Type: `string`
+| Type | `string` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
 **Description:** Le nom de famille de la personne.
 
-## <a name="a_ge"></a>3. Property `Personne > âge`
+## <a name="a_ge"></a>3. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Personne > âge`
 
-![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
-Type: `integer`
+| Type | `integer` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
 **Description:** L'âge en années qui doit être plus grand ou égal à 0.
 
@@ -40,10 +44,11 @@ Type: `integer`
 | ------------ | - |
 | **Minimum** | &ge; 0 |
 
-## <a name="a0_de_quoi_d_autre"></a>4. Property `Personne > 0 de quoi d'autre`
+## <a name="a0_de_quoi_d_autre"></a>4. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Personne > 0 de quoi d'autre`
 
-![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)
-Type: `string`
+| Type | `string` |
+| ---- | --- |
+| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 
 **Examples:** 
 
@@ -58,4 +63,4 @@ Type: `string`
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 21:24:27 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 22:25:43 +0100
