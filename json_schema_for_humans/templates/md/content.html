@@ -40,76 +40,65 @@
         {% include "content.html" %}
     {% endwith %}
 {% else %}
-    {# Handle having oneOf or allOf with only one condition #}
-    {% if schema.kw_all_of and (schema.kw_all_of.array_items | length) == 1 %}
-        {% with schema=schema.kw_all_of.array_items[0], skip_headers=False, depth=depth+1 %}
-            {% include "content.html" %}
+    {# Properties, pattern properties, additional properties #}
+    {% if schema.type_name == "object" %}
+    {% include "section_properties_table.html" %}
+    {% endif %}
+    
+    {# Combining: allOf, anyOf, oneOf, not #}
+    {% if schema.kw_all_of %}
+        {% with operator="allOf", title="All of(Requirement)", current_node=schema.kw_all_of, skip_required=True %}
+            {% include "tabbed_section.html" %}
         {% endwith %}
-    {% elif schema.kw_any_of and (schema.kw_any_of.array_items | length) == 1 %}
-        {% with schema=schema.kw_any_of.array_items[0], skip_headers=False, depth=depth+1 %}
-            {% include "content.html" %}
+    {% endif %}
+    {% if schema.kw_any_of %}
+        {% with operator="anyOf", title="Any of(Option)", current_node=schema.kw_any_of, skip_required=True %}
+            {% include "tabbed_section.html" %}
         {% endwith %}
-    {% else %}
-        {# Properties, pattern properties, additional properties #}
-        {% if schema.type_name == "object" %}
-        {% include "section_properties_table.html" %}
-        {% endif %}
-        
-        {# Combining: allOf, anyOf, oneOf, not #}
-        {% if schema.kw_all_of %}
-            {% with operator="allOf", title="All of(Requirement)", current_node=schema.kw_all_of, skip_required=True %}
-                {% include "tabbed_section.html" %}
-            {% endwith %}
-        {% endif %}
-        {% if schema.kw_any_of %}
-            {% with operator="anyOf", title="Any of(Option)", current_node=schema.kw_any_of, skip_required=True %}
-                {% include "tabbed_section.html" %}
-            {% endwith %}
-        {% endif %}
-        {% if schema.kw_one_of %}
-            {% with operator="oneOf", title="One of(Option)",current_node=schema.kw_one_of, skip_required=True %}
-                {% include "tabbed_section.html" %}
-            {% endwith %}
-        {% endif %}
-        {% if schema.kw_not %}
-            {% include "section_not.html" %}
-        {% endif %}
+    {% endif %}
+    {% if schema.kw_one_of %}
+        {% with operator="oneOf", title="One of(Option)",current_node=schema.kw_one_of, skip_required=True %}
+            {% include "tabbed_section.html" %}
+        {% endwith %}
+    {% endif %}
+    {% if schema.kw_not %}
+        {% include "section_not.html" %}
+    {% endif %}
 
-        {# Enum and const #}
-        {% if schema.kw_enum -%}
-            {% include "section_one_of.html" %}
-        {%- endif %}
-        {%- if schema.kw_const -%}
-            Specific value: `{{ schema.kw_const.literal | python_to_json }}`
-        {%- endif -%}
+    {# Enum and const #}
+    {% if schema.kw_enum -%}
+        {% include "section_one_of.html" %}
+    {%- endif %}
+    {%- if schema.kw_const -%}
+        Specific value: `{{ schema.kw_const.literal | python_to_json }}`
+    {%- endif -%}
 
-        {# Conditional subschema, or if-then-else section #}
-        {% if schema.has_conditional %}
-            {% with skip_headers=False, depth=depth+1 %}
-                {% include "section_conditional_subschema.html" %}
-            {% endwith %}
-        {% endif %}
+    {# Conditional subschema, or if-then-else section #}
+    {% if schema.has_conditional %}
+        {% with skip_headers=False, depth=depth+1 %}
+            {% include "section_conditional_subschema.html" %}
+        {% endwith %}
+    {% endif %}
 
-        {# Required properties that are not defined under "properties". They will only be listed #}
-        {% include "section_undocumented_required_properties.html" %}
+    {# Required properties that are not defined under "properties". They will only be listed #}
+    {% include "section_undocumented_required_properties.html" %}
 
-        {# Show the requested type(s) #}
-        {% include "badge_type.html" %}
+    {# Show the requested type(s) #}
+    {% include "badge_type.html" %}
 
-        {# Show array restrictions #}
-        {% if schema.type_name.startswith("array") %}
-            {% include "section_array.html" %}
-        {% endif %}
+    {# Show array restrictions #}
+    {% if schema.type_name.startswith("array") %}
+        {% include "section_array.html" %}
+    {% endif %}
 
-        {# Display examples #}
-        {% set examples = schema.examples %}
-        {% if examples %}
-            {% include "section_examples.html" %}
-        {% endif %}
+    {# Display examples #}
+    {% set examples = schema.examples %}
+    {% if examples %}
+        {% include "section_examples.html" %}
+    {% endif %}
 
-        {# details of Properties, pattern properties, additional properties #}
-        {% if schema.type_name == "object" %}
-        {% include "section_properties_details.html" %}
-        {% endif %}
+    {# details of Properties, pattern properties, additional properties #}
+    {% if schema.type_name == "object" %}
+    {% include "section_properties_details.html" %}
     {% endif %}
 {% endif %}
