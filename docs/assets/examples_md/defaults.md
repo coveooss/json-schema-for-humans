@@ -8,10 +8,10 @@
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [a](#a)|No|object|No|Description of a|
-|-  [b](#b)|No|object|No|A common description|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [a](#a)|No|object|No| In #/definitions/common|Description of a|
+|-  [b](#b)|No|object|No| Same as [a](#a)|A common description|
 |  |  |  |  |  |
 
 ## <a name="a"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > a`
@@ -37,4 +37,4 @@
 **Description:** A common description
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:56:17 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:35 +0100

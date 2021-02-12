@@ -11,11 +11,11 @@
 
 **Description:** Test schema with deprecated in description
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [deprecated1](#deprecated1)|No|object|![made-with-Markdown](https://img.shields.io/badge/Deprecated-red)|[Deprecated]|
-|-  [deprecated2](#deprecated2)|No|object|![made-with-Markdown](https://img.shields.io/badge/Deprecated-red)|[Deprecated - Use \`not_deprecated\` instead]|
-|-  [not_deprecated](#not_deprecated)|No|string|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [deprecated1](#deprecated1)|No|object|![made-with-Markdown](https://img.shields.io/badge/Deprecated-red)| -|[Deprecated]|
+|-  [deprecated2](#deprecated2)|No|object|![made-with-Markdown](https://img.shields.io/badge/Deprecated-red)| -|[Deprecated - Use \`not_deprecated\` instead]|
+|-  [not_deprecated](#not_deprecated)|No|string|No| -|-|
 |  |  |  |  |  |
 
 ## <a name="deprecated1"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated1`~~
@@ -46,4 +46,4 @@
 |  |  |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:56:23 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:38 +0100

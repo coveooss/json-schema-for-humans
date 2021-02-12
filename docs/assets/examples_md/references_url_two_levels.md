@@ -11,9 +11,9 @@
 
 **Description:** Testing $ref of a remote $ref
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [described](#described)|No|object|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [described](#described)|No|object|No| In https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/tests/cases/description_from_ref.json|-|
 |  |  |  |  |  |
 
 ## <a name="described"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > described`
@@ -24,10 +24,10 @@
 | **Defined in** | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/tests/cases/description_from_ref.json |
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [name](#described_name)|No|string|No|a filled string|
-|-  [alignment](#described_alignment)|No|string|No|a filled string|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [name](#described_name)|No|string|No| In #/definitions/filled_string|a filled string|
+|-  [alignment](#described_alignment)|No|string|No| Same as [name](#described_name)|a filled string|
 |  |  |  |  |  |
 
 ### <a name="described_name"></a>1.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > described > name`
@@ -55,4 +55,4 @@
 **Description:** a filled string
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:56:24 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:39 +0100

@@ -12,10 +12,10 @@
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [billing_address](#billing_address)|No|object|No|-|
-|-  [shipping_address](#shipping_address)|No|object|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [billing_address](#billing_address)|No|object|No| In #/definitions/address|-|
+|-  [shipping_address](#shipping_address)|No|object|No| Same as [billing_address](#billing_address)|-|
 |  |  |  |  |  |
 
 ## <a name="billing_address"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > billing_address`
@@ -26,12 +26,12 @@
 | **Defined in** | #/definitions/address |
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|+  [street_address](#billing_address_street_address)|No|string|No|-|
-|+  [city](#billing_address_city)|No|string|No|-|
-|+  [state](#billing_address_state)|No|string|No|-|
-|-  [futureProperty](#billing_address_futureProperty)|No|null|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|+  [street_address](#billing_address_street_address)|No|string|No| -|-|
+|+  [city](#billing_address_city)|No|string|No| -|-|
+|+  [state](#billing_address_state)|No|string|No| -|-|
+|-  [futureProperty](#billing_address_futureProperty)|No|null|No| -|-|
 |  |  |  |  |  |
 
 ### <a name="billing_address_street_address"></a>1.1. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `root > billing_address > street_address`
@@ -71,4 +71,4 @@
 |  |  |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:56:18 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:35 +0100

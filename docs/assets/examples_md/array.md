@@ -10,10 +10,10 @@
 
 **Description:** A schema with an array
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [fruits](#fruits)|No|array of string|No|-|
-|-  [vegetables](#vegetables)|No|array|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [fruits](#fruits)|No|array of string|No| -|-|
+|-  [vegetables](#vegetables)|No|array|No| -|-|
 |  |  |  |  |  |
 
 ## <a name="fruits"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > fruits`
@@ -47,4 +47,4 @@
 | **Tuple validation**  | N/A |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:56:21 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:37 +0100

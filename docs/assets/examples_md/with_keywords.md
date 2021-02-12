@@ -11,23 +11,25 @@
 - [9. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > properties`](#properties)
 - [10. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > patternProperties`](#patternProperties)
 
+**Title:** Person
+
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [default](#default)|No|string|No|default|
-|-  [examples](#examples)|No|string|No|examples|
-|-  [if](#if)|No|object|No|if|
-|-  [then](#then)|No|object|No|then|
-|-  [else](#else)|No|object|No|else|
-|-  [anyOf](#anyOf)|No|object|No|anyOf|
-|-  [allOf](#allOf)|No|object|No|allOf|
-|-  [not](#not)|No|object|No|not|
-|-  [properties](#properties)|No|object|No|properties|
-|-  [patternProperties](#patternProperties)|No|object|No|patternProperties|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [default](#default)|No|string|No| -|default|
+|-  [examples](#examples)|No|string|No| -|examples|
+|-  [if](#if)|No|object|No| -|if|
+|-  [then](#then)|No|object|No| -|then|
+|-  [else](#else)|No|object|No| -|else|
+|-  [anyOf](#anyOf)|No|object|No| -|anyOf|
+|-  [allOf](#allOf)|No|object|No| -|allOf|
+|-  [not](#not)|No|object|No| -|not|
+|-  [properties](#properties)|No|object|No| -|properties|
+|-  [patternProperties](#patternProperties)|No|object|No| -|patternProperties|
 |  |  |  |  |  |
 
 ## <a name="default"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > default`
@@ -121,4 +123,4 @@
 **Description:** patternProperties
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:56:18 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:35 +0100

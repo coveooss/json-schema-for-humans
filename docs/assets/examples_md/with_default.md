@@ -4,16 +4,18 @@
 - [2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `User Preference > favorite_colors`](#favorite_colors)
 - [3. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `User Preference > desired_number_of_shoes`](#desired_number_of_shoes)
 
+**Title:** User Preference
+
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [favorite_os](#favorite_os)|No|enum (of string)|No|-|
-|-  [favorite_colors](#favorite_colors)|No|array of enum (of string)|No|-|
-|-  [desired_number_of_shoes](#desired_number_of_shoes)|No|integer|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [favorite_os](#favorite_os)|No|enum (of string)|No| -|-|
+|-  [favorite_colors](#favorite_colors)|No|array of enum (of string)|No| -|-|
+|-  [desired_number_of_shoes](#desired_number_of_shoes)|No|integer|No| -|-|
 |  |  |  |  |  |
 
 ## <a name="favorite_os"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `User Preference > favorite_os`
@@ -59,4 +61,4 @@ Must be one of:
 | **Maximum** | &le; 2 |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:56:19 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:36 +0100

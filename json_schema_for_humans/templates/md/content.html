@@ -13,7 +13,11 @@
 
 {% set keys = schema.keywords %}
 {%- if not skip_headers %}
-         
+
+{% if schema.title and schema.title | length > 0 %}
+**Title:** {{ schema.title }}
+{% endif %}
+
 | Type | {% if schema is combining %}`combining`{% else %}`{{ schema.type_name }}`{% endif %} |
 | ---- | --- |
 {% if schema is deprecated %}

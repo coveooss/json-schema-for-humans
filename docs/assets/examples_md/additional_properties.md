@@ -7,16 +7,18 @@
 - [3. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > additionalProperties`](#additionalProperties)
   - [3.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > additionalProperties > propA`](#additionalProperties_propA)
 
+**Title:** Person
+
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Should-conform-blue)](# "Each additional property must conform to the following schema")|
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [subType1](#subType1)|No|object|No|A sub type with additionalProperties false.|
-|-  [subType2](#subType2)|No|object|No|A sub type with additionalProperties true.|
-|-  [additionalProperties](#additionalProperties)|No|object|No|additionalProperties schema.|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [subType1](#subType1)|No|object|No| -|A sub type with additionalProperties false.|
+|-  [subType2](#subType2)|No|object|No| -|A sub type with additionalProperties true.|
+|-  [additionalProperties](#additionalProperties)|No|object|No| -|additionalProperties schema.|
 |  |  |  |  |  |
 
 ## <a name="subType1"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > subType1`
@@ -28,9 +30,9 @@
 
 **Description:** A sub type with additionalProperties false.
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [subProp1](#subType1_subProp1)|No|number|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [subProp1](#subType1_subProp1)|No|number|No| -|-|
 |  |  |  |  |  |
 
 ### <a name="subType1_subProp1"></a>1.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > subType1 > subProp1`
@@ -49,10 +51,10 @@
 
 **Description:** A sub type with additionalProperties true.
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [subProp2](#subType2_subProp2)|No|number|No|-|
-|-  [additionalProperties](#subType2_additionalProperties)|No|object|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [subProp2](#subType2_subProp2)|No|number|No| -|-|
+|-  [additionalProperties](#subType2_additionalProperties)|No|object|No| -|-|
 |  |  |  |  |  |
 
 ### <a name="subType2_subProp2"></a>2.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > subType2 > subProp2`
@@ -71,9 +73,9 @@
 
 **Description:** additionalProperties schema.
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [propA](#additionalProperties_propA)|No|number|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [propA](#additionalProperties_propA)|No|number|No| -|-|
 |  |  |  |  |  |
 
 ### <a name="additionalProperties_propA"></a>3.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > additionalProperties > propA`
@@ -84,4 +86,4 @@
 |  |  |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:56:23 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:39 +0100

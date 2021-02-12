@@ -9,10 +9,10 @@
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.")|
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|+  [outer](#outer)|No|object|No|We should see this|
-|-  [outer2](#outer2)|No|object|No|We should see this too|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|+  [outer](#outer)|No|object|No| In #/definitions/inner schema|We should see this|
+|-  [outer2](#outer2)|No|object|No| Same as [outer](#outer)|We should see this too|
 |  |  |  |  |  |
 
 ## <a name="outer"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `root > outer`
@@ -25,9 +25,9 @@
 
 **Description:** We should see this
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|+  [inner](#outer_inner)|No|string|No|inner description|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|+  [inner](#outer_inner)|No|string|No| -|inner description|
 |  |  |  |  |  |
 
 ### <a name="outer_inner"></a>1.1. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `root > outer > inner`
@@ -50,4 +50,4 @@
 **Description:** We should see this too
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:56:19 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:36 +0100

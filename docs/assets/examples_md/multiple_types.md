@@ -5,17 +5,19 @@
 - [3. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > age`](#age)
 - [4. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > anything`](#anything)
 
+**Title:** Person
+
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [firstName](#firstName)|No|string|No|The person's first name.|
-|-  [lastName](#lastName)|No|string or null|No|The person's last name.|
-|-  [age](#age)|No|integer or number|No|Age in years which must be equal to or greater than zero.|
-|-  [anything](#anything)|No|integer, string, number or null|No|Ay other info you like|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [firstName](#firstName)|No|string|No| -|The person's first name.|
+|-  [lastName](#lastName)|No|string or null|No| -|The person's last name.|
+|-  [age](#age)|No|integer or number|No| -|Age in years which must be equal to or greater than zero.|
+|-  [anything](#anything)|No|integer, string, number or null|No| -|Ay other info you like|
 |  |  |  |  |  |
 
 ## <a name="firstName"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > firstName`
@@ -59,4 +61,4 @@
 **Description:** Ay other info you like
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:56:21 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:37 +0100

@@ -17,10 +17,10 @@
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [street_address](#street_address)|No|Combination|No|-|
-|-  [country](#country)|No|Combination|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [street_address](#street_address)|No|string|No| -|-|
+|-  [country](#country)|No|enum (of string)|No| -|-|
 |  |  |  |  |  |
 
 | All of(Requirement) | 
@@ -42,9 +42,9 @@
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [postal_code](#allOf_i0_then_postal_code)|No|object|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [postal_code](#allOf_i0_then_postal_code)|No|object|No| -| All of(Requirement)|
 |  |  |  |  |  |
 
 #### <a name="allOf_i0_then_postal_code"></a>1.1.1. Property `root > allOf > item 0 > then > postal_code`
@@ -72,9 +72,9 @@
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [postal_code](#allOf_i1_then_postal_code)|No|object|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [postal_code](#allOf_i1_then_postal_code)|No|object|No| -| All of(Requirement)|
 |  |  |  |  |  |
 
 #### <a name="allOf_i1_then_postal_code"></a>2.1.1. Property `root > allOf > item 1 > then > postal_code`
@@ -102,9 +102,9 @@
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [postal_code](#allOf_i2_then_postal_code)|No|object|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [postal_code](#allOf_i2_then_postal_code)|No|object|No| -| All of(Requirement)|
 |  |  |  |  |  |
 
 #### <a name="allOf_i2_then_postal_code"></a>3.1.1. Property `root > allOf > item 2 > then > postal_code`
@@ -138,4 +138,4 @@ Must be one of:
 * "Netherlands"
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:56:20 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:37 +0100

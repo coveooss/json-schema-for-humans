@@ -10,9 +10,9 @@
 
 **Description:** Test schema with a not
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|+  [not_a_string](#not_a_string)|No|object|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|+  [not_a_string](#not_a_string)|No|Combination|No| -|-|
 |  |  |  |  |  |
 
 ## <a name="not_a_string"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `root > not_a_string`
@@ -30,4 +30,4 @@
 |  |  |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:56:20 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:37 +0100

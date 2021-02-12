@@ -5,17 +5,19 @@
 - [3. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Personne > âge`](#a_ge)
 - [4. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Personne > 0 de quoi d'autre`](#a0_de_quoi_d_autre)
 
+**Title:** Personne
+
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [prénom](#pr_nom)|No|string|No|Le prénom de la personne.|
-|-  [nomDeFamille](#nomDeFamille)|No|string|No|Le nom de famille de la personne.|
-|-  [âge](#a_ge)|No|integer|No|L'âge en années qui doit être plus grand ou égal à 0.|
-|-  [0 de quoi d'autre](#a0_de_quoi_d_autre)|No|string|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [prénom](#pr_nom)|No|string|No| -|Le prénom de la personne.|
+|-  [nomDeFamille](#nomDeFamille)|No|string|No| -|Le nom de famille de la personne.|
+|-  [âge](#a_ge)|No|integer|No| -|L'âge en années qui doit être plus grand ou égal à 0.|
+|-  [0 de quoi d'autre](#a0_de_quoi_d_autre)|No|string|No| -|-|
 |  |  |  |  |  |
 
 ## <a name="pr_nom"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Personne > prénom`
@@ -69,4 +71,4 @@
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:56:18 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:35 +0100

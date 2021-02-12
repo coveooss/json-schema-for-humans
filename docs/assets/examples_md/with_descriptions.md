@@ -11,16 +11,18 @@
   - [3.2. Property `Delivery Schema > delivery_info > oneOf > gift`](#delivery_info_oneOf_i1)
     - [3.2.1. Property `Delivery Schema > delivery_info > oneOf > item 1 > with_wrap`](#delivery_info_oneOf_i1_with_wrap)
 
+**Title:** Delivery Schema
+
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [shipping_address](#shipping_address)|No|object|No|Exact address|
-|-  [billing_address](#billing_address)|No|object|No|Exact address|
-|-  [delivery_info](#delivery_info)|No|object|No|Delivery info depending on the delivery type|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [shipping_address](#shipping_address)|No|object|No| In #/definitions/address|Exact address|
+|-  [billing_address](#billing_address)|No|object|No| Same as [shipping_address](#shipping_address)|Exact address|
+|-  [delivery_info](#delivery_info)|No|object|No| In #/definitions/delivery_info|Delivery info depending on the delivery type|
 |  |  |  |  |  |
 
 ## <a name="shipping_address"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Delivery Schema > shipping_address`
@@ -33,11 +35,11 @@
 
 **Description:** Exact address
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|+  [street_address](#shipping_address_street_address)|No|string|No|-|
-|+  [city](#shipping_address_city)|No|string|No|-|
-|+  [state](#shipping_address_state)|No|string|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|+  [street_address](#shipping_address_street_address)|No|string|No| -|-|
+|+  [city](#shipping_address_city)|No|string|No| -|-|
+|+  [state](#shipping_address_state)|No|string|No| -|-|
 |  |  |  |  |  |
 
 ### <a name="shipping_address_street_address"></a>1.1. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `Delivery Schema > shipping_address > street_address`
@@ -93,9 +95,9 @@
 | **Defined in** | #/definitions/classic |
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [price](#delivery_info_oneOf_i0_price)|No|number|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [price](#delivery_info_oneOf_i0_price)|No|number|No| -| One of(Option)|
 |  |  |  |  |  |
 
 #### <a name="delivery_info_oneOf_i0_price"></a>3.1.1. Property `Delivery Schema > delivery_info > oneOf > item 0 > price`
@@ -115,9 +117,9 @@
 
 **Description:** The delivery is a gift, no prices displayed
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [with_wrap](#delivery_info_oneOf_i1_with_wrap)|No|boolean|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [with_wrap](#delivery_info_oneOf_i1_with_wrap)|No|boolean|No| -| One of(Option)|
 |  |  |  |  |  |
 
 #### <a name="delivery_info_oneOf_i1_with_wrap"></a>3.2.1. Property `Delivery Schema > delivery_info > oneOf > item 1 > with_wrap`
@@ -128,4 +130,4 @@
 |  |  |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:56:19 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:36 +0100

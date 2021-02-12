@@ -5,15 +5,17 @@
   - [2.1. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `Test > aDictPropertyARequired > a`](#aDictPropertyARequired_a)
   - [2.2. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `Test > aDictPropertyARequired > b`](#aDictPropertyARequired_b)
 
+**Title:** Test
+
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [aProperty](#aProperty)|No|enum (of string)|No|This is the description from the definition|
-|-  [aDictPropertyARequired](#aDictPropertyARequired)|No|object|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [aProperty](#aProperty)|No|enum (of string)|No| In #/definitions/aProperty|This is the description from the definition|
+|-  [aDictPropertyARequired](#aDictPropertyARequired)|No|object|No| In #/definitions/aDictProperty|-|
 |  |  |  |  |  |
 
 ## <a name="aProperty"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Test > aProperty`
@@ -40,10 +42,10 @@ Must be one of:
 | **Defined in** | #/definitions/aDictProperty |
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|+  [a](#aDictPropertyARequired_a)|No|string|No|-|
-|+  [b](#aDictPropertyARequired_b)|No|string|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|+  [a](#aDictPropertyARequired_a)|No|string|No| -|-|
+|+  [b](#aDictPropertyARequired_b)|No|string|No| -|-|
 |  |  |  |  |  |
 
 ### <a name="aDictPropertyARequired_a"></a>2.1. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `Test > aDictPropertyARequired > a`
@@ -61,4 +63,4 @@ Must be one of:
 |  |  |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:56:20 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:37 +0100

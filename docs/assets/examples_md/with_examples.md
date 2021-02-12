@@ -5,20 +5,24 @@
 - [3. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > age`](#age)
 - [4. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > moreInfo`](#moreInfo)
 
+**Title:** Person
+
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [firstName](#firstName)|No|string|No|the person's first name|
-|-  [lastName](#lastName)|No|string|No|The person's last name.|
-|-  [age](#age)|No|integer|No|Age in years which must be equal to or greater than zero.|
-|-  [moreInfo](#moreInfo)|No|object|No|Any more info you want as an object|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [firstName](#firstName)|No|string|No| -|the person's first name|
+|-  [lastName](#lastName)|No|string|No| -|The person's last name.|
+|-  [age](#age)|No|integer|No| -|Age in years which must be equal to or greater than zero.|
+|-  [moreInfo](#moreInfo)|No|object|No| -|Any more info you want as an object|
 |  |  |  |  |  |
 
 ## <a name="firstName"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > firstName`
+
+**Title:** Person
 
 | Type | `string` |
 | ---- | --- |
@@ -38,6 +42,8 @@
 
 ## <a name="lastName"></a>2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > lastName`
 
+**Title:** Person
+
 | Type | `string` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
@@ -52,6 +58,8 @@
 ```
 
 ## <a name="age"></a>3. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > age`
+
+**Title:** Person
 
 | Type | `integer` |
 | ---- | --- |
@@ -90,4 +98,4 @@
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:56:17 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:34 +0100

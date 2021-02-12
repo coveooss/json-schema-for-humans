@@ -25,20 +25,20 @@
 
 **Description:** Testing $ref
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [a_gift](#a_gift)|No|string|No|A gift, or is it?|
-|-  [anchor_with_slash](#anchor_with_slash)|No|object|No|-|
-|-  [anchor_no_slash](#anchor_no_slash)|No|array of string|No|Description for array_def|
-|-  [anchor_nested_reference](#anchor_nested_reference)|No|string|No|-|
-|-  [same_file_anchor_with_slash](#same_file_anchor_with_slash)|No|string|No|Description for string_def|
-|-  [same_file_anchor_no_slash](#same_file_anchor_no_slash)|No|object|No|-|
-|-  [same_file_nested_reference](#same_file_nested_reference)|No|string|No|-|
-|-  [other_file_anchor](#other_file_anchor)|No|object|No|The delivery is a gift, no prices displayed|
-|-  [other_file_dot_anchor](#other_file_dot_anchor)|No|object|No|The delivery is a gift, no prices displayed|
-|-  [other_file_dot_dot_anchor](#other_file_dot_dot_anchor)|No|object|No|The delivery is a gift, no prices displayed|
-|-  [other_file_only](#other_file_only)|No|object|No|Test schema with a not|
-|-  [multi_hierarchy_reference](#multi_hierarchy_reference)|No|object|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [a_gift](#a_gift)|No|string|No| In #/definitions/gift|A gift, or is it?|
+|-  [anchor_with_slash](#anchor_with_slash)|No|object|No| In #/definitions/object_def|-|
+|-  [anchor_no_slash](#anchor_no_slash)|No|array of string|No| In #definitions/array_def|Description for array_def|
+|-  [anchor_nested_reference](#anchor_nested_reference)|No|string|No| In #/definitions/reference_def|-|
+|-  [same_file_anchor_with_slash](#same_file_anchor_with_slash)|No|string|No| In references.json#/definitions/string_def|Description for string_def|
+|-  [same_file_anchor_no_slash](#same_file_anchor_no_slash)|No|object|No| Same as [anchor_with_slash](#anchor_with_slash)|-|
+|-  [same_file_nested_reference](#same_file_nested_reference)|No|string|No| Same as [anchor_nested_reference](#anchor_nested_reference)|-|
+|-  [other_file_anchor](#other_file_anchor)|No|object|No| In with_descriptions.json#/definitions/gift|The delivery is a gift, no prices displayed|
+|-  [other_file_dot_anchor](#other_file_dot_anchor)|No|object|No| Same as [other_file_anchor](#other_file_anchor)|The delivery is a gift, no prices displayed|
+|-  [other_file_dot_dot_anchor](#other_file_dot_dot_anchor)|No|object|No| Same as [other_file_anchor](#other_file_anchor)|The delivery is a gift, no prices displayed|
+|-  [other_file_only](#other_file_only)|No|object|No| In combining_not.json|Test schema with a not|
+|-  [multi_hierarchy_reference](#multi_hierarchy_reference)|No|object|No| In reference_schemas/intermediate.json#/properties/cross_file_reference|-|
 |  |  |  |  |  |
 
 ## <a name="a_gift"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > a_gift`
@@ -59,9 +59,9 @@
 | **Defined in** | #/definitions/object_def |
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [propertyA](#anchor_with_slash_propertyA)|No|string|No|Description for object_def/items/propertyA|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [propertyA](#anchor_with_slash_propertyA)|No|string|No| -|Description for object_def/items/propertyA|
 |  |  |  |  |  |
 
 ### <a name="anchor_with_slash_propertyA"></a>2.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > anchor_with_slash > propertyA`
@@ -135,9 +135,9 @@
 
 **Description:** The delivery is a gift, no prices displayed
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [with_wrap](#other_file_anchor_with_wrap)|No|boolean|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [with_wrap](#other_file_anchor_with_wrap)|No|boolean|No| -|-|
 |  |  |  |  |  |
 
 ### <a name="other_file_anchor_with_wrap"></a>8.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > other_file_anchor > with_wrap`
@@ -177,9 +177,9 @@
 
 **Description:** Test schema with a not
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|+  [not_a_string](#other_file_only_not_a_string)|No|object|No|-|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|+  [not_a_string](#other_file_only_not_a_string)|No|Combination|No| -|-|
 |  |  |  |  |  |
 
 ### <a name="other_file_only_not_a_string"></a>11.1. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `root > other_file_only > not_a_string`
@@ -204,9 +204,9 @@
 | **Defined in** | reference_schemas/intermediate.json#/properties/cross_file_reference |
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [propertyA](#multi_hierarchy_reference_propertyA)|No|string|No|Contents of propertyA in final.json|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [propertyA](#multi_hierarchy_reference_propertyA)|No|string|No| -|Contents of propertyA in final.json|
 |  |  |  |  |  |
 
 ### <a name="multi_hierarchy_reference_propertyA"></a>12.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > multi_hierarchy_reference > propertyA`
@@ -219,4 +219,4 @@
 **Description:** Contents of propertyA in final.json
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:56:20 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:37 +0100

@@ -4,14 +4,16 @@
   - [1.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > person > children`](#person_children)
   - [1.2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > person > siblings`](#person_siblings)
 
+**Title:** Person
+
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 |  |  |
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [person](#person)|No|object|No|A human being|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [person](#person)|No|object|No| In #/definitions/person|A human being|
 |  |  |  |  |  |
 
 ## <a name="person"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > person`
@@ -24,10 +26,10 @@
 
 **Description:** A human being
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-|-  [children](#person_children)|No|array|No|The children they had|
-|-  [siblings](#person_siblings)|No|object|No|Person definition from second file. Not the same!|
+| Property | Pattern | Type | Deprecated | Definition | Title/Description |
+| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
+|-  [children](#person_children)|No|array|No| -|The children they had|
+|-  [siblings](#person_siblings)|No|object|No| In recursive_two_files2.json#/definitions/person|Person definition from second file. Not the same!|
 |  |  |  |  |  |
 
 ### <a name="person_children"></a>1.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > person > children`
@@ -58,4 +60,4 @@
 **Description:** Person definition from second file. Not the same!
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:56:17 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:35 +0100
