@@ -6,6 +6,7 @@
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** A schema with an array
 
@@ -13,12 +14,14 @@
 | -------- | ------- | ---- | ---------- | ----------- |
 |-  [fruits](#fruits)|No|array of string|No|-|
 |-  [vegetables](#vegetables)|No|array|No|-|
+|  |  |  |  |  |
 
 ## <a name="fruits"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > fruits`
 
 | Type | `array of string` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 |                       | Array restrictions |
 | --------------------- | ------------------ |
@@ -33,6 +36,7 @@
 | Type | `array` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 |                       | Array restrictions |
 | --------------------- | ------------------ |
@@ -43,4 +47,4 @@
 | **Tuple validation**  | N/A |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 22:25:45 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:34:13 +0100

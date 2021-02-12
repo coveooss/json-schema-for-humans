@@ -10,6 +10,7 @@
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 | Property | Pattern | Type | Deprecated | Description |
 | -------- | ------- | ---- | ---------- | ----------- |
@@ -17,12 +18,14 @@
 |-  [lastName](#lastName)|No|string|No|The person's last name.|
 |-  [age](#age)|No|integer|No|Age in years which must be equal to or greater than zero.|
 |-  [driverLicenseId](#driverLicenseId)|No|object|No|-|
+|  |  |  |  |  |
 
 ## <a name="firstName"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > firstName`
 
 | Type | `string` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** The person's first name.
 
@@ -31,6 +34,7 @@
 | Type | `string` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** The person's last name.
 
@@ -39,6 +43,7 @@
 | Type | `integer` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** Age in years which must be equal to or greater than zero.
 
@@ -51,9 +56,7 @@
 | Type | `combining` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
-
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
+|  |  |
 
 | All of(Requirement) | 
 | ---- |
@@ -64,12 +67,14 @@
 | Type | `null` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 ### <a name="driverLicenseId_allOf_i1"></a>4.2. Property `Person > driverLicenseId > allOf > driver licence id`
 
 | Type | `string` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 22:25:45 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:34:12 +0100

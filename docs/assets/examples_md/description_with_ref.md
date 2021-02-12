@@ -7,11 +7,13 @@
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.")|
+|  |  |
 
 | Property | Pattern | Type | Deprecated | Description |
 | -------- | ------- | ---- | ---------- | ----------- |
 |+  [outer](#outer)|No|object|No|We should see this|
 |-  [outer2](#outer2)|No|object|No|We should see this too|
+|  |  |  |  |  |
 
 ## <a name="outer"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `root > outer`
 
@@ -19,18 +21,21 @@
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 | **Defined in** | #/definitions/inner schema |
+|  |  |
 
 **Description:** We should see this
 
 | Property | Pattern | Type | Deprecated | Description |
 | -------- | ------- | ---- | ---------- | ----------- |
 |+  [inner](#outer_inner)|No|string|No|inner description|
+|  |  |  |  |  |
 
 ### <a name="outer_inner"></a>1.1. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `root > outer > inner`
 
 | Type | `string` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** inner description
 
@@ -40,8 +45,9 @@
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 | **Same definition as** | [outer](#outer) |
+|  |  |
 
 **Description:** We should see this too
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 22:25:44 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:34:11 +0100

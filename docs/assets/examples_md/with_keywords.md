@@ -14,6 +14,7 @@
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 | Property | Pattern | Type | Deprecated | Description |
 | -------- | ------- | ---- | ---------- | ----------- |
@@ -27,12 +28,14 @@
 |-  [not](#not)|No|object|No|not|
 |-  [properties](#properties)|No|object|No|properties|
 |-  [patternProperties](#patternProperties)|No|object|No|patternProperties|
+|  |  |  |  |  |
 
 ## <a name="default"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > default`
 
 | Type | `string` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** default
 
@@ -41,6 +44,7 @@
 | Type | `string` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** examples
 
@@ -49,88 +53,72 @@
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** if
-
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
 
 ## <a name="then"></a>4. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > then`
 
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** then
-
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
 
 ## <a name="else"></a>5. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > else`
 
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** else
-
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
 
 ## <a name="anyOf"></a>6. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > anyOf`
 
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** anyOf
-
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
 
 ## <a name="allOf"></a>7. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > allOf`
 
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** allOf
-
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
 
 ## <a name="not"></a>8. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > not`
 
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** not
-
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
 
 ## <a name="properties"></a>9. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > properties`
 
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** properties
-
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
 
 ## <a name="patternProperties"></a>10. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > patternProperties`
 
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** patternProperties
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 22:25:43 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:34:09 +0100

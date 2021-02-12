@@ -7,6 +7,7 @@
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** A little food fun
 
@@ -14,12 +15,14 @@
 | -------- | ------- | ---- | ---------- | ----------- |
 |-  [fruits](#fruits)|No|array of string|No|5 to 8 fruits that you like|
 |-  [vegetables](#vegetables)|No|array|No|-|
+|  |  |  |  |  |
 
 ## <a name="fruits"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > fruits`
 
 | Type | `array of string` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** 5 to 8 fruits that you like
 
@@ -36,6 +39,7 @@
 | Type | `array` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 |                       | Array restrictions |
 | --------------------- | ------------------ |
@@ -50,8 +54,9 @@
 | Type | `const` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 Specific value: `"eggplant"`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 22:25:46 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:34:14 +0100

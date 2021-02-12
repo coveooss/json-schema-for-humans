@@ -1,6 +1,5 @@
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
+{% set propertiesTable %}
 {% for sub_property in schema.iterate_properties %}
   {%- set html_id = sub_property.html_id -%}
 | {{- "+ " if sub_property.is_required_property else "- " }} [{{- sub_property.property_name | escape_for_md -}}](#{{- html_id -}}{{- ")" -}}
@@ -9,3 +8,11 @@
 | {{- '![made-with-Markdown](https://img.shields.io/badge/Deprecated-red)' if sub_property is deprecated else 'No' -}}
 | {{- sub_property | get_description | first_line(80) | escape_for_md or "-" -}} {{ "|" }}
 {% endfor %}
+{% endset %}
+
+{% if propertiesTable | length > 0 %}
+| Property | Pattern | Type | Deprecated | Description |
+| -------- | ------- | ---- | ---------- | ----------- |
+{{ propertiesTable -}}
+|  |  |  |  |  |
+{% endif %}

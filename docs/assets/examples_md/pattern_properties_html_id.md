@@ -9,6 +9,7 @@
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 | Property | Pattern | Type | Deprecated | Description |
 | -------- | ------- | ---- | ---------- | ----------- |
@@ -16,16 +17,19 @@
 |-  [.*](#pattern1)|Yes|object|No|Description 1|
 |-  [..](#pattern2)|Yes|object|No|Description 2|
 |-  [^.](#pattern3)|Yes|object|No|Description 3|
+|  |  |  |  |  |
 
 ## <a name="not_a_pattern"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > not_a_pattern`
 
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 | Property | Pattern | Type | Deprecated | Description |
 | -------- | ------- | ---- | ---------- | ----------- |
 |-  [.$](#not_a_pattern_pattern1)|Yes|object|No|Description 4|
+|  |  |  |  |  |
 
 ### <a name="not_a_pattern_pattern1"></a>1.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)Pattern Property `Person > not_a_pattern > Title 4`
 > All property whose name matches the regular expression 
@@ -35,11 +39,9 @@ must respect the following conditions
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** Description 4
-
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
 
 ## <a name="pattern1"></a>2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)Pattern Property `Person > Title 1`
 > All property whose name matches the regular expression 
@@ -49,11 +51,9 @@ must respect the following conditions
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** Description 1
-
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
 
 ## <a name="pattern2"></a>3. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)Pattern Property `Person > Title 2`
 > All property whose name matches the regular expression 
@@ -63,11 +63,9 @@ must respect the following conditions
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** Description 2
-
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
 
 ## <a name="pattern3"></a>4. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow)Pattern Property `Person > Title 3`
 > All property whose name matches the regular expression 
@@ -77,11 +75,9 @@ must respect the following conditions
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** Description 3
 
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
-
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 22:25:46 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:34:14 +0100

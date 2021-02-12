@@ -28,6 +28,7 @@
 {% elif schema.refers_to -%}
 | **Defined in** | {{ schema.ref_path }} |
 {% endif %}
+|  |  |
 
 {% set description = (schema | get_description) %}
 {% include "section_description.html" %}

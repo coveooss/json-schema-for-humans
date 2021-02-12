@@ -21,6 +21,7 @@
 | Type | `object` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** Testing $ref
 
@@ -38,6 +39,7 @@
 |-  [other_file_dot_dot_anchor](#other_file_dot_dot_anchor)|No|object|No|The delivery is a gift, no prices displayed|
 |-  [other_file_only](#other_file_only)|No|object|No|Test schema with a not|
 |-  [multi_hierarchy_reference](#multi_hierarchy_reference)|No|object|No|-|
+|  |  |  |  |  |
 
 ## <a name="a_gift"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > a_gift`
 
@@ -45,6 +47,7 @@
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 | **Defined in** | #/definitions/gift |
+|  |  |
 
 **Description:** A gift, or is it?
 
@@ -54,16 +57,19 @@
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 | **Defined in** | #/definitions/object_def |
+|  |  |
 
 | Property | Pattern | Type | Deprecated | Description |
 | -------- | ------- | ---- | ---------- | ----------- |
 |-  [propertyA](#anchor_with_slash_propertyA)|No|string|No|Description for object_def/items/propertyA|
+|  |  |  |  |  |
 
 ### <a name="anchor_with_slash_propertyA"></a>2.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > anchor_with_slash > propertyA`
 
 | Type | `string` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** Description for object_def/items/propertyA
 
@@ -73,6 +79,7 @@
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 | **Defined in** | #definitions/array_def |
+|  |  |
 
 **Description:** Description for array_def
 
@@ -90,6 +97,7 @@
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 | **Defined in** | #/definitions/reference_def |
+|  |  |
 
 ## <a name="same_file_anchor_with_slash"></a>5. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > same_file_anchor_with_slash`
 
@@ -97,6 +105,7 @@
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 | **Defined in** | references.json#/definitions/string_def |
+|  |  |
 
 **Description:** Description for string_def
 
@@ -106,6 +115,7 @@
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 | **Same definition as** | [anchor_with_slash](#anchor_with_slash) |
+|  |  |
 
 ## <a name="same_file_nested_reference"></a>7. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > same_file_nested_reference`
 
@@ -113,6 +123,7 @@
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 | **Same definition as** | [anchor_nested_reference](#anchor_nested_reference) |
+|  |  |
 
 ## <a name="other_file_anchor"></a>8. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > other_file_anchor`
 
@@ -120,18 +131,21 @@
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 | **Defined in** | with_descriptions.json#/definitions/gift |
+|  |  |
 
 **Description:** The delivery is a gift, no prices displayed
 
 | Property | Pattern | Type | Deprecated | Description |
 | -------- | ------- | ---- | ---------- | ----------- |
 |-  [with_wrap](#other_file_anchor_with_wrap)|No|boolean|No|-|
+|  |  |  |  |  |
 
 ### <a name="other_file_anchor_with_wrap"></a>8.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > other_file_anchor > with_wrap`
 
 | Type | `boolean` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 ## <a name="other_file_dot_anchor"></a>9. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > other_file_dot_anchor`
 
@@ -139,6 +153,7 @@
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 | **Same definition as** | [other_file_anchor](#other_file_anchor) |
+|  |  |
 
 **Description:** The delivery is a gift, no prices displayed
 
@@ -148,6 +163,7 @@
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 | **Same definition as** | [other_file_anchor](#other_file_anchor) |
+|  |  |
 
 **Description:** The delivery is a gift, no prices displayed
 
@@ -157,27 +173,28 @@
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 | **Defined in** | combining_not.json |
+|  |  |
 
 **Description:** Test schema with a not
 
 | Property | Pattern | Type | Deprecated | Description |
 | -------- | ------- | ---- | ---------- | ----------- |
 |+  [not_a_string](#other_file_only_not_a_string)|No|object|No|-|
+|  |  |  |  |  |
 
 ### <a name="other_file_only_not_a_string"></a>11.1. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `root > other_file_only > not_a_string`
 
 | Type | `combining` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
-
-| Property | Pattern | Type | Deprecated | Description |
-| -------- | ------- | ---- | ---------- | ----------- |
+|  |  |
 
 #### <a name="autogenerated_heading_2"></a>11.1.1. Must **not** be
 
 | Type | `string` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 ## <a name="multi_hierarchy_reference"></a>12. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > multi_hierarchy_reference`
 
@@ -185,18 +202,21 @@
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
 | **Defined in** | reference_schemas/intermediate.json#/properties/cross_file_reference |
+|  |  |
 
 | Property | Pattern | Type | Deprecated | Description |
 | -------- | ------- | ---- | ---------- | ----------- |
 |-  [propertyA](#multi_hierarchy_reference_propertyA)|No|string|No|Contents of propertyA in final.json|
+|  |  |  |  |  |
 
 ### <a name="multi_hierarchy_reference_propertyA"></a>12.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > multi_hierarchy_reference > propertyA`
 
 | Type | `string` |
 | ---- | --- |
 | **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+|  |  |
 
 **Description:** Contents of propertyA in final.json
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-11 at 22:25:44 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-12 at 23:34:12 +0100
