@@ -18,21 +18,7 @@
 **Title:** {{ schema.title }}
 {% endif %}
 
-| Type | {% if schema is combining %}`combining`{% else %}`{{ schema.type_name }}`{% endif %} |
-| ---- | --- |
-{% if schema is deprecated %}
-| **Deprecated** | {{- badge("Deprecated", "red") -}} |
-{% endif -%}
-| **Additional properties** | {%- include "additional_properties.html" -%} |
-{% if schema.default_value -%}
-| **Default** | `{{ schema.default_value }}` |
-{% endif %}
-{% if schema.should_be_a_link(config) %}
-| **Same definition as** | [{{ schema.links_to.link_name }}](#{{ schema.links_to.html_id }}) |
-{% elif schema.refers_to -%}
-| **Defined in** | {{ schema.ref_path }} |
-{% endif %}
-|  |  |
+{{ schema | md_type_info_table | md_generate_table }}
 
 {% set description = (schema | get_description) %}
 {% include "section_description.html" %}
@@ -46,7 +32,7 @@
 {% else %}
     {# Properties, pattern properties, additional properties #}
     {% if schema.type_name == "object" %}
-    {% include "section_properties_table.html" %}
+    {{- schema | md_properties_table | md_generate_table -}}
     {% endif %}
     
     {# Combining: allOf, anyOf, oneOf, not #}
@@ -88,7 +74,7 @@
     {% include "section_undocumented_required_properties.html" %}
 
     {# Show the requested type(s) #}
-    {% include "badge_type.html" %}
+    {{- schema | md_restrictions_table | md_generate_table -}}
 
     {# Show array restrictions #}
     {% if schema.type_name.startswith("array") %}

@@ -11,10 +11,10 @@ from json import JSONDecodeError
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Set, TextIO, Tuple, Type, Union, cast, Iterator
 
-from pprint import pprint
 import click
 import htmlmin
 import jinja2
+from jinja2.filters import do_urlencode
 import markdown2
 from marshmallow.fields import Number
 from . import jinja_write_file_extension
@@ -1376,6 +1376,216 @@ def md_get_toc() -> str:
     
     return tocStr
 
+def md_link(title, link, tooltip="") -> str:
+    return f'[{title}](#{link} {tooltip})'
+
+def md_badge(config, name: str, color: str, value: str = '') -> str:
+    if config.template_md_options['badge_as_image']:
+        valueStr=''
+        if value and len(value) > 0:
+            valueStr="-" + do_urlencode(value)
+        name=do_urlencode(name)
+        color=do_urlencode(color)
+        return f'![badge](https://img.shields.io/badge/{name}-{valueStr}-{color})'
+    else:
+        if value and len(value) > 0:
+            return f'[{name}: {value}]'
+        return f'[{name}]'
+
+def md_properties_table(config, schema: SchemaNode) -> List[List]:
+    properties = []
+    for sub_property in schema.iterate_properties:
+        line = []
+        # property name
+        propertyName = "+ " if sub_property.is_required_property else "- "
+        propertyName += md_link(escape_for_md(sub_property.property_name), sub_property.html_id)
+        line.append(propertyName)
+        # pattern
+        line.append('Yes' if sub_property.is_pattern_property else 'No')
+        # type
+        line.append('Combination' if is_combining(sub_property) else escape_for_md(sub_property.type_name))
+        # Deprecated
+        line.append(md_badge(config, "Deprecated", "red") if deprecated(config, sub_property) else 'No')
+        # Link
+        if sub_property.should_be_a_link(config):
+            line.append("Same as " + md_link(sub_property.links_to.link_name, sub_property.links_to.html_id))
+        elif sub_property.refers_to:
+            line.append("In " + sub_property.ref_path)
+        else:
+            line.append('-')
+
+        # title or description
+        description = get_description(sub_property)
+        if sub_property.title:
+            line.append(escape_for_md(first_line(sub_property.title, 80)))
+        elif description and len(description) > 0:
+            line.append(escape_for_md(first_line(description, 80)))
+        else:
+            line.append('-')
+
+        properties.append(line)
+    
+    if len(properties) > 0:
+        # add header
+        properties.insert(0, [
+            "Property",
+            "Pattern",
+            "Type",
+            "Deprecated",
+            "Definition",
+            "Title/Description"
+        ])
+    return properties
+
+def md_type_info_table(config, schema: SchemaNode) -> List[List]:
+    type_info = []
+
+    schemaType = schema.type_name
+    defaultValue = schema.default_value
+    type_info.append(['Type', '`combining`' if is_combining(schema) else f'`{schemaType}`'])
+    if deprecated(config, schema):
+        type_info.append(['**Deprecated**', md_badge(config, "Deprecated", "red")])
+    
+    type_info.append(['**Additional properties**', md_additional_properties(config, schema)])
+    if schema.default_value:
+        type_info.append(['**Default**', f'`{defaultValue}`'])
+    if schema.should_be_a_link(config):
+        schemaLinkName = schema.links_to.link_name
+        htmlId = schema.links_to.html_id
+        type_info.append(['**Same definition as**', f'`[{ schemaLinkName }](#{ htmlId })`'])
+    elif schema.refers_to:
+        type_info.append(['**Defined in**', schema.ref_path])
+
+    return type_info
+
+def md_additional_properties(config, schema: SchemaNode) -> str:
+    additionalProperties = ''
+    for sub_property in schema.iterate_properties:
+        if sub_property.is_additional_properties:
+            if sub_property.is_additional_properties_schema:
+                htmlId = sub_property.html_id
+                shouldConformBadge=md_badge(config, "Should-conform", "blue")
+                additionalProperties=f'[{shouldConformBadge}](#{htmlId} "Each additional property must conform to the following schema")'
+                break
+            else:
+                badgeAnyType=md_badge(config, "Any type", "green", "allowed")
+                additionalProperties=f'[{badgeAnyType}](# "Additional Properties of any type are allowed.")'
+                break
+    
+    if len(additionalProperties) == 0:
+        if schema.explicit_no_additional_properties:
+            badgeNotAllowed=md_badge(config, "Not allowed", "red")
+            additionalProperties=f'[{badgeNotAllowed}](# "Additional Properties not allowed.")'
+        else:
+            badgeAllowed=md_badge(config, "Any type", "green", "allowed")
+            additionalProperties=f'[{badgeAllowed}](# "Additional Properties of any type are allowed.")'
+
+    return additionalProperties
+
+def md_array_restrictions(config, schema: SchemaNode) -> List[List]:
+    array_restrictions = []
+    array_restrictions.append(["", "Array restrictions"])
+    array_restrictions.append(["**Min items**", str(schema.kw_min_items.literal) if schema.kw_min_items else 'N/A'])
+    array_restrictions.append(["**Max items**", str(schema.kw_max_items.literal) if schema.kw_max_items else 'N/A'])
+    array_restrictions.append(["**Items unicity**", 'True' if schema.kw_unique_items and schema.kw_unique_items.literal == True else 'False'])
+    array_restrictions.append(["**Additional items**", 'True' if schema.kw_additional_items and schema.kw_additional_items.literal == True else 'False'])
+    array_restrictions.append(["**Tuple validation**", 'See below' if schema.kw_items or (schema.kw_contains and schema.kw_contains.literal != {}) else 'N/A'])
+
+    return array_restrictions
+
+def md_array_items_restrictions(config, schema: SchemaNode) -> List[List]:
+    if not schema.kw_items:
+        return []
+    array_items_restrictions = []
+    array_items_restrictions.append(["Each item of this array must be", "Description"])
+    for idx, item in enumerate(schema.kw_items):
+        itemLabel=item.name_for_breadcrumbs or "Array Item " + idx
+        itemHtmlId=item.html_id
+        array_items_restrictions.append([
+            f'[{itemLabel}](#{itemHtmlId})',
+            escape_for_md(first_line(get_description(item) or "-", 80))
+        ])
+
+    return array_items_restrictions
+
+def md_array_items(config, schema: SchemaNode, title: str) -> List[List]:
+    if not schema.array_items:
+        return []
+    array_items = []
+    array_items.append([title])
+    for idx, item in enumerate(schema.array_items):
+        itemLabel=item.name_for_breadcrumbs or title + " " + idx
+        itemHtmlId=item.html_id
+        array_items.append([
+            f'[{itemLabel}](#{itemHtmlId})'
+        ])
+
+    return array_items
+
+def md_restrictions_table(config, schema: SchemaNode) -> List[List]:
+    restrictions = []
+    if schema.kw_min_length:
+        restrictions.append(["**Min length**", str(schema.kw_min_length.literal)])
+    if schema.kw_max_length:
+        restrictions.append(["**Max length**", str(schema.kw_max_length.literal)])
+    if schema.kw_pattern:
+        patternCode=schema.kw_pattern.literal.replace('|', '\|')
+        patternUrl=do_urlencode(schema.kw_pattern.literal)
+        exampleUrl=''
+        if len(schema.examples)>0:
+            exampleUrl="&testString=" + do_urlencode(schema.examples[0])
+        restrictions.append([
+            "**Must match regular expression**", 
+            f'```{patternCode}``` [Test](https://regex101.com/?regex={patternUrl}{exampleUrl})'
+        ])
+    if schema.keywords.get("multipleOf"):
+        restrictions.append(["**Multiple of**", str(schema.keywords.get("multipleOf").literal)])
+    if schema.keywords.get("minimum") or schema.keywords.get("exclusiveMinimum"):
+        restrictions.append(["**Minimum**", str(md_get_numeric_minimum_restriction(schema))])
+    if schema.keywords.get("maximum") or schema.keywords.get("exclusiveMaximum"):
+        restrictions.append(["**Maximum**", str(md_get_numeric_maximum_restriction(schema))])
+
+    if len(restrictions) > 0:
+        # add header
+        restrictions.insert(0, [
+            "Restrictions",
+            " "
+        ])
+    
+    return restrictions
+
+def md_generate_table(config, table: List[List]) -> List[List]:
+    if len(table) == 0:
+        return ''
+    
+    # compute max length of each column
+    max_cell_length: Dict = {}
+    for idxRow, row in  enumerate(table):
+        for idxCol, cell in  enumerate(row):
+            max_cell_length[idxCol] = max(max_cell_length.get(idxCol, 0), len(cell))
+    
+    # generate md table
+    output = ""
+    for idxRow, row in enumerate(table):
+        for idxCol, cell in enumerate(row):
+            output += '| ' + cell.ljust(max_cell_length[idxCol], ' ') + ' '
+        output += '|\n'
+        # add header line
+        if idxRow == 0:
+            for idxCol, cell in enumerate(row):
+                output += '| ' + ''.ljust(max_cell_length[idxCol], '-') + ' '
+            output += '|\n'
+    
+    # add last empty row
+    for cell in max_cell_length.values():
+        output += '| ' + ''.ljust(cell, ' ') + ' '
+    output += '|\n'
+    
+    return output
+
+def deprecated(config, schema: SchemaNode) -> bool:
+    return is_deprecated_look_in_description(schema) if config.deprecated_from_description else is_deprecated(schema)
+
 def highlight_json_example(example_text: str) -> str:
     """Filter. Return an highlighted version of the provided JSON text"""
     return highlight(example_text, JavascriptLexer(), HtmlFormatter())
@@ -1446,10 +1656,33 @@ def generate_from_schema(
     env.filters["is_multi_line"] = is_multi_line
     env.filters["repeat_str"] = repeat_str
     env.filters["md_heading"] = md_heading
+    env.filters["md_properties_table"] = (
+        lambda schema: md_properties_table(config, schema)
+    )
+    env.filters["md_type_info_table"] = (
+        lambda schema: md_type_info_table(config, schema)
+    )
+    env.filters["md_array_restrictions"] = (
+        lambda schema: md_array_restrictions(config, schema)
+    )
+    env.filters["md_array_items_restrictions"] = (
+        lambda schema: md_array_items_restrictions(config, schema)
+    )
+    env.filters["md_array_items"] = (
+        lambda schema, title: md_array_items(config, schema, title)
+    )
+    env.filters["md_restrictions_table"] = (
+        lambda schema: md_restrictions_table(config, schema)
+    )
+    env.filters["md_generate_table"] = (
+        lambda table: md_generate_table(config, table)
+    )
 
     env.tests["combining"] = is_combining
     env.tests["description_short"] = is_text_short
-    env.tests["deprecated"] = is_deprecated_look_in_description if config.deprecated_from_description else is_deprecated
+    env.tests["deprecated"] = (
+        lambda schema: deprecated(config, schema)
+    )
     env.globals["get_local_time"] = get_local_time
     env.globals["md_get_toc"] = md_get_toc
     env.globals["result_file_name"] = result_file_name

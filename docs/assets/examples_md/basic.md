@@ -9,27 +9,27 @@
 
 **Title:** Person
 
-| Type | `object` |
-| ---- | --- |
-| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
-|  |  |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
-| Property | Pattern | Type | Deprecated | Definition | Title/Description |
-| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
-|-  [firstName](#firstName)|No|string|No| -|The person's first name.|
-|-  [lastName](#lastName)|No|string|No| -|The person's last name.|
-|-  [age](#age)|No|integer|No| -|Age in years which must be equal to or greater than zero.|
-|-  [driverLicenseId](#driverLicenseId)|No|Combination|No| -|-|
-|  |  |  |  |  |
+| Property                               | Pattern | Type        | Deprecated | Definition | Title/Description |
+| -------------------------------------- | ------- | ----------- | ---------- | ---------- | ----------------- |
+| - [firstName](#firstName )             | No      | string      | No         | -          | Person            |
+| - [lastName](#lastName )               | No      | string      | No         | -          | Person            |
+| - [age](#age )                         | No      | integer     | No         | -          | Person            |
+| - [driverLicenseId](#driverLicenseId ) | No      | Combination | No         | -          | -                 |
+|                                        |         |             |            |            |                   |
 
 ## <a name="firstName"></a>1. [Optional] Property `Person > firstName`
 
 **Title:** Person
 
-| Type | `string` |
-| ---- | --- |
-| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
-|  |  |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** The person's first name.
 
@@ -37,10 +37,10 @@
 
 **Title:** Person
 
-| Type | `string` |
-| ---- | --- |
-| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
-|  |  |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** The person's last name.
 
@@ -48,45 +48,42 @@
 
 **Title:** Person
 
-| Type | `integer` |
-| ---- | --- |
-| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
-|  |  |
+| Type                      | `integer`                                                                 |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Age in years which must be equal to or greater than zero.
 
-| Restrictions |   |
-| ------------ | - |
-| **Minimum** | &ge; 0 |
+| Restrictions |        |
+| ------------ | ------ |
+| **Minimum**  | &ge; 0 |
+|              |        |
 
 ## <a name="driverLicenseId"></a>4. [Optional] Property `Person > driverLicenseId`
 
-| Type | `combining` |
-| ---- | --- |
-| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
-|  |  |
+| Type                      | `combining`                                                               |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
-| All of(Requirement) | 
-| ---- |
-| [no driver licence](#driverLicenseId_allOf_i0) |
-| [driver licence id](#driverLicenseId_allOf_i1) |
 ### <a name="driverLicenseId_allOf_i0"></a>4.1. Property `Person > driverLicenseId > allOf > no driver licence`
 
 **Title:** no driver licence
 
-| Type | `null` |
-| ---- | --- |
-| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
-|  |  |
+| Type                      | `null`                                                                    |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 ### <a name="driverLicenseId_allOf_i1"></a>4.2. Property `Person > driverLicenseId > allOf > driver licence id`
 
 **Title:** driver licence id
 
-| Type | `string` |
-| ---- | --- |
-| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
-|  |  |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 13:20:04 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-14 at 00:38:55 +0100

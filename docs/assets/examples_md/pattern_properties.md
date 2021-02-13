@@ -8,26 +8,26 @@
 
 **Title:** Person
 
-| Type | `object` |
-| ---- | --- |
-| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
-|  |  |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
-| Property | Pattern | Type | Deprecated | Definition | Title/Description |
-| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
-|-  [firstName](#firstName)|No|string|No| -|The person's first name.|
-|-  [lastName](#lastName)|No|string|No| -|The person's last name.|
-|-  [$[a-c][0-9]^](#pattern1)|Yes|object|No| -|Review of a paper size.|
-|  |  |  |  |  |
+| Property                     | Pattern | Type   | Deprecated | Definition | Title/Description |
+| ---------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
+| - [firstName](#firstName )   | No      | string | No         | -          | Person            |
+| - [lastName](#lastName )     | No      | string | No         | -          | Person            |
+| - [$[a-c][0-9]^](#pattern1 ) | Yes     | object | No         | -          | paperSize         |
+|                              |         |        |            |            |                   |
 
 ## <a name="firstName"></a>1. [Optional] Property `Person > firstName`
 
 **Title:** Person
 
-| Type | `string` |
-| ---- | --- |
-| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
-|  |  |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** The person's first name.
 
@@ -35,10 +35,10 @@
 
 **Title:** Person
 
-| Type | `string` |
-| ---- | --- |
-| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
-|  |  |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** The person's last name.
 
@@ -49,27 +49,27 @@ must respect the following conditions
 
 **Title:** paperSize
 
-| Type | `object` |
-| ---- | --- |
-| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
-|  |  |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Review of a paper size.
 
-| Property | Pattern | Type | Deprecated | Definition | Title/Description |
-| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
-|+  [rating](#pattern1_rating)|No|integer|No| -|Numerical rating for paper size.|
-|+  [review](#pattern1_review)|No|string|No| -|Narrative review of the paper size.|
-|  |  |  |  |  |
+| Property                      | Pattern | Type    | Deprecated | Definition | Title/Description |
+| ----------------------------- | ------- | ------- | ---------- | ---------- | ----------------- |
+| + [rating](#pattern1_rating ) | No      | integer | No         | -          | Rating            |
+| + [review](#pattern1_review ) | No      | string  | No         | -          | Review            |
+|                               |         |         |            |            |                   |
 
 ### <a name="pattern1_rating"></a>3.1. [Required] Property `Person > paperSize > rating`
 
 **Title:** Rating
 
-| Type | `integer` |
-| ---- | --- |
-| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
-|  |  |
+| Type                      | `integer`                                                                 |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Numerical rating for paper size.
 
@@ -77,12 +77,12 @@ must respect the following conditions
 
 **Title:** Review
 
-| Type | `string` |
-| ---- | --- |
-| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
-|  |  |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Narrative review of the paper size.
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 13:20:04 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-14 at 00:38:55 +0100

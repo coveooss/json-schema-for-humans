@@ -7,27 +7,27 @@
 
 **Title:** Person
 
-| Type | `object` |
-| ---- | --- |
-| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
-|  |  |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
-| Property | Pattern | Type | Deprecated | Definition | Title/Description |
-| -------- | ------- | ---- | ---------- | ---------- | ----------------- |
-|-  [firstName](#firstName)|No|string|No| -|the person's first name|
-|-  [lastName](#lastName)|No|string|No| -|The person's last name.|
-|-  [age](#age)|No|integer|No| -|Age in years which must be equal to or greater than zero.|
-|-  [moreInfo](#moreInfo)|No|object|No| -|Any more info you want as an object|
-|  |  |  |  |  |
+| Property                   | Pattern | Type    | Deprecated | Definition | Title/Description                   |
+| -------------------------- | ------- | ------- | ---------- | ---------- | ----------------------------------- |
+| - [firstName](#firstName ) | No      | string  | No         | -          | Person                              |
+| - [lastName](#lastName )   | No      | string  | No         | -          | Person                              |
+| - [age](#age )             | No      | integer | No         | -          | Person                              |
+| - [moreInfo](#moreInfo )   | No      | object  | No         | -          | Any more info you want as an object |
+|                            |         |         |            |            |                                     |
 
 ## <a name="firstName"></a>1. [Optional] Property `Person > firstName`
 
 **Title:** Person
 
-| Type | `string` |
-| ---- | --- |
-| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
-|  |  |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** the person's first name
 
@@ -44,10 +44,10 @@
 
 **Title:** Person
 
-| Type | `string` |
-| ---- | --- |
-| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
-|  |  |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** The person's last name.
 
@@ -61,16 +61,17 @@
 
 **Title:** Person
 
-| Type | `integer` |
-| ---- | --- |
-| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
-|  |  |
+| Type                      | `integer`                                                                 |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Age in years which must be equal to or greater than zero.
 
-| Restrictions |   |
-| ------------ | - |
-| **Minimum** | &ge; 0 |
+| Restrictions |        |
+| ------------ | ------ |
+| **Minimum**  | &ge; 0 |
+|              |        |
 
 **Example:** 
 
@@ -80,10 +81,10 @@
 
 ## <a name="moreInfo"></a>4. [Optional] Property `Person > moreInfo`
 
-| Type | `object` |
-| ---- | --- |
-| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
-|  |  |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Any more info you want as an object
 
@@ -98,4 +99,4 @@
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 13:20:01 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-14 at 00:38:54 +0100
