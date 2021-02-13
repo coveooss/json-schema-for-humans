@@ -1,12 +1,12 @@
 # Schema Docs
 
-- [1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > described`](#described)
-  - [1.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > described > name`](#described_name)
-  - [1.2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > described > alignment`](#described_alignment)
+- [1. [Optional] Property `root > described`](#described)
+  - [1.1. [Optional] Property `root > described > name`](#described_name)
+  - [1.2. [Optional] Property `root > described > alignment`](#described_alignment)
 
 | Type | `object` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 |  |  |
 
 **Description:** Testing $ref of a remote $ref
@@ -16,11 +16,11 @@
 |-  [described](#described)|No|object|No| In https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/tests/cases/description_from_ref.json|-|
 |  |  |  |  |  |
 
-## <a name="described"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > described`
+## <a name="described"></a>1. [Optional] Property `root > described`
 
 | Type | `object` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 | **Defined in** | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/tests/cases/description_from_ref.json |
 |  |  |
 
@@ -30,11 +30,11 @@
 |-  [alignment](#described_alignment)|No|string|No| Same as [name](#described_name)|a filled string|
 |  |  |  |  |  |
 
-### <a name="described_name"></a>1.1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > described > name`
+### <a name="described_name"></a>1.1. [Optional] Property `root > described > name`
 
 | Type | `string` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 | **Defined in** | #/definitions/filled_string |
 |  |  |
 
@@ -44,15 +44,15 @@
 | ------------ | - |
 | **Min length** | 1 |
 
-### <a name="described_alignment"></a>1.2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > described > alignment`
+### <a name="described_alignment"></a>1.2. [Optional] Property `root > described > alignment`
 
 | Type | `string` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 | **Same definition as** | [name](#described_name) |
 |  |  |
 
 **Description:** a filled string
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:39 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 13:20:06 +0100

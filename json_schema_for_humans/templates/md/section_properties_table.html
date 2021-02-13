@@ -6,7 +6,7 @@
 | {{- "+ " if sub_property.is_required_property else "- " }} [{{- sub_property.property_name | escape_for_md -}}](#{{- html_id -}}{{- ")" -}}
 | {{- 'Yes' if sub_property.is_pattern_property else 'No' -}}
 | {{- 'Combination' if sub_property is combining else sub_property.type_name | escape_for_md -}}
-| {{- '![made-with-Markdown](https://img.shields.io/badge/Deprecated-red)' if sub_property is deprecated else 'No' -}}
+| {{- badge("Deprecated", "red") if sub_property is deprecated else 'No' -}}
 {%- if sub_property.should_be_a_link(config) -%}
 | Same as [{{ sub_property.links_to.link_name }}](#{{ sub_property.links_to.html_id }})
 {%- elif sub_property.refers_to -%}

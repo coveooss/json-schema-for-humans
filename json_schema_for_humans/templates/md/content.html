@@ -21,7 +21,7 @@
 | Type | {% if schema is combining %}`combining`{% else %}`{{ schema.type_name }}`{% endif %} |
 | ---- | --- |
 {% if schema is deprecated %}
-| **Deprecated** | ![made-with-Markdown](https://img.shields.io/badge/Deprecated-red) |
+| **Deprecated** | {{- badge("Deprecated", "red") -}} |
 {% endif -%}
 | **Additional properties** | {%- include "additional_properties.html" -%} |
 {% if schema.default_value -%}

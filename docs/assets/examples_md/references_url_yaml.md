@@ -1,13 +1,13 @@
 # Schema Docs
 
-- [1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > address`](#address)
-  - [1.1. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `root > address > street_address`](#address_street_address)
-  - [1.2. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `root > address > city`](#address_city)
-  - [1.3. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `root > address > state`](#address_state)
+- [1. [Optional] Property `root > address`](#address)
+  - [1.1. [Required] Property `root > address > street_address`](#address_street_address)
+  - [1.2. [Required] Property `root > address > city`](#address_city)
+  - [1.3. [Required] Property `root > address > state`](#address_state)
 
 | Type | `object` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 |  |  |
 
 **Description:** Testing $ref with URL with YAML destination
@@ -17,11 +17,11 @@
 |-  [address](#address)|No|object|No| In https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/tests/cases/yaml.yaml#/definitions/address|-|
 |  |  |  |  |  |
 
-## <a name="address"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > address`
+## <a name="address"></a>1. [Optional] Property `root > address`
 
 | Type | `object` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 | **Defined in** | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/tests/cases/yaml.yaml#/definitions/address |
 |  |  |
 
@@ -32,26 +32,26 @@
 |+  [state](#address_state)|No|string|No| -|-|
 |  |  |  |  |  |
 
-### <a name="address_street_address"></a>1.1. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `root > address > street_address`
+### <a name="address_street_address"></a>1.1. [Required] Property `root > address > street_address`
 
 | Type | `string` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 |  |  |
 
-### <a name="address_city"></a>1.2. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `root > address > city`
+### <a name="address_city"></a>1.2. [Required] Property `root > address > city`
 
 | Type | `string` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 |  |  |
 
-### <a name="address_state"></a>1.3. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `root > address > state`
+### <a name="address_state"></a>1.3. [Required] Property `root > address > state`
 
 | Type | `string` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 |  |  |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:35 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 13:20:02 +0100

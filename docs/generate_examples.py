@@ -33,8 +33,15 @@ shutil.copyfile(readme_location, os.path.join(includes_dir, readme))
 config_schema = "config_schema.json"
 config_schema_location = os.path.abspath(os.path.join(os.path.dirname(os.getcwd()), config_schema))
 generate_from_filename(config_schema_location, os.path.join(asserts_dir, "config_schema.html"), expand_buttons=True)
+configMd = GenerationConfiguration(deprecated_from_description=True, template_name="md")
+generate_from_filename(config_schema_location, os.path.join(asserts_dir, "config_schema.md"), config=configMd)
 
-config = GenerationConfiguration(deprecated_from_description=True, expand_buttons=True, template_name=templateName)
+config = GenerationConfiguration(
+    deprecated_from_description=True, 
+    expand_buttons=True, 
+    template_name=templateName,
+    template_md_options={ "badge_as_image": False }   
+)
 
 for case_name in os.listdir(cases_source_dir):
     name, ext = os.path.splitext(case_name)

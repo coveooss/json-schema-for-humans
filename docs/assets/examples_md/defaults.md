@@ -1,11 +1,11 @@
 # Schema Docs
 
-- [1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > a`](#a)
-- [2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > b`](#b)
+- [1. [Optional] Property `root > a`](#a)
+- [2. [Optional] Property `root > b`](#b)
 
 | Type | `object` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 |  |  |
 
 | Property | Pattern | Type | Deprecated | Definition | Title/Description |
@@ -14,22 +14,22 @@
 |-  [b](#b)|No|object|No| Same as [a](#a)|A common description|
 |  |  |  |  |  |
 
-## <a name="a"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > a`
+## <a name="a"></a>1. [Optional] Property `root > a`
 
 | Type | `object` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 | **Default** | `"Default from a"` |
 | **Defined in** | #/definitions/common |
 |  |  |
 
 **Description:** Description of a
 
-## <a name="b"></a>2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > b`
+## <a name="b"></a>2. [Optional] Property `root > b`
 
 | Type | `object` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 | **Default** | `"Default from b"` |
 | **Same definition as** | [a](#a) |
 |  |  |
@@ -37,4 +37,4 @@
 **Description:** A common description
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:35 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 13:20:01 +0100

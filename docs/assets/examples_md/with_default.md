@@ -1,14 +1,14 @@
 # User Preference
 
-- [1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `User Preference > favorite_os`](#favorite_os)
-- [2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `User Preference > favorite_colors`](#favorite_colors)
-- [3. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `User Preference > desired_number_of_shoes`](#desired_number_of_shoes)
+- [1. [Optional] Property `User Preference > favorite_os`](#favorite_os)
+- [2. [Optional] Property `User Preference > favorite_colors`](#favorite_colors)
+- [3. [Optional] Property `User Preference > desired_number_of_shoes`](#desired_number_of_shoes)
 
 **Title:** User Preference
 
 | Type | `object` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 |  |  |
 
 | Property | Pattern | Type | Deprecated | Definition | Title/Description |
@@ -18,11 +18,11 @@
 |-  [desired_number_of_shoes](#desired_number_of_shoes)|No|integer|No| -|-|
 |  |  |  |  |  |
 
-## <a name="favorite_os"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `User Preference > favorite_os`
+## <a name="favorite_os"></a>1. [Optional] Property `User Preference > favorite_os`
 
 | Type | `enum (of string)` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 | **Default** | `"Linux"` |
 |  |  |
 
@@ -31,11 +31,11 @@ Must be one of:
 * "Mac"
 * "Linux"
 
-## <a name="favorite_colors"></a>2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `User Preference > favorite_colors`
+## <a name="favorite_colors"></a>2. [Optional] Property `User Preference > favorite_colors`
 
 | Type | `array of enum (of string)` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 | **Default** | `["white", "blue"]` |
 |  |  |
 
@@ -47,11 +47,11 @@ Must be one of:
 | **Additional items**  | False |
 | **Tuple validation**  | N/A |
 
-## <a name="desired_number_of_shoes"></a>3. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `User Preference > desired_number_of_shoes`
+## <a name="desired_number_of_shoes"></a>3. [Optional] Property `User Preference > desired_number_of_shoes`
 
 | Type | `integer` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 | **Default** | `2` |
 |  |  |
 
@@ -61,4 +61,4 @@ Must be one of:
 | **Maximum** | &le; 2 |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:36 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 13:20:02 +0100

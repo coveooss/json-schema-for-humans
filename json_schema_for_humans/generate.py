@@ -117,6 +117,9 @@ class GenerationConfiguration:
     markdown_options: Any = field(
         default_factory=lambda: {"break-on-newline": True, "cssclass": "highlight jumbotron", "tables": None}
     )
+    template_md_options: Dict[str, Any] =  field(
+        default_factory=lambda: {"badge_as_image": False}
+    )
 
 
 class SchemaNode:

@@ -1,12 +1,12 @@
 # Hello
 
-- [1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Hello > property1`](#property1)
+- [1. [Optional] Property `Hello > property1`](#property1)
 
 **Title:** Hello
 
 | Type | `object` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 |  |  |
 
 | Property | Pattern | Type | Deprecated | Definition | Title/Description |
@@ -14,15 +14,15 @@
 |-  [property1](#property1)|No|string|No| -|Line1 ...|
 |  |  |  |  |  |
 
-## <a name="property1"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Hello > property1`
+## <a name="property1"></a>1. [Optional] Property `Hello > property1`
 
 | Type | `string` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 |  |  |
 
 **Description:** Line1
 Line2
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:38 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 13:20:04 +0100

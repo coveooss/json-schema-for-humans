@@ -1,15 +1,15 @@
 # Person
 
-- [1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > firstName`](#firstName)
-- [2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > lastName`](#lastName)
-- [3. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > age`](#age)
-- [4. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > moreInfo`](#moreInfo)
+- [1. [Optional] Property `Person > firstName`](#firstName)
+- [2. [Optional] Property `Person > lastName`](#lastName)
+- [3. [Optional] Property `Person > age`](#age)
+- [4. [Optional] Property `Person > moreInfo`](#moreInfo)
 
 **Title:** Person
 
 | Type | `object` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 |  |  |
 
 | Property | Pattern | Type | Deprecated | Definition | Title/Description |
@@ -20,13 +20,13 @@
 |-  [moreInfo](#moreInfo)|No|object|No| -|Any more info you want as an object|
 |  |  |  |  |  |
 
-## <a name="firstName"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > firstName`
+## <a name="firstName"></a>1. [Optional] Property `Person > firstName`
 
 **Title:** Person
 
 | Type | `string` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 |  |  |
 
 **Description:** the person's first name
@@ -40,13 +40,13 @@
 "BDFL"
 ```
 
-## <a name="lastName"></a>2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > lastName`
+## <a name="lastName"></a>2. [Optional] Property `Person > lastName`
 
 **Title:** Person
 
 | Type | `string` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 |  |  |
 
 **Description:** The person's last name.
@@ -57,13 +57,13 @@
 "Van Rossum"
 ```
 
-## <a name="age"></a>3. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > age`
+## <a name="age"></a>3. [Optional] Property `Person > age`
 
 **Title:** Person
 
 | Type | `integer` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 |  |  |
 
 **Description:** Age in years which must be equal to or greater than zero.
@@ -78,11 +78,11 @@
 64
 ```
 
-## <a name="moreInfo"></a>4. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `Person > moreInfo`
+## <a name="moreInfo"></a>4. [Optional] Property `Person > moreInfo`
 
 | Type | `object` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 |  |  |
 
 **Description:** Any more info you want as an object
@@ -98,4 +98,4 @@
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:34 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 13:20:01 +0100

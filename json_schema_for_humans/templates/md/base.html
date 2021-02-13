@@ -1,9 +1,17 @@
-{%- macro restriction(inner_text, css_class_name, html_id) -%}
-{{ inner_text }}
-{%- endmacro -%}
-
 {%- macro writeFileReference(mdFile, context, body) -%}
 Reference [mdFile](mdFile)
+{%- endmacro -%}
+
+{%- macro badge(name, color, value='') -%}
+{%- if config.template_md_options.badge_as_image -%}
+{%- if value | length > 0 -%}
+![badge](https://img.shields.io/badge/{{ name | urlencode }}-{{ value | urlencode }}-{{ color | urlencode }})
+{%- else -%}
+![badge](https://img.shields.io/badge/{{ name | urlencode }}-{{ color | urlencode }})
+{%- endif -%}
+{%- else -%}
+[{{ name }}{{ ": " ~ value if value | length > 0 }}]
+{%- endif -%}
 {%- endmacro -%}
 
 {% set depth = 0 %}

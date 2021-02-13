@@ -80,6 +80,17 @@
           "cuddled-lists": true
         } 
       ]
+    },
+    "template_md_options": {
+      "type": "object",
+      "description": "specific options to md template",
+      "properties": {
+        "badge_as_image": {
+          "type": "boolean",
+          "description": "if true generate badges(eg: optional, required) using embedded image (https://img.shields.io).\n\n if false, use text instead",
+          "default": false
+        }
+      }
     }
   }
 }

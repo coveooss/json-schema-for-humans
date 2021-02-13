@@ -1,12 +1,12 @@
 # Schema Docs
 
-- [1. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `root > outer`](#outer)
-  - [1.1. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `root > outer > inner`](#outer_inner)
-- [2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > outer2`](#outer2)
+- [1. [Required] Property `root > outer`](#outer)
+  - [1.1. [Required] Property `root > outer > inner`](#outer_inner)
+- [2. [Optional] Property `root > outer2`](#outer2)
 
 | Type | `object` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.")|
+| **Additional properties** |[[Not allowed]](# "Additional Properties not allowed.")|
 |  |  |
 
 | Property | Pattern | Type | Deprecated | Definition | Title/Description |
@@ -15,11 +15,11 @@
 |-  [outer2](#outer2)|No|object|No| Same as [outer](#outer)|We should see this too|
 |  |  |  |  |  |
 
-## <a name="outer"></a>1. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `root > outer`
+## <a name="outer"></a>1. [Required] Property `root > outer`
 
 | Type | `object` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 | **Defined in** | #/definitions/inner schema |
 |  |  |
 
@@ -30,24 +30,24 @@
 |+  [inner](#outer_inner)|No|string|No| -|inner description|
 |  |  |  |  |  |
 
-### <a name="outer_inner"></a>1.1. ![made-with-Markdown](https://img.shields.io/badge/Required-blue) Property `root > outer > inner`
+### <a name="outer_inner"></a>1.1. [Required] Property `root > outer > inner`
 
 | Type | `string` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 |  |  |
 
 **Description:** inner description
 
-## <a name="outer2"></a>2. ![made-with-Markdown](https://img.shields.io/badge/Optional-yellow) Property `root > outer2`
+## <a name="outer2"></a>2. [Optional] Property `root > outer2`
 
 | Type | `object` |
 | ---- | --- |
-| **Additional properties** |[![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")|
+| **Additional properties** |[[Any type: allowed]](# "Additional Properties of any type are allowed.")|
 | **Same definition as** | [outer](#outer) |
 |  |  |
 
 **Description:** We should see this too
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 00:22:36 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-13 at 13:20:03 +0100

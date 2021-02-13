@@ -4,9 +4,9 @@
   {%- if sub_property.is_additional_properties -%}
     {% set ns.additional_properties_property %}
       {%- if sub_property.is_additional_properties_schema -%}
-      [![made-with-Markdown](https://img.shields.io/badge/Should-conform-blue)](#{{- html_id }} "Each additional property must conform to the following schema")
+      [{{- badge("Should-conform", "blue") -}}](#{{- html_id }} "Each additional property must conform to the following schema")
       {%- else -%}
-      [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")
+      [{{- badge("Any type", "green", "allowed") -}}](# "Additional Properties of any type are allowed.")
       {%- endif -%}
     {% endset %}
   {%- endif -%}
@@ -14,9 +14,9 @@
 {% if not ns.additional_properties_property|length %}
   {% set ns.additional_properties_property %}
     {%- if schema.explicit_no_additional_properties %}
-    [![made-with-Markdown](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.")
+    [{{- badge("Not allowed", "red") -}}](# "Additional Properties not allowed.")
     {%- else %}
-    [![made-with-Markdown](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")
+    [{{- badge("Any type", "green", "allowed") -}}](# "Additional Properties of any type are allowed.")
     {%- endif %}
   {% endset %}
 {% endif %}
