@@ -40,7 +40,7 @@ config = GenerationConfiguration(
     deprecated_from_description=True, 
     expand_buttons=True, 
     template_name=templateName,
-    template_md_options={ "badge_as_image": True }   
+    template_md_options={ "badge_as_image": False }   
 )
 
 for case_name in os.listdir(cases_source_dir):

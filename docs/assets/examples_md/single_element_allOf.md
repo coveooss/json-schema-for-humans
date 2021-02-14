@@ -4,22 +4,22 @@
 
 **Title:** Schema containing a single-element allOf
 
-| Type                      | `combining`                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `combining`                                                               |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Schema containing a single-element allOf
 
 ## <a name="allOf_i0"></a>1. Property `Schema containing a single-element allOf > allOf > my_reference`
 
-| Type                      | `string`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/my_reference                                                                                           |
-|                           |                                                                                                                      |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/my_reference                                                |
+|                           |                                                                           |
 
 **Description:** My string definition
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-14 at 02:17:11 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-14 at 10:29:45 +0100

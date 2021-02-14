@@ -1,28 +1,28 @@
 # Hello
 
-- [1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Hello > property1`](#property1)
+- [1. [Optional] Property `Hello > property1`](#property1)
 
 **Title:** Hello
 
-| Type                      | `object`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 | Property                   | Pattern | Type   | Deprecated | Definition | Title/Description |
 | -------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
 | - [property1](#property1 ) | No      | string | No         | -          | Line1 ...         |
 |                            |         |        |            |            |                   |
 
-## <a name="property1"></a>1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Hello > property1`
+## <a name="property1"></a>1. [Optional] Property `Hello > property1`
 
-| Type                      | `string`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Line1
 Line2
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-14 at 02:17:10 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-14 at 10:29:45 +0100

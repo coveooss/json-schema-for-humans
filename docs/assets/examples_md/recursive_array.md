@@ -1,25 +1,25 @@
 # Person
 
-- [1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > person`](#person)
+- [1. [Optional] Property `Person > person`](#person)
 
 **Title:** Person
 
-| Type                      | `object`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 | Property             | Pattern | Type  | Deprecated | Definition | Title/Description |
 | -------------------- | ------- | ----- | ---------- | ---------- | ----------------- |
 | - [person](#person ) | No      | array | No         | -          | A list of people  |
 |                      |         |       |            |            |                   |
 
-## <a name="person"></a>1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > person`
+## <a name="person"></a>1. [Optional] Property `Person > person`
 
-| Type                      | `array`                                                                                                              |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `array`                                                                   |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** A list of people
 
@@ -33,4 +33,4 @@
 |                      |                    |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-14 at 02:17:10 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-14 at 10:29:45 +0100
