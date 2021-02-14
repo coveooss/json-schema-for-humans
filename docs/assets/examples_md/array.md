@@ -1,12 +1,12 @@
 # Schema Docs
 
-- [1. [Optional] Property `root > fruits`](#fruits)
-- [2. [Optional] Property `root > vegetables`](#vegetables)
+- [1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > fruits`](#fruits)
+- [2. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > vegetables`](#vegetables)
 
-| Type                      | `object`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `object`                                                                                                             |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                      |
 
 **Description:** A schema with an array
 
@@ -16,12 +16,12 @@
 | - [vegetables](#vegetables ) | No      | array           | No         | -          | -                 |
 |                              |         |                 |            |            |                   |
 
-## <a name="fruits"></a>1. [Optional] Property `root > fruits`
+## <a name="fruits"></a>1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > fruits`
 
-| Type                      | `array of string`                                                         |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `array of string`                                                                                                    |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                      |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -32,12 +32,12 @@
 | **Tuple validation** | N/A                |
 |                      |                    |
 
-## <a name="vegetables"></a>2. [Optional] Property `root > vegetables`
+## <a name="vegetables"></a>2. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > vegetables`
 
-| Type                      | `array`                                                                   |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `array`                                                                                                              |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                      |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -49,4 +49,4 @@
 |                      |                    |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-14 at 00:38:55 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-14 at 02:17:10 +0100

@@ -3,7 +3,7 @@
 
     {% if schema.kw_then %}
         {%- filter md_heading(depth) -%}If (
-            {{- firstProperty.property_name | escape_for_md -}} 
+            {{- firstProperty.property_name | md_escape_for_table -}} 
             {{- " = " -}}
             {{- firstProperty.kw_const.literal | python_to_json -}}
         ){%- endfilter -%}
@@ -13,7 +13,7 @@
     {% endif %}
     {% if schema.kw_else %}
         {%- filter md_heading(depth) -%}Else (i.e. {{ " " }}
-            {{- firstProperty.property_name | escape_for_md -}} 
+            {{- firstProperty.property_name | md_escape_for_table -}} 
             {{- " != " -}}
             {{- firstProperty.kw_const.literal | python_to_json -}}
         ){%- endfilter -%}

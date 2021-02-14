@@ -1,11 +1,11 @@
 # Schema Docs
 
-- [1. [Optional] Property `root > firstName`](#firstName)
+- [1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > firstName`](#firstName)
 
-| Type                      | `object`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `object`                                                                                                             |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                      |
 
 **Description:** Testing $ref with URL
 
@@ -14,15 +14,15 @@
 | - [firstName](#firstName ) | No      | string | No         | In https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/tests/cases/basic.json#/properties/firstName | The person's first name. |
 |                            |         |        |            |                                                                                                                          |                          |
 
-## <a name="firstName"></a>1. [Optional] Property `root > firstName`
+## <a name="firstName"></a>1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > firstName`
 
 | Type                      | `string`                                                                                                              |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.")                                             |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.")  |
 | **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/tests/cases/basic.json#/properties/firstName |
 |                           |                                                                                                                       |
 
 **Description:** The person's first name.
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-14 at 00:38:55 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-14 at 02:17:09 +0100

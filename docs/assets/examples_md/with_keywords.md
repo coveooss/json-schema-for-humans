@@ -1,22 +1,22 @@
 # Person
 
-- [1. [Optional] Property `Person > default`](#default)
-- [2. [Optional] Property `Person > examples`](#examples)
-- [3. [Optional] Property `Person > if`](#if)
-- [4. [Optional] Property `Person > then`](#then)
-- [5. [Optional] Property `Person > else`](#else)
-- [6. [Optional] Property `Person > anyOf`](#anyOf)
-- [7. [Optional] Property `Person > allOf`](#allOf)
-- [8. [Optional] Property `Person > not`](#not)
-- [9. [Optional] Property `Person > properties`](#properties)
-- [10. [Optional] Property `Person > patternProperties`](#patternProperties)
+- [1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > default`](#default)
+- [2. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > examples`](#examples)
+- [3. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > if`](#if)
+- [4. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > then`](#then)
+- [5. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > else`](#else)
+- [6. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > anyOf`](#anyOf)
+- [7. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > allOf`](#allOf)
+- [8. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > not`](#not)
+- [9. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > properties`](#properties)
+- [10. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > patternProperties`](#patternProperties)
 
 **Title:** Person
 
-| Type                      | `object`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `object`                                                                                                             |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                      |
 
 | Property                                   | Pattern | Type   | Deprecated | Definition | Title/Description |
 | ------------------------------------------ | ------- | ------ | ---------- | ---------- | ----------------- |
@@ -32,95 +32,95 @@
 | - [patternProperties](#patternProperties ) | No      | object | No         | -          | patternProperties |
 |                                            |         |        |            |            |                   |
 
-## <a name="default"></a>1. [Optional] Property `Person > default`
+## <a name="default"></a>1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > default`
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `string`                                                                                                             |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                      |
 
 **Description:** default
 
-## <a name="examples"></a>2. [Optional] Property `Person > examples`
+## <a name="examples"></a>2. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > examples`
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `string`                                                                                                             |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                      |
 
 **Description:** examples
 
-## <a name="if"></a>3. [Optional] Property `Person > if`
+## <a name="if"></a>3. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > if`
 
-| Type                      | `object`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `object`                                                                                                             |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                      |
 
 **Description:** if
 
-## <a name="then"></a>4. [Optional] Property `Person > then`
+## <a name="then"></a>4. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > then`
 
-| Type                      | `object`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `object`                                                                                                             |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                      |
 
 **Description:** then
 
-## <a name="else"></a>5. [Optional] Property `Person > else`
+## <a name="else"></a>5. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > else`
 
-| Type                      | `object`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `object`                                                                                                             |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                      |
 
 **Description:** else
 
-## <a name="anyOf"></a>6. [Optional] Property `Person > anyOf`
+## <a name="anyOf"></a>6. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > anyOf`
 
-| Type                      | `object`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `object`                                                                                                             |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                      |
 
 **Description:** anyOf
 
-## <a name="allOf"></a>7. [Optional] Property `Person > allOf`
+## <a name="allOf"></a>7. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > allOf`
 
-| Type                      | `object`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `object`                                                                                                             |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                      |
 
 **Description:** allOf
 
-## <a name="not"></a>8. [Optional] Property `Person > not`
+## <a name="not"></a>8. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > not`
 
-| Type                      | `object`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `object`                                                                                                             |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                      |
 
 **Description:** not
 
-## <a name="properties"></a>9. [Optional] Property `Person > properties`
+## <a name="properties"></a>9. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > properties`
 
-| Type                      | `object`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `object`                                                                                                             |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                      |
 
 **Description:** properties
 
-## <a name="patternProperties"></a>10. [Optional] Property `Person > patternProperties`
+## <a name="patternProperties"></a>10. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > patternProperties`
 
-| Type                      | `object`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `object`                                                                                                             |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                      |
 
 **Description:** patternProperties
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-14 at 00:38:54 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-14 at 02:17:09 +0100

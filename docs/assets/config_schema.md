@@ -239,4 +239,4 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
  if false, use text instead
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-14 at 00:39:10 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-14 at 02:17:08 +0100

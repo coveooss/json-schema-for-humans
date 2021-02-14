@@ -1,14 +1,14 @@
 # Longitude and Latitude Values
 
-- [1. [Required] Property `Longitude and Latitude Values > latitude`](#latitude)
-- [2. [Required] Property `Longitude and Latitude Values > longitude`](#longitude)
+- [1. ![badge](https://img.shields.io/badge/Required-blue) Property `Longitude and Latitude Values > latitude`](#latitude)
+- [2. ![badge](https://img.shields.io/badge/Required-blue) Property `Longitude and Latitude Values > longitude`](#longitude)
 
 **Title:** Longitude and Latitude Values
 
-| Type                      | `object`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `object`                                                                                                             |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                      |
 
 **Description:** A geographical coordinate.
 
@@ -18,12 +18,12 @@
 | + [longitude](#longitude ) | No      | number | No         | -          | -                 |
 |                            |         |        |            |            |                   |
 
-## <a name="latitude"></a>1. [Required] Property `Longitude and Latitude Values > latitude`
+## <a name="latitude"></a>1. ![badge](https://img.shields.io/badge/Required-blue) Property `Longitude and Latitude Values > latitude`
 
-| Type                      | `number`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `number`                                                                                                             |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                      |
 
 | Restrictions |          |
 | ------------ | -------- |
@@ -31,12 +31,12 @@
 | **Maximum**  | &le; 90  |
 |              |          |
 
-## <a name="longitude"></a>2. [Required] Property `Longitude and Latitude Values > longitude`
+## <a name="longitude"></a>2. ![badge](https://img.shields.io/badge/Required-blue) Property `Longitude and Latitude Values > longitude`
 
-| Type                      | `number`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `number`                                                                                                             |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                      |
 
 | Restrictions |           |
 | ------------ | --------- |
@@ -45,4 +45,4 @@
 |              |           |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-14 at 00:38:56 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-14 at 02:17:11 +0100
