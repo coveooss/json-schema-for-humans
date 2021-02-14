@@ -2,13 +2,14 @@ from typing import List, Optional
 
 from bs4 import BeautifulSoup, Tag
 
+
 def assert_soup_results_text(soup: BeautifulSoup, class_name: str, texts: List[str]) -> None:
     """Assert that all the HTML elements with the provided class found in the schema has the supplied text
 
     There must be exactly as many elements as the length of the supplied values and they must be in the same order
     """
     elements = soup.find_all(class_=class_name)
-    
+
     assert len(elements) == len(texts)
 
     for i, element in enumerate(elements):
@@ -88,7 +89,7 @@ def assert_basic_case(soup: BeautifulSoup) -> None:
         [
             "The person's first name.",
             "The person's last name.",
-            "Age in years which must be equal to or greater than zero."
+            "Age in years which must be equal to or greater than zero.",
         ],
     )
     assert_title(soup, "Person")

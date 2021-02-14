@@ -226,7 +226,9 @@ def test_with_definitions():
         soup,
         ["billing_address", "street_address", "city", "state", "futureProperty", "shipping_address"],
     )
-    tests.html_schema_doc_asserts.assert_types(soup, ["object", "object", "string", "string", "string", "null", "object"])
+    tests.html_schema_doc_asserts.assert_types(
+        soup, ["object", "object", "string", "string", "string", "null", "object"]
+    )
     tests.html_schema_doc_asserts.assert_required(soup, [False, True, True, True, False, False])
 
 

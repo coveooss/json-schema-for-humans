@@ -89,6 +89,7 @@ CONFIG_DEPRECATION_MESSAGE = (
 
 circular_references: Dict["SchemaNode", bool] = {}
 
+
 @dataclass_json
 @dataclass
 class GenerationConfiguration:
