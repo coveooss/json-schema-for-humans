@@ -81,21 +81,13 @@ EXCLUSIVE_MAXIMUM = "exclusiveMaximum"
 MINIMUM = "minimum"
 EXCLUSIVE_MINIMUM = "exclusiveMinimum"
 
-
 SHORT_DESCRIPTION_NUMBER_OF_LINES = 8
-
 
 CONFIG_DEPRECATION_MESSAGE = (
     "JSON Schema for humans: Please supply a GenerationConfiguration object instead of individual options"
 )
 
-
 circular_references: Dict["SchemaNode", bool] = {}
-
-md_headings: Dict = {}
-md_auto_generated_heading: Number = 0
-md_toc: Dict = {}
-
 
 @dataclass_json
 @dataclass
@@ -441,9 +433,12 @@ class SchemaNode:
 
     @property
     def kw_items(self) -> Optional[List["SchemaNode"]]:
+        "items can be either an object either a list of object"
         items = self.get_keyword(KW_ITEMS) or []
+        if type(items) == List:
+            return items.array_items
 
-        return items.array_items
+        return [items]
 
     @property
     def kw_min_items(self) -> Optional["SchemaNode"]:

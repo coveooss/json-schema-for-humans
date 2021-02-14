@@ -224,10 +224,10 @@ def test_with_definitions():
 
     tests.html_schema_doc_asserts.assert_property_names(
         soup,
-        ["billing_address", "street_address", "city", "state", "shipping_address"],
+        ["billing_address", "street_address", "city", "state", "futureProperty", "shipping_address"],
     )
-    tests.html_schema_doc_asserts.assert_types(soup, ["object", "object", "string", "string", "string", "object"])
-    tests.html_schema_doc_asserts.assert_required(soup, [False, True, True, True, False])
+    tests.html_schema_doc_asserts.assert_types(soup, ["object", "object", "string", "string", "string", "null", "object"])
+    tests.html_schema_doc_asserts.assert_required(soup, [False, True, True, True, False, False])
 
 
 def test_with_multiple_descriptions():
