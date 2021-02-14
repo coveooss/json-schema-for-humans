@@ -115,7 +115,11 @@ class GenerationConfiguration:
     template_name: str = "js"
     # markdown2 extra parameters can be added here: https://github.com/trentm/python-markdown2/wiki/Extras
     markdown_options: Any = field(
-        default_factory=lambda: {"break-on-newline": True, "cssclass": "highlight jumbotron", "tables": None}
+        default_factory=lambda: {
+            "break-on-newline": True,
+            "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
+            "tables": None,
+        }
     )
     template_md_options: Dict[str, Any] =  field(
         default_factory=lambda: {"badge_as_image": False}
@@ -1585,7 +1589,7 @@ def get_numeric_restrictions_text(schema_node: SchemaNode, before_value: str = "
 def escape_property_name_for_id(property_name: str) -> str:
     """Filter. Escape unsafe characters in a property name so that it can be used in a HTML id"""
 
-    escaped = re.sub("[^0-9a-zA-Z_,-]", "_", str(property_name))
+    escaped = re.sub("[^0-9a-zA-Z_-]", "_", str(property_name))
     if not escaped[0].isalpha():
         escaped = "a" + escaped
     return escaped
@@ -1902,7 +1906,7 @@ def _apply_config_cli_parameters(
     help="Override generation parameters from the configuration file. "
     "Format is parameter_name=parameter_value. For example: --config minify=false. Can be repeated.",
 )
-@click.option("--minify/--no-minify", default=True, help="Run minification om the HTML result")
+@click.option("--minify/--no-minify", default=True, help="Run minification on the HTML result")
 @click.option(
     "--deprecated-from-description", is_flag=True, help="Look in the description to find if an attribute is deprecated"
 )
