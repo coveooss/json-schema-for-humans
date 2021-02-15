@@ -138,3 +138,4 @@ AUTHORS
 # Generated docs site
 docs/_site/**
 docs/Gemfile.lock
+docs/Readme.md

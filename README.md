@@ -162,5 +162,14 @@ It is sometimes not possible or desirable to include custom Javascript in docume
 
 At the moment, this means the whole documentation is generated without any collapsible sections, which may make it hard to understand the schema structure. Contributions are welcomed to improve it!
 
+### md (Markdown)
+
+*Note*: This template is a work in progress
+
+It offers the user to be able to publish the documentation directly on github, Markdown format can be interpreted as is on github. No need to provide http server to serve the documentation. A table of content is provided at the beginning of the file for easiest navigation.
+
+Contributions are welcomed to improve it!
+
+
 # Contributing
 [See CONTRIBUTING.md](https://github.com/coveooss/json-schema-for-humans/blob/master/CONTRIBUTING.md)
