@@ -140,6 +140,4 @@ docs/_site/**
 docs/Gemfile.lock
 docs/_includes/README.md
 docs/_includes/**
-docs/assets/examples_flat/**
-docs/assets/examples_js/**
-docs/assets/examples_md/**
+docs/assets/examples_*/**

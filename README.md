@@ -10,7 +10,7 @@ Quickly generate a beautiful HTML static page documenting a JSON schema
 
 - Support for JSON Schema Draft-07
 - Since the result is static, it is easier to host and faster to load
-- Different templates to choose from [(See html doc here)](https://coveooss.github.io/json-schema-for-humans/assets/config_schema.html#template_name) or [(See markdown doc here)](docs/assets/config_schema.md#template_name)
+- Different templates to choose from [(See html doc here)](https://coveooss.github.io/json-schema-for-humans/assets/config_schema.html#template_name) or [(See markdown doc here)](https://github.com/coveooss/json-schema-for-humans/blob/master/docs/assets/config_schema.md#template_name)
 - Anchor links, allow to send a user to a specific section of the documentation
 - Support for references (even circular!)
 
@@ -21,8 +21,9 @@ pip install json-schema-for-humans
 
 ## Usage
 
-[Options for generation of the doc are documented using this very library in html format](https://coveooss.github.io/json-schema-for-humans/assets/config_schema.html)
-[Options for generation of the doc are documented using this very library in markdown format](docs/assets/config_schema.md)
+Options for generation of the doc are documented using this very library
+* [in html format](https://coveooss.github.io/json-schema-for-humans/assets/config_schema.html)
+* [in markdown format](https://github.com/coveooss/json-schema-for-humans/blob/master/docs/assets/config_schema.md)
 
 They can be supplied in various ways:
 - Using a JSON or YAML configuration file with the CLI option `--config-file`
@@ -44,7 +45,7 @@ The default value for `RESULT_FILE` is `schema_doc.html`
 #### CLI options
 
 #### --config
-Supply generation config parameters. The parameters are documented in the JSON schema `config_schema.json` at the root of the repo or see [the generated html doc](https://coveooss.github.io/json-schema-for-humans/assets/config_schema.html) or [the generated markdown doc](docs/assets/config_schema.md)..
+Supply generation config parameters. The parameters are documented in the JSON schema `config_schema.json` at the root of the repo or see [the generated html doc](https://coveooss.github.io/json-schema-for-humans/assets/config_schema.html) or [the generated markdown doc](https://github.com/coveooss/json-schema-for-humans/blob/master/docs/assets/config_schema.md).
 
 Each parameter is in the format `--config parameter_name=parameter_value`. Example: `--config expand_buttons=true`. The parameter value must be valid JSON.
 
@@ -147,7 +148,7 @@ Templates control the style of the generated documentation.
 
 This is the default template. It uses Bootstrap along with minimal Javascript to allow for the following:
 
-- Properties are in expandable dynamic sections. You can include a button to expand or collapse all. [(See html doc)](https://coveooss.github.io/json-schema-for-humans/assets/config_schema.html#expand_buttons) or [(See markdown doc)](docs/assets/config_schema.md#expand_buttons)
+- Properties are in expandable dynamic sections. You can include a button to expand or collapse all. [(See html doc)](https://coveooss.github.io/json-schema-for-humans/assets/config_schema.html#expand_buttons) or [(See markdown doc)](https://github.com/coveooss/json-schema-for-humans/blob/master/docs/assets/config_schema.md#expand_buttons)
 - Conditional subschemas (`anyOf`, `oneOf`, `allOf`) are in tabbed sections
 - Anchor links will scroll to, expand, and animate the target section 
 - Long descriptions are collapsed by default
@@ -167,6 +168,9 @@ At the moment, this means the whole documentation is generated without any colla
 *Note*: This template is a work in progress
 
 It offers the user to be able to publish the documentation directly on github, Markdown format can be interpreted as is on github. No need to provide http server to serve the documentation. A table of content is provided at the beginning of the file for easiest navigation.
+
+You can display some important information as badge using an option.
+[(See html doc)](https://coveooss.github.io/json-schema-for-humans/assets/config_schema.html#template_md_options_badge_as_image) or [(See markdown doc)](https://github.com/coveooss/json-schema-for-humans/blob/master/docs/assets/config_schema.md#template_md_options_badge_as_image)
 
 Contributions are welcomed to improve it!
 
