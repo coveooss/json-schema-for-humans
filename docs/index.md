@@ -16,7 +16,7 @@ title: JSON Schema for Humans
 <details><summary style="font-size:20px; cursor:pointer; text-decoration: underline">Click here to expand source JSON Schema...</summary>
 <p>
 {% highlight json %}
-{% include ../tests/cases/{{ example.name }}.json %}
+{% include examples/{{ example.name }}.json %}
 {% endhighlight %}
 </p>
 </details>

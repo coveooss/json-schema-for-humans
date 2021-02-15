@@ -39,6 +39,21 @@ It is recommended to run black [from your IDE](https://github.com/psf/black/blob
 ## Generating doc
 The documentation is generated using jekyll and hosted on GitHub Pages
 
+Execute following script from root dir of the repository
+```bash
+sudo apt update
+sudo apt install ruby-bundler ruby-dev
+(cd docs && bundle install)
+(cd docs && python3 generate_examples.py flat)
+(cd docs && python3 generate_examples.py js)
+(cd tests && python3 generate_expected_md.py)
+mkdir -p docs/assets/examples_md_with_badge
+cp tests/expected_md/with_badge/* docs/assets/examples_md_with_badge
+mkdir -p docs/assets/examples_md_without_badge
+cp -R tests/expected_md/without_badge/* docs/assets/examples_md_without_badge
+(cd docs && bundle exec jekyll build)
+```
+
 - Change your current working directory to `docs`
 - Run ``python generate_examples.py``. This will get all examples from `tests/cases`, render the resulting HTML and
  include it in the appropriate folders in the jekyll site.
