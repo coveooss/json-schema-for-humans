@@ -19,12 +19,11 @@ Just run tox
 # Adding a new template
 
 Just copy one of the existing template, change the name and start modifying.
-If you are looking for examples, you can run `generate_examples.py` from the `docs` folder, after changing this line tp add your template name:
-```python
-config = GenerationConfiguration(deprecated_from_description=True, expand_buttons=True, template_name="my_new_template")
-```
+If you are looking for examples, you can run `python3 generate_examples.py flat` or `python3 generate_examples.py js` from the `docs` folder.
 
-The examples will be in `docs/assets/examples`
+The examples will be in `docs/assets/examples_flat` (resp. `docs/assets/examples_js`).
+
+Markdown examples are in `tests/expected_md` and are generated running `python3 generate_expected_md.py` from `tests` folder.
 
 # Optional stuff
 The maintainer will take care of the following for you if you don't want to bother with it :)

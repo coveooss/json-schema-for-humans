@@ -5,13 +5,14 @@ import shutil
 import sys
 
 templateName="js"
+templateExtension="html"
 if len( sys.argv ) >= 2:
     print(sys.argv)
     templateName=sys.argv[1]
 
-templateExtension="html"
 if templateName == 'md':
-    templateExtension="md"
+    print("please use tests/generate_expected_md.py instead")
+    sys.exit()
 
 sys.path.insert(0, os.path.abspath(".."))
 
@@ -39,8 +40,7 @@ generate_from_filename(config_schema_location, os.path.join(asserts_dir, "config
 config = GenerationConfiguration(
     deprecated_from_description=True, 
     expand_buttons=True, 
-    template_name=templateName,
-    template_md_options={ "badge_as_image": False }   
+    template_name=templateName
 )
 
 for case_name in os.listdir(cases_source_dir):
