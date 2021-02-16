@@ -609,6 +609,7 @@ class MdTemplate(object):
         env.filters["md_array_items"] = self.array_items
         env.filters["md_restrictions_table"] = self.restrictions_table
         env.filters["md_generate_table"] = self.generate_table
+        env.filters["md_first_line"] = self.first_line
 
         env.globals["md_get_toc"] = self.get_toc
 
@@ -760,13 +761,11 @@ class MdTemplate(object):
                 line.append("-")
 
             # title or description
-            description = get_description(sub_property)
+            description = get_description(sub_property) or "-"
             if sub_property.title:
-                line.append(self.escape_for_table(first_line(sub_property.title, 80)))
-            elif description and len(description) > 0:
-                line.append(self.escape_for_table(first_line(description, 80)))
-            else:
-                line.append("-")
+                description = sub_property.title
+            
+            line.append(self.escape_for_table(self.first_line(description, 80)))
 
             properties.append(line)
 
@@ -774,6 +773,10 @@ class MdTemplate(object):
             # add header
             properties.insert(0, ["Property", "Pattern", "Type", "Deprecated", "Definition", "Title/Description"])
         return properties
+
+    def first_line(self, example_text: str, max_length=False) -> str:
+        """first_line but replace ` with ' to avoid to have only one ` to avoid issues with jekyll"""
+        return first_line(example_text, max_length).translate(str.maketrans({"`": "'"}))
 
     def type_info_table(self, schema: SchemaNode) -> List[List]:
         type_info = []
@@ -855,7 +858,7 @@ class MdTemplate(object):
             itemLabel = item.name_for_breadcrumbs or "Array Item " + idx
             itemHtmlId = item.html_id
             array_items_restrictions.append(
-                [f"[{itemLabel}](#{itemHtmlId})", self.escape_for_table(first_line(get_description(item) or "-", 80))]
+                [f"[{itemLabel}](#{itemHtmlId})", self.escape_for_table(self.first_line(get_description(item) or "-", 80))]
             )
 
         return array_items_restrictions
