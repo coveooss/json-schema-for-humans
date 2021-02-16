@@ -17,7 +17,6 @@ import jinja2
 from urllib.parse import quote_plus
 import markdown2
 from marshmallow.fields import Number
-from . import jinja_write_file_extension
 import requests
 import yaml
 from dataclasses_json import dataclass_json
@@ -764,7 +763,7 @@ class MdTemplate(object):
             description = get_description(sub_property) or "-"
             if sub_property.title:
                 description = sub_property.title
-            
+
             line.append(self.escape_for_table(self.first_line(description, 80)))
 
             properties.append(line)
@@ -858,7 +857,10 @@ class MdTemplate(object):
             itemLabel = item.name_for_breadcrumbs or "Array Item " + idx
             itemHtmlId = item.html_id
             array_items_restrictions.append(
-                [f"[{itemLabel}](#{itemHtmlId})", self.escape_for_table(self.first_line(get_description(item) or "-", 80))]
+                [
+                    f"[{itemLabel}](#{itemHtmlId})",
+                    self.escape_for_table(self.first_line(get_description(item) or "-", 80)),
+                ]
             )
 
         return array_items_restrictions
@@ -1652,7 +1654,7 @@ def generate_from_schema(
     loader = FileSystemLoader(template_folder)
     env = jinja2.Environment(
         loader=loader,
-        extensions=[jinja_write_file_extension.WriteFileExtension, jinja2.ext.loopcontrols],
+        extensions=[jinja2.ext.loopcontrols],
         trim_blocks=(config.template_name == "md"),
         lstrip_blocks=(config.template_name == "md"),
     )
