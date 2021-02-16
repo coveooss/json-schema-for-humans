@@ -14,9 +14,9 @@ from typing import Any, Dict, Iterable, List, Optional, Set, TextIO, Tuple, Type
 import click
 import htmlmin
 import jinja2
+from jinja2.ext import loopcontrols
 from urllib.parse import quote_plus
 import markdown2
-from marshmallow.fields import Number
 import requests
 import yaml
 from dataclasses_json import dataclass_json
@@ -664,7 +664,7 @@ class MdTemplate(object):
         """Filter. escape characters('|', '`') in string to be inserted into markdown table"""
         return example_text.translate(str.maketrans({"|": "\\|", "`": "\\`"}))
 
-    def heading(self, title: str, depth: Number, html_id: Union[bool, str] = False) -> str:
+    def heading(self, title: str, depth: int, html_id: Union[bool, str] = False) -> str:
         """
         Filter. display heading menu, heading number automatically calculated
         from previous heading and depth provided
@@ -1421,6 +1421,12 @@ def get_required_properties(schema_node: SchemaNode) -> List[str]:
 
 
 def get_first_property(schema_node: SchemaNode) -> Any:
+    """
+    Filter. get first property of given schema no matter the property key
+    Usage:
+    md template does not recurse on schema to render the if portion
+    instead it renders the if in the heading directly
+    """
     properties = schema_node.properties
     if not properties:
         return None
@@ -1681,7 +1687,6 @@ def generate_from_schema(
     default_from_description: bool = False,
     expand_buttons: bool = False,
     link_to_reused_ref: bool = True,
-    result_file_name: str = "",
     config: GenerationConfiguration = None,
 ) -> str:
     config = config or _get_final_config(
@@ -1701,7 +1706,7 @@ def generate_from_schema(
     loader = FileSystemLoader(template_folder)
     env = jinja2.Environment(
         loader=loader,
-        extensions=[jinja2.ext.loopcontrols],
+        extensions=[loopcontrols],
         trim_blocks=(config.template_name == "md"),
         lstrip_blocks=(config.template_name == "md"),
     )
@@ -1730,8 +1735,6 @@ def generate_from_schema(
     env.tests["description_short"] = is_text_short
     env.tests["deprecated"] = lambda schema: deprecated(config, schema)
     env.globals["get_local_time"] = get_local_time
-    env.globals["result_file_name"] = result_file_name
-    env.globals["result_dir_name"] = os.path.dirname(result_file_name)
 
     with open(base_template_path, "r") as template_fp:
         template = env.from_string(template_fp.read())
@@ -1789,7 +1792,6 @@ def generate_from_filename(
         default_from_description=default_from_description,
         expand_buttons=expand_buttons,
         link_to_reused_ref=link_to_reused_ref,
-        result_file_name=result_file_name,
         config=config,
     )
 
