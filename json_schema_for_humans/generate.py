@@ -609,7 +609,7 @@ class MdTemplate(object):
         env.filters["md_restrictions_table"] = self.restrictions_table
         env.filters["md_generate_table"] = self.generate_table
         env.filters["md_first_line"] = self.first_line
-        
+
         env.globals["md_badge"] = self.badge
         env.globals["md_get_toc"] = self.get_toc
 
@@ -682,7 +682,7 @@ class MdTemplate(object):
         for curDepth in range(depth + 1, max(self.headings, key=int) + 1 if self.headings else depth + 1):
             self.headings.pop(curDepth, None)
 
-        # compute heading, for each depth get last level, and increment level of asked depth 
+        # compute heading, for each depth get last level, and increment level of asked depth
         headingNumbers = ""
         for curDepth in range(0, depth + 1):
             if curDepth in self.headings:
@@ -737,7 +737,7 @@ class MdTemplate(object):
     def badge(self, name: str, color: str, value: str = "") -> str:
         """
         Badge as markdown image link if badge_as_image option set
-        otherwise Badge as text 
+        otherwise Badge as text
         """
         if self.config.template_md_options["badge_as_image"]:
             valueStr = ""
@@ -788,7 +788,7 @@ class MdTemplate(object):
         if len(properties) > 0:
             # add header
             properties.insert(0, ["Property", "Pattern", "Type", "Deprecated", "Definition", "Title/Description"])
-        
+
         return properties
 
     def first_line(self, example_text: str, max_length=False) -> str:
@@ -797,10 +797,10 @@ class MdTemplate(object):
 
     def type_info_table(self, schema: SchemaNode) -> List[List]:
         """
-        Schema type info table : 
-        - type, 
-        - additional properties, 
-        - default value, 
+        Schema type info table :
+        - type,
+        - additional properties,
+        - default value,
         - definitions links
         ready to be rendered by generate_table filter
         """

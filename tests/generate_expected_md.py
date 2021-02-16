@@ -6,14 +6,18 @@ from pprint import pprint
 
 sys.path.insert(0, os.path.abspath(".."))
 
+
 def removeGeneratedTimestamp(filePath: str) -> None:
-    with open(filePath, 'r') as f:
+    with open(filePath, "r") as f:
         lines = f.readlines()
         lines = lines[:-1]
-        lines.append('Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on date')
-    with open(filePath, 'w') as f:
+        lines.append(
+            "Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on date"
+        )
+    with open(filePath, "w") as f:
         f.writelines(lines)
-    
+
+
 from json_schema_for_humans.generate import generate_from_filename, GenerationConfiguration
 
 cases_source_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "cases"))
@@ -31,7 +35,7 @@ for case_name in os.listdir(cases_source_dir):
         continue
 
     print(f"Generating expected {name}")
-    f=os.path.join(with_badge_dir, f"{name}.md")
+    f = os.path.join(with_badge_dir, f"{name}.md")
     generate_from_filename(case_source, f, config=configWithBadge)
     removeGeneratedTimestamp(f)
 
