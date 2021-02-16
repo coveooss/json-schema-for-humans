@@ -661,7 +661,7 @@ class MdTemplate(object):
         return maximum_fragment
 
     def escape_for_table(self, example_text: str) -> str:
-        """Filter. escape characters('|', '`') in string to be insterted into markdown table"""
+        """Filter. escape characters('|', '`') in string to be inserted into markdown table"""
         return example_text.translate(str.maketrans({"|": "\\|", "`": "\\`"}))
 
     def heading(self, title: str, depth: Number, html_id: Union[bool, str] = False) -> str:
@@ -677,10 +677,11 @@ class MdTemplate(object):
         else:
             title = title.strip()
 
-        # first reset heading depth greater than current depth
+        # reset heading depth greater than current depth
         for curDepth in range(depth + 1, max(self.headings, key=int) + 1 if self.headings else depth + 1):
             self.headings.pop(curDepth, None)
 
+        # compute heading, for each depth get last level, and increment level of asked depth 
         headingNumbers = ""
         for curDepth in range(0, depth + 1):
             if curDepth in self.headings:
@@ -691,18 +692,25 @@ class MdTemplate(object):
             if curDepth != 0:
                 headingNumbers += f"{self.headings[curDepth]}."
 
+        # markdown menu depth
         menu = "#" * (depth + 1)
+
+        # generate markdown title with anchor (except if depth 0)
         if depth == 0:
             menu += f" {title}"
         else:
             menu += f' <a name="{html_id}"></a>{headingNumbers} {title}'
 
+        # store current heading in toc
         toc_menu = f"[{headingNumbers} {title}](#{html_id})"
         self.toc[headingNumbers] = {"depth": depth, "menu": toc_menu}
 
         return menu
 
     def get_toc(self) -> str:
+        """
+        generate Table Of Content from the heading that have been generated
+        """
         tocStr = ""
 
         firstHeadingDepth = False
@@ -722,9 +730,14 @@ class MdTemplate(object):
         return tocStr
 
     def link(self, title, link, tooltip="") -> str:
+        "Makdown link"
         return f"[{title}](#{link} {tooltip})"
 
     def badge(self, name: str, color: str, value: str = "") -> str:
+        """
+        Badge as markdown image link if badge_as_image option set
+        otherwise Badge as text 
+        """
         if self.config.template_md_options["badge_as_image"]:
             valueStr = ""
             if value and len(value) > 0:
@@ -738,6 +751,9 @@ class MdTemplate(object):
             return f"[{name}]"
 
     def properties_table(self, schema: SchemaNode) -> List[List]:
+        """
+        Generate list of properties ready to be rendered by generate_table filter
+        """
         properties = []
         for sub_property in schema.iterate_properties:
             line = []
@@ -771,13 +787,22 @@ class MdTemplate(object):
         if len(properties) > 0:
             # add header
             properties.insert(0, ["Property", "Pattern", "Type", "Deprecated", "Definition", "Title/Description"])
+        
         return properties
 
     def first_line(self, example_text: str, max_length=False) -> str:
-        """first_line but replace ` with ' to avoid to have only one ` to avoid issues with jekyll"""
+        """first_line truncated but replace ` with ' to avoid to have only one ` to avoid issues with jekyll"""
         return first_line(example_text, max_length).translate(str.maketrans({"`": "'"}))
 
     def type_info_table(self, schema: SchemaNode) -> List[List]:
+        """
+        Schema type info table : 
+        - type, 
+        - additional properties, 
+        - default value, 
+        - definitions links
+        ready to be rendered by generate_table filter
+        """
         type_info = []
 
         schemaType = schema.type_name
@@ -799,6 +824,7 @@ class MdTemplate(object):
         return type_info
 
     def additional_properties(self, schema: SchemaNode) -> str:
+        """additional properties badge generation"""
         additionalProperties = ""
         for sub_property in schema.iterate_properties:
             if sub_property.is_additional_properties:
@@ -823,6 +849,11 @@ class MdTemplate(object):
         return additionalProperties
 
     def array_restrictions(self, schema: SchemaNode) -> List[List]:
+        """
+        array restrictions: min/max items, items unicity, additional items, Tuple validation
+        ready to be rendered by generate_table filter
+        """
+
         array_restrictions = []
         array_restrictions.append(["", "Array restrictions"])
         array_restrictions.append(["**Min items**", str(schema.kw_min_items.literal) if schema.kw_min_items else "N/A"])
@@ -849,6 +880,10 @@ class MdTemplate(object):
         return array_restrictions
 
     def array_items_restrictions(self, schema: SchemaNode) -> List[List]:
+        """
+        Tuple validation restrictions
+        ready to be rendered by generate_table filter
+        """
         if not schema.kw_items:
             return []
         array_items_restrictions = []
@@ -866,6 +901,10 @@ class MdTemplate(object):
         return array_items_restrictions
 
     def array_items(self, schema: SchemaNode, title: str) -> List[List]:
+        """
+        List of array items
+        ready to be rendered by generate_table filter
+        """
         if not schema.array_items:
             return []
         array_items = []
@@ -878,6 +917,14 @@ class MdTemplate(object):
         return array_items
 
     def restrictions_table(self, schema: SchemaNode) -> List[List]:
+        """
+        String or numeric restrictions tables
+        - min/max length
+        - regexp pattern + link to regexp101
+        - multipleOf
+        - minimum/maximum
+        ready to be rendered by generate_table filter
+        """
         restrictions = []
         if schema.kw_min_length:
             restrictions.append(["**Min length**", str(schema.kw_min_length.literal)])
