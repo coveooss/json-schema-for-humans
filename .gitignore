@@ -137,7 +137,6 @@ AUTHORS
 
 # Generated docs site
 docs/_site/**
-docs/Gemfile.lock
 docs/_includes/README.md
 docs/_includes/**
 docs/assets/examples_*/**
