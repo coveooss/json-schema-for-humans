@@ -27,6 +27,5 @@ class MdUtilsAsserts:
         # remove generation date on both contents
         regexp = r"^(Generated using \[json-schema-for-humans\]\(https:[^)]+\) on) (.+)$"
         content = re.sub(regexp, content, r"\1 date")
-        expectedContent = re.sub(regexp, expectedContent, r"\1 date")
 
         assert expectedContent == content
