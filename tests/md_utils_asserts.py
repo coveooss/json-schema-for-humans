@@ -24,8 +24,9 @@ class MdUtilsAsserts:
     def assert_case_equals(self, test_case: str, case_name: str, config: GenerationConfiguration = None) -> None:
         content = self.generate_case(case_name, config)
         expectedContent = self.get_expected_case(test_case, case_name)
+
         # remove generation date on both contents
         regexp = r"^(Generated using \[json-schema-for-humans\]\(https:[^)]+\) on) (.+)$"
-        content = re.sub(regexp, content, r"\1 date")
+        content = re.sub(regexp, r"\1 date", content, flags=re.MULTILINE)
 
         assert expectedContent == content
