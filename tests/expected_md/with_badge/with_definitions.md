@@ -7,10 +7,10 @@
   - [1.4. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > billing_address > futureProperty`](#billing_address_futureProperty)
 - [2. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > shipping_address`](#shipping_address)
 
-| Type                      | `object`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 | Property                                 | Pattern | Type   | Deprecated | Definition                                   | Title/Description |
 | ---------------------------------------- | ------- | ------ | ---------- | -------------------------------------------- | ----------------- |
@@ -20,11 +20,11 @@
 
 ## <a name="billing_address"></a>1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > billing_address`
 
-| Type                      | `object`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/address                                                                                                |
-|                           |                                                                                                                      |
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/address                                                                                               |
+|                           |                                                                                                                     |
 
 | Property                                             | Pattern | Type   | Deprecated | Definition | Title/Description |
 | ---------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
@@ -36,39 +36,39 @@
 
 ### <a name="billing_address_street_address"></a>1.1. ![badge](https://img.shields.io/badge/Required-blue) Property `root > billing_address > street_address`
 
-| Type                      | `string`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `string`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 ### <a name="billing_address_city"></a>1.2. ![badge](https://img.shields.io/badge/Required-blue) Property `root > billing_address > city`
 
-| Type                      | `string`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `string`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 ### <a name="billing_address_state"></a>1.3. ![badge](https://img.shields.io/badge/Required-blue) Property `root > billing_address > state`
 
-| Type                      | `string`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `string`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 ### <a name="billing_address_futureProperty"></a>1.4. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > billing_address > futureProperty`
 
-| Type                      | `null`                                                                                                               |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `null`                                                                                                              |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 ## <a name="shipping_address"></a>2. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > shipping_address`
 
-| Type                      | `object`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | `[billing_address](#billing_address)`                                                                                |
-|                           |                                                                                                                      |
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Same definition as**    | `[billing_address](#billing_address)`                                                                               |
+|                           |                                                                                                                     |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on date

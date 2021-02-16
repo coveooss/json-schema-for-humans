@@ -9,10 +9,10 @@
 
 **Title:** Person
 
-| Type                      | `object`                                                                                                                                             |
-| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Should-conform--blue)](#additionalProperties "Each additional property must conform to the following schema") |
-|                           |                                                                                                                                                      |
+| Type                      | `object`                                                                                                                                            |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Should-conform-blue)](#additionalProperties "Each additional property must conform to the following schema") |
+|                           |                                                                                                                                                     |
 
 | Property                                         | Pattern | Type   | Deprecated | Definition | Title/Description                           |
 | ------------------------------------------------ | ------- | ------ | ---------- | ---------- | ------------------------------------------- |
@@ -23,10 +23,10 @@
 
 ## <a name="subType1"></a>1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > subType1`
 
-| Type                      | `object`                                                                                          |
-| ------------------------- | ------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Not+allowed--red)](# "Additional Properties not allowed.") |
-|                           |                                                                                                   |
+| Type                      | `object`                                                                                         |
+| ------------------------- | ------------------------------------------------------------------------------------------------ |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Not+allowed-red)](# "Additional Properties not allowed.") |
+|                           |                                                                                                  |
 
 **Description:** A sub type with additionalProperties false.
 
@@ -37,17 +37,17 @@
 
 ### <a name="subType1_subProp1"></a>1.1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > subType1 > subProp1`
 
-| Type                      | `number`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `number`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 ## <a name="subType2"></a>2. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > subType2`
 
-| Type                      | `object`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 **Description:** A sub type with additionalProperties true.
 
@@ -59,17 +59,17 @@
 
 ### <a name="subType2_subProp2"></a>2.1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > subType2 > subProp2`
 
-| Type                      | `number`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `number`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 ## <a name="additionalProperties"></a>3. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > additionalProperties`
 
-| Type                      | `object`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 **Description:** additionalProperties schema.
 
@@ -80,10 +80,10 @@
 
 ### <a name="additionalProperties_propA"></a>3.1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > additionalProperties > propA`
 
-| Type                      | `number`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `number`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on date

@@ -4,10 +4,10 @@
   - [1.1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > described > name`](#described_name)
   - [1.2. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > described > alignment`](#described_alignment)
 
-| Type                      | `object`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 **Description:** Testing $ref of a remote $ref
 
@@ -18,11 +18,11 @@
 
 ## <a name="described"></a>1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > described`
 
-| Type                      | `object`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/tests/cases/description_from_ref.json       |
-|                           |                                                                                                                      |
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/tests/cases/description_from_ref.json      |
+|                           |                                                                                                                     |
 
 | Property                             | Pattern | Type   | Deprecated | Definition                       | Title/Description |
 | ------------------------------------ | ------- | ------ | ---------- | -------------------------------- | ----------------- |
@@ -32,11 +32,11 @@
 
 ### <a name="described_name"></a>1.1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > described > name`
 
-| Type                      | `string`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/filled_string                                                                                          |
-|                           |                                                                                                                      |
+| Type                      | `string`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/filled_string                                                                                         |
+|                           |                                                                                                                     |
 
 **Description:** a filled string
 
@@ -47,11 +47,11 @@
 
 ### <a name="described_alignment"></a>1.2. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > described > alignment`
 
-| Type                      | `string`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | `[name](#described_name)`                                                                                            |
-|                           |                                                                                                                      |
+| Type                      | `string`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Same definition as**    | `[name](#described_name)`                                                                                           |
+|                           |                                                                                                                     |
 
 **Description:** a filled string
 

@@ -7,10 +7,10 @@
 
 **Title:** User Preference
 
-| Type                      | `object`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 | Property                                               | Pattern | Type                      | Deprecated | Definition | Title/Description |
 | ------------------------------------------------------ | ------- | ------------------------- | ---------- | ---------- | ----------------- |
@@ -21,11 +21,11 @@
 
 ## <a name="favorite_os"></a>1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `User Preference > favorite_os`
 
-| Type                      | `enum (of string)`                                                                                                   |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `"Linux"`                                                                                                            |
-|                           |                                                                                                                      |
+| Type                      | `enum (of string)`                                                                                                  |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `"Linux"`                                                                                                           |
+|                           |                                                                                                                     |
 
 Must be one of:
 * "Windows"
@@ -34,11 +34,11 @@ Must be one of:
 
 ## <a name="favorite_colors"></a>2. ![badge](https://img.shields.io/badge/Optional-yellow) Property `User Preference > favorite_colors`
 
-| Type                      | `array of enum (of string)`                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `["white", "blue"]`                                                                                                  |
-|                           |                                                                                                                      |
+| Type                      | `array of enum (of string)`                                                                                         |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `["white", "blue"]`                                                                                                 |
+|                           |                                                                                                                     |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -56,10 +56,10 @@ Must be one of:
 
 ### <a name="autogenerated_heading_2"></a>2.1. User Preference > favorite_colors > items
 
-| Type                      | `enum (of string)`                                                                                                   |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `enum (of string)`                                                                                                  |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 Must be one of:
 * "green"
@@ -71,11 +71,11 @@ Must be one of:
 
 ## <a name="desired_number_of_shoes"></a>3. ![badge](https://img.shields.io/badge/Optional-yellow) Property `User Preference > desired_number_of_shoes`
 
-| Type                      | `integer`                                                                                                            |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `2`                                                                                                                  |
-|                           |                                                                                                                      |
+| Type                      | `integer`                                                                                                           |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `2`                                                                                                                 |
+|                           |                                                                                                                     |
 
 | Restrictions |        |
 | ------------ | ------ |

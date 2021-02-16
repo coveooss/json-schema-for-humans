@@ -2,10 +2,10 @@
 
 - [1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > firstName`](#firstName)
 
-| Type                      | `object`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 **Description:** Testing $ref with URL
 
@@ -18,7 +18,7 @@
 
 | Type                      | `string`                                                                                                              |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.")  |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.")   |
 | **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/tests/cases/basic.json#/properties/firstName |
 |                           |                                                                                                                       |
 

@@ -5,10 +5,10 @@
 
 **Title:** Circular reference Schema
 
-| Type                      | `object`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                      |
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 | Property             | Pattern | Type   | Deprecated | Definition         | Title/Description |
 | -------------------- | ------- | ------ | ---------- | ------------------ | ----------------- |
@@ -17,11 +17,11 @@
 
 ## <a name="person"></a>1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Circular reference Schema > person`
 
-| Type                      | `object`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/a                                                                                                      |
-|                           |                                                                                                                      |
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/a                                                                                                     |
+|                           |                                                                                                                     |
 
 | Property            | Pattern | Type   | Deprecated | Definition         | Title/Description  |
 | ------------------- | ------- | ------ | ---------- | ------------------ | ------------------ |
@@ -30,12 +30,12 @@
 
 ### <a name="person_a1"></a>1.1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Circular reference Schema > person > a1`
 
-| Type                      | `string`                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type--allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `"Default from c"`                                                                                                   |
-| **Defined in**            | #/definitions/b                                                                                                      |
-|                           |                                                                                                                      |
+| Type                      | `string`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `"Default from c"`                                                                                                  |
+| **Defined in**            | #/definitions/b                                                                                                     |
+|                           |                                                                                                                     |
 
 **Description:** Description from b
 

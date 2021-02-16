@@ -609,7 +609,8 @@ class MdTemplate(object):
         env.filters["md_restrictions_table"] = self.restrictions_table
         env.filters["md_generate_table"] = self.generate_table
         env.filters["md_first_line"] = self.first_line
-
+        
+        env.globals["md_badge"] = self.badge
         env.globals["md_get_toc"] = self.get_toc
 
     def get_numeric_minimum_restriction(self, schema_node: SchemaNode, default: str = "N/A") -> str:
@@ -744,7 +745,7 @@ class MdTemplate(object):
                 valueStr = "-" + quote_plus(value)
             name = quote_plus(name)
             color = quote_plus(color)
-            return f"![badge](https://img.shields.io/badge/{name}-{valueStr}-{color})"
+            return f"![badge](https://img.shields.io/badge/{name}{valueStr}-{color})"
         else:
             if value and len(value) > 0:
                 return f"[{name}: {value}]"
