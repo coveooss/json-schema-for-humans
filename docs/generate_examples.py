@@ -24,7 +24,6 @@ cases_source_dir = os.path.abspath(os.path.join(parent_dir, "tests", "cases"))
 includes_dir = os.path.join(current_dir, "_includes")
 
 # copy json example files
-includes_dir = os.path.join(current_dir, "_includes")
 json_examples_dir = os.path.join(includes_dir, "examples")
 os.makedirs(json_examples_dir, exist_ok=True)
 shutil.copytree(cases_source_dir, json_examples_dir, dirs_exist_ok=True)

@@ -47,10 +47,10 @@ sudo apt install ruby-bundler ruby-dev
 (cd docs && python3 generate_examples.py flat)
 (cd docs && python3 generate_examples.py js)
 (cd tests && python3 generate_expected_md.py)
-mkdir -p docs/assets/examples_md_with_badge
-cp tests/expected_md/with_badge/* docs/assets/examples_md_with_badge
-mkdir -p docs/assets/examples_md_without_badge
-cp -R tests/expected_md/without_badge/* docs/assets/examples_md_without_badge
+mkdir -p docs/_includes/examples_md_with_badge
+cp tests/expected_md/with_badge/* docs/_includes/examples_md_with_badge
+mkdir -p docs/_includes/examples_md_without_badge
+cp -R tests/expected_md/without_badge/* docs/_includes/examples_md_without_badge
 (cd docs && bundle exec jekyll build)
 ```
 
