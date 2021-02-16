@@ -31,23 +31,23 @@ Configuration parameters can be provided in several ways:
 - On the CLI using a config file `--config-file config.json`
 - From code, by providing a GenerationConfiguration object to the called generation method.
 
-| Property                                                       | Pattern | Type             | Deprecated | Definition | Title/Description                                                                        |
-| -------------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ---------------------------------------------------------------------------------------- |
-| - [minify](#minify )                                           | No      | boolean          | No         | -          | Minify the output HTML document.                                                         |
-| - [description_is_markdown](#description_is_markdown )         | No      | boolean          | No         | -          | Whether to consider the description as markdown and render it accordingly                |
-| - [expand_buttons](#expand_buttons )                           | No      | boolean          | No         | -          | Add an \`Expand all\` and a \`Collapse all\` button at the top of the generated docu ... |
-| - [show_breadcrumbs](#show_breadcrumbs )                       | No      | boolean          | No         | -          | For each property, show the relative place of that property in the schema.               |
-| - [collapse_long_descriptions](#collapse_long_descriptions )   | No      | boolean          | No         | -          | If a description is considered big, show only the beginning and add a \`Read more ...    |
-| - [link_to_reused_ref](#link_to_reused_ref )                   | No      | boolean          | No         | -          | If several \`$ref\` points to the same definition, only render the documentation f ...   |
-| - [recursive_detection_depth](#recursive_detection_depth )     | No      | integer          | No         | -          | *Advanced option* ...                                                                    |
-| - [deprecated_from_description](#deprecated_from_description ) | No      | boolean          | No         | -          | Mark a property as deprecated (with a big red badge) if the description contains ...     |
-| - [default_from_description](#default_from_description )       | No      | boolean          | No         | -          | Extract the default value of a property from the description like this: \`\`[Defau ...   |
-| - [copy_css](#copy_css )                                       | No      | boolean          | No         | -          | Copy \`schema_doc.css\` to the same directory as \`RESULT_FILE\` after generation        |
-| - [copy_js](#copy_js )                                         | No      | boolean          | No         | -          | Copy \`schema_doc.min.js\` to the same directory as \`RESULT_FILE\` after generation ... |
-| - [template_name](#template_name )                             | No      | enum (of string) | No         | -          | The HTML templates to use to render the documentation. ...                               |
-| - [markdown_options](#markdown_options )                       | No      | object           | No         | -          | [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for ...     |
-| - [template_md_options](#template_md_options )                 | No      | object           | No         | -          | specific options to md template                                                          |
-|                                                                |         |                  |            |            |                                                                                          |
+| Property                                                       | Pattern | Type             | Deprecated | Definition | Title/Description                                                                    |
+| -------------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ------------------------------------------------------------------------------------ |
+| - [minify](#minify )                                           | No      | boolean          | No         | -          | Minify the output HTML document.                                                     |
+| - [description_is_markdown](#description_is_markdown )         | No      | boolean          | No         | -          | Whether to consider the description as markdown and render it accordingly            |
+| - [expand_buttons](#expand_buttons )                           | No      | boolean          | No         | -          | Add an 'Expand all' and a 'Collapse all' button at the top of the generated docu ... |
+| - [show_breadcrumbs](#show_breadcrumbs )                       | No      | boolean          | No         | -          | For each property, show the relative place of that property in the schema.           |
+| - [collapse_long_descriptions](#collapse_long_descriptions )   | No      | boolean          | No         | -          | If a description is considered big, show only the beginning and add a 'Read more ... |
+| - [link_to_reused_ref](#link_to_reused_ref )                   | No      | boolean          | No         | -          | If several '$ref' points to the same definition, only render the documentation f ... |
+| - [recursive_detection_depth](#recursive_detection_depth )     | No      | integer          | No         | -          | *Advanced option* ...                                                                |
+| - [deprecated_from_description](#deprecated_from_description ) | No      | boolean          | No         | -          | Mark a property as deprecated (with a big red badge) if the description contains ... |
+| - [default_from_description](#default_from_description )       | No      | boolean          | No         | -          | Extract the default value of a property from the description like this: ''[Defau ... |
+| - [copy_css](#copy_css )                                       | No      | boolean          | No         | -          | Copy 'schema_doc.css' to the same directory as 'RESULT_FILE' after generation        |
+| - [copy_js](#copy_js )                                         | No      | boolean          | No         | -          | Copy 'schema_doc.min.js' to the same directory as 'RESULT_FILE' after generation ... |
+| - [template_name](#template_name )                             | No      | enum (of string) | No         | -          | The HTML templates to use to render the documentation. ...                           |
+| - [markdown_options](#markdown_options )                       | No      | object           | No         | -          | [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for ... |
+| - [template_md_options](#template_md_options )                 | No      | object           | No         | -          | specific options to md template                                                      |
+|                                                                |         |                  |            |            |                                                                                      |
 
 ## <a name="minify"></a>1. [Optional] Property `JSON Schema for Humans configuration file > minify`
 
@@ -185,6 +185,7 @@ This file contains the logic for the anchor links
 Must be one of:
 * "flat"
 * "js"
+* "md"
 
 ## <a name="markdown_options"></a>13. [Optional] Property `JSON Schema for Humans configuration file > markdown_options`
 
@@ -239,4 +240,4 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
  if false, use text instead
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-15 at 23:32:21 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-16 at 20:11:33 +0100
