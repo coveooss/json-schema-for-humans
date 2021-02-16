@@ -24,7 +24,8 @@ cases_source_dir = os.path.abspath(os.path.join(parent_dir, "tests", "cases"))
 includes_dir = os.path.join(current_dir, "_includes")
 
 # copy json example files
-json_examples_dir = os.path.join(current_dir, "_includes", "examples")
+includes_dir = os.path.join(current_dir, "_includes")
+json_examples_dir = os.path.join(includes_dir, "examples")
 os.makedirs(json_examples_dir, exist_ok=True)
 shutil.copytree(cases_source_dir, json_examples_dir, dirs_exist_ok=True)
 
@@ -39,8 +40,12 @@ shutil.copyfile(readme_location, os.path.join(includes_dir, readme))
 config_schema = "config_schema.json"
 config_schema_location = os.path.abspath(os.path.join(parent_dir, config_schema))
 generate_from_filename(config_schema_location, os.path.join(asserts_dir, "config_schema.html"), expand_buttons=True)
-configMd = GenerationConfiguration(deprecated_from_description=True, template_name="md")
-generate_from_filename(config_schema_location, os.path.join(asserts_dir, "config_schema.md"), config=configMd)
+
+config_schema_md = "config_schema.md"
+config_md = GenerationConfiguration(deprecated_from_description=True, template_name="md")
+config_md_location = os.path.join(asserts_dir, config_schema_md)
+generate_from_filename(config_schema_location, config_md_location, config=config_md)
+shutil.copyfile(config_md_location, os.path.join(includes_dir, config_schema_md))
 
 config = GenerationConfiguration(
     deprecated_from_description=True, 
