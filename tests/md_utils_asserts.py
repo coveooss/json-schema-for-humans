@@ -16,17 +16,17 @@ class MdUtilsAsserts:
 
     def get_expected_case(self, test_case: str, case_name: str) -> str:
         """Get the content of expected_md/test_case/case_name.md - containing expected result"""
-        with open(self.get_expected_test_case_path(os.path.join(test_case, case_name)), "r") as f:
+        with open(self.get_expected_test_case_path(os.path.join(test_case, case_name)), "r", encoding="utf-8") as f:
             content = f.read()
 
         return content
 
     def assert_case_equals(self, test_case: str, case_name: str, config: GenerationConfiguration = None) -> None:
         content = self.generate_case(case_name, config)
-        expectedContent = self.get_expected_case(test_case, case_name)
+        expected_content = self.get_expected_case(test_case, case_name)
 
         # remove generation date on both contents
         regexp = r"^(Generated using \[json-schema-for-humans\]\(https:[^)]+\) on) (.+)$"
         content = re.sub(regexp, r"\1 date", content, flags=re.MULTILINE)
 
-        assert expectedContent == content
+        assert expected_content == content
