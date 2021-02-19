@@ -14,7 +14,7 @@ Just run tox
 ## With pytest directly
 `python -m pytest tests`
 
-(Or `python3 -m pytest tests` if you still have Python 2 laying around)
+(Or `python3 -m pytest tests` if you still have Python 2 (e.g.: Ubuntu))
 
 # Adding a new template
 
@@ -37,8 +37,18 @@ It is recommended to run black [from your IDE](https://github.com/psf/black/blob
 `schema_doc.js` is not minified automatically, you are responsible for doing it yourself
 
 ## Generating doc
-The documentation is generated using jekyll and hosted on GitHub Pages
+The documentation is generated using Jekyll and hosted on GitHub Pages
 
+### Adding examples
+
+- Change your current working directory to `docs`
+- Run ``python generate_examples.py``. This will get all examples from `tests/cases`, render the resulting HTML and
+ include it in the appropriate folders in the jekyll site.
+- If you have added an example, add the file name (without `.json`), the display name and description in `_data/examples.yaml`
+
+### Generating locally
+
+#### Linux
 Execute following script from root dir of the repository
 ```bash
 sudo apt update
@@ -54,7 +64,6 @@ cp -R tests/expected_md/without_badge/* docs/_includes/examples_md_without_badge
 (cd docs && bundle exec jekyll build)
 ```
 
-- Change your current working directory to `docs`
-- Run ``python generate_examples.py``. This will get all examples from `tests/cases`, render the resulting HTML and
- include it in the appropriate folders in the jekyll site.
-- If you have added an example, add the file name (without `.json`), the display name and description in `_data/examples.yaml`
+####  Windows
+
+See https://docs.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll

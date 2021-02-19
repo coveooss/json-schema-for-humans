@@ -4,14 +4,14 @@ import os
 import shutil
 import sys
 
-templateName="js"
-templateExtension="html"
-if len( sys.argv ) >= 2:
+template_name = "js"
+template_extension = "html"
+if len(sys.argv) >= 2:
     print(sys.argv)
-    templateName=sys.argv[1]
+    template_name = sys.argv[1]
 
-if templateName == 'md':
-    print("please use tests/generate_expected_md.py instead")
+if template_name == "md":
+    print("Please use tests/generate_expected_md.py instead")
     sys.exit()
 
 current_dir = os.path.abspath(os.path.dirname(__file__))
@@ -29,7 +29,7 @@ os.makedirs(json_examples_dir, exist_ok=True)
 shutil.copytree(cases_source_dir, json_examples_dir, dirs_exist_ok=True)
 
 asserts_dir = os.path.join(current_dir, "assets")
-results_example_dir = os.path.join(asserts_dir, f"examples_{templateName}")
+results_example_dir = os.path.join(asserts_dir, f"examples_{template_name}")
 os.makedirs(results_example_dir, exist_ok=True)
 
 readme = "README.md"
@@ -46,11 +46,7 @@ config_md_location = os.path.join(asserts_dir, config_schema_md)
 generate_from_filename(config_schema_location, config_md_location, config=config_md)
 shutil.copyfile(config_md_location, os.path.join(includes_dir, config_schema_md))
 
-config = GenerationConfiguration(
-    deprecated_from_description=True, 
-    expand_buttons=True, 
-    template_name=templateName
-)
+config = GenerationConfiguration(deprecated_from_description=True, expand_buttons=True, template_name=template_name)
 
 for case_name in os.listdir(cases_source_dir):
     name, ext = os.path.splitext(case_name)
@@ -59,4 +55,6 @@ for case_name in os.listdir(cases_source_dir):
         continue
 
     print(f"Generating example {name}")
-    generate_from_filename(case_source, os.path.join(results_example_dir, f"{name}.{templateExtension}"), config=config)
+    generate_from_filename(
+        case_source, os.path.join(results_example_dir, f"{name}.{template_extension}"), config=config
+    )
