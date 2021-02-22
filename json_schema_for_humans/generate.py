@@ -104,8 +104,7 @@ class GenerationConfiguration:
     copy_js: bool = True
     link_to_reused_ref: bool = True
     recursive_detection_depth: int = 25
-    template_base: str = os.path.dirname(__file__)
-    template_folder: str = "templates"
+    template_folder: str = os.path.join(os.path.dirname(__file__), "templates")
     template_name: str = "js"
     # markdown2 extra parameters can be added here: https://github.com/trentm/python-markdown2/wiki/Extras
     markdown_options: Any = field(
@@ -1257,7 +1256,7 @@ def generate_from_schema(
         link_to_reused_ref=link_to_reused_ref,
     )
 
-    template_folder = os.path.join(config.template_base, config.template_folder, config.template_name)
+    template_folder = os.path.join(config.template_folder, config.template_name)
     base_template_path = os.path.join(template_folder, TEMPLATE_FILE_NAME)
 
     md = markdown2.Markdown(extras=config.markdown_options)
@@ -1385,7 +1384,7 @@ def copy_css_and_js_to_target(result_file_path: str, config: GenerationConfigura
         return
 
     target_directory = os.path.dirname(result_file_path)
-    source_directory = os.path.join(config.template_base, config.template_folder, config.template_name)
+    source_directory = os.path.join(config.template_folder, config.template_name)
     if target_directory == source_directory:
         return
 

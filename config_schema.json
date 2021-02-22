@@ -59,15 +59,9 @@
       "default": true,
       "description": "Copy `schema_doc.min.js` to the same directory as `RESULT_FILE` after generation.\n\nThis file contains the logic for the anchor links."
     },
-    "template_base": {
-      "type": "string",
-      "default": "js",
-      "description": "The file system path to where the folder of templates, given using the `template_folder` option, is available."
-    },
     "template_folder": {
       "type": "string",
-      "default": "templates",
-      "description": "The name of the folder in which templates are managed, with a default of 'templates'."
+      "description": "The file system path to the folder of templates, with a default of the `templates` folder within the module."
     },    
     "template_name": {
       "type": "string",
