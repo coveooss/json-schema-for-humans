@@ -12,12 +12,12 @@
     "description_is_markdown": {
       "type": "boolean",
       "default": true,
-      "description": "Whether to consider the description as markdown and render it accordingly"
+      "description": "Whether to consider the description as markdown and render it accordingly."
     },
     "expand_buttons": {
       "type": "boolean",
       "default": false,
-      "description": "Add an `Expand all` and a `Collapse all` button at the top of the generated documentation"
+      "description": "Add an `Expand all` and a `Collapse all` button at the top of the generated documentation."
     },
     "show_breadcrumbs": {
       "type": "boolean",
@@ -42,28 +42,32 @@
     "deprecated_from_description": {
       "type": "boolean",
       "default": false,
-      "description": "Mark a property as deprecated (with a big red badge) if the description contains the string `[Deprecated`"
+      "description": "Mark a property as deprecated (with a big red badge) if the description contains the string `[Deprecated`."
     },
     "default_from_description" : {
       "type": "boolean",
       "default": false,
-      "description": "Extract the default value of a property from the description like this: ``[Default `the_default_value`]``.\n\nThe default value from the \"default\" attribute will be used in priority"
+      "description": "Extract the default value of a property from the description like this: ``[Default `the_default_value`]``.\n\nThe default value from the \"default\" attribute will be used in priority."
     },
     "copy_css": {
       "type": "boolean",
       "default": true,
-      "description": "Copy `schema_doc.css` to the same directory as `RESULT_FILE` after generation"
+      "description": "Copy `schema_doc.css` to the same directory as `RESULT_FILE` after generation."
     },
     "copy_js": {
       "type": "boolean",
       "default": true,
-      "description": "Copy `schema_doc.min.js` to the same directory as `RESULT_FILE` after generation.\n\nThis file contains the logic for the anchor links"
+      "description": "Copy `schema_doc.min.js` to the same directory as `RESULT_FILE` after generation.\n\nThis file contains the logic for the anchor links."
     },
+    "template_folder": {
+      "type": "string",
+      "description": "The file system path to the folder of templates, with a default of the `templates` folder within the module."
+    },    
     "template_name": {
       "type": "string",
       "enum": ["flat", "js"],
       "default": "js",
-      "description": "The HTML templates to use to render the documentation.\n\n`js` is the default one, it uses javascript for anchor links, collapsible sections and tabs. `flat` uses no javascript, but has no interactivity."
+      "description": "The name of the set of HTML templates to use to render the documentation.\n\n`js` is the default and uses javascript for anchor links, collapsible sections and tabs. `flat` uses no javascript, but has no interactivity."
     },
     "markdown_options": {
       "type": "object",
