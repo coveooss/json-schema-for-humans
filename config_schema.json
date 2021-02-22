@@ -59,15 +59,15 @@
       "default": true,
       "description": "Copy `schema_doc.min.js` to the same directory as `RESULT_FILE` after generation.\n\nThis file contains the logic for the anchor links."
     },
-    "template_folder": {
+    "templates_directory": {
       "type": "string",
-      "description": "The file system path to the folder of templates, with a default of the `templates` folder within the module."
+      "description": "The file system path to the directory containing templates, with a default of the `templates` directory within the library source code."
     },    
     "template_name": {
       "type": "string",
       "enum": ["flat", "js"],
       "default": "js",
-      "description": "The name of the set of HTML templates to use to render the documentation.\n\n`js` is the default and uses javascript for anchor links, collapsible sections and tabs. `flat` uses no javascript, but has no interactivity."
+      "description": "The name of the set of templates to use to render the documentation.\n\n`js` is the default and uses javascript for anchor links, collapsible sections and tabs. `flat` uses no javascript, but has no interactivity."
     },
     "markdown_options": {
       "type": "object",
