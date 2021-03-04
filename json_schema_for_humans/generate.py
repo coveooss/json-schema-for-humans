@@ -26,7 +26,6 @@ from pygments.formatters.html import HtmlFormatter
 from pygments.lexers.javascript import JavascriptLexer
 from pytz import reference
 
-TEMPLATE_FOLDER = "templates"
 TEMPLATE_FILE_NAME = "base.html"
 CSS_FILE_NAME = "schema_doc.css"
 JS_FILE_NAME = "schema_doc.min.js"
@@ -105,6 +104,7 @@ class GenerationConfiguration:
     copy_js: bool = True
     link_to_reused_ref: bool = True
     recursive_detection_depth: int = 25
+    templates_directory: str = os.path.join(os.path.dirname(__file__), "templates")
     template_name: str = "js"
     # markdown2 extra parameters can be added here: https://github.com/trentm/python-markdown2/wiki/Extras
     markdown_options: Any = None
@@ -1709,11 +1709,11 @@ def generate_from_schema(
         link_to_reused_ref=link_to_reused_ref,
     )
 
-    template_folder = os.path.join(os.path.dirname(__file__), TEMPLATE_FOLDER, config.template_name)
-    base_template_path = os.path.join(template_folder, TEMPLATE_FILE_NAME)
+    templates_directory = os.path.join(config.templates_directory, config.template_name)
+    base_template_path = os.path.join(templates_directory, TEMPLATE_FILE_NAME)
 
     md = markdown2.Markdown(extras=config.markdown_options)
-    loader = FileSystemLoader(template_folder)
+    loader = FileSystemLoader(templates_directory)
     env = jinja2.Environment(
         loader=loader,
         extensions=[loopcontrols],
@@ -1854,7 +1854,7 @@ def copy_css_and_js_to_target(result_file_path: str, config: GenerationConfigura
         return
 
     target_directory = os.path.dirname(result_file_path)
-    source_directory = os.path.join(os.path.dirname(__file__), TEMPLATE_FOLDER, config.template_name)
+    source_directory = os.path.join(config.templates_directory, config.template_name)
     if target_directory == source_directory:
         return
 
