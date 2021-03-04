@@ -107,14 +107,21 @@ class GenerationConfiguration:
     recursive_detection_depth: int = 25
     template_name: str = "js"
     # markdown2 extra parameters can be added here: https://github.com/trentm/python-markdown2/wiki/Extras
-    markdown_options: Any = field(
-        default_factory=lambda: {
+    markdown_options: Any = None
+    template_md_options: Any = None
+
+    def __post_init__(self) -> None:
+        default_markdown_options = {
             "break-on-newline": True,
             "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
             "tables": None,
         }
-    )
-    template_md_options: Dict[str, Any] = field(default_factory=lambda: {"badge_as_image": False})
+        default_markdown_options.update(self.markdown_options or {})
+        self.markdown_options = default_markdown_options
+
+        default_template_md_options = {"badge_as_image": False}
+        default_template_md_options.update(self.template_md_options or {})
+        self.template_md_options = default_template_md_options
 
 
 class SchemaNode:
