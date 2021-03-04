@@ -11,10 +11,11 @@
 - [9. [Optional] Property `JSON Schema for Humans configuration file > default_from_description`](#default_from_description)
 - [10. [Optional] Property `JSON Schema for Humans configuration file > copy_css`](#copy_css)
 - [11. [Optional] Property `JSON Schema for Humans configuration file > copy_js`](#copy_js)
-- [12. [Optional] Property `JSON Schema for Humans configuration file > template_name`](#template_name)
-- [13. [Optional] Property `JSON Schema for Humans configuration file > markdown_options`](#markdown_options)
-- [14. [Optional] Property `JSON Schema for Humans configuration file > template_md_options`](#template_md_options)
-  - [14.1. [Optional] Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`](#template_md_options_badge_as_image)
+- [12. [Optional] Property `JSON Schema for Humans configuration file > templates_directory`](#templates_directory)
+- [13. [Optional] Property `JSON Schema for Humans configuration file > template_name`](#template_name)
+- [14. [Optional] Property `JSON Schema for Humans configuration file > markdown_options`](#markdown_options)
+- [15. [Optional] Property `JSON Schema for Humans configuration file > template_md_options`](#template_md_options)
+  - [15.1. [Optional] Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`](#template_md_options_badge_as_image)
 
 **Title:** JSON Schema for Humans configuration file
 
@@ -34,7 +35,7 @@ Configuration parameters can be provided in several ways:
 | Property                                                       | Pattern | Type             | Deprecated | Definition | Title/Description                                                                    |
 | -------------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ------------------------------------------------------------------------------------ |
 | - [minify](#minify )                                           | No      | boolean          | No         | -          | Minify the output HTML document.                                                     |
-| - [description_is_markdown](#description_is_markdown )         | No      | boolean          | No         | -          | Whether to consider the description as markdown and render it accordingly            |
+| - [description_is_markdown](#description_is_markdown )         | No      | boolean          | No         | -          | Whether to consider the description as markdown and render it accordingly.           |
 | - [expand_buttons](#expand_buttons )                           | No      | boolean          | No         | -          | Add an 'Expand all' and a 'Collapse all' button at the top of the generated docu ... |
 | - [show_breadcrumbs](#show_breadcrumbs )                       | No      | boolean          | No         | -          | For each property, show the relative place of that property in the schema.           |
 | - [collapse_long_descriptions](#collapse_long_descriptions )   | No      | boolean          | No         | -          | If a description is considered big, show only the beginning and add a 'Read more ... |
@@ -42,9 +43,10 @@ Configuration parameters can be provided in several ways:
 | - [recursive_detection_depth](#recursive_detection_depth )     | No      | integer          | No         | -          | *Advanced option* ...                                                                |
 | - [deprecated_from_description](#deprecated_from_description ) | No      | boolean          | No         | -          | Mark a property as deprecated (with a big red badge) if the description contains ... |
 | - [default_from_description](#default_from_description )       | No      | boolean          | No         | -          | Extract the default value of a property from the description like this: ''[Defau ... |
-| - [copy_css](#copy_css )                                       | No      | boolean          | No         | -          | Copy 'schema_doc.css' to the same directory as 'RESULT_FILE' after generation        |
+| - [copy_css](#copy_css )                                       | No      | boolean          | No         | -          | Copy 'schema_doc.css' to the same directory as 'RESULT_FILE' after generation.       |
 | - [copy_js](#copy_js )                                         | No      | boolean          | No         | -          | Copy 'schema_doc.min.js' to the same directory as 'RESULT_FILE' after generation ... |
-| - [template_name](#template_name )                             | No      | enum (of string) | No         | -          | The HTML templates to use to render the documentation. ...                           |
+| - [templates_directory](#templates_directory )                 | No      | string           | No         | -          | The file system path to the directory containing templates, with a default of th ... |
+| - [template_name](#template_name )                             | No      | enum (of string) | No         | -          | The name of the set of templates to use to render the documentation. ...             |
 | - [markdown_options](#markdown_options )                       | No      | object           | No         | -          | [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for ... |
 | - [template_md_options](#template_md_options )                 | No      | object           | No         | -          | specific options to md template                                                      |
 |                                                                |         |                  |            |            |                                                                                      |
@@ -67,7 +69,7 @@ Configuration parameters can be provided in several ways:
 | **Default**               | `true`                                                                    |
 |                           |                                                                           |
 
-**Description:** Whether to consider the description as markdown and render it accordingly
+**Description:** Whether to consider the description as markdown and render it accordingly.
 
 ## <a name="expand_buttons"></a>3. [Optional] Property `JSON Schema for Humans configuration file > expand_buttons`
 
@@ -77,7 +79,7 @@ Configuration parameters can be provided in several ways:
 | **Default**               | `false`                                                                   |
 |                           |                                                                           |
 
-**Description:** Add an `Expand all` and a `Collapse all` button at the top of the generated documentation
+**Description:** Add an `Expand all` and a `Collapse all` button at the top of the generated documentation.
 
 ## <a name="show_breadcrumbs"></a>4. [Optional] Property `JSON Schema for Humans configuration file > show_breadcrumbs`
 
@@ -134,7 +136,7 @@ In other words, if a schema has a deeply nested element that refers to itself, t
 | **Default**               | `false`                                                                   |
 |                           |                                                                           |
 
-**Description:** Mark a property as deprecated (with a big red badge) if the description contains the string `[Deprecated`
+**Description:** Mark a property as deprecated (with a big red badge) if the description contains the string `[Deprecated`.
 
 ## <a name="default_from_description"></a>9. [Optional] Property `JSON Schema for Humans configuration file > default_from_description`
 
@@ -146,7 +148,7 @@ In other words, if a schema has a deeply nested element that refers to itself, t
 
 **Description:** Extract the default value of a property from the description like this: ``[Default `the_default_value`]``.
 
-The default value from the "default" attribute will be used in priority
+The default value from the "default" attribute will be used in priority.
 
 ## <a name="copy_css"></a>10. [Optional] Property `JSON Schema for Humans configuration file > copy_css`
 
@@ -156,7 +158,7 @@ The default value from the "default" attribute will be used in priority
 | **Default**               | `true`                                                                    |
 |                           |                                                                           |
 
-**Description:** Copy `schema_doc.css` to the same directory as `RESULT_FILE` after generation
+**Description:** Copy `schema_doc.css` to the same directory as `RESULT_FILE` after generation.
 
 ## <a name="copy_js"></a>11. [Optional] Property `JSON Schema for Humans configuration file > copy_js`
 
@@ -168,9 +170,18 @@ The default value from the "default" attribute will be used in priority
 
 **Description:** Copy `schema_doc.min.js` to the same directory as `RESULT_FILE` after generation.
 
-This file contains the logic for the anchor links
+This file contains the logic for the anchor links.
 
-## <a name="template_name"></a>12. [Optional] Property `JSON Schema for Humans configuration file > template_name`
+## <a name="templates_directory"></a>12. [Optional] Property `JSON Schema for Humans configuration file > templates_directory`
+
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
+
+**Description:** The file system path to the directory containing templates, with a default of the `templates` directory within the library source code.
+
+## <a name="template_name"></a>13. [Optional] Property `JSON Schema for Humans configuration file > template_name`
 
 | Type                      | `enum (of string)`                                                        |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -178,16 +189,16 @@ This file contains the logic for the anchor links
 | **Default**               | `"js"`                                                                    |
 |                           |                                                                           |
 
-**Description:** The HTML templates to use to render the documentation.
+**Description:** The name of the set of templates to use to render the documentation.
 
-`js` is the default one, it uses javascript for anchor links, collapsible sections and tabs. `flat` uses no javascript, but has no interactivity.
+`js` is the default and uses javascript for anchor links, collapsible sections and tabs. `flat` uses no javascript, but has no interactivity.
 
 Must be one of:
 * "flat"
 * "js"
 * "md"
 
-## <a name="markdown_options"></a>13. [Optional] Property `JSON Schema for Humans configuration file > markdown_options`
+## <a name="markdown_options"></a>14. [Optional] Property `JSON Schema for Humans configuration file > markdown_options`
 
 | Type                      | `object`                                                                                                                |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -213,7 +224,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 }
 ```
 
-## <a name="template_md_options"></a>14. [Optional] Property `JSON Schema for Humans configuration file > template_md_options`
+## <a name="template_md_options"></a>15. [Optional] Property `JSON Schema for Humans configuration file > template_md_options`
 
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -227,7 +238,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 | - [badge_as_image](#template_md_options_badge_as_image ) | No      | boolean | No         | -          | if true generate badges(eg: optional, required) using embedded image (https://im ... |
 |                                                          |         |         |            |            |                                                                                      |
 
-### <a name="template_md_options_badge_as_image"></a>14.1. [Optional] Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`
+### <a name="template_md_options_badge_as_image"></a>15.1. [Optional] Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`
 
 | Type                      | `boolean`                                                                 |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -240,4 +251,4 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
  if false, use text instead
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-02-16 at 20:11:33 +0100
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2021-03-04 at 23:34:28 +0100
