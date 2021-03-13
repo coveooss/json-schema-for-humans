@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "properties": {
+    "outer": {
+      "$ref": "#/definitions/inner schema",
+      "description": "We should see this"
+    },
+    "outer2": {
+      "$ref": "#/definitions/inner schema",
+      "description": "We should see this too"
+    }
+  },
+  "required": [
+    "outer"
+  ],
+  "additionalProperties": false,
+  "$id": "my-id",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "inner schema": {
+      "type": "object",
+      "properties": {
+        "inner": {
+          "description": "inner description",
+          "type": "string"
+        }
+      },
+      "required": [
+        "inner"
+      ],
+      "additionalProperties": false,
+      "description": "We should not see this"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$id": "https://example.com/person.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Personne",
+  "type": "object",
+  "properties": {
+    "prénom": {
+      "type": "string",
+      "description": "Le prénom de la personne."
+    },
+    "nomDeFamille": {
+      "type": "string",
+      "description": "Le nom de famille de la personne."
+    },
+    "âge": {
+      "description": "L'âge en années qui doit être plus grand ou égal à 0.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "0 de quoi d'autre": {
+      "type": "string",
+      "examples": ["🖖", "صباح الخير", "你好"]
+    }
+  }
+}

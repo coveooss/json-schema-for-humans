@@ -138,5 +138,5 @@ AUTHORS
 # Generated docs site
 docs/_site/**
 docs/_includes/README.md
-docs/_includes/**
-docs/assets/examples_*/**
+docs/assets/examples_/**
+!docs/assets/examples_md_*/**

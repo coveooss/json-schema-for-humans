@@ -1,0 +1,76 @@
+{
+  "$id": "https://example.com/arrays.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Testing $ref",
+  "type": "object",
+  "definitions": {
+    "object_def": {
+      "type": "object",
+      "properties": {
+        "propertyA": {
+          "type": "string",
+          "description": "Description for object_def/items/propertyA"
+        }
+      },
+      "additionalProperties": false
+    },
+    "array_def": {
+      "type": "array",
+      "description": "Description for array_def",
+      "items": {
+        "type": "string"
+      },
+      "additionalItems": false,
+      "uniqueItems": false
+    },
+    "string_def": {
+      "type": "string",
+      "description": "Description for string_def"
+    },
+    "reference_def": {
+      "$ref": "#/definitions/array_def/items"
+    },
+    "gift": {
+      "type": "string",
+      "description": "A gift, or is it?"
+    }
+  },
+  "properties": {
+    "a_gift": {
+      "$ref": "#/definitions/gift"
+    },
+    "anchor_with_slash": {
+      "$ref": "#/definitions/object_def"
+    },
+    "anchor_no_slash": {
+      "$ref": "#definitions/array_def"
+    },
+    "anchor_nested_reference": {
+      "$ref": "#/definitions/reference_def"
+    },
+    "same_file_anchor_with_slash": {
+      "$ref": "references.json#/definitions/string_def"
+    },
+    "same_file_anchor_no_slash": {
+      "$ref": "references.json#definitions/object_def"
+    },
+    "same_file_nested_reference": {
+      "$ref": "references.json#/definitions/reference_def"
+    },
+    "other_file_anchor": {
+      "$ref": "with_descriptions.json#/definitions/gift"
+    },
+    "other_file_dot_anchor": {
+      "$ref": "./with_descriptions.json#/definitions/gift"
+    },
+    "other_file_dot_dot_anchor": {
+      "$ref": "../cases/with_descriptions.json#/definitions/gift"
+    },
+    "other_file_only": {
+      "$ref": "combining_not.json"
+    },
+    "multi_hierarchy_reference": {
+      "$ref": "reference_schemas/intermediate.json#/properties/cross_file_reference"
+    }
+  }
+}

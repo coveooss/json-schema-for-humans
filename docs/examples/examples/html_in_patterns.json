@@ -1,0 +1,9 @@
+{
+  "type": "string",
+  "pattern": "^(<<variable:([-+/*0-9A-Za-z_]+)>>|<<auto>>)$",
+  "patternProperties": {
+    "$[a-c][0-9]^<a>": {
+      "type": "string"
+    }
+  }
+}

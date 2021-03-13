@@ -1,0 +1,18 @@
+{
+    "$id": "https://example.com/arrays.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "Testing $ref",
+    "type": "object",
+    "definitions": {
+      "final_object_content": {
+        "type": "object",
+        "properties": {
+          "propertyA": {
+            "type": "string",
+            "description": "Contents of propertyA in final.json"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }

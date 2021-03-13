@@ -1,0 +1,12 @@
+{
+  "$id": "http://example.com/combining-not",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Test schema with a not",
+  "type": "object",
+  "required": [ "not_a_string" ],
+  "properties": {
+    "not_a_string": {
+      "not": { "type": "string" }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css" title="Simple">
+  <link rel="stylesheet" href="assets/css/docsify.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      // GENERAL
+      // -----------------------------------------------------------------
+      name       : 'jsonschema-for-humans',
+      //repo       : 'https://github.com/fchastanet/test-jekyll',
+      homepage   : 'README.md',
+      loadSidebar: true,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      mergeNavbar: true,
+
+      // NAVIGATION
+      // -----------------------------------------------------------------
+      auto2top   : true,
+      maxLevel   : 3,
+      subMaxLevel: 3,
+
+      // PLUGINS
+      // -----------------------------------------------------------------
+      executeScript: true,
+      ga    : 'TODO',
+      search: {
+          depth      : 3,
+          noData     : 'No results!',
+          placeholder: 'Search...'
+      },
+      select: {
+        examples: {
+          enabled: false,
+          menuId: "examples"
+        },
+        sync: false,
+        theme: "classic"
+      },
+      tabs: {
+          // persist    : false,
+          // sync       : false,
+          // theme      : 'material',
+          // tabComments: false,
+          // tabHeadings: false
+      }
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+  <!-- docsify-select (latest v1.x.x) -->
+<script src="https://cdn.jsdelivr.net/npm/docsify-select@1"></script>
+</body>
+</html>

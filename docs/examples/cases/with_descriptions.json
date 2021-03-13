@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Delivery Schema",
+    "definitions": {
+      "address": {
+        "type": "object",
+        "description": "Exact address",
+        "properties": {
+          "street_address": { "type": "string" },
+          "city":           { "type": "string" },
+          "state":          { "type": "string" }
+        },
+        "required": ["street_address", "city", "state"]
+      },
+      "delivery_info": {
+        "type": "object",
+        "description": "Delivery info depending on the delivery type",
+        "oneOf": [
+          { "$ref": "#/definitions/classic" },
+          { "$ref": "#/definitions/gift" }
+        ]
+      },
+      "classic": {
+        "type": "object",
+        "properties": {
+          "price": { "type": "number" }
+        }
+      },
+      "gift": {
+        "type": "object",
+        "description": "The delivery is a gift, no prices displayed",
+        "properties": {
+          "with_wrap": { "type": "boolean" }
+        }
+      }
+    },
+  
+    "type": "object",
+  
+    "properties": {
+      "shipping_address": { "$ref": "#/definitions/address" },
+      "billing_address": { "$ref": "#/definitions/address" },
+      "delivery_info": { "$ref": "#/definitions/delivery_info" }
+    }
+  }
