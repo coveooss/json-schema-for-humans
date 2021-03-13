@@ -55,3 +55,27 @@ def test_override_markdown_options() -> None:
         "tables": None,
         "newKey": "test",
     }
+
+
+def test_override_template_md_options() -> None:
+    """Test init GenerationConfiguration with default values"""
+
+    # add new new_property key
+    config = GenerationConfiguration(
+        template_md_options={
+            "new_property": True,
+        }
+    )
+    assert config.template_md_options == {"new_property": True, "badge_as_image": False}
+
+    # override badge_as_image key
+    config = GenerationConfiguration(
+        deprecated_from_description=True, template_name="md", template_md_options={"badge_as_image": "test"}
+    )
+    assert config.template_md_options == {"badge_as_image": "test"}
+
+    # override badge_as_image key
+    config = GenerationConfiguration(
+        deprecated_from_description=True, template_name="md", template_md_options={"badge_as_image": True}
+    )
+    assert config.template_md_options == {"badge_as_image": True}
