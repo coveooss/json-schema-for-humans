@@ -1,5 +1,6 @@
 * [Home](/)
-* [Configuration](docs/Configuration.md)
+* [Configuration js format](docs/examples/examples_flat_default/Configuration.html)
+* [Configuration markdown format](docs/examples/examples_md_default/Configuration.md)
 * [Examples](docs/Examples.md)
 * [Contributing](CONTRIBUTING.md)
 * [LICENSE](/LICENSE.md)

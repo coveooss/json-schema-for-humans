@@ -5,6 +5,9 @@ from bs4 import BeautifulSoup
 
 from json_schema_for_humans.generate import generate_from_schema, GenerationConfiguration
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+
 
 def assert_css_and_js_not_copied(path: Path) -> None:
     """Assert that the standard CCS and JS files were not copied over"""
@@ -24,7 +27,7 @@ def assert_css_and_js_copied(
 
 def get_test_case_path(name: str) -> str:
     """Get the loaded JSON schema for a test case"""
-    return os.path.realpath(os.path.join(os.path.dirname(__file__), "cases", f"{name}.json"))
+    return os.path.realpath(os.path.join(parent_dir, "docs", "examples", "cases", f"{name}.json"))
 
 
 def generate_case(case_name: str, config: GenerationConfiguration = None) -> BeautifulSoup:

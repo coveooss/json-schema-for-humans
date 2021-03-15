@@ -1,0 +1,44 @@
+basic:
+  display_name: Basic schema
+  description: A very simple example
+multiple_types:
+  display_name: Multiple Types
+  description: This one has several options for the type
+geo:
+  display_name: Geographical coordinates
+  description: Introduces numerical values that have restrictions
+array:
+  display_name: Array of schemas
+  description: Introduces arrays
+array_advanced:
+  display_name: Array with more restrictions
+  description: Introduces *minItems*, *maxItems*, and *uniqueItems*
+with_definitions:
+  display_name: Using definitions
+  description: The schema use references to inline definitions to decrease its size
+combining_oneOf:
+  display_name: Using *oneOf*
+  description: Each option is shown in a tab
+combining_not:
+  display_name: Using *not*
+  description: ''
+with_default:
+  display_name: With default value
+  description: ''
+deprecated:
+  display_name: Deprecation notice
+  description: |
+    When using `--deprecated-from-description`, a deprecation notice is added if `[Deprecated` is found in
+    the description of an attribute
+references:
+  display_name: With references
+  description: ''
+pattern_properties:
+  display_name: Using pattern properties
+  description: The schema permits property names matching a regex, using the pattern properties tag
+with_examples:
+  display_name: With examples
+  description: Display examples. Longer examples are collapsed by default.
+additional_properties:
+  display_name: Additional Properties
+  description: A schema using additionalProperties true, false and a complex type.

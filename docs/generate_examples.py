@@ -2,13 +2,12 @@
 import os
 import sys
 import re
+import yaml
 
 # init directories
 current_dir = os.path.abspath(os.path.dirname(__file__))
 parent_dir = os.path.abspath(os.path.dirname(current_dir))
 sys.path.insert(0, parent_dir)
-
-from pprint import pprint
 
 from json_schema_for_humans.generate import GenerationConfiguration, generate_from_filename
 
@@ -26,33 +25,70 @@ config_md = GenerationConfiguration(
     deprecated_from_description=True
 )
 
-configurations = {
-    "js": {
-        "default": GenerationConfiguration(
+MD_EXAMPLE_JS_TEMPLATE = """
+
+<details>
+<summary>{title}</summary>
+
+[{file_url}]({file_url} ':include :type=iframe width=100% height=400px')
+</details>
+"""
+MD_EXAMPLE_MD_TEMPLATE = """
+
+<details>
+<summary>{title}</summary>
+
+[{file_url}]({file_url} ':include')
+</details>
+"""
+
+configurations = [
+    {
+        "title": "Js template",
+        "dir_name": "examples_js_default",
+        "config": GenerationConfiguration(
+            minify = False,
             template_name = 'js',
             deprecated_from_description=True, 
             expand_buttons = True
         ),
+        "md_example_template": MD_EXAMPLE_JS_TEMPLATE,
     },
-    "flat": {
-        "default": GenerationConfiguration(
+    {
+        "title": "Flat template",
+        "dir_name": "examples_flat_default",
+        "config": GenerationConfiguration(
+            minify = False,
             template_name = 'flat',
             deprecated_from_description=True, 
             expand_buttons = True
         ),
+        "md_example_template": MD_EXAMPLE_JS_TEMPLATE,
     },
-    "md": {
-        "default": GenerationConfiguration(
+    {
+        "title": "Mardown without badge template",
+        "dir_name": "examples_md_default",
+        "config": GenerationConfiguration(
             template_name = "md", 
             deprecated_from_description=True
         ),
-        "with_badges": GenerationConfiguration(
+        "md_example_template": MD_EXAMPLE_MD_TEMPLATE,
+    },
+    {
+        "title": "Mardown with badges template",
+        "dir_name": "examples_md_with_badges",
+        "config": GenerationConfiguration(
             template_name = "md", 
             deprecated_from_description=True,
             template_md_options={"badge_as_image": True}
-        )
+        ),
+        "md_example_template": MD_EXAMPLE_MD_TEMPLATE,
     }
-}
+]
+
+CASES_DESCRIPTION_DICT = {}
+with open(os.path.realpath(os.path.join(current_dir, "cases_description.yaml")), encoding="utf-8") as cases_description_fp:
+    CASES_DESCRIPTION_DICT = yaml.safe_load(cases_description_fp.read())
 
 GENERATED_TIMESTAMP_REGEXP = re.compile(r"on [0-9]{4}-[0-9]{2}-[0-9]{2} at [0-9]{2}:[0-9]{2}:[0-9]{2} \+[0-9]{4}", re.IGNORECASE)
 
@@ -64,42 +100,79 @@ def remove_generated_timestamp(file_path: str) -> None:
     with open(file_path, "w", encoding="utf-8") as f:
         f.writelines(lines)
 
+config_schema = "config_schema.json"
+config_schema_location = os.path.abspath(os.path.join(parent_dir, config_schema))
 
-def generate_each_template(configurations, template_names, json_case_filename, dest_dir):
+def generate_each_template(examples_md_file, configurations, template_names, case_path, case_name, examples_dir):
     """ 
     generate example from json case file for each template selected
     """
-    dest_name = os.path.basename(json_case_filename)
+    print(f"Generating example {case_name}")
     
-    for template_name, template_configurations in configurations.items():
+    if case_name in CASES_DESCRIPTION_DICT:
+        case_data=CASES_DESCRIPTION_DICT[case_name]
+        case_display_name=case_data["display_name"]
+        case_description=case_data["description"]
+        examples_md_file.write(f"\n## {case_display_name} <!-- {{docsify-ignore-all}} -->\n")
+        if case_description:
+            examples_md_file.write(f"**Description:** {case_description}\n") 
+
+    else:
+        examples_md_file.write(f"\n## {case_name} <!-- {{docsify-ignore-all}} -->\n")
+
+    for config in configurations:
+        template_configuration = config["config"]
+        template_name = template_configuration.template_name
+        example_dir_name = config["dir_name"]
+        example_file_name = case_name + (".md" if template_name == "md" else ".html")
+
+        examples_md_file.write(
+            config["md_example_template"].format(
+                file_url = f"examples/{example_dir_name}/{example_file_name}",
+                title = config["title"]
+            )
+        )
         if not(template_name in template_names):
             continue
-        for config_name, template_configuration in template_configurations.items():
-            example_dest_dir = os.path.join(dest_dir, "examples_" + template_name + "_" + config_name)
-            os.makedirs(example_dest_dir, exist_ok=True)
-            example_file_name = dest_name + (".md" if template_name == "md" else ".html")
-            example_file_path = os.path.join(example_dest_dir, example_file_name)
-            generate_from_filename(
-                config_schema_location, 
-                example_file_path,
-                config = template_configuration
-            )
-            remove_generated_timestamp(example_file_path)
 
-config_schema = "config_schema.json"
-config_schema_location = os.path.abspath(os.path.join(parent_dir, config_schema))
-generate_each_template(configurations, template_names, config_schema_location, examples_dir)
+        example_dest_dir = os.path.join(examples_dir, example_dir_name)
+        os.makedirs(example_dest_dir, exist_ok=True)
+        
+        example_file_path = os.path.join(example_dest_dir, example_file_name)
+        generate_from_filename(
+            case_path, 
+            example_file_path,
+            config = template_configuration
+        )
+        remove_generated_timestamp(example_file_path)
 
-for case_name in os.listdir(json_examples_dir):
-    name, ext = os.path.splitext(case_name)
-    case_source = os.path.abspath(os.path.join(json_examples_dir, case_name))
-    if not os.path.isfile(case_source) or ext != ".json":
-        continue
-
-    print(f"Generating example {name}")
+def generate_examples(examples_md_file):
     generate_each_template(
+        examples_md_file, 
         configurations, 
         template_names, 
-        case_source,
+        config_schema_location, 
+        "Configuration", 
         examples_dir
     )
+
+    for case_name in sorted(os.listdir(json_examples_dir)):
+        name, ext = os.path.splitext(case_name)
+        case_source = os.path.abspath(os.path.join(json_examples_dir, case_name))
+        if not os.path.isfile(case_source) or ext != ".json":
+            continue
+
+        generate_each_template(
+            examples_md_file,
+            configurations, 
+            template_names,
+            case_source,
+            name,
+            examples_dir
+        )
+
+examples_md_file_path = os.path.join(current_dir , "Examples.md")
+with open(examples_md_file_path, "w", encoding="utf-8") as examples_md_file:
+    examples_md_file.write("# Markdown Examples\n\n")
+    generate_examples(examples_md_file)
+

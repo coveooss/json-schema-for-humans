@@ -19,11 +19,13 @@ Just run tox
 # Adding a new template
 
 Just copy one of the existing template, change the name and start modifying.
-If you are looking for examples, you can run `python3 generate_examples.py flat` or `python3 generate_examples.py js` from the `docs` folder.
+If you are looking for examples, you can run `python3 docs/generate_examples.py` from the root folder.
 
-The examples will be in `docs/assets/examples_flat` (resp. `docs/assets/examples_js`).
-
-Markdown examples are in `tests/expected_md` and are generated running `python3 generate_expected_md.py` from `tests` folder.
+The examples will be in:
+* `docs/examples/examples_flat_default`
+* `docs/examples/examples_js_default`
+* `docs/examples/examples_md_default`
+* `docs/examples/examples_js_with_bagdes`
 
 # Optional stuff
 The maintainer will take care of the following for you if you don't want to bother with it :)
@@ -37,33 +39,26 @@ It is recommended to run black [from your IDE](https://github.com/psf/black/blob
 `schema_doc.js` is not minified automatically, you are responsible for doing it yourself
 
 ## Generating doc
-The documentation is generated using Jekyll and hosted on GitHub Pages
+The documentation is served by `index.html` deployed on GitHub Pages automatically.
+The documentation is using [docsify](https://docsify.js.org/) to render.
 
 ### Adding examples
 
-- Change your current working directory to `docs`
-- Run ``python generate_examples.py``. This will get all examples from `tests/cases`, render the resulting HTML and
- include it in the appropriate folders in the jekyll site.
-- If you have added an example, add the file name (without `.json`), the display name and description in `_data/examples.yaml`
+- Run `python docs/generate_examples.py`. This will get all examples from `docs/examples/cases`, render the resulting HTML and
+ include it in the appropriate folders.
+- (optional) If you have added an example, add the file name (without `.json`), the display name and description in `docs/cases_description.yaml`
 
 ### Generating locally
 
 #### Linux
 Execute following script from root dir of the repository
 ```bash
-sudo apt update
-sudo apt install ruby-bundler ruby-dev
-(cd docs && bundle install)
-(cd docs && python3 generate_examples.py flat)
-(cd docs && python3 generate_examples.py js)
-(cd tests && python3 generate_expected_md.py)
-mkdir -p docs/_includes/examples_md_with_badge
-cp tests/expected_md/with_badge/* docs/_includes/examples_md_with_badge
-mkdir -p docs/_includes/examples_md_without_badge
-cp -R tests/expected_md/without_badge/* docs/_includes/examples_md_without_badge
-(cd docs && bundle exec jekyll build)
+python3 docs/generate_examples.py
 ```
 
-####  Windows
-
-See https://docs.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll
+You can check it locally using:
+```bash
+npm i docsify-cli -g
+docsify serve .
+```
+Then you can check [generated doc](http://localhost:3000).
