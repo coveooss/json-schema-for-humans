@@ -65,7 +65,7 @@
     },    
     "template_name": {
       "type": "string",
-      "enum": ["flat", "js"],
+      "enum": ["flat", "js", "md"],
       "default": "js",
       "description": "The name of the set of templates to use to render the documentation.\n\n`js` is the default and uses javascript for anchor links, collapsible sections and tabs. `flat` uses no javascript, but has no interactivity."
     },
@@ -84,6 +84,17 @@
           "cuddled-lists": true
         } 
       ]
+    },
+    "template_md_options": {
+      "type": "object",
+      "description": "specific options to md template",
+      "properties": {
+        "badge_as_image": {
+          "type": "boolean",
+          "description": "if true generate badges(eg: optional, required) using embedded image (https://img.shields.io).\n\n if false, use text instead",
+          "default": false
+        }
+      }
     }
   }
 }

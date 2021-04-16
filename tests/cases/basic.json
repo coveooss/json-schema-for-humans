@@ -19,6 +19,12 @@
       "type": "integer",
       "minimum": 0,
       "title": "Person"
+    },
+    "driverLicenseId": {
+      "allOf": [
+        {"type": "null", "title": "no driver licence"},
+        {"type": "string", "title": "driver licence id"}
+      ]
     }
   }
 }

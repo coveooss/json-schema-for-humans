@@ -124,7 +124,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# IDEs
 .idea/
+.vscode/
 
 # Manual run results
 result*.html
@@ -135,4 +137,6 @@ AUTHORS
 
 # Generated docs site
 docs/_site/**
-docs/Gemfile.lock
+docs/_includes/README.md
+docs/_includes/**
+docs/assets/examples_*/**

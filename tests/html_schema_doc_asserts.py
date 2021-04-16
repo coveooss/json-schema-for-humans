@@ -83,7 +83,7 @@ def assert_required(soup: BeautifulSoup, is_required_properties: List[bool]) -> 
 
 def assert_basic_case(soup: BeautifulSoup) -> None:
     """Assert the rendered result of the basic test case"""
-    assert_property_names(soup, ["firstName", "lastName", "age"])
+    assert_property_names(soup, ["firstName", "lastName", "age", "driverLicenseId"])
     assert_descriptions(
         soup,
         [
@@ -94,7 +94,7 @@ def assert_basic_case(soup: BeautifulSoup) -> None:
     )
     assert_title(soup, "Person")
     assert_numeric_restrictions(soup, ["Value must be greater or equal to 0"])
-    assert_required(soup, [False] * 3)
+    assert_required(soup, [False] * 4)
 
 
 def get_ref_link(soup: BeautifulSoup, ref_html_id: str) -> Optional[Tag]:

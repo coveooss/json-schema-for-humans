@@ -1,6 +1,6 @@
 import pytest
 
-from json_schema_for_humans.generate import GenerationConfiguration
+from json_schema_for_humans.generation_configuration import GenerationConfiguration
 from tests.html_schema_doc_asserts import assert_descriptions, assert_ref_link, get_ref_link
 from tests.test_utils import generate_case
 
