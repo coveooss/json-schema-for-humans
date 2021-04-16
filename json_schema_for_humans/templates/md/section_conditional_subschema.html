@@ -1,11 +1,11 @@
 {% if schema.kw_if %}
-    {% set firstProperty =  schema.kw_if | get_first_property %}
+    {% set first_property =  schema.kw_if | get_first_property %}
 
     {% if schema.kw_then %}
         {%- filter md_heading(depth) -%}If (
-            {{- firstProperty.property_name | md_escape_for_table -}} 
+            {{- first_property.property_name | md_escape_for_table -}}
             {{- " = " -}}
-            {{- firstProperty.kw_const.literal | python_to_json -}}
+            {{- first_property.kw_const.literal | python_to_json -}}
         ){%- endfilter -%}
         {% with schema=schema.kw_then, skip_headers=False, depth=depth %}
             {% include "content.html" %}
@@ -13,9 +13,9 @@
     {% endif %}
     {% if schema.kw_else %}
         {%- filter md_heading(depth) -%}Else (i.e. {{ " " }}
-            {{- firstProperty.property_name | md_escape_for_table -}} 
+            {{- first_property.property_name | md_escape_for_table -}}
             {{- " != " -}}
-            {{- firstProperty.kw_const.literal | python_to_json -}}
+            {{- first_property.kw_const.literal | python_to_json -}}
         ){%- endfilter -%}
         {% with schema=schema.kw_else, skip_headers=False, depth=depth %}
             {% include "content.html" %}

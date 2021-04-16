@@ -5,7 +5,8 @@ import sys
 
 sys.path.insert(0, os.path.abspath(".."))
 
-from json_schema_for_humans.generate import generate_from_filename, GenerationConfiguration
+from json_schema_for_humans.generate import generate_from_filename
+from json_schema_for_humans.generation_configuration import GenerationConfiguration
 
 
 def remove_generated_timestamp(file_path: str) -> None:

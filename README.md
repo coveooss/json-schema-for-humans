@@ -82,8 +82,8 @@ To reduce the number of parameters to pass from function to function in the code
 Example:
 
 ```python
-from json_schema_for_humans.generate import GenerationConfiguration, generate_from_filename
-
+from json_schema_for_humans.generate import generate_from_filename
+from json_schema_for_humans.generation_configuration import GenerationConfiguration
 
 config = GenerationConfiguration(copy_css=False, expand_buttons=True)
 

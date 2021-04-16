@@ -1,6 +1,4 @@
-import pytest
-
-from json_schema_for_humans.generate import GenerationConfiguration
+from json_schema_for_humans.generation_configuration import GenerationConfiguration
 
 
 def test_default_values() -> None:

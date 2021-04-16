@@ -18,7 +18,8 @@ current_dir = os.path.abspath(os.path.dirname(__file__))
 parent_dir = os.path.abspath(os.path.dirname(current_dir))
 sys.path.insert(0, parent_dir)
 
-from json_schema_for_humans.generate import generate_from_filename, GenerationConfiguration
+from json_schema_for_humans.generate import generate_from_filename
+from json_schema_for_humans.generation_configuration import GenerationConfiguration
 
 cases_source_dir = os.path.abspath(os.path.join(parent_dir, "tests", "cases"))
 includes_dir = os.path.join(current_dir, "_includes")

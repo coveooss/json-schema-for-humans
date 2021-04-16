@@ -9,12 +9,11 @@ from _pytest.logging import LogCaptureFixture
 from bs4 import BeautifulSoup
 
 from json_schema_for_humans.generate import (
-    CONFIG_DEPRECATION_MESSAGE,
-    GenerationConfiguration,
     generate_from_file_object,
     generate_from_filename,
     generate_from_schema,
 )
+from json_schema_for_humans.generation_configuration import GenerationConfiguration, CONFIG_DEPRECATION_MESSAGE
 from tests.html_schema_doc_asserts import assert_basic_case
 from tests.test_utils import assert_css_and_js_not_copied, get_test_case_path
 

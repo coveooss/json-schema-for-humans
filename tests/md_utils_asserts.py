@@ -1,6 +1,7 @@
 import os
 
-from json_schema_for_humans.generate import generate_from_schema, GenerationConfiguration
+from json_schema_for_humans.generate import generate_from_schema
+from json_schema_for_humans.generation_configuration import GenerationConfiguration
 from tests.test_utils import get_test_case_path
 import re
 
@@ -25,7 +26,7 @@ class MdUtilsAsserts:
         content = self.generate_case(case_name, config)
         expected_content = self.get_expected_case(test_case, case_name)
 
-        # remove generation date on both contents
+        # remove generated date on both contents
         regexp = r"^(Generated using \[json-schema-for-humans\]\(https:[^)]+\) on) (.+)$"
         content = re.sub(regexp, r"\1 date", content, flags=re.MULTILINE)
 
