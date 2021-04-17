@@ -11,7 +11,7 @@
 <details>
 <summary>Json schema - Click here to expand source code...</summary>
 
-[../config_schema.json](../config_schema.json ':include :type=code')
+[../config_schema.json](/config_schema.json ':include :type=code')
 </details>
 
 

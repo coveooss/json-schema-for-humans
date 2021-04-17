@@ -66,6 +66,6 @@ python3 docs/generate_examples.py
 You can check it locally using:
 ```bash
 npm i docsify-cli -g
-docsify serve .
+docsify serve docs
 ```
 Then you can check [generated doc](http://localhost:3000).
