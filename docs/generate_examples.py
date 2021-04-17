@@ -26,10 +26,31 @@ config_md = GenerationConfiguration(
     deprecated_from_description=True
 )
 
+EXAMPLES_HEADER_TEMPLATE = """
+# {title} <!-- {{docsify-ignore-all}} -->
+
+<!-- select:start -->
+<!-- select-menu-labels: Schema -->
+"""
+
+EXAMPLES_FOOTER_TEMPLATE = """
+
+<!-- select:end -->
+"""
+
+MD_EXAMPLE_JSON_TEMPLATE = """
+
+<details>
+<summary>{title} - Click here to expand source code...</summary>
+
+[{file_url}]({file_url} ':include :type=code')
+</details>
+"""
 MD_EXAMPLE_JS_TEMPLATE = """
 
 <details>
-<summary>{title}</summary>
+<summary>{title} - Click here to expand the rendered result...</summary>
+<a href="/docs/{file_url}" target="_blank">Open it in full page</a>
 
 [{file_url}]({file_url} ':include :type=iframe width=100% height=400px')
 </details>
@@ -37,7 +58,8 @@ MD_EXAMPLE_JS_TEMPLATE = """
 MD_EXAMPLE_MD_TEMPLATE = """
 
 <details>
-<summary>{title}</summary>
+<summary>{title} - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/{file_url}" target="_blank">Open it in github</a>
 
 [{file_url}]({file_url} ':include')
 </details>
@@ -104,23 +126,38 @@ def remove_generated_timestamp(file_path: str) -> None:
 config_schema = "config_schema.json"
 config_schema_location = os.path.abspath(os.path.join(parent_dir, config_schema))
 
-def generate_each_template(examples_md_file, configurations, template_names, case_path, case_name, examples_dir):
+def generate_each_template(
+    examples_md_file, 
+    configurations, 
+    template_names, 
+    case_path, 
+    case_url, 
+    case_name, 
+    examples_dir
+) -> None:
     """ 
     generate example from json case file for each template selected
     """
     print(f"Generating example {case_name}")
     
+    examples_md_file.write(f"\n## --{case_name}--")
     if case_name in CASES_DESCRIPTION_DICT:
         case_data=CASES_DESCRIPTION_DICT[case_name]
         case_display_name=case_data["display_name"]
         case_description=case_data["description"]
-        examples_md_file.write(f"\n## {case_display_name} <!-- {{docsify-ignore-all}} -->\n")
+        examples_md_file.write(f"\n### {case_display_name}\n\n")
         if case_description:
             examples_md_file.write(f"**Description:** {case_description}\n") 
 
     else:
-        examples_md_file.write(f"\n## {case_name} <!-- {{docsify-ignore-all}} -->\n")
+        examples_md_file.write(f"\n### {case_name}\n")
 
+    examples_md_file.write(
+        MD_EXAMPLE_JSON_TEMPLATE.format(
+            file_url = case_url,
+            title = "Json schema"
+        )
+    )
     for config in configurations:
         template_configuration = config["config"]
         template_name = template_configuration.template_name
@@ -148,15 +185,6 @@ def generate_each_template(examples_md_file, configurations, template_names, cas
         remove_generated_timestamp(example_file_path)
 
 def generate_examples(examples_md_file):
-    generate_each_template(
-        examples_md_file, 
-        configurations, 
-        template_names, 
-        config_schema_location, 
-        "Configuration", 
-        examples_dir
-    )
-
     for case_name in sorted(os.listdir(json_examples_dir)):
         name, ext = os.path.splitext(case_name)
         case_source = os.path.abspath(os.path.join(json_examples_dir, case_name))
@@ -168,12 +196,29 @@ def generate_examples(examples_md_file):
             configurations, 
             template_names,
             case_source,
+            os.path.relpath(case_source, current_dir),
             name,
             examples_dir
         )
 
+# generate examples
 examples_md_file_path = os.path.join(current_dir , "Examples.md")
 with open(examples_md_file_path, "w", encoding="utf-8") as examples_md_file:
-    examples_md_file.write("# Markdown Examples\n\n")
+    examples_md_file.write(EXAMPLES_HEADER_TEMPLATE.format( title="Examples" ))
     generate_examples(examples_md_file)
+    examples_md_file.write(EXAMPLES_FOOTER_TEMPLATE)
 
+# generate configuration files
+configuration_md_file_path = os.path.join(current_dir , "Configuration.md")
+with open(configuration_md_file_path, "w", encoding="utf-8") as configuration_md_file:
+    configuration_md_file.write(EXAMPLES_HEADER_TEMPLATE.format( title="Configuration" ))
+    generate_each_template(
+        configuration_md_file, 
+        configurations, 
+        template_names, 
+        config_schema_location, 
+        f"../{config_schema}",
+        "Configuration", 
+        examples_dir
+    )
+    configuration_md_file.write(EXAMPLES_FOOTER_TEMPLATE)

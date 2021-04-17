@@ -2,13 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>JSON Schema for Humans</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css" title="Simple">
-  <link rel="stylesheet" href="assets/css/docsify.css">
+  <style type="text/css">
+  aside.sidebar {
+    scrollbar-width: auto !important;
+  }
+  aside.sidebar::-webkit-scrollbar {
+    width: 13px !important;
+  }
+  
+  </style>
 </head>
 <body>
   <div id="app"></div>
@@ -17,19 +25,20 @@
       // GENERAL
       // -----------------------------------------------------------------
       name       : 'jsonschema-for-humans',
-      //repo       : 'https://github.com/fchastanet/test-jekyll',
+      repo       : 'https://github.com/coveooss/json-schema-for-humans',
       homepage   : 'README.md',
       loadSidebar: true,
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       },
+      autoHeader: false,
       mergeNavbar: true,
 
       // NAVIGATION
       // -----------------------------------------------------------------
       auto2top   : true,
-      maxLevel   : 3,
-      subMaxLevel: 3,
+      maxLevel   : 2,
+      subMaxLevel: 2,
 
       // PLUGINS
       // -----------------------------------------------------------------
@@ -48,19 +57,22 @@
         sync: false,
         theme: "classic"
       },
-      tabs: {
-          // persist    : false,
-          // sync       : false,
-          // theme      : 'material',
-          // tabComments: false,
-          // tabHeadings: false
-      }
+      pagination: {
+        previousText: 'Previous',
+        nextText: 'Next',
+        crossChapter: true,
+        crossChapterText: true,
+      },
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <!-- docsify-select (latest v1.x.x) -->
-<script src="https://cdn.jsdelivr.net/npm/docsify-select@1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-select@1"></script>
+  <script src="//unpkg.com/prismjs/components/prism-json.min.js"></script>
+  
 </body>
 </html>

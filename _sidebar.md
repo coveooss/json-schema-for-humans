@@ -1,6 +1,7 @@
+*Quickly generate HTML or Markdown documentation from a JSON schema*
+
 * [Home](/)
-* [Configuration js format](docs/examples/examples_flat_default/Configuration.html)
-* [Configuration markdown format](docs/examples/examples_md_default/Configuration.md)
+* [Configuration](docs/Configuration.md)
 * [Examples](docs/Examples.md)
-* [Contributing](CONTRIBUTING.md)
+* [Contributing](/CONTRIBUTING.md)
 * [LICENSE](/LICENSE.md)
