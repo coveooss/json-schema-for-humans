@@ -3,7 +3,8 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-from json_schema_for_humans.generate import generate_from_schema, GenerationConfiguration
+from json_schema_for_humans.generate import generate_from_schema
+from json_schema_for_humans.generation_configuration import GenerationConfiguration
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)

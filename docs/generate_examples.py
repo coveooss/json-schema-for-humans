@@ -9,7 +9,8 @@ current_dir = os.path.abspath(os.path.dirname(__file__))
 parent_dir = os.path.abspath(os.path.dirname(current_dir))
 sys.path.insert(0, parent_dir)
 
-from json_schema_for_humans.generate import GenerationConfiguration, generate_from_filename
+from json_schema_for_humans.generate import generate_from_filename
+from json_schema_for_humans.generation_configuration import GenerationConfiguration
 
 template_names = ["js", "flat", "md"]
 template_extension = "html"

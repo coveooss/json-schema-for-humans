@@ -1,4 +1,5 @@
-from json_schema_for_humans.generate import GenerationConfiguration, build_intermediate_representation
+from json_schema_for_humans.intermediate_representation import build_intermediate_representation
+from json_schema_for_humans.generation_configuration import GenerationConfiguration
 from tests.test_utils import get_test_case_path
 
 

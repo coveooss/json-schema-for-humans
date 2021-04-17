@@ -5,7 +5,8 @@ import pytest
 from bs4 import BeautifulSoup
 
 import tests.html_schema_doc_asserts
-from json_schema_for_humans.generate import generate_from_file_object, GenerationConfiguration
+from json_schema_for_humans.generate import generate_from_file_object
+from json_schema_for_humans.generation_configuration import GenerationConfiguration
 from tests.test_utils import generate_case
 
 
