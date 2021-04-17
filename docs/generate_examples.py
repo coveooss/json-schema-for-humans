@@ -50,7 +50,7 @@ MD_EXAMPLE_JS_TEMPLATE = """
 
 <details>
 <summary>{title} - Click here to expand the rendered result...</summary>
-<a href="/docs/{file_url}" target="_blank">Open it in full page</a>
+<a href="https://github.com/coveooss/json-schema-for-humans/{file_url}" target="_blank">Open it in full page</a>
 
 [{file_url}]({file_url} ':include :type=iframe width=100% height=400px')
 </details>
