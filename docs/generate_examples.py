@@ -217,7 +217,7 @@ with open(configuration_md_file_path, "w", encoding="utf-8") as configuration_md
         configurations, 
         template_names, 
         config_schema_location, 
-        f"../{config_schema}",
+        f"/{config_schema}",
         "Configuration", 
         examples_dir
     )

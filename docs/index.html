@@ -31,7 +31,6 @@
         '/': 'https://raw.githubusercontent.com/fchastanet/json-schema-for-humans/master/README.md',
         '/CONTRIBUTING.md': 'https://raw.githubusercontent.com/fchastanet/json-schema-for-humans/master/CONTRIBUTING.md',
         '/LICENSE.md': 'https://raw.githubusercontent.com/fchastanet/json-schema-for-humans/master/LICENSE.md',
-        '/config_schema.json': 'https://raw.githubusercontent.com/fchastanet/json-schema-for-humans/master/config_schema.json',
         '/.*/_sidebar.md': '/_sidebar.md'
       },
       autoHeader: false,
@@ -66,6 +65,15 @@
         crossChapter: true,
         crossChapterText: true,
       },
+      plugins: [
+        function (hook, vm) {
+          hook.beforeEach((markdown) => {
+            console.log(markdown)
+            const result = markdown.replace(/]\(\/config_schema.json/g, "](https://raw.githubusercontent.com/fchastanet/json-schema-for-humans/master/config_schema.json")
+            return result
+          })
+        }
+      ],
     }
   </script>
   <!-- Docsify v4 -->

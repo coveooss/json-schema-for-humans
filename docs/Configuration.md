@@ -1,6 +1,5 @@
 
 # Configuration <!-- {docsify-ignore-all} -->
-
 <!-- select:start -->
 <!-- select-menu-labels: Schema -->
 
@@ -11,7 +10,7 @@
 <details>
 <summary>Json schema - Click here to expand source code...</summary>
 
-[../config_schema.json](/config_schema.json ':include :type=code')
+[/config_schema.json](/config_schema.json ':include :type=code')
 </details>
 
 
