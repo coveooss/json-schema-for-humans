@@ -68,8 +68,12 @@
       plugins: [
         function (hook, vm) {
           hook.beforeEach((markdown) => {
-            console.log(markdown)
-            const result = markdown.replace(/]\(\/config_schema.json/g, "](https://raw.githubusercontent.com/fchastanet/json-schema-for-humans/master/config_schema.json")
+            // get content of config_schema.json that is outside of docs folder from github url
+            const result = markdown.replace(
+              /]\(\/config_schema.json/g, 
+              // TODO change this url
+              "](https://raw.githubusercontent.com/fchastanet/json-schema-for-humans/master/config_schema.json"
+            )
             return result
           })
         }
