@@ -17,7 +17,7 @@
 
 <details>
 <summary>Js template - Click here to expand the rendered result...</summary>
-<a href="https://coveooss.github.io/json-schema-for-humans/json-schema-for-humans/examples/examples_js_default/Configuration.html" target="_blank">Open it in full page</a>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/Configuration.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/Configuration.html](examples/examples_js_default/Configuration.html ':include :type=iframe width=100% height=400px')
 </details>
@@ -25,7 +25,7 @@
 
 <details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
-<a href="https://coveooss.github.io/json-schema-for-humans/json-schema-for-humans/examples/examples_flat_default/Configuration.html" target="_blank">Open it in full page</a>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/Configuration.html" target="_blank">Open it in full page</a>
 
 [examples/examples_flat_default/Configuration.html](examples/examples_flat_default/Configuration.html ':include :type=iframe width=100% height=400px')
 </details>
