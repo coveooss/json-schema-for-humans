@@ -9,6 +9,10 @@ from json_schema_for_humans.generate import generate_from_file_object
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
 from tests.test_utils import generate_case
 
+current_dir = os.path.abspath(os.path.dirname(__file__))
+parent_dir = os.path.abspath(os.path.dirname(current_dir))
+examples_dir = os.path.join(parent_dir, "docs", "examples")
+
 
 def test_basic() -> None:
     """Test rendering a basic schema with title"""
@@ -460,7 +464,7 @@ def test_html_in_patterns() -> None:
 def test_yaml() -> None:
     """Test loading the schema from a YAML file. The schema is the same as the case "with_definitions"."""
     with tempfile.NamedTemporaryFile(mode="w+") as temp_file:
-        with open(os.path.abspath(os.path.join(os.path.dirname(__file__), "cases", f"yaml.yaml"))) as schema_fp:
+        with open(os.path.abspath(os.path.join(examples_dir, "cases", f"yaml.yaml"))) as schema_fp:
             generate_from_file_object(schema_fp, temp_file, True, False, False, True)
 
         temp_file.seek(0)
@@ -489,7 +493,7 @@ def test_json_with_tabs() -> None:
     """Test loading the schema when tabs are present rather than spaces. Regression test for #45"""
     temp_schema_file = tempfile.NamedTemporaryFile(mode="w+", delete=False, suffix=".json")
     created_filename = temp_schema_file.name
-    with open(os.path.abspath(os.path.join(os.path.dirname(__file__), "cases", f"basic.json"))) as schema_fp:
+    with open(os.path.abspath(os.path.join(examples_dir, "cases", f"basic.json"))) as schema_fp:
         for line in schema_fp:
             temp_schema_file.write(line.replace("  ", "\t"))
     with tempfile.NamedTemporaryFile(mode="w+") as temp_html_file:
