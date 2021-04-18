@@ -11,7 +11,7 @@ Quickly generate a beautiful static HTML or Markdown page documenting a JSON sch
 - Support for JSON Schema Draft-07
 - Since the result is static, it is easier to host and faster to load
 - HTML and Markdown output support
-- Different templates to choose from. More details: [HTML version](https://coveooss.github.io/json-schema-for-humans/docs/examples/examples_js_default/Configuration.html#template_name) - [Markdown version](https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_default/Configuration.md#template_name)
+- Different templates to choose from. More details: [HTML version](https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/Configuration.html#template_name) - [Markdown version](https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_default/Configuration.md#template_name)
 - Anchor links, allow to send a user to a specific section of the documentation
 - Support for references (even circular!)
 
@@ -22,7 +22,7 @@ pip install json-schema-for-humans
 
 ## Usage
 
-Options for generation of the doc are documented using the library itself: [HTML version](https://coveooss.github.io/json-schema-for-humans/docs/examples/examples_js_default/Configuration.html) - [Markdown version](https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_default/Configuration.md)
+Options for generation of the doc are documented using the library itself: [HTML version](https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/Configuration.html) - [Markdown version](https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_default/Configuration.md)
 
 They can be supplied in various ways:
 - Using a JSON or YAML configuration file with the CLI option `--config-file`
@@ -44,7 +44,7 @@ The default value for `RESULT_FILE` is `schema_doc.html`
 #### CLI options
 
 #### --config
-Supply generation config parameters. The parameters are documented in the JSON schema `config_schema.json` at the root of the repo or see the generated doc: [HTML version](https://coveooss.github.io/json-schema-for-humans/docs/examples/examples_js_default/Configuration.html) - [Markdown version](https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_default/Configuration.md).
+Supply generation config parameters. The parameters are documented in the JSON schema `config_schema.json` at the root of the repo or see the generated doc: [HTML version](https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/Configuration.html) - [Markdown version](https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_default/Configuration.md).
 
 Each parameter is in the format `--config parameter_name=parameter_value`. Example: `--config expand_buttons=true`. The parameter value must be valid JSON.
 
@@ -147,7 +147,7 @@ Templates control the style of the generated documentation.
 
 This is the default template. It uses Bootstrap along with minimal Javascript to allow for the following:
 
-- Properties are in expandable dynamic sections. You can include a button to expand or collapse all. (See doc: [HTML version](https://coveooss.github.io/json-schema-for-humans/docs/examples/examples_js_default/Configuration.html#expand_buttons) - [Markdown version](https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_default/Configuration.md#expand_buttons))
+- Properties are in expandable dynamic sections. You can include a button to expand or collapse all. (See doc: [HTML version](https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/Configuration.html#expand_buttons) - [Markdown version](https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_default/Configuration.md#expand_buttons))
 - Conditional subschemas (`anyOf`, `oneOf`, `allOf`) are in tabbed sections
 - Anchor links will scroll to, expand, and animate the target section 
 - Long descriptions are collapsed by default
@@ -173,7 +173,7 @@ On GitHub, this format is rendered directly when browsing code.
 A table of content is provided at the beginning of the file for easy navigation.
 
 You can display some important information as badge using an option.
-See doc: [HTML version](https://coveooss.github.io/json-schema-for-humans/docs/examples/examples_js_default/Configuration.html#template_md_options_badge_as_image) - [Markdown version](https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_default/Configuration.md#template_md_options_badge_as_image)
+See doc: [HTML version](https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/Configuration.html#template_md_options_badge_as_image) - [Markdown version](https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_default/Configuration.md#template_md_options_badge_as_image)
 
 Contributions are welcomed to improve it!
 
