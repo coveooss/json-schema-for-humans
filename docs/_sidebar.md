@@ -3,5 +3,5 @@
 * [Home](/)
 * [Configuration](Configuration.md)
 * [Examples](Examples.md)
-* [Contributing](/CONTRIBUTING.md)
-* [License](/LICENSE.md)
+* [Contributing](/Contributing)
+* [License](/License)
