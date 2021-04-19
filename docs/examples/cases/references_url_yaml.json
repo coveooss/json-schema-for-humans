@@ -5,7 +5,7 @@
   "type": "object",
   "properties": {
     "address": {
-      "$ref": "https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/tests/cases/yaml.yaml#/definitions/address"
+      "$ref": "https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/docs/examples/cases/yaml.yaml#/definitions/address"
     }
   }
 }

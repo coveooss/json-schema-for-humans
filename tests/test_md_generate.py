@@ -24,6 +24,8 @@ class TestCase:
     name: str
     config: GenerationConfiguration
 
+    __test__ = False
+
 
 def list_cases() -> List[str]:
     test_cases: List[str] = []
