@@ -326,9 +326,12 @@ class SchemaNode:
 
     @property
     def kw_items(self) -> Optional[List["SchemaNode"]]:
-        "items can be either an object either a list of object"
-        items = self.get_keyword(const.KW_ITEMS) or []
-        if type(items) == List:
+        """items can be either an object either a list of object"""
+        items = self.get_keyword(const.KW_ITEMS)
+        if not items:
+            return None
+
+        if items.array_items:
             return items.array_items
 
         return [items]
