@@ -6,7 +6,7 @@ Contributions are more than welcome! Don't hesitate to open an incomplete PR to 
 
 The library currently supports Python versions 3.6+
 
-## install dependencies
+## Install dependencies
 Just run 
 
 `pip3 install -r requirements.txt`
@@ -19,9 +19,7 @@ Just run tox
 `tox`
 
 ### With pytest directly
-`python -m pytest tests`
-
-(Or `python3 -m pytest tests` if you still have Python 2 (e.g.: Ubuntu))
+`python3 -m pytest tests`
 
 ## Adding a new template
 
@@ -57,7 +55,6 @@ The documentation is using [docsify](https://docsify.js.org/) to render.
 
 #### Generating locally
 
-##### Linux
 Execute following script from root dir of the repository
 ```bash
 python3 docs/generate_examples.py

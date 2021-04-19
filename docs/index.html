@@ -23,15 +23,14 @@
     window.$docsify = {
       // GENERAL
       // -----------------------------------------------------------------
-      name       : 'jsonschema-for-humans',
+      name       : 'json-schema-for-humans',
       repo       : 'https://github.com/coveooss/json-schema-for-humans',
       homepage   : 'README.md',
       loadSidebar: true,
       alias: {
-        // TODO change these urls
-        '/': 'https://raw.githubusercontent.com/fchastanet/json-schema-for-humans/master/README.md',
-        '(/.*)?/CONTRIBUTING': 'https://raw.githubusercontent.com/fchastanet/json-schema-for-humans/master/CONTRIBUTING.md',
-        '(/.*)?/License': 'https://raw.githubusercontent.com/fchastanet/json-schema-for-humans/master/LICENSE.md',
+        '/': 'https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/README.md',
+        '(/.*)?/CONTRIBUTING': 'https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/CONTRIBUTING.md',
+        '(/.*)?/License': 'https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/LICENSE.md',
         '/.*/_sidebar.md': '/_sidebar.md'
       },
       autoHeader: false,
@@ -70,12 +69,10 @@
         function (hook, vm) {
           hook.beforeEach((markdown) => {
             // get content of config_schema.json that is outside of docs folder from github url
-            const result = markdown.replace(
-              /]\(\/config_schema.json/g, 
-              // TODO change this url
-              "](https://raw.githubusercontent.com/fchastanet/json-schema-for-humans/master/config_schema.json"
+            return markdown.replace(
+                /]\(\/config_schema.json/g,
+                "](https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/config_schema.json"
             )
-            return result
           })
         }
       ],
