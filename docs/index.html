@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSON Schema for Humans</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css" title="Simple">
+  <style type="text/css">
+  aside.sidebar {
+    scrollbar-width: auto !important;
+  }
+  aside.sidebar::-webkit-scrollbar {
+    width: 13px !important;
+  }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      // GENERAL
+      // -----------------------------------------------------------------
+      name       : 'json-schema-for-humans',
+      repo       : 'https://github.com/coveooss/json-schema-for-humans',
+      homepage   : 'README.md',
+      loadSidebar: true,
+      alias: {
+        '/': 'https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/README.md',
+        '(/.*)?/CONTRIBUTING': 'https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/CONTRIBUTING.md',
+        '(/.*)?/License': 'https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/LICENSE.md',
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      autoHeader: false,
+      mergeNavbar: true,
+
+      // NAVIGATION
+      // -----------------------------------------------------------------
+      auto2top   : true,
+      maxLevel   : 2,
+      subMaxLevel: 2,
+
+      // PLUGINS
+      // -----------------------------------------------------------------
+      executeScript: true,
+      ga    : 'TODO',
+      search: {
+          depth      : 3,
+          noData     : 'No results!',
+          placeholder: 'Search...'
+      },
+      select: {
+        examples: {
+          enabled: false,
+          menuId: "examples"
+        },
+        sync: false,
+        theme: "classic"
+      },
+      pagination: {
+        previousText: 'Previous',
+        nextText: 'Next',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+      plugins: [
+        function (hook, vm) {
+          hook.beforeEach((markdown) => {
+            // get content of config_schema.json that is outside of docs folder from github url
+            return markdown.replace(
+                /]\(\/config_schema.json/g,
+                "](https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/config_schema.json"
+            )
+          })
+        }
+      ],
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- docsify-select (latest v1.x.x) -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-select@1"></script>
+  <script src="//unpkg.com/prismjs/components/prism-json.min.js"></script>
+  
+</body>
+</html>
