@@ -114,7 +114,7 @@ class MarkdownTemplate(object):
                 heading_numbers += f"{self.headings[curDepth]}."
 
         # markdown menu depth
-        menu = "#" * min((depth + 1), 6)
+        menu = "#" * min((depth + 1), 5)
 
         # generate markdown title with anchor (except if depth 0)
         if depth == 0:
