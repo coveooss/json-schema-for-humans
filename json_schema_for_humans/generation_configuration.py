@@ -41,7 +41,7 @@ class GenerationConfiguration:
         default_markdown_options.update(self.markdown_options or {})
         self.markdown_options = default_markdown_options
 
-        default_template_md_options = {"badge_as_image": False}
+        default_template_md_options = {"badge_as_image": False, "show_heading_numbers": True, "show_array_restrictions": True}
         default_template_md_options.update(self.template_md_options or {})
         self.template_md_options = default_template_md_options
 

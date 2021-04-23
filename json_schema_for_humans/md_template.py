@@ -114,16 +114,21 @@ class MarkdownTemplate(object):
                 heading_numbers += f"{self.headings[curDepth]}."
 
         # markdown menu depth
-        menu = "#" * (depth + 1)
+        menu = "#" * min((depth + 1), 4)
 
         # generate markdown title with anchor (except if depth 0)
         if depth == 0:
             menu += f" {title}"
         else:
-            menu += f' <a name="{html_id}"></a>{heading_numbers} {title}'
+            if self.config.template_md_options['show_heading_numbers']:
+                menu += f' <a name="{html_id}"></a>{heading_numbers} {title}'
+            else:
+                menu += f' <a name="{html_id}"></a>{title}'
 
         # store current heading in toc
-        toc_menu = f"[{heading_numbers} {title}](#{html_id})"
+        toc_menu = f"[{title}](#{html_id})"
+        if self.config.template_md_options['show_heading_numbers']:
+            toc_menu = f"[{heading_numbers} {title}](#{html_id})"
         self.toc[heading_numbers] = {"depth": depth, "menu": toc_menu}
 
         return menu
@@ -238,7 +243,8 @@ class MarkdownTemplate(object):
         if jinja_filters.deprecated(self.config, schema):
             type_info.append(["**Deprecated**", self.badge("Deprecated", "red")])
 
-        type_info.append(["**Additional properties**", self.additional_properties(schema)])
+        if schema_type == "object":
+            type_info.append(["**Additional properties**", self.additional_properties(schema)])
         if schema.default_value:
             type_info.append(["**Default**", f"`{default_value}`"])
         if schema.should_be_a_link(self.config):
@@ -280,6 +286,9 @@ class MarkdownTemplate(object):
         array restrictions: min/max items, items unicity, additional items, Tuple validation
         ready to be rendered by generate_table filter
         """
+
+        if not self.config.template_md_options['show_array_restrictions']:
+            return []
 
         return [
             ["", "Array restrictions"],
@@ -328,7 +337,7 @@ class MarkdownTemplate(object):
         """
         if not schema.array_items:
             return []
-        array_items = [title]
+        array_items = [[title]]
         for i, item in enumerate(schema.array_items):
             item_label = item.name_for_breadcrumbs or f"{title} {i}"
             item_html_id = item.html_id
