@@ -114,7 +114,7 @@ class MarkdownTemplate(object):
                 heading_numbers += f"{self.headings[curDepth]}."
 
         # markdown menu depth
-        menu = "#" * min((depth + 1), 4)
+        menu = "#" * min((depth + 1), 6)
 
         # generate markdown title with anchor (except if depth 0)
         if depth == 0:
@@ -243,8 +243,7 @@ class MarkdownTemplate(object):
         if jinja_filters.deprecated(self.config, schema):
             type_info.append(["**Deprecated**", self.badge("Deprecated", "red")])
 
-        if schema_type == "object":
-            type_info.append(["**Additional properties**", self.additional_properties(schema)])
+        type_info.append(["**Additional properties**", self.additional_properties(schema)])
         if schema.default_value:
             type_info.append(["**Default**", f"`{default_value}`"])
         if schema.should_be_a_link(self.config):
