@@ -50,10 +50,10 @@ def generate_from_schema(
     env = jinja2.Environment(
         loader=loader,
         extensions=[loopcontrols],
-        trim_blocks=(config.template_name == "md"),
-        lstrip_blocks=(config.template_name == "md"),
+        trim_blocks=(config.template_name in ("md", "md_nested")),
+        lstrip_blocks=(config.template_name in ("md", "md_nested")),
     )
-    if config.template_name == "md":
+    if config.template_name in ("md", "md_nested"):
         md_template = MarkdownTemplate(config)
         md_template.register_jinja(env)
 
@@ -95,7 +95,7 @@ def generate_from_schema(
     rendered = template.render(schema=intermediate_schema, config=config)
 
     if minify:
-        if config.template_name == "md":
+        if config.template_name in ("md", "md_nested"):
             # remove multiple contiguous empty lines
             rendered = re.sub(r"\n\s*\n", "\n\n", rendered)
         else:

@@ -14,7 +14,7 @@ sys.path.insert(0, parent_dir)
 from json_schema_for_humans.generate import generate_from_filename
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
 
-template_names = ["js", "flat", "md"]
+template_names = ["js", "flat", "md", "md_nested"]
 template_extension = "html"
 if len(sys.argv) >= 2:
     template_names = [sys.argv[1]]
@@ -108,6 +108,14 @@ configurations = [
         "dir_name": "examples_md_with_badges",
         "config": GenerationConfiguration(
             template_name="md", deprecated_from_description=True, template_md_options={"badge_as_image": True}
+        ),
+        "md_example_template": MD_EXAMPLE_MD_TEMPLATE,
+    },
+    {
+        "title": "Nested Markdown with badges template",
+        "dir_name": "examples_md_nested_with_badges",
+        "config": GenerationConfiguration(
+            template_name="md_nested", deprecated_from_description=True, show_breadcrumbs=False, template_md_options={"badge_as_image": True, "show_heading_numbers": False, "show_array_restrictions": False}
         ),
         "md_example_template": MD_EXAMPLE_MD_TEMPLATE,
     },
