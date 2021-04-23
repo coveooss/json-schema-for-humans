@@ -166,7 +166,7 @@ def generate_each_template(
         template_configuration = config["config"]
         template_name = template_configuration.template_name
         example_dir_name = config["dir_name"]
-        example_file_name = case_name + (".md" if template_name == "md" else ".html")
+        example_file_name = case_name + (".md" if template_name in ("md", "md_nested") else ".html")
 
         examples_md_file.write(
             config["md_example_template"].format(
