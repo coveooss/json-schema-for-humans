@@ -1,0 +1,191 @@
+# Person
+
+**Title:** Person
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
+
+<details>
+<summary>
+
+## <a name="default"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `default`  
+
+</summary>
+<blockquote>
+
+| Type                      | `string`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
+
+**Description:** default
+
+</blockquote>
+</details>
+
+<details>
+<summary>
+
+## <a name="examples"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `examples`  
+
+</summary>
+<blockquote>
+
+| Type                      | `string`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
+
+**Description:** examples
+
+</blockquote>
+</details>
+
+<details>
+<summary>
+
+## <a name="if"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `if`  
+
+</summary>
+<blockquote>
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
+
+**Description:** if
+
+</blockquote>
+</details>
+
+<details>
+<summary>
+
+## <a name="then"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `then`  
+
+</summary>
+<blockquote>
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
+
+**Description:** then
+
+</blockquote>
+</details>
+
+<details>
+<summary>
+
+## <a name="else"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `else`  
+
+</summary>
+<blockquote>
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
+
+**Description:** else
+
+</blockquote>
+</details>
+
+<details>
+<summary>
+
+## <a name="anyOf"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `anyOf`  
+
+</summary>
+<blockquote>
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
+
+**Description:** anyOf
+
+</blockquote>
+</details>
+
+<details>
+<summary>
+
+## <a name="allOf"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `allOf`  
+
+</summary>
+<blockquote>
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
+
+**Description:** allOf
+
+</blockquote>
+</details>
+
+<details>
+<summary>
+
+## <a name="not"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `not`  
+
+</summary>
+<blockquote>
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
+
+**Description:** not
+
+</blockquote>
+</details>
+
+<details>
+<summary>
+
+## <a name="properties"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `properties`  
+
+</summary>
+<blockquote>
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
+
+**Description:** properties
+
+</blockquote>
+</details>
+
+<details>
+<summary>
+
+## <a name="patternProperties"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `patternProperties`  
+
+</summary>
+<blockquote>
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
+
+**Description:** patternProperties
+
+</blockquote>
+</details>
+
+----------------------------------------------------------------------------------------------------------------------------
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on date

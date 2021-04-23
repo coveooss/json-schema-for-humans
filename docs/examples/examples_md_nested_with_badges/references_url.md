@@ -1,0 +1,30 @@
+# Schema Docs
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
+
+**Description:** Testing $ref with URL
+
+<details>
+<summary>
+
+## <a name="firstName"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `firstName`  
+
+</summary>
+<blockquote>
+
+| Type                      | `string`                                                                                                                      |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.")           |
+| **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/docs/examples/cases/basic.json#/properties/firstName |
+|                           |                                                                                                                               |
+
+**Description:** The person's first name.
+
+</blockquote>
+</details>
+
+----------------------------------------------------------------------------------------------------------------------------
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on date

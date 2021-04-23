@@ -1,0 +1,182 @@
+# Delivery Schema
+
+- [![badge](https://img.shields.io/badge/Optional-yellow) Property `shipping_address`](#shipping_address)
+  - [![badge](https://img.shields.io/badge/Required-blue) Property `street_address`](#shipping_address_street_address)
+  - [![badge](https://img.shields.io/badge/Required-blue) Property `city`](#shipping_address_city)
+  - [![badge](https://img.shields.io/badge/Required-blue) Property `state`](#shipping_address_state)
+- [![badge](https://img.shields.io/badge/Optional-yellow) Property `billing_address`](#billing_address)
+- [![badge](https://img.shields.io/badge/Optional-yellow) Property `delivery_info`](#delivery_info)
+  - [Property `classic`](#delivery_info_oneOf_i0)
+    - [![badge](https://img.shields.io/badge/Optional-yellow) Property `price`](#delivery_info_oneOf_i0_price)
+  - [Property `gift`](#delivery_info_oneOf_i1)
+    - [![badge](https://img.shields.io/badge/Optional-yellow) Property `with_wrap`](#delivery_info_oneOf_i1_with_wrap)
+
+**Title:** Delivery Schema
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
+
+<details>
+<summary>
+
+## <a name="shipping_address"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `shipping_address`  
+
+</summary>
+<blockquote>
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/address                                                                                               |
+|                           |                                                                                                                     |
+
+**Description:** Exact address
+
+<details>
+<summary>
+
+### <a name="shipping_address_street_address"></a>![badge](https://img.shields.io/badge/Required-blue) Property `street_address`  
+
+</summary>
+<blockquote>
+
+| Type | `string` |
+| ---- | -------- |
+|      |          |
+
+</blockquote>
+</details>
+
+<details>
+<summary>
+
+### <a name="shipping_address_city"></a>![badge](https://img.shields.io/badge/Required-blue) Property `city`  
+
+</summary>
+<blockquote>
+
+| Type | `string` |
+| ---- | -------- |
+|      |          |
+
+</blockquote>
+</details>
+
+<details>
+<summary>
+
+### <a name="shipping_address_state"></a>![badge](https://img.shields.io/badge/Required-blue) Property `state`  
+
+</summary>
+<blockquote>
+
+| Type | `string` |
+| ---- | -------- |
+|      |          |
+
+</blockquote>
+</details>
+
+</blockquote>
+</details>
+
+<details>
+<summary>
+
+## <a name="billing_address"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `billing_address`  
+
+</summary>
+<blockquote>
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Same definition as**    | `[shipping_address](#shipping_address)`                                                                             |
+|                           |                                                                                                                     |
+
+**Description:** Exact address
+
+</blockquote>
+</details>
+
+<details>
+<summary>
+
+## <a name="delivery_info"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `delivery_info`  
+
+</summary>
+<blockquote>
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/delivery_info                                                                                         |
+|                           |                                                                                                                     |
+
+**Description:** Delivery info depending on the delivery type
+
+<blockquote>
+
+| One of(Option)                     |
+| ---------------------------------- |
+| [classic](#delivery_info_oneOf_i0) |
+| [gift](#delivery_info_oneOf_i1)    |
+|                                    |
+
+### <a name="delivery_info_oneOf_i0"></a>Property `classic`
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/classic                                                                                               |
+|                           |                                                                                                                     |
+
+<details>
+<summary>
+
+#### <a name="delivery_info_oneOf_i0_price"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `price`  
+
+</summary>
+<blockquote>
+
+| Type | `number` |
+| ---- | -------- |
+|      |          |
+
+</blockquote>
+</details>
+
+### <a name="delivery_info_oneOf_i1"></a>Property `gift`
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/gift                                                                                                  |
+|                           |                                                                                                                     |
+
+**Description:** The delivery is a gift, no prices displayed
+
+<details>
+<summary>
+
+#### <a name="delivery_info_oneOf_i1_with_wrap"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `with_wrap`  
+
+</summary>
+<blockquote>
+
+| Type | `boolean` |
+| ---- | --------- |
+|      |           |
+
+</blockquote>
+</details>
+
+</blockquote>
+
+</blockquote>
+</details>
+
+----------------------------------------------------------------------------------------------------------------------------
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on date
