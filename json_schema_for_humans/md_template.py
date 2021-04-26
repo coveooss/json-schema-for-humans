@@ -83,7 +83,7 @@ class MarkdownTemplate(object):
         """Filter. escape characters('|', '`') in string to be inserted into markdown table"""
         return example_text.translate(str.maketrans({"|": "\\|", "`": "\\`"}))
 
-    def heading(self, title: str, depth: int, html_id: Union[bool, str] = False) -> str:
+    def heading(self, title: str, depth: int, html_id: Union[bool, str] = False, nested: bool=False) -> str:
         """
         Filter. display heading menu, heading number automatically calculated
         from previous heading and depth provided
@@ -114,7 +114,9 @@ class MarkdownTemplate(object):
                 heading_numbers += f"{self.headings[curDepth]}."
 
         # markdown menu depth
-        menu = "#" * min((depth + 1), 5)
+        menu = "#" * (depth + 1)
+        if nested:
+            menu = "<strong>"
 
         # generate markdown title with anchor (except if depth 0)
         if depth == 0:
@@ -131,6 +133,8 @@ class MarkdownTemplate(object):
             toc_menu = f"[{heading_numbers} {title}](#{html_id})"
         self.toc[heading_numbers] = {"depth": depth, "menu": toc_menu}
 
+        if nested:
+            menu += "</strong>"
         return menu
 
     def get_toc(self) -> str:
