@@ -83,7 +83,7 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | `[person](#person_items)`                                                 |
+| **Same definition as**    | [person](#person_items)                                                   |
 |                           |                                                                           |
 
 **Description:** A human being

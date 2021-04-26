@@ -68,7 +68,7 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | `[shipping_address](#shipping_address)`                                   |
+| **Same definition as**    | [shipping_address](#shipping_address)                                     |
 |                           |                                                                           |
 
 **Description:** Exact address
