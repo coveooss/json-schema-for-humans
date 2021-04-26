@@ -50,7 +50,7 @@
 | Type                      | `string`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | `[name](#described_name)`                                                 |
+| **Same definition as**    | [name](#described_name)                                                   |
 |                           |                                                                           |
 
 **Description:** a filled string

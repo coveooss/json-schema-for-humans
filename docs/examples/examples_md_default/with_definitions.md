@@ -67,7 +67,7 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | `[billing_address](#billing_address)`                                     |
+| **Same definition as**    | [billing_address](#billing_address)                                       |
 |                           |                                                                           |
 
 ----------------------------------------------------------------------------------------------------------------------------

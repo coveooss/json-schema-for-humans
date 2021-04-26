@@ -61,7 +61,7 @@
 | Type                      | `object`                                                                                                            |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | `[siblings](#person_siblings)`                                                                                      |
+| **Same definition as**    | [siblings](#person_siblings)                                                                                        |
 |                           |                                                                                                                     |
 
 **Description:** Person definition from second file. Not the same!
