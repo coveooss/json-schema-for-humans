@@ -4,7 +4,7 @@
 {{ schema | md_array_items_restrictions | md_generate_table }}
 
 {% for item in schema.kw_items %}
-    {% filter md_heading(depth+1) %}
+    {% filter md_heading(depth+1, item.html_id) %}
     {% with schema=item %}{%- include "breadcrumbs.html" %}{% endwith %}
     {% endfilter %}
     {% with schema=item, skip_headers=False, depth=depth+1, skip_required=True %}

@@ -2,25 +2,23 @@
 
 **Title:** Person
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 <details>
-<summary>
-
-## <a name="firstName"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `firstName`  
+<summary><strong> <a name="firstName"></a>[Optional] Property firstName</strong>  
 
 </summary>
 <blockquote>
 
 **Title:** Person
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** The person's first name.
 
@@ -28,19 +26,17 @@
 </details>
 
 <details>
-<summary>
-
-## <a name="lastName"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `lastName`  
+<summary><strong> <a name="lastName"></a>[Optional] Property lastName</strong>  
 
 </summary>
 <blockquote>
 
 **Title:** Person
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** The person's last name.
 
@@ -48,9 +44,7 @@
 </details>
 
 <details>
-<summary>
-
-## <a name="pattern1"></a>![badge](https://img.shields.io/badge/Optional-yellow)Pattern Property `$[a-c][0-9]^`  
+<summary><strong> <a name="pattern1"></a>[Optional]Pattern Property paperSize</strong>  
 > All property whose name matches the regular expression 
 ```$[a-c][0-9]^``` ([Test](https://regex101.com/?regex=%24%5Ba-c%5D%5B0-9%5D%5E))
 must respect the following conditions
@@ -60,27 +54,25 @@ must respect the following conditions
 
 **Title:** paperSize
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Review of a paper size.
 
 <details>
-<summary>
-
-### <a name="pattern1_rating"></a>![badge](https://img.shields.io/badge/Required-blue) Property `rating`  
+<summary><strong> <a name="pattern1_rating"></a>[Required] Property rating</strong>  
 
 </summary>
 <blockquote>
 
 **Title:** Rating
 
-| Type                      | `integer`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `integer`                                                                 |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Numerical rating for paper size.
 
@@ -88,19 +80,17 @@ must respect the following conditions
 </details>
 
 <details>
-<summary>
-
-### <a name="pattern1_review"></a>![badge](https://img.shields.io/badge/Required-blue) Property `review`  
+<summary><strong> <a name="pattern1_review"></a>[Required] Property review</strong>  
 
 </summary>
 <blockquote>
 
 **Title:** Review
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Narrative review of the paper size.
 

@@ -1,38 +1,34 @@
 # Schema Docs
 
-| Type                      | `object`                                                                                         |
-| ------------------------- | ------------------------------------------------------------------------------------------------ |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Not+allowed-red)](# "Additional Properties not allowed.") |
-|                           |                                                                                                  |
+| Type                      | `object`                                                |
+| ------------------------- | ------------------------------------------------------- |
+| **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
+|                           |                                                         |
 
 <details>
-<summary>
-
-## <a name="outer"></a>![badge](https://img.shields.io/badge/Required-blue) Property `outer`  
+<summary><strong> <a name="outer"></a>[Required] Property outer</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/inner schema                                                                                          |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/inner schema                                                |
+|                           |                                                                           |
 
 **Description:** We should see this
 
 <details>
-<summary>
-
-### <a name="outer_inner"></a>![badge](https://img.shields.io/badge/Required-blue) Property `inner`  
+<summary><strong> <a name="outer_inner"></a>[Required] Property inner</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** inner description
 
@@ -43,18 +39,16 @@
 </details>
 
 <details>
-<summary>
-
-## <a name="outer2"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `outer2`  
+<summary><strong> <a name="outer2"></a>[Optional] Property outer2</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | `[outer](#outer)`                                                                                                   |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Same definition as**    | `[outer](#outer)`                                                         |
+|                           |                                                                           |
 
 **Description:** We should see this too
 

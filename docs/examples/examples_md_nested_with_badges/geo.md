@@ -2,25 +2,23 @@
 
 **Title:** Longitude and Latitude Values
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** A geographical coordinate.
 
 <details>
-<summary>
-
-## <a name="latitude"></a>![badge](https://img.shields.io/badge/Required-blue) Property `latitude`  
+<summary><strong> <a name="latitude"></a>[Required] Property latitude</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `number`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `number`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 | Restrictions |          |
 | ------------ | -------- |
@@ -32,17 +30,15 @@
 </details>
 
 <details>
-<summary>
-
-## <a name="longitude"></a>![badge](https://img.shields.io/badge/Required-blue) Property `longitude`  
+<summary><strong> <a name="longitude"></a>[Required] Property longitude</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `number`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `number`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 | Restrictions |           |
 | ------------ | --------- |

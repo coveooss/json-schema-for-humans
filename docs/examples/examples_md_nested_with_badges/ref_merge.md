@@ -2,25 +2,23 @@
 
 **Title:** Test
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 <details>
-<summary>
-
-## <a name="aProperty"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `aProperty`  
+<summary><strong> <a name="aProperty"></a>[Optional] Property aProperty</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `enum (of string)`                                                                                                  |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `"Default from property"`                                                                                           |
-| **Defined in**            | #/definitions/aProperty                                                                                             |
-|                           |                                                                                                                     |
+| Type                      | `enum (of string)`                                                        |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Default**               | `"Default from property"`                                                 |
+| **Defined in**            | #/definitions/aProperty                                                   |
+|                           |                                                                           |
 
 **Description:** This is the description from the definition
 
@@ -32,48 +30,42 @@ Must be one of:
 </details>
 
 <details>
-<summary>
-
-## <a name="aDictPropertyARequired"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `aDictPropertyARequired`  
+<summary><strong> <a name="aDictPropertyARequired"></a>[Optional] Property aDictPropertyARequired</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `{"a": "a", "b": "b"}`                                                                                              |
-| **Defined in**            | #/definitions/aDictProperty                                                                                         |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Default**               | `{"a": "a", "b": "b"}`                                                    |
+| **Defined in**            | #/definitions/aDictProperty                                               |
+|                           |                                                                           |
 
 <details>
-<summary>
-
-### <a name="aDictPropertyARequired_a"></a>![badge](https://img.shields.io/badge/Required-blue) Property `a`  
+<summary><strong> <a name="aDictPropertyARequired_a"></a>[Required] Property a</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 </blockquote>
 </details>
 
 <details>
-<summary>
-
-### <a name="aDictPropertyARequired_b"></a>![badge](https://img.shields.io/badge/Required-blue) Property `b`  
+<summary><strong> <a name="aDictPropertyARequired_b"></a>[Required] Property b</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 </blockquote>
 </details>

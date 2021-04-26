@@ -1,25 +1,23 @@
 # Schema Docs
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Test schema with deprecated in description
 
 <details>
-<summary>
-
-## <a name="deprecated1"></a>![badge](https://img.shields.io/badge/Optional-yellow)~~ Property `deprecated1`~~  
+<summary><strong> <a name="deprecated1"></a>[Optional]~~ Property deprecated1~~</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Deprecated**            | ![badge](https://img.shields.io/badge/Deprecated-red)                                                               |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Deprecated**            | [Deprecated]                                                              |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** [Deprecated]
 
@@ -27,18 +25,16 @@
 </details>
 
 <details>
-<summary>
-
-## <a name="deprecated2"></a>![badge](https://img.shields.io/badge/Optional-yellow)~~ Property `deprecated2`~~  
+<summary><strong> <a name="deprecated2"></a>[Optional]~~ Property deprecated2~~</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Deprecated**            | ![badge](https://img.shields.io/badge/Deprecated-red)                                                               |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Deprecated**            | [Deprecated]                                                              |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** [Deprecated - Use `not_deprecated` instead]
 
@@ -46,17 +42,15 @@
 </details>
 
 <details>
-<summary>
-
-## <a name="not_deprecated"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `not_deprecated`  
+<summary><strong> <a name="not_deprecated"></a>[Optional] Property not_deprecated</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 </blockquote>
 </details>

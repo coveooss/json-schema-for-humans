@@ -2,71 +2,63 @@
 
 **Title:** Person
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 <details>
-<summary>
-
-## <a name="relationships"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `relationships`  
+<summary><strong> <a name="relationships"></a>[Optional] Property relationships</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/person/properties/relationships                                                                       |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/person/properties/relationships                             |
+|                           |                                                                           |
 
 **Description:** Relationships between this person and others
 
 <details>
-<summary>
-
-### <a name="relationships_mother"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `mother`  
+<summary><strong> <a name="relationships_mother"></a>[Optional] Property mother</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/person                                                                                                |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/person                                                      |
+|                           |                                                                           |
 
 **Description:** A human being
 
 <details>
-<summary>
-
-#### <a name="relationships_mother_relationships"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `relationships`  
+<summary><strong> <a name="relationships_mother_relationships"></a>[Optional] Property relationships</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Relationships between this person and others
 
 <details>
-<summary>
-
-##### <a name="relationships_mother_relationships_mother"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `mother`  
+<summary><strong> <a name="relationships_mother_relationships_mother"></a>[Optional] Property mother</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | `[mother](#relationships_mother)`                                                                                   |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Same definition as**    | `[mother](#relationships_mother)`                                         |
+|                           |                                                                           |
 
 **Description:** A human being
 

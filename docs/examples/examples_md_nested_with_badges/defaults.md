@@ -1,24 +1,22 @@
 # Schema Docs
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 <details>
-<summary>
-
-## <a name="a"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `a`  
+<summary><strong> <a name="a"></a>[Optional] Property a</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `"Default from a"`                                                                                                  |
-| **Defined in**            | #/definitions/common                                                                                                |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Default**               | `"Default from a"`                                                        |
+| **Defined in**            | #/definitions/common                                                      |
+|                           |                                                                           |
 
 **Description:** Description of a
 
@@ -26,19 +24,17 @@
 </details>
 
 <details>
-<summary>
-
-## <a name="b"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `b`  
+<summary><strong> <a name="b"></a>[Optional] Property b</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `"Default from b"`                                                                                                  |
-| **Same definition as**    | `[a](#a)`                                                                                                           |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Default**               | `"Default from b"`                                                        |
+| **Same definition as**    | `[a](#a)`                                                                 |
+|                           |                                                                           |
 
 **Description:** A common description
 

@@ -115,7 +115,7 @@ configurations = [
         "title": "Nested Markdown with badges template",
         "dir_name": "examples_md_nested_with_badges",
         "config": GenerationConfiguration(
-            template_name="md_nested", deprecated_from_description=True, show_breadcrumbs=False, template_md_options={"badge_as_image": True, "show_heading_numbers": False, "show_array_restrictions": False}
+            template_name="md_nested", deprecated_from_description=True, show_breadcrumbs=False, template_md_options={"badge_as_image": False, "show_heading_numbers": False, "show_array_restrictions": False}
         ),
         "md_example_template": MD_EXAMPLE_MD_TEMPLATE,
     },

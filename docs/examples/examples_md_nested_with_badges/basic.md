@@ -2,25 +2,23 @@
 
 **Title:** Person
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 <details>
-<summary>
-
-## <a name="firstName"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `firstName`  
+<summary><strong> <a name="firstName"></a>[Optional] Property firstName</strong>  
 
 </summary>
 <blockquote>
 
 **Title:** Person
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** The person's first name.
 
@@ -28,19 +26,17 @@
 </details>
 
 <details>
-<summary>
-
-## <a name="lastName"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `lastName`  
+<summary><strong> <a name="lastName"></a>[Optional] Property lastName</strong>  
 
 </summary>
 <blockquote>
 
 **Title:** Person
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** The person's last name.
 
@@ -48,19 +44,17 @@
 </details>
 
 <details>
-<summary>
-
-## <a name="age"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `age`  
+<summary><strong> <a name="age"></a>[Optional] Property age</strong>  
 
 </summary>
 <blockquote>
 
 **Title:** Person
 
-| Type                      | `integer`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `integer`                                                                 |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Age in years which must be equal to or greater than zero.
 
@@ -73,17 +67,15 @@
 </details>
 
 <details>
-<summary>
-
-## <a name="driverLicenseId"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `driverLicenseId`  
+<summary><strong> <a name="driverLicenseId"></a>[Optional] Property driverLicenseId</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `combining`                                                                                                         |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `combining`                                                               |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 <blockquote>
 
@@ -93,23 +85,30 @@
 | [driver licence id](#driverLicenseId_allOf_i1) |
 |                                                |
 
+<blockquote>
+
 ### <a name="driverLicenseId_allOf_i0"></a>Property `no driver licence`
 
 **Title:** no driver licence
 
-| Type                      | `null`                                                                                                              |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `null`                                                                    |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
+
+</blockquote>
+<blockquote>
 
 ### <a name="driverLicenseId_allOf_i1"></a>Property `driver licence id`
 
 **Title:** driver licence id
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
+
+</blockquote>
 
 </blockquote>
 

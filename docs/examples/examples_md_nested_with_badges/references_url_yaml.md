@@ -1,70 +1,62 @@
 # Schema Docs
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Testing $ref with URL with YAML destination
 
 <details>
-<summary>
-
-## <a name="address"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `address`  
+<summary><strong> <a name="address"></a>[Optional] Property address</strong>  
 
 </summary>
 <blockquote>
 
 | Type                      | `object`                                                                                                                    |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.")         |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.")                                                   |
 | **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/docs/examples/cases/yaml.yaml#/definitions/address |
 |                           |                                                                                                                             |
 
 <details>
-<summary>
-
-### <a name="address_street_address"></a>![badge](https://img.shields.io/badge/Required-blue) Property `street_address`  
+<summary><strong> <a name="address_street_address"></a>[Required] Property street_address</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 </blockquote>
 </details>
 
 <details>
-<summary>
-
-### <a name="address_city"></a>![badge](https://img.shields.io/badge/Required-blue) Property `city`  
+<summary><strong> <a name="address_city"></a>[Required] Property city</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 </blockquote>
 </details>
 
 <details>
-<summary>
-
-### <a name="address_state"></a>![badge](https://img.shields.io/badge/Required-blue) Property `state`  
+<summary><strong> <a name="address_state"></a>[Required] Property state</strong>  
 
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 </blockquote>
 </details>

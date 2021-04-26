@@ -1,23 +1,21 @@
 # Schema Docs
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Testing $ref with URL
 
 <details>
-<summary>
-
-## <a name="firstName"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `firstName`  
+<summary><strong> <a name="firstName"></a>[Optional] Property firstName</strong>  
 
 </summary>
 <blockquote>
 
 | Type                      | `string`                                                                                                                      |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.")           |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.")                                                     |
 | **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/docs/examples/cases/basic.json#/properties/firstName |
 |                           |                                                                                                                               |
 
