@@ -162,11 +162,11 @@ class MarkdownTemplate(object):
         """Format a Markdown link"""
         return f"[{title}](#{link} {tooltip})"
 
-    def badge(self, name: str, color: str, value: str = "") -> str:
+    def badge(self, name: str, color: str, value: str = "", show_text: bool = False) -> str:
         """
         Badge as markdown image link if badge_as_image option set otherwise Badge as text
         """
-        if self.config.template_md_options["badge_as_image"]:
+        if self.config.template_md_options["badge_as_image"] and not show_text:
             value_str = ""
             if value and len(value) > 0:
                 value_str = "-" + quote_plus(value)
