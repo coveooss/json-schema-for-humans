@@ -53,6 +53,14 @@ These parameters can be provided with a json or yaml file, through the CLI, or t
 
 
 <details>
+<summary>Nested Markdown without badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_nested_default/Configuration.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_default/Configuration.md](examples/examples_md_nested_default/Configuration.md ':include')
+</details>
+
+
+<details>
 <summary>Nested Markdown with badges template - Click here to expand the rendered result...</summary>
 <a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_nested_with_badges/Configuration.md" target="_blank">Open it in github</a>
 

@@ -2,10 +2,10 @@
 
 **Title:** User Preference
 
-| Type                      | `object`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 <details>
 <summary><strong> <a name="favorite_os"></a>[Optional] Property favorite_os</strong>  
@@ -13,11 +13,11 @@
 </summary>
 <blockquote>
 
-| Type                      | `enum (of string)`                                                        |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Default**               | `"Linux"`                                                                 |
-|                           |                                                                           |
+| Type                      | `enum (of string)`                                                                                                  |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `"Linux"`                                                                                                           |
+|                           |                                                                                                                     |
 
 Must be one of:
 * "Windows"
@@ -33,11 +33,11 @@ Must be one of:
 </summary>
 <blockquote>
 
-| Type                      | `array of enum (of string)`                                               |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Default**               | `["white", "blue"]`                                                       |
-|                           |                                                                           |
+| Type                      | `array of enum (of string)`                                                                                         |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `["white", "blue"]`                                                                                                 |
+|                           |                                                                                                                     |
 
 | Each item of this array must be | Description |
 | ------------------------------- | ----------- |
@@ -46,10 +46,10 @@ Must be one of:
 
 ### <a name="favorite_colors_items"></a>items
 
-| Type                      | `enum (of string)`                                                        |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type                      | `enum (of string)`                                                                                                  |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 Must be one of:
 * "green"
@@ -68,11 +68,11 @@ Must be one of:
 </summary>
 <blockquote>
 
-| Type                      | `integer`                                                                 |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Default**               | `2`                                                                       |
-|                           |                                                                           |
+| Type                      | `integer`                                                                                                           |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `2`                                                                                                                 |
+|                           |                                                                                                                     |
 
 | Restrictions |        |
 | ------------ | ------ |

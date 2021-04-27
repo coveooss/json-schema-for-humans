@@ -1,9 +1,9 @@
 # Schema Docs
 
-| Type                      | `object`                                                |
-| ------------------------- | ------------------------------------------------------- |
-| **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
-|                           |                                                         |
+| Type                      | `object`                                                                                         |
+| ------------------------- | ------------------------------------------------------------------------------------------------ |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Not+allowed-red)](# "Additional Properties not allowed.") |
+|                           |                                                                                                  |
 
 <details>
 <summary><strong> <a name="name"></a>[Optional] Property name</strong>  
@@ -11,11 +11,11 @@
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/filled_string                                               |
-|                           |                                                                           |
+| Type                      | `string`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/filled_string                                                                                         |
+|                           |                                                                                                                     |
 
 **Description:** a filled string
 
@@ -33,11 +33,11 @@
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | `[name](#name)`                                                           |
-|                           |                                                                           |
+| Type                      | `string`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Same definition as**    | `[name](#name)`                                                                                                     |
+|                           |                                                                                                                     |
 
 **Description:** a filled string
 

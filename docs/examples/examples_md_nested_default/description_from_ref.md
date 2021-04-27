@@ -1,0 +1,48 @@
+# Schema Docs
+
+| Type                      | `object`                                                |
+| ------------------------- | ------------------------------------------------------- |
+| **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
+|                           |                                                         |
+
+<details>
+<summary><strong> <a name="name"></a>[Optional] Property name</strong>  
+
+</summary>
+<blockquote>
+
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/filled_string                                               |
+|                           |                                                                           |
+
+**Description:** a filled string
+
+| Restrictions   |   |
+| -------------- | - |
+| **Min length** | 1 |
+|                |   |
+
+</blockquote>
+</details>
+
+<details>
+<summary><strong> <a name="alignment"></a>[Optional] Property alignment</strong>  
+
+</summary>
+<blockquote>
+
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Same definition as**    | `[name](#name)`                                                           |
+|                           |                                                                           |
+
+**Description:** a filled string
+
+</blockquote>
+</details>
+
+----------------------------------------------------------------------------------------------------------------------------
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on date
