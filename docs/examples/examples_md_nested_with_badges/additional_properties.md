@@ -1,5 +1,12 @@
 # Person
 
+- [1. [Optional] Property Person > subType1](#subType1)
+  - [1.1. [Optional] Property Person > subType1 > subProp1](#subType1_subProp1)
+- [2. [Optional] Property Person > subType2](#subType2)
+  - [2.1. [Optional] Property Person > subType2 > subProp2](#subType2_subProp2)
+- [3. [Optional] Property Person > additionalProperties](#additionalProperties)
+  - [3.1. [Optional] Property Person > additionalProperties > propA](#additionalProperties_propA)
+
 **Title:** Person
 
 | Type                      | `object`                                                                                                                                            |
@@ -8,7 +15,7 @@
 |                           |                                                                                                                                                     |
 
 <details>
-<summary><strong> <a name="subType1"></a>[Optional] Property subType1</strong>  
+<summary><strong> <a name="subType1"></a>1. [Optional] Property Person > subType1</strong>  
 
 </summary>
 <blockquote>
@@ -21,7 +28,7 @@
 **Description:** A sub type with additionalProperties false.
 
 <details>
-<summary><strong> <a name="subType1_subProp1"></a>[Optional] Property subProp1</strong>  
+<summary><strong> <a name="subType1_subProp1"></a>1.1. [Optional] Property Person > subType1 > subProp1</strong>  
 
 </summary>
 <blockquote>
@@ -38,7 +45,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="subType2"></a>[Optional] Property subType2</strong>  
+<summary><strong> <a name="subType2"></a>2. [Optional] Property Person > subType2</strong>  
 
 </summary>
 <blockquote>
@@ -51,7 +58,7 @@
 **Description:** A sub type with additionalProperties true.
 
 <details>
-<summary><strong> <a name="subType2_subProp2"></a>[Optional] Property subProp2</strong>  
+<summary><strong> <a name="subType2_subProp2"></a>2.1. [Optional] Property Person > subType2 > subProp2</strong>  
 
 </summary>
 <blockquote>
@@ -68,7 +75,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="additionalProperties"></a>[Optional] Property additionalProperties</strong>  
+<summary><strong> <a name="additionalProperties"></a>3. [Optional] Property Person > additionalProperties</strong>  
 
 </summary>
 <blockquote>
@@ -81,7 +88,7 @@
 **Description:** additionalProperties schema.
 
 <details>
-<summary><strong> <a name="additionalProperties_propA"></a>[Optional] Property propA</strong>  
+<summary><strong> <a name="additionalProperties_propA"></a>3.1. [Optional] Property Person > additionalProperties > propA</strong>  
 
 </summary>
 <blockquote>

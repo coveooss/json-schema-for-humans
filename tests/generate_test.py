@@ -340,7 +340,7 @@ def test_description_with_ref_link_to_reused_ref() -> None:
 
 
 def test_description_markdown_with_default_options() -> None:
-    """Override default options """
+    """Override default options"""
     soup = generate_case("description_markdown", GenerationConfiguration())
 
     assert (
@@ -350,7 +350,7 @@ def test_description_markdown_with_default_options() -> None:
 
 
 def test_description_markdown_with_custom_options() -> None:
-    """Same as "test_description_markdown_with_default_options" but with option to render list """
+    """Same as "test_description_markdown_with_default_options" but with option to render list"""
     soup = generate_case(
         "description_markdown",
         GenerationConfiguration(

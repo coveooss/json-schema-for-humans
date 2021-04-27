@@ -1,5 +1,15 @@
 # Schema Docs
 
+- [1. [Optional] Property root > address](#address)
+  - [1.1. root > address > items > a number](#address_items_i0)
+  - [1.2. root > address > items > item 1](#address_items_i1)
+  - [1.3. root > address > items > again a string](#address_items_i2)
+  - [1.4. root > address > items > finally an enum](#address_items_i3)
+- [2. [Optional] Property root > addressLines](#addressLines)
+  - [2.1. root > addressLines > items > item 0](#addressLines_items_i0)
+- [3. [Optional] Property root > arrayEmpty](#arrayEmpty)
+  - [3.1. root > arrayEmpty > items](#arrayEmpty_items)
+
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
@@ -8,7 +18,7 @@
 **Description:** A little food fun
 
 <details>
-<summary><strong> <a name="address"></a>[Optional] Property address</strong>  
+<summary><strong> <a name="address"></a>1. [Optional] Property root > address</strong>  
 
 </summary>
 <blockquote>
@@ -18,6 +28,15 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 |                           |                                                                           |
 
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | True               |
+| **Tuple validation** | See below          |
+|                      |                    |
+
 | Each item of this array must be      | Description          |
 | ------------------------------------ | -------------------- |
 | [a number](#address_items_i0)        | -                    |
@@ -26,7 +45,7 @@
 | [finally an enum](#address_items_i3) | -                    |
 |                                      |                      |
 
-### <a name="address_items_i0"></a>a number
+### <a name="address_items_i0"></a>1.1. root > address > items > a number
 
 **Title:** a number
 
@@ -35,7 +54,7 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 |                           |                                                                           |
 
-### <a name="address_items_i1"></a>item 1
+### <a name="address_items_i1"></a>1.2. root > address > items > item 1
 
 | Type                      | `string`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -44,7 +63,7 @@
 
 **Description:** followed by a string
 
-### <a name="address_items_i2"></a>again a string
+### <a name="address_items_i2"></a>1.3. root > address > items > again a string
 
 **Title:** again a string
 
@@ -58,7 +77,7 @@ Must be one of:
 * "Avenue"
 * "Boulevard"
 
-### <a name="address_items_i3"></a>finally an enum
+### <a name="address_items_i3"></a>1.4. root > address > items > finally an enum
 
 **Title:** finally an enum
 
@@ -89,7 +108,7 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="addressLines"></a>[Optional] Property addressLines</strong>  
+<summary><strong> <a name="addressLines"></a>2. [Optional] Property root > addressLines</strong>  
 
 </summary>
 <blockquote>
@@ -101,12 +120,21 @@ Must be one of:
 
 **Description:** list of address lines
 
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+|                      |                    |
+
 | Each item of this array must be  | Description |
 | -------------------------------- | ----------- |
 | [item 0](#addressLines_items_i0) | -           |
 |                                  |             |
 
-### <a name="addressLines_items_i0"></a>item 0
+### <a name="addressLines_items_i0"></a>2.1. root > addressLines > items > item 0
 
 | Type                      | `string`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -117,7 +145,7 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="arrayEmpty"></a>[Optional] Property arrayEmpty</strong>  
+<summary><strong> <a name="arrayEmpty"></a>3. [Optional] Property root > arrayEmpty</strong>  
 
 </summary>
 <blockquote>
@@ -127,12 +155,21 @@ Must be one of:
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 |                           |                                                                           |
 
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+|                      |                    |
+
 | Each item of this array must be | Description |
 | ------------------------------- | ----------- |
 | [items](#arrayEmpty_items)      | -           |
 |                                 |             |
 
-### <a name="arrayEmpty_items"></a>items
+### <a name="arrayEmpty_items"></a>3.1. root > arrayEmpty > items
 
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |

@@ -1,12 +1,15 @@
 # Schema Docs
 
+- [1. [Optional] Property root > name](#name)
+- [2. [Optional] Property root > alignment](#alignment)
+
 | Type                      | `object`                                                                                         |
 | ------------------------- | ------------------------------------------------------------------------------------------------ |
 | **Additional properties** | [![badge](https://img.shields.io/badge/Not+allowed-red)](# "Additional Properties not allowed.") |
 |                           |                                                                                                  |
 
 <details>
-<summary><strong> <a name="name"></a>[Optional] Property name</strong>  
+<summary><strong> <a name="name"></a>1. [Optional] Property root > name</strong>  
 
 </summary>
 <blockquote>
@@ -28,7 +31,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="alignment"></a>[Optional] Property alignment</strong>  
+<summary><strong> <a name="alignment"></a>2. [Optional] Property root > alignment</strong>  
 
 </summary>
 <blockquote>

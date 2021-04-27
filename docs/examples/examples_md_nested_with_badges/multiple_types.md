@@ -1,5 +1,10 @@
 # Person
 
+- [1. [Optional] Property Person > firstName](#firstName)
+- [2. [Optional] Property Person > lastName](#lastName)
+- [3. [Optional] Property Person > age](#age)
+- [4. [Optional] Property Person > anything](#anything)
+
 **Title:** Person
 
 | Type                      | `object`                                                                                                            |
@@ -8,7 +13,7 @@
 |                           |                                                                                                                     |
 
 <details>
-<summary><strong> <a name="firstName"></a>[Optional] Property firstName</strong>  
+<summary><strong> <a name="firstName"></a>1. [Optional] Property Person > firstName</strong>  
 
 </summary>
 <blockquote>
@@ -24,7 +29,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="lastName"></a>[Optional] Property lastName</strong>  
+<summary><strong> <a name="lastName"></a>2. [Optional] Property Person > lastName</strong>  
 
 </summary>
 <blockquote>
@@ -40,7 +45,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="age"></a>[Optional] Property age</strong>  
+<summary><strong> <a name="age"></a>3. [Optional] Property Person > age</strong>  
 
 </summary>
 <blockquote>
@@ -61,7 +66,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="anything"></a>[Optional] Property anything</strong>  
+<summary><strong> <a name="anything"></a>4. [Optional] Property Person > anything</strong>  
 
 </summary>
 <blockquote>

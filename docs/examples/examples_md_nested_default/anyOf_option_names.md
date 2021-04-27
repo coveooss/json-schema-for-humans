@@ -1,5 +1,11 @@
 # Schema Docs
 
+- [1. [Required] Property root > storage](#storage)
+  - [1.1. Property `root > storage > anyOf > diskDevice`](#storage_anyOf_i0)
+  - [1.2. Property `root > storage > anyOf > diskUUID`](#storage_anyOf_i1)
+  - [1.3. Property `root > storage > anyOf > item 2`](#storage_anyOf_i2)
+  - [1.4. Property `root > storage > anyOf > tmpfs`](#storage_anyOf_i3)
+
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
@@ -8,7 +14,7 @@
 **Description:** JSON Schema for an fstab entry
 
 <details>
-<summary><strong> <a name="storage"></a>[Required] Property storage</strong>  
+<summary><strong> <a name="storage"></a>1. [Required] Property root > storage</strong>  
 
 </summary>
 <blockquote>
@@ -30,7 +36,7 @@
 
 <blockquote>
 
-### <a name="storage_anyOf_i0"></a>Property `diskDevice`
+### <a name="storage_anyOf_i0"></a>1.1. Property `root > storage > anyOf > diskDevice`
 
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -41,7 +47,7 @@
 </blockquote>
 <blockquote>
 
-### <a name="storage_anyOf_i1"></a>Property `diskUUID`
+### <a name="storage_anyOf_i1"></a>1.2. Property `root > storage > anyOf > diskUUID`
 
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -52,7 +58,7 @@
 </blockquote>
 <blockquote>
 
-### <a name="storage_anyOf_i2"></a>Property `item 2`
+### <a name="storage_anyOf_i2"></a>1.3. Property `root > storage > anyOf > item 2`
 
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -62,7 +68,7 @@
 </blockquote>
 <blockquote>
 
-### <a name="storage_anyOf_i3"></a>Property `tmpfs`
+### <a name="storage_anyOf_i3"></a>1.4. Property `root > storage > anyOf > tmpfs`
 
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |

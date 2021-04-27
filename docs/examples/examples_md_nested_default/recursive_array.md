@@ -1,5 +1,10 @@
 # Person
 
+- [1. [Optional] Property Person > person](#person)
+  - [1.1. Person > person > person](#person_items)
+    - [1.1.1. [Optional] Property Person > person > items > children](#person_items_children)
+      - [1.1.1.1. Person > person > items > children > person](#person_items_children_items)
+
 **Title:** Person
 
 | Type                      | `object`                                                                  |
@@ -8,7 +13,7 @@
 |                           |                                                                           |
 
 <details>
-<summary><strong> <a name="person"></a>[Optional] Property person</strong>  
+<summary><strong> <a name="person"></a>1. [Optional] Property Person > person</strong>  
 
 </summary>
 <blockquote>
@@ -20,12 +25,21 @@
 
 **Description:** A list of people
 
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+|                      |                    |
+
 | Each item of this array must be | Description   |
 | ------------------------------- | ------------- |
 | [person](#person_items)         | A human being |
 |                                 |               |
 
-### <a name="person_items"></a>person
+### <a name="person_items"></a>1.1. Person > person > person
 
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -36,7 +50,7 @@
 **Description:** A human being
 
 <details>
-<summary><strong> <a name="person_items_children"></a>[Optional] Property children</strong>  
+<summary><strong> <a name="person_items_children"></a>1.1.1. [Optional] Property Person > person > items > children</strong>  
 
 </summary>
 <blockquote>
@@ -48,12 +62,21 @@
 
 **Description:** The children they had
 
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+|                      |                    |
+
 | Each item of this array must be        | Description   |
 | -------------------------------------- | ------------- |
 | [person](#person_items_children_items) | A human being |
 |                                        |               |
 
-##### <a name="person_items_children_items"></a>person
+##### <a name="person_items_children_items"></a>1.1.1.1. Person > person > items > children > person
 
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |

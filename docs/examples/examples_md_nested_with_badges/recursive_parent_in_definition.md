@@ -1,5 +1,10 @@
 # Person
 
+- [1. [Optional] Property Person > relationships](#relationships)
+  - [1.1. [Optional] Property Person > relationships > mother](#relationships_mother)
+    - [1.1.1. [Optional] Property Person > relationships > mother > relationships](#relationships_mother_relationships)
+      - [1.1.1.1. [Optional] Property Person > relationships > mother > relationships > mother](#relationships_mother_relationships_mother)
+
 **Title:** Person
 
 | Type                      | `object`                                                                                                            |
@@ -8,7 +13,7 @@
 |                           |                                                                                                                     |
 
 <details>
-<summary><strong> <a name="relationships"></a>[Optional] Property relationships</strong>  
+<summary><strong> <a name="relationships"></a>1. [Optional] Property Person > relationships</strong>  
 
 </summary>
 <blockquote>
@@ -22,7 +27,7 @@
 **Description:** Relationships between this person and others
 
 <details>
-<summary><strong> <a name="relationships_mother"></a>[Optional] Property mother</strong>  
+<summary><strong> <a name="relationships_mother"></a>1.1. [Optional] Property Person > relationships > mother</strong>  
 
 </summary>
 <blockquote>
@@ -36,7 +41,7 @@
 **Description:** A human being
 
 <details>
-<summary><strong> <a name="relationships_mother_relationships"></a>[Optional] Property relationships</strong>  
+<summary><strong> <a name="relationships_mother_relationships"></a>1.1.1. [Optional] Property Person > relationships > mother > relationships</strong>  
 
 </summary>
 <blockquote>
@@ -49,7 +54,7 @@
 **Description:** Relationships between this person and others
 
 <details>
-<summary><strong> <a name="relationships_mother_relationships_mother"></a>[Optional] Property mother</strong>  
+<summary><strong> <a name="relationships_mother_relationships_mother"></a>1.1.1.1. [Optional] Property Person > relationships > mother > relationships > mother</strong>  
 
 </summary>
 <blockquote>

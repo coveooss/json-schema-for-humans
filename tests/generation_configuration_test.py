@@ -9,7 +9,7 @@ def test_default_values() -> None:
         "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
         "tables": None,
     }
-    assert config.template_md_options == {"badge_as_image": False}
+    assert config.template_md_options["badge_as_image"] == False
 
 
 def test_override_markdown_options() -> None:
@@ -64,16 +64,21 @@ def test_override_template_md_options() -> None:
             "new_property": True,
         }
     )
-    assert config.template_md_options == {"new_property": True, "badge_as_image": False}
+    assert config.template_md_options == {
+        "new_property": True,
+        "badge_as_image": False,
+        "show_heading_numbers": True,
+        "show_array_restrictions": True,
+    }
 
     # override badge_as_image key
     config = GenerationConfiguration(
         deprecated_from_description=True, template_name="md", template_md_options={"badge_as_image": "test"}
     )
-    assert config.template_md_options == {"badge_as_image": "test"}
+    assert config.template_md_options["badge_as_image"] == "test"
 
     # override badge_as_image key
     config = GenerationConfiguration(
         deprecated_from_description=True, template_name="md", template_md_options={"badge_as_image": True}
     )
-    assert config.template_md_options == {"badge_as_image": True}
+    assert config.template_md_options["badge_as_image"] == True

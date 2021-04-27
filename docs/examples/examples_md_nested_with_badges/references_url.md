@@ -1,5 +1,7 @@
 # Schema Docs
 
+- [1. [Optional] Property root > firstName](#firstName)
+
 | Type                      | `object`                                                                                                            |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
@@ -8,7 +10,7 @@
 **Description:** Testing $ref with URL
 
 <details>
-<summary><strong> <a name="firstName"></a>[Optional] Property firstName</strong>  
+<summary><strong> <a name="firstName"></a>1. [Optional] Property root > firstName</strong>  
 
 </summary>
 <blockquote>

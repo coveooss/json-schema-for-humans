@@ -1,5 +1,16 @@
 # Delivery Schema
 
+- [1. [Optional] Property Delivery Schema > shipping_address](#shipping_address)
+  - [1.1. [Required] Property Delivery Schema > shipping_address > street_address](#shipping_address_street_address)
+  - [1.2. [Required] Property Delivery Schema > shipping_address > city](#shipping_address_city)
+  - [1.3. [Required] Property Delivery Schema > shipping_address > state](#shipping_address_state)
+- [2. [Optional] Property Delivery Schema > billing_address](#billing_address)
+- [3. [Optional] Property Delivery Schema > delivery_info](#delivery_info)
+  - [3.1. Property `Delivery Schema > delivery_info > oneOf > classic`](#delivery_info_oneOf_i0)
+    - [3.1.1. [Optional] Property Delivery Schema > delivery_info > oneOf > item 0 > price](#delivery_info_oneOf_i0_price)
+  - [3.2. Property `Delivery Schema > delivery_info > oneOf > gift`](#delivery_info_oneOf_i1)
+    - [3.2.1. [Optional] Property Delivery Schema > delivery_info > oneOf > item 1 > with_wrap](#delivery_info_oneOf_i1_with_wrap)
+
 **Title:** Delivery Schema
 
 | Type                      | `object`                                                                                                            |
@@ -8,7 +19,7 @@
 |                           |                                                                                                                     |
 
 <details>
-<summary><strong> <a name="shipping_address"></a>[Optional] Property shipping_address</strong>  
+<summary><strong> <a name="shipping_address"></a>1. [Optional] Property Delivery Schema > shipping_address</strong>  
 
 </summary>
 <blockquote>
@@ -22,7 +33,7 @@
 **Description:** Exact address
 
 <details>
-<summary><strong> <a name="shipping_address_street_address"></a>[Required] Property street_address</strong>  
+<summary><strong> <a name="shipping_address_street_address"></a>1.1. [Required] Property Delivery Schema > shipping_address > street_address</strong>  
 
 </summary>
 <blockquote>
@@ -36,7 +47,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="shipping_address_city"></a>[Required] Property city</strong>  
+<summary><strong> <a name="shipping_address_city"></a>1.2. [Required] Property Delivery Schema > shipping_address > city</strong>  
 
 </summary>
 <blockquote>
@@ -50,7 +61,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="shipping_address_state"></a>[Required] Property state</strong>  
+<summary><strong> <a name="shipping_address_state"></a>1.3. [Required] Property Delivery Schema > shipping_address > state</strong>  
 
 </summary>
 <blockquote>
@@ -67,7 +78,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="billing_address"></a>[Optional] Property billing_address</strong>  
+<summary><strong> <a name="billing_address"></a>2. [Optional] Property Delivery Schema > billing_address</strong>  
 
 </summary>
 <blockquote>
@@ -84,7 +95,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="delivery_info"></a>[Optional] Property delivery_info</strong>  
+<summary><strong> <a name="delivery_info"></a>3. [Optional] Property Delivery Schema > delivery_info</strong>  
 
 </summary>
 <blockquote>
@@ -107,7 +118,7 @@
 
 <blockquote>
 
-### <a name="delivery_info_oneOf_i0"></a>Property `classic`
+### <a name="delivery_info_oneOf_i0"></a>3.1. Property `Delivery Schema > delivery_info > oneOf > classic`
 
 | Type                      | `object`                                                                                                            |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -116,7 +127,7 @@
 |                           |                                                                                                                     |
 
 <details>
-<summary><strong> <a name="delivery_info_oneOf_i0_price"></a>[Optional] Property price</strong>  
+<summary><strong> <a name="delivery_info_oneOf_i0_price"></a>3.1.1. [Optional] Property Delivery Schema > delivery_info > oneOf > item 0 > price</strong>  
 
 </summary>
 <blockquote>
@@ -132,7 +143,7 @@
 </blockquote>
 <blockquote>
 
-### <a name="delivery_info_oneOf_i1"></a>Property `gift`
+### <a name="delivery_info_oneOf_i1"></a>3.2. Property `Delivery Schema > delivery_info > oneOf > gift`
 
 | Type                      | `object`                                                                                                            |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -143,7 +154,7 @@
 **Description:** The delivery is a gift, no prices displayed
 
 <details>
-<summary><strong> <a name="delivery_info_oneOf_i1_with_wrap"></a>[Optional] Property with_wrap</strong>  
+<summary><strong> <a name="delivery_info_oneOf_i1_with_wrap"></a>3.2.1. [Optional] Property Delivery Schema > delivery_info > oneOf > item 1 > with_wrap</strong>  
 
 </summary>
 <blockquote>

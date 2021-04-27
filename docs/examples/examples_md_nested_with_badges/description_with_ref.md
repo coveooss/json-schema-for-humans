@@ -1,12 +1,16 @@
 # Schema Docs
 
+- [1. [Required] Property root > outer](#outer)
+  - [1.1. [Required] Property root > outer > inner](#outer_inner)
+- [2. [Optional] Property root > outer2](#outer2)
+
 | Type                      | `object`                                                                                         |
 | ------------------------- | ------------------------------------------------------------------------------------------------ |
 | **Additional properties** | [![badge](https://img.shields.io/badge/Not+allowed-red)](# "Additional Properties not allowed.") |
 |                           |                                                                                                  |
 
 <details>
-<summary><strong> <a name="outer"></a>[Required] Property outer</strong>  
+<summary><strong> <a name="outer"></a>1. [Required] Property root > outer</strong>  
 
 </summary>
 <blockquote>
@@ -20,7 +24,7 @@
 **Description:** We should see this
 
 <details>
-<summary><strong> <a name="outer_inner"></a>[Required] Property inner</strong>  
+<summary><strong> <a name="outer_inner"></a>1.1. [Required] Property root > outer > inner</strong>  
 
 </summary>
 <blockquote>
@@ -39,7 +43,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="outer2"></a>[Optional] Property outer2</strong>  
+<summary><strong> <a name="outer2"></a>2. [Optional] Property root > outer2</strong>  
 
 </summary>
 <blockquote>

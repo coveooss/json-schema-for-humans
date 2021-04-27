@@ -1,5 +1,25 @@
 # JSON Schema for Humans configuration file
 
+- [1. [Optional] Property JSON Schema for Humans configuration file > minify](#minify)
+- [2. [Optional] Property JSON Schema for Humans configuration file > description_is_markdown](#description_is_markdown)
+- [3. [Optional] Property JSON Schema for Humans configuration file > expand_buttons](#expand_buttons)
+- [4. [Optional] Property JSON Schema for Humans configuration file > show_breadcrumbs](#show_breadcrumbs)
+- [5. [Optional] Property JSON Schema for Humans configuration file > collapse_long_descriptions](#collapse_long_descriptions)
+- [6. [Optional] Property JSON Schema for Humans configuration file > link_to_reused_ref](#link_to_reused_ref)
+- [7. [Optional] Property JSON Schema for Humans configuration file > recursive_detection_depth](#recursive_detection_depth)
+- [8. [Optional] Property JSON Schema for Humans configuration file > deprecated_from_description](#deprecated_from_description)
+- [9. [Optional] Property JSON Schema for Humans configuration file > default_from_description](#default_from_description)
+- [10. [Optional] Property JSON Schema for Humans configuration file > copy_css](#copy_css)
+- [11. [Optional] Property JSON Schema for Humans configuration file > copy_js](#copy_js)
+- [12. [Optional] Property JSON Schema for Humans configuration file > templates_directory](#templates_directory)
+- [13. [Optional] Property JSON Schema for Humans configuration file > template_name](#template_name)
+- [14. [Optional] Property JSON Schema for Humans configuration file > show_toc](#show_toc)
+- [15. [Optional] Property JSON Schema for Humans configuration file > markdown_options](#markdown_options)
+- [16. [Optional] Property JSON Schema for Humans configuration file > template_md_options](#template_md_options)
+  - [16.1. [Optional] Property JSON Schema for Humans configuration file > template_md_options > badge_as_image](#template_md_options_badge_as_image)
+  - [16.2. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_heading_numbers](#template_md_options_show_heading_numbers)
+  - [16.3. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_array_restrictions](#template_md_options_show_array_restrictions)
+
 **Title:** JSON Schema for Humans configuration file
 
 | Type                      | `object`                                                                                                            |
@@ -16,7 +36,7 @@ Configuration parameters can be provided in several ways:
 - From code, by providing a GenerationConfiguration object to the called generation method.
 
 <details>
-<summary><strong> <a name="minify"></a>[Optional] Property minify</strong>  
+<summary><strong> <a name="minify"></a>1. [Optional] Property JSON Schema for Humans configuration file > minify</strong>  
 
 </summary>
 <blockquote>
@@ -33,7 +53,7 @@ Configuration parameters can be provided in several ways:
 </details>
 
 <details>
-<summary><strong> <a name="description_is_markdown"></a>[Optional] Property description_is_markdown</strong>  
+<summary><strong> <a name="description_is_markdown"></a>2. [Optional] Property JSON Schema for Humans configuration file > description_is_markdown</strong>  
 
 </summary>
 <blockquote>
@@ -50,7 +70,7 @@ Configuration parameters can be provided in several ways:
 </details>
 
 <details>
-<summary><strong> <a name="expand_buttons"></a>[Optional] Property expand_buttons</strong>  
+<summary><strong> <a name="expand_buttons"></a>3. [Optional] Property JSON Schema for Humans configuration file > expand_buttons</strong>  
 
 </summary>
 <blockquote>
@@ -67,7 +87,7 @@ Configuration parameters can be provided in several ways:
 </details>
 
 <details>
-<summary><strong> <a name="show_breadcrumbs"></a>[Optional] Property show_breadcrumbs</strong>  
+<summary><strong> <a name="show_breadcrumbs"></a>4. [Optional] Property JSON Schema for Humans configuration file > show_breadcrumbs</strong>  
 
 </summary>
 <blockquote>
@@ -84,7 +104,7 @@ Configuration parameters can be provided in several ways:
 </details>
 
 <details>
-<summary><strong> <a name="collapse_long_descriptions"></a>[Optional] Property collapse_long_descriptions</strong>  
+<summary><strong> <a name="collapse_long_descriptions"></a>5. [Optional] Property JSON Schema for Humans configuration file > collapse_long_descriptions</strong>  
 
 </summary>
 <blockquote>
@@ -101,7 +121,7 @@ Configuration parameters can be provided in several ways:
 </details>
 
 <details>
-<summary><strong> <a name="link_to_reused_ref"></a>[Optional] Property link_to_reused_ref</strong>  
+<summary><strong> <a name="link_to_reused_ref"></a>6. [Optional] Property JSON Schema for Humans configuration file > link_to_reused_ref</strong>  
 
 </summary>
 <blockquote>
@@ -120,7 +140,7 @@ Configuration parameters can be provided in several ways:
 </details>
 
 <details>
-<summary><strong> <a name="recursive_detection_depth"></a>[Optional] Property recursive_detection_depth</strong>  
+<summary><strong> <a name="recursive_detection_depth"></a>7. [Optional] Property JSON Schema for Humans configuration file > recursive_detection_depth</strong>  
 
 </summary>
 <blockquote>
@@ -142,7 +162,7 @@ In other words, if a schema has a deeply nested element that refers to itself, t
 </details>
 
 <details>
-<summary><strong> <a name="deprecated_from_description"></a>[Optional] Property deprecated_from_description</strong>  
+<summary><strong> <a name="deprecated_from_description"></a>8. [Optional] Property JSON Schema for Humans configuration file > deprecated_from_description</strong>  
 
 </summary>
 <blockquote>
@@ -159,7 +179,7 @@ In other words, if a schema has a deeply nested element that refers to itself, t
 </details>
 
 <details>
-<summary><strong> <a name="default_from_description"></a>[Optional] Property default_from_description</strong>  
+<summary><strong> <a name="default_from_description"></a>9. [Optional] Property JSON Schema for Humans configuration file > default_from_description</strong>  
 
 </summary>
 <blockquote>
@@ -178,7 +198,7 @@ The default value from the "default" attribute will be used in priority.
 </details>
 
 <details>
-<summary><strong> <a name="copy_css"></a>[Optional] Property copy_css</strong>  
+<summary><strong> <a name="copy_css"></a>10. [Optional] Property JSON Schema for Humans configuration file > copy_css</strong>  
 
 </summary>
 <blockquote>
@@ -195,7 +215,7 @@ The default value from the "default" attribute will be used in priority.
 </details>
 
 <details>
-<summary><strong> <a name="copy_js"></a>[Optional] Property copy_js</strong>  
+<summary><strong> <a name="copy_js"></a>11. [Optional] Property JSON Schema for Humans configuration file > copy_js</strong>  
 
 </summary>
 <blockquote>
@@ -214,7 +234,7 @@ This file contains the logic for the anchor links.
 </details>
 
 <details>
-<summary><strong> <a name="templates_directory"></a>[Optional] Property templates_directory</strong>  
+<summary><strong> <a name="templates_directory"></a>12. [Optional] Property JSON Schema for Humans configuration file > templates_directory</strong>  
 
 </summary>
 <blockquote>
@@ -230,7 +250,7 @@ This file contains the logic for the anchor links.
 </details>
 
 <details>
-<summary><strong> <a name="template_name"></a>[Optional] Property template_name</strong>  
+<summary><strong> <a name="template_name"></a>13. [Optional] Property JSON Schema for Humans configuration file > template_name</strong>  
 
 </summary>
 <blockquote>
@@ -254,7 +274,24 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="markdown_options"></a>[Optional] Property markdown_options</strong>  
+<summary><strong> <a name="show_toc"></a>14. [Optional] Property JSON Schema for Humans configuration file > show_toc</strong>  
+
+</summary>
+<blockquote>
+
+| Type                      | `boolean`                                                                                                           |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `true`                                                                                                              |
+|                           |                                                                                                                     |
+
+**Description:** Whether to render table of contents.
+
+</blockquote>
+</details>
+
+<details>
+<summary><strong> <a name="markdown_options"></a>15. [Optional] Property JSON Schema for Humans configuration file > markdown_options</strong>  
 
 </summary>
 <blockquote>
@@ -287,7 +324,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </details>
 
 <details>
-<summary><strong> <a name="template_md_options"></a>[Optional] Property template_md_options</strong>  
+<summary><strong> <a name="template_md_options"></a>16. [Optional] Property JSON Schema for Humans configuration file > template_md_options</strong>  
 
 </summary>
 <blockquote>
@@ -300,7 +337,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 **Description:** specific options to md template
 
 <details>
-<summary><strong> <a name="template_md_options_badge_as_image"></a>[Optional] Property badge_as_image</strong>  
+<summary><strong> <a name="template_md_options_badge_as_image"></a>16.1. [Optional] Property JSON Schema for Humans configuration file > template_md_options > badge_as_image</strong>  
 
 </summary>
 <blockquote>
@@ -314,6 +351,44 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 **Description:** if true generate badges(eg: optional, required) using embedded image (https://img.shields.io).
 
  if false, use text instead
+
+</blockquote>
+</details>
+
+<details>
+<summary><strong> <a name="template_md_options_show_heading_numbers"></a>16.2. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_heading_numbers</strong>  
+
+</summary>
+<blockquote>
+
+| Type                      | `boolean`                                                                                                           |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `true`                                                                                                              |
+|                           |                                                                                                                     |
+
+**Description:** if true generate heading numbers to correspond to table of contents.
+
+ if false, do not generate heading numbers
+
+</blockquote>
+</details>
+
+<details>
+<summary><strong> <a name="template_md_options_show_array_restrictions"></a>16.3. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_array_restrictions</strong>  
+
+</summary>
+<blockquote>
+
+| Type                      | `boolean`                                                                                                           |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `true`                                                                                                              |
+|                           |                                                                                                                     |
+
+**Description:** if true generate array restrictions section.
+
+ if false, do not generate
 
 </blockquote>
 </details>

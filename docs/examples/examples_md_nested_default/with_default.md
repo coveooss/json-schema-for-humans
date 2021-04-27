@@ -1,5 +1,10 @@
 # User Preference
 
+- [1. [Optional] Property User Preference > favorite_os](#favorite_os)
+- [2. [Optional] Property User Preference > favorite_colors](#favorite_colors)
+  - [2.1. User Preference > favorite_colors > items](#favorite_colors_items)
+- [3. [Optional] Property User Preference > desired_number_of_shoes](#desired_number_of_shoes)
+
 **Title:** User Preference
 
 | Type                      | `object`                                                                  |
@@ -8,7 +13,7 @@
 |                           |                                                                           |
 
 <details>
-<summary><strong> <a name="favorite_os"></a>[Optional] Property favorite_os</strong>  
+<summary><strong> <a name="favorite_os"></a>1. [Optional] Property User Preference > favorite_os</strong>  
 
 </summary>
 <blockquote>
@@ -28,7 +33,7 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="favorite_colors"></a>[Optional] Property favorite_colors</strong>  
+<summary><strong> <a name="favorite_colors"></a>2. [Optional] Property User Preference > favorite_colors</strong>  
 
 </summary>
 <blockquote>
@@ -39,12 +44,21 @@ Must be one of:
 | **Default**               | `["white", "blue"]`                                                       |
 |                           |                                                                           |
 
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+|                      |                    |
+
 | Each item of this array must be | Description |
 | ------------------------------- | ----------- |
 | [items](#favorite_colors_items) | -           |
 |                                 |             |
 
-### <a name="favorite_colors_items"></a>items
+### <a name="favorite_colors_items"></a>2.1. User Preference > favorite_colors > items
 
 | Type                      | `enum (of string)`                                                        |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -63,7 +77,7 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="desired_number_of_shoes"></a>[Optional] Property desired_number_of_shoes</strong>  
+<summary><strong> <a name="desired_number_of_shoes"></a>3. [Optional] Property User Preference > desired_number_of_shoes</strong>  
 
 </summary>
 <blockquote>

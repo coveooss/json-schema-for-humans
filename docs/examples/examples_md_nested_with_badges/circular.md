@@ -1,5 +1,8 @@
 # Circular reference Schema
 
+- [1. [Optional] Property Circular reference Schema > person](#person)
+  - [1.1. [Optional] Property Circular reference Schema > person > a1](#person_a1)
+
 **Title:** Circular reference Schema
 
 | Type                      | `object`                                                                                                            |
@@ -8,7 +11,7 @@
 |                           |                                                                                                                     |
 
 <details>
-<summary><strong> <a name="person"></a>[Optional] Property person</strong>  
+<summary><strong> <a name="person"></a>1. [Optional] Property Circular reference Schema > person</strong>  
 
 </summary>
 <blockquote>
@@ -20,7 +23,7 @@
 |                           |                                                                                                                     |
 
 <details>
-<summary><strong> <a name="person_a1"></a>[Optional] Property a1</strong>  
+<summary><strong> <a name="person_a1"></a>1.1. [Optional] Property Circular reference Schema > person > a1</strong>  
 
 </summary>
 <blockquote>

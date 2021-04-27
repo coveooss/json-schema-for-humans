@@ -1,12 +1,19 @@
 # Schema Docs
 
+- [1. [Optional] Property root > billing_address](#billing_address)
+  - [1.1. [Required] Property root > billing_address > street_address](#billing_address_street_address)
+  - [1.2. [Required] Property root > billing_address > city](#billing_address_city)
+  - [1.3. [Required] Property root > billing_address > state](#billing_address_state)
+  - [1.4. [Optional] Property root > billing_address > futureProperty](#billing_address_futureProperty)
+- [2. [Optional] Property root > shipping_address](#shipping_address)
+
 | Type                      | `object`                                                                                                            |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
 |                           |                                                                                                                     |
 
 <details>
-<summary><strong> <a name="billing_address"></a>[Optional] Property billing_address</strong>  
+<summary><strong> <a name="billing_address"></a>1. [Optional] Property root > billing_address</strong>  
 
 </summary>
 <blockquote>
@@ -18,7 +25,7 @@
 |                           |                                                                                                                     |
 
 <details>
-<summary><strong> <a name="billing_address_street_address"></a>[Required] Property street_address</strong>  
+<summary><strong> <a name="billing_address_street_address"></a>1.1. [Required] Property root > billing_address > street_address</strong>  
 
 </summary>
 <blockquote>
@@ -32,7 +39,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="billing_address_city"></a>[Required] Property city</strong>  
+<summary><strong> <a name="billing_address_city"></a>1.2. [Required] Property root > billing_address > city</strong>  
 
 </summary>
 <blockquote>
@@ -46,7 +53,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="billing_address_state"></a>[Required] Property state</strong>  
+<summary><strong> <a name="billing_address_state"></a>1.3. [Required] Property root > billing_address > state</strong>  
 
 </summary>
 <blockquote>
@@ -60,7 +67,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="billing_address_futureProperty"></a>[Optional] Property futureProperty</strong>  
+<summary><strong> <a name="billing_address_futureProperty"></a>1.4. [Optional] Property root > billing_address > futureProperty</strong>  
 
 </summary>
 <blockquote>
@@ -77,7 +84,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="shipping_address"></a>[Optional] Property shipping_address</strong>  
+<summary><strong> <a name="shipping_address"></a>2. [Optional] Property root > shipping_address</strong>  
 
 </summary>
 <blockquote>

@@ -1,12 +1,15 @@
 # Schema Docs
 
+- [1. [Optional] Property root > a](#a)
+- [2. [Optional] Property root > b](#b)
+
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 |                           |                                                                           |
 
 <details>
-<summary><strong> <a name="a"></a>[Optional] Property a</strong>  
+<summary><strong> <a name="a"></a>1. [Optional] Property root > a</strong>  
 
 </summary>
 <blockquote>
@@ -24,7 +27,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="b"></a>[Optional] Property b</strong>  
+<summary><strong> <a name="b"></a>2. [Optional] Property root > b</strong>  
 
 </summary>
 <blockquote>

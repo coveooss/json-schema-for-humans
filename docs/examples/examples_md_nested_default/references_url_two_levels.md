@@ -1,5 +1,9 @@
 # Schema Docs
 
+- [1. [Optional] Property root > described](#described)
+  - [1.1. [Optional] Property root > described > name](#described_name)
+  - [1.2. [Optional] Property root > described > alignment](#described_alignment)
+
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
@@ -8,7 +12,7 @@
 **Description:** Testing $ref of a remote $ref
 
 <details>
-<summary><strong> <a name="described"></a>[Optional] Property described</strong>  
+<summary><strong> <a name="described"></a>1. [Optional] Property root > described</strong>  
 
 </summary>
 <blockquote>
@@ -20,7 +24,7 @@
 |                           |                                                                                                                        |
 
 <details>
-<summary><strong> <a name="described_name"></a>[Optional] Property name</strong>  
+<summary><strong> <a name="described_name"></a>1.1. [Optional] Property root > described > name</strong>  
 
 </summary>
 <blockquote>
@@ -42,7 +46,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="described_alignment"></a>[Optional] Property alignment</strong>  
+<summary><strong> <a name="described_alignment"></a>1.2. [Optional] Property root > described > alignment</strong>  
 
 </summary>
 <blockquote>

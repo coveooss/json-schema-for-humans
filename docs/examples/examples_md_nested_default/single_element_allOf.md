@@ -1,5 +1,7 @@
 # Schema containing a single-element allOf
 
+- [1. Property `Schema containing a single-element allOf > allOf > my_reference`](#allOf_i0)
+
 **Title:** Schema containing a single-element allOf
 
 | Type                      | `combining`                                                               |
@@ -18,7 +20,7 @@
 
 <blockquote>
 
-## <a name="allOf_i0"></a>Property `my_reference`
+## <a name="allOf_i0"></a>1. Property `Schema containing a single-element allOf > allOf > my_reference`
 
 | Type                      | `string`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |

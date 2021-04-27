@@ -1,5 +1,12 @@
 # Person
 
+- [1. [Optional] Property Person > firstName](#firstName)
+- [2. [Optional] Property Person > lastName](#lastName)
+- [3. [Optional] Property Person > age](#age)
+- [4. [Optional] Property Person > driverLicenseId](#driverLicenseId)
+  - [4.1. Property `Person > driverLicenseId > allOf > no driver licence`](#driverLicenseId_allOf_i0)
+  - [4.2. Property `Person > driverLicenseId > allOf > driver licence id`](#driverLicenseId_allOf_i1)
+
 **Title:** Person
 
 | Type                      | `object`                                                                  |
@@ -8,7 +15,7 @@
 |                           |                                                                           |
 
 <details>
-<summary><strong> <a name="firstName"></a>[Optional] Property firstName</strong>  
+<summary><strong> <a name="firstName"></a>1. [Optional] Property Person > firstName</strong>  
 
 </summary>
 <blockquote>
@@ -26,7 +33,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="lastName"></a>[Optional] Property lastName</strong>  
+<summary><strong> <a name="lastName"></a>2. [Optional] Property Person > lastName</strong>  
 
 </summary>
 <blockquote>
@@ -44,7 +51,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="age"></a>[Optional] Property age</strong>  
+<summary><strong> <a name="age"></a>3. [Optional] Property Person > age</strong>  
 
 </summary>
 <blockquote>
@@ -67,7 +74,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="driverLicenseId"></a>[Optional] Property driverLicenseId</strong>  
+<summary><strong> <a name="driverLicenseId"></a>4. [Optional] Property Person > driverLicenseId</strong>  
 
 </summary>
 <blockquote>
@@ -87,7 +94,7 @@
 
 <blockquote>
 
-### <a name="driverLicenseId_allOf_i0"></a>Property `no driver licence`
+### <a name="driverLicenseId_allOf_i0"></a>4.1. Property `Person > driverLicenseId > allOf > no driver licence`
 
 **Title:** no driver licence
 
@@ -99,7 +106,7 @@
 </blockquote>
 <blockquote>
 
-### <a name="driverLicenseId_allOf_i1"></a>Property `driver licence id`
+### <a name="driverLicenseId_allOf_i1"></a>4.2. Property `Person > driverLicenseId > allOf > driver licence id`
 
 **Title:** driver licence id
 

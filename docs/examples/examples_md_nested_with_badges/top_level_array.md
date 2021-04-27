@@ -1,5 +1,7 @@
 # Array at top level
 
+- [1. Array at top level > items](#items)
+
 **Title:** Array at top level
 
 | Type                      | `array of string`                                                                                                   |
@@ -9,12 +11,21 @@
 
 **Description:** Sometimes there are no properties
 
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+|                      |                    |
+
 | Each item of this array must be | Description |
 | ------------------------------- | ----------- |
 | [items](#items)                 | A string    |
 |                                 |             |
 
-## <a name="items"></a>items
+## <a name="items"></a>1. Array at top level > items
 
 | Type                      | `string`                                                                                                            |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------- |

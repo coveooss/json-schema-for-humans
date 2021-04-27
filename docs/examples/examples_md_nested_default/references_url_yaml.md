@@ -1,5 +1,10 @@
 # Schema Docs
 
+- [1. [Optional] Property root > address](#address)
+  - [1.1. [Required] Property root > address > street_address](#address_street_address)
+  - [1.2. [Required] Property root > address > city](#address_city)
+  - [1.3. [Required] Property root > address > state](#address_state)
+
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
@@ -8,7 +13,7 @@
 **Description:** Testing $ref with URL with YAML destination
 
 <details>
-<summary><strong> <a name="address"></a>[Optional] Property address</strong>  
+<summary><strong> <a name="address"></a>1. [Optional] Property root > address</strong>  
 
 </summary>
 <blockquote>
@@ -20,7 +25,7 @@
 |                           |                                                                                                                             |
 
 <details>
-<summary><strong> <a name="address_street_address"></a>[Required] Property street_address</strong>  
+<summary><strong> <a name="address_street_address"></a>1.1. [Required] Property root > address > street_address</strong>  
 
 </summary>
 <blockquote>
@@ -34,7 +39,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="address_city"></a>[Required] Property city</strong>  
+<summary><strong> <a name="address_city"></a>1.2. [Required] Property root > address > city</strong>  
 
 </summary>
 <blockquote>
@@ -48,7 +53,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="address_state"></a>[Required] Property state</strong>  
+<summary><strong> <a name="address_state"></a>1.3. [Required] Property root > address > state</strong>  
 
 </summary>
 <blockquote>
