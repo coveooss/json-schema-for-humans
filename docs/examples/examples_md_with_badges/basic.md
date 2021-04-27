@@ -67,6 +67,12 @@
 | **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
 |                           |                                                                                                                     |
 
+| All of(Requirement)                            |
+| ---------------------------------------------- |
+| [no driver licence](#driverLicenseId_allOf_i0) |
+| [driver licence id](#driverLicenseId_allOf_i1) |
+|                                                |
+
 ### <a name="driverLicenseId_allOf_i0"></a>4.1. Property `Person > driverLicenseId > allOf > no driver licence`
 
 **Title:** no driver licence

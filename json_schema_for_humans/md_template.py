@@ -328,7 +328,7 @@ class MarkdownTemplate(object):
         """
         if not schema.array_items:
             return []
-        array_items = [title]
+        array_items = [[title]]
         for i, item in enumerate(schema.array_items):
             item_label = item.name_for_breadcrumbs or f"{title} {i}"
             item_html_id = item.html_id

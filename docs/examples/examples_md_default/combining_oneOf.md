@@ -25,6 +25,14 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 |                           |                                                                           |
 
+| One of(Option)                  |
+| ------------------------------- |
+| [diskDevice](#storage_oneOf_i0) |
+| [diskUUID](#storage_oneOf_i1)   |
+| [nfs](#storage_oneOf_i2)        |
+| [tmpfs](#storage_oneOf_i3)      |
+|                                 |
+
 ### <a name="storage_oneOf_i0"></a>1.1. Property `root > storage > oneOf > diskDevice`
 
 | Type                      | `object`                                                                  |

@@ -25,6 +25,14 @@
 | **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
 |                           |                                                                                                                     |
 
+| Any of(Option)                  |
+| ------------------------------- |
+| [diskDevice](#storage_anyOf_i0) |
+| [diskUUID](#storage_anyOf_i1)   |
+| [item 2](#storage_anyOf_i2)     |
+| [tmpfs](#storage_anyOf_i3)      |
+|                                 |
+
 ### <a name="storage_anyOf_i0"></a>1.1. Property `root > storage > anyOf > diskDevice`
 
 | Type                      | `object`                                                                                                            |
