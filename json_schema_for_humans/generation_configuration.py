@@ -28,6 +28,7 @@ class GenerationConfiguration:
     recursive_detection_depth: int = 25
     templates_directory: str = os.path.join(os.path.dirname(__file__), "templates")
     template_name: str = "js"
+    show_toc: bool = True
     # markdown2 extra parameters can be added here: https://github.com/trentm/python-markdown2/wiki/Extras
     markdown_options: Any = None
     template_md_options: Any = None

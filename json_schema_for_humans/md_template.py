@@ -141,6 +141,9 @@ class MarkdownTemplate(object):
         """
         generate Table Of Content from the heading that has been generated
         """
+        if not self.config.show_toc:
+            return ""
+
         toc_str = ""
 
         second_heading_depth = 0

@@ -69,6 +69,11 @@
       "default": "js",
       "description": "The name of the set of templates to use to render the documentation.\n\n`js` is the default and uses javascript for anchor links, collapsible sections and tabs. `flat` uses no javascript, but has no interactivity."
     },
+    "show_toc": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether to render table of contents."
+    },
     "markdown_options": {
       "type": "object",
       "default": {
@@ -93,6 +98,16 @@
           "type": "boolean",
           "description": "if true generate badges(eg: optional, required) using embedded image (https://img.shields.io).\n\n if false, use text instead",
           "default": false
+        },
+        "show_heading_numbers": {
+          "type": "boolean",
+          "description": "if true generate heading numbers to correspond to table of contents.\n\n if false, do not generate heading numbers",
+          "default": true
+        },
+        "show_array_restrictions": {
+          "type": "boolean",
+          "description": "if true generate array restrictions section.\n\n if false, do not generate",
+          "default": true
         }
       }
     }
