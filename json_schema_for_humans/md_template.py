@@ -83,7 +83,7 @@ class MarkdownTemplate(object):
         """Filter. escape characters('|', '`') in string to be inserted into markdown table"""
         return example_text.translate(str.maketrans({"|": "\\|", "`": "\\`"}))
 
-    def heading(self, title: str, depth: int, html_id: Union[bool, str] = False, nested: bool=False) -> str:
+    def heading(self, title: str, depth: int, html_id: Union[bool, str] = False, nested: bool = False) -> str:
         """
         Filter. display heading menu, heading number automatically calculated
         from previous heading and depth provided
@@ -122,14 +122,14 @@ class MarkdownTemplate(object):
         if depth == 0:
             menu += f" {title}"
         else:
-            if self.config.template_md_options['show_heading_numbers']:
+            if self.config.template_md_options["show_heading_numbers"]:
                 menu += f' <a name="{html_id}"></a>{heading_numbers} {title}'
             else:
                 menu += f' <a name="{html_id}"></a>{title}'
 
         # store current heading in toc
         toc_menu = f"[{title}](#{html_id})"
-        if self.config.template_md_options['show_heading_numbers']:
+        if self.config.template_md_options["show_heading_numbers"]:
             toc_menu = f"[{heading_numbers} {title}](#{html_id})"
         self.toc[heading_numbers] = {"depth": depth, "menu": toc_menu}
 
@@ -290,7 +290,7 @@ class MarkdownTemplate(object):
         ready to be rendered by generate_table filter
         """
 
-        if not self.config.template_md_options['show_array_restrictions']:
+        if not self.config.template_md_options["show_array_restrictions"]:
             return []
 
         return [
