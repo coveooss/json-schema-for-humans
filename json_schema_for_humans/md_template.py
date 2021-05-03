@@ -122,14 +122,14 @@ class MarkdownTemplate(object):
         if depth == 0:
             menu += f" {title}"
         else:
-            if self.config.template_md_options["show_heading_numbers"]:
+            if self.config.template_md_options.get("show_heading_numbers"):
                 menu += f' <a name="{html_id}"></a>{heading_numbers} {title}'
             else:
                 menu += f' <a name="{html_id}"></a>{title}'
 
         # store current heading in toc
         toc_menu = f"[{title}](#{html_id})"
-        if self.config.template_md_options["show_heading_numbers"]:
+        if self.config.template_md_options.get("show_heading_numbers"):
             toc_menu = f"[{heading_numbers} {title}](#{html_id})"
         self.toc[heading_numbers] = {"depth": depth, "menu": toc_menu}
 
@@ -169,7 +169,7 @@ class MarkdownTemplate(object):
         """
         Badge as markdown image link if badge_as_image option set otherwise Badge as text
         """
-        if self.config.template_md_options["badge_as_image"] and not show_text:
+        if self.config.template_md_options.get("badge_as_image") and not show_text:
             value_str = ""
             if value and len(value) > 0:
                 value_str = "-" + quote_plus(value)
@@ -293,7 +293,7 @@ class MarkdownTemplate(object):
         ready to be rendered by generate_table filter
         """
 
-        if not self.config.template_md_options["show_array_restrictions"]:
+        if not self.config.template_md_options.get("show_array_restrictions"):
             return []
 
         return [

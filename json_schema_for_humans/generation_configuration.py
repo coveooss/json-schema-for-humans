@@ -30,8 +30,8 @@ class GenerationConfiguration:
     template_name: str = "js"
     show_toc: bool = True
     # markdown2 extra parameters can be added here: https://github.com/trentm/python-markdown2/wiki/Extras
-    markdown_options: Any = None
-    template_md_options: Any = None
+    markdown_options: Dict[str, Any] = None
+    template_md_options: Dict[str, Any] = None
 
     def __post_init__(self) -> None:
         default_markdown_options = {
