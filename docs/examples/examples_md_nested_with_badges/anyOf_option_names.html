@@ -1,0 +1,76 @@
+# Schema Docs
+
+- [![badge](https://img.shields.io/badge/Required-blue) Property `storage`](#storage)
+  - [Property `diskDevice`](#storage_anyOf_i0)
+  - [Property `diskUUID`](#storage_anyOf_i1)
+  - [Property ``](#storage_anyOf_i2)
+  - [Property `tmpfs`](#storage_anyOf_i3)
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
+
+**Description:** JSON Schema for an fstab entry
+
+<details>
+<summary>
+
+## <a name="storage"></a>![badge](https://img.shields.io/badge/Required-blue) Property `storage`  
+
+</summary>
+<blockquote>
+
+| Type                      | `combining`                                                                                                         |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
+
+<blockquote>
+
+| Any of(Option)                  |
+| ------------------------------- |
+| [diskDevice](#storage_anyOf_i0) |
+| [diskUUID](#storage_anyOf_i1)   |
+| [item 2](#storage_anyOf_i2)     |
+| [tmpfs](#storage_anyOf_i3)      |
+|                                 |
+
+### <a name="storage_anyOf_i0"></a>Property `diskDevice`
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/diskDevice                                                                                            |
+|                           |                                                                                                                     |
+
+### <a name="storage_anyOf_i1"></a>Property `diskUUID`
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/diskUUID                                                                                              |
+|                           |                                                                                                                     |
+
+### <a name="storage_anyOf_i2"></a>Property ``
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
+
+### <a name="storage_anyOf_i3"></a>Property `tmpfs`
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/tmpfs                                                                                                 |
+|                           |                                                                                                                     |
+
+</blockquote>
+
+</blockquote>
+</details>
+
+----------------------------------------------------------------------------------------------------------------------------
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on date

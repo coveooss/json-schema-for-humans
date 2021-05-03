@@ -28,6 +28,7 @@ class GenerationConfiguration:
     recursive_detection_depth: int = 25
     templates_directory: str = os.path.join(os.path.dirname(__file__), "templates")
     template_name: str = "js"
+    show_toc: bool = True
     # markdown2 extra parameters can be added here: https://github.com/trentm/python-markdown2/wiki/Extras
     markdown_options: Any = None
     template_md_options: Any = None
@@ -41,7 +42,11 @@ class GenerationConfiguration:
         default_markdown_options.update(self.markdown_options or {})
         self.markdown_options = default_markdown_options
 
-        default_template_md_options = {"badge_as_image": False}
+        default_template_md_options = {
+            "badge_as_image": False,
+            "show_heading_numbers": True,
+            "show_array_restrictions": True,
+        }
         default_template_md_options.update(self.template_md_options or {})
         self.template_md_options = default_template_md_options
 
