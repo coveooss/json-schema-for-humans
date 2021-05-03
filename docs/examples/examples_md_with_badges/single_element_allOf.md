@@ -11,6 +11,11 @@
 
 **Description:** Schema containing a single-element allOf
 
+| All of(Requirement)       |
+| ------------------------- |
+| [my_reference](#allOf_i0) |
+|                           |
+
 ## <a name="allOf_i0"></a>1. Property `Schema containing a single-element allOf > allOf > my_reference`
 
 | Type                      | `string`                                                                                                            |

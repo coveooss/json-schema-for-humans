@@ -83,6 +83,12 @@
 
 **Description:** Delivery info depending on the delivery type
 
+| One of(Option)                     |
+| ---------------------------------- |
+| [classic](#delivery_info_oneOf_i0) |
+| [gift](#delivery_info_oneOf_i1)    |
+|                                    |
+
 ### <a name="delivery_info_oneOf_i0"></a>3.1. Property `Delivery Schema > delivery_info > oneOf > classic`
 
 | Type                      | `object`                                                                  |

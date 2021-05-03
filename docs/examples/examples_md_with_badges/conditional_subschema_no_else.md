@@ -23,6 +23,13 @@
 | - [country](#country )               | No      | enum (of string) | No         | -          | -                 |
 |                                      |         |                  |            |            |                   |
 
+| All of(Requirement) |
+| ------------------- |
+| [item 0](#allOf_i0) |
+| [item 1](#allOf_i1) |
+| [item 2](#allOf_i2) |
+|                     |
+
 ## <a name="allOf_i0"></a>1. Property `root > allOf > item 0`
 
 | Type                      | `object`                                                                                                            |

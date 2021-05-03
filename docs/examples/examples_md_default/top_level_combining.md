@@ -14,6 +14,14 @@
 
 **Description:** For the combine
 
+| One of(Option)          |
+| ----------------------- |
+| [diskDevice](#oneOf_i0) |
+| [diskUUID](#oneOf_i1)   |
+| [nfs](#oneOf_i2)        |
+| [tmpfs](#oneOf_i3)      |
+|                         |
+
 ## <a name="oneOf_i0"></a>1. Property `Combining at top level > oneOf > diskDevice`
 
 | Type                      | `object`                                                                  |
