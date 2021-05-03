@@ -1,0 +1,87 @@
+# Test
+
+- [![badge](https://img.shields.io/badge/Optional-yellow) Property `aProperty`](#aProperty)
+- [![badge](https://img.shields.io/badge/Optional-yellow) Property `aDictPropertyARequired`](#aDictPropertyARequired)
+  - [![badge](https://img.shields.io/badge/Required-blue) Property `a`](#aDictPropertyARequired_a)
+  - [![badge](https://img.shields.io/badge/Required-blue) Property `b`](#aDictPropertyARequired_b)
+
+**Title:** Test
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
+
+<details>
+<summary>
+
+## <a name="aProperty"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `aProperty`  
+
+</summary>
+<blockquote>
+
+| Type           | `enum (of string)`        |
+| -------------- | ------------------------- |
+| **Default**    | `"Default from property"` |
+| **Defined in** | #/definitions/aProperty   |
+|                |                           |
+
+**Description:** This is the description from the definition
+
+Must be one of:
+* "value1"
+* "value2"
+
+</blockquote>
+</details>
+
+<details>
+<summary>
+
+## <a name="aDictPropertyARequired"></a>![badge](https://img.shields.io/badge/Optional-yellow) Property `aDictPropertyARequired`  
+
+</summary>
+<blockquote>
+
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `{"a": "a", "b": "b"}`                                                                                              |
+| **Defined in**            | #/definitions/aDictProperty                                                                                         |
+|                           |                                                                                                                     |
+
+<details>
+<summary>
+
+### <a name="aDictPropertyARequired_a"></a>![badge](https://img.shields.io/badge/Required-blue) Property `a`  
+
+</summary>
+<blockquote>
+
+| Type | `string` |
+| ---- | -------- |
+|      |          |
+
+</blockquote>
+</details>
+
+<details>
+<summary>
+
+### <a name="aDictPropertyARequired_b"></a>![badge](https://img.shields.io/badge/Required-blue) Property `b`  
+
+</summary>
+<blockquote>
+
+| Type | `string` |
+| ---- | -------- |
+|      |          |
+
+</blockquote>
+</details>
+
+</blockquote>
+</details>
+
+----------------------------------------------------------------------------------------------------------------------------
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on date

@@ -14,7 +14,7 @@ sys.path.insert(0, parent_dir)
 from json_schema_for_humans.generate import generate_from_filename
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
 
-template_names = ["js", "flat", "md"]
+template_names = ["js", "flat", "md", "md_nested"]
 template_extension = "html"
 if len(sys.argv) >= 2:
     template_names = [sys.argv[1]]
@@ -111,6 +111,22 @@ configurations = [
         ),
         "md_example_template": MD_EXAMPLE_MD_TEMPLATE,
     },
+    {
+        "title": "Nested Markdown without badges template",
+        "dir_name": "examples_md_nested_default",
+        "config": GenerationConfiguration(
+            template_name="md_nested", deprecated_from_description=True, template_md_options={"badge_as_image": False}
+        ),
+        "md_example_template": MD_EXAMPLE_MD_TEMPLATE,
+    },
+    {
+        "title": "Nested Markdown with badges template",
+        "dir_name": "examples_md_nested_with_badges",
+        "config": GenerationConfiguration(
+            template_name="md_nested", deprecated_from_description=True, template_md_options={"badge_as_image": True}
+        ),
+        "md_example_template": MD_EXAMPLE_MD_TEMPLATE,
+    },
 ]
 
 with open(
@@ -158,7 +174,7 @@ def generate_each_template(
         template_configuration = config["config"]
         template_name = template_configuration.template_name
         example_dir_name = config["dir_name"]
-        example_file_name = case_name + (".md" if template_name == "md" else ".html")
+        example_file_name = case_name + (".md" if template_name in ("md", "md_nested") else ".html")
 
         examples_md_file.write(
             config["md_example_template"].format(

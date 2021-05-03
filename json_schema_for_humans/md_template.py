@@ -83,7 +83,7 @@ class MarkdownTemplate(object):
         """Filter. escape characters('|', '`') in string to be inserted into markdown table"""
         return example_text.translate(str.maketrans({"|": "\\|", "`": "\\`"}))
 
-    def heading(self, title: str, depth: int, html_id: Union[bool, str] = False) -> str:
+    def heading(self, title: str, depth: int, html_id: Union[bool, str] = False, nested: bool = False) -> str:
         """
         Filter. display heading menu, heading number automatically calculated
         from previous heading and depth provided
@@ -114,24 +114,36 @@ class MarkdownTemplate(object):
                 heading_numbers += f"{self.headings[curDepth]}."
 
         # markdown menu depth
-        menu = "#" * (depth + 1)
+        menu = "#" * min((depth + 1), 5)
+        if nested:
+            menu = "<strong>"
 
         # generate markdown title with anchor (except if depth 0)
         if depth == 0:
             menu += f" {title}"
         else:
-            menu += f' <a name="{html_id}"></a>{heading_numbers} {title}'
+            if self.config.template_md_options.get("show_heading_numbers"):
+                menu += f' <a name="{html_id}"></a>{heading_numbers} {title}'
+            else:
+                menu += f' <a name="{html_id}"></a>{title}'
 
         # store current heading in toc
-        toc_menu = f"[{heading_numbers} {title}](#{html_id})"
+        toc_menu = f"[{title}](#{html_id})"
+        if self.config.template_md_options.get("show_heading_numbers"):
+            toc_menu = f"[{heading_numbers} {title}](#{html_id})"
         self.toc[heading_numbers] = {"depth": depth, "menu": toc_menu}
 
+        if nested:
+            menu += "</strong>"
         return menu
 
     def get_toc(self) -> str:
         """
         generate Table Of Content from the heading that has been generated
         """
+        if not self.config.show_toc:
+            return ""
+
         toc_str = ""
 
         second_heading_depth = 0
@@ -153,11 +165,11 @@ class MarkdownTemplate(object):
         """Format a Markdown link"""
         return f"[{title}](#{link} {tooltip})"
 
-    def badge(self, name: str, color: str, value: str = "") -> str:
+    def badge(self, name: str, color: str, value: str = "", show_text: bool = False) -> str:
         """
         Badge as markdown image link if badge_as_image option set otherwise Badge as text
         """
-        if self.config.template_md_options["badge_as_image"]:
+        if self.config.template_md_options.get("badge_as_image") and not show_text:
             value_str = ""
             if value and len(value) > 0:
                 value_str = "-" + quote_plus(value)
@@ -280,6 +292,9 @@ class MarkdownTemplate(object):
         array restrictions: min/max items, items unicity, additional items, Tuple validation
         ready to be rendered by generate_table filter
         """
+
+        if not self.config.template_md_options.get("show_array_restrictions"):
+            return []
 
         return [
             ["", "Array restrictions"],

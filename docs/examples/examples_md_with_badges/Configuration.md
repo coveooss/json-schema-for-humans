@@ -13,9 +13,12 @@
 - [11. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > copy_js`](#copy_js)
 - [12. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > templates_directory`](#templates_directory)
 - [13. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_name`](#template_name)
-- [14. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > markdown_options`](#markdown_options)
-- [15. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options`](#template_md_options)
-  - [15.1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`](#template_md_options_badge_as_image)
+- [14. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > show_toc`](#show_toc)
+- [15. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > markdown_options`](#markdown_options)
+- [16. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options`](#template_md_options)
+  - [16.1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`](#template_md_options_badge_as_image)
+  - [16.2. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`](#template_md_options_show_heading_numbers)
+  - [16.3. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`](#template_md_options_show_array_restrictions)
 
 **Title:** JSON Schema for Humans configuration file
 
@@ -47,6 +50,7 @@ Configuration parameters can be provided in several ways:
 | - [copy_js](#copy_js )                                         | No      | boolean          | No         | -          | Copy 'schema_doc.min.js' to the same directory as 'RESULT_FILE' after generation ... |
 | - [templates_directory](#templates_directory )                 | No      | string           | No         | -          | The file system path to the directory containing templates, with a default of th ... |
 | - [template_name](#template_name )                             | No      | enum (of string) | No         | -          | The name of the set of templates to use to render the documentation. ...             |
+| - [show_toc](#show_toc )                                       | No      | boolean          | No         | -          | Whether to render table of contents.                                                 |
 | - [markdown_options](#markdown_options )                       | No      | object           | No         | -          | [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for ... |
 | - [template_md_options](#template_md_options )                 | No      | object           | No         | -          | specific options to md template                                                      |
 |                                                                |         |                  |            |            |                                                                                      |
@@ -198,7 +202,17 @@ Must be one of:
 * "js"
 * "md"
 
-## <a name="markdown_options"></a>14. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > markdown_options`
+## <a name="show_toc"></a>14. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > show_toc`
+
+| Type                      | `boolean`                                                                                                           |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `true`                                                                                                              |
+|                           |                                                                                                                     |
+
+**Description:** Whether to render table of contents.
+
+## <a name="markdown_options"></a>15. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > markdown_options`
 
 | Type                      | `object`                                                                                                                |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -224,7 +238,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 }
 ```
 
-## <a name="template_md_options"></a>15. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options`
+## <a name="template_md_options"></a>16. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options`
 
 | Type                      | `object`                                                                                                            |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -233,12 +247,14 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 
 **Description:** specific options to md template
 
-| Property                                                 | Pattern | Type    | Deprecated | Definition | Title/Description                                                                    |
-| -------------------------------------------------------- | ------- | ------- | ---------- | ---------- | ------------------------------------------------------------------------------------ |
-| - [badge_as_image](#template_md_options_badge_as_image ) | No      | boolean | No         | -          | if true generate badges(eg: optional, required) using embedded image (https://im ... |
-|                                                          |         |         |            |            |                                                                                      |
+| Property                                                                   | Pattern | Type    | Deprecated | Definition | Title/Description                                                                    |
+| -------------------------------------------------------------------------- | ------- | ------- | ---------- | ---------- | ------------------------------------------------------------------------------------ |
+| - [badge_as_image](#template_md_options_badge_as_image )                   | No      | boolean | No         | -          | if true generate badges(eg: optional, required) using embedded image (https://im ... |
+| - [show_heading_numbers](#template_md_options_show_heading_numbers )       | No      | boolean | No         | -          | if true generate heading numbers to correspond to table of contents. ...             |
+| - [show_array_restrictions](#template_md_options_show_array_restrictions ) | No      | boolean | No         | -          | if true generate array restrictions section. ...                                     |
+|                                                                            |         |         |            |            |                                                                                      |
 
-### <a name="template_md_options_badge_as_image"></a>15.1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`
+### <a name="template_md_options_badge_as_image"></a>16.1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`
 
 | Type                      | `boolean`                                                                                                           |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -249,6 +265,30 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 **Description:** if true generate badges(eg: optional, required) using embedded image (https://img.shields.io).
 
  if false, use text instead
+
+### <a name="template_md_options_show_heading_numbers"></a>16.2. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`
+
+| Type                      | `boolean`                                                                                                           |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `true`                                                                                                              |
+|                           |                                                                                                                     |
+
+**Description:** if true generate heading numbers to correspond to table of contents.
+
+ if false, do not generate heading numbers
+
+### <a name="template_md_options_show_array_restrictions"></a>16.3. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`
+
+| Type                      | `boolean`                                                                                                           |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `true`                                                                                                              |
+|                           |                                                                                                                     |
+
+**Description:** if true generate array restrictions section.
+
+ if false, do not generate
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on date
