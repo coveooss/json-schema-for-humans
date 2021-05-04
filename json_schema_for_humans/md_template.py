@@ -256,7 +256,7 @@ class MarkdownTemplate(object):
         if schema.should_be_a_link(self.config):
             schema_link_name = schema.links_to.link_name
             html_id = schema.links_to.html_id
-            type_info.append(["**Same definition as**", f"`[{ schema_link_name }](#{ html_id })`"])
+            type_info.append(["**Same definition as**", f"[{ schema_link_name }](#{ html_id })"])
         elif schema.refers_to:
             type_info.append(["**Defined in**", schema.ref_path])
 

@@ -128,7 +128,7 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | `[anchor_with_slash](#anchor_with_slash)`                                 |
+| **Same definition as**    | [anchor_with_slash](#anchor_with_slash)                                   |
 |                           |                                                                           |
 
 ## <a name="same_file_nested_reference"></a>7. [Optional] Property `root > same_file_nested_reference`
@@ -136,7 +136,7 @@
 | Type                      | `string`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | `[anchor_nested_reference](#anchor_nested_reference)`                     |
+| **Same definition as**    | [anchor_nested_reference](#anchor_nested_reference)                       |
 |                           |                                                                           |
 
 ## <a name="other_file_anchor"></a>8. [Optional] Property `root > other_file_anchor`
@@ -166,7 +166,7 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | `[other_file_anchor](#other_file_anchor)`                                 |
+| **Same definition as**    | [other_file_anchor](#other_file_anchor)                                   |
 |                           |                                                                           |
 
 **Description:** The delivery is a gift, no prices displayed
@@ -176,7 +176,7 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | `[other_file_anchor](#other_file_anchor)`                                 |
+| **Same definition as**    | [other_file_anchor](#other_file_anchor)                                   |
 |                           |                                                                           |
 
 **Description:** The delivery is a gift, no prices displayed
