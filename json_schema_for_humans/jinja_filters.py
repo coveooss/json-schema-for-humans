@@ -2,15 +2,17 @@ import re
 from datetime import datetime
 from typing import List, Any
 
+from jinja2 import environmentfilter, Environment
+from markdown2 import Markdown
+from markupsafe import Markup
 from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
 from pygments.lexers.javascript import JavascriptLexer
-
 from pytz import reference
 
 from json_schema_for_humans import const
+from json_schema_for_humans.generation_configuration import GenerationConfiguration
 from json_schema_for_humans.schema_node import SchemaNode
-
 
 SHORT_DESCRIPTION_NUMBER_OF_LINES = 8
 DEFAULT_PATTERN = r"(\[Default - `([^`]+)`\])"
@@ -88,24 +90,23 @@ def python_to_json(value: Any) -> Any:
     return value
 
 
-def get_description(schema_node: SchemaNode) -> str:
+@environmentfilter
+def get_description(env: Environment, schema_node: SchemaNode) -> str:
     """Filter. Get the description of a property or an empty string"""
-    return _get_description(schema_node)
+    description = schema_node.description
 
+    config: GenerationConfiguration = env.globals["jsfh_config"]
+    if config.default_from_description:
+        match = re.match(DEFAULT_PATTERN, description)
+        if match:
+            description = description[match.span(1)[1] :].lstrip()
 
-def get_description_remove_default(schema_node: SchemaNode) -> str:
-    """Filter. From the description attribute of a property, return the description without any default values in it.
-    Will also convert None to an empty string.
-    """
-    description = _get_description(schema_node)
-    if not description:
-        return ""
+    if description and config.description_is_markdown and not config.is_markdown_template:
+        # Markdown templates are expected to already have Markdown descriptions
+        md: Markdown = env.globals["jsfh_md"]
+        description = Markup(md.convert(description))
 
-    match = re.match(DEFAULT_PATTERN, description)
-    if not match:
-        return description
-
-    return description[match.span(1)[1] :].lstrip()
+    return description
 
 
 def get_default(schema_node: SchemaNode) -> str:
@@ -212,27 +213,6 @@ def first_line(example_text: str, max_length: int = 0) -> str:
     result = lines[0]
     etc = (max_length and len(result) > max_length) or len(lines) > 1
     return f"{result[:max_length]}{' ...' if etc else ''}"
-
-
-def _get_description(schema_node: SchemaNode) -> str:
-    description = ""
-    description_node = schema_node.keywords.get(const.DESCRIPTION)
-    if description_node:
-        description = description_node.literal
-
-    seen = set()
-    current_node = schema_node
-    while not description and current_node.refers_to:
-        if current_node in seen:
-            break
-        seen.add(current_node)
-        referenced_schema = current_node.refers_to
-        referenced_description_node = referenced_schema.keywords.get(const.DESCRIPTION)
-        if referenced_description_node:
-            description = referenced_description_node.literal
-        current_node = referenced_schema
-
-    return description
 
 
 def get_local_time() -> str:

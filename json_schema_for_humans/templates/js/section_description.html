@@ -2,10 +2,10 @@
 {# Display description #}
 {%- if description -%}
     {%- if not config.collapse_long_descriptions or description is description_short -%}
-        <span class="description">{{ description | markdown }}</span>
+        <span class="description">{{ description }}</span>
     {%- else -%}
         <div class="description collapse" id="collapseDescription_{{ schema.html_id }}">
-            {{ description | markdown }}
+            {{ description }}
         </div>
         <div>
             <a class="collapse-description-link collapsed" data-toggle="collapse" href="#collapseDescription_{{ schema.html_id }}"

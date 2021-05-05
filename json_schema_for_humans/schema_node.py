@@ -1,6 +1,8 @@
 import copy
 from typing import Any, Dict, Iterable, Iterator, List, Optional, Set, Union, cast
 
+import jinja2
+
 from json_schema_for_humans import const
 from json_schema_for_humans.templating_utils import get_type_name
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
@@ -216,6 +218,27 @@ class SchemaNode:
             possible_default = _default_value(current_node)
 
         return possible_default
+
+    @property
+    def description(self) -> str:
+        description = ""
+        description_node = self.keywords.get(const.DESCRIPTION)
+        if description_node:
+            description = description_node.literal
+
+        seen = set()
+        current_node = self
+        while not description and current_node.refers_to:
+            if current_node in seen:
+                break
+            seen.add(current_node)
+            referenced_schema = current_node.refers_to
+            referenced_description_node = referenced_schema.keywords.get(const.DESCRIPTION)
+            if referenced_description_node:
+                description = referenced_description_node.literal
+            current_node = referenced_schema
+
+        return description
 
     @property
     def examples(self) -> List[str]:

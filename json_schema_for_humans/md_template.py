@@ -215,7 +215,7 @@ class MarkdownTemplate(object):
                 line.append("-")
 
             # title or description
-            description = jinja_filters.get_description(sub_property) or "-"
+            description = sub_property.description or "-"
             if sub_property.title:
                 description = sub_property.title
 
@@ -328,9 +328,7 @@ class MarkdownTemplate(object):
             array_items_restrictions.append(
                 [
                     f"[{item_label}](#{item_html_id})",
-                    self.escape_for_table(
-                        self.first_line_fixed(jinja_filters.get_description(item) or "-", const.LINE_WIDTH)
-                    ),
+                    self.escape_for_table(self.first_line_fixed(item.description or "-", const.LINE_WIDTH)),
                 ]
             )
 

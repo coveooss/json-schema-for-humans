@@ -50,6 +50,10 @@ class GenerationConfiguration:
         default_template_md_options.update(self.template_md_options or {})
         self.template_md_options = default_template_md_options
 
+    @property
+    def is_markdown_template(self) -> bool:
+        return self.template_name.startswith("md")
+
 
 CONFIG_DEPRECATION_MESSAGE = (
     "JSON Schema for humans: Please supply a GenerationConfiguration object instead of individual options"

@@ -45,7 +45,6 @@ def generate_from_schema(
     templates_directory = os.path.join(config.templates_directory, config.template_name)
     base_template_path = os.path.join(templates_directory, TEMPLATE_FILE_NAME)
 
-    md = markdown2.Markdown(extras=config.markdown_options)
     loader = FileSystemLoader(templates_directory)
     env = jinja2.Environment(
         loader=loader,
@@ -53,23 +52,18 @@ def generate_from_schema(
         trim_blocks=(config.template_name in ("md", "md_nested")),
         lstrip_blocks=(config.template_name in ("md", "md_nested")),
     )
+    env.globals["jsfh_config"] = config
+    env.globals["jsfh_md"] = markdown2.Markdown(extras=config.markdown_options)
     if config.template_name in ("md", "md_nested"):
         md_template = MarkdownTemplate(config)
         md_template.register_jinja(env)
 
-    env.filters["markdown"] = (
-        lambda text: jinja2.Markup(md.convert(text)) if config.description_is_markdown else lambda t: t
-    )
     env.filters["python_to_json"] = jinja_filters.python_to_json
     env.filters["get_default"] = (
         jinja_filters.get_default_look_in_description if config.default_from_description else jinja_filters.get_default
     )
     env.filters["get_type_name"] = templating_utils.get_type_name
-    env.filters["get_description"] = (
-        jinja_filters.get_description_remove_default
-        if config.default_from_description
-        else jinja_filters.get_description
-    )
+    env.filters["get_description"] = jinja_filters.get_description
     env.filters["get_numeric_restrictions_text"] = jinja_filters.get_numeric_restrictions_text
 
     env.filters["get_required_properties"] = jinja_filters.get_required_properties
@@ -95,7 +89,7 @@ def generate_from_schema(
     rendered = template.render(schema=intermediate_schema, config=config)
 
     if minify:
-        if config.template_name in ("md", "md_nested"):
+        if config.is_markdown_template:
             # remove multiple contiguous empty lines
             rendered = re.sub(r"\n\s*\n", "\n\n", rendered)
         else:
