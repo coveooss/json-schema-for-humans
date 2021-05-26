@@ -233,9 +233,13 @@ def build_intermediate_representation(
                 if not path_part:
                     # Empty string
                     continue
-                if isinstance(path_part, str):
-                    loaded_schema = loaded_schema[path_part]
-                elif isinstance(path_part, int):
+                try:
+                    path_part_int = int(path_part)
+                    loaded_schema = loaded_schema[path_part_int]
+                    continue
+                except (KeyError, ValueError):
+                    # KeyError: The part looks like a int but it is a string (property named "0" for example
+                    # ValueError: Normal case, the path part is a string
                     loaded_schema = loaded_schema[path_part]
 
         return loaded_schema

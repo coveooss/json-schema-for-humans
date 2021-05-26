@@ -1,0 +1,32 @@
+{
+  "$id": "https://example.com/person.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Person",
+  "type": "object",
+  "properties": {
+    "extra_options_object": {
+      "$ref": "#/definitions/extra_options/anyOf/0"
+    },
+    "name_looks_like_an_int": {
+      "$ref": "#/definitions/10"
+    }
+  },
+  "definitions": {
+    "extra_options": {
+      "anyOf": [
+        {
+          "type": "object",
+          "description": "This is the one"
+        },
+        {
+          "type": "string",
+          "description": "This is not the one"
+        }
+      ]
+    },
+    "10": {
+      "type": "object",
+      "description": "This is just to be annoying. The property name looks like an int"
+    }
+  }
+}

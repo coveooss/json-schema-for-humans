@@ -560,5 +560,16 @@ def test_long_description(collapse: bool) -> None:
         assert not read_more
 
 
+def test_reference_int() -> None:
+    """Test rendering a schema with type being an array."""
+    soup = generate_case("reference_int")
+
+    tests.html_schema_doc_asserts.assert_descriptions(
+        soup, ["This is the one", "This is just to be annoying. The property name looks like an int"]
+    )
+    tests.html_schema_doc_asserts.assert_types(soup, ["object", "object", "object"])
+    tests.html_schema_doc_asserts.assert_property_names(soup, ["extra_options_object", "name_looks_like_an_int"])
+
+
 # TODO: test for uniqueItems
 # TODO: test for contains
