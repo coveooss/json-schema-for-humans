@@ -70,11 +70,13 @@ def generate_from_schema(
     env.filters["get_first_property"] = jinja_filters.get_first_property
     env.filters["get_undocumented_required_properties"] = jinja_filters.get_undocumented_required_properties
     env.filters["highlight_json_example"] = jinja_filters.highlight_json_example
+    env.filters["highlight_yaml_example"] = jinja_filters.highlight_yaml_example
     env.filters["first_line"] = jinja_filters.first_line
 
     env.tests["combining"] = jinja_filters.is_combining
     env.tests["description_short"] = jinja_filters.is_text_short
     env.tests["deprecated"] = lambda schema: jinja_filters.deprecated(config, schema)
+    env.globals["examples_as_yaml"] = config.examples_as_yaml
     env.globals["get_local_time"] = jinja_filters.get_local_time
 
     with open(base_template_path, "r") as template_fp:

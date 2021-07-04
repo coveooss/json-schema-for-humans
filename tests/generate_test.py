@@ -387,6 +387,38 @@ def test_with_examples() -> None:
 }\n""",
     ]
 
+def test_with_yaml_examples() -> None:
+    soup = generate_case("with_examples", GenerationConfiguration(examples_as_yaml=True))
+
+    examples_label = soup.find_all("div", class_=["badge", "badge-secondary"])
+    examples_label_text = [ex.text for ex in examples_label]
+    assert examples_label_text == ["Examples:", "Example:", "Example:", "Example:"]
+
+    examples_content = soup.find_all("div", class_="examples")
+    examples_content_text = [ex.findChildren()[0].text for ex in examples_content]
+    assert examples_content_text == [
+        "Guido\n",
+        "...\n",
+        "BDFL\n",
+        "...\n",
+        "Van Rossum\n",
+        "...\n",
+        "64\n",
+        "...\n",
+        "birthplace: Haarlem, Netherlands\n",
+        "favorite_emoji: 🐍\n",
+        "motto: Beautiful is better than ugly.\\nExplicit is better than implicit.\\nSimple is\n",
+        "  better than complex.\\nComplex is better than complicated.\\nFlat is better than nested.\\nSparse\n",
+        "  is better than dense.\\nReadability counts.\\nSpecial cases aren't special enough\n",
+        "  to break the rules.\\nAlthough practicality beats purity.\\nErrors should never pass\n",
+        "  silently.\\nUnless explicitly silenced.\\nIn the face of ambiguity, refuse the temptation\n",
+        "  to guess.\\nThere should be one-- and preferably only one --obvious way to do it.\\nAlthough\n",
+        "  that way may not be obvious at first unless you're Dutch.\\nNow is better than never.\\nAlthough\n",
+        "  never is often better than *right* now.\\nIf the implementation is hard to explain,\n",
+        "  it's a bad idea.\\nIf the implementation is easy to explain, it may be a good idea.\\nNamespaces\n",
+        "  are one honking great idea -- let's do more of those!\n",
+    ]
+
 
 def test_pattern_properties() -> None:
     soup = generate_case("pattern_properties")

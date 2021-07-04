@@ -2,7 +2,16 @@
 
 {% for example in examples %}
 {% set example_id = schema.html_id ~ "_ex" ~ loop.index %}
+{%- set example_is_json = not examples_as_yaml -%}
+{%- set example_is_yaml = examples_as_yaml -%}
+{%- if example_is_json -%}
 ```json
 {{ example }}
 ```
+{%- endif -%}
+{%- if example_is_yaml -%}
+```yaml
+{{ example | highlight_yaml_example }}
+```
+{%- endif -%}
 {% endfor %}

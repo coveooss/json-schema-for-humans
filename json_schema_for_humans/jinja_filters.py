@@ -1,4 +1,6 @@
 import re
+import json
+import yaml
 from datetime import datetime
 from typing import List, Any
 
@@ -8,6 +10,7 @@ from markupsafe import Markup
 from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
 from pygments.lexers.javascript import JavascriptLexer
+from pygments.lexers.data import YamlLexer
 from pytz import reference
 
 from json_schema_for_humans import const
@@ -222,3 +225,9 @@ def get_local_time() -> str:
 def highlight_json_example(example_text: str) -> str:
     """Filter. Return an highlighted version of the provided JSON text"""
     return highlight(example_text, JavascriptLexer(), HtmlFormatter())
+
+
+def highlight_yaml_example(example_text: str) -> str:
+    """Filter. Return a YAML version of the provided JSON text"""
+    yaml_text = yaml.dump(json.loads(example_text), allow_unicode=True)
+    return highlight(yaml_text, YamlLexer(), HtmlFormatter())
