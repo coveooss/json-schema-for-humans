@@ -204,7 +204,7 @@ def generate_examples(examples_md_file: TextIO):
             configurations,
             template_names,
             case_source,
-            os.path.relpath(case_source, current_dir),
+            os.path.relpath(case_source, current_dir).replace("\\", "/"),
             name,
             examples_dir,
         )

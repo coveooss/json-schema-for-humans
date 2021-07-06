@@ -153,7 +153,7 @@
 | Type                      | `object`                                                                                                            |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | `[anchor_with_slash](#anchor_with_slash)`                                                                           |
+| **Same definition as**    | [anchor_with_slash](#anchor_with_slash)                                                                             |
 |                           |                                                                                                                     |
 
 </blockquote>
@@ -168,7 +168,7 @@
 | Type                      | `string`                                                                                                            |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | `[anchor_nested_reference](#anchor_nested_reference)`                                                               |
+| **Same definition as**    | [anchor_nested_reference](#anchor_nested_reference)                                                                 |
 |                           |                                                                                                                     |
 
 </blockquote>
@@ -214,7 +214,7 @@
 | Type                      | `object`                                                                                                            |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | `[other_file_anchor](#other_file_anchor)`                                                                           |
+| **Same definition as**    | [other_file_anchor](#other_file_anchor)                                                                             |
 |                           |                                                                                                                     |
 
 **Description:** The delivery is a gift, no prices displayed
@@ -231,7 +231,7 @@
 | Type                      | `object`                                                                                                            |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | `[other_file_anchor](#other_file_anchor)`                                                                           |
+| **Same definition as**    | [other_file_anchor](#other_file_anchor)                                                                             |
 |                           |                                                                                                                     |
 
 **Description:** The delivery is a gift, no prices displayed
