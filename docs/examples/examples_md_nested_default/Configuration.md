@@ -14,11 +14,12 @@
 - [12. [Optional] Property JSON Schema for Humans configuration file > templates_directory](#templates_directory)
 - [13. [Optional] Property JSON Schema for Humans configuration file > template_name](#template_name)
 - [14. [Optional] Property JSON Schema for Humans configuration file > show_toc](#show_toc)
-- [15. [Optional] Property JSON Schema for Humans configuration file > markdown_options](#markdown_options)
-- [16. [Optional] Property JSON Schema for Humans configuration file > template_md_options](#template_md_options)
-  - [16.1. [Optional] Property JSON Schema for Humans configuration file > template_md_options > badge_as_image](#template_md_options_badge_as_image)
-  - [16.2. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_heading_numbers](#template_md_options_show_heading_numbers)
-  - [16.3. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_array_restrictions](#template_md_options_show_array_restrictions)
+- [15. [Optional] Property JSON Schema for Humans configuration file > examples_as_yaml](#examples_as_yaml)
+- [16. [Optional] Property JSON Schema for Humans configuration file > markdown_options](#markdown_options)
+- [17. [Optional] Property JSON Schema for Humans configuration file > template_md_options](#template_md_options)
+  - [17.1. [Optional] Property JSON Schema for Humans configuration file > template_md_options > badge_as_image](#template_md_options_badge_as_image)
+  - [17.2. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_heading_numbers](#template_md_options_show_heading_numbers)
+  - [17.3. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_array_restrictions](#template_md_options_show_array_restrictions)
 
 **Title:** JSON Schema for Humans configuration file
 
@@ -291,7 +292,24 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="markdown_options"></a>15. [Optional] Property JSON Schema for Humans configuration file > markdown_options</strong>  
+<summary><strong> <a name="examples_as_yaml"></a>15. [Optional] Property JSON Schema for Humans configuration file > examples_as_yaml</strong>  
+
+</summary>
+<blockquote>
+
+| Type                      | `boolean`                                                                 |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Default**               | `false`                                                                   |
+|                           |                                                                           |
+
+**Description:** Whether to display examples as YAML instead of JSON
+
+</blockquote>
+</details>
+
+<details>
+<summary><strong> <a name="markdown_options"></a>16. [Optional] Property JSON Schema for Humans configuration file > markdown_options</strong>  
 
 </summary>
 <blockquote>
@@ -324,7 +342,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </details>
 
 <details>
-<summary><strong> <a name="template_md_options"></a>16. [Optional] Property JSON Schema for Humans configuration file > template_md_options</strong>  
+<summary><strong> <a name="template_md_options"></a>17. [Optional] Property JSON Schema for Humans configuration file > template_md_options</strong>  
 
 </summary>
 <blockquote>
@@ -337,7 +355,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 **Description:** specific options to md template
 
 <details>
-<summary><strong> <a name="template_md_options_badge_as_image"></a>16.1. [Optional] Property JSON Schema for Humans configuration file > template_md_options > badge_as_image</strong>  
+<summary><strong> <a name="template_md_options_badge_as_image"></a>17.1. [Optional] Property JSON Schema for Humans configuration file > template_md_options > badge_as_image</strong>  
 
 </summary>
 <blockquote>
@@ -356,7 +374,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </details>
 
 <details>
-<summary><strong> <a name="template_md_options_show_heading_numbers"></a>16.2. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_heading_numbers</strong>  
+<summary><strong> <a name="template_md_options_show_heading_numbers"></a>17.2. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_heading_numbers</strong>  
 
 </summary>
 <blockquote>
@@ -375,7 +393,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </details>
 
 <details>
-<summary><strong> <a name="template_md_options_show_array_restrictions"></a>16.3. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_array_restrictions</strong>  
+<summary><strong> <a name="template_md_options_show_array_restrictions"></a>17.3. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_array_restrictions</strong>  
 
 </summary>
 <blockquote>

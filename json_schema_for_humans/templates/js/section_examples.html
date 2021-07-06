@@ -9,6 +9,10 @@
         <button class="btn btn-light example-show collapsed" data-toggle="collapse" data-target="#{{ example_id }}" aria-controls="{{ example_id }}"></button>
     {%- endif -%}
     <div id="{{ example_id }}" class="{% if example_is_long %}collapse {% endif %}jumbotron examples">
-        {{ example | highlight_json_example }}
+        {%- if not examples_as_yaml -%}
+            {{ example | highlight_json_example }}
+        {%- else -%}
+            {{ example | highlight_yaml_example }}
+        {%- endif -%}
     </div>
 {%- endfor -%}

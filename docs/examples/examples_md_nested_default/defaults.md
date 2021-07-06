@@ -36,7 +36,7 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Default**               | `"Default from b"`                                                        |
-| **Same definition as**    | `[a](#a)`                                                                 |
+| **Same definition as**    | [a](#a)                                                                   |
 |                           |                                                                           |
 
 **Description:** A common description

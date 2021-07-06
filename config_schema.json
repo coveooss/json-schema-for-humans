@@ -62,7 +62,7 @@
     "templates_directory": {
       "type": "string",
       "description": "The file system path to the directory containing templates, with a default of the `templates` directory within the library source code."
-    },    
+    },
     "template_name": {
       "type": "string",
       "enum": ["flat", "js", "md"],
@@ -73,6 +73,11 @@
       "type": "boolean",
       "default": true,
       "description": "Whether to render table of contents."
+    },
+    "examples_as_yaml": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether to display examples as YAML instead of JSON"
     },
     "markdown_options": {
       "type": "object",
@@ -87,7 +92,7 @@
           "tables": null,
           "break-on-newline": true,
           "cuddled-lists": true
-        } 
+        }
       ]
     },
     "template_md_options": {
