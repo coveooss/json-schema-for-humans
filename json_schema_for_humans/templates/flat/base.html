@@ -19,8 +19,9 @@
     {%- endif -%}
 
     {{ content(schema) }}
+
+    <footer>
+        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on {{ get_local_time() }}</p>
+    </footer>
 </body>
-<footer>
-    <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on {{ get_local_time() }}</p>
-</footer>
 </html>
