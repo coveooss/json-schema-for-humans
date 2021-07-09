@@ -1,0 +1,19 @@
+{
+  "type": "array",
+  "oneOf": [
+    {
+      "title": "1st constant",
+      "const": [
+        1,
+        2
+      ]
+    },
+    {
+      "title": "2nd constant",
+      "const": {
+        "a_key": "a_value",
+        "another_key": "another_value"
+      }
+    }
+  ]
+}

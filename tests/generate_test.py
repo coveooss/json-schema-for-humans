@@ -219,7 +219,7 @@ def test_array_advanced():
 
     tests.html_schema_doc_asserts.assert_descriptions(soup, ["A little food fun", "5 to 8 fruits that you like"])
     tests.html_schema_doc_asserts.assert_property_names(soup, ["fruits", "vegetables"])
-    tests.html_schema_doc_asserts.assert_const(soup, ["eggplant"])
+    tests.html_schema_doc_asserts.assert_const(soup, ['"eggplant"'])
     tests.html_schema_doc_asserts.assert_required(soup, [False] * 2)
 
 
@@ -597,6 +597,16 @@ def test_reference_int() -> None:
     )
     tests.html_schema_doc_asserts.assert_types(soup, ["object", "object", "object"])
     tests.html_schema_doc_asserts.assert_property_names(soup, ["extra_options_object", "name_looks_like_an_int"])
+
+
+def test_complex_const() -> None:
+    """Test the keyword "const" used with an array or a dict"""
+    soup = generate_case("complex_const")
+
+    tests.html_schema_doc_asserts.assert_types(soup, ["const", "const"])
+    tests.html_schema_doc_asserts.assert_const(
+        soup, ["[ 1, 2 ]", '{ "a_key": "a_value", "another_key": "another_value" }']
+    )
 
 
 # TODO: test for uniqueItems

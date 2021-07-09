@@ -8,12 +8,9 @@ def assert_soup_results_text(soup: BeautifulSoup, class_name: str, texts: List[s
 
     There must be exactly as many elements as the length of the supplied values and they must be in the same order
     """
-    elements = soup.find_all(class_=class_name)
+    elements_text = [element.text.strip() for element in soup.find_all(class_=class_name)]
 
-    assert len(elements) == len(texts)
-
-    for i, element in enumerate(elements):
-        assert element.text.strip() == texts[i]
+    assert elements_text == texts
 
 
 def assert_property_names(soup: BeautifulSoup, property_names: List[str]) -> None:
@@ -45,7 +42,7 @@ def assert_types(soup: BeautifulSoup, type_names: List[str]) -> None:
 
 
 def assert_const(soup: BeautifulSoup, const_values: List[str]) -> None:
-    assert_soup_results_text(soup, "const-value", [f'Specific value: "{const_value}"' for const_value in const_values])
+    assert_soup_results_text(soup, "const-value", [f"Specific value: {const_value}" for const_value in const_values])
 
 
 def assert_numeric_restrictions(soup: BeautifulSoup, restrictions: List[str]) -> None:

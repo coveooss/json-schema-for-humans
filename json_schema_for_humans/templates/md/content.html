@@ -60,7 +60,7 @@
         {% include "section_one_of.html" %}
     {%- endif %}
     {%- if schema.kw_const -%}
-        Specific value: `{{ schema.kw_const.literal | python_to_json }}`
+        Specific value: `{{ schema.kw_const.raw | python_to_json }}`
     {%- endif -%}
 
     {# Conditional subschema, or if-then-else section #}

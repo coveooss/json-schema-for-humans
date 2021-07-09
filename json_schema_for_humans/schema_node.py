@@ -428,6 +428,19 @@ class SchemaNode:
 
         return name or const.TYPE_OBJECT
 
+    @property
+    def raw(self) -> Optional[Union[int, bool, str, List, Dict]]:
+        """Get the value of the node as it would exist in the original schema.
+        Useful for const where we don't care for the structure and just want to display the value
+        """
+        if self.literal:
+            return self.literal
+        if self.array_items:
+            return [node.raw for node in self.array_items]
+        if self.keywords:
+            return {k: v.raw for k, v in self.keywords.items()}
+        return None
+
     def should_be_a_link(self, config: GenerationConfiguration) -> bool:
         """Check if this node should be displayed as a link to another section of the schema in the context of
         the provided configuration.

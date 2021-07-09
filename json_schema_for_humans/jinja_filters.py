@@ -80,17 +80,7 @@ def python_to_json(value: Any) -> Any:
 
     Used to display a string literals more explicitly for default and const values.
     """
-    if value is None:
-        return "null"
-    if value is True:
-        return "true"
-    if value is False:
-        return "false"
-
-    if isinstance(value, str) and not value.startswith('"'):
-        return f'"{value}"'
-
-    return value
+    return json.dumps(value, indent=4, separators=(",", ": "), ensure_ascii=False)
 
 
 @environmentfilter

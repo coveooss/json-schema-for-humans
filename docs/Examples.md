@@ -598,6 +598,64 @@ Here you can browse various example schemas and their rendition with several tem
 [examples/examples_md_nested_with_badges/combining_oneOf.md](examples/examples_md_nested_with_badges/combining_oneOf.md ':include')
 </details>
 
+## --complex_const--
+### complex_const
+
+
+<details>
+<summary>Json schema - Click here to expand source code...</summary>
+
+[examples/cases/complex_const.json](examples/cases/complex_const.json ':include :type=code')
+</details>
+
+
+<details>
+<summary>JS template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/complex_const.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_default/complex_const.html](examples/examples_js_default/complex_const.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Flat template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/complex_const.html" target="_blank">Open it in full page</a>
+
+[examples/examples_flat_default/complex_const.html](examples/examples_flat_default/complex_const.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Markdown without badge template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_default/complex_const.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_default/complex_const.md](examples/examples_md_default/complex_const.md ':include')
+</details>
+
+
+<details>
+<summary>Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_with_badges/complex_const.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_with_badges/complex_const.md](examples/examples_md_with_badges/complex_const.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown without badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_nested_default/complex_const.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_default/complex_const.md](examples/examples_md_nested_default/complex_const.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_nested_with_badges/complex_const.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_with_badges/complex_const.md](examples/examples_md_nested_with_badges/complex_const.md ':include')
+</details>
+
 ## --conditional_subschema--
 ### conditional_subschema
 
