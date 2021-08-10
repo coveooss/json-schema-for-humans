@@ -4,7 +4,7 @@ import yaml
 from datetime import datetime
 from typing import List, Any
 
-from jinja2 import environmentfilter, Environment
+from jinja2 import pass_environment, Environment
 from markdown2 import Markdown
 from markupsafe import Markup
 from pygments import highlight
@@ -83,7 +83,7 @@ def python_to_json(value: Any) -> Any:
     return json.dumps(value, indent=4, separators=(",", ": "), ensure_ascii=False)
 
 
-@environmentfilter
+@pass_environment
 def get_description(env: Environment, schema_node: SchemaNode) -> str:
     """Filter. Get the description of a property or an empty string"""
     description = schema_node.description
