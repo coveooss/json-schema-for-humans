@@ -1,3 +1,4 @@
+import os
 import traceback
 from pathlib import Path
 
@@ -5,7 +6,12 @@ from bs4 import BeautifulSoup
 from click.testing import CliRunner, Result
 
 from json_schema_for_humans.generate import main
-from tests.test_utils import assert_css_and_js_copied, assert_css_and_js_not_copied, get_test_case_path
+from tests.test_utils import (
+    assert_css_and_js_copied,
+    assert_css_and_js_not_copied,
+    get_test_case_path,
+    get_nonexistent_output_path,
+)
 
 
 def assert_cli_runner_result(result: Result) -> None:
@@ -18,6 +24,11 @@ def assert_cli_runner_result(result: Result) -> None:
             else:
                 print(result.exc_info)
     assert result.exit_code == 0
+
+
+def assert_cli_runner_exited(result: Result, expected_exception_text: str) -> None:
+    assert result.exit_code > 0
+    assert expected_exception_text in result.stdout
 
 
 def test_generate_using_cli_default() -> None:
@@ -55,6 +66,26 @@ def test_config_parameters() -> None:
         assert_cli_runner_result(result)
 
         assert_css_and_js_not_copied(Path.cwd())
+
+
+def test_config_parameters_with_nonexistent_output_path() -> None:
+    """Test providing a non-existent output path fails with informative error message"""
+    test_path = get_test_case_path("basic")
+    output_dir = get_nonexistent_output_path("schema")
+    runner = CliRunner()
+    with runner.isolated_filesystem():
+        result = runner.invoke(main, [test_path, output_dir, "--config", "copy_css=false", "--config", "copy_js=false"])
+        assert_cli_runner_exited(result, f"{os.path.dirname(output_dir)} does not exist")
+
+
+def test_nonexistent_output_path() -> None:
+    """Test providing a non-existent output path fails with informative error message"""
+    test_path = get_test_case_path("basic")
+    output_dir = get_nonexistent_output_path("schema")
+    runner = CliRunner()
+    with runner.isolated_filesystem():
+        result = runner.invoke(main, [test_path, output_dir])
+        assert_cli_runner_exited(result, f"{os.path.dirname(output_dir)} does not exist")
 
 
 def test_config_parameters_flags_yes() -> None:

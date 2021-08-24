@@ -31,6 +31,11 @@ def get_test_case_path(name: str) -> str:
     return os.path.realpath(os.path.join(parent_dir, "docs", "examples", "cases", f"{name}.json"))
 
 
+def get_nonexistent_output_path(name: str) -> str:
+    """Get the location of a non-existent output file"""
+    return os.path.realpath(os.path.join(parent_dir, "not", "a", "path", f"{name}.html"))
+
+
 def generate_case(case_name: str, config: GenerationConfiguration = None) -> BeautifulSoup:
     """Get the BeautifulSoup object for a test case"""
     return BeautifulSoup(
