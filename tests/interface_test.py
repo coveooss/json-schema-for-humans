@@ -117,6 +117,26 @@ def test_generate_from_file_name(tmp_path: Path) -> None:
     assert (tmp_path / "schema_doc.min.js").exists()
 
 
+def test_generate_from_file_name_with_invalid_output_dir(tmp_path: Path) -> None:
+    """Test generating from file names for input and output where the output directory is absent"""
+    test_case_path = get_test_case_path("basic")
+    result_path = tmp_path / "nonsense" / "result_with_another_name.html"
+
+    with pytest.raises(FileNotFoundError) as exception_info:
+        generate_from_filename(test_case_path, str(result_path.resolve()), False, False, False, False)
+        assert f"{os.path.dirname(result_path)} not found" in str(exception_info.value)
+
+
+def test_generate_from_file_name_with_invalid_output_dir_and_no_resource_copy(tmp_path: Path) -> None:
+    """Test generating from file names for input and output where the output directory is absent"""
+    test_case_path = get_test_case_path("basic")
+    result_path = tmp_path / "nonsense" / "result_with_another_name.html"
+
+    with pytest.raises(FileNotFoundError) as exception_info:
+        generate_from_filename(test_case_path, str(result_path.resolve()), False, False, False, False, False, False)
+        assert f"{os.path.dirname(result_path)} not found" in str(exception_info.value)
+
+
 def _assert_deprecation_message(caplog: LogCaptureFixture, must_be_present: bool) -> None:
     log_records = [r.message for r in caplog.records]
     if must_be_present:

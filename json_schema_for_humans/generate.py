@@ -128,6 +128,11 @@ def generate_from_filename(
     elif isinstance(schema_file_name, Path):
         schema_file_name = str(schema_file_name.resolve())
 
+    if not os.path.exists(os.path.dirname(os.path.realpath(result_file_name))):
+        raise FileNotFoundError(
+            f"Output directory {os.path.dirname(os.path.realpath(result_file_name))} does not exist"
+        )
+
     rendered_schema_doc = generate_from_schema(
         schema_file_name,
         minify=minify,
@@ -168,6 +173,11 @@ def generate_from_file_object(
         copy_js=copy_js,
         link_to_reused_ref=link_to_reused_ref,
     )
+
+    if not os.path.exists(os.path.dirname(os.path.realpath(result_file.name))):
+        raise FileNotFoundError(
+            f"Output directory {os.path.dirname(os.path.realpath(result_file.name))} does not exist"
+        )
 
     result = generate_from_schema(schema_file, config=config)
 
@@ -255,7 +265,10 @@ def main(
         config_parameters=config,
     )
 
-    generate_from_file_object(schema_file, result_file, config=config)
+    try:
+        generate_from_file_object(schema_file, result_file, config=config)
+    except FileNotFoundError as e:
+        raise click.ClickException(str(e)) from e
     duration = datetime.now() - start
     print(f"Generated {result_file.name} in {duration}")
 
