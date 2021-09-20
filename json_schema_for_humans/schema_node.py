@@ -433,7 +433,7 @@ class SchemaNode:
         """Get the value of the node as it would exist in the original schema.
         Useful for const where we don't care for the structure and just want to display the value
         """
-        if self.literal:
+        if self.literal is not None:
             return self.literal
         if self.array_items:
             return [node.raw for node in self.array_items]

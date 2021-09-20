@@ -2,6 +2,7 @@
 
 - [1. Property `root > oneOf > 1st constant`](#oneOf_i0)
 - [2. Property `root > oneOf > 2nd constant`](#oneOf_i1)
+- [3. Property `root > oneOf > 0`](#oneOf_i2)
 
 | Type                      | `combining`                                                                                                         |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -14,6 +15,7 @@
 | ------------------------- |
 | [1st constant](#oneOf_i0) |
 | [2nd constant](#oneOf_i1) |
+| [0](#oneOf_i2)            |
 |                           |
 
 <blockquote>
@@ -48,6 +50,20 @@ Specific value: `{
     "a_key": "a_value",
     "another_key": "another_value"
 }`
+
+</blockquote>
+<blockquote>
+
+## <a name="oneOf_i2"></a>3. Property `root > oneOf > 0`
+
+**Title:** 0
+
+| Type                      | `const`                                                                                                             |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
+
+Specific value: `0`
 
 </blockquote>
 
