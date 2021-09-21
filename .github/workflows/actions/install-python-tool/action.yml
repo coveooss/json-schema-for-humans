@@ -1,0 +1,63 @@
+name: Install Python Tool
+description: Installs a python tool in a virtualenv and adds it to the path.
+
+
+inputs:
+  module-name:
+    description: The module to install
+    required: true
+  executable-name:
+    description: The tool's executable name
+    required: false
+    default: ''
+  version:
+    description: The tool's version (must be a pip constraint like "==1.2.3" and * will not work)
+    required: false
+    default: '>0'
+  extra-pip-args:
+    description: Additional pip args
+    required: false
+    default: ''
+
+
+outputs:
+  workspace-bin-path:
+    description: The path where the tools are linked; should be added to path by parent action.
+    value: ${{ steps.workspace-bin.outputs.workspace-bin-path }}
+
+
+runs:
+  using: 'composite'
+
+  steps:
+    - name: More inputs
+      id: more-inputs
+      shell: bash
+      run: |
+        if [ '${{ inputs.executable-name }}' == '' ]; then
+          echo "::set-output name=executable-name::${{ inputs.module-name }}"
+        else
+          echo "::set-output name=executable-name::${{ inputs.executable-name }}"
+        fi
+
+    - name: Install the module inside a virtual environment
+      shell: bash
+      env:
+        VENV: ${{ github.workspace }}/.pytools.venv/${{ inputs.module-name }}
+      run: |
+        python -m venv $VENV --copies --clear
+        $VENV/bin/pip install --upgrade pip wheel setuptools
+        $VENV/bin/pip install --upgrade ${{ inputs.module-name }}${{ inputs.version }} ${{ inputs.extra-pip-args }}
+
+
+    - name: Link the tool to the workspace's bin path
+      id: workspace-bin
+      shell: bash
+      env:
+        EXECUTABLE: ${{ steps.more-inputs.outputs.executable-name }}
+        WORKSPACE_BIN_PATH: ${{ github.workspace }}/.bin
+        VENV: ${{ github.workspace }}/.pytools.venv/${{ inputs.module-name }}
+      run: |
+        mkdir $WORKSPACE_BIN_PATH --parents
+        ln --symbolic $VENV/bin/$EXECUTABLE $WORKSPACE_BIN_PATH/$EXECUTABLE
+        echo "::set-output name=workspace-bin-path::$(echo $WORKSPACE_BIN_PATH)"

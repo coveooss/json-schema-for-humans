@@ -21,7 +21,28 @@ runs:
   steps:
     - name: Setup/upgrade the python tools
       shell: bash
-      run: python -m pip install --upgrade pip wheel setuptools poetry==1.1.8 coveo-pypi-cli==2.0.3 --user
+      run: python -m pip install --upgrade pip wheel setuptools
+
+    - name: Install poetry
+      id: install-poetry
+      uses: ./.github/workflows/actions/install-python-tool
+      with:
+        module-name: poetry
+        version: ==1.1.8
+
+    - name: Install coveo-pypi-cli
+      id: install-pypi-cli
+      uses: ./.github/workflows/actions/install-python-tool
+      with:
+        module-name: coveo-pypi-cli
+        executable-name: pypi
+        version: ==2.0.3
+
+    - name: Add python tools to path
+      shell: bash
+      run: |
+        echo "${{ steps.install-poetry.outputs.workspace-bin-path }}" >> $GITHUB_PATH
+        echo "${{ steps.install-pypi-cli.outputs.workspace-bin-path }}" >> $GITHUB_PATH
 
     - name: Determine the minimum version for this release (the one in the pyproject.toml file)
       shell: bash
@@ -32,8 +53,8 @@ runs:
       id: get-versions
       shell: bash
       run: |
-        RELEASE="$(python -m pypi next-version ${{ inputs.project-name }} --minimum-version ${{ steps.get-minimum-version.outputs.minimum-version }})"
-        PRERELEASE="$(python -m pypi next-version ${{ inputs.project-name }} --prerelease --minimum-version ${{ steps.get-minimum-version.outputs.minimum-version }})"
+        RELEASE="$(pypi next-version ${{ inputs.project-name }} --minimum-version ${{ steps.get-minimum-version.outputs.minimum-version }})"
+        PRERELEASE="$(pypi next-version ${{ inputs.project-name }} --prerelease --minimum-version ${{ steps.get-minimum-version.outputs.minimum-version }})"
         echo "::set-output name=release::$RELEASE"
         echo "Next release: $RELEASE"
         echo "::set-output name=prerelease::$PRERELEASE"
@@ -52,15 +73,15 @@ runs:
     - name: Setup poetry for publish
       shell: bash
       run: |
-        python -m poetry version ${{ steps.get-next-version.outputs.version }}
-        python -m poetry build
-        python -m poetry config pypi-token.pypi ${{ inputs.pypi-token }}
+        poetry version ${{ steps.get-next-version.outputs.version }}
+        poetry build
+        poetry config pypi-token.pypi ${{ inputs.pypi-token }}
 
     - name: Publish to pypi.org
       shell: bash
       run: |
         if [[ ${{ inputs.dry-run }} == false ]]; then
-          python -m poetry publish --no-interaction
+          poetry publish --no-interaction
         else
           echo "Just a dry run; we're not actually publishing"
         fi
