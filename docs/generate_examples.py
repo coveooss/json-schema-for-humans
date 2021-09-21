@@ -2,28 +2,25 @@
 import os
 import sys
 import re
-from typing import TextIO
+from pathlib import Path
+from typing import TextIO, TypedDict, List
 
 import yaml
 
 # init directories
-current_dir = os.path.abspath(os.path.dirname(__file__))
-parent_dir = os.path.abspath(os.path.dirname(current_dir))
-sys.path.insert(0, parent_dir)
+CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
+PARENT_DIR = os.path.abspath(os.path.dirname(CURRENT_DIR))
+sys.path.insert(0, PARENT_DIR)
 
 from json_schema_for_humans.generate import generate_from_filename
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
 
-template_names = ["js", "flat", "md", "md_nested"]
-template_extension = "html"
+EXAMPLES_DIR = os.path.join(CURRENT_DIR, "examples")
+JSON_EXAMPLES_DIR = os.path.join(EXAMPLES_DIR, "cases")
+
+TEMPLATE_NAMES = ["js", "flat", "md", "md_nested"]
 if len(sys.argv) >= 2:
-    template_names = [sys.argv[1]]
-
-
-examples_dir = os.path.join(current_dir, "examples")
-json_examples_dir = os.path.join(examples_dir, "cases")
-
-config_md = GenerationConfiguration(template_name="md", deprecated_from_description=True)
+    TEMPLATE_NAMES = [sys.argv[1]]
 
 EXAMPLES_HEADER_TEMPLATE = """
 # {title} <!-- {{docsify-ignore-all}} -->
@@ -80,7 +77,15 @@ MD_EXAMPLE_MD_TEMPLATE = """
 </details>
 """
 
-configurations = [
+
+class ExampleConfiguration(TypedDict):
+    title: str
+    dir_name: str
+    config: GenerationConfiguration
+    md_example_template: str
+
+
+CONFIGURATIONS: List[ExampleConfiguration] = [
     {
         "title": "JS template",
         "dir_name": "examples_js_default",
@@ -129,9 +134,7 @@ configurations = [
     },
 ]
 
-with open(
-    os.path.realpath(os.path.join(current_dir, "cases_description.yaml")), encoding="utf-8"
-) as cases_description_fp:
+with open(Path(CURRENT_DIR) / "cases_description.yaml", encoding="utf-8") as cases_description_fp:
     CASES_DESCRIPTION_DICT = yaml.safe_load(cases_description_fp.read())
 
 GENERATED_TIMESTAMP_REGEXP = re.compile(r"on \d{4}-\d{2}-\d{2} at \d{2}:\d{2}:\d{2} [+-]\d{4}", re.IGNORECASE)
@@ -146,13 +149,10 @@ def remove_generated_timestamp(file_path: str) -> None:
         f.writelines(lines)
 
 
-config_schema = "config_schema.json"
-config_schema_location = os.path.abspath(os.path.join(parent_dir, config_schema))
+CONFIG_SCHEMA = "config_schema.json"
 
 
-def generate_each_template(
-    examples_md_file, configurations, template_names, case_path, case_url, case_name, examples_dir
-) -> None:
+def generate_each_template(examples_md_file: TextIO, case_path: str, case_url: str, case_name: str) -> None:
     """
     Generate examples from JSON case file for each template selected
     """
@@ -170,7 +170,7 @@ def generate_each_template(
         examples_md_file.write(f"\n### {case_name}\n")
 
     examples_md_file.write(MD_EXAMPLE_JSON_TEMPLATE.format(file_url=case_url, title="Json schema"))
-    for config in configurations:
+    for config in CONFIGURATIONS:
         template_configuration = config["config"]
         template_name = template_configuration.template_name
         example_dir_name = config["dir_name"]
@@ -181,10 +181,10 @@ def generate_each_template(
                 file_url=f"examples/{example_dir_name}/{example_file_name}", title=config["title"]
             )
         )
-        if not (template_name in template_names):
+        if template_name not in TEMPLATE_NAMES:
             continue
 
-        example_dest_dir = os.path.join(examples_dir, example_dir_name)
+        example_dest_dir = os.path.join(EXAMPLES_DIR, example_dir_name)
         os.makedirs(example_dest_dir, exist_ok=True)
 
         example_file_path = os.path.join(example_dest_dir, example_file_name)
@@ -193,41 +193,35 @@ def generate_each_template(
 
 
 def generate_examples(examples_md_file: TextIO):
-    for case_name in sorted(os.listdir(json_examples_dir)):
+    for case_name in sorted(os.listdir(JSON_EXAMPLES_DIR)):
         name, ext = os.path.splitext(case_name)
-        case_source = os.path.abspath(os.path.join(json_examples_dir, case_name))
+        case_source = os.path.abspath(os.path.join(JSON_EXAMPLES_DIR, case_name))
         if not os.path.isfile(case_source) or ext != ".json":
             continue
 
         generate_each_template(
             examples_md_file,
-            configurations,
-            template_names,
             case_source,
-            os.path.relpath(case_source, current_dir).replace("\\", "/"),
+            os.path.relpath(case_source, CURRENT_DIR).replace("\\", "/"),
             name,
-            examples_dir,
         )
 
 
 # generate examples
-examples_md_file_path = os.path.join(current_dir, "Examples.md")
+examples_md_file_path = os.path.join(CURRENT_DIR, "Examples.md")
 with open(examples_md_file_path, "w", encoding="utf-8") as examples_md_file:
     examples_md_file.write(EXAMPLES_HEADER_TEMPLATE.format(title="Examples"))
     generate_examples(examples_md_file)
     examples_md_file.write(EXAMPLES_FOOTER_TEMPLATE)
 
 # generate configuration files
-configuration_md_file_path = os.path.join(current_dir, "Configuration.md")
+configuration_md_file_path = os.path.join(CURRENT_DIR, "Configuration.md")
 with open(configuration_md_file_path, "w", encoding="utf-8") as configuration_md_file:
     configuration_md_file.write(CONFIGURATION_HEADER_TEMPLATE.format(title="Configuration"))
     generate_each_template(
         configuration_md_file,
-        configurations,
-        template_names,
-        config_schema_location,
-        f"/{config_schema}",
+        os.path.abspath(os.path.join(PARENT_DIR, CONFIG_SCHEMA)),
+        f"/{CONFIG_SCHEMA}",
         "Configuration",
-        examples_dir,
     )
     configuration_md_file.write(EXAMPLES_FOOTER_TEMPLATE)
