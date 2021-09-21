@@ -31,5 +31,4 @@ jobs:
           project-name: json-schema-for-humans
           pypi-token: ${{ secrets.PYPI_TOKEN }}
           pre-release: ${{ github.ref != 'refs/heads/master' }}
-          dry-run: false
-#          dry-run: ${{ github.ref != 'refs/heads/master' && github.event.inputs.publish != 'true' }}
+          dry-run: ${{ github.ref != 'refs/heads/master' && github.event.inputs.publish != 'true' }}
