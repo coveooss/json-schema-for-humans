@@ -26,7 +26,6 @@ runs:
     - name: Determine the minimum version for this release (the one in the pyproject.toml file)
       shell: bash
       id: get-minimum-version
-      working-directory: ${{ inputs.project-name }}
       run: echo "::set-output name=minimum-version::$(${{ github.action_path }}/get-minimum-version.sh)"
 
     - name: Compute the release and prerelease versions
@@ -52,7 +51,6 @@ runs:
 
     - name: Setup poetry for publish
       shell: bash
-      working-directory: ${{ inputs.project-name }}
       run: |
         python -m poetry version ${{ steps.get-next-version.outputs.version }}
         python -m poetry build
@@ -60,7 +58,6 @@ runs:
 
     - name: Publish to pypi.org
       shell: bash
-      working-directory: ${{ inputs.project-name }}
       run: |
         if [[ ${{ inputs.dry-run }} == false ]]; then
           python -m poetry publish --no-interaction
