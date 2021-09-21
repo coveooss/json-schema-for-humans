@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - master
+
   pull_request:
-    branches:
-      - master
+    types: [ opened, synchronize, reopened ]
+
+  workflow_dispatch: {}
 
 jobs:
   build:
