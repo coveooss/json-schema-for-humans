@@ -86,24 +86,24 @@ runs:
           echo "Just a dry run; we're not actually publishing"
         fi
 
-#    - name: Tag repository
-#      shell: bash
-#      id: get-next-tag
-#      run: |
-#        TAG_NAME=${{ inputs.project-name }}.${{ steps.get-next-version.outputs.version }}
-#        echo "::set-output name=tag-name::$TAG_NAME"
-#        echo "This release will be tagged as $TAG_NAME"
-#        git config user.name "github-actions"
-#        git config user.email "actions@users.noreply.github.com"
-#        git tag --annotate --message="Automated tagging system" $TAG_NAME ${{ github.sha }}
-#
-#    - name: Push the tag
-#      shell: bash
-#      env:
-#        TAG_NAME: ${{ steps.get-next-tag.outputs.tag-name }}
-#      run: |
-#        if [[ ${{ inputs.dry-run }} == false ]]; then
-#          git push origin $TAG_NAME
-#        else
-#          echo "If this wasn't a dry run, I would push this new tag named $TAG_NAME"
-#        fi
+    - name: Tag repository
+      shell: bash
+      id: get-next-tag
+      run: |
+        TAG_NAME=v${{ steps.get-next-version.outputs.version }}
+        echo "::set-output name=tag-name::$TAG_NAME"
+        echo "This release will be tagged as $TAG_NAME"
+        git config user.name "github-actions"
+        git config user.email "actions@users.noreply.github.com"
+        git tag --annotate --message="Automated tagging system" $TAG_NAME ${{ github.sha }}
+
+    - name: Push the tag
+      shell: bash
+      env:
+        TAG_NAME: ${{ steps.get-next-tag.outputs.tag-name }}
+      run: |
+        if [[ ${{ inputs.dry-run }} == false ]]; then
+          git push origin $TAG_NAME
+        else
+          echo "If this wasn't a dry run, I would push this new tag named $TAG_NAME"
+        fi
