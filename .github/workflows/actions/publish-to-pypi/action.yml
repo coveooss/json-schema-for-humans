@@ -21,28 +21,15 @@ runs:
   steps:
     - name: Setup/upgrade the python tools
       shell: bash
-      run: python -m pip install --upgrade pip wheel setuptools
+      run: python -m pip install --upgrade pip wheel setuptools pipx --user
 
     - name: Install poetry
-      id: install-poetry
-      uses: ./.github/workflows/actions/install-python-tool
-      with:
-        module-name: poetry
-        version: ==1.1.8
+      shell: bash
+      run: pipx install poetry==1.1.8
 
     - name: Install coveo-pypi-cli
-      id: install-pypi-cli
-      uses: ./.github/workflows/actions/install-python-tool
-      with:
-        module-name: coveo-pypi-cli
-        executable-name: pypi
-        version: ==2.0.3
-
-    - name: Add python tools to path
       shell: bash
-      run: |
-        echo "${{ steps.install-poetry.outputs.workspace-bin-path }}" >> $GITHUB_PATH
-        echo "${{ steps.install-pypi-cli.outputs.workspace-bin-path }}" >> $GITHUB_PATH
+      run: pipx install coveo-pypi-cli==2.0.3
 
     - name: Determine the minimum version for this release (the one in the pyproject.toml file)
       shell: bash
