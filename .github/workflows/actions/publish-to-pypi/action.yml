@@ -3,7 +3,7 @@ description: Publish a project to pypi.org
 
 inputs:
   project-name:
-    description: The project name, which by convention is also the name of the folder at the root.
+    description: The project name in pypi.org
     required: true
   pypi-token:
     description: The pypi token to use for authentication
