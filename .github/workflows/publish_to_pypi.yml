@@ -29,7 +29,7 @@ jobs:
           python-version: 3.9
 
       - name: Publish to pypi
-        uses: ./.github/workflows/actions/publish-to-pypi
+        uses: coveooss/github-actions-for-python
         with:
           project-name: json-schema-for-humans
           pypi-token: ${{ secrets.PYPI_TOKEN }}
