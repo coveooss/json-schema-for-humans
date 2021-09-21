@@ -90,7 +90,7 @@ def generate_from_schema(
 
     rendered = template.render(schema=intermediate_schema, config=config)
 
-    if minify:
+    if config.minify:
         if config.is_markdown_template:
             # remove multiple contiguous empty lines
             rendered = re.sub(r"\n\s*\n", "\n\n", rendered)
