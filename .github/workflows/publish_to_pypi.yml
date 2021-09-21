@@ -5,20 +5,30 @@ on:
     tags:
       - v*
 
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: "Publish to pypi.org?"
+        required: false
+        default: 'false'
+
 jobs:
   publish:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Set up Python 3.7
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.7
-    - name: Build
-      run: |
-        pip install wheel
-        pip install twine
-        python setup.py sdist bdist_wheel
-    - name: Publish
-      run: twine upload -u __token__ -p ${{ secrets.PYPI_TOKEN }} dist/*
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: Publish to pypi
+        uses: ./.github/workflows/actions/publish-to-pypi
+        with:
+          project-name: json-schema-for-humans
+          pypi-token: ${{ secrets.PYPI_TOKEN }}
+          pre-release: ${{ github.ref != 'refs/heads/master' }}
+          dry-run: ${{ github.ref != 'refs/heads/master' && github.event.inputs.publish != 'true' }}
