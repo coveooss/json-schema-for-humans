@@ -7,15 +7,15 @@ Contributions are more than welcome! Don't hesitate to open an incomplete PR to 
 The library currently supports Python versions 3.6+
 
 ## Install dependencies
-Just run 
 
+If you don't have it already, install [poetry](https://python-poetry.org/docs/#installation)
+
+Then run
 `poetry install`
 
 ## Testing
 
 ### With Tox
-Just run tox
-
 `tox`
 
 ### With pytest directly
@@ -23,7 +23,7 @@ Just run tox
 
 ## Adding a new template
 
-Just copy one of the existing template, change the name and start modifying.
+Copy one of the existing template, change the name and start modifying.
 If you are looking for examples, you can run `poetry run python docs/generate_examples.py` from the root folder.
 
 The examples will be in:
