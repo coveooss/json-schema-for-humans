@@ -34,12 +34,27 @@ More details are available in the appropriate sections below.
 ### From CLI
 
 ```
-generate-schema-doc [OPTIONS] SCHEMA_FILE [RESULT_FILE]
+generate-schema-doc [OPTIONS] SCHEMA_FILES_OR_DIR [RESULT_FILE_OR_DIR]
 ```
 
-`SCHEMA_FILE` must be a valid JSON Schema (in JSON or YAML format)
+`SCHEMA_FILES_OR_DIR` can be:
+- a path to a single schema file;
+- a path to a directory, in this case all files with extensions json, yaml, or yml will be used; or
+- a comma-separated list of the above
 
-The default value for `RESULT_FILE` is `schema_doc.html`
+All schemas provided must be a valid JSON Schema (in JSON or YAML format)
+
+Examples:
+- `my_schema.json`
+- `my_folder`
+- `my_folder/my_schema.yaml,another_schema.json`
+
+The default value for `RESULT_FILE_OR_DIR` depends on the context:
+- the current working directory if more than one schema as been provided as input
+- `schema_doc.html` if rendering a single schema as HTML
+- `schema_doc.md` if rendering a single schema as Markdown
+
+In a case where more than one schema is provided as input, `RESULT_FILE_OR_DIR` must be a directory. The output documentation will have the same name as the input schema, but with a different extension (`html` or `md`).
 
 #### CLI options
 
@@ -63,7 +78,52 @@ copy_js: false
 
 ### From code
 
-There are 3 methods that one could use:
+To render schema documentation from code, the method to call is `generate` with the following signature:
+
+```python
+def generate(
+    schema_file_or_dir: List[Union[str, Path, TextIO]],
+    result_file_or_dir: Optional[Union[str, Path, TextIO]],
+    config: GenerationConfiguration = None,
+    loaded_schemas: Optional[Dict[str, Any]] = None,
+) -> Tuple[List[Path], Dict[str, str]]:
+    ...
+```
+
+Where:
+- `schema_file_or_dir` is a list of schema file paths or open file pointer
+- `result_file_or_dir` is the output path. If there is more than one schema to render, this should be a directory. The same rules as the CLI call documented above applies.
+- `config` is an instance of the `GenerationConfiguration` object, see `The GenerationConfiguration object` below
+- `loaded_schemas` is a dictionary of already loaded schema files. See `Pre-load schemas` below. This is an advanced option.
+
+The output is a tuple where:
+- the first element is a list of the paths to documentation files written. This part is only populated when there is an output path and the files are written to disk
+- the second is a dictionary of the rendered schemas in the format input_schema_file_name -> rendered_documentation. This is only populated when there is no output path
+
+Notes:
+- When providing a file pointer, it must be open in read mode for the input schema and in write mode for the output documentation files
+- If there is an output path and it is not disabled in the config, CSS and JS files are copied to the current working directory with names "schema_doc.css" and "schema_doc.min.js" respectively. These are needed to render the documentation HTML page in a browser
+
+Example:
+
+In this example, `my_schema.json` will be rendered to `my_schema.html` in the output directory
+```python
+from json_schema_for_humans.generate import generate
+
+from pathlib import Path
+
+output_dir = Path.cwd() / "output_dir"
+output_dir.mkdir(parents=True, exist_ok=True)
+
+generated = generate(["my_schema.json"], output_dir)
+
+# Returns ([Path('[cwd]/output_dir/my_schema.html')], {})
+```
+
+
+#### Shortcut methods
+
+These methods are kept for retrocompatibility and because they are easier to call for simple use cases.
 
 Method Name | Schema input | Output | CSS and JS copied?
 --- | --- | --- | ---

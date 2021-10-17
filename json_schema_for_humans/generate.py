@@ -1,9 +1,10 @@
 import os
 import re
 import shutil
+from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List, Optional, TextIO, Union
+from typing import Any, Dict, List, Optional, TextIO, Tuple, Union
 
 import click
 import htmlmin
@@ -22,26 +23,79 @@ CSS_FILE_NAME = "schema_doc.css"
 JS_FILE_NAME = "schema_doc.min.js"
 
 
-def generate_from_schema(
-    schema_file: Union[str, Path, TextIO],
-    loaded_schemas: Optional[Dict[str, Any]] = None,
-    minify: bool = True,
-    deprecated_from_description: bool = False,
-    default_from_description: bool = False,
-    expand_buttons: bool = False,
-    link_to_reused_ref: bool = True,
-    config: GenerationConfiguration = None,
-) -> str:
-    config = config or _get_final_config(
-        minify=minify,
-        deprecated_from_description=deprecated_from_description,
-        default_from_description=default_from_description,
-        expand_buttons=expand_buttons,
-        copy_css=False,
-        copy_js=False,
-        link_to_reused_ref=link_to_reused_ref,
-    )
+@dataclass
+class SchemaToRender:
+    schema_file: Union[Path, TextIO]
+    result_file: Optional[Union[Path, TextIO]]
+    output_dir: Optional[Path]
 
+    config: GenerationConfiguration
+
+    @property
+    def should_write_to_disk(self) -> bool:
+        return self.result_file is not None
+
+    @property
+    def schema_file_name(self) -> str:
+        return self.schema_file.name
+
+    @property
+    def name_for_output(self) -> str:
+        if self.result_file:
+            return self.result_file.name
+        return self.schema_file.name
+
+    def render(self, template: "Template", loaded_schemas: Optional[Dict[str, Any]] = None) -> str:
+        if isinstance(self.schema_file, Path):
+            with open(self.schema_file, encoding="utf-8") as schema_file:
+                intermediate_schema = build_intermediate_representation(schema_file, self.config, loaded_schemas)
+        else:
+            intermediate_schema = build_intermediate_representation(self.schema_file, self.config, loaded_schemas)
+
+        rendered = template.render(schema=intermediate_schema, config=self.config)
+
+        if self.config.minify:
+            if self.config.is_markdown_template:
+                # remove multiple contiguous empty lines
+                rendered = re.sub(r"\n\s*\n", "\n\n", rendered)
+            else:
+                rendered = htmlmin.minify(rendered)
+
+        return rendered
+
+    def write_to_disk(self, template: "Template", loaded_schemas: Optional[Dict[str, Any]] = None) -> Path:
+        assert self.result_file is not None
+
+        rendered = self.render(template, loaded_schemas)
+
+        if isinstance(self.result_file, Path):
+            with self.result_file.open("w", encoding="utf-8") as result_file:
+                result_file.write(rendered)
+                result_file_path = Path(result_file.name)
+        else:
+            self.result_file.write(rendered)
+            result_file_path = self.result_file
+
+        return result_file_path
+
+
+def _get_schema_paths(schema_file_or_dir: Union[str, Path]) -> List[Path]:
+    schema_file_paths: List[Path] = []
+    if isinstance(schema_file_or_dir, str):
+        schema_file_or_dir = Path(schema_file_or_dir)
+    if not isinstance(schema_file_or_dir, Path):
+        raise AssertionError("_get_schema_paths called with schema_file_or_dir not being a str or Path object")
+
+    if schema_file_or_dir.is_file():
+        schema_file_paths.append(schema_file_or_dir)
+    else:
+        schema_file_paths += [schema_path for schema_path in schema_file_or_dir.glob("**/*.json")]
+        schema_file_paths += [schema_path for schema_path in schema_file_or_dir.glob("**/*.ya?ml")]
+
+    return schema_file_paths
+
+
+def _get_jinja_template(config: GenerationConfiguration = None) -> "Template":
     templates_directory = os.path.join(config.templates_directory, config.template_name)
     base_template_path = os.path.join(templates_directory, TEMPLATE_FILE_NAME)
 
@@ -82,22 +136,140 @@ def generate_from_schema(
     with open(base_template_path, "r") as template_fp:
         template = env.from_string(template_fp.read())
 
+    return template
+
+
+def _copy_css_and_js_to_target(target_directory: Path, config: GenerationConfiguration) -> None:
+    """Copy the CSS and JS files needed to display the resulting page to the directory containing the result file"""
+    files_to_copy = []
+    if config.copy_css:
+        files_to_copy.append(CSS_FILE_NAME)
+    if config.copy_js:
+        files_to_copy.append(JS_FILE_NAME)
+    if not files_to_copy:
+        return
+
+    source_directory = Path(config.templates_directory) / config.template_name
+    if target_directory == source_directory:
+        return
+
+    for file_to_copy in files_to_copy:
+        source_file_path = source_directory / file_to_copy
+        if not source_file_path.exists():
+            continue
+        try:
+            shutil.copy(str(source_file_path), str(target_directory / file_to_copy))
+        except shutil.SameFileError:
+            print(f"Not copying {file_to_copy} to {target_directory.absolute()}, file already exists")
+
+
+def _get_schemas_to_render(
+    schema_file_or_dir: Union[str, Path, TextIO],
+    result_file_or_dir: Optional[Union[str, Path, TextIO]],
+    config: GenerationConfiguration,
+) -> List[SchemaToRender]:
+    to_render: List[SchemaToRender] = []
+
+    if isinstance(schema_file_or_dir, (str, Path)):
+        schema_file_paths = _get_schema_paths(schema_file_or_dir)
+    else:
+        schema_file_paths = [schema_file_or_dir]
+
+    if result_file_or_dir:
+        if not isinstance(result_file_or_dir, (str, Path)):
+            result_path = result_file_or_dir
+            output_dir = Path(result_file_or_dir.name).parent
+            result_path_is_dir = False
+        else:
+            result_path = Path(result_file_or_dir)
+            result_path_is_dir = result_path.is_dir()
+            if result_path_is_dir:
+                output_dir = result_path
+            else:
+                output_dir = result_path.parent
+        if not output_dir.exists():
+            raise FileNotFoundError(f"{output_dir} not found")
+
+        if len(schema_file_paths) > 1 and not result_path_is_dir:
+            raise AssertionError("Several schemas to render, but output path is not a directory")
+
+        for schema_file_path in schema_file_paths:
+            if result_path_is_dir:
+                assert result_path is not None
+                result_path_or_pointer = (
+                    Path(result_path) / f"{os.path.splitext(schema_file_path.name)[0]}.{config.result_extension}"
+                )
+            else:
+                result_path_or_pointer = result_path
+            to_render.append(SchemaToRender(schema_file_path, result_path_or_pointer, output_dir, config))
+        return to_render
+    else:
+        return [SchemaToRender(schema_file_path, None, None, config) for schema_file_path in schema_file_paths]
+
+
+def generate(
+    schema_file_or_dir: List[Union[str, Path, TextIO]],
+    result_file_or_dir: Optional[Union[str, Path, TextIO]],
+    config: GenerationConfiguration = None,
+    loaded_schemas: Optional[Dict[str, Any]] = None,
+) -> Tuple[List[Path], Dict[str, str]]:
+    """Generate documentation from one or more schemas and either write to disk or return the rendered content"""
+    if not config:
+        config = GenerationConfiguration()
+
+    template = _get_jinja_template(config)
+
+    all_to_render: List[SchemaToRender] = []
+    for schema_file_or_dir_part in schema_file_or_dir:
+        all_to_render += _get_schemas_to_render(schema_file_or_dir_part, result_file_or_dir, config)
+
+    result_paths: List[Path] = []
+    rendered_schemas: Dict[str, str] = {}
+    for schema_to_render in all_to_render:
+        start = datetime.now()
+        print(f"== Generating {schema_to_render.name_for_output} ==")
+
+        if schema_to_render.should_write_to_disk:
+            result_paths.append(schema_to_render.write_to_disk(template, loaded_schemas))
+        else:
+            rendered_schemas[schema_to_render.schema_file_name] = schema_to_render.render(template, loaded_schemas)
+
+        print(f"== Generated {schema_to_render.name_for_output} in {datetime.now() - start} ==")
+
+    for output_directory in set(
+        schema_to_render.output_dir for schema_to_render in all_to_render if schema_to_render.output_dir
+    ):
+        _copy_css_and_js_to_target(output_directory, config)
+
+    return result_paths, rendered_schemas
+
+
+def generate_from_schema(
+    schema_file: Union[str, Path, TextIO],
+    loaded_schemas: Optional[Dict[str, Any]] = None,
+    minify: bool = True,
+    deprecated_from_description: bool = False,
+    default_from_description: bool = False,
+    expand_buttons: bool = False,
+    link_to_reused_ref: bool = True,
+    config: GenerationConfiguration = None,
+) -> str:
+    config = config or _get_final_config(
+        minify=minify,
+        deprecated_from_description=deprecated_from_description,
+        default_from_description=default_from_description,
+        expand_buttons=expand_buttons,
+        copy_css=False,
+        copy_js=False,
+        link_to_reused_ref=link_to_reused_ref,
+    )
+
     if isinstance(schema_file, list):
         # Backward compatibility
         schema_file = os.path.sep.join(schema_file)
 
-    intermediate_schema = build_intermediate_representation(schema_file, config, loaded_schemas)
-
-    rendered = template.render(schema=intermediate_schema, config=config)
-
-    if config.minify:
-        if config.is_markdown_template:
-            # remove multiple contiguous empty lines
-            rendered = re.sub(r"\n\s*\n", "\n\n", rendered)
-        else:
-            rendered = htmlmin.minify(rendered)
-
-    return rendered
+    for rendered_name, rendered_content in generate([schema_file], None, config, loaded_schemas)[1].items():
+        return rendered_content
 
 
 def generate_from_filename(
@@ -123,30 +295,7 @@ def generate_from_filename(
         link_to_reused_ref=link_to_reused_ref,
     )
 
-    if isinstance(schema_file_name, str):
-        schema_file_name = os.path.realpath(schema_file_name)
-    elif isinstance(schema_file_name, Path):
-        schema_file_name = str(schema_file_name.resolve())
-
-    if not os.path.exists(os.path.dirname(os.path.realpath(result_file_name))):
-        raise FileNotFoundError(
-            f"Output directory {os.path.dirname(os.path.realpath(result_file_name))} does not exist"
-        )
-
-    rendered_schema_doc = generate_from_schema(
-        schema_file_name,
-        minify=minify,
-        deprecated_from_description=deprecated_from_description,
-        default_from_description=default_from_description,
-        expand_buttons=expand_buttons,
-        link_to_reused_ref=link_to_reused_ref,
-        config=config,
-    )
-
-    copy_css_and_js_to_target(result_file_name, config)
-
-    with open(result_file_name, "w", encoding="utf-8") as result_schema_doc:
-        result_schema_doc.write(rendered_schema_doc)
+    generate([schema_file_name], result_file_name, config=config)
 
 
 def generate_from_file_object(
@@ -174,46 +323,16 @@ def generate_from_file_object(
         link_to_reused_ref=link_to_reused_ref,
     )
 
-    if not os.path.exists(os.path.dirname(os.path.realpath(result_file.name))):
-        raise FileNotFoundError(
-            f"Output directory {os.path.dirname(os.path.realpath(result_file.name))} does not exist"
-        )
-
-    result = generate_from_schema(schema_file, config=config)
-
-    copy_css_and_js_to_target(result_file.name, config)
-
-    result_file.write(result)
-
-
-def copy_css_and_js_to_target(result_file_path: str, config: GenerationConfiguration) -> None:
-    """Copy the CSS and JS files needed to display the resulting page to the directory containing the result file"""
-    files_to_copy = []
-    if config.copy_css:
-        files_to_copy.append(CSS_FILE_NAME)
-    if config.copy_js:
-        files_to_copy.append(JS_FILE_NAME)
-    if not files_to_copy:
-        return
-
-    target_directory = os.path.dirname(result_file_path)
-    source_directory = os.path.join(config.templates_directory, config.template_name)
-    if target_directory == source_directory:
-        return
-
-    for file_to_copy in files_to_copy:
-        source_file_path = os.path.join(source_directory, file_to_copy)
-        if not os.path.exists(source_file_path):
-            continue
-        try:
-            shutil.copy(source_file_path, os.path.join(target_directory, file_to_copy))
-        except shutil.SameFileError:
-            print(f"Not copying {file_to_copy} to {os.path.abspath(target_directory)}, file already exists")
+    generate([schema_file], result_file, config)
 
 
 @click.command()
-@click.argument("schema_file", nargs=1, type=click.File("r", encoding="utf-8"))
-@click.argument("result_file", nargs=1, type=click.File("w+", encoding="utf-8"), default="schema_doc.html")
+@click.argument("schema_files_or_dir", nargs=1, type=click.STRING)
+@click.argument(
+    "output_path_or_file",
+    type=click.Path(writable=True, path_type=Path),
+    required=False,
+)
 @click.option(
     "--config-file", type=click.File("r", encoding="utf-8"), help="JSON or YAML file containing generation parameters"
 )
@@ -240,8 +359,8 @@ def copy_css_and_js_to_target(result_file_path: str, config: GenerationConfigura
     "and all other references will be replaced by a link.",
 )
 def main(
-    schema_file: TextIO,
-    result_file: TextIO,
+    schema_files_or_dir: str,
+    output_path_or_file: Optional[Path],
     config_file: TextIO,
     config: List[str],
     minify: bool,
@@ -252,7 +371,6 @@ def main(
     copy_js: bool,
     link_to_reused_ref: bool,
 ) -> None:
-    start = datetime.now()
     config = _get_final_config(
         minify=minify,
         deprecated_from_description=deprecated_from_description,
@@ -265,12 +383,28 @@ def main(
         config_parameters=config,
     )
 
-    try:
-        generate_from_file_object(schema_file, result_file, config=config)
-    except FileNotFoundError as e:
-        raise click.ClickException(str(e)) from e
-    duration = datetime.now() - start
-    print(f"Generated {result_file.name} in {duration}")
+    if "," in schema_files_or_dir:
+        schema_files_or_dir = schema_files_or_dir.split(",")
+    else:
+        schema_files_or_dir = [schema_files_or_dir]
+
+    if not output_path_or_file:
+        if len(schema_files_or_dir) > 1 or any(Path(p).is_dir() for p in schema_files_or_dir):
+            output_path_or_file = Path.cwd()
+        elif config.is_markdown_template:
+            output_path_or_file = Path("schema_doc.md")
+        else:
+            output_path_or_file = Path("schema_doc.html")
+
+    if output_path_or_file.is_dir():
+        if not output_path_or_file.exists():
+            raise click.ClickException(f"Output path is a directory, but it does not exist: {output_path_or_file}")
+    else:
+        output_directory = output_path_or_file.parent
+        if not output_directory.exists():
+            raise click.ClickException(f"Output path file is in a directory that does not exist: {output_directory}")
+
+    generate(schema_files_or_dir, output_path_or_file, config=config)
 
 
 if __name__ == "__main__":
