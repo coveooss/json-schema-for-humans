@@ -57,6 +57,66 @@ def test_generate_using_cli_default_result_file() -> None:
         assert_css_and_js_copied(Path.cwd())
 
 
+def test_generate_using_cli_multiple(tmp_path: Path) -> None:
+    """Test providing several schemas to render using the CLI"""
+    test_case1 = "basic"
+    test_path1 = get_test_case_path(test_case1)
+    test_case2 = "with_default"
+    test_path2 = get_test_case_path(test_case2)
+
+    runner = CliRunner()
+    with runner.isolated_filesystem():
+        result = runner.invoke(main, [f"{test_path1},{test_path2}", str(tmp_path)])
+        assert_cli_runner_result(result)
+
+        assert (tmp_path / f"{test_case1}.html").exists()
+        assert (tmp_path / f"{test_case2}.html").exists()
+
+        assert_css_and_js_copied(tmp_path)
+
+
+def test_cli_output_default_html() -> None:
+    """Test the default value for the output path for a single HTML schema"""
+    test_path = get_test_case_path("basic")
+
+    runner = CliRunner()
+    with runner.isolated_filesystem():
+        result = runner.invoke(main, [str(test_path)])
+        assert_cli_runner_result(result)
+
+        assert Path("schema_doc.html").exists()
+
+
+def test_cli_output_default_md() -> None:
+    """Test the default value for the output path for a single MD schema"""
+    test_path = get_test_case_path("basic")
+
+    runner = CliRunner()
+    with runner.isolated_filesystem():
+        result = runner.invoke(main, [str(test_path), "--config", "template_name=md"])
+        assert_cli_runner_result(result)
+
+        assert Path("schema_doc.md").exists()
+
+
+def test_cli_output_default_cwd() -> None:
+    """Test the default value for the output path for several schemas"""
+    test_case1 = "basic"
+    test_path1 = get_test_case_path(test_case1)
+    test_case2 = "with_default"
+    test_path2 = get_test_case_path(test_case2)
+
+    runner = CliRunner()
+    with runner.isolated_filesystem():
+        result = runner.invoke(main, [f"{test_path1},{test_path2}"])
+        assert_cli_runner_result(result)
+
+        assert Path(f"{test_case1}.html").exists()
+        assert Path(f"{test_case2}.html").exists()
+
+        assert_css_and_js_copied(Path.cwd())
+
+
 def test_config_parameters() -> None:
     """Test providing configuration parameters using the --config CLI parameter"""
     test_path = get_test_case_path("basic")
@@ -75,7 +135,9 @@ def test_config_parameters_with_nonexistent_output_path() -> None:
     runner = CliRunner()
     with runner.isolated_filesystem():
         result = runner.invoke(main, [test_path, output_dir, "--config", "copy_css=false", "--config", "copy_js=false"])
-        assert_cli_runner_exited(result, f"{os.path.dirname(output_dir)} does not exist")
+        assert_cli_runner_exited(
+            result, f"Output path file is in a directory that does not exist: {os.path.dirname(output_dir)}"
+        )
 
 
 def test_nonexistent_output_path() -> None:
@@ -85,7 +147,10 @@ def test_nonexistent_output_path() -> None:
     runner = CliRunner()
     with runner.isolated_filesystem():
         result = runner.invoke(main, [test_path, output_dir])
-        assert_cli_runner_exited(result, f"{os.path.dirname(output_dir)} does not exist")
+        assert_cli_runner_exited(
+            result,
+            f"Output path file is in a directory that does not exist: {os.path.dirname(output_dir)}",
+        )
 
 
 def test_config_parameters_flags_yes() -> None:

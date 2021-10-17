@@ -15,7 +15,7 @@ from json_schema_for_humans.schema_node import SchemaNode
 
 
 def build_intermediate_representation(
-    schema_path: Union[str, TextIO],
+    schema_path: Union[str, Path, TextIO],
     config: GenerationConfiguration,
     loaded_schemas: Optional[Dict[str, Any]] = None,
 ) -> SchemaNode:

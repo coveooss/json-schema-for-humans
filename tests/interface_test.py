@@ -12,6 +12,7 @@ from json_schema_for_humans.generate import (
     generate_from_file_object,
     generate_from_filename,
     generate_from_schema,
+    generate,
 )
 from json_schema_for_humans.generation_configuration import GenerationConfiguration, CONFIG_DEPRECATION_MESSAGE
 from tests.html_schema_doc_asserts import assert_basic_case
@@ -135,6 +136,49 @@ def test_generate_from_file_name_with_invalid_output_dir_and_no_resource_copy(tm
     with pytest.raises(FileNotFoundError) as exception_info:
         generate_from_filename(test_case_path, str(result_path.resolve()), False, False, False, False, False, False)
         assert f"{os.path.dirname(result_path)} not found" in str(exception_info.value)
+
+
+def test_generate_multiple_path_inputs(tmp_path: Path) -> None:
+    """Test generating using the all-purpose "generate" method with multiple Path inputs"""
+    test_case1 = "basic"
+    test_case2 = "with_default"
+    test_case_path1 = get_test_case_path(test_case1)
+    test_case_path2 = get_test_case_path(test_case2)
+
+    result_path = tmp_path / "test_generate"
+    result_path.mkdir()
+
+    generated = generate([test_case_path1, test_case_path2], result_path)
+
+    assert generated == ([result_path / f"{test_case1}.html", result_path / f"{test_case2}.html"], {})
+
+
+def test_generate_multiple_str_inputs(tmp_path: Path) -> None:
+    """Test generating using the all-purpose "generate" method with multiple str inputs"""
+    test_case1 = "basic"
+    test_case2 = "with_default"
+    test_case_path1 = get_test_case_path(test_case1)
+    test_case_path2 = get_test_case_path(test_case2)
+
+    result_path = tmp_path / "test_generate"
+    result_path.mkdir()
+
+    generated = generate([str(test_case_path1), str(test_case_path2)], result_path)
+
+    assert generated == ([result_path / f"{test_case1}.html", result_path / f"{test_case2}.html"], {})
+
+
+def test_generate_no_file_output() -> None:
+    """Test generating and getting output as a str instead of writing to file"""
+    test_case_name = "basic"
+    test_case_file_name = f"{test_case_name}.json"
+    test_case_path = get_test_case_path("basic")
+
+    generated = generate([test_case_path], result_file_or_dir=None)
+
+    assert generated[0] == []
+    assert list(generated[1].keys()) == [test_case_file_name]
+    assert len(generated[1][test_case_file_name]) > 30
 
 
 def _assert_deprecation_message(caplog: LogCaptureFixture, must_be_present: bool) -> None:

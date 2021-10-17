@@ -55,6 +55,12 @@ class GenerationConfiguration:
     def is_markdown_template(self) -> bool:
         return self.template_name.startswith("md")
 
+    @property
+    def result_extension(self) -> str:
+        if self.is_markdown_template:
+            return "md"
+        return "html"
+
 
 CONFIG_DEPRECATION_MESSAGE = (
     "JSON Schema for humans: Please supply a GenerationConfiguration object instead of individual options"

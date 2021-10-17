@@ -26,9 +26,13 @@ def assert_css_and_js_copied(
     assert (path / js_file_name).exists()
 
 
+def get_test_cases_path() -> str:
+    return os.path.realpath(os.path.join(parent_dir, "docs", "examples", "cases"))
+
+
 def get_test_case_path(name: str) -> str:
     """Get the loaded JSON schema for a test case"""
-    return os.path.realpath(os.path.join(parent_dir, "docs", "examples", "cases", f"{name}.json"))
+    return os.path.realpath(os.path.join(get_test_cases_path(), f"{name}.json"))
 
 
 def get_nonexistent_output_path(name: str) -> str:
