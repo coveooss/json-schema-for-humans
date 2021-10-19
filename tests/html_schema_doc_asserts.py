@@ -81,6 +81,7 @@ def assert_required(soup: BeautifulSoup, is_required_properties: List[bool]) -> 
 def assert_undocumented_required(soup: BeautifulSoup, the_properties: List[str]) -> None:
     assert_soup_results_text(soup, "required-property", the_properties)
 
+
 def assert_basic_case(soup: BeautifulSoup) -> None:
     """Assert the rendered result of the basic test case"""
     assert_property_names(soup, ["firstName", "lastName", "age", "driverLicenseId"])
