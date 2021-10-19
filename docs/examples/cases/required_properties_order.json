@@ -1,0 +1,14 @@
+{
+  "$id": "https://example.com/schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Undocumented Required Properties order",
+  "type": "object",
+  "properties": {
+    "group1": {
+      "required": ["a", "b"]
+    },
+    "group2": {
+      "required": ["b", "a"]
+    }
+  }
+}

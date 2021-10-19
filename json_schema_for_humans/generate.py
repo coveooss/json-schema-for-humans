@@ -214,8 +214,7 @@ def generate(
     loaded_schemas: Optional[Dict[str, Any]] = None,
 ) -> Tuple[List[Path], Dict[str, str]]:
     """Generate documentation from one or more schemas and either write to disk or return the rendered content"""
-    if not config:
-        config = GenerationConfiguration()
+    config = config or GenerationConfiguration()
 
     template = _get_jinja_template(config)
 
@@ -383,18 +382,13 @@ def main(
         config_parameters=config,
     )
 
-    if "," in schema_files_or_dir:
-        schema_files_or_dir = schema_files_or_dir.split(",")
-    else:
-        schema_files_or_dir = [schema_files_or_dir]
+    schema_files_or_dir = schema_files_or_dir.split(",")
 
     if not output_path_or_file:
         if len(schema_files_or_dir) > 1 or any(Path(p).is_dir() for p in schema_files_or_dir):
             output_path_or_file = Path.cwd()
-        elif config.is_markdown_template:
-            output_path_or_file = Path("schema_doc.md")
         else:
-            output_path_or_file = Path("schema_doc.html")
+            output_path_or_file = Path(f"schema_doc.{config.result_extension}")
 
     if output_path_or_file.is_dir():
         if not output_path_or_file.exists():
