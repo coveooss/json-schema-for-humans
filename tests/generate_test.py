@@ -609,5 +609,12 @@ def test_complex_const() -> None:
     )
 
 
+def test_required_properties_order() -> None:
+    """Test the order of required properties"""
+    soup = generate_case("required_properties_order")
+
+    tests.html_schema_doc_asserts.assert_undocumented_required(soup, ["a", "b", "b", "a"])
+
+
 # TODO: test for uniqueItems
 # TODO: test for contains
