@@ -15,7 +15,7 @@ from json_schema_for_humans.schema.schema_node import SchemaNode
 
 
 def build_intermediate_representation(
-    schema_path: Union[str, Path, TextIO], loaded_schemas: Optional[Dict[str, Any]] = None,
+    schema_path: Union[str, Path, TextIO], loaded_schemas: Optional[Dict[str, Any]] = None
 ) -> SchemaNode:
     """Build a SchemaNode object representing a JSON schema with added metadata to help rendering as a documentation.
 

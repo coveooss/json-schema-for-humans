@@ -14,9 +14,7 @@ from json_schema_for_humans.generation_configuration import GenerationConfigurat
 
 @click.command()
 @click.argument("schema_files_or_dir", nargs=1, type=click.STRING)
-@click.argument(
-    "output_path_or_file", type=click.Path(writable=True, path_type=Path), required=False,
-)
+@click.argument("output_path_or_file", type=click.Path(writable=True, path_type=Path), required=False)
 @click.option(
     "--config-file", type=click.File("r", encoding="utf-8"), help="JSON or YAML file containing generation parameters"
 )
