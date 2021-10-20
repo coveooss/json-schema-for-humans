@@ -72,7 +72,8 @@ def get_first_property(schema_node: SchemaNode) -> Any:
 
 
 def get_undocumented_required_properties(schema_node: SchemaNode) -> List[str]:
-    return list(set(get_required_properties(schema_node)).difference(schema_node.properties.keys()))
+    """Get the name of the properties that are required but not documented with their own node"""
+    return [prop for prop in get_required_properties(schema_node) if prop not in schema_node.properties.keys()]
 
 
 def python_to_json(value: Any) -> Any:
