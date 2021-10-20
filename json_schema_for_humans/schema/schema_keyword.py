@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class KeyWord(Enum):
+class SchemaKeyword(Enum):
     REQUIRED = "required"
     TITLE = "title"
     CONTAINS = "contains"

@@ -10,13 +10,12 @@ import yaml
 
 from json_schema_for_humans import const
 from json_schema_for_humans.jinja_filters import escape_property_name_for_id
-from json_schema_for_humans.schema.keyword import KeyWord
+from json_schema_for_humans.schema.schema_keyword import SchemaKeyword
 from json_schema_for_humans.schema.schema_node import SchemaNode
 
 
 def build_intermediate_representation(
-    schema_path: Union[str, Path, TextIO],
-    loaded_schemas: Optional[Dict[str, Any]] = None,
+    schema_path: Union[str, Path, TextIO], loaded_schemas: Optional[Dict[str, Any]] = None,
 ) -> SchemaNode:
     """Build a SchemaNode object representing a JSON schema with added metadata to help rendering as a documentation.
 
@@ -345,7 +344,7 @@ def _build_node(
                 keywords[schema_key] = json.dumps(schema_value, ensure_ascii=False)
                 continue
 
-            if schema_key == KeyWord.PROPERTIES.value:
+            if schema_key == SchemaKeyword.PROPERTIES.value:
                 for new_property_name, new_property_schema in schema_value.items():
                     new_html_id = html_id
                     new_html_id += "_" if html_id else ""
@@ -363,27 +362,27 @@ def _build_node(
                         new_node,
                         new_property_name,
                     )
-            elif schema_key == KeyWord.ADDITIONAL_PROPERTIES.value:
+            elif schema_key == SchemaKeyword.ADDITIONAL_PROPERTIES.value:
                 if schema_value == False:
                     new_node.no_additional_properties = True
                 else:
                     new_html_id = html_id
                     new_html_id += "_" if html_id else ""
-                    new_html_id += KeyWord.ADDITIONAL_PROPERTIES.value
+                    new_html_id += SchemaKeyword.ADDITIONAL_PROPERTIES.value
                     new_node.additional_properties = _build_node(
                         resolved_references,
                         reference_users,
                         loaded_schemas,
                         depth + 1,
                         new_html_id,
-                        KeyWord.ADDITIONAL_PROPERTIES.value,
+                        SchemaKeyword.ADDITIONAL_PROPERTIES.value,
                         schema_file_path,
-                        copy.deepcopy(path_to_element) + [KeyWord.ADDITIONAL_PROPERTIES.value],
+                        copy.deepcopy(path_to_element) + [SchemaKeyword.ADDITIONAL_PROPERTIES.value],
                         schema_value,
                         new_node,
-                        KeyWord.ADDITIONAL_PROPERTIES.value,
+                        SchemaKeyword.ADDITIONAL_PROPERTIES.value,
                     )
-            elif schema_key == KeyWord.PATTERN_PROPERTIES.value:
+            elif schema_key == SchemaKeyword.PATTERN_PROPERTIES.value:
                 for new_property_name, new_property_schema in schema_value.items():
                     new_html_id = html_id
                     new_html_id += "_" if html_id else ""
@@ -406,10 +405,10 @@ def _build_node(
                 # Add the property name (correctly escaped) to the ID
                 new_html_id = html_id
                 new_depth = depth
-                if schema_key not in [KeyWord.PROPERTIES.value, KeyWord.PATTERN_PROPERTIES.value]:
+                if schema_key not in [SchemaKeyword.PROPERTIES.value, SchemaKeyword.PATTERN_PROPERTIES.value]:
                     new_depth += 1
                     new_html_id += "_" if html_id else ""
-                    if not parent_key == KeyWord.PATTERN_PROPERTIES.value:
+                    if not parent_key == SchemaKeyword.PATTERN_PROPERTIES.value:
                         new_html_id += escape_property_name_for_id(schema_key)
                     else:
                         new_html_id += f"pattern{pattern_id}"

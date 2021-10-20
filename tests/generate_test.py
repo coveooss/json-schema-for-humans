@@ -4,7 +4,7 @@ from typing import Dict, Any
 
 import pytest
 from bs4 import BeautifulSoup
-from mock import Mock
+from unittest.mock import Mock
 
 import tests.html_schema_doc_asserts
 from json_schema_for_humans.schema.schema_to_render import SchemaToRender

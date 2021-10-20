@@ -22,7 +22,7 @@ def _get_schema_paths(schema_file_or_dir: Union[str, Path]) -> List[Path]:
     return schema_file_paths
 
 
-def _get_schemas_to_render(
+def get_schemas_to_render(
     schema_file_or_dir: Union[str, Path, TextIO],
     result_file_or_dir: Optional[Union[str, Path]],
     result_extension: LanguageTypes,
@@ -67,15 +67,13 @@ def _get_schemas_to_render(
 
 
 def _get_result_output(
-    output_path_or_file: Optional[Path],
-    schema_files_or_dir: List[str],
-    result_extension: LanguageTypes,
-) -> str:
+    output_path_or_file: Optional[Path], schema_files_or_dir: List[str], result_extension: LanguageTypes
+) -> Path:
     if not output_path_or_file:
         if len(schema_files_or_dir) > 1 or any(Path(p).is_dir() for p in schema_files_or_dir):
             output_path_or_file = Path.cwd()
         else:
-            output_path_or_file = Path("schema_doc." + result_extension.value)
+            output_path_or_file = Path(f"schema_doc.{result_extension.value}")
 
     if output_path_or_file.is_dir():
         if not output_path_or_file.exists():
@@ -95,14 +93,6 @@ def import_schemas_for_creating(
 
     schemas_to_render: List[SchemaToRender] = []
     for schema_file_or_dir_part in schema_files_or_dir:
-        schemas_to_render += _get_schemas_to_render(schema_file_or_dir_part, output, result_extension)
+        schemas_to_render += get_schemas_to_render(schema_file_or_dir_part, output, result_extension)
 
     return schemas_to_render
-
-
-def import_schemas_for_editing(
-    schema_files_or_dir: TextIO,
-    output_path_or_file: Optional[TextIO],
-    result_extension: LanguageTypes,
-) -> List[SchemaToRender]:
-    return _get_schemas_to_render(schema_files_or_dir, output_path_or_file, result_extension)

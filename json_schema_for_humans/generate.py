@@ -6,7 +6,7 @@ from typing import Any, Dict, List, Optional, TextIO, Union
 
 import click
 
-from json_schema_for_humans.schema.schema_importer import import_schemas_for_editing, import_schemas_for_creating
+from json_schema_for_humans.schema.schema_importer import import_schemas_for_creating, get_schemas_to_render
 from json_schema_for_humans.schema.schema_to_render import SchemaToRender
 from json_schema_for_humans.template_renderer import TemplateRenderer
 from json_schema_for_humans.generation_configuration import GenerationConfiguration, _get_final_config, DefaultFile
@@ -15,9 +15,7 @@ from json_schema_for_humans.generation_configuration import GenerationConfigurat
 @click.command()
 @click.argument("schema_files_or_dir", nargs=1, type=click.STRING)
 @click.argument(
-    "output_path_or_file",
-    type=click.Path(writable=True, path_type=Path),
-    required=False,
+    "output_path_or_file", type=click.Path(writable=True, path_type=Path), required=False,
 )
 @click.option(
     "--config-file", type=click.File("r", encoding="utf-8"), help="JSON or YAML file containing generation parameters"
@@ -102,7 +100,7 @@ def generate_from_schema(
         # Backward compatibility
         schema_file = os.path.sep.join(schema_file)
 
-    schemas_to_render = import_schemas_for_editing(schema_file, None, config.result_extension)
+    schemas_to_render = get_schemas_to_render(schema_file, None, config.result_extension)
 
     template_renderer = TemplateRenderer(config)
     for rendered_content in _generate_schemas_doc(schemas_to_render, template_renderer, loaded_schemas).items():
@@ -162,7 +160,7 @@ def generate_from_file_object(
         link_to_reused_ref=link_to_reused_ref,
     )
 
-    schemas_to_render = import_schemas_for_editing(schema_file, result_file, config.result_extension)
+    schemas_to_render = get_schemas_to_render(schema_file, result_file, config.result_extension)
     template_renderer = TemplateRenderer(config)
     _generate_schemas_doc(schemas_to_render, template_renderer)
     _copy_additional_files_to_target(schemas_to_render, template_renderer)
@@ -217,7 +215,6 @@ def _generate_schemas_doc(
     loaded_schemas: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, str]:
     """Generate documentation from one or more schemas and either write to disk or return the rendered content"""
-
     rendered_schemas: Dict[str, str] = {}
 
     for schema_to_render in schemas_to_render:

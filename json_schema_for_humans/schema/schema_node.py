@@ -2,7 +2,7 @@ import copy
 from typing import Any, Dict, Iterable, Iterator, List, Optional, Set, Union, cast
 
 from json_schema_for_humans import const
-from json_schema_for_humans.schema.keyword import KeyWord
+from json_schema_for_humans.schema.schema_keyword import SchemaKeyword
 from json_schema_for_humans.templating_utils import get_type_name
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
 
@@ -135,7 +135,7 @@ class SchemaNode:
 
     @property
     def is_additional_properties(self) -> bool:
-        return self.parent_key == KeyWord.ADDITIONAL_PROPERTIES.value
+        return self.parent_key == SchemaKeyword.ADDITIONAL_PROPERTIES.value
 
     @property
     def is_a_property_node(self) -> bool:
@@ -189,7 +189,9 @@ class SchemaNode:
     def path_to_property(self) -> str:
         """Human-readable representation of the path from the root of the schema to this node"""
         path_without_properties = [
-            p for p in self.path_to_element if p not in [KeyWord.PROPERTIES.value, KeyWord.PATTERN_PROPERTIES.value]
+            p
+            for p in self.path_to_element
+            if p not in [SchemaKeyword.PROPERTIES.value, SchemaKeyword.PATTERN_PROPERTIES.value]
         ]
         return " -> ".join([p if isinstance(p, str) else f"Item {p}" for p in path_without_properties])
 
@@ -272,7 +274,7 @@ class SchemaNode:
 
         # return self._refers_to_merged
 
-    def get_keyword(self, keyword: KeyWord) -> Optional["SchemaNode"]:
+    def get_keyword(self, keyword: SchemaKeyword) -> Optional["SchemaNode"]:
         """Get the value of a keyword if present and it is not a property (to avoid conflicts with properties being
         named like a keyword, e.g. a property named "if")
         """
@@ -284,19 +286,19 @@ class SchemaNode:
 
     @property
     def kw_all_of(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.ALL_OF)
+        return self.get_keyword(SchemaKeyword.ALL_OF)
 
     @property
     def kw_any_of(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.ANY_OF)
+        return self.get_keyword(SchemaKeyword.ANY_OF)
 
     @property
     def kw_one_of(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.ONE_OF)
+        return self.get_keyword(SchemaKeyword.ONE_OF)
 
     @property
     def kw_not(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.NOT)
+        return self.get_keyword(SchemaKeyword.NOT)
 
     @property
     def has_conditional(self) -> bool:
@@ -304,52 +306,52 @@ class SchemaNode:
 
     @property
     def kw_if(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.IF)
+        return self.get_keyword(SchemaKeyword.IF)
 
     @property
     def kw_then(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.THEN)
+        return self.get_keyword(SchemaKeyword.THEN)
 
     @property
     def kw_else(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.ELSE)
+        return self.get_keyword(SchemaKeyword.ELSE)
 
     @property
     def kw_enum(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.ENUM)
+        return self.get_keyword(SchemaKeyword.ENUM)
 
     @property
     def kw_const(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.CONST)
+        return self.get_keyword(SchemaKeyword.CONST)
 
     @property
     def kw_pattern(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.PATTERN)
+        return self.get_keyword(SchemaKeyword.PATTERN)
 
     @property
     def kw_properties(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.PROPERTIES)
+        return self.get_keyword(SchemaKeyword.PROPERTIES)
 
     @property
     def kw_pattern_properties(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.PATTERN_PROPERTIES)
+        return self.get_keyword(SchemaKeyword.PATTERN_PROPERTIES)
 
     @property
     def kw_additional_properties(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.ADDITIONAL_PROPERTIES)
+        return self.get_keyword(SchemaKeyword.ADDITIONAL_PROPERTIES)
 
     @property
     def kw_min_length(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.MIN_LENGTH)
+        return self.get_keyword(SchemaKeyword.MIN_LENGTH)
 
     @property
     def kw_max_length(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.MAX_LENGTH)
+        return self.get_keyword(SchemaKeyword.MAX_LENGTH)
 
     @property
     def kw_items(self) -> Optional[List["SchemaNode"]]:
         """items can be either an object either a list of object"""
-        items = self.get_keyword(KeyWord.ITEMS)
+        items = self.get_keyword(SchemaKeyword.ITEMS)
         if not items:
             return None
 
@@ -360,31 +362,31 @@ class SchemaNode:
 
     @property
     def kw_min_items(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.MIN_ITEMS)
+        return self.get_keyword(SchemaKeyword.MIN_ITEMS)
 
     @property
     def kw_max_items(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.MAX_ITEMS)
+        return self.get_keyword(SchemaKeyword.MAX_ITEMS)
 
     @property
     def kw_unique_items(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.UNIQUE_ITEMS)
+        return self.get_keyword(SchemaKeyword.UNIQUE_ITEMS)
 
     @property
     def kw_additional_items(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.ADDITIONAL_ITEMS)
+        return self.get_keyword(SchemaKeyword.ADDITIONAL_ITEMS)
 
     @property
     def kw_contains(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.CONTAINS)
+        return self.get_keyword(SchemaKeyword.CONTAINS)
 
     @property
     def kw_required(self) -> Optional["SchemaNode"]:
-        return self.get_keyword(KeyWord.REQUIRED)
+        return self.get_keyword(SchemaKeyword.REQUIRED)
 
     @property
     def title(self) -> Optional[str]:
-        title_kw = self.get_keyword(KeyWord.TITLE)
+        title_kw = self.get_keyword(SchemaKeyword.TITLE)
         if not title_kw:
             return None
         title = title_kw.literal
