@@ -14,8 +14,8 @@ from pygments.lexers.data import YamlLexer
 from pytz import reference
 
 from json_schema_for_humans import const
-from json_schema_for_humans.generation_configuration import GenerationConfiguration
-from json_schema_for_humans.schema_node import SchemaNode
+from json_schema_for_humans.generation_configuration import GenerationConfiguration, LanguageTypes
+from json_schema_for_humans.schema.schema_node import SchemaNode
 
 SHORT_DESCRIPTION_NUMBER_OF_LINES = 8
 DEFAULT_PATTERN = r"(\[Default - `([^`]+)`\])"
@@ -94,7 +94,7 @@ def get_description(env: Environment, schema_node: SchemaNode) -> str:
         if match:
             description = description[match.span(1)[1] :].lstrip()
 
-    if description and config.description_is_markdown and not config.is_markdown_template:
+    if description and config.description_is_markdown and not config.result_extension == LanguageTypes.md:
         # Markdown templates are expected to already have Markdown descriptions
         md: Markdown = env.globals["jsfh_md"]
         description = Markup(md.convert(description))

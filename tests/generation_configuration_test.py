@@ -1,4 +1,4 @@
-from json_schema_for_humans.generation_configuration import GenerationConfiguration
+from json_schema_for_humans.generation_configuration import GenerationConfiguration, LanguageTypes
 
 
 def test_default_values() -> None:
@@ -73,12 +73,12 @@ def test_override_template_md_options() -> None:
 
     # override badge_as_image key
     config = GenerationConfiguration(
-        deprecated_from_description=True, template_name="md", template_md_options={"badge_as_image": "test"}
+        deprecated_from_description=True, template_name=LanguageTypes.md, template_md_options={"badge_as_image": "test"}
     )
     assert config.template_md_options["badge_as_image"] == "test"
 
     # override badge_as_image key
     config = GenerationConfiguration(
-        deprecated_from_description=True, template_name="md", template_md_options={"badge_as_image": True}
+        deprecated_from_description=True, template_name=LanguageTypes.md, template_md_options={"badge_as_image": True}
     )
     assert config.template_md_options["badge_as_image"] == True

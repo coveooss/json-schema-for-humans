@@ -3,7 +3,7 @@ from typing import List, Optional, Type, Union, TYPE_CHECKING
 from json_schema_for_humans import const
 
 if TYPE_CHECKING:
-    from json_schema_for_humans.schema_node import SchemaNode
+    from json_schema_for_humans.schema.schema_node import SchemaNode
 
 
 def get_type_name(schema_node: "SchemaNode") -> Optional[str]:

@@ -1,10 +1,14 @@
 import os
 import tempfile
+from typing import Dict, Any
 
 import pytest
 from bs4 import BeautifulSoup
+from mock import Mock
 
 import tests.html_schema_doc_asserts
+from json_schema_for_humans.schema.schema_to_render import SchemaToRender
+from json_schema_for_humans.template_renderer import TemplateRenderer
 from json_schema_for_humans.generate import generate_from_file_object
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
 from tests.test_utils import generate_case
@@ -12,6 +16,20 @@ from tests.test_utils import generate_case
 current_dir = os.path.abspath(os.path.dirname(__file__))
 parent_dir = os.path.abspath(os.path.dirname(current_dir))
 examples_dir = os.path.join(parent_dir, "docs", "examples")
+
+
+def test_generate_schema_calls_schema_render_with_correct_arguments() -> None:
+    from json_schema_for_humans.generate import _generate_schema
+
+    schema = Mock(SchemaToRender)
+
+    template_renderer = Mock(TemplateRenderer)
+    template_renderer.files_to_copy.return_value = []
+    loaded_schemas = Mock(Dict[str, Any])
+
+    _generate_schema(schema, template_renderer, loaded_schemas)
+
+    schema.render.assert_called_with(template_renderer, loaded_schemas)
 
 
 def test_basic() -> None:

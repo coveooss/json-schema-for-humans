@@ -1,6 +1,7 @@
 import json
 import logging
 import os
+
 from dataclasses import dataclass
 from json import JSONDecodeError
 from pathlib import Path
@@ -8,6 +9,9 @@ from typing import Any, Union, TextIO, Dict, List, Optional
 
 import yaml
 from dataclasses_json import dataclass_json
+
+from json_schema_for_humans.default_file import DefaultFile
+from json_schema_for_humans.language_types import LanguageTypes
 
 
 @dataclass_json
@@ -27,7 +31,7 @@ class GenerationConfiguration:
     link_to_reused_ref: bool = True
     recursive_detection_depth: int = 25
     templates_directory: str = os.path.join(os.path.dirname(__file__), "templates")
-    template_name: str = "js"
+    template_name: LanguageTypes = LanguageTypes.js
     show_toc: bool = True
     examples_as_yaml: bool = False
     # markdown2 extra parameters can be added here: https://github.com/trentm/python-markdown2/wiki/Extras
@@ -52,14 +56,19 @@ class GenerationConfiguration:
         self.template_md_options = default_template_md_options
 
     @property
-    def is_markdown_template(self) -> bool:
-        return self.template_name.startswith("md")
+    def result_extension(self) -> LanguageTypes:
+        if self.template_name == LanguageTypes.md or self.template_name == LanguageTypes.md_nested:
+            return LanguageTypes.md
+        return LanguageTypes.html
 
     @property
-    def result_extension(self) -> str:
-        if self.is_markdown_template:
-            return "md"
-        return "html"
+    def files_to_copy(self) -> List[DefaultFile]:
+        files_to_copy = []
+        if self.copy_js:
+            files_to_copy.append(DefaultFile.JS_FILE_NAME)
+        if self.copy_css:
+            files_to_copy.append(DefaultFile.CSS_FILE_NAME)
+        return files_to_copy
 
 
 CONFIG_DEPRECATION_MESSAGE = (
@@ -72,9 +81,9 @@ def _get_final_config(
     deprecated_from_description: bool,
     default_from_description: bool,
     expand_buttons: bool,
-    copy_css: bool,
-    copy_js: bool,
     link_to_reused_ref: bool,
+    copy_css: bool = False,
+    copy_js: bool = False,
     config: Union[str, Path, TextIO, Dict[str, Any], GenerationConfiguration] = None,
     config_parameters: List[str] = None,
 ) -> GenerationConfiguration:
@@ -111,9 +120,6 @@ def _load_config(
     """Load the configuration from either the path (as str or Path) to a config file, the open config file object,
     The loaded config as a dict or the GenerateConfiguration object directly.
     """
-    if config_parameter is None:
-        return GenerationConfiguration()
-
     if isinstance(config_parameter, GenerationConfiguration):
         return config_parameter
 
@@ -135,9 +141,6 @@ def _load_config(
 def _apply_config_cli_parameters(
     current_configuration: GenerationConfiguration, config_cli_parameters: List[str]
 ) -> GenerationConfiguration:
-    if not config_cli_parameters:
-        return current_configuration
-
     current_configuration_as_dict = current_configuration.to_dict()
     for parameter in config_cli_parameters:
         if "=" in parameter:

@@ -1,20 +1,27 @@
 import logging
 import os
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import patch, MagicMock
 
 import pytest
 import yaml
 from _pytest.logging import LogCaptureFixture
 from bs4 import BeautifulSoup
+from click import ClickException
 
+from json_schema_for_humans.schema.schema_importer import import_schemas_for_creating
+from json_schema_for_humans.template_renderer import TemplateRenderer
 from json_schema_for_humans.generate import (
     generate_from_file_object,
     generate_from_filename,
     generate_from_schema,
-    generate,
+    _generate_schemas_doc,
 )
-from json_schema_for_humans.generation_configuration import GenerationConfiguration, CONFIG_DEPRECATION_MESSAGE
+from json_schema_for_humans.generation_configuration import (
+    GenerationConfiguration,
+    CONFIG_DEPRECATION_MESSAGE,
+    LanguageTypes,
+)
 from tests.html_schema_doc_asserts import assert_basic_case
 from tests.test_utils import assert_css_and_js_not_copied, get_test_case_path
 
@@ -123,7 +130,7 @@ def test_generate_from_file_name_with_invalid_output_dir(tmp_path: Path) -> None
     test_case_path = get_test_case_path("basic")
     result_path = tmp_path / "nonsense" / "result_with_another_name.html"
 
-    with pytest.raises(FileNotFoundError) as exception_info:
+    with pytest.raises(ClickException) as exception_info:
         generate_from_filename(test_case_path, str(result_path.resolve()), False, False, False, False)
         assert f"{os.path.dirname(result_path)} not found" in str(exception_info.value)
 
@@ -133,9 +140,9 @@ def test_generate_from_file_name_with_invalid_output_dir_and_no_resource_copy(tm
     test_case_path = get_test_case_path("basic")
     result_path = tmp_path / "nonsense" / "result_with_another_name.html"
 
-    with pytest.raises(FileNotFoundError) as exception_info:
+    with pytest.raises(ClickException) as exception_info:
         generate_from_filename(test_case_path, str(result_path.resolve()), False, False, False, False, False, False)
-        assert f"{os.path.dirname(result_path)} not found" in str(exception_info.value)
+        assert f"{os.path.dirname(str(result_path))} not found" in str(exception_info.value)
 
 
 def test_generate_multiple_path_inputs(tmp_path: Path) -> None:
@@ -148,24 +155,14 @@ def test_generate_multiple_path_inputs(tmp_path: Path) -> None:
     result_path = tmp_path / "test_generate"
     result_path.mkdir()
 
-    generated = generate([test_case_path1, test_case_path2], result_path)
+    schemas = import_schemas_for_creating(test_case_path1, result_path, LanguageTypes.md)
+    schemas += import_schemas_for_creating(test_case_path2, result_path, LanguageTypes.md)
 
-    assert generated == ([result_path / f"{test_case1}.html", result_path / f"{test_case2}.html"], {})
+    template_renderer = MagicMock(TemplateRenderer)
+    template_renderer.render.return_value = ""
+    generated = _generate_schemas_doc(schemas, template_renderer)
 
-
-def test_generate_multiple_str_inputs(tmp_path: Path) -> None:
-    """Test generating using the all-purpose "generate" method with multiple str inputs"""
-    test_case1 = "basic"
-    test_case2 = "with_default"
-    test_case_path1 = get_test_case_path(test_case1)
-    test_case_path2 = get_test_case_path(test_case2)
-
-    result_path = tmp_path / "test_generate"
-    result_path.mkdir()
-
-    generated = generate([str(test_case_path1), str(test_case_path2)], result_path)
-
-    assert generated == ([result_path / f"{test_case1}.html", result_path / f"{test_case2}.html"], {})
+    assert generated is not None
 
 
 def test_generate_no_file_output() -> None:
@@ -173,12 +170,12 @@ def test_generate_no_file_output() -> None:
     test_case_name = "basic"
     test_case_file_name = f"{test_case_name}.json"
     test_case_path = get_test_case_path("basic")
+    schemas = import_schemas_for_creating(test_case_path, None, LanguageTypes.md)
+    template_renderer = MagicMock(TemplateRenderer)
+    template_renderer.render.return_value = ""
+    generated = _generate_schemas_doc(schemas, template_renderer)
 
-    generated = generate([test_case_path], result_file_or_dir=None)
-
-    assert generated[0] == []
-    assert list(generated[1].keys()) == [test_case_file_name]
-    assert len(generated[1][test_case_file_name]) > 30
+    assert list(generated.keys()) == [test_case_file_name]
 
 
 def _assert_deprecation_message(caplog: LogCaptureFixture, must_be_present: bool) -> None:
