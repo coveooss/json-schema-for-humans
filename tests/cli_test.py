@@ -148,7 +148,8 @@ def test_nonexistent_output_path() -> None:
     with runner.isolated_filesystem():
         result = runner.invoke(main, [test_path, output_dir])
         assert_cli_runner_exited(
-            result, f"Output path file is in a directory that does not exist: {os.path.dirname(output_dir)}",
+            result,
+            f"Output path file is in a directory that does not exist: {os.path.dirname(output_dir)}",
         )
 
 

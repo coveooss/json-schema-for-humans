@@ -41,4 +41,7 @@ def get_nonexistent_output_path(name: str) -> str:
 
 def generate_case(case_name: str, config: GenerationConfiguration = None) -> BeautifulSoup:
     """Get the BeautifulSoup object for a test case"""
-    return BeautifulSoup(generate_from_schema(get_test_case_path(case_name), None, config=config), "html.parser",)
+    return BeautifulSoup(
+        generate_from_schema(get_test_case_path(case_name), None, config=config),
+        "html.parser",
+    )
