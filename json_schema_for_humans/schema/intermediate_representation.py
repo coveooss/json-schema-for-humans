@@ -3,19 +3,20 @@ import json
 import os
 from collections import defaultdict
 from pathlib import Path
-from typing import Any, Dict, List, Optional, TextIO, Tuple, Union
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 import requests
 import yaml
 
 from json_schema_for_humans import const
+from json_schema_for_humans.const import FileLikeType
 from json_schema_for_humans.jinja_filters import escape_property_name_for_id
 from json_schema_for_humans.schema.schema_keyword import SchemaKeyword
 from json_schema_for_humans.schema.schema_node import SchemaNode
 
 
 def build_intermediate_representation(
-    schema_path: Union[str, Path, TextIO], loaded_schemas: Optional[Dict[str, Any]] = None
+    schema_path: Union[str, Path, FileLikeType], loaded_schemas: Optional[Dict[str, Any]] = None
 ) -> SchemaNode:
     """Build a SchemaNode object representing a JSON schema with added metadata to help rendering as a documentation.
 
@@ -215,7 +216,7 @@ def _resolve_ref(
     return new_reference, new_reference
 
 
-def _get_schema_path(schema_path: Union[str, Path, TextIO]) -> str:
+def _get_schema_path(schema_path: Union[str, Path, FileLikeType]) -> str:
     if isinstance(schema_path, Path):
         return str(schema_path.resolve())
     elif isinstance(schema_path, str):
@@ -363,7 +364,7 @@ def _build_node(
                         new_property_name,
                     )
             elif schema_key == SchemaKeyword.ADDITIONAL_PROPERTIES.value:
-                if schema_value == False:
+                if schema_value is False:
                     new_node.no_additional_properties = True
                 else:
                     new_html_id = html_id

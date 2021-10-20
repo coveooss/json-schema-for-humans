@@ -1,4 +1,5 @@
-from json_schema_for_humans.generation_configuration import GenerationConfiguration, LanguageTypes
+from json_schema_for_humans.generation_configuration import GenerationConfiguration
+from json_schema_for_humans.const import TemplateName
 
 
 def test_default_values() -> None:
@@ -9,29 +10,22 @@ def test_default_values() -> None:
         "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
         "tables": None,
     }
-    assert config.template_md_options["badge_as_image"] == False
+    assert config.template_md_options is not None
+    assert config.template_md_options["badge_as_image"] is False
 
 
 def test_override_markdown_options() -> None:
     """Test init GenerationConfiguration with default values"""
 
     # override break-on-newline key
-    config = GenerationConfiguration(
-        markdown_options={
-            "break-on-newline": False,
-        }
-    )
+    config = GenerationConfiguration(markdown_options={"break-on-newline": False,})
     assert config.markdown_options == {
         "break-on-newline": False,
         "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
         "tables": None,
     }
     # override fenced-code-blocks key
-    config = GenerationConfiguration(
-        markdown_options={
-            "fenced-code-blocks": {"cssclass": "test"},
-        }
-    )
+    config = GenerationConfiguration(markdown_options={"fenced-code-blocks": {"cssclass": "test"},})
     assert config.markdown_options == {
         "break-on-newline": True,
         "fenced-code-blocks": {"cssclass": "test"},
@@ -59,11 +53,7 @@ def test_override_template_md_options() -> None:
     """Test init GenerationConfiguration with default values"""
 
     # add new new_property key
-    config = GenerationConfiguration(
-        template_md_options={
-            "new_property": True,
-        }
-    )
+    config = GenerationConfiguration(template_md_options={"new_property": True,})
     assert config.template_md_options == {
         "new_property": True,
         "badge_as_image": False,
@@ -73,12 +63,14 @@ def test_override_template_md_options() -> None:
 
     # override badge_as_image key
     config = GenerationConfiguration(
-        deprecated_from_description=True, template_name=LanguageTypes.md, template_md_options={"badge_as_image": "test"}
+        deprecated_from_description=True, template_name=TemplateName.MD, template_md_options={"badge_as_image": "test"}
     )
+    assert config.template_md_options is not None
     assert config.template_md_options["badge_as_image"] == "test"
 
     # override badge_as_image key
     config = GenerationConfiguration(
-        deprecated_from_description=True, template_name=LanguageTypes.md, template_md_options={"badge_as_image": True}
+        deprecated_from_description=True, template_name=TemplateName.MD, template_md_options={"badge_as_image": True}
     )
-    assert config.template_md_options["badge_as_image"] == True
+    assert config.template_md_options is not None
+    assert config.template_md_options["badge_as_image"] is True

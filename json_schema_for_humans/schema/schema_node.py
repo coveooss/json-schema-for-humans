@@ -24,7 +24,7 @@ class SchemaNode:
         ref_path="",
         parent: "SchemaNode" = None,
         parent_key: str = None,
-        literal: Union[str, int, bool] = None,
+        literal: Optional[Union[str, int, bool]] = None,
         keywords: Dict[str, Union["SchemaNode", str, List[str]]] = None,
         array_items: List["SchemaNode"] = None,
         links_to: "SchemaNode" = None,

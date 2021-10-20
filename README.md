@@ -78,62 +78,17 @@ copy_js: false
 
 ### From code
 
-To render schema documentation from code, the method to call is `generate` with the following signature:
-
-```python
-def generate(
-    schema_file_or_dir: List[Union[str, Path, TextIO]],
-    result_file_or_dir: Optional[Union[str, Path, TextIO]],
-    config: GenerationConfiguration = None,
-    loaded_schemas: Optional[Dict[str, Any]] = None,
-) -> Tuple[List[Path], Dict[str, str]]:
-    ...
-```
-
-Where:
-- `schema_file_or_dir` is a list of schema file paths or open file pointer
-- `result_file_or_dir` is the output path. If there is more than one schema to render, this should be a directory. The same rules as the CLI call documented above applies.
-- `config` is an instance of the `GenerationConfiguration` object, see `The GenerationConfiguration object` below
-- `loaded_schemas` is a dictionary of already loaded schema files. See `Pre-load schemas` below. This is an advanced option.
-
-The output is a tuple where:
-- the first element is a list of the paths to documentation files written. This part is only populated when there is an output path and the files are written to disk
-- the second is a dictionary of the rendered schemas in the format input_schema_file_name -> rendered_documentation. This is only populated when there is no output path
-
-Notes:
-- When providing a file pointer, it must be open in read mode for the input schema and in write mode for the output documentation files
-- If there is an output path and it is not disabled in the config, CSS and JS files are copied to the current working directory with names "schema_doc.css" and "schema_doc.min.js" respectively. These are needed to render the documentation HTML page in a browser
-
-Example:
-
-In this example, `my_schema.json` will be rendered to `my_schema.html` in the output directory
-```python
-from json_schema_for_humans.generate import generate
-
-from pathlib import Path
-
-output_dir = Path.cwd() / "output_dir"
-output_dir.mkdir(parents=True, exist_ok=True)
-
-generated = generate(["my_schema.json"], output_dir)
-
-# Returns ([Path('[cwd]/output_dir/my_schema.html')], {})
-```
-
-
-#### Shortcut methods
-
-These methods are kept for retrocompatibility and because they are easier to call for simple use cases.
+The following methods are available to import from `json_schema_for_humans.generate`
 
 Method Name | Schema input | Output | CSS and JS copied?
 --- | --- | --- | ---
-generate_from_schema | `schema_file` as str, Path (from pathlib) or a file object | Rendered HTML as a str | No
-generate_from_filename | `schema_file_name` as a str or Path | Rendered HTML written to the file at path `result_file_name` | Yes
-generate_from_file_object | `schema_file` as an open file object (read mode) | Rendered HTML written to the file at `result_file`, which must be an open file object (in write mode) | Yes
+generate_from_schema | `schema_file` as str or `pathlib.Path` | Rendered doc as a str | No
+generate_from_filename | `schema_file_name` as str or `pathlib.Path` | Rendered doc written to the file at path `result_file_name` | Yes
+generate_from_file_object | `schema_file` as an open file object (read mode) | Rendered doc written to the file at `result_file`, which must be an open file object (in write mode) | Yes
 
 Notes:
 - When using file objects, it is assumed that files are opened with encoding "utf-8"
-- CSS and JS files are copied to the current working directory with names "schema_doc.css" and "schema_doc.min.js" respectively
+- CSS and JS files are copied to the current working directory with names "schema_doc.css" and "schema_doc.min.js" respectively, if necessary
 - Other parameters of these methods are analogous to the CLI parameters documented above.
 
 #### The GenerationConfiguration object

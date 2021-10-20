@@ -20,6 +20,8 @@
   - [17.1. [Optional] Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`](#template_md_options_badge_as_image)
   - [17.2. [Optional] Property `JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`](#template_md_options_show_heading_numbers)
   - [17.3. [Optional] Property `JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`](#template_md_options_show_array_restrictions)
+- [18. [Optional] Property `JSON Schema for Humans configuration file > with_footer`](#with_footer)
+- [19. [Optional] Property `JSON Schema for Humans configuration file > footer_show_time`](#footer_show_time)
 
 **Title:** JSON Schema for Humans configuration file
 
@@ -55,6 +57,8 @@ Configuration parameters can be provided in several ways:
 | - [examples_as_yaml](#examples_as_yaml )                       | No      | boolean          | No         | -          | Whether to display examples as YAML instead of JSON                                  |
 | - [markdown_options](#markdown_options )                       | No      | object           | No         | -          | [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for ... |
 | - [template_md_options](#template_md_options )                 | No      | object           | No         | -          | specific options to md template                                                      |
+| - [with_footer](#with_footer )                                 | No      | boolean          | No         | -          | Whether to show the footer linking to the library repo and with the generation d ... |
+| - [footer_show_time](#footer_show_time )                       | No      | boolean          | No         | -          | Whether the footer should display the generation time                                |
 |                                                                |         |                  |            |            |                                                                                      |
 
 ## <a name="minify"></a>1. [Optional] Property `JSON Schema for Humans configuration file > minify`
@@ -302,5 +306,25 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 
  if false, do not generate
 
+## <a name="with_footer"></a>18. [Optional] Property `JSON Schema for Humans configuration file > with_footer`
+
+| Type                      | `boolean`                                                                 |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Default**               | `true`                                                                    |
+|                           |                                                                           |
+
+**Description:** Whether to show the footer linking to the library repo and with the generation datetime
+
+## <a name="footer_show_time"></a>19. [Optional] Property `JSON Schema for Humans configuration file > footer_show_time`
+
+| Type                      | `boolean`                                                                 |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Default**               | `true`                                                                    |
+|                           |                                                                           |
+
+**Description:** Whether the footer should display the generation time
+
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on date
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

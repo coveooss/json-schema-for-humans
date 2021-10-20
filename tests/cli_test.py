@@ -5,7 +5,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 from click.testing import CliRunner, Result
 
-from json_schema_for_humans.generate import main
+from json_schema_for_humans.cli import main
 from tests.test_utils import (
     assert_css_and_js_copied,
     assert_css_and_js_not_copied,
@@ -148,8 +148,7 @@ def test_nonexistent_output_path() -> None:
     with runner.isolated_filesystem():
         result = runner.invoke(main, [test_path, output_dir])
         assert_cli_runner_exited(
-            result,
-            f"Output path file is in a directory that does not exist: {os.path.dirname(output_dir)}",
+            result, f"Output path file is in a directory that does not exist: {os.path.dirname(output_dir)}",
         )
 
 

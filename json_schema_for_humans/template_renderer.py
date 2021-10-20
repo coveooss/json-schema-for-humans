@@ -9,16 +9,16 @@ from jinja2 import FileSystemLoader, Template
 from jinja2.ext import loopcontrols
 
 from json_schema_for_humans import jinja_filters, templating_utils
-from json_schema_for_humans.default_file import DefaultFile
-from json_schema_for_humans.generation_configuration import GenerationConfiguration, LanguageTypes
+from json_schema_for_humans.generation_configuration import GenerationConfiguration
+from json_schema_for_humans.const import TemplateName, ResultExtension, DefaultFile
 from json_schema_for_humans.schema.schema_node import SchemaNode
 from json_schema_for_humans.md_template import MarkdownTemplate
 
 
-def _minify(rendered: str, result_extension: LanguageTypes) -> str:
-    if result_extension == LanguageTypes.md:
+def _minify(rendered: str, result_extension: ResultExtension) -> str:
+    if result_extension == ResultExtension.MD:
         return re.sub(r"\n\s*\n", "\n\n", rendered)
-    if result_extension == LanguageTypes.html:
+    if result_extension == ResultExtension.HTML:
         return htmlmin.minify(rendered)
     return rendered
 
@@ -36,12 +36,12 @@ class TemplateRenderer:
         env = jinja2.Environment(
             loader=loader,
             extensions=[loopcontrols],
-            trim_blocks=(self.config.template_name in (LanguageTypes.md, LanguageTypes.md_nested)),
-            lstrip_blocks=(self.config.template_name in (LanguageTypes.md, LanguageTypes.md_nested)),
+            trim_blocks=(self.config.template_name in (TemplateName.MD, TemplateName.MD_NESTED)),
+            lstrip_blocks=(self.config.template_name in (TemplateName.MD, TemplateName.MD_NESTED)),
         )
         env.globals["jsfh_config"] = self.config
         env.globals["jsfh_md"] = markdown2.Markdown(extras=self.config.markdown_options)
-        if self.config.template_name in (LanguageTypes.md, LanguageTypes.md_nested):
+        if self.config.template_name in (TemplateName.MD, TemplateName.MD_NESTED):
             md_template = MarkdownTemplate(self.config)
             md_template.register_jinja(env)
 
@@ -86,6 +86,6 @@ class TemplateRenderer:
         rendered = self.template.render(schema=intermediate_schema, config=self.config)
 
         if self.config.minify:
-            rendered = _minify(rendered, self.config.result_extension)
+            rendered = _minify(rendered, self.config.template_name.result_extension)
 
         return rendered

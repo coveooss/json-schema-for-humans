@@ -43,7 +43,7 @@ pytest = "^6.2.5"
 
 
 [tool.poetry.scripts]
-generate-schema-doc = "json_schema_for_humans.generate:main"
+generate-schema-doc = "json_schema_for_humans.cli:main"
 
 
 [build-system]

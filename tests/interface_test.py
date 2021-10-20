@@ -6,22 +6,23 @@ from unittest.mock import patch, MagicMock
 import pytest
 import yaml
 from _pytest.logging import LogCaptureFixture
+from _pytest.monkeypatch import MonkeyPatch
 from bs4 import BeautifulSoup
-from click import ClickException
 
-from json_schema_for_humans.schema.schema_importer import import_schemas_for_creating
-from json_schema_for_humans.template_renderer import TemplateRenderer
+from json_schema_for_humans.cli import get_schemas_to_render_from_cli_arguments
+from json_schema_for_humans.const import ResultExtension
 from json_schema_for_humans.generate import (
     generate_from_file_object,
     generate_from_filename,
     generate_from_schema,
-    _generate_schemas_doc,
+    generate_schemas_doc,
 )
 from json_schema_for_humans.generation_configuration import (
     GenerationConfiguration,
     CONFIG_DEPRECATION_MESSAGE,
-    LanguageTypes,
 )
+from json_schema_for_humans.schema.schema_importer import get_schemas_to_render
+from json_schema_for_humans.template_renderer import TemplateRenderer
 from tests.html_schema_doc_asserts import assert_basic_case
 from tests.test_utils import assert_css_and_js_not_copied, get_test_case_path
 
@@ -29,18 +30,6 @@ from tests.test_utils import assert_css_and_js_not_copied, get_test_case_path
 def test_generate_from_schema_using_path(tmp_path: Path) -> None:
     """Test providing a schema path as a str with the file not opened"""
     rendered = generate_from_schema(get_test_case_path("basic"))
-
-    soup = BeautifulSoup(rendered, "html.parser")
-
-    assert_basic_case(soup)
-
-    assert_css_and_js_not_copied(tmp_path)
-
-
-def test_generate_from_schema_using_file_object(tmp_path: Path) -> None:
-    """Test providing a schema path as an opened file object"""
-    with open(get_test_case_path("basic")) as test_case_fp:
-        rendered = generate_from_schema(test_case_fp)
 
     soup = BeautifulSoup(rendered, "html.parser")
 
@@ -60,28 +49,6 @@ def test_generate_from_schema_using_path_already_loaded(tmp_path: Path) -> None:
 
     with patch("yaml.safe_load") as patched_yaml_load:
         rendered = generate_from_schema(test_case_path, loaded_schemas=loaded)
-
-        patched_yaml_load.assert_not_called()
-
-    soup = BeautifulSoup(rendered, "html.parser")
-
-    assert_basic_case(soup)
-
-    assert_css_and_js_not_copied(tmp_path)
-
-
-def test_generate_from_schema_using_file_object_already_loaded(tmp_path: Path) -> None:
-    """Test providing a schema path as an opened file object but also the loaded schema in a dict.
-    Ensure the schema is not loaded again
-    """
-    test_case_path = os.path.realpath(get_test_case_path("basic"))
-
-    with open(test_case_path, encoding="utf-8") as test_case_fp:
-        loaded = {test_case_path: yaml.safe_load(test_case_fp.read())}
-
-    with patch("yaml.safe_load") as patched_yaml_load:
-        with open(get_test_case_path("basic")) as test_case_fp:
-            rendered = generate_from_schema(test_case_fp, loaded_schemas=loaded)
 
         patched_yaml_load.assert_not_called()
 
@@ -130,7 +97,7 @@ def test_generate_from_file_name_with_invalid_output_dir(tmp_path: Path) -> None
     test_case_path = get_test_case_path("basic")
     result_path = tmp_path / "nonsense" / "result_with_another_name.html"
 
-    with pytest.raises(ClickException) as exception_info:
+    with pytest.raises(FileNotFoundError) as exception_info:
         generate_from_filename(test_case_path, str(result_path.resolve()), False, False, False, False)
         assert f"{os.path.dirname(result_path)} not found" in str(exception_info.value)
 
@@ -140,7 +107,7 @@ def test_generate_from_file_name_with_invalid_output_dir_and_no_resource_copy(tm
     test_case_path = get_test_case_path("basic")
     result_path = tmp_path / "nonsense" / "result_with_another_name.html"
 
-    with pytest.raises(ClickException) as exception_info:
+    with pytest.raises(FileNotFoundError) as exception_info:
         generate_from_filename(test_case_path, str(result_path.resolve()), False, False, False, False, False, False)
         assert f"{os.path.dirname(str(result_path))} not found" in str(exception_info.value)
 
@@ -155,27 +122,33 @@ def test_generate_multiple_path_inputs(tmp_path: Path) -> None:
     result_path = tmp_path / "test_generate"
     result_path.mkdir()
 
-    schemas = import_schemas_for_creating(test_case_path1, result_path, LanguageTypes.md)
-    schemas += import_schemas_for_creating(test_case_path2, result_path, LanguageTypes.md)
+    schemas = get_schemas_to_render_from_cli_arguments(test_case_path1, result_path, ResultExtension.MD)
+    schemas += get_schemas_to_render_from_cli_arguments(test_case_path2, result_path, ResultExtension.MD)
 
     template_renderer = MagicMock(TemplateRenderer)
     template_renderer.render.return_value = ""
-    generated = _generate_schemas_doc(schemas, template_renderer)
+    generated = generate_schemas_doc(schemas, template_renderer)
 
     assert generated is not None
 
 
-def test_generate_no_file_output() -> None:
+def test_generate_no_file_output(tmp_path: Path, monkeypatch: MonkeyPatch) -> None:
     """Test generating and getting output as a str instead of writing to file"""
+    monkeypatch.chdir(tmp_path)
+
     test_case_name = "basic"
     test_case_file_name = f"{test_case_name}.json"
     test_case_path = get_test_case_path("basic")
-    schemas = import_schemas_for_creating(test_case_path, None, LanguageTypes.md)
+
+    schemas = get_schemas_to_render(test_case_path, None, ResultExtension.MD)
     template_renderer = MagicMock(TemplateRenderer)
     template_renderer.render.return_value = ""
-    generated = _generate_schemas_doc(schemas, template_renderer)
+    generated = generate_schemas_doc(schemas, template_renderer)
 
     assert list(generated.keys()) == [test_case_file_name]
+
+    # Ensure no file is written to current working directory
+    assert len(list(tmp_path.glob("**"))) == 1  # glob("**") returns itself
 
 
 def _assert_deprecation_message(caplog: LogCaptureFixture, must_be_present: bool) -> None:
