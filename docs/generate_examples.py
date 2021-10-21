@@ -115,7 +115,9 @@ CONFIGURATIONS: List[ExampleConfiguration] = [
         "title": "Markdown without badge template",
         "dir_name": "examples_md_default",
         "config": GenerationConfiguration(
-            template_name=TemplateName.MD, deprecated_from_description=True, footer_show_time=False,
+            template_name=TemplateName.MD,
+            deprecated_from_description=True,
+            footer_show_time=False,
         ),
         "md_example_template": MD_EXAMPLE_MD_TEMPLATE,
     },
@@ -218,7 +220,10 @@ def generate_examples(examples_md_file: FileLikeType):
             continue
 
         generate_each_template(
-            examples_md_file, case_source, os.path.relpath(case_source, CURRENT_DIR).replace("\\", "/"), name,
+            examples_md_file,
+            case_source,
+            os.path.relpath(case_source, CURRENT_DIR).replace("\\", "/"),
+            name,
         )
 
 
