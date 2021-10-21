@@ -1,35 +1,16 @@
+from enum import Enum
+from io import TextIOWrapper, FileIO
+from typing import Union, TextIO
+
 TYPE_ARRAY = "array"
 TYPE_BOOLEAN = "boolean"
 TYPE_CONST = "const"
 TYPE_ENUM = "enum"
 TYPE_INTEGER = "integer"
+TYPE_NULL = "null"
 TYPE_NUMBER = "number"
 TYPE_OBJECT = "object"
 TYPE_STRING = "string"
-
-KW_REQUIRED = "required"
-KW_TITLE = "title"
-KW_CONTAINS = "contains"
-KW_ITEMS = "items"
-KW_UNIQUE_ITEMS = "uniqueItems"
-KW_ADDITIONAL_ITEMS = "additionalItems"
-KW_MAX_ITEMS = "maxItems"
-KW_MIN_ITEMS = "minItems"
-KW_MAX_LENGTH = "maxLength"
-KW_MIN_LENGTH = "minLength"
-KW_PATTERN = "pattern"
-KW_CONST = "const"
-KW_ENUM = "enum"
-KW_ELSE = "else"
-KW_THEN = "then"
-KW_IF = "if"
-KW_NOT = "not"
-KW_ONE_OF = "oneOf"
-KW_ANY_OF = "anyOf"
-KW_ALL_OF = "allOf"
-KW_PROPERTIES = "properties"
-KW_PATTERN_PROPERTIES = "patternProperties"
-KW_ADDITIONAL_PROPERTIES = "additionalProperties"
 
 DESCRIPTION = "description"
 DEFAULT = "default"
@@ -45,3 +26,31 @@ MINIMUM = "minimum"
 EXCLUSIVE_MINIMUM = "exclusiveMinimum"
 
 LINE_WIDTH = 80
+
+
+FileLikeType = Union[TextIO, TextIOWrapper, FileIO]
+
+
+class ResultExtension(Enum):
+    HTML = "html"
+    MD = "md"
+
+
+class TemplateName(Enum):
+    FLAT = "flat"
+    JS = "js"
+    MD = "md"
+    MD_NESTED = "md_nested"
+
+    @property
+    def result_extension(self) -> ResultExtension:
+        if self in [self.FLAT, self.JS]:
+            return ResultExtension.HTML
+        if self in [self.MD, self.MD_NESTED]:
+            return ResultExtension.MD
+
+
+class DefaultFile(Enum):
+    CSS_FILE_NAME = "schema_doc.css"
+    JS_FILE_NAME = "schema_doc.min.js"
+    TEMPLATE_FILE_NAME = "base.html"

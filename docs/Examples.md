@@ -1066,6 +1066,64 @@ the description of an attribute
 [examples/examples_md_nested_with_badges/description_with_ref.md](examples/examples_md_nested_with_badges/description_with_ref.md ':include')
 </details>
 
+## --enumofnone--
+### enumofnone
+
+
+<details>
+<summary>Json schema - Click here to expand source code...</summary>
+
+[examples/cases/enumofnone.json](examples/cases/enumofnone.json ':include :type=code')
+</details>
+
+
+<details>
+<summary>JS template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/enumofnone.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_default/enumofnone.html](examples/examples_js_default/enumofnone.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Flat template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/enumofnone.html" target="_blank">Open it in full page</a>
+
+[examples/examples_flat_default/enumofnone.html](examples/examples_flat_default/enumofnone.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Markdown without badge template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_default/enumofnone.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_default/enumofnone.md](examples/examples_md_default/enumofnone.md ':include')
+</details>
+
+
+<details>
+<summary>Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_with_badges/enumofnone.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_with_badges/enumofnone.md](examples/examples_md_with_badges/enumofnone.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown without badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_nested_default/enumofnone.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_default/enumofnone.md](examples/examples_md_nested_default/enumofnone.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_nested_with_badges/enumofnone.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_with_badges/enumofnone.md](examples/examples_md_nested_with_badges/enumofnone.md ':include')
+</details>
+
 ## --geo--
 ### Geographical coordinates
 

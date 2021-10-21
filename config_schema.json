@@ -115,6 +115,16 @@
           "default": true
         }
       }
+    },
+    "with_footer": {
+      "type": "boolean",
+      "description": "Whether to show the footer linking to the library repo and with the generation datetime",
+      "default": true
+    },
+    "footer_show_time": {
+      "type": "boolean",
+      "description": "Whether the footer should display the generation time",
+      "default": true
     }
   }
 }

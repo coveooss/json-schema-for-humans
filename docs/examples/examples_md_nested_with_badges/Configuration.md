@@ -20,6 +20,8 @@
   - [17.1. [Optional] Property JSON Schema for Humans configuration file > template_md_options > badge_as_image](#template_md_options_badge_as_image)
   - [17.2. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_heading_numbers](#template_md_options_show_heading_numbers)
   - [17.3. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_array_restrictions](#template_md_options_show_array_restrictions)
+- [18. [Optional] Property JSON Schema for Humans configuration file > with_footer](#with_footer)
+- [19. [Optional] Property JSON Schema for Humans configuration file > footer_show_time](#footer_show_time)
 
 **Title:** JSON Schema for Humans configuration file
 
@@ -414,5 +416,39 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </blockquote>
 </details>
 
+<details>
+<summary><strong> <a name="with_footer"></a>18. [Optional] Property JSON Schema for Humans configuration file > with_footer</strong>  
+
+</summary>
+<blockquote>
+
+| Type                      | `boolean`                                                                                                           |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `true`                                                                                                              |
+|                           |                                                                                                                     |
+
+**Description:** Whether to show the footer linking to the library repo and with the generation datetime
+
+</blockquote>
+</details>
+
+<details>
+<summary><strong> <a name="footer_show_time"></a>19. [Optional] Property JSON Schema for Humans configuration file > footer_show_time</strong>  
+
+</summary>
+<blockquote>
+
+| Type                      | `boolean`                                                                                                           |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `true`                                                                                                              |
+|                           |                                                                                                                     |
+
+**Description:** Whether the footer should display the generation time
+
+</blockquote>
+</details>
+
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on date
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

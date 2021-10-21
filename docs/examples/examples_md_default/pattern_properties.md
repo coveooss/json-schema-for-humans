@@ -85,4 +85,4 @@ must respect the following conditions
 **Description:** Narrative review of the paper size.
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on date
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

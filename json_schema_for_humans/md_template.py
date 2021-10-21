@@ -4,7 +4,180 @@ from urllib.parse import quote_plus
 import jinja2
 
 from json_schema_for_humans import const, jinja_filters
-from json_schema_for_humans.schema_node import SchemaNode
+from json_schema_for_humans.schema.schema_node import SchemaNode
+
+
+def get_numeric_maximum_restriction(schema_node: SchemaNode, default: str = "N/A") -> str:
+    """Filter. Get the text to display about maximum restriction on a numeric type(integer or number)"""
+    maximum = schema_node.keywords.get(const.MAXIMUM)
+    if maximum:
+        maximum = maximum.literal
+    exclusive_maximum = schema_node.keywords.get(const.EXCLUSIVE_MAXIMUM)
+    if exclusive_maximum:
+        exclusive_maximum = exclusive_maximum.literal
+
+    # Fix maximum and exclusive_maximum both there
+    if maximum is not None and exclusive_maximum is not None:
+        if maximum > exclusive_maximum:
+            exclusive_maximum = None
+        else:
+            maximum = None
+
+    maximum_fragment = default
+    if maximum is not None:
+        maximum_fragment = f"&le; {maximum}"
+    if exclusive_maximum is not None:
+        maximum_fragment = f"&lt; {exclusive_maximum}"
+
+    return maximum_fragment
+
+
+def escape_for_table(example_text: str) -> str:
+    """Filter. escape characters('|', '`') in string to be inserted into markdown table"""
+    return example_text.translate(str.maketrans({"|": "\\|", "`": "\\`"}))
+
+
+def get_numeric_minimum_restriction(schema_node: SchemaNode, default: str = "N/A") -> str:
+    """Filter. Get the text to display about minimum restriction on a numeric type (integer or number)"""
+    minimum = schema_node.keywords.get(const.MINIMUM)
+    if minimum:
+        minimum = minimum.literal
+    exclusive_minimum = schema_node.keywords.get(const.EXCLUSIVE_MINIMUM)
+    if exclusive_minimum:
+        exclusive_minimum = exclusive_minimum.literal
+
+    # Fix minimum and exclusive_minimum both there
+    if minimum is not None and exclusive_minimum is not None:
+        if minimum <= exclusive_minimum:
+            exclusive_minimum = None
+        else:
+            minimum = None
+
+    minimum_fragment = default
+    if minimum is not None:
+        minimum_fragment = f"&ge; {minimum}"
+    if exclusive_minimum is not None:
+        minimum_fragment = f"&gt; {exclusive_minimum}"
+
+    return minimum_fragment
+
+
+def generate_table(table: List[List[str]]) -> str:
+    """
+    Pretty print markdown table using list of rows.
+    Assuming first row is header line.
+    Ending with empty line for rendering bottom border.
+    Each column is str padded to max size string in the column.
+    """
+    if len(table) == 0:
+        return ""
+
+    # compute max length of each column
+    max_cell_length: Dict = {}
+    for idx_row, row in enumerate(table):
+        for idx_col, cell in enumerate(row):
+            max_cell_length[idx_col] = max(max_cell_length.get(idx_col, 0), len(cell))
+
+    # generate md table
+    output = ""
+    for idx_row, row in enumerate(table):
+        for idx_col, cell in enumerate(row):
+            output += "| " + cell.ljust(max_cell_length[idx_col], " ") + " "
+        output += "|\n"
+        # add header line
+        if idx_row == 0:
+            for idx_col, cell in enumerate(row):
+                output += "| " + "".ljust(max_cell_length[idx_col], "-") + " "
+            output += "|\n"
+
+    # add last empty row
+    for cell in max_cell_length.values():
+        output += "| " + "".ljust(cell, " ") + " "
+    output += "|\n"
+
+    return output
+
+
+def restrictions_table(schema: SchemaNode) -> List[List[str]]:
+    """
+    String or numeric restrictions tables
+    - min/max length
+    - regexp pattern + link to regexp101
+    - multipleOf
+    - minimum/maximum
+    ready to be rendered by generate_table filter
+    """
+    restrictions = []
+    if schema.kw_min_length:
+        restrictions.append(["**Min length**", str(schema.kw_min_length.literal)])
+    if schema.kw_max_length:
+        restrictions.append(["**Max length**", str(schema.kw_max_length.literal)])
+    if schema.kw_pattern:
+        pattern_code = schema.kw_pattern.literal.replace("|", "\\|")
+        pattern_url = quote_plus(schema.kw_pattern.literal)
+        example_url = ""
+        if len(schema.examples) > 0:
+            example_url = "&testString=" + quote_plus(schema.examples[0])
+        restrictions.append(
+            [
+                "**Must match regular expression**",
+                f"```{pattern_code}``` [Test](https://regex101.com/?regex={pattern_url}{example_url})",
+            ]
+        )
+    if schema.keywords.get("multipleOf"):
+        restrictions.append(["**Multiple of**", str(schema.keywords.get("multipleOf").literal)])
+    if schema.keywords.get("minimum") or schema.keywords.get("exclusiveMinimum"):
+        restrictions.append(["**Minimum**", str(get_numeric_minimum_restriction(schema))])
+    if schema.keywords.get("maximum") or schema.keywords.get("exclusiveMaximum"):
+        restrictions.append(["**Maximum**", str(get_numeric_maximum_restriction(schema))])
+
+    if len(restrictions) > 0:
+        # add header
+        restrictions.insert(0, ["Restrictions", " "])
+
+    return restrictions
+
+
+def array_items(schema: SchemaNode, title: str) -> List[List[str]]:
+    """
+    List of array items
+    ready to be rendered by generate_table filter
+    """
+    if not schema.array_items:
+        return []
+    items = [[title]]
+    for i, item in enumerate(schema.array_items):
+        item_label = item.name_for_breadcrumbs or f"{title} {i}"
+        item_html_id = item.html_id
+        items.append([f"[{item_label}](#{item_html_id})"])
+
+    return items
+
+
+def first_line_fixed(example_text: str, max_length: int = 0) -> str:
+    """first_line truncated but replace ` with ' to avoid to have only one ` to avoid issues with jekyll"""
+    return jinja_filters.first_line(example_text, max_length).translate(str.maketrans({"`": "'"}))
+
+
+def array_items_restrictions(schema: SchemaNode) -> List[List[str]]:
+    """
+    Tuple validation restrictions
+    ready to be rendered by generate_table filter
+    """
+    if not schema.kw_items:
+        return []
+    items_restrictions = [["Each item of this array must be", "Description"]]
+    for i, item in enumerate(schema.kw_items):
+        item_label = item.name_for_breadcrumbs or f"Array Item {i}"
+        item_html_id = item.html_id
+        items_restrictions.append(
+            [
+                f"[{item_label}](#{item_html_id})",
+                escape_for_table(first_line_fixed(item.description or "-", const.LINE_WIDTH)),
+            ]
+        )
+
+    return items_restrictions
 
 
 class MarkdownTemplate(object):
@@ -15,73 +188,21 @@ class MarkdownTemplate(object):
         self.config = config
 
     def register_jinja(self, env: jinja2.Environment):
-        env.filters["md_get_numeric_minimum_restriction"] = self.get_numeric_minimum_restriction
-        env.filters["md_get_numeric_maximum_restriction"] = self.get_numeric_maximum_restriction
-        env.filters["md_escape_for_table"] = self.escape_for_table
+        env.filters["md_get_numeric_minimum_restriction"] = get_numeric_minimum_restriction
+        env.filters["md_get_numeric_maximum_restriction"] = get_numeric_maximum_restriction
+        env.filters["md_escape_for_table"] = escape_for_table
         env.filters["md_heading"] = self.heading
         env.filters["md_properties_table"] = self.properties_table
         env.filters["md_type_info_table"] = self.type_info_table
         env.filters["md_array_restrictions"] = self.array_restrictions
-        env.filters["md_array_items_restrictions"] = self.array_items_restrictions
-        env.filters["md_array_items"] = self.array_items
-        env.filters["md_restrictions_table"] = self.restrictions_table
-        env.filters["md_generate_table"] = self.generate_table
-        env.filters["md_first_line"] = self.first_line_fixed
+        env.filters["md_array_items_restrictions"] = array_items_restrictions
+        env.filters["md_array_items"] = array_items
+        env.filters["md_restrictions_table"] = restrictions_table
+        env.filters["md_generate_table"] = generate_table
+        env.filters["md_first_line"] = first_line_fixed
 
         env.globals["md_badge"] = self.badge
         env.globals["md_get_toc"] = self.get_toc
-
-    def get_numeric_minimum_restriction(self, schema_node: SchemaNode, default: str = "N/A") -> str:
-        """Filter. Get the text to display about minimum restriction on a numeric type (integer or number)"""
-        minimum = schema_node.keywords.get(const.MINIMUM)
-        if minimum:
-            minimum = minimum.literal
-        exclusive_minimum = schema_node.keywords.get(const.EXCLUSIVE_MINIMUM)
-        if exclusive_minimum:
-            exclusive_minimum = exclusive_minimum.literal
-
-        # Fix minimum and exclusive_minimum both there
-        if minimum is not None and exclusive_minimum is not None:
-            if minimum <= exclusive_minimum:
-                exclusive_minimum = None
-            else:
-                minimum = None
-
-        minimum_fragment = default
-        if minimum is not None:
-            minimum_fragment = f"&ge; {minimum}"
-        if exclusive_minimum is not None:
-            minimum_fragment = f"&gt; {exclusive_minimum}"
-
-        return minimum_fragment
-
-    def get_numeric_maximum_restriction(self, schema_node: SchemaNode, default: str = "N/A") -> str:
-        """Filter. Get the text to display about maximum restriction on a numeric type(integer or number)"""
-        maximum = schema_node.keywords.get(const.MAXIMUM)
-        if maximum:
-            maximum = maximum.literal
-        exclusive_maximum = schema_node.keywords.get(const.EXCLUSIVE_MAXIMUM)
-        if exclusive_maximum:
-            exclusive_maximum = exclusive_maximum.literal
-
-        # Fix maximum and exclusive_maximum both there
-        if maximum is not None and exclusive_maximum is not None:
-            if maximum > exclusive_maximum:
-                exclusive_maximum = None
-            else:
-                maximum = None
-
-        maximum_fragment = default
-        if maximum is not None:
-            maximum_fragment = f"&le; {maximum}"
-        if exclusive_maximum is not None:
-            maximum_fragment = f"&lt; {exclusive_maximum}"
-
-        return maximum_fragment
-
-    def escape_for_table(self, example_text: str) -> str:
-        """Filter. escape characters('|', '`') in string to be inserted into markdown table"""
-        return example_text.translate(str.maketrans({"|": "\\|", "`": "\\`"}))
 
     def heading(self, title: str, depth: int, html_id: Union[bool, str] = False, nested: bool = False) -> str:
         """
@@ -190,15 +311,13 @@ class MarkdownTemplate(object):
             line = []
             # property name
             property_name = "+ " if sub_property.is_required_property else "- "
-            property_name += self.format_link(self.escape_for_table(sub_property.property_name), sub_property.html_id)
+            property_name += self.format_link(escape_for_table(sub_property.property_name), sub_property.html_id)
             line.append(property_name)
             # pattern
             line.append("Yes" if sub_property.is_pattern_property else "No")
             # type
             line.append(
-                "Combination"
-                if jinja_filters.is_combining(sub_property)
-                else self.escape_for_table(sub_property.type_name)
+                "Combination" if jinja_filters.is_combining(sub_property) else escape_for_table(sub_property.type_name)
             )
             # Deprecated
             line.append(
@@ -219,7 +338,7 @@ class MarkdownTemplate(object):
             if sub_property.title:
                 description = sub_property.title
 
-            line.append(self.escape_for_table(self.first_line_fixed(description, const.LINE_WIDTH)))
+            line.append(escape_for_table(first_line_fixed(description, const.LINE_WIDTH)))
 
             properties.append(line)
 
@@ -228,10 +347,6 @@ class MarkdownTemplate(object):
             properties.insert(0, ["Property", "Pattern", "Type", "Deprecated", "Definition", "Title/Description"])
 
         return properties
-
-    def first_line_fixed(self, example_text: str, max_length: int = 0) -> str:
-        """first_line truncated but replace ` with ' to avoid to have only one ` to avoid issues with jekyll"""
-        return jinja_filters.first_line(example_text, max_length).translate(str.maketrans({"`": "'"}))
 
     def type_info_table(self, schema: SchemaNode) -> List[List]:
         """
@@ -313,112 +428,3 @@ class MarkdownTemplate(object):
                 "See below" if schema.kw_items or (schema.kw_contains and schema.kw_contains.literal != {}) else "N/A",
             ],
         ]
-
-    def array_items_restrictions(self, schema: SchemaNode) -> List[List[str]]:
-        """
-        Tuple validation restrictions
-        ready to be rendered by generate_table filter
-        """
-        if not schema.kw_items:
-            return []
-        array_items_restrictions = [["Each item of this array must be", "Description"]]
-        for i, item in enumerate(schema.kw_items):
-            item_label = item.name_for_breadcrumbs or f"Array Item {i}"
-            item_html_id = item.html_id
-            array_items_restrictions.append(
-                [
-                    f"[{item_label}](#{item_html_id})",
-                    self.escape_for_table(self.first_line_fixed(item.description or "-", const.LINE_WIDTH)),
-                ]
-            )
-
-        return array_items_restrictions
-
-    def array_items(self, schema: SchemaNode, title: str) -> List[str]:
-        """
-        List of array items
-        ready to be rendered by generate_table filter
-        """
-        if not schema.array_items:
-            return []
-        array_items = [[title]]
-        for i, item in enumerate(schema.array_items):
-            item_label = item.name_for_breadcrumbs or f"{title} {i}"
-            item_html_id = item.html_id
-            array_items.append([f"[{item_label}](#{item_html_id})"])
-
-        return array_items
-
-    def restrictions_table(self, schema: SchemaNode) -> List[List[str]]:
-        """
-        String or numeric restrictions tables
-        - min/max length
-        - regexp pattern + link to regexp101
-        - multipleOf
-        - minimum/maximum
-        ready to be rendered by generate_table filter
-        """
-        restrictions = []
-        if schema.kw_min_length:
-            restrictions.append(["**Min length**", str(schema.kw_min_length.literal)])
-        if schema.kw_max_length:
-            restrictions.append(["**Max length**", str(schema.kw_max_length.literal)])
-        if schema.kw_pattern:
-            pattern_code = schema.kw_pattern.literal.replace("|", "\\|")
-            pattern_url = quote_plus(schema.kw_pattern.literal)
-            example_url = ""
-            if len(schema.examples) > 0:
-                example_url = "&testString=" + quote_plus(schema.examples[0])
-            restrictions.append(
-                [
-                    "**Must match regular expression**",
-                    f"```{pattern_code}``` [Test](https://regex101.com/?regex={pattern_url}{example_url})",
-                ]
-            )
-        if schema.keywords.get("multipleOf"):
-            restrictions.append(["**Multiple of**", str(schema.keywords.get("multipleOf").literal)])
-        if schema.keywords.get("minimum") or schema.keywords.get("exclusiveMinimum"):
-            restrictions.append(["**Minimum**", str(self.get_numeric_minimum_restriction(schema))])
-        if schema.keywords.get("maximum") or schema.keywords.get("exclusiveMaximum"):
-            restrictions.append(["**Maximum**", str(self.get_numeric_maximum_restriction(schema))])
-
-        if len(restrictions) > 0:
-            # add header
-            restrictions.insert(0, ["Restrictions", " "])
-
-        return restrictions
-
-    def generate_table(self, table: List[List[str]]) -> str:
-        """
-        Pretty print markdown table using list of rows.
-        Assuming first row is header line.
-        Ending with empty line for rendering bottom border.
-        Each column is str padded to max size string in the column.
-        """
-        if len(table) == 0:
-            return ""
-
-        # compute max length of each column
-        max_cell_length: Dict = {}
-        for idx_row, row in enumerate(table):
-            for idx_col, cell in enumerate(row):
-                max_cell_length[idx_col] = max(max_cell_length.get(idx_col, 0), len(cell))
-
-        # generate md table
-        output = ""
-        for idx_row, row in enumerate(table):
-            for idx_col, cell in enumerate(row):
-                output += "| " + cell.ljust(max_cell_length[idx_col], " ") + " "
-            output += "|\n"
-            # add header line
-            if idx_row == 0:
-                for idx_col, cell in enumerate(row):
-                    output += "| " + "".ljust(max_cell_length[idx_col], "-") + " "
-                output += "|\n"
-
-        # add last empty row
-        for cell in max_cell_length.values():
-            output += "| " + "".ljust(cell, " ") + " "
-        output += "|\n"
-
-        return output

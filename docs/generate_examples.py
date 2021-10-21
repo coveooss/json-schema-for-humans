@@ -1,13 +1,14 @@
 """Run this to populate the example cases from the code to Jekyll folder"""
 import os
-import sys
 import re
+import sys
 from pathlib import Path
-from typing import TextIO, TypedDict, List
+from typing import TypedDict, List
 
 import yaml
 
-# init directories
+from json_schema_for_humans.const import TemplateName, FileLikeType
+
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
 PARENT_DIR = os.path.abspath(os.path.dirname(CURRENT_DIR))
 sys.path.insert(0, PARENT_DIR)
@@ -90,7 +91,11 @@ CONFIGURATIONS: List[ExampleConfiguration] = [
         "title": "JS template",
         "dir_name": "examples_js_default",
         "config": GenerationConfiguration(
-            minify=False, template_name="js", deprecated_from_description=True, expand_buttons=True
+            minify=False,
+            template_name=TemplateName.JS,
+            deprecated_from_description=True,
+            expand_buttons=True,
+            footer_show_time=False,
         ),
         "md_example_template": MD_EXAMPLE_JS_TEMPLATE,
     },
@@ -98,21 +103,32 @@ CONFIGURATIONS: List[ExampleConfiguration] = [
         "title": "Flat template",
         "dir_name": "examples_flat_default",
         "config": GenerationConfiguration(
-            minify=False, template_name="flat", deprecated_from_description=True, expand_buttons=True
+            minify=False,
+            template_name=TemplateName.FLAT,
+            deprecated_from_description=True,
+            expand_buttons=True,
+            footer_show_time=False,
         ),
         "md_example_template": MD_EXAMPLE_JS_TEMPLATE,
     },
     {
         "title": "Markdown without badge template",
         "dir_name": "examples_md_default",
-        "config": GenerationConfiguration(template_name="md", deprecated_from_description=True),
+        "config": GenerationConfiguration(
+            template_name=TemplateName.MD,
+            deprecated_from_description=True,
+            footer_show_time=False,
+        ),
         "md_example_template": MD_EXAMPLE_MD_TEMPLATE,
     },
     {
         "title": "Markdown with badges template",
         "dir_name": "examples_md_with_badges",
         "config": GenerationConfiguration(
-            template_name="md", deprecated_from_description=True, template_md_options={"badge_as_image": True}
+            template_name=TemplateName.MD,
+            deprecated_from_description=True,
+            template_md_options={"badge_as_image": True},
+            footer_show_time=False,
         ),
         "md_example_template": MD_EXAMPLE_MD_TEMPLATE,
     },
@@ -120,7 +136,10 @@ CONFIGURATIONS: List[ExampleConfiguration] = [
         "title": "Nested Markdown without badges template",
         "dir_name": "examples_md_nested_default",
         "config": GenerationConfiguration(
-            template_name="md_nested", deprecated_from_description=True, template_md_options={"badge_as_image": False}
+            template_name=TemplateName.MD_NESTED,
+            deprecated_from_description=True,
+            template_md_options={"badge_as_image": False},
+            footer_show_time=False,
         ),
         "md_example_template": MD_EXAMPLE_MD_TEMPLATE,
     },
@@ -128,7 +147,10 @@ CONFIGURATIONS: List[ExampleConfiguration] = [
         "title": "Nested Markdown with badges template",
         "dir_name": "examples_md_nested_with_badges",
         "config": GenerationConfiguration(
-            template_name="md_nested", deprecated_from_description=True, template_md_options={"badge_as_image": True}
+            template_name=TemplateName.MD_NESTED,
+            deprecated_from_description=True,
+            template_md_options={"badge_as_image": True},
+            footer_show_time=False,
         ),
         "md_example_template": MD_EXAMPLE_MD_TEMPLATE,
     },
@@ -152,7 +174,7 @@ def remove_generated_timestamp(file_path: str) -> None:
 CONFIG_SCHEMA = "config_schema.json"
 
 
-def generate_each_template(examples_md_file: TextIO, case_path: str, case_url: str, case_name: str) -> None:
+def generate_each_template(examples_md_file: FileLikeType, case_path: str, case_url: str, case_name: str) -> None:
     """
     Generate examples from JSON case file for each template selected
     """
@@ -174,15 +196,13 @@ def generate_each_template(examples_md_file: TextIO, case_path: str, case_url: s
         template_configuration = config["config"]
         template_name = template_configuration.template_name
         example_dir_name = config["dir_name"]
-        example_file_name = case_name + (".md" if template_name in ("md", "md_nested") else ".html")
+        example_file_name = f"{case_name}.{template_name.result_extension.value}"
 
         examples_md_file.write(
             config["md_example_template"].format(
                 file_url=f"examples/{example_dir_name}/{example_file_name}", title=config["title"]
             )
         )
-        if template_name not in TEMPLATE_NAMES:
-            continue
 
         example_dest_dir = os.path.join(EXAMPLES_DIR, example_dir_name)
         os.makedirs(example_dest_dir, exist_ok=True)
@@ -192,7 +212,7 @@ def generate_each_template(examples_md_file: TextIO, case_path: str, case_url: s
         remove_generated_timestamp(example_file_path)
 
 
-def generate_examples(examples_md_file: TextIO):
+def generate_examples(examples_md_file: FileLikeType):
     for case_name in sorted(os.listdir(JSON_EXAMPLES_DIR)):
         name, ext = os.path.splitext(case_name)
         case_source = os.path.abspath(os.path.join(JSON_EXAMPLES_DIR, case_name))

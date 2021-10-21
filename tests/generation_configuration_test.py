@@ -1,4 +1,5 @@
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
+from json_schema_for_humans.const import TemplateName
 
 
 def test_default_values() -> None:
@@ -9,7 +10,8 @@ def test_default_values() -> None:
         "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
         "tables": None,
     }
-    assert config.template_md_options["badge_as_image"] == False
+    assert config.template_md_options is not None
+    assert config.template_md_options["badge_as_image"] is False
 
 
 def test_override_markdown_options() -> None:
@@ -73,12 +75,14 @@ def test_override_template_md_options() -> None:
 
     # override badge_as_image key
     config = GenerationConfiguration(
-        deprecated_from_description=True, template_name="md", template_md_options={"badge_as_image": "test"}
+        deprecated_from_description=True, template_name=TemplateName.MD, template_md_options={"badge_as_image": "test"}
     )
+    assert config.template_md_options is not None
     assert config.template_md_options["badge_as_image"] == "test"
 
     # override badge_as_image key
     config = GenerationConfiguration(
-        deprecated_from_description=True, template_name="md", template_md_options={"badge_as_image": True}
+        deprecated_from_description=True, template_name=TemplateName.MD, template_md_options={"badge_as_image": True}
     )
-    assert config.template_md_options["badge_as_image"] == True
+    assert config.template_md_options is not None
+    assert config.template_md_options["badge_as_image"] is True

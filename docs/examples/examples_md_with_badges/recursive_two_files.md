@@ -77,4 +77,4 @@
 **Description:** Person definition from second file. Not the same!
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on date
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

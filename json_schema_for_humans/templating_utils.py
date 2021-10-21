@@ -3,7 +3,7 @@ from typing import List, Optional, Type, Union, TYPE_CHECKING
 from json_schema_for_humans import const
 
 if TYPE_CHECKING:
-    from json_schema_for_humans.schema_node import SchemaNode
+    from json_schema_for_humans.schema.schema_node import SchemaNode
 
 
 def get_type_name(schema_node: "SchemaNode") -> Optional[str]:
@@ -17,6 +17,7 @@ def get_type_name(schema_node: "SchemaNode") -> Optional[str]:
             bool: const.TYPE_BOOLEAN,
             list: const.TYPE_ARRAY,
             dict: const.TYPE_OBJECT,
+            type(None): const.TYPE_NULL,
         }.get(python_type, const.TYPE_STRING)
 
     def _enum_type(enum_values: List["SchemaNode"]) -> str:

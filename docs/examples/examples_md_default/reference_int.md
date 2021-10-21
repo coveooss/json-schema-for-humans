@@ -37,4 +37,4 @@
 **Description:** This is just to be annoying. The property name looks like an int
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on date
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
