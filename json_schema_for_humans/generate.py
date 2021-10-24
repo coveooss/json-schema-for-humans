@@ -3,7 +3,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Union
 
-from json_schema_for_humans.const import DefaultFile, FileLikeType
+from json_schema_for_humans.const import FileLikeType
 from json_schema_for_humans.generation_configuration import GenerationConfiguration, get_final_config
 from json_schema_for_humans.schema.schema_importer import get_schemas_to_render
 from json_schema_for_humans.schema.schema_to_render import SchemaToRender
@@ -28,7 +28,7 @@ def generate_from_schema(
         link_to_reused_ref=link_to_reused_ref,
     )
 
-    schemas_to_render = get_schemas_to_render(schema_file, None, config.template_name.result_extension)
+    schemas_to_render = get_schemas_to_render(schema_file, None, config.documentation_template.result_extension)
 
     template_renderer = TemplateRenderer(config)
     for rendered_content in generate_schemas_doc(schemas_to_render, template_renderer, loaded_schemas).items():
@@ -59,7 +59,7 @@ def generate_from_filename(
     )
 
     schemas_to_render = get_schemas_to_render(
-        schema_file_name, Path(result_file_name), config.template_name.result_extension
+        schema_file_name, Path(result_file_name), config.documentation_template.result_extension
     )
 
     template_renderer = TemplateRenderer(config)
@@ -112,20 +112,20 @@ def copy_additional_files_to_target(schemas_to_render: List[SchemaToRender], tem
 
 
 def _copy_additional_file_to_target(
-    file_to_copy: DefaultFile, target_directory: Path, templates_directory: str, template_name: str
+    file_to_copy: str, target_directory: Path, templates_directory: Path, template_name: str
 ) -> None:
     """Copy the file needed to display the resulting page to the directory containing the result file"""
 
-    source_directory = Path(templates_directory) / template_name
+    source_directory = templates_directory / template_name
     if not target_directory or target_directory == source_directory:
         return
 
-    source_file_path = source_directory / file_to_copy.value
+    source_file_path = source_directory / file_to_copy
     if not source_file_path.exists():
         return
 
     try:
-        shutil.copy(str(source_file_path), str(target_directory / file_to_copy.value))
+        shutil.copy(str(source_file_path), str(target_directory / file_to_copy))
     except shutil.SameFileError:
         print(f"Not copying {file_to_copy} to {target_directory.absolute()}, file already exists")
 

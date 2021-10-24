@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
-from json_schema_for_humans.const import TemplateName
+from json_schema_for_humans.const import DocumentationTemplate
 from tests.md_utils_asserts import MdUtilsAsserts
 
 current_dir = os.path.abspath(os.path.dirname(__file__))
@@ -13,13 +13,13 @@ parent_dir = os.path.abspath(os.path.dirname(current_dir))
 examples_dir = os.path.join(parent_dir, "docs", "examples")
 
 config_badge = GenerationConfiguration(
-    template_name=TemplateName.MD,
+    template_name=DocumentationTemplate.MD,
     template_md_options={"badge_as_image": True},
     deprecated_from_description=True,
     footer_show_time=False,
 )
 config_no_badge = GenerationConfiguration(
-    template_name=TemplateName.MD,
+    template_name=DocumentationTemplate.MD,
     template_md_options={"badge_as_image": False},
     deprecated_from_description=True,
     footer_show_time=False,

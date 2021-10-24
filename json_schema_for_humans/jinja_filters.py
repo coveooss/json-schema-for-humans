@@ -15,7 +15,7 @@ from pytz import reference
 
 from json_schema_for_humans import const
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
-from json_schema_for_humans.const import TemplateName, ResultExtension
+from json_schema_for_humans.const import DocumentationTemplate, ResultExtension
 from json_schema_for_humans.schema.schema_node import SchemaNode
 
 SHORT_DESCRIPTION_NUMBER_OF_LINES = 8
@@ -99,7 +99,7 @@ def get_description(env: Environment, schema_node: SchemaNode) -> str:
     if (
         description
         and config.description_is_markdown
-        and not config.template_name.result_extension == ResultExtension.MD
+        and not config.documentation_template.result_extension == ResultExtension.MD
     ):
         # Markdown templates are expected to already have Markdown descriptions
         md: Markdown = env.globals["jsfh_md"]

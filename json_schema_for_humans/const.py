@@ -36,7 +36,7 @@ class ResultExtension(Enum):
     MD = "md"
 
 
-class TemplateName(Enum):
+class DocumentationTemplate(Enum):
     FLAT = "flat"
     JS = "js"
     MD = "md"
@@ -50,7 +50,7 @@ class TemplateName(Enum):
             return ResultExtension.MD
 
 
-class DefaultFile(Enum):
-    CSS_FILE_NAME = "schema_doc.css"
-    JS_FILE_NAME = "schema_doc.min.js"
-    TEMPLATE_FILE_NAME = "base.html"
+DEFAULT_TEMPLATE_FILE_NAME = "base.html"
+
+DEFAULT_CSS_FILE_NAME = "schema_doc.css"
+DEFAULT_JS_FILE_NAME = "schema_doc.min.js"

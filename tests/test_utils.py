@@ -3,9 +3,9 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
+from json_schema_for_humans.const import DEFAULT_JS_FILE_NAME, DEFAULT_CSS_FILE_NAME
 from json_schema_for_humans.generate import generate_from_schema
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
-from json_schema_for_humans.const import DefaultFile
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
@@ -13,16 +13,16 @@ parent_dir = os.path.dirname(current_dir)
 
 def assert_css_and_js_not_copied(path: Path) -> None:
     """Assert that the standard CCS and JS files were not copied over"""
-    assert not (path / DefaultFile.CSS_FILE_NAME.value).exists()
+    assert not (path / DEFAULT_CSS_FILE_NAME).exists()
 
-    assert not (path / DefaultFile.JS_FILE_NAME.value).exists()
+    assert not (path / DEFAULT_JS_FILE_NAME).exists()
 
 
 def assert_css_and_js_copied(path: Path) -> None:
     """Assert that the standard CCS and JS files were copied over"""
-    assert (path / DefaultFile.CSS_FILE_NAME.value).exists()
+    assert (path / DEFAULT_CSS_FILE_NAME).exists()
 
-    assert (path / DefaultFile.JS_FILE_NAME.value).exists()
+    assert (path / DEFAULT_JS_FILE_NAME).exists()
 
 
 def get_test_cases_path() -> str:

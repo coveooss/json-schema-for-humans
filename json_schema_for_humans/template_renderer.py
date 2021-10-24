@@ -1,5 +1,6 @@
 import re
 import os
+from pathlib import Path
 from typing import List
 
 import htmlmin
@@ -10,7 +11,7 @@ from jinja2.ext import loopcontrols
 
 from json_schema_for_humans import jinja_filters, templating_utils
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
-from json_schema_for_humans.const import TemplateName, ResultExtension, DefaultFile
+from json_schema_for_humans.const import DocumentationTemplate, ResultExtension, DEFAULT_TEMPLATE_FILE_NAME
 from json_schema_for_humans.schema.schema_node import SchemaNode
 from json_schema_for_humans.md_template import MarkdownTemplate
 
@@ -29,19 +30,23 @@ class TemplateRenderer:
         self.template = template or self._get_jinja_template()
 
     def _get_jinja_template(self) -> Template:
-        templates_directory = os.path.join(self.config.templates_directory, self.config.template_name.value)
-        base_template_path = os.path.join(templates_directory, DefaultFile.TEMPLATE_FILE_NAME.value)
+        templates_directory = self.config.templates_directory_path / self.config.documentation_template.value
+        base_template_path = templates_directory / DEFAULT_TEMPLATE_FILE_NAME
 
         loader = FileSystemLoader(templates_directory)
         env = jinja2.Environment(
             loader=loader,
             extensions=[loopcontrols],
-            trim_blocks=(self.config.template_name in (TemplateName.MD, TemplateName.MD_NESTED)),
-            lstrip_blocks=(self.config.template_name in (TemplateName.MD, TemplateName.MD_NESTED)),
+            trim_blocks=(
+                self.config.documentation_template in (DocumentationTemplate.MD, DocumentationTemplate.MD_NESTED)
+            ),
+            lstrip_blocks=(
+                self.config.documentation_template in (DocumentationTemplate.MD, DocumentationTemplate.MD_NESTED)
+            ),
         )
         env.globals["jsfh_config"] = self.config
         env.globals["jsfh_md"] = markdown2.Markdown(extras=self.config.markdown_options)
-        if self.config.template_name in (TemplateName.MD, TemplateName.MD_NESTED):
+        if self.config.documentation_template in (DocumentationTemplate.MD, DocumentationTemplate.MD_NESTED):
             md_template = MarkdownTemplate(self.config)
             md_template.register_jinja(env)
 
@@ -73,19 +78,19 @@ class TemplateRenderer:
 
         return template
 
-    def template_directory(self) -> str:
-        return self.config.templates_directory
+    def template_directory(self) -> Path:
+        return self.config.templates_directory_path
 
     def template_name(self) -> str:
-        return self.config.template_name.value
+        return self.config.documentation_template.value
 
-    def files_to_copy(self) -> List[DefaultFile]:
+    def files_to_copy(self) -> List[str]:
         return self.config.files_to_copy
 
     def render(self, intermediate_schema: SchemaNode) -> str:
         rendered = self.template.render(schema=intermediate_schema, config=self.config)
 
         if self.config.minify:
-            rendered = _minify(rendered, self.config.template_name.result_extension)
+            rendered = _minify(rendered, self.config.documentation_template.result_extension)
 
         return rendered

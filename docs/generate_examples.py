@@ -7,7 +7,7 @@ from typing import TypedDict, List
 
 import yaml
 
-from json_schema_for_humans.const import TemplateName, FileLikeType
+from json_schema_for_humans.const import DocumentationTemplate, FileLikeType
 
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
 PARENT_DIR = os.path.abspath(os.path.dirname(CURRENT_DIR))
@@ -92,7 +92,7 @@ CONFIGURATIONS: List[ExampleConfiguration] = [
         "dir_name": "examples_js_default",
         "config": GenerationConfiguration(
             minify=False,
-            template_name=TemplateName.JS,
+            template_name="js",
             deprecated_from_description=True,
             expand_buttons=True,
             footer_show_time=False,
@@ -104,7 +104,7 @@ CONFIGURATIONS: List[ExampleConfiguration] = [
         "dir_name": "examples_flat_default",
         "config": GenerationConfiguration(
             minify=False,
-            template_name=TemplateName.FLAT,
+            template_name="flat",
             deprecated_from_description=True,
             expand_buttons=True,
             footer_show_time=False,
@@ -115,9 +115,7 @@ CONFIGURATIONS: List[ExampleConfiguration] = [
         "title": "Markdown without badge template",
         "dir_name": "examples_md_default",
         "config": GenerationConfiguration(
-            template_name=TemplateName.MD,
-            deprecated_from_description=True,
-            footer_show_time=False,
+            template_name="md", deprecated_from_description=True, footer_show_time=False,
         ),
         "md_example_template": MD_EXAMPLE_MD_TEMPLATE,
     },
@@ -125,7 +123,7 @@ CONFIGURATIONS: List[ExampleConfiguration] = [
         "title": "Markdown with badges template",
         "dir_name": "examples_md_with_badges",
         "config": GenerationConfiguration(
-            template_name=TemplateName.MD,
+            template_name="md",
             deprecated_from_description=True,
             template_md_options={"badge_as_image": True},
             footer_show_time=False,
@@ -136,7 +134,7 @@ CONFIGURATIONS: List[ExampleConfiguration] = [
         "title": "Nested Markdown without badges template",
         "dir_name": "examples_md_nested_default",
         "config": GenerationConfiguration(
-            template_name=TemplateName.MD_NESTED,
+            template_name="md_nested",
             deprecated_from_description=True,
             template_md_options={"badge_as_image": False},
             footer_show_time=False,
@@ -147,7 +145,7 @@ CONFIGURATIONS: List[ExampleConfiguration] = [
         "title": "Nested Markdown with badges template",
         "dir_name": "examples_md_nested_with_badges",
         "config": GenerationConfiguration(
-            template_name=TemplateName.MD_NESTED,
+            template_name="md_nested",
             deprecated_from_description=True,
             template_md_options={"badge_as_image": True},
             footer_show_time=False,
@@ -194,9 +192,9 @@ def generate_each_template(examples_md_file: FileLikeType, case_path: str, case_
     examples_md_file.write(MD_EXAMPLE_JSON_TEMPLATE.format(file_url=case_url, title="Json schema"))
     for config in CONFIGURATIONS:
         template_configuration = config["config"]
-        template_name = template_configuration.template_name
+        template = template_configuration.documentation_template
         example_dir_name = config["dir_name"]
-        example_file_name = f"{case_name}.{template_name.result_extension.value}"
+        example_file_name = f"{case_name}.{template.result_extension.value}"
 
         examples_md_file.write(
             config["md_example_template"].format(
@@ -220,10 +218,7 @@ def generate_examples(examples_md_file: FileLikeType):
             continue
 
         generate_each_template(
-            examples_md_file,
-            case_source,
-            os.path.relpath(case_source, CURRENT_DIR).replace("\\", "/"),
-            name,
+            examples_md_file, case_source, os.path.relpath(case_source, CURRENT_DIR).replace("\\", "/"), name,
         )
 
 

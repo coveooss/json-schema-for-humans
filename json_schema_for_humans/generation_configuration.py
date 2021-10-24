@@ -10,7 +10,12 @@ from typing import Any, Union, Dict, List, Optional
 import yaml
 from dataclasses_json import dataclass_json
 
-from json_schema_for_humans.const import TemplateName, ResultExtension, DefaultFile, FileLikeType
+from json_schema_for_humans.const import (
+    DocumentationTemplate,
+    FileLikeType,
+    DEFAULT_CSS_FILE_NAME,
+    DEFAULT_JS_FILE_NAME,
+)
 
 
 @dataclass_json
@@ -29,8 +34,8 @@ class GenerationConfiguration:
     copy_js: bool = True
     link_to_reused_ref: bool = True
     recursive_detection_depth: int = 25
-    templates_directory: str = os.path.join(os.path.dirname(__file__), "templates")
-    template_name: TemplateName = TemplateName.JS
+    templates_directory: Union[str, Path] = Path(__file__).parent / "templates"
+    template_name: str = "js"
     show_toc: bool = True
     examples_as_yaml: bool = False
     # markdown2 extra parameters can be added here: https://github.com/trentm/python-markdown2/wiki/Extras
@@ -57,13 +62,21 @@ class GenerationConfiguration:
         self.template_md_options = default_template_md_options
 
     @property
-    def files_to_copy(self) -> List[DefaultFile]:
-        files_to_copy = []
+    def templates_directory_path(self) -> Path:
+        return Path(self.templates_directory)
+
+    @property
+    def files_to_copy(self) -> List[str]:
+        files_to_copy: List[str] = []
         if self.copy_js:
-            files_to_copy.append(DefaultFile.JS_FILE_NAME)
+            files_to_copy.append(DEFAULT_JS_FILE_NAME)
         if self.copy_css:
-            files_to_copy.append(DefaultFile.CSS_FILE_NAME)
+            files_to_copy.append(DEFAULT_CSS_FILE_NAME)
         return files_to_copy
+
+    @property
+    def documentation_template(self) -> DocumentationTemplate:
+        return DocumentationTemplate(self.template_name)
 
 
 CONFIG_DEPRECATION_MESSAGE = (
