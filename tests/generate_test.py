@@ -24,7 +24,6 @@ def test_generate_schema_calls_schema_render_with_correct_arguments() -> None:
     schema = Mock(SchemaToRender)
 
     template_renderer = Mock(TemplateRenderer)
-    template_renderer.files_to_copy.return_value = []
     loaded_schemas = Mock(Dict[str, Any])
 
     _generate_schema(schema, template_renderer, loaded_schemas)

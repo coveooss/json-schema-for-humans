@@ -31,11 +31,6 @@ LINE_WIDTH = 80
 FileLikeType = Union[TextIO, TextIOWrapper, FileIO]
 
 
-class ResultExtension(Enum):
-    HTML = "html"
-    MD = "md"
-
-
 class DocumentationTemplate(Enum):
     FLAT = "flat"
     JS = "js"
@@ -43,11 +38,11 @@ class DocumentationTemplate(Enum):
     MD_NESTED = "md_nested"
 
     @property
-    def result_extension(self) -> ResultExtension:
+    def result_extension(self) -> str:
         if self in [self.FLAT, self.JS]:
-            return ResultExtension.HTML
+            return "html"
         if self in [self.MD, self.MD_NESTED]:
-            return ResultExtension.MD
+            return "md"
 
 
 DEFAULT_TEMPLATE_FILE_NAME = "base.html"

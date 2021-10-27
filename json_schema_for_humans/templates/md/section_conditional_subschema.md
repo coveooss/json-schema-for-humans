@@ -8,7 +8,7 @@
             {{- first_property.kw_const.literal | python_to_json -}}
         ){%- endfilter -%}
         {% with schema=schema.kw_then, skip_headers=False, depth=depth %}
-            {% include "content.html" %}
+            {% include "content.md" %}
         {% endwith %}
     {% endif %}
     {% if schema.kw_else %}
@@ -18,7 +18,7 @@
             {{- first_property.kw_const.literal | python_to_json -}}
         ){%- endfilter -%}
         {% with schema=schema.kw_else, skip_headers=False, depth=depth %}
-            {% include "content.html" %}
+            {% include "content.md" %}
         {% endwith %}
     {% endif %}
 {% endif %}

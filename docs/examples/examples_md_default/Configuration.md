@@ -11,17 +11,18 @@
 - [9. [Optional] Property `JSON Schema for Humans configuration file > default_from_description`](#default_from_description)
 - [10. [Optional] Property `JSON Schema for Humans configuration file > copy_css`](#copy_css)
 - [11. [Optional] Property `JSON Schema for Humans configuration file > copy_js`](#copy_js)
-- [12. [Optional] Property `JSON Schema for Humans configuration file > templates_directory`](#templates_directory)
+- [12. [Optional]~~ Property `JSON Schema for Humans configuration file > templates_directory`~~](#templates_directory)
 - [13. [Optional] Property `JSON Schema for Humans configuration file > template_name`](#template_name)
-- [14. [Optional] Property `JSON Schema for Humans configuration file > show_toc`](#show_toc)
-- [15. [Optional] Property `JSON Schema for Humans configuration file > examples_as_yaml`](#examples_as_yaml)
-- [16. [Optional] Property `JSON Schema for Humans configuration file > markdown_options`](#markdown_options)
-- [17. [Optional] Property `JSON Schema for Humans configuration file > template_md_options`](#template_md_options)
-  - [17.1. [Optional] Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`](#template_md_options_badge_as_image)
-  - [17.2. [Optional] Property `JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`](#template_md_options_show_heading_numbers)
-  - [17.3. [Optional] Property `JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`](#template_md_options_show_array_restrictions)
-- [18. [Optional] Property `JSON Schema for Humans configuration file > with_footer`](#with_footer)
-- [19. [Optional] Property `JSON Schema for Humans configuration file > footer_show_time`](#footer_show_time)
+- [14. [Optional] Property `JSON Schema for Humans configuration file > custom_template_path`](#custom_template_path)
+- [15. [Optional] Property `JSON Schema for Humans configuration file > show_toc`](#show_toc)
+- [16. [Optional] Property `JSON Schema for Humans configuration file > examples_as_yaml`](#examples_as_yaml)
+- [17. [Optional] Property `JSON Schema for Humans configuration file > markdown_options`](#markdown_options)
+- [18. [Optional] Property `JSON Schema for Humans configuration file > template_md_options`](#template_md_options)
+  - [18.1. [Optional] Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`](#template_md_options_badge_as_image)
+  - [18.2. [Optional] Property `JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`](#template_md_options_show_heading_numbers)
+  - [18.3. [Optional] Property `JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`](#template_md_options_show_array_restrictions)
+- [19. [Optional] Property `JSON Schema for Humans configuration file > with_footer`](#with_footer)
+- [20. [Optional] Property `JSON Schema for Humans configuration file > footer_show_time`](#footer_show_time)
 
 **Title:** JSON Schema for Humans configuration file
 
@@ -38,28 +39,29 @@ Configuration parameters can be provided in several ways:
 - On the CLI using a config file `--config-file config.json`
 - From code, by providing a GenerationConfiguration object to the called generation method.
 
-| Property                                                       | Pattern | Type             | Deprecated | Definition | Title/Description                                                                    |
-| -------------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ------------------------------------------------------------------------------------ |
-| - [minify](#minify )                                           | No      | boolean          | No         | -          | Minify the output HTML document.                                                     |
-| - [description_is_markdown](#description_is_markdown )         | No      | boolean          | No         | -          | Whether to consider the description as markdown and render it accordingly.           |
-| - [expand_buttons](#expand_buttons )                           | No      | boolean          | No         | -          | Add an 'Expand all' and a 'Collapse all' button at the top of the generated docu ... |
-| - [show_breadcrumbs](#show_breadcrumbs )                       | No      | boolean          | No         | -          | For each property, show the relative place of that property in the schema.           |
-| - [collapse_long_descriptions](#collapse_long_descriptions )   | No      | boolean          | No         | -          | If a description is considered big, show only the beginning and add a 'Read more ... |
-| - [link_to_reused_ref](#link_to_reused_ref )                   | No      | boolean          | No         | -          | If several '$ref' points to the same definition, only render the documentation f ... |
-| - [recursive_detection_depth](#recursive_detection_depth )     | No      | integer          | No         | -          | *Advanced option* ...                                                                |
-| - [deprecated_from_description](#deprecated_from_description ) | No      | boolean          | No         | -          | Mark a property as deprecated (with a big red badge) if the description contains ... |
-| - [default_from_description](#default_from_description )       | No      | boolean          | No         | -          | Extract the default value of a property from the description like this: ''[Defau ... |
-| - [copy_css](#copy_css )                                       | No      | boolean          | No         | -          | Copy 'schema_doc.css' to the same directory as 'RESULT_FILE' after generation.       |
-| - [copy_js](#copy_js )                                         | No      | boolean          | No         | -          | Copy 'schema_doc.min.js' to the same directory as 'RESULT_FILE' after generation ... |
-| - [templates_directory](#templates_directory )                 | No      | string           | No         | -          | The file system path to the directory containing templates, with a default of th ... |
-| - [template_name](#template_name )                             | No      | enum (of string) | No         | -          | The name of the set of templates to use to render the documentation. ...             |
-| - [show_toc](#show_toc )                                       | No      | boolean          | No         | -          | Whether to render table of contents.                                                 |
-| - [examples_as_yaml](#examples_as_yaml )                       | No      | boolean          | No         | -          | Whether to display examples as YAML instead of JSON                                  |
-| - [markdown_options](#markdown_options )                       | No      | object           | No         | -          | [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for ... |
-| - [template_md_options](#template_md_options )                 | No      | object           | No         | -          | specific options to md template                                                      |
-| - [with_footer](#with_footer )                                 | No      | boolean          | No         | -          | Whether to show the footer linking to the library repo and with the generation d ... |
-| - [footer_show_time](#footer_show_time )                       | No      | boolean          | No         | -          | Whether the footer should display the generation time                                |
-|                                                                |         |                  |            |            |                                                                                      |
+| Property                                                       | Pattern | Type             | Deprecated   | Definition | Title/Description                                                                    |
+| -------------------------------------------------------------- | ------- | ---------------- | ------------ | ---------- | ------------------------------------------------------------------------------------ |
+| - [minify](#minify )                                           | No      | boolean          | No           | -          | Minify the output HTML document.                                                     |
+| - [description_is_markdown](#description_is_markdown )         | No      | boolean          | No           | -          | Whether to consider the description as markdown and render it accordingly.           |
+| - [expand_buttons](#expand_buttons )                           | No      | boolean          | No           | -          | Add an 'Expand all' and a 'Collapse all' button at the top of the generated docu ... |
+| - [show_breadcrumbs](#show_breadcrumbs )                       | No      | boolean          | No           | -          | For each property, show the relative place of that property in the schema.           |
+| - [collapse_long_descriptions](#collapse_long_descriptions )   | No      | boolean          | No           | -          | If a description is considered big, show only the beginning and add a 'Read more ... |
+| - [link_to_reused_ref](#link_to_reused_ref )                   | No      | boolean          | No           | -          | If several '$ref' points to the same definition, only render the documentation f ... |
+| - [recursive_detection_depth](#recursive_detection_depth )     | No      | integer          | No           | -          | *Advanced option* ...                                                                |
+| - [deprecated_from_description](#deprecated_from_description ) | No      | boolean          | No           | -          | Mark a property as deprecated (with a big red badge) if the description contains ... |
+| - [default_from_description](#default_from_description )       | No      | boolean          | No           | -          | Extract the default value of a property from the description like this: ''[Defau ... |
+| - [copy_css](#copy_css )                                       | No      | boolean          | No           | -          | Copy 'schema_doc.css' to the same directory as 'RESULT_FILE' after generation.       |
+| - [copy_js](#copy_js )                                         | No      | boolean          | No           | -          | Copy 'schema_doc.min.js' to the same directory as 'RESULT_FILE' after generation ... |
+| - [templates_directory](#templates_directory )                 | No      | string           | [Deprecated] | -          | [Deprecated]                                                                         |
+| - [template_name](#template_name )                             | No      | enum (of string) | No           | -          | The name of the built-in template to use to render the documentation. ...            |
+| - [custom_template_path](#custom_template_path )               | No      | string           | No           | -          | Path to a custom Jinja2 template file. ...                                           |
+| - [show_toc](#show_toc )                                       | No      | boolean          | No           | -          | Whether to render table of contents.                                                 |
+| - [examples_as_yaml](#examples_as_yaml )                       | No      | boolean          | No           | -          | Whether to display examples as YAML instead of JSON                                  |
+| - [markdown_options](#markdown_options )                       | No      | object           | No           | -          | [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for ... |
+| - [template_md_options](#template_md_options )                 | No      | object           | No           | -          | specific options to md template                                                      |
+| - [with_footer](#with_footer )                                 | No      | boolean          | No           | -          | Whether to show the footer linking to the library repo and with the generation d ... |
+| - [footer_show_time](#footer_show_time )                       | No      | boolean          | No           | -          | Whether the footer should display the generation time                                |
+|                                                                |         |                  |              |            |                                                                                      |
 
 ## <a name="minify"></a>1. [Optional] Property `JSON Schema for Humans configuration file > minify`
 
@@ -182,14 +184,15 @@ The default value from the "default" attribute will be used in priority.
 
 This file contains the logic for the anchor links.
 
-## <a name="templates_directory"></a>12. [Optional] Property `JSON Schema for Humans configuration file > templates_directory`
+## <a name="templates_directory"></a>12. [Optional]~~ Property `JSON Schema for Humans configuration file > templates_directory`~~
 
 | Type                      | `string`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Deprecated**            | [Deprecated]                                                              |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 |                           |                                                                           |
 
-**Description:** The file system path to the directory containing templates, with a default of the `templates` directory within the library source code.
+**Description:** [Deprecated]
 
 ## <a name="template_name"></a>13. [Optional] Property `JSON Schema for Humans configuration file > template_name`
 
@@ -199,7 +202,7 @@ This file contains the logic for the anchor links.
 | **Default**               | `"js"`                                                                    |
 |                           |                                                                           |
 
-**Description:** The name of the set of templates to use to render the documentation.
+**Description:** The name of the built-in template to use to render the documentation.
 
 `js` is the default and uses javascript for anchor links, collapsible sections and tabs. `flat` uses no javascript, but has no interactivity.
 
@@ -207,8 +210,23 @@ Must be one of:
 * "flat"
 * "js"
 * "md"
+* "md_nested"
 
-## <a name="show_toc"></a>14. [Optional] Property `JSON Schema for Humans configuration file > show_toc`
+## <a name="custom_template_path"></a>14. [Optional] Property `JSON Schema for Humans configuration file > custom_template_path`
+
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Default**               | `null`                                                                    |
+|                           |                                                                           |
+
+**Description:** Path to a custom Jinja2 template file.
+
+There can be multiple files to split the template, but this path should be the entry point.
+
+If no output file is specified, the extension of the template file will be used to determine the output documentation extension. i.e. if the template is in ./custom_template/content.html, the resulting documentation will have the html
+
+## <a name="show_toc"></a>15. [Optional] Property `JSON Schema for Humans configuration file > show_toc`
 
 | Type                      | `boolean`                                                                 |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -218,7 +236,7 @@ Must be one of:
 
 **Description:** Whether to render table of contents.
 
-## <a name="examples_as_yaml"></a>15. [Optional] Property `JSON Schema for Humans configuration file > examples_as_yaml`
+## <a name="examples_as_yaml"></a>16. [Optional] Property `JSON Schema for Humans configuration file > examples_as_yaml`
 
 | Type                      | `boolean`                                                                 |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -228,7 +246,7 @@ Must be one of:
 
 **Description:** Whether to display examples as YAML instead of JSON
 
-## <a name="markdown_options"></a>16. [Optional] Property `JSON Schema for Humans configuration file > markdown_options`
+## <a name="markdown_options"></a>17. [Optional] Property `JSON Schema for Humans configuration file > markdown_options`
 
 | Type                      | `object`                                                                                                                |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -254,7 +272,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 }
 ```
 
-## <a name="template_md_options"></a>17. [Optional] Property `JSON Schema for Humans configuration file > template_md_options`
+## <a name="template_md_options"></a>18. [Optional] Property `JSON Schema for Humans configuration file > template_md_options`
 
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -270,7 +288,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 | - [show_array_restrictions](#template_md_options_show_array_restrictions ) | No      | boolean | No         | -          | if true generate array restrictions section. ...                                     |
 |                                                                            |         |         |            |            |                                                                                      |
 
-### <a name="template_md_options_badge_as_image"></a>17.1. [Optional] Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`
+### <a name="template_md_options_badge_as_image"></a>18.1. [Optional] Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`
 
 | Type                      | `boolean`                                                                 |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -282,7 +300,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 
  if false, use text instead
 
-### <a name="template_md_options_show_heading_numbers"></a>17.2. [Optional] Property `JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`
+### <a name="template_md_options_show_heading_numbers"></a>18.2. [Optional] Property `JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`
 
 | Type                      | `boolean`                                                                 |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -294,7 +312,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 
  if false, do not generate heading numbers
 
-### <a name="template_md_options_show_array_restrictions"></a>17.3. [Optional] Property `JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`
+### <a name="template_md_options_show_array_restrictions"></a>18.3. [Optional] Property `JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`
 
 | Type                      | `boolean`                                                                 |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -306,7 +324,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 
  if false, do not generate
 
-## <a name="with_footer"></a>18. [Optional] Property `JSON Schema for Humans configuration file > with_footer`
+## <a name="with_footer"></a>19. [Optional] Property `JSON Schema for Humans configuration file > with_footer`
 
 | Type                      | `boolean`                                                                 |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -316,7 +334,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 
 **Description:** Whether to show the footer linking to the library repo and with the generation datetime
 
-## <a name="footer_show_time"></a>19. [Optional] Property `JSON Schema for Humans configuration file > footer_show_time`
+## <a name="footer_show_time"></a>20. [Optional] Property `JSON Schema for Humans configuration file > footer_show_time`
 
 | Type                      | `boolean`                                                                 |
 | ------------------------- | ------------------------------------------------------------------------- |

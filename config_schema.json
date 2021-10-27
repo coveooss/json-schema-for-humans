@@ -44,7 +44,7 @@
       "default": false,
       "description": "Mark a property as deprecated (with a big red badge) if the description contains the string `[Deprecated`."
     },
-    "default_from_description" : {
+    "default_from_description": {
       "type": "boolean",
       "default": false,
       "description": "Extract the default value of a property from the description like this: ``[Default `the_default_value`]``.\n\nThe default value from the \"default\" attribute will be used in priority."
@@ -61,13 +61,23 @@
     },
     "templates_directory": {
       "type": "string",
-      "description": "The file system path to the directory containing templates, with a default of the `templates` directory within the library source code."
+      "description": "[Deprecated]"
     },
     "template_name": {
       "type": "string",
-      "enum": ["flat", "js", "md"],
+      "enum": [
+        "flat",
+        "js",
+        "md",
+        "md_nested"
+      ],
       "default": "js",
-      "description": "The name of the set of templates to use to render the documentation.\n\n`js` is the default and uses javascript for anchor links, collapsible sections and tabs. `flat` uses no javascript, but has no interactivity."
+      "description": "The name of the built-in template to use to render the documentation.\n\n`js` is the default and uses javascript for anchor links, collapsible sections and tabs. `flat` uses no javascript, but has no interactivity."
+    },
+    "custom_template_path": {
+      "type": "string",
+      "default": null,
+      "description": "Path to a custom Jinja2 template file.\n\nThere can be multiple files to split the template, but this path should be the entry point.\n\nIf no output file is specified, the extension of the template file will be used to determine the output documentation extension. i.e. if the template is in ./custom_template/content.html, the resulting documentation will have the html"
     },
     "show_toc": {
       "type": "boolean",
@@ -82,13 +92,19 @@
     "markdown_options": {
       "type": "object",
       "default": {
-        "fenced-code-blocks": {"break-on-newline": true, "cssclass": "highlight jumbotron", "tables": null},
+        "fenced-code-blocks": {
+          "break-on-newline": true,
+          "cssclass": "highlight jumbotron",
+          "tables": null
+        },
         "tables": null
       },
       "description": "[Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for the descriptions. `description_is_markdown` must be true for this to have any effect.\n\n**WARNING**\nAdding an extra, even if the value is false, will activate it. For example `{\"break-on-newline\": false}` will activate the `break-on-newline` extra.",
       "examples": [
         {
-          "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
+          "fenced-code-blocks": {
+            "cssclass": "highlight jumbotron"
+          },
           "tables": null,
           "break-on-newline": true,
           "cuddled-lists": true

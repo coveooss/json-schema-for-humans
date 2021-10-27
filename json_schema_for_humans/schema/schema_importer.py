@@ -1,11 +1,10 @@
+import os
 from pathlib import Path
 from typing import Optional, List, Union
 
 import click
-import os
 
 from json_schema_for_humans.schema.schema_to_render import SchemaToRender
-from json_schema_for_humans.const import ResultExtension
 
 
 def _get_schema_paths(schema_file_or_dir: Union[str, Path]) -> List[Path]:
@@ -25,7 +24,7 @@ def _get_schema_paths(schema_file_or_dir: Union[str, Path]) -> List[Path]:
 def get_schemas_to_render(
     schema_file_or_dir: Union[str, Path],
     result_file_or_dir: Optional[Union[str, Path]],
-    result_extension: ResultExtension,
+    result_extension: str,
 ) -> List[SchemaToRender]:
     """Build and return a list of SchemaToRender containing the list of input schema and output file that will be
     rendered in a run
@@ -49,7 +48,7 @@ def get_schemas_to_render(
     for schema_file_path in schema_file_paths:
         if result_path_is_dir:
             this_schema_result_path = (
-                result_file_or_dir / f"{os.path.splitext(schema_file_path.name)[0]}.{result_extension.value}"
+                result_file_or_dir / f"{os.path.splitext(schema_file_path.name)[0]}.{result_extension}"
             )
         else:
             this_schema_result_path = result_file_or_dir
@@ -58,13 +57,13 @@ def get_schemas_to_render(
 
 
 def get_result_output(
-    output_path_or_file: Optional[Path], schema_files_or_dir: List[str], result_extension: ResultExtension
+    output_path_or_file: Optional[Path], schema_files_or_dir: List[str], result_extension: str
 ) -> Path:
     if not output_path_or_file:
         if len(schema_files_or_dir) > 1 or any(Path(p).is_dir() for p in schema_files_or_dir):
             output_path_or_file = Path.cwd()
         else:
-            output_path_or_file = Path(f"schema_doc.{result_extension.value}")
+            output_path_or_file = Path(f"schema_doc.{result_extension}")
 
     if output_path_or_file.is_dir():
         if not output_path_or_file.exists():

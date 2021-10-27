@@ -448,7 +448,7 @@ If <code>link_to_reused_ref</code> is false and a <code>$ref</code> in the schem
         <div class="card-header" id="headingtemplates_directory">
             <h2 class="mb-0">
                 <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#templates_directory"
-                        aria-expanded="" aria-controls="templates_directory" onclick="setAnchor('#templates_directory')"><span class="property-name">templates_directory</span></button>
+                        aria-expanded="" aria-controls="templates_directory" onclick="setAnchor('#templates_directory')"><span class="property-name">templates_directory</span> <span class="badge badge-danger deprecated-property">Deprecated</span></button>
             </h2>
         </div>
 
@@ -465,7 +465,7 @@ If <code>link_to_reused_ref</code> is false and a <code>$ref</code> in the schem
             />
         </svg>
     <a href="#templates_directory" onclick="anchorLink('templates_directory')">templates_directory</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
-<span class="description"><p>The file system path to the directory containing templates, with a default of the <code>templates</code> directory within the library source code.</p>
+<span class="description"><p>[Deprecated]</p>
 </span>
             
 
@@ -499,13 +499,58 @@ If <code>link_to_reused_ref</code> is false and a <code>$ref</code> in the schem
             />
         </svg>
     <a href="#template_name" onclick="anchorLink('template_name')">template_name</a></div><span class="badge badge-dark value-type">Type: enum (of string)</span> <span class="badge badge-success default-value">Default: "js"</span><br/>
-<span class="description"><p>The name of the set of templates to use to render the documentation.</p>
+<span class="description"><p>The name of the built-in template to use to render the documentation.</p>
 
 <p><code>js</code> is the default and uses javascript for anchor links, collapsible sections and tabs. <code>flat</code> uses no javascript, but has no interactivity.</p>
 </span><div class="enum-value" id="template_name_enum">
                 <h4>Must be one of:</h4>
-                <ul class="list-group"><li class="list-group-item enum-item">"flat"</li><li class="list-group-item enum-item">"js"</li><li class="list-group-item enum-item">"md"</li></ul>
+                <ul class="list-group"><li class="list-group-item enum-item">"flat"</li><li class="list-group-item enum-item">"js"</li><li class="list-group-item enum-item">"md"</li><li class="list-group-item enum-item">"md_nested"</li></ul>
                 </div>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordioncustom_template_path">
+    <div class="card">
+        <div class="card-header" id="headingcustom_template_path">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#custom_template_path"
+                        aria-expanded="" aria-controls="custom_template_path" onclick="setAnchor('#custom_template_path')"><span class="property-name">custom_template_path</span></button>
+            </h2>
+        </div>
+
+        <div id="custom_template_path"
+             class="collapse property-definition-div" aria-labelledby="headingcustom_template_path"
+             data-parent="#accordioncustom_template_path">
+            <div class="card-body pl-5">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#custom_template_path" onclick="anchorLink('custom_template_path')">custom_template_path</a></div><span class="badge badge-dark value-type">Type: string</span> <span class="badge badge-success default-value">Default: null</span><br/>
+<div class="description collapse" id="collapseDescription_custom_template_path">
+            <p>Path to a custom Jinja2 template file.</p>
+
+<p>There can be multiple files to split the template, but this path should be the entry point.</p>
+
+<p>If no output file is specified, the extension of the template file will be used to determine the output documentation extension. i.e. if the template is in ./custom_template/content.html, the resulting documentation will have the html</p>
+
+        </div>
+        <div>
+            <a class="collapse-description-link collapsed" data-toggle="collapse" href="#collapseDescription_custom_template_path"
+               aria-expanded="false" aria-controls="collapseDescriptioncustom_template_path"
+            ></a>
+        </div>
             
 
             

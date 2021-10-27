@@ -10,7 +10,6 @@ from _pytest.monkeypatch import MonkeyPatch
 from bs4 import BeautifulSoup
 
 from json_schema_for_humans.cli import get_schemas_to_render_from_cli_arguments
-from json_schema_for_humans.const import ResultExtension
 from json_schema_for_humans.generate import (
     generate_from_file_object,
     generate_from_filename,
@@ -122,8 +121,8 @@ def test_generate_multiple_path_inputs(tmp_path: Path) -> None:
     result_path = tmp_path / "test_generate"
     result_path.mkdir()
 
-    schemas = get_schemas_to_render_from_cli_arguments(test_case_path1, result_path, ResultExtension.MD)
-    schemas += get_schemas_to_render_from_cli_arguments(test_case_path2, result_path, ResultExtension.MD)
+    schemas = get_schemas_to_render_from_cli_arguments(test_case_path1, result_path, "md")
+    schemas += get_schemas_to_render_from_cli_arguments(test_case_path2, result_path, "md")
 
     template_renderer = MagicMock(TemplateRenderer)
     template_renderer.render.return_value = ""
@@ -140,7 +139,7 @@ def test_generate_no_file_output(tmp_path: Path, monkeypatch: MonkeyPatch) -> No
     test_case_file_name = f"{test_case_name}.json"
     test_case_path = get_test_case_path("basic")
 
-    schemas = get_schemas_to_render(test_case_path, None, ResultExtension.MD)
+    schemas = get_schemas_to_render(test_case_path, None, "md")
     template_renderer = MagicMock(TemplateRenderer)
     template_renderer.render.return_value = ""
     generated = generate_schemas_doc(schemas, template_renderer)

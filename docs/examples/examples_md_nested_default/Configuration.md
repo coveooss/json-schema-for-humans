@@ -11,17 +11,18 @@
 - [9. [Optional] Property JSON Schema for Humans configuration file > default_from_description](#default_from_description)
 - [10. [Optional] Property JSON Schema for Humans configuration file > copy_css](#copy_css)
 - [11. [Optional] Property JSON Schema for Humans configuration file > copy_js](#copy_js)
-- [12. [Optional] Property JSON Schema for Humans configuration file > templates_directory](#templates_directory)
+- [12. [Optional]~~ Property JSON Schema for Humans configuration file > templates_directory~~](#templates_directory)
 - [13. [Optional] Property JSON Schema for Humans configuration file > template_name](#template_name)
-- [14. [Optional] Property JSON Schema for Humans configuration file > show_toc](#show_toc)
-- [15. [Optional] Property JSON Schema for Humans configuration file > examples_as_yaml](#examples_as_yaml)
-- [16. [Optional] Property JSON Schema for Humans configuration file > markdown_options](#markdown_options)
-- [17. [Optional] Property JSON Schema for Humans configuration file > template_md_options](#template_md_options)
-  - [17.1. [Optional] Property JSON Schema for Humans configuration file > template_md_options > badge_as_image](#template_md_options_badge_as_image)
-  - [17.2. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_heading_numbers](#template_md_options_show_heading_numbers)
-  - [17.3. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_array_restrictions](#template_md_options_show_array_restrictions)
-- [18. [Optional] Property JSON Schema for Humans configuration file > with_footer](#with_footer)
-- [19. [Optional] Property JSON Schema for Humans configuration file > footer_show_time](#footer_show_time)
+- [14. [Optional] Property JSON Schema for Humans configuration file > custom_template_path](#custom_template_path)
+- [15. [Optional] Property JSON Schema for Humans configuration file > show_toc](#show_toc)
+- [16. [Optional] Property JSON Schema for Humans configuration file > examples_as_yaml](#examples_as_yaml)
+- [17. [Optional] Property JSON Schema for Humans configuration file > markdown_options](#markdown_options)
+- [18. [Optional] Property JSON Schema for Humans configuration file > template_md_options](#template_md_options)
+  - [18.1. [Optional] Property JSON Schema for Humans configuration file > template_md_options > badge_as_image](#template_md_options_badge_as_image)
+  - [18.2. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_heading_numbers](#template_md_options_show_heading_numbers)
+  - [18.3. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_array_restrictions](#template_md_options_show_array_restrictions)
+- [19. [Optional] Property JSON Schema for Humans configuration file > with_footer](#with_footer)
+- [20. [Optional] Property JSON Schema for Humans configuration file > footer_show_time](#footer_show_time)
 
 **Title:** JSON Schema for Humans configuration file
 
@@ -237,17 +238,18 @@ This file contains the logic for the anchor links.
 </details>
 
 <details>
-<summary><strong> <a name="templates_directory"></a>12. [Optional] Property JSON Schema for Humans configuration file > templates_directory</strong>  
+<summary><strong> <a name="templates_directory"></a>12. [Optional]~~ Property JSON Schema for Humans configuration file > templates_directory~~</strong>  
 
 </summary>
 <blockquote>
 
 | Type                      | `string`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Deprecated**            | [Deprecated]                                                              |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 |                           |                                                                           |
 
-**Description:** The file system path to the directory containing templates, with a default of the `templates` directory within the library source code.
+**Description:** [Deprecated]
 
 </blockquote>
 </details>
@@ -264,7 +266,7 @@ This file contains the logic for the anchor links.
 | **Default**               | `"js"`                                                                    |
 |                           |                                                                           |
 
-**Description:** The name of the set of templates to use to render the documentation.
+**Description:** The name of the built-in template to use to render the documentation.
 
 `js` is the default and uses javascript for anchor links, collapsible sections and tabs. `flat` uses no javascript, but has no interactivity.
 
@@ -272,12 +274,34 @@ Must be one of:
 * "flat"
 * "js"
 * "md"
+* "md_nested"
 
 </blockquote>
 </details>
 
 <details>
-<summary><strong> <a name="show_toc"></a>14. [Optional] Property JSON Schema for Humans configuration file > show_toc</strong>  
+<summary><strong> <a name="custom_template_path"></a>14. [Optional] Property JSON Schema for Humans configuration file > custom_template_path</strong>  
+
+</summary>
+<blockquote>
+
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Default**               | `null`                                                                    |
+|                           |                                                                           |
+
+**Description:** Path to a custom Jinja2 template file.
+
+There can be multiple files to split the template, but this path should be the entry point.
+
+If no output file is specified, the extension of the template file will be used to determine the output documentation extension. i.e. if the template is in ./custom_template/content.html, the resulting documentation will have the html
+
+</blockquote>
+</details>
+
+<details>
+<summary><strong> <a name="show_toc"></a>15. [Optional] Property JSON Schema for Humans configuration file > show_toc</strong>  
 
 </summary>
 <blockquote>
@@ -294,7 +318,7 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="examples_as_yaml"></a>15. [Optional] Property JSON Schema for Humans configuration file > examples_as_yaml</strong>  
+<summary><strong> <a name="examples_as_yaml"></a>16. [Optional] Property JSON Schema for Humans configuration file > examples_as_yaml</strong>  
 
 </summary>
 <blockquote>
@@ -311,7 +335,7 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="markdown_options"></a>16. [Optional] Property JSON Schema for Humans configuration file > markdown_options</strong>  
+<summary><strong> <a name="markdown_options"></a>17. [Optional] Property JSON Schema for Humans configuration file > markdown_options</strong>  
 
 </summary>
 <blockquote>
@@ -344,7 +368,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </details>
 
 <details>
-<summary><strong> <a name="template_md_options"></a>17. [Optional] Property JSON Schema for Humans configuration file > template_md_options</strong>  
+<summary><strong> <a name="template_md_options"></a>18. [Optional] Property JSON Schema for Humans configuration file > template_md_options</strong>  
 
 </summary>
 <blockquote>
@@ -357,7 +381,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 **Description:** specific options to md template
 
 <details>
-<summary><strong> <a name="template_md_options_badge_as_image"></a>17.1. [Optional] Property JSON Schema for Humans configuration file > template_md_options > badge_as_image</strong>  
+<summary><strong> <a name="template_md_options_badge_as_image"></a>18.1. [Optional] Property JSON Schema for Humans configuration file > template_md_options > badge_as_image</strong>  
 
 </summary>
 <blockquote>
@@ -376,7 +400,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </details>
 
 <details>
-<summary><strong> <a name="template_md_options_show_heading_numbers"></a>17.2. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_heading_numbers</strong>  
+<summary><strong> <a name="template_md_options_show_heading_numbers"></a>18.2. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_heading_numbers</strong>  
 
 </summary>
 <blockquote>
@@ -395,7 +419,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </details>
 
 <details>
-<summary><strong> <a name="template_md_options_show_array_restrictions"></a>17.3. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_array_restrictions</strong>  
+<summary><strong> <a name="template_md_options_show_array_restrictions"></a>18.3. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_array_restrictions</strong>  
 
 </summary>
 <blockquote>
@@ -417,7 +441,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </details>
 
 <details>
-<summary><strong> <a name="with_footer"></a>18. [Optional] Property JSON Schema for Humans configuration file > with_footer</strong>  
+<summary><strong> <a name="with_footer"></a>19. [Optional] Property JSON Schema for Humans configuration file > with_footer</strong>  
 
 </summary>
 <blockquote>
@@ -434,7 +458,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </details>
 
 <details>
-<summary><strong> <a name="footer_show_time"></a>19. [Optional] Property JSON Schema for Humans configuration file > footer_show_time</strong>  
+<summary><strong> <a name="footer_show_time"></a>20. [Optional] Property JSON Schema for Humans configuration file > footer_show_time</strong>  
 
 </summary>
 <blockquote>

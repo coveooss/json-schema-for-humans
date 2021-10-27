@@ -2,7 +2,7 @@
 {{ schema.keywords.get("title").literal | default("Schema Docs") | md_heading(depth) }}
 {% set contentBase %}
 {% with schema=schema, skip_headers=False, depth=depth %}
-    {% include "content.html" %}
+    {% include "content.md" %}
 {% endwith %}
 {% endset %}
 

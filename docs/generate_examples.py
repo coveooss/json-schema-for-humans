@@ -7,7 +7,7 @@ from typing import TypedDict, List
 
 import yaml
 
-from json_schema_for_humans.const import DocumentationTemplate, FileLikeType
+from json_schema_for_humans.const import FileLikeType
 
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
 PARENT_DIR = os.path.abspath(os.path.dirname(CURRENT_DIR))
@@ -115,7 +115,9 @@ CONFIGURATIONS: List[ExampleConfiguration] = [
         "title": "Markdown without badge template",
         "dir_name": "examples_md_default",
         "config": GenerationConfiguration(
-            template_name="md", deprecated_from_description=True, footer_show_time=False,
+            template_name="md",
+            deprecated_from_description=True,
+            footer_show_time=False,
         ),
         "md_example_template": MD_EXAMPLE_MD_TEMPLATE,
     },
@@ -192,9 +194,8 @@ def generate_each_template(examples_md_file: FileLikeType, case_path: str, case_
     examples_md_file.write(MD_EXAMPLE_JSON_TEMPLATE.format(file_url=case_url, title="Json schema"))
     for config in CONFIGURATIONS:
         template_configuration = config["config"]
-        template = template_configuration.documentation_template
         example_dir_name = config["dir_name"]
-        example_file_name = f"{case_name}.{template.result_extension.value}"
+        example_file_name = f"{case_name}.{template_configuration.result_extension}"
 
         examples_md_file.write(
             config["md_example_template"].format(
@@ -210,7 +211,7 @@ def generate_each_template(examples_md_file: FileLikeType, case_path: str, case_
         remove_generated_timestamp(example_file_path)
 
 
-def generate_examples(examples_md_file: FileLikeType):
+def generate_examples(examples_md_file: FileLikeType) -> None:
     for case_name in sorted(os.listdir(JSON_EXAMPLES_DIR)):
         name, ext = os.path.splitext(case_name)
         case_source = os.path.abspath(os.path.join(JSON_EXAMPLES_DIR, case_name))
@@ -218,7 +219,10 @@ def generate_examples(examples_md_file: FileLikeType):
             continue
 
         generate_each_template(
-            examples_md_file, case_source, os.path.relpath(case_source, CURRENT_DIR).replace("\\", "/"), name,
+            examples_md_file,
+            case_source,
+            os.path.relpath(case_source, CURRENT_DIR).replace("\\", "/"),
+            name,
         )
 
 

@@ -28,7 +28,7 @@ def generate_from_schema(
         link_to_reused_ref=link_to_reused_ref,
     )
 
-    schemas_to_render = get_schemas_to_render(schema_file, None, config.documentation_template.result_extension)
+    schemas_to_render = get_schemas_to_render(schema_file, None, config.result_extension)
 
     template_renderer = TemplateRenderer(config)
     for rendered_content in generate_schemas_doc(schemas_to_render, template_renderer, loaded_schemas).items():
@@ -58,13 +58,11 @@ def generate_from_filename(
         link_to_reused_ref=link_to_reused_ref,
     )
 
-    schemas_to_render = get_schemas_to_render(
-        schema_file_name, Path(result_file_name), config.documentation_template.result_extension
-    )
+    schemas_to_render = get_schemas_to_render(schema_file_name, Path(result_file_name), config.result_extension)
 
     template_renderer = TemplateRenderer(config)
     generate_schemas_doc(schemas_to_render, template_renderer)
-    copy_additional_files_to_target(schemas_to_render, template_renderer)
+    copy_additional_files_to_target(schemas_to_render, config)
 
 
 def generate_from_file_object(
@@ -95,29 +93,29 @@ def generate_from_file_object(
     schemas_to_render = [SchemaToRender(schema_file, result_file, Path(result_file.name).parent)]
     template_renderer = TemplateRenderer(config)
     generate_schemas_doc(schemas_to_render, template_renderer)
-    copy_additional_files_to_target(schemas_to_render, template_renderer)
+    copy_additional_files_to_target(schemas_to_render, config)
 
 
-def copy_additional_files_to_target(schemas_to_render: List[SchemaToRender], template_renderer: TemplateRenderer):
+def copy_additional_files_to_target(schemas_to_render: List[SchemaToRender], config: GenerationConfiguration):
     for output_directory in set(
         schema_to_render.output_dir for schema_to_render in schemas_to_render if schema_to_render.output_dir
     ):
-        for file_to_copy in template_renderer.files_to_copy():
+        for file_to_copy in config.files_to_copy:
             _copy_additional_file_to_target(
                 file_to_copy,
+                config.template_path.parent,
                 output_directory,
-                template_renderer.template_directory(),
-                template_renderer.template_name(),
             )
 
 
 def _copy_additional_file_to_target(
-    file_to_copy: str, target_directory: Path, templates_directory: Path, template_name: str
+    file_to_copy: str,
+    source_directory: Path,
+    target_directory: Path,
 ) -> None:
     """Copy the file needed to display the resulting page to the directory containing the result file"""
 
-    source_directory = templates_directory / template_name
-    if not target_directory or target_directory == source_directory:
+    if target_directory == source_directory:
         return
 
     source_file_path = source_directory / file_to_copy

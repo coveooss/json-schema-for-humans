@@ -3,14 +3,9 @@ from typing import Optional, List, Union
 
 import click
 
+from json_schema_for_humans.const import FileLikeType, DEFAULT_CSS_FILE_NAME, DEFAULT_JS_FILE_NAME
 from json_schema_for_humans.generate import generate_schemas_doc, copy_additional_files_to_target
 from json_schema_for_humans.generation_configuration import get_final_config
-from json_schema_for_humans.const import (
-    ResultExtension,
-    FileLikeType,
-    DEFAULT_CSS_FILE_NAME,
-    DEFAULT_JS_FILE_NAME,
-)
 from json_schema_for_humans.schema.schema_importer import get_result_output, get_schemas_to_render
 from json_schema_for_humans.schema.schema_to_render import SchemaToRender
 from json_schema_for_humans.template_renderer import TemplateRenderer
@@ -74,16 +69,16 @@ def main(
     )
 
     schemas_to_render = get_schemas_to_render_from_cli_arguments(
-        schema_files_or_dir, output_path_or_file, config.documentation_template.result_extension
+        schema_files_or_dir, output_path_or_file, config.result_extension
     )
 
     template_renderer = TemplateRenderer(config)
     generate_schemas_doc(schemas_to_render, template_renderer)
-    copy_additional_files_to_target(schemas_to_render, template_renderer)
+    copy_additional_files_to_target(schemas_to_render, config)
 
 
 def get_schemas_to_render_from_cli_arguments(
-    schema_files_or_dir: Union[str, Path], output_path_or_file: Optional[Path], result_extension: ResultExtension
+    schema_files_or_dir: Union[str, Path], output_path_or_file: Optional[Path], result_extension: str
 ) -> List[SchemaToRender]:
     schema_files_or_dir = schema_files_or_dir.split(",")
     result_output = get_result_output(output_path_or_file, schema_files_or_dir, result_extension)

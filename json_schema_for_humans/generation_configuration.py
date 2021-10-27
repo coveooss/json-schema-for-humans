@@ -1,7 +1,6 @@
 import json
 import logging
 import os
-
 from dataclasses import dataclass
 from json import JSONDecodeError
 from pathlib import Path
@@ -36,6 +35,7 @@ class GenerationConfiguration:
     recursive_detection_depth: int = 25
     templates_directory: Union[str, Path] = Path(__file__).parent / "templates"
     template_name: str = "js"
+    custom_template_path: Optional[str] = None
     show_toc: bool = True
     examples_as_yaml: bool = False
     # markdown2 extra parameters can be added here: https://github.com/trentm/python-markdown2/wiki/Extras
@@ -75,8 +75,35 @@ class GenerationConfiguration:
         return files_to_copy
 
     @property
-    def documentation_template(self) -> DocumentationTemplate:
-        return DocumentationTemplate(self.template_name)
+    def template_is_markdown(self) -> bool:
+        return self.result_extension == "md"
+
+    @property
+    def template_is_html(self) -> bool:
+        return self.result_extension == "html"
+
+    @property
+    def result_extension(self) -> str:
+        """File extension for the resulting documentation"""
+        if self.custom_template_path:
+            return os.path.splitext(self.custom_template_path)[1]
+
+        if self.template_name:
+            return DocumentationTemplate(self.template_name).result_extension
+
+        raise ValueError("Trying to get extension for configuration with no template")
+
+    @property
+    def template_path(self) -> Optional[Path]:
+        if self.custom_template_path:
+            return Path(self.custom_template_path)
+
+        return (
+            Path(__file__).parent
+            / "templates"
+            / self.template_name
+            / f"base.{DocumentationTemplate(self.template_name).result_extension}"
+        )
 
 
 CONFIG_DEPRECATION_MESSAGE = (

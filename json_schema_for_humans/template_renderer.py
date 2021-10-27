@@ -1,7 +1,4 @@
 import re
-import os
-from pathlib import Path
-from typing import List
 
 import htmlmin
 import jinja2
@@ -11,15 +8,14 @@ from jinja2.ext import loopcontrols
 
 from json_schema_for_humans import jinja_filters, templating_utils
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
-from json_schema_for_humans.const import DocumentationTemplate, ResultExtension, DEFAULT_TEMPLATE_FILE_NAME
-from json_schema_for_humans.schema.schema_node import SchemaNode
 from json_schema_for_humans.md_template import MarkdownTemplate
+from json_schema_for_humans.schema.schema_node import SchemaNode
 
 
-def _minify(rendered: str, result_extension: ResultExtension) -> str:
-    if result_extension == ResultExtension.MD:
+def _minify(rendered: str, is_markdown: bool, is_html: bool) -> str:
+    if is_markdown:
         return re.sub(r"\n\s*\n", "\n\n", rendered)
-    if result_extension == ResultExtension.HTML:
+    if is_html:
         return htmlmin.minify(rendered)
     return rendered
 
@@ -30,23 +26,16 @@ class TemplateRenderer:
         self.template = template or self._get_jinja_template()
 
     def _get_jinja_template(self) -> Template:
-        templates_directory = self.config.templates_directory_path / self.config.documentation_template.value
-        base_template_path = templates_directory / DEFAULT_TEMPLATE_FILE_NAME
-
-        loader = FileSystemLoader(templates_directory)
+        loader = FileSystemLoader(self.config.template_path.parent)
         env = jinja2.Environment(
             loader=loader,
             extensions=[loopcontrols],
-            trim_blocks=(
-                self.config.documentation_template in (DocumentationTemplate.MD, DocumentationTemplate.MD_NESTED)
-            ),
-            lstrip_blocks=(
-                self.config.documentation_template in (DocumentationTemplate.MD, DocumentationTemplate.MD_NESTED)
-            ),
+            trim_blocks=(self.config.template_is_markdown),
+            lstrip_blocks=(self.config.template_is_markdown),
         )
         env.globals["jsfh_config"] = self.config
         env.globals["jsfh_md"] = markdown2.Markdown(extras=self.config.markdown_options)
-        if self.config.documentation_template in (DocumentationTemplate.MD, DocumentationTemplate.MD_NESTED):
+        if self.config.template_is_markdown:
             md_template = MarkdownTemplate(self.config)
             md_template.register_jinja(env)
 
@@ -73,24 +62,15 @@ class TemplateRenderer:
         env.globals["examples_as_yaml"] = self.config.examples_as_yaml
         env.globals["get_local_time"] = jinja_filters.get_local_time
 
-        with open(base_template_path, "r") as template_fp:
+        with open(self.config.template_path, "r") as template_fp:
             template = env.from_string(template_fp.read())
 
         return template
-
-    def template_directory(self) -> Path:
-        return self.config.templates_directory_path
-
-    def template_name(self) -> str:
-        return self.config.documentation_template.value
-
-    def files_to_copy(self) -> List[str]:
-        return self.config.files_to_copy
 
     def render(self, intermediate_schema: SchemaNode) -> str:
         rendered = self.template.render(schema=intermediate_schema, config=self.config)
 
         if self.config.minify:
-            rendered = _minify(rendered, self.config.documentation_template.result_extension)
+            rendered = _minify(rendered, self.config.template_is_markdown, self.config.template_is_html)
 
         return rendered
