@@ -77,7 +77,7 @@
     "custom_template_path": {
       "type": "string",
       "default": null,
-      "description": "Path to a custom Jinja2 template file.\n\nThere can be multiple files to split the template, but this path should be the entry point.\n\nIf no output file is specified, the extension of the template file will be used to determine the output documentation extension. i.e. if the template is in ./custom_template/content.html, the resulting documentation will have the html"
+      "description": "Path to a custom Jinja2 template file.\n\nThere can be multiple files to split the template, but this path should be the entry point.\n\nIf no output file is specified, the extension of the template file will be used to determine the output documentation extension. i.e. if the template is in ./custom_template/content.html, the resulting documentation will have the html extension."
     },
     "show_toc": {
       "type": "boolean",
