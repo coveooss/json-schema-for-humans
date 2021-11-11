@@ -14,11 +14,13 @@ def _get_schema_paths(schema_file_or_dir: Union[str, Path]) -> List[Path]:
 
     if schema_file_or_dir.is_file():
         schema_file_paths.append(schema_file_or_dir)
+    elif schema_file_or_dir.is_dir():
+        for glob_pattern in ["**/*.json", "**/*.yaml", "**/*.yml"]:
+            schema_file_paths += [schema_path for schema_path in schema_file_or_dir.glob(glob_pattern)]
     else:
-        schema_file_paths += [schema_path for schema_path in schema_file_or_dir.glob("**/*.json")]
-        schema_file_paths += [schema_path for schema_path in schema_file_or_dir.glob("**/*.ya?ml")]
+        schema_file_paths += [schema_path for schema_path in Path.cwd().glob(str(schema_file_or_dir))]
 
-    return schema_file_paths
+    return [p.absolute() for p in schema_file_paths]
 
 
 def get_schemas_to_render(

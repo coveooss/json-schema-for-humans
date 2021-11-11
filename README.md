@@ -39,7 +39,8 @@ generate-schema-doc [OPTIONS] SCHEMA_FILES_OR_DIR [RESULT_FILE_OR_DIR]
 
 `SCHEMA_FILES_OR_DIR` can be:
 - a path to a single schema file;
-- a path to a directory, in this case all files with extensions json, yaml, or yml will be used; or
+- a path to a directory, in this case all files with extensions json, yaml, or yml will be used; 
+- a [glob pattern](https://docs.python.org/3/library/pathlib.html#pathlib.Path.glob) (starts from the current working directory); or
 - a comma-separated list of the above
 
 All schemas provided must be a valid JSON Schema (in JSON or YAML format)
@@ -48,6 +49,7 @@ Examples:
 - `my_schema.json`
 - `my_folder`
 - `my_folder/my_schema.yaml,another_schema.json`
+- `**/*.yaml.*`
 
 The default value for `RESULT_FILE_OR_DIR` depends on the context:
 - the current working directory if more than one schema as been provided as input
