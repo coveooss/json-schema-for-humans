@@ -9,7 +9,7 @@
         {{- "\n" }}```
     {%- else -%}
         {{- "" }}```yaml
-        {{- "\n" }}{{ example | highlight_yaml_example }}
+        {{- "\n" }}{{ example | yaml_example }}
         {{- "\n" }}```
     {%- endif -%}
     {{ "\n" }}
