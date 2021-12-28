@@ -54,6 +54,7 @@ class TemplateRenderer:
         env.filters["get_undocumented_required_properties"] = jinja_filters.get_undocumented_required_properties
         env.filters["highlight_json_example"] = jinja_filters.highlight_json_example
         env.filters["highlight_yaml_example"] = jinja_filters.highlight_yaml_example
+        env.filters["yaml_example"] = jinja_filters.yaml_example
         env.filters["first_line"] = jinja_filters.first_line
 
         env.tests["combining"] = jinja_filters.is_combining

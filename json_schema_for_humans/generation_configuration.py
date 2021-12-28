@@ -86,7 +86,7 @@ class GenerationConfiguration:
     def result_extension(self) -> str:
         """File extension for the resulting documentation"""
         if self.custom_template_path:
-            return os.path.splitext(self.custom_template_path)[1]
+            return Path(self.custom_template_path).suffix[1:]
 
         if self.template_name:
             return DocumentationTemplate(self.template_name).result_extension
