@@ -1,9 +1,20 @@
 {{ schema | md_array_restrictions | md_generate_table }}
 
-{% if schema.kw_items %}
+{% if schema.array_items_def or schema.tuple_validation_items %}
 {{ schema | md_array_items_restrictions | md_generate_table }}
+{% endif %}
 
-{% for item in schema.kw_items %}
+{% if schema.array_items_def %}
+{% filter md_heading(depth+1) %}
+{% with schema=schema.array_items_def %}{%- include "breadcrumbs.md" %}{% endwith %}
+{% endfilter %}
+{% with schema=schema.array_items_def, skip_headers=False, depth=depth+1, skip_required=True %}
+    {% include "content.md" %}
+{% endwith %}
+{% endif %}
+
+{% if schema.tuple_validation_items %}
+{% for item in schema.tuple_validation_items %}
     {% filter md_heading(depth+1) %}
     {% with schema=item %}{%- include "breadcrumbs.md" %}{% endwith %}
     {% endfilter %}

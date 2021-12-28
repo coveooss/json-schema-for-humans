@@ -2,7 +2,6 @@
 
 - [1. [Optional] Property User Preference > favorite_os](#favorite_os)
 - [2. [Optional] Property User Preference > favorite_colors](#favorite_colors)
-  - [2.1. User Preference > favorite_colors > items](#favorite_colors_items)
 - [3. [Optional] Property User Preference > desired_number_of_shoes](#desired_number_of_shoes)
 
 **Title:** User Preference
@@ -52,26 +51,6 @@ Must be one of:
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
 |                      |                    |
-
-| Each item of this array must be | Description |
-| ------------------------------- | ----------- |
-| [items](#favorite_colors_items) | -           |
-|                                 |             |
-
-### <a name="favorite_colors_items"></a>2.1. User Preference > favorite_colors > items
-
-| Type                      | `enum (of string)`                                                        |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
-
-Must be one of:
-* "green"
-* "blue"
-* "orange"
-* "red"
-* "white"
-* "black"
 
 </blockquote>
 </details>

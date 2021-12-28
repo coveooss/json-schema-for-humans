@@ -164,10 +164,14 @@ def array_items_restrictions(schema: SchemaNode) -> List[List[str]]:
     Tuple validation restrictions
     ready to be rendered by generate_table filter
     """
-    if not schema.kw_items:
+    if not schema.array_items_def and not schema.tuple_validation_items:
         return []
+
+    items_restriction_rules = (
+        [schema.array_items_def] if schema.array_items_def else []
+    ) + schema.tuple_validation_items
     items_restrictions = [["Each item of this array must be", "Description"]]
-    for i, item in enumerate(schema.kw_items):
+    for i, item in enumerate(items_restriction_rules):
         item_label = item.name_for_breadcrumbs or f"Array Item {i}"
         item_html_id = item.html_id
         items_restrictions.append(
@@ -425,6 +429,10 @@ class MarkdownTemplate(object):
             ],
             [
                 "**Tuple validation**",
-                "See below" if schema.kw_items or (schema.kw_contains and schema.kw_contains.literal != {}) else "N/A",
+                "See below"
+                if schema.array_items_def
+                or schema.tuple_validation_items
+                or (schema.kw_contains and schema.kw_contains.literal != {})
+                else "N/A",
             ],
         ]

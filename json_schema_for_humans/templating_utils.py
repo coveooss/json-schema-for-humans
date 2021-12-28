@@ -32,7 +32,7 @@ def get_type_name(schema_node: "SchemaNode") -> Optional[str]:
 
     def _add_subtype_if_array(type_name: str):
         if type_name == const.TYPE_ARRAY:
-            items = schema_node.keywords.get(const.ITEMS, None)
+            items = schema_node.array_items_def
             if not items:
                 return type_name
 

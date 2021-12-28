@@ -2,7 +2,6 @@
 
 - [1. [Optional] Property Person > person](#person)
   - [1.1. [Optional] Property Person > person > children](#person_children)
-    - [1.1.1. Person > person > children > person](#person_children_items)
 
 **Title:** Person
 
@@ -46,21 +45,6 @@
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
 |                      |                    |
-
-| Each item of this array must be  | Description   |
-| -------------------------------- | ------------- |
-| [person](#person_children_items) | A human being |
-|                                  |               |
-
-#### <a name="person_children_items"></a>1.1.1. Person > person > children > person
-
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | [person](#person)                                                                                                   |
-|                           |                                                                                                                     |
-
-**Description:** A human being
 
 </blockquote>
 </details>

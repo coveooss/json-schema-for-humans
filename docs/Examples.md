@@ -1478,6 +1478,64 @@ the description of an attribute
 [examples/examples_md_nested_with_badges/pattern_properties_html_id.md](examples/examples_md_nested_with_badges/pattern_properties_html_id.md ':include')
 </details>
 
+## --prefixItems--
+### prefixItems
+
+
+<details>
+<summary>Json schema - Click here to expand source code...</summary>
+
+[examples/cases/prefixItems.json](examples/cases/prefixItems.json ':include :type=code')
+</details>
+
+
+<details>
+<summary>JS template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/prefixItems.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_default/prefixItems.html](examples/examples_js_default/prefixItems.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Flat template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/prefixItems.html" target="_blank">Open it in full page</a>
+
+[examples/examples_flat_default/prefixItems.html](examples/examples_flat_default/prefixItems.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Markdown without badge template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_default/prefixItems.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_default/prefixItems.md](examples/examples_md_default/prefixItems.md ':include')
+</details>
+
+
+<details>
+<summary>Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_with_badges/prefixItems.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_with_badges/prefixItems.md](examples/examples_md_with_badges/prefixItems.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown without badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_nested_default/prefixItems.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_default/prefixItems.md](examples/examples_md_nested_default/prefixItems.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_nested_with_badges/prefixItems.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_with_badges/prefixItems.md](examples/examples_md_nested_with_badges/prefixItems.md ':include')
+</details>
+
 ## --recursive--
 ### recursive
 
@@ -1592,6 +1650,122 @@ the description of an attribute
 <a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_nested_with_badges/recursive_array.md" target="_blank">Open it in github</a>
 
 [examples/examples_md_nested_with_badges/recursive_array.md](examples/examples_md_nested_with_badges/recursive_array.md ':include')
+</details>
+
+## --recursive_full_schema--
+### recursive_full_schema
+
+
+<details>
+<summary>Json schema - Click here to expand source code...</summary>
+
+[examples/cases/recursive_full_schema.json](examples/cases/recursive_full_schema.json ':include :type=code')
+</details>
+
+
+<details>
+<summary>JS template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/recursive_full_schema.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_default/recursive_full_schema.html](examples/examples_js_default/recursive_full_schema.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Flat template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/recursive_full_schema.html" target="_blank">Open it in full page</a>
+
+[examples/examples_flat_default/recursive_full_schema.html](examples/examples_flat_default/recursive_full_schema.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Markdown without badge template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_default/recursive_full_schema.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_default/recursive_full_schema.md](examples/examples_md_default/recursive_full_schema.md ':include')
+</details>
+
+
+<details>
+<summary>Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_with_badges/recursive_full_schema.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_with_badges/recursive_full_schema.md](examples/examples_md_with_badges/recursive_full_schema.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown without badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_nested_default/recursive_full_schema.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_default/recursive_full_schema.md](examples/examples_md_nested_default/recursive_full_schema.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_nested_with_badges/recursive_full_schema.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_with_badges/recursive_full_schema.md](examples/examples_md_nested_with_badges/recursive_full_schema.md ':include')
+</details>
+
+## --recursive_full_schema_simple--
+### recursive_full_schema_simple
+
+
+<details>
+<summary>Json schema - Click here to expand source code...</summary>
+
+[examples/cases/recursive_full_schema_simple.json](examples/cases/recursive_full_schema_simple.json ':include :type=code')
+</details>
+
+
+<details>
+<summary>JS template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/recursive_full_schema_simple.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_default/recursive_full_schema_simple.html](examples/examples_js_default/recursive_full_schema_simple.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Flat template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/recursive_full_schema_simple.html" target="_blank">Open it in full page</a>
+
+[examples/examples_flat_default/recursive_full_schema_simple.html](examples/examples_flat_default/recursive_full_schema_simple.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Markdown without badge template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_default/recursive_full_schema_simple.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_default/recursive_full_schema_simple.md](examples/examples_md_default/recursive_full_schema_simple.md ':include')
+</details>
+
+
+<details>
+<summary>Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_with_badges/recursive_full_schema_simple.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_with_badges/recursive_full_schema_simple.md](examples/examples_md_with_badges/recursive_full_schema_simple.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown without badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_nested_default/recursive_full_schema_simple.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_default/recursive_full_schema_simple.md](examples/examples_md_nested_default/recursive_full_schema_simple.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_nested_with_badges/recursive_full_schema_simple.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_with_badges/recursive_full_schema_simple.md](examples/examples_md_nested_with_badges/recursive_full_schema_simple.md ':include')
 </details>
 
 ## --recursive_parent_in_definition--

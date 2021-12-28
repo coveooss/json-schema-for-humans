@@ -48,7 +48,7 @@ def test_recursive_array() -> None:
 
     assert_descriptions(soup, ["A list of people", "A human being", "The children they had", "A human being"])
 
-    assert_ref_link(soup, "#person_items", "Same definition as person")
+    assert_ref_link(soup, "#person_items", "Same definition as person_items")
 
 
 @pytest.mark.parametrize("link_to_reused_ref", [True, False])
@@ -67,6 +67,29 @@ def test_recursive_two_files(link_to_reused_ref: bool) -> None:
     )
 
     if link_to_reused_ref:
-        assert_ref_link(soup, "#person_siblings", "Same definition as siblings")
+        assert_ref_link(soup, "#person_children_items", "Same definition as person_children_items")
     else:
-        assert not get_ref_link(soup, "#person_siblings")
+        assert not get_ref_link(soup, "#person_children_items")
+
+
+@pytest.mark.parametrize("link_to_reused_ref", [True, False])
+def test_recursive_full_schema(link_to_reused_ref: bool) -> None:
+    """Test a schema having a recursive definition.
+
+    Even if `link_to_reused_ref` is False, a reference will be generated to avoid a RecursionError
+    """
+    soup = generate_case("recursive_full_schema", GenerationConfiguration(link_to_reused_ref=link_to_reused_ref))
+
+    assert_descriptions(
+        soup,
+        [
+            "Display the issue.",
+            "Code property",
+            "RecursiveArray property",
+            "Display the issue.",
+            "DecoratedRecursiveArray property",
+            "Display the issue.",
+        ],
+    )
+
+    assert_ref_link(soup, "#root", "Same definition as Bug")

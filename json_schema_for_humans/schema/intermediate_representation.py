@@ -55,10 +55,16 @@ def _record_ref(
     current_node: SchemaNode,
 ) -> None:
     """Record that the node is describing the schema at the provided path"""
-    resolved_references[schema_real_path]["/".join(str(e) for e in path_to_element)] = current_node
+    path_to_element_str = "/".join(str(e) for e in path_to_element)
+    if not path_to_element_str:
+        # Special case for the root schema
+        path_to_element_str = "__root__"
+    resolved_references[schema_real_path][path_to_element_str] = current_node
 
 
-def _find_ref(found_reference, referenced_schema_path, reference_users, anchor_part, current_node):
+def _find_ref(
+    found_reference, referenced_schema_path, reference_users, resolved_references, anchor_part, current_node
+) -> Tuple[Optional[SchemaNode], Optional[SchemaNode]]:
     reference_users_for_this_schema = reference_users[found_reference.file][anchor_part]
     reference_users[referenced_schema_path][anchor_part].append(current_node)
 
@@ -78,6 +84,13 @@ def _find_ref(found_reference, referenced_schema_path, reference_users, anchor_p
             if found_users_for_this:
                 new_found_users += found_users_for_this
         found_users = new_found_users
+
+    # Check if the node has already been documented (also for infinite loops)
+    already_resolved = resolved_references.get(referenced_schema_path, {}).get(anchor_part, {})
+    if already_resolved:
+        # The node is already documented elsewhere. Let's link to it
+        current_node.is_displayed = False
+        return already_resolved, already_resolved
 
     # Find the first displayed node following the references
     while not found_reference.is_displayed and found_reference.refers_to:
@@ -177,7 +190,7 @@ def _resolve_ref(
         anchor_part = ""
     else:
         uri_part, anchor_part = reference_path.split("#", maxsplit=1)
-        anchor_part = anchor_part.strip("/")
+        anchor_part = anchor_part.strip("/") or "__root__"  # Special case for the root schema
 
     # Resolve file path portion of reference
     if uri_part:
@@ -194,7 +207,9 @@ def _resolve_ref(
     found_reference = resolved_references[referenced_schema_path].get(anchor_part)
 
     if found_reference and found_reference != current_node:
-        return _find_ref(found_reference, referenced_schema_path, reference_users, anchor_part, current_node)
+        return _find_ref(
+            found_reference, referenced_schema_path, reference_users, resolved_references, anchor_part, current_node
+        )
     else:
         reference_users[referenced_schema_path][anchor_part].append(current_node)
 
@@ -333,7 +348,7 @@ def _build_node(
 
             # Examples are rendered in JSON because they will be represented that way in the documentation,
             # no need for a SchemaNode object
-            if schema_key == "examples":
+            if schema_key == SchemaKeyword.EXAMPLES.value:
                 keywords[schema_key] = [
                     json.dumps(example, indent=4, separators=(",", ": "), ensure_ascii=False)
                     for example in schema_value
@@ -351,17 +366,17 @@ def _build_node(
                     new_html_id += "_" if html_id else ""
                     new_html_id += escape_property_name_for_id(new_property_name)
                     new_node.properties[new_property_name] = _build_node(
-                        resolved_references,
-                        reference_users,
-                        loaded_schemas,
-                        depth + 1,
-                        new_html_id,
-                        new_property_name,
-                        schema_file_path,
-                        copy.deepcopy(path_to_element) + [new_property_name],
-                        new_property_schema,
-                        new_node,
-                        new_property_name,
+                        resolved_references=resolved_references,
+                        reference_users=reference_users,
+                        loaded_schemas=loaded_schemas,
+                        depth=depth + 1,
+                        html_id=new_html_id,
+                        breadcrumb_name=new_property_name,
+                        schema_file_path=schema_file_path,
+                        path_to_element=copy.deepcopy(path_to_element) + [new_property_name],
+                        schema=new_property_schema,
+                        parent=new_node,
+                        parent_key=new_property_name,
                     )
             elif schema_key == SchemaKeyword.ADDITIONAL_PROPERTIES.value:
                 if schema_value is False:
@@ -371,17 +386,17 @@ def _build_node(
                     new_html_id += "_" if html_id else ""
                     new_html_id += SchemaKeyword.ADDITIONAL_PROPERTIES.value
                     new_node.additional_properties = _build_node(
-                        resolved_references,
-                        reference_users,
-                        loaded_schemas,
-                        depth + 1,
-                        new_html_id,
-                        SchemaKeyword.ADDITIONAL_PROPERTIES.value,
-                        schema_file_path,
-                        copy.deepcopy(path_to_element) + [SchemaKeyword.ADDITIONAL_PROPERTIES.value],
-                        schema_value,
-                        new_node,
-                        SchemaKeyword.ADDITIONAL_PROPERTIES.value,
+                        resolved_references=resolved_references,
+                        reference_users=reference_users,
+                        loaded_schemas=loaded_schemas,
+                        depth=depth + 1,
+                        html_id=new_html_id,
+                        breadcrumb_name=SchemaKeyword.ADDITIONAL_PROPERTIES.value,
+                        schema_file_path=schema_file_path,
+                        path_to_element=copy.deepcopy(path_to_element) + [SchemaKeyword.ADDITIONAL_PROPERTIES.value],
+                        schema=schema_value,
+                        parent=new_node,
+                        parent_key=SchemaKeyword.ADDITIONAL_PROPERTIES.value,
                     )
             elif schema_key == SchemaKeyword.PATTERN_PROPERTIES.value:
                 for new_property_name, new_property_schema in schema_value.items():
@@ -390,17 +405,53 @@ def _build_node(
                     new_html_id += f"pattern{pattern_id}"
                     pattern_id += 1
                     new_node.pattern_properties[new_property_name] = _build_node(
-                        resolved_references,
-                        reference_users,
-                        loaded_schemas,
-                        depth + 1,
-                        new_html_id,
-                        new_property_name,
-                        schema_file_path,
-                        copy.deepcopy(path_to_element) + [new_property_name],
-                        new_property_schema,
-                        new_node,
-                        new_property_name,
+                        resolved_references=resolved_references,
+                        reference_users=reference_users,
+                        loaded_schemas=loaded_schemas,
+                        depth=depth + 1,
+                        html_id=new_html_id,
+                        breadcrumb_name=new_property_name,
+                        schema_file_path=schema_file_path,
+                        path_to_element=copy.deepcopy(path_to_element) + [new_property_name],
+                        schema=new_property_schema,
+                        parent=new_node,
+                        parent_key=new_property_name,
+                    )
+            elif schema_key in [SchemaKeyword.ITEMS.value, SchemaKeyword.PREFIX_ITEMS.value]:
+                if isinstance(schema_value, list):
+                    # Tuple validation
+                    # https://json-schema.org/understanding-json-schema/reference/array.html#tuple-validation
+                    for i, array_item_schema in enumerate(schema_value):
+                        item_breadcrumb_name = f"{breadcrumb_name} item {i}"
+                        new_node.tuple_validation_items.append(
+                            _build_node(
+                                resolved_references=resolved_references,
+                                reference_users=reference_users,
+                                loaded_schemas=loaded_schemas,
+                                depth=depth + 1,
+                                html_id=f"{html_id}_items_i{i}",
+                                breadcrumb_name=item_breadcrumb_name,
+                                schema_file_path=schema_file_path,
+                                path_to_element=copy.deepcopy(path_to_element) + [item_breadcrumb_name],
+                                schema=array_item_schema,
+                                parent=new_node,
+                                parent_key=schema_key,
+                            )
+                        )
+                else:
+                    breadcrumb_name = f"{breadcrumb_name} items"
+                    new_node.array_items_def = _build_node(
+                        resolved_references=resolved_references,
+                        reference_users=reference_users,
+                        loaded_schemas=loaded_schemas,
+                        depth=depth + 1,
+                        html_id=f"{html_id}_items",
+                        breadcrumb_name=breadcrumb_name,
+                        schema_file_path=schema_file_path,
+                        path_to_element=copy.deepcopy(path_to_element) + [breadcrumb_name],
+                        schema=schema_value,
+                        parent=new_node,
+                        parent_key=schema_key,
                     )
             else:
                 # Add the property name (correctly escaped) to the ID
@@ -416,15 +467,15 @@ def _build_node(
                         pattern_id += 1
 
                 keywords[schema_key] = _build_node(
-                    resolved_references,
-                    reference_users,
-                    loaded_schemas,
-                    new_depth,
-                    new_html_id,
-                    schema_key,
-                    schema_file_path,
-                    copy.deepcopy(path_to_element) + [schema_key],
-                    schema_value,
+                    resolved_references=resolved_references,
+                    reference_users=reference_users,
+                    loaded_schemas=loaded_schemas,
+                    depth=new_depth,
+                    html_id=new_html_id,
+                    breadcrumb_name=schema_key,
+                    schema_file_path=schema_file_path,
+                    path_to_element=copy.deepcopy(path_to_element) + [schema_key],
+                    schema=schema_value,
                     parent=new_node,
                     parent_key=schema_key,
                 )
@@ -437,15 +488,15 @@ def _build_node(
 
             array_items.append(
                 _build_node(
-                    resolved_references,
-                    reference_users,
-                    loaded_schemas,
-                    depth + 1,
-                    new_html_id,
-                    f"item {i}",
-                    schema_file_path,
-                    path_to_element + [i],
-                    element,
+                    resolved_references=resolved_references,
+                    reference_users=reference_users,
+                    loaded_schemas=loaded_schemas,
+                    depth=depth + 1,
+                    html_id=new_html_id,
+                    breadcrumb_name=f"item {i}",
+                    schema_file_path=schema_file_path,
+                    path_to_element=path_to_element + [i],
+                    schema=element,
                     parent=new_node,
                 )
             )

@@ -224,7 +224,7 @@ Must be one of:
 
 There can be multiple files to split the template, but this path should be the entry point.
 
-If no output file is specified, the extension of the template file will be used to determine the output documentation extension. i.e. if the template is in ./custom_template/content.html, the resulting documentation will have the html
+If no output file is specified, the extension of the template file will be used to determine the output documentation extension. i.e. if the template is in ./custom_template/content.html, the resulting documentation will have the html extension.
 
 ## <a name="show_toc"></a>15. [Optional] Property `JSON Schema for Humans configuration file > show_toc`
 

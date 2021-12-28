@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schema.somewhere.com/v1.0/Bug",
+  "title": "Bug",
+  "description": "Display the issue.",
+  "type": "object",
+  "properties": {
+    "Code": {
+      "type": "string",
+      "description": "Code property"
+    },
+    "RecursiveArray": {
+      "type": "array",
+      "description": "RecursiveArray property",
+      "items": {
+        "$ref": "#"
+      }
+    },
+    "DecoratedRecursiveArray": {
+      "type": "array",
+      "description": "DecoratedRecursiveArray property",
+      "items": {
+        "type": "object",
+        "properties": {
+          "SomeName": {
+            "type": "string"
+          },
+          "TheThing": {
+            "$ref": "#"
+          }
+        }
+      }
+    }
+  }
+}

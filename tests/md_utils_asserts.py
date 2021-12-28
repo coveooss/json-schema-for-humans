@@ -38,4 +38,4 @@ class MdUtilsAsserts:
         regexp = r"^(Generated using \[json-schema-for-humans\]\(https:[^)]+\) on) (.+)$"
         content = re.sub(regexp, r"\1 date", content, flags=re.MULTILINE)
 
-        assert expected_content == content
+        assert content == expected_content

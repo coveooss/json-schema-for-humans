@@ -2,7 +2,6 @@
 
 - [1. [Optional] Property Person > person](#person)
   - [1.1. [Optional] Property Person > person > children](#person_children)
-    - [1.1.1. Person > person > children > person](#person_children_items)
   - [1.2. [Optional] Property Person > person > siblings](#person_siblings)
 
 **Title:** Person
@@ -48,21 +47,6 @@
 | **Tuple validation** | See below          |
 |                      |                    |
 
-| Each item of this array must be  | Description                                       |
-| -------------------------------- | ------------------------------------------------- |
-| [person](#person_children_items) | Person definition from second file. Not the same! |
-|                                  |                                                   |
-
-#### <a name="person_children_items"></a>1.1.1. Person > person > children > person
-
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | [siblings](#person_siblings)                                                                                        |
-|                           |                                                                                                                     |
-
-**Description:** Person definition from second file. Not the same!
-
 </blockquote>
 </details>
 
@@ -75,7 +59,7 @@
 | Type                      | `object`                                                                                                            |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | recursive_two_files2.json#/definitions/person                                                                       |
+| **Same definition as**    | [person_children_items](#person_children_items)                                                                     |
 |                           |                                                                                                                     |
 
 **Description:** Person definition from second file. Not the same!

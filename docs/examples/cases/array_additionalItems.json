@@ -41,6 +41,7 @@
     },
     "arrayEmpty": {
       "type": "array",
+      "description": "This is not a valid JSON Schema, but let's do it anyway.",
       "items": []
     }
   }

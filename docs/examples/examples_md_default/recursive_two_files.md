@@ -27,11 +27,11 @@
 
 **Description:** A human being
 
-| Property                        | Pattern | Type   | Deprecated | Definition                                       | Title/Description                                 |
-| ------------------------------- | ------- | ------ | ---------- | ------------------------------------------------ | ------------------------------------------------- |
-| - [children](#person_children ) | No      | array  | No         | -                                                | The children they had                             |
-| - [siblings](#person_siblings ) | No      | object | No         | In recursive_two_files2.json#/definitions/person | Person definition from second file. Not the same! |
-|                                 |         |        |            |                                                  |                                                   |
+| Property                        | Pattern | Type   | Deprecated | Definition                                               | Title/Description                                 |
+| ------------------------------- | ------- | ------ | ---------- | -------------------------------------------------------- | ------------------------------------------------- |
+| - [children](#person_children ) | No      | array  | No         | -                                                        | The children they had                             |
+| - [siblings](#person_siblings ) | No      | object | No         | Same as [person_children_items](#person_children_items ) | Person definition from second file. Not the same! |
+|                                 |         |        |            |                                                          |                                                   |
 
 ### <a name="person_children"></a>1.1. [Optional] Property `Person > person > children`
 
@@ -61,7 +61,7 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | [siblings](#person_siblings)                                              |
+| **Defined in**            | recursive_two_files2.json#/definitions/person                             |
 |                           |                                                                           |
 
 **Description:** Person definition from second file. Not the same!
@@ -71,7 +71,7 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | recursive_two_files2.json#/definitions/person                             |
+| **Same definition as**    | [person_children_items](#person_children_items)                           |
 |                           |                                                                           |
 
 **Description:** Person definition from second file. Not the same!

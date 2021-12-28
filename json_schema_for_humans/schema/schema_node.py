@@ -27,6 +27,8 @@ class SchemaNode:
         literal: Optional[Union[str, int, bool]] = None,
         keywords: Dict[str, Union["SchemaNode", str, List[str]]] = None,
         array_items: List["SchemaNode"] = None,
+        array_items_def: Optional["SchemaNode"] = None,
+        tuple_validation_items: Optional[List["SchemaNode"]] = None,
         links_to: "SchemaNode" = None,
         refers_to: "SchemaNode" = None,
         is_displayed: bool = True,
@@ -68,6 +70,10 @@ class SchemaNode:
                         Useful for things like description, types, const, enum, etc.
         :param keywords: If the schema is a dict, this will be filled. Otherwise, this stays empty
         :param array_items: If the schema is an array, this will be filled. Otherwise, this stays empty
+        :param array_items_def: Definition of the array items that this node can contain
+        :param tuple_validation_items: Like array_items_def, but defined by position (i.e the element at position i in
+                                       a JSON file respecting the schema must respect the schema at position i of this
+                                       array)
         :param links_to: If the same node is documented elsewhere, the other SchemaNode that documents it
         :param refers_to: If there is a $ref, this should contain the SchemaNode object for it
         :param is_displayed: Instructs the templates if this part should be fully documented.
@@ -95,6 +101,8 @@ class SchemaNode:
         # or is set but is not false (depends on self.additional_properties)
         self.no_additional_properties: bool = False
         self.pattern_properties: Dict[str, "SchemaNode"] = {}
+        self.array_items_def: Optional["SchemaNode"] = array_items_def
+        self.tuple_validation_items: List["SchemaNode"] = tuple_validation_items or []
 
     @property
     def explicit_no_additional_properties(self) -> bool:
