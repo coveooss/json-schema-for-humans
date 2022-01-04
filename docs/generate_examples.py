@@ -71,7 +71,7 @@ MD_EXAMPLE_MD_TEMPLATE = """
 
 <details>
 <summary>{title} - Click here to expand the rendered result...</summary>
-<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/{file_url}" target="_blank">Open it in github</a>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/{file_url}" target="_blank">Open it in github</a>
 
 [{file_url}]({file_url} ':include')
 </details>

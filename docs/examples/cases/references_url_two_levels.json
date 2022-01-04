@@ -5,7 +5,7 @@
   "type": "object",
   "properties": {
     "described": {
-      "$ref": "https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/docs/examples/cases/description_from_ref.json"
+      "$ref": "https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/description_from_ref.json"
     }
   }
 }

@@ -12,18 +12,18 @@
 
 **Description:** Testing $ref with URL with YAML destination
 
-| Property               | Pattern | Type   | Deprecated | Definition                                                                                                                     | Title/Description |
-| ---------------------- | ------- | ------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
-| - [address](#address ) | No      | object | No         | In https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/docs/examples/cases/yaml.yaml#/definitions/address | -                 |
-|                        |         |        |            |                                                                                                                                |                   |
+| Property               | Pattern | Type   | Deprecated | Definition                                                                                                                   | Title/Description |
+| ---------------------- | ------- | ------ | ---------- | ---------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| - [address](#address ) | No      | object | No         | In https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/yaml.yaml#/definitions/address | -                 |
+|                        |         |        |            |                                                                                                                              |                   |
 
 ## <a name="address"></a>1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > address`
 
-| Type                      | `object`                                                                                                                    |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.")         |
-| **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/docs/examples/cases/yaml.yaml#/definitions/address |
-|                           |                                                                                                                             |
+| Type                      | `object`                                                                                                                  |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.")       |
+| **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/yaml.yaml#/definitions/address |
+|                           |                                                                                                                           |
 
 | Property                                     | Pattern | Type   | Deprecated | Definition | Title/Description |
 | -------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |

@@ -3,7 +3,7 @@ name: Publish to Pypi
 on:
   push:
     branches:
-      - master
+      - main
 
   workflow_dispatch:
     inputs:
@@ -30,5 +30,5 @@ jobs:
         with:
           project-name: json-schema-for-humans
           pypi-token: ${{ secrets.PYPI_TOKEN }}
-          pre-release: ${{ github.ref != 'refs/heads/master' }}
-          dry-run: ${{ github.ref != 'refs/heads/master' && github.event.inputs.publish != 'true' }}
+          pre-release: ${{ github.ref != 'refs/heads/main' }}
+          dry-run: ${{ github.ref != 'refs/heads/main' && github.event.inputs.publish != 'true' }}

@@ -15,11 +15,11 @@
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                                                                      |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.")                                                     |
-| **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/master/docs/examples/cases/basic.json#/properties/firstName |
-|                           |                                                                                                                               |
+| Type                      | `string`                                                                                                                    |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.")                                                   |
+| **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/basic.json#/properties/firstName |
+|                           |                                                                                                                             |
 
 **Description:** The person's first name.
 
