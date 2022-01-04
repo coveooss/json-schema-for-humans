@@ -217,7 +217,12 @@ def test_array() -> None:
 
     tests.html_schema_doc_asserts.assert_property_names(soup, ["fruits", "vegetables", "veggieName", "veggieLike"])
     tests.html_schema_doc_asserts.assert_descriptions(
-        soup, ["A schema with an array", "The name of the vegetable.", "Do I like this vegetable?",],
+        soup,
+        [
+            "A schema with an array",
+            "The name of the vegetable.",
+            "Do I like this vegetable?",
+        ],
     )
     tests.html_schema_doc_asserts.assert_types(
         soup, ["object", "array of string", "string", "array", "object", "string", "boolean"]
@@ -240,7 +245,8 @@ def test_with_definitions():
     soup = generate_case("with_definitions")
 
     tests.html_schema_doc_asserts.assert_property_names(
-        soup, ["billing_address", "street_address", "city", "state", "futureProperty", "shipping_address"],
+        soup,
+        ["billing_address", "street_address", "city", "state", "futureProperty", "shipping_address"],
     )
     tests.html_schema_doc_asserts.assert_types(
         soup, ["object", "object", "string", "string", "string", "null", "object"]
@@ -362,7 +368,14 @@ def test_description_markdown_with_default_options() -> None:
 
 def test_description_markdown_with_custom_options() -> None:
     """Same as "test_description_markdown_with_default_options" but with option to render list"""
-    soup = generate_case("description_markdown", GenerationConfiguration(markdown_options={"cuddled-lists": True,}),)
+    soup = generate_case(
+        "description_markdown",
+        GenerationConfiguration(
+            markdown_options={
+                "cuddled-lists": True,
+            }
+        ),
+    )
 
     assert (
         str(soup.find("span", class_="description"))
@@ -464,7 +477,8 @@ def test_pattern_properties_html_id() -> None:
     )
 
     tests.html_schema_doc_asserts.assert_descriptions(
-        soup, ["Description 4", "Description 1", "Description 2", "Description 3"],
+        soup,
+        ["Description 4", "Description 1", "Description 2", "Description 3"],
     )
 
     property_divs = soup.find_all("div", class_="property-definition-div")
@@ -503,7 +517,8 @@ def test_yaml() -> None:
 
     # Order of properties is only preserved in Python 3.7+
     tests.html_schema_doc_asserts.assert_property_names(
-        soup, ["billing_address", "street_address", "city", "state", "shipping_address"],
+        soup,
+        ["billing_address", "street_address", "city", "state", "shipping_address"],
     )
     tests.html_schema_doc_asserts.assert_types(soup, ["object", "object", "string", "string", "string", "object"])
     tests.html_schema_doc_asserts.assert_required(soup, [False, True, True, True, False])

@@ -217,10 +217,12 @@ def highlight_json_example(example_text: str) -> str:
     """Filter. Return an highlighted version of the provided JSON text"""
     return highlight(example_text, JavascriptLexer(), HtmlFormatter())
 
+
 def yaml_example(example_text: str) -> str:
     """Filter. Return a YAML version of the provided JSON text"""
     yaml_text = yaml.dump(json.loads(example_text), allow_unicode=True)
     return yaml_text
+
 
 def highlight_yaml_example(example_text: str) -> str:
     """Filter. Return a highlighted YAML version of the provided JSON text"""
