@@ -51,7 +51,7 @@ class SchemaToRender:
             if isinstance(self.schema_file, Path)
             else self.schema_file
         )
-        intermediate_schema = build_intermediate_representation(schema_file, loaded_schemas)
+        intermediate_schema = build_intermediate_representation(schema_file, template_renderer.config, loaded_schemas)
         rendered = template_renderer.render(intermediate_schema)
 
         if self.should_write_to_disk:

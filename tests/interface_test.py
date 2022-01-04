@@ -126,6 +126,7 @@ def test_generate_multiple_path_inputs(tmp_path: Path) -> None:
 
     template_renderer = MagicMock(TemplateRenderer)
     template_renderer.render.return_value = ""
+    template_renderer.config = GenerationConfiguration()
     generated = generate_schemas_doc(schemas, template_renderer)
 
     assert generated is not None
@@ -142,6 +143,7 @@ def test_generate_no_file_output(tmp_path: Path, monkeypatch: MonkeyPatch) -> No
     schemas = get_schemas_to_render(test_case_path, None, "md")
     template_renderer = MagicMock(TemplateRenderer)
     template_renderer.render.return_value = ""
+    template_renderer.config = GenerationConfiguration()
     generated = generate_schemas_doc(schemas, template_renderer)
 
     assert list(generated.keys()) == [test_case_file_name]

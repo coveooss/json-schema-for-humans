@@ -10,13 +10,18 @@ import yaml
 
 from json_schema_for_humans import const
 from json_schema_for_humans.const import FileLikeType
+from json_schema_for_humans.generation_configuration import GenerationConfiguration
 from json_schema_for_humans.jinja_filters import escape_property_name_for_id
 from json_schema_for_humans.schema.schema_keyword import SchemaKeyword
 from json_schema_for_humans.schema.schema_node import SchemaNode
 
+ROOT_ID = "__root__"
+
 
 def build_intermediate_representation(
-    schema_path: Union[str, Path, FileLikeType], loaded_schemas: Optional[Dict[str, Any]] = None
+    schema_path: Union[str, Path, FileLikeType],
+    config: GenerationConfiguration,
+    loaded_schemas: Optional[Dict[str, Any]] = None,
 ) -> SchemaNode:
     """Build a SchemaNode object representing a JSON schema with added metadata to help rendering as a documentation.
 
@@ -34,6 +39,7 @@ def build_intermediate_representation(
     absolute_schema_path = _get_schema_path(schema_path)
 
     intermediate_representation = _build_node(
+        config,
         resolved_references,
         reference_users,
         loaded_schemas,
@@ -56,19 +62,10 @@ def _record_ref(
 ) -> None:
     """Record that the node is describing the schema at the provided path"""
     path_to_element_str = "/".join(str(e) for e in path_to_element)
-    if not path_to_element_str:
-        # Special case for the root schema
-        path_to_element_str = "__root__"
     resolved_references[schema_real_path][path_to_element_str] = current_node
 
 
-def _find_ref(
-    found_reference, referenced_schema_path, reference_users, resolved_references, anchor_part, current_node
-) -> Tuple[Optional[SchemaNode], Optional[SchemaNode]]:
-    reference_users_for_this_schema = reference_users[found_reference.file][anchor_part]
-    reference_users[referenced_schema_path][anchor_part].append(current_node)
-
-    # Detect infinite loop
+def _has_recursive_reference(reference_users: Dict[str, Dict[str, List[SchemaNode]]], current_node: SchemaNode) -> bool:
     ref_by_file = current_node.file
     ref_by_path = current_node.flat_path
     found_users = reference_users.get(ref_by_file, {}).get(ref_by_path)
@@ -76,14 +73,42 @@ def _find_ref(
         new_found_users = []
         for found_user in found_users:
             if found_user == current_node:
-                # Huh oh, this node refers to the current node, let's break the cycle!
-                return None, None
+                return True
             ref_by_file = found_user.file
             ref_by_path = found_user.flat_path
             found_users_for_this = reference_users.get(ref_by_file, {}).get(ref_by_path)
             if found_users_for_this:
                 new_found_users += found_users_for_this
         found_users = new_found_users
+    return False
+
+
+def _has_reference_to_parent(referenced_schema_path: str, anchor_part: str, current_node: SchemaNode) -> bool:
+    if referenced_schema_path != current_node.file:
+        return False
+    split_anchor_part = anchor_part.split("/")
+    if len(split_anchor_part) > len(current_node.path_to_element):
+        return False
+    for i in range(len(split_anchor_part)):
+        if split_anchor_part[i] != current_node.path_to_element[i]:
+            return False
+    return True
+
+
+def _find_ref(
+    found_reference: SchemaNode,
+    referenced_schema_path: str,
+    reference_users: Dict[str, Dict[str, List[SchemaNode]]],
+    resolved_references: Dict[str, Dict[str, SchemaNode]],
+    anchor_part: str,
+    current_node: SchemaNode,
+) -> Tuple[Optional[SchemaNode], Optional[SchemaNode]]:
+    reference_users_for_this_schema = reference_users[found_reference.file][anchor_part]
+
+    # Detect infinite loop
+    if _has_recursive_reference(reference_users, current_node):
+        # Huh oh, this node refers to the current node, let's break the cycle!
+        return None, None
 
     # Check if the node has already been documented (also for infinite loops)
     already_resolved = resolved_references.get(referenced_schema_path, {}).get(anchor_part, {})
@@ -130,7 +155,7 @@ def _find_ref(
             return other_user, found_reference
         elif i_am_better:
             # The other referencing node is more nested, it should be hidden and link to the current node
-            # The current node will documented the element referenced by both
+            # The current node will document the element referenced by both
             other_user.is_displayed = False
             other_user.links_to = current_node
             current_node.is_displayed = True
@@ -145,6 +170,7 @@ def _find_ref(
 
 
 def _resolve_ref(
+    config: GenerationConfiguration,
     resolved_references: Dict[str, Dict[str, SchemaNode]],
     reference_users: Dict[str, Dict[str, List[SchemaNode]]],
     current_node: SchemaNode,
@@ -175,7 +201,7 @@ def _resolve_ref(
     - If there is a referenced element that was already encountered:
       - Check for circular references, if there are, return (None, None)
       - Check if another built node references the same one. If that node is closer to the user, "links_to" will be
-        that node. Otherwise "links_to" is the same as "refers_to". "refers_to" is the reference that was found.
+        that node. Otherwise, "links_to" is the same as "refers_to". "refers_to" is the reference that was found.
     """
     if not isinstance(schema, Dict) or const.REF not in schema:
         return None, None
@@ -187,10 +213,10 @@ def _resolve_ref(
     # Reference found, resolve the path (format "#/a/b/c", "file.json#/a/b/c", or "file.json")
     if "#" not in reference_path:
         uri_part = reference_path
-        anchor_part = ""
+        anchor_part = ROOT_ID
     else:
         uri_part, anchor_part = reference_path.split("#", maxsplit=1)
-        anchor_part = anchor_part.strip("/") or "__root__"  # Special case for the root schema
+        anchor_part = anchor_part.strip("/") or ROOT_ID  # Special case for the root schema
 
     # Resolve file path portion of reference
     if uri_part:
@@ -205,17 +231,29 @@ def _resolve_ref(
 
     # Check if already loaded
     found_reference = resolved_references[referenced_schema_path].get(anchor_part)
+    reference_users[referenced_schema_path][anchor_part].append(current_node)
 
     if found_reference and found_reference != current_node:
-        return _find_ref(
-            found_reference, referenced_schema_path, reference_users, resolved_references, anchor_part, current_node
-        )
-    else:
-        reference_users[referenced_schema_path][anchor_part].append(current_node)
+        if config.link_to_reused_ref:
+            return _find_ref(
+                found_reference,
+                referenced_schema_path,
+                reference_users,
+                resolved_references,
+                anchor_part,
+                current_node,
+            )
+        else:
+            if _has_recursive_reference(reference_users, current_node) or _has_reference_to_parent(
+                referenced_schema_path, anchor_part, current_node
+            ):
+                current_node.is_displayed = False
+                return found_reference, found_reference
 
     # Not an existing reference, so it shall be built
     referenced_schema_path_to_element = anchor_part.split("/")
     new_reference = _build_node(
+        config,
         resolved_references,
         reference_users,
         loaded_schemas,
@@ -290,12 +328,15 @@ def _load_schema(
             except (KeyError, ValueError):
                 # KeyError: The part looks like a int but it is a string (property named "0" for example
                 # ValueError: Normal case, the path part is a string
+                if path_part == ROOT_ID:
+                    return loaded_schema
                 loaded_schema = loaded_schema[path_part]
 
     return loaded_schema
 
 
 def _build_node(
+    config: GenerationConfiguration,
     resolved_references: Dict[str, Dict[str, SchemaNode]],
     reference_users: Dict[str, Dict[str, List[SchemaNode]]],
     loaded_schemas: Dict[str, Any],
@@ -334,6 +375,8 @@ def _build_node(
     )
     if html_id == "root":
         html_id = ""
+    if not path_to_element:
+        path_to_element = [ROOT_ID]
 
     _record_ref(resolved_references, schema_file_path, path_to_element, new_node)
 
@@ -366,6 +409,7 @@ def _build_node(
                     new_html_id += "_" if html_id else ""
                     new_html_id += escape_property_name_for_id(new_property_name)
                     new_node.properties[new_property_name] = _build_node(
+                        config=config,
                         resolved_references=resolved_references,
                         reference_users=reference_users,
                         loaded_schemas=loaded_schemas,
@@ -386,6 +430,7 @@ def _build_node(
                     new_html_id += "_" if html_id else ""
                     new_html_id += SchemaKeyword.ADDITIONAL_PROPERTIES.value
                     new_node.additional_properties = _build_node(
+                        config=config,
                         resolved_references=resolved_references,
                         reference_users=reference_users,
                         loaded_schemas=loaded_schemas,
@@ -405,6 +450,7 @@ def _build_node(
                     new_html_id += f"pattern{pattern_id}"
                     pattern_id += 1
                     new_node.pattern_properties[new_property_name] = _build_node(
+                        config=config,
                         resolved_references=resolved_references,
                         reference_users=reference_users,
                         loaded_schemas=loaded_schemas,
@@ -425,6 +471,7 @@ def _build_node(
                         item_breadcrumb_name = f"{breadcrumb_name} item {i}"
                         new_node.tuple_validation_items.append(
                             _build_node(
+                                config=config,
                                 resolved_references=resolved_references,
                                 reference_users=reference_users,
                                 loaded_schemas=loaded_schemas,
@@ -441,6 +488,7 @@ def _build_node(
                 else:
                     breadcrumb_name = f"{breadcrumb_name} items"
                     new_node.array_items_def = _build_node(
+                        config=config,
                         resolved_references=resolved_references,
                         reference_users=reference_users,
                         loaded_schemas=loaded_schemas,
@@ -467,6 +515,7 @@ def _build_node(
                         pattern_id += 1
 
                 keywords[schema_key] = _build_node(
+                    config=config,
                     resolved_references=resolved_references,
                     reference_users=reference_users,
                     loaded_schemas=loaded_schemas,
@@ -488,6 +537,7 @@ def _build_node(
 
             array_items.append(
                 _build_node(
+                    config=config,
                     resolved_references=resolved_references,
                     reference_users=reference_users,
                     loaded_schemas=loaded_schemas,
@@ -506,7 +556,7 @@ def _build_node(
         new_node.literal = schema
 
     new_node.links_to, new_node.refers_to = _resolve_ref(
-        resolved_references, reference_users, new_node, schema, loaded_schemas
+        config, resolved_references, reference_users, new_node, schema, loaded_schemas
     )
 
     return new_node

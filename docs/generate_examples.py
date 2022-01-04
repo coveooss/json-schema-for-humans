@@ -7,12 +7,11 @@ from typing import TypedDict, List
 
 import yaml
 
-from json_schema_for_humans.const import FileLikeType
-
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
 PARENT_DIR = os.path.abspath(os.path.dirname(CURRENT_DIR))
 sys.path.insert(0, PARENT_DIR)
 
+from json_schema_for_humans.const import FileLikeType
 from json_schema_for_humans.generate import generate_from_filename
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
 

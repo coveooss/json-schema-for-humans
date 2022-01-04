@@ -2000,6 +2000,64 @@ the description of an attribute
 [examples/examples_md_nested_with_badges/ref_merge.md](examples/examples_md_nested_with_badges/ref_merge.md ':include')
 </details>
 
+## --ref_with_tabs--
+### ref_with_tabs
+
+
+<details>
+<summary>Json schema - Click here to expand source code...</summary>
+
+[examples/cases/ref_with_tabs.json](examples/cases/ref_with_tabs.json ':include :type=code')
+</details>
+
+
+<details>
+<summary>JS template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/ref_with_tabs.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_default/ref_with_tabs.html](examples/examples_js_default/ref_with_tabs.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Flat template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/ref_with_tabs.html" target="_blank">Open it in full page</a>
+
+[examples/examples_flat_default/ref_with_tabs.html](examples/examples_flat_default/ref_with_tabs.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Markdown without badge template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_default/ref_with_tabs.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_default/ref_with_tabs.md](examples/examples_md_default/ref_with_tabs.md ':include')
+</details>
+
+
+<details>
+<summary>Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_with_badges/ref_with_tabs.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_with_badges/ref_with_tabs.md](examples/examples_md_with_badges/ref_with_tabs.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown without badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_nested_default/ref_with_tabs.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_default/ref_with_tabs.md](examples/examples_md_nested_default/ref_with_tabs.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/master/docs/examples/examples_md_nested_with_badges/ref_with_tabs.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_with_badges/ref_with_tabs.md](examples/examples_md_nested_with_badges/ref_with_tabs.md ':include')
+</details>
+
 ## --reference_int--
 ### reference_int
 
