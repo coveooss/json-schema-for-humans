@@ -2934,5 +2934,63 @@ the description of an attribute
 [examples/examples_md_nested_with_badges/with_special_chars.md](examples/examples_md_nested_with_badges/with_special_chars.md ':include')
 </details>
 
+## --with_urlencoded_anchor--
+### with_urlencoded_anchor
+
+
+<details>
+<summary>Json schema - Click here to expand source code...</summary>
+
+[examples/cases/with_urlencoded_anchor.json](examples/cases/with_urlencoded_anchor.json ':include :type=code')
+</details>
+
+
+<details>
+<summary>JS template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/with_urlencoded_anchor.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_default/with_urlencoded_anchor.html](examples/examples_js_default/with_urlencoded_anchor.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Flat template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/with_urlencoded_anchor.html" target="_blank">Open it in full page</a>
+
+[examples/examples_flat_default/with_urlencoded_anchor.html](examples/examples_flat_default/with_urlencoded_anchor.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Markdown without badge template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_default/with_urlencoded_anchor.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_default/with_urlencoded_anchor.md](examples/examples_md_default/with_urlencoded_anchor.md ':include')
+</details>
+
+
+<details>
+<summary>Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_with_badges/with_urlencoded_anchor.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_with_badges/with_urlencoded_anchor.md](examples/examples_md_with_badges/with_urlencoded_anchor.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown without badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_nested_default/with_urlencoded_anchor.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_default/with_urlencoded_anchor.md](examples/examples_md_nested_default/with_urlencoded_anchor.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_nested_with_badges/with_urlencoded_anchor.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_with_badges/with_urlencoded_anchor.md](examples/examples_md_nested_with_badges/with_urlencoded_anchor.md ':include')
+</details>
+
 
 <!-- select:end -->
