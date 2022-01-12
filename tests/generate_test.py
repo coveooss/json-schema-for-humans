@@ -405,6 +405,14 @@ def test_with_examples() -> None:
     ]
 
 
+def test_with_urlencoded_anchor() -> None:
+    soup = generate_case("with_urlencoded_anchor")
+    property_names = soup.find_all("span", class_=["property-name"])
+    property_names_text = [pn.text for pn in property_names]
+    assert "lowerBound" in property_names_text
+    assert "upperBound" in property_names_text
+
+
 def test_with_yaml_examples() -> None:
     soup = generate_case("with_examples", GenerationConfiguration(examples_as_yaml=True))
 

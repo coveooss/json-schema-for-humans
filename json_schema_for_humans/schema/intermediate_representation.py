@@ -1,6 +1,7 @@
 import copy
 import json
 import os
+import urllib.parse
 from collections import defaultdict
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple, Union
@@ -216,6 +217,7 @@ def _resolve_ref(
         anchor_part = ROOT_ID
     else:
         uri_part, anchor_part = reference_path.split("#", maxsplit=1)
+        anchor_part = urllib.parse.unquote(anchor_part)
         anchor_part = anchor_part.strip("/") or ROOT_ID  # Special case for the root schema
 
     # Resolve file path portion of reference

@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "dss2-SigningTimeInfoType": {
+      "$xsd-type": "SigningTimeInfoType",
+      "$xsd-full-type": "dss2:SigningTimeInfoType",
+      "type": "object",
+      "properties": {
+        "signingTime": {
+          "type": "integer",
+          "format": "utc-millisec"
+        },
+        "signingTimeBounds": {
+          "$ref": "#/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries"
+        }
+      },
+      "required": [
+        "signingTime"
+      ]
+    },
+    "dss2-SigningTimeInfoType:SigningTimeBoundaries": {
+      "$xsd-type": "",
+      "$xsd-full-type": "",
+      "type": "object",
+      "properties": {
+        "lowerBound": {
+          "type": "integer",
+          "format": "utc-millisec"
+        },
+        "upperBound": {
+          "type": "integer",
+          "format": "utc-millisec"
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "signingTimeInfo": {
+      "$ref": "#/definitions/dss2-SigningTimeInfoType"
+    }
+  }
+}
