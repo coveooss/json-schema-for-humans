@@ -1,5 +1,5 @@
 from typing import Dict, List, Union
-from urllib.parse import quote_plus
+from urllib.parse import quote_plus, quote
 
 import jinja2
 
@@ -298,9 +298,9 @@ class MarkdownTemplate(object):
         if self.config.template_md_options.get("badge_as_image") and not show_text:
             value_str = ""
             if value and len(value) > 0:
-                value_str = "-" + quote_plus(value)
-            name = quote_plus(name)
-            color = quote_plus(color)
+                value_str = "-" + quote(value)
+            name = quote(name)
+            color = quote(color)
             return f"![badge](https://img.shields.io/badge/{name}{value_str}-{color})"
         else:
             if value and len(value) > 0:
