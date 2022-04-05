@@ -17,6 +17,7 @@ classifiers = [
 ]
 include = [
     "json_schema_for_humans/*.py",
+    "json_schema_for_humans/schema/*.py",
     "json_schema_for_humans/templates/**"
 ]
 
