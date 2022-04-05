@@ -22,7 +22,7 @@ include = [
 
 
 [tool.poetry.dependencies]
-python = "^3.6.2"
+python = "^3.7"
 click = "^8.0.1"
 dataclasses = { version = "^0.6", python = "<3.7" }
 dataclasses-json = "^0.5.6"
