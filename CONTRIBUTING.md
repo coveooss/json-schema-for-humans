@@ -4,7 +4,7 @@ Contributions are more than welcome! Don't hesitate to open an incomplete PR to 
 
 ## Python versions
 
-The library currently supports Python versions 3.6+
+The library currently supports Python versions 3.7+
 
 ## Install dependencies
 
