@@ -20,6 +20,10 @@
             <span class="badge badge-dark value-type">Type: {{ type_name }}</span>
         {%- endif -%}
 
+        {%- if schema.format -%}
+            <span class="badge badge-info value-type">Format: {{ schema.format }}</span>
+        {%- endif -%}
+
         {# Display default #}
         {%- set default_value = schema.default_value -%}
         {%- if default_value -%}
