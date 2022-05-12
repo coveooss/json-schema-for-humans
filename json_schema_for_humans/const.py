@@ -18,6 +18,7 @@ EXAMPLES = "examples"
 ITEMS = "items"
 TYPE = "type"
 REF = "$ref"
+FORMAT = "format"
 
 MULTIPLE_OF = "multipleOf"
 MAXIMUM = "maximum"

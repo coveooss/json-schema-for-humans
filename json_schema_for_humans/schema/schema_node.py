@@ -229,6 +229,14 @@ class SchemaNode:
         return possible_default
 
     @property
+    def format(self) -> Optional[str]:
+        format_val = self.keywords.get(const.FORMAT)
+        if format_val:
+            return format_val.literal
+        return None
+
+
+    @property
     def description(self) -> str:
         description = ""
         description_node = self.keywords.get(const.DESCRIPTION)

@@ -27,3 +27,4 @@ class SchemaKeyword(Enum):
     PROPERTIES = "properties"
     PATTERN_PROPERTIES = "patternProperties"
     ADDITIONAL_PROPERTIES = "additionalProperties"
+    FORMAT = "format"
