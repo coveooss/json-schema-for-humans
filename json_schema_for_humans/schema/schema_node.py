@@ -235,7 +235,6 @@ class SchemaNode:
             return format_val.literal
         return None
 
-
     @property
     def description(self) -> str:
         description = ""
