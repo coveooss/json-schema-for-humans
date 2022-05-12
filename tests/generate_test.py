@@ -71,6 +71,7 @@ def test_references() -> None:
         soup,
         [
             "a_gift",
+            "file_prefix",
             "anchor_with_slash",
             "propertyA",
             "anchor_no_slash",
@@ -93,6 +94,7 @@ def test_references() -> None:
         [
             "Testing $ref",
             "A gift, or is it?",
+            "A gift, or is it?",
             "Description for object_def/items/propertyA",
             "Description for array_def",
             "Description for string_def",
@@ -108,6 +110,7 @@ def test_references() -> None:
         [
             "object",  # root
             "string",  # a_gift
+            "string",  # file_prefix
             "object",  # anchor_with_slash
             "string",  # anchor_with_slash -> propertyA
             "array of string",  # anchor_no_slash
