@@ -39,6 +39,9 @@
     "a_gift": {
       "$ref": "#/definitions/gift"
     },
+    "file_prefix": {
+      "$ref": "#/definitions/gift"
+    },
     "anchor_with_slash": {
       "$ref": "#/definitions/object_def"
     },
