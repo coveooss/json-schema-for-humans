@@ -124,6 +124,7 @@ The following are supported:
 - Types
 - Regular expressions
 - String length
+- String format
 - Numeric types multiples and range
 - Constant and enumerated values
 - Required properties
@@ -135,7 +136,6 @@ The following are supported:
 - Conditional subschemas
 
 These are **not** supported at the moment (PRs welcome!):
-- String format
 - Property names and size
 - Property dependencies
 - Media
