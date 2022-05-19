@@ -34,24 +34,21 @@
 
 ### <a name="address_street_address"></a>1.1. [Required] Property `root > address > street_address`
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ### <a name="address_city"></a>1.2. [Required] Property `root > address > city`
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ### <a name="address_state"></a>1.3. [Required] Property `root > address > state`
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

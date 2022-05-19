@@ -19,10 +19,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** Code property
 
@@ -35,10 +34,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `array`                                                                                                             |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `array` |
+| ---- | ------- |
+|      |         |
 
 **Description:** RecursiveArray property
 
@@ -60,10 +58,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `array of object`                                                                                                   |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `array of object` |
+| ---- | ----------------- |
+|      |                   |
 
 **Description:** DecoratedRecursiveArray property
 

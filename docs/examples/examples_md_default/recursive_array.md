@@ -19,10 +19,9 @@
 
 ## <a name="person"></a>1. [Optional] Property `Person > person`
 
-| Type                      | `array`                                                                   |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `array` |
+| ---- | ------- |
+|      |         |
 
 **Description:** A list of people
 
@@ -57,10 +56,9 @@
 
 #### <a name="person_items_children"></a>1.1.1. Property `Person > person > person items > children`
 
-| Type                      | `array`                                                                   |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `array` |
+| ---- | ------- |
+|      |         |
 
 **Description:** The children they had
 

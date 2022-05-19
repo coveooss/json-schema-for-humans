@@ -38,10 +38,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 </blockquote>
 </details>
@@ -52,10 +51,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 </blockquote>
 </details>
@@ -66,10 +64,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 </blockquote>
 </details>
@@ -132,10 +129,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `number`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `number` |
+| ---- | -------- |
+|      |          |
 
 </blockquote>
 </details>
@@ -159,10 +155,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `boolean`                                                                 |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `boolean` |
+| ---- | --------- |
+|      |           |
 
 </blockquote>
 </details>

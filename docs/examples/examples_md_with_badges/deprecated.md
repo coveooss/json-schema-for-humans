@@ -40,10 +40,9 @@
 
 ## <a name="not_deprecated"></a>3. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > not_deprecated`
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

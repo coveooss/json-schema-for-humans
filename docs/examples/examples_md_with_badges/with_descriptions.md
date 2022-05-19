@@ -44,24 +44,21 @@
 
 ### <a name="shipping_address_street_address"></a>1.1. ![badge](https://img.shields.io/badge/Required-blue) Property `Delivery Schema > shipping_address > street_address`
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ### <a name="shipping_address_city"></a>1.2. ![badge](https://img.shields.io/badge/Required-blue) Property `Delivery Schema > shipping_address > city`
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ### <a name="shipping_address_state"></a>1.3. ![badge](https://img.shields.io/badge/Required-blue) Property `Delivery Schema > shipping_address > state`
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ## <a name="billing_address"></a>2. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Delivery Schema > billing_address`
 
@@ -104,10 +101,9 @@
 
 #### <a name="delivery_info_oneOf_i0_price"></a>3.1.1. Property `Delivery Schema > delivery_info > oneOf > item 0 > price`
 
-| Type                      | `number`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `number` |
+| ---- | -------- |
+|      |          |
 
 ### <a name="delivery_info_oneOf_i1"></a>3.2. Property `Delivery Schema > delivery_info > oneOf > gift`
 
@@ -126,10 +122,9 @@
 
 #### <a name="delivery_info_oneOf_i1_with_wrap"></a>3.2.1. Property `Delivery Schema > delivery_info > oneOf > item 1 > with_wrap`
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `boolean` |
+| ---- | --------- |
+|      |           |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

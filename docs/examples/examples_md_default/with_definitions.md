@@ -36,31 +36,27 @@
 
 ### <a name="billing_address_street_address"></a>1.1. [Required] Property `root > billing_address > street_address`
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ### <a name="billing_address_city"></a>1.2. [Required] Property `root > billing_address > city`
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ### <a name="billing_address_state"></a>1.3. [Required] Property `root > billing_address > state`
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ### <a name="billing_address_futureProperty"></a>1.4. [Optional] Property `root > billing_address > futureProperty`
 
-| Type                      | `null`                                                                    |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `null` |
+| ---- | ------ |
+|      |        |
 
 ## <a name="shipping_address"></a>2. [Optional] Property `root > shipping_address`
 

@@ -171,6 +171,7 @@ def test_additional_properties() -> None:
             "subType2",
             "subProp2",
             "Additional Properties",  # from subType2
+            "anInt",
             "Additional Properties",  # from top level of schema
             "propA",  # schema for top level additionalProperties
         ],
@@ -180,6 +181,7 @@ def test_additional_properties() -> None:
         [
             "A sub type with additionalProperties false.",
             "A sub type with additionalProperties true.",
+            "This is an integer, it should not show additional properties. (issue #132)",
             "additionalProperties schema.",
         ],
     )

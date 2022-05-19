@@ -26,19 +26,17 @@
 
 ## <a name="Code"></a>1. [Optional] Property `Bug > Code`
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** Code property
 
 ## <a name="RecursiveArray"></a>2. [Optional] Property `Bug > RecursiveArray`
 
-| Type                      | `array`                                                                   |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `array` |
+| ---- | ------- |
+|      |         |
 
 **Description:** RecursiveArray property
 
@@ -68,10 +66,9 @@
 
 ## <a name="DecoratedRecursiveArray"></a>3. [Optional] Property `Bug > DecoratedRecursiveArray`
 
-| Type                      | `array of object`                                                         |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `array of object` |
+| ---- | ----------------- |
+|      |                   |
 
 **Description:** DecoratedRecursiveArray property
 
@@ -104,10 +101,9 @@
 
 #### <a name="DecoratedRecursiveArray_items_SomeName"></a>3.1.1. Property `Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > SomeName`
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 #### <a name="DecoratedRecursiveArray_items_TheThing"></a>3.1.2. Property `Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > TheThing`
 

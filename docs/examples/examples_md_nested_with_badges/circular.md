@@ -28,12 +28,11 @@
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `"Default from c"`                                                                                                  |
-| **Defined in**            | #/definitions/b                                                                                                     |
-|                           |                                                                                                                     |
+| Type           | `string`           |
+| -------------- | ------------------ |
+| **Default**    | `"Default from c"` |
+| **Defined in** | #/definitions/b    |
+|                |                    |
 
 **Description:** Description from b
 

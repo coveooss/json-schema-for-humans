@@ -16,10 +16,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `array of string`                                                                                                   |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `array of string` |
+| ---- | ----------------- |
+|      |                   |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -39,10 +38,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `array`                                                                                                             |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `array` |
+| ---- | ------- |
+|      |         |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |

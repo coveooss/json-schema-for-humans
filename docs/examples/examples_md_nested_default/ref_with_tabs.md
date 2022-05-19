@@ -66,10 +66,9 @@
 
 **Title:** Signature
 
-| Type                      | `array`                                                                   |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `array` |
+| ---- | ------- |
+|      |         |
 
 **Description:** Unique top level property for Multiple Signatures. (multisignature)
 
@@ -103,10 +102,9 @@
 
 **Title:** Signature
 
-| Type                      | `array`                                                                   |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `array` |
+| ---- | ------- |
+|      |         |
 
 **Description:** Unique top level property for Signature Chains. (signaturechain)
 

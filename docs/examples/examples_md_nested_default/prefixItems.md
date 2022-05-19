@@ -15,10 +15,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `array`                                                                   |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `array` |
+| ---- | ------- |
+|      |         |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |

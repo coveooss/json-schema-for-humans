@@ -20,10 +20,9 @@
 
 **Title:** Person
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** the person's first name
 
@@ -47,10 +46,9 @@
 
 **Title:** Person
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** The person's last name.
 
@@ -71,10 +69,9 @@
 
 **Title:** Person
 
-| Type                      | `integer`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `integer` |
+| ---- | --------- |
+|      |           |
 
 **Description:** Age in years which must be equal to or greater than zero.
 

@@ -369,7 +369,8 @@ class MarkdownTemplate(object):
         if jinja_filters.deprecated(self.config, schema):
             type_info.append(["**Deprecated**", self.badge("Deprecated", "red")])
 
-        type_info.append(["**Additional properties**", self.additional_properties(schema)])
+        if schema.type_name == const.TYPE_OBJECT:
+            type_info.append(["**Additional properties**", self.additional_properties(schema)])
         if schema.default_value:
             type_info.append(["**Default**", f"`{default_value}`"])
         if schema.should_be_a_link(self.config):
@@ -396,7 +397,7 @@ class MarkdownTemplate(object):
                     additional_properties = f'[{badge_any_type}](# "Additional Properties of any type are allowed.")'
                     break
 
-        if len(additional_properties) == 0:
+        if not additional_properties:
             if schema.explicit_no_additional_properties:
                 badge_not_allowed = self.badge("Not allowed", "red")
                 additional_properties = f'[{badge_not_allowed}](# "Additional Properties not allowed.")'

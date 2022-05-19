@@ -20,12 +20,11 @@
 
 ## <a name="aProperty"></a>1. [Optional] Property `Test > aProperty`
 
-| Type                      | `enum (of string)`                                                        |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Default**               | `"Default from property"`                                                 |
-| **Defined in**            | #/definitions/aProperty                                                   |
-|                           |                                                                           |
+| Type           | `enum (of string)`        |
+| -------------- | ------------------------- |
+| **Default**    | `"Default from property"` |
+| **Defined in** | #/definitions/aProperty   |
+|                |                           |
 
 **Description:** This is the description from the definition
 
@@ -50,17 +49,15 @@ Must be one of:
 
 ### <a name="aDictPropertyARequired_a"></a>2.1. [Required] Property `Test > aDictPropertyARequired > a`
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ### <a name="aDictPropertyARequired_b"></a>2.2. [Required] Property `Test > aDictPropertyARequired > b`
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

@@ -14,11 +14,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/filled_string                                                                                         |
-|                           |                                                                                                                     |
+| Type           | `string`                    |
+| -------------- | --------------------------- |
+| **Defined in** | #/definitions/filled_string |
+|                |                             |
 
 **Description:** a filled string
 
@@ -36,11 +35,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | [name](#name)                                                                                                       |
-|                           |                                                                                                                     |
+| Type                   | `string`      |
+| ---------------------- | ------------- |
+| **Same definition as** | [name](#name) |
+|                        |               |
 
 **Description:** a filled string
 

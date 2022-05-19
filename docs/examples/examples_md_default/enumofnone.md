@@ -16,10 +16,9 @@
 
 ## <a name="enumOfNone"></a>1. [Optional] Property `Enum of None > enumOfNone`
 
-| Type                      | `enum (of null)`                                                          |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `enum (of null)` |
+| ---- | ---------------- |
+|      |                  |
 
 **Description:** enumOfNone
 

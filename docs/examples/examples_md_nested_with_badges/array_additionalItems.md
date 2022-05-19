@@ -17,10 +17,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `array`                                                                                                             |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `array` |
+| ---- | ------- |
+|      |         |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -52,10 +51,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `array`                                                                                                             |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `array` |
+| ---- | ------- |
+|      |         |
 
 **Description:** list of address lines
 
@@ -77,10 +75,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `array`                                                                                                             |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `array` |
+| ---- | ------- |
+|      |         |
 
 **Description:** This is not a valid JSON Schema, but let's do it anyway.
 

@@ -32,10 +32,9 @@
 
 ### <a name="signingTimeInfo_signingTime"></a>1.1. [Required] Property `root > signingTimeInfo > signingTime`
 
-| Type                      | `integer`                                                                 |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `integer` |
+| ---- | --------- |
+|      |           |
 
 ### <a name="signingTimeInfo_signingTimeBounds"></a>1.2. [Optional] Property `root > signingTimeInfo > signingTimeBounds`
 
@@ -53,17 +52,15 @@
 
 #### <a name="signingTimeInfo_signingTimeBounds_lowerBound"></a>1.2.1. [Optional] Property `root > signingTimeInfo > signingTimeBounds > lowerBound`
 
-| Type                      | `integer`                                                                 |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `integer` |
+| ---- | --------- |
+|      |           |
 
 #### <a name="signingTimeInfo_signingTimeBounds_upperBound"></a>1.2.2. [Optional] Property `root > signingTimeInfo > signingTimeBounds > upperBound`
 
-| Type                      | `integer`                                                                 |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `integer` |
+| ---- | --------- |
+|      |           |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

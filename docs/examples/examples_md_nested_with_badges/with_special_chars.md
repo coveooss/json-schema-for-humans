@@ -18,10 +18,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** Le prénom de la personne.
 
@@ -34,10 +33,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** Le nom de famille de la personne.
 
@@ -50,10 +48,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `integer`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `integer` |
+| ---- | --------- |
+|      |           |
 
 **Description:** L'âge en années qui doit être plus grand ou égal à 0.
 
@@ -71,10 +68,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Examples:** 
 

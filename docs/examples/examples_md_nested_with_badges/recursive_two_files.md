@@ -31,10 +31,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `array`                                                                                                             |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `array` |
+| ---- | ------- |
+|      |         |
 
 **Description:** The children they had
 

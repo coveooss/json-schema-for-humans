@@ -22,28 +22,25 @@
 
 ## <a name="pr_nom"></a>1. [Optional] Property `Personne > prénom`
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** Le prénom de la personne.
 
 ## <a name="nomDeFamille"></a>2. [Optional] Property `Personne > nomDeFamille`
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** Le nom de famille de la personne.
 
 ## <a name="a_ge"></a>3. [Optional] Property `Personne > âge`
 
-| Type                      | `integer`                                                                 |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `integer` |
+| ---- | --------- |
+|      |           |
 
 **Description:** L'âge en années qui doit être plus grand ou égal à 0.
 
@@ -54,10 +51,9 @@
 
 ## <a name="a0_de_quoi_d_autre"></a>4. [Optional] Property `Personne > 0 de quoi d'autre`
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Examples:** 
 

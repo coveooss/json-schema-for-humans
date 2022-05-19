@@ -18,12 +18,11 @@
 </summary>
 <blockquote>
 
-| Type                      | `enum (of string)`                                                        |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Default**               | `"Default from property"`                                                 |
-| **Defined in**            | #/definitions/aProperty                                                   |
-|                           |                                                                           |
+| Type           | `enum (of string)`        |
+| -------------- | ------------------------- |
+| **Default**    | `"Default from property"` |
+| **Defined in** | #/definitions/aProperty   |
+|                |                           |
 
 **Description:** This is the description from the definition
 
@@ -53,10 +52,9 @@ Must be one of:
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 </blockquote>
 </details>
@@ -67,10 +65,9 @@ Must be one of:
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 </blockquote>
 </details>

@@ -2,10 +2,9 @@
 
 **Title:** Array at top level
 
-| Type                      | `array of string`                                                         |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `array of string` |
+| ---- | ----------------- |
+|      |                   |
 
 **Description:** Sometimes there are no properties
 

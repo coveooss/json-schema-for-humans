@@ -16,10 +16,9 @@
 
 ## <a name="enumOfNone"></a>1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Enum of None > enumOfNone`
 
-| Type                      | `enum (of null)`                                                                                                    |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `enum (of null)` |
+| ---- | ---------------- |
+|      |                  |
 
 **Description:** enumOfNone
 

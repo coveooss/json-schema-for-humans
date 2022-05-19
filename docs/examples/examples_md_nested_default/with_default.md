@@ -17,11 +17,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `enum (of string)`                                                        |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Default**               | `"Linux"`                                                                 |
-|                           |                                                                           |
+| Type        | `enum (of string)` |
+| ----------- | ------------------ |
+| **Default** | `"Linux"`          |
+|             |                    |
 
 Must be one of:
 * "Windows"
@@ -37,11 +36,10 @@ Must be one of:
 </summary>
 <blockquote>
 
-| Type                      | `array of enum (of string)`                                               |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Default**               | `["white", "blue"]`                                                       |
-|                           |                                                                           |
+| Type        | `array of enum (of string)` |
+| ----------- | --------------------------- |
+| **Default** | `["white", "blue"]`         |
+|             |                             |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -61,11 +59,10 @@ Must be one of:
 </summary>
 <blockquote>
 
-| Type                      | `integer`                                                                 |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Default**               | `2`                                                                       |
-|                           |                                                                           |
+| Type        | `integer` |
+| ----------- | --------- |
+| **Default** | `2`       |
+|             |           |
 
 | Restrictions |        |
 | ------------ | ------ |

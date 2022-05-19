@@ -20,10 +20,9 @@
 
 ## <a name="latitude"></a>1. [Required] Property `Longitude and Latitude Values > latitude`
 
-| Type                      | `number`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `number` |
+| ---- | -------- |
+|      |          |
 
 | Restrictions |          |
 | ------------ | -------- |
@@ -33,10 +32,9 @@
 
 ## <a name="longitude"></a>2. [Required] Property `Longitude and Latitude Values > longitude`
 
-| Type                      | `number`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `number` |
+| ---- | -------- |
+|      |          |
 
 | Restrictions |           |
 | ------------ | --------- |

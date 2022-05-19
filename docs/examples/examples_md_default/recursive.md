@@ -33,10 +33,9 @@
 
 ### <a name="person_children"></a>1.1. [Optional] Property `Person > person > children`
 
-| Type                      | `array`                                                                   |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `array` |
+| ---- | ------- |
+|      |         |
 
 **Description:** The children they had
 

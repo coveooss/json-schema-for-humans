@@ -65,61 +65,55 @@ Configuration parameters can be provided in several ways:
 
 ## <a name="minify"></a>1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > minify`
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** Minify the output HTML document.
 
 ## <a name="description_is_markdown"></a>2. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > description_is_markdown`
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** Whether to consider the description as markdown and render it accordingly.
 
 ## <a name="expand_buttons"></a>3. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > expand_buttons`
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `false`                                                                                                             |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `false`   |
+|             |           |
 
 **Description:** Add an `Expand all` and a `Collapse all` button at the top of the generated documentation.
 
 ## <a name="show_breadcrumbs"></a>4. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > show_breadcrumbs`
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** For each property, show the relative place of that property in the schema.
 
 ## <a name="collapse_long_descriptions"></a>5. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > collapse_long_descriptions`
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** If a description is considered big, show only the beginning and add a `Read more` button.
 
 ## <a name="link_to_reused_ref"></a>6. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > link_to_reused_ref`
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** If several `$ref` points to the same definition, only render the documentation for this definition the first time. All other occurrences are replaced by an anchor link to the first occurrence. The first occurrence is the one that is the least nested from the top of the schema and appears first in that nesting level.
 
@@ -127,11 +121,10 @@ Configuration parameters can be provided in several ways:
 
 ## <a name="recursive_detection_depth"></a>7. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > recursive_detection_depth`
 
-| Type                      | `integer`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `25`                                                                                                                |
-|                           |                                                                                                                     |
+| Type        | `integer` |
+| ----------- | --------- |
+| **Default** | `25`      |
+|             |           |
 
 **Description:** *Advanced option*
 If `link_to_reused_ref` is false and a `$ref` in the schema refers to a parent of itself, we would get a `RecursionError` trying to render the documentation. To avoid this, each reference is checked for circular references.
@@ -142,21 +135,19 @@ In other words, if a schema has a deeply nested element that refers to itself, t
 
 ## <a name="deprecated_from_description"></a>8. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > deprecated_from_description`
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `false`                                                                                                             |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `false`   |
+|             |           |
 
 **Description:** Mark a property as deprecated (with a big red badge) if the description contains the string `[Deprecated`.
 
 ## <a name="default_from_description"></a>9. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > default_from_description`
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `false`                                                                                                             |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `false`   |
+|             |           |
 
 **Description:** Extract the default value of a property from the description like this: ``[Default `the_default_value`]``.
 
@@ -164,21 +155,19 @@ The default value from the "default" attribute will be used in priority.
 
 ## <a name="copy_css"></a>10. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > copy_css`
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** Copy `schema_doc.css` to the same directory as `RESULT_FILE` after generation.
 
 ## <a name="copy_js"></a>11. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > copy_js`
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** Copy `schema_doc.min.js` to the same directory as `RESULT_FILE` after generation.
 
@@ -186,21 +175,19 @@ This file contains the logic for the anchor links.
 
 ## <a name="templates_directory"></a>12. ![badge](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > templates_directory`~~
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Deprecated**            | ![badge](https://img.shields.io/badge/Deprecated-red)                                                               |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type           | `string`                                              |
+| -------------- | ----------------------------------------------------- |
+| **Deprecated** | ![badge](https://img.shields.io/badge/Deprecated-red) |
+|                |                                                       |
 
 **Description:** [Deprecated]
 
 ## <a name="template_name"></a>13. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_name`
 
-| Type                      | `enum (of string)`                                                                                                  |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `"js"`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `enum (of string)` |
+| ----------- | ------------------ |
+| **Default** | `"js"`             |
+|             |                    |
 
 **Description:** The name of the built-in template to use to render the documentation.
 
@@ -214,11 +201,10 @@ Must be one of:
 
 ## <a name="custom_template_path"></a>14. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > custom_template_path`
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `null`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `string` |
+| ----------- | -------- |
+| **Default** | `null`   |
+|             |          |
 
 **Description:** Path to a custom Jinja2 template file.
 
@@ -228,21 +214,19 @@ If no output file is specified, the extension of the template file will be used 
 
 ## <a name="show_toc"></a>15. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > show_toc`
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** Whether to render table of contents.
 
 ## <a name="examples_as_yaml"></a>16. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > examples_as_yaml`
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `false`                                                                                                             |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `false`   |
+|             |           |
 
 **Description:** Whether to display examples as YAML instead of JSON
 
@@ -290,11 +274,10 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 
 ### <a name="template_md_options_badge_as_image"></a>18.1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `false`                                                                                                             |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `false`   |
+|             |           |
 
 **Description:** if true generate badges(eg: optional, required) using embedded image (https://img.shields.io).
 
@@ -302,11 +285,10 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 
 ### <a name="template_md_options_show_heading_numbers"></a>18.2. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** if true generate heading numbers to correspond to table of contents.
 
@@ -314,11 +296,10 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 
 ### <a name="template_md_options_show_array_restrictions"></a>18.3. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** if true generate array restrictions section.
 
@@ -326,21 +307,19 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 
 ## <a name="with_footer"></a>19. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > with_footer`
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** Whether to show the footer linking to the library repo and with the generation datetime
 
 ## <a name="footer_show_time"></a>20. ![badge](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > footer_show_time`
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** Whether the footer should display the generation time
 

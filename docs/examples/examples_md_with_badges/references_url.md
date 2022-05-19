@@ -16,11 +16,10 @@
 
 ## <a name="firstName"></a>1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > firstName`
 
-| Type                      | `string`                                                                                                                    |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.")         |
-| **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/basic.json#/properties/firstName |
-|                           |                                                                                                                             |
+| Type           | `string`                                                                                                                    |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| **Defined in** | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/basic.json#/properties/firstName |
+|                |                                                                                                                             |
 
 **Description:** The person's first name.
 

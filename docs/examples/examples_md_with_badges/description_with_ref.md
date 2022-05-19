@@ -32,10 +32,9 @@
 
 ### <a name="outer_inner"></a>1.1. ![badge](https://img.shields.io/badge/Required-blue) Property `root > outer > inner`
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** inner description
 

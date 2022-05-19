@@ -16,10 +16,9 @@
 
 ## <a name="property1"></a>1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Hello > property1`
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** Line1
 Line2

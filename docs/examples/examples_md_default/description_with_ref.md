@@ -32,10 +32,9 @@
 
 ### <a name="outer_inner"></a>1.1. [Required] Property `root > outer > inner`
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** inner description
 

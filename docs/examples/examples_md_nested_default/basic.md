@@ -22,10 +22,9 @@
 
 **Title:** Person
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** The person's first name.
 
@@ -40,10 +39,9 @@
 
 **Title:** Person
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** The person's last name.
 
@@ -58,10 +56,9 @@
 
 **Title:** Person
 
-| Type                      | `integer`                                                                 |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `integer` |
+| ---- | --------- |
+|      |           |
 
 **Description:** Age in years which must be equal to or greater than zero.
 
@@ -98,10 +95,9 @@
 
 **Title:** no driver licence
 
-| Type                      | `null`                                                                    |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `null` |
+| ---- | ------ |
+|      |        |
 
 </blockquote>
 <blockquote>
@@ -110,10 +106,9 @@
 
 **Title:** driver licence id
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 </blockquote>
 

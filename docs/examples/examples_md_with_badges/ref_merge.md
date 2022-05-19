@@ -20,12 +20,11 @@
 
 ## <a name="aProperty"></a>1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Test > aProperty`
 
-| Type                      | `enum (of string)`                                                                                                  |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `"Default from property"`                                                                                           |
-| **Defined in**            | #/definitions/aProperty                                                                                             |
-|                           |                                                                                                                     |
+| Type           | `enum (of string)`        |
+| -------------- | ------------------------- |
+| **Default**    | `"Default from property"` |
+| **Defined in** | #/definitions/aProperty   |
+|                |                           |
 
 **Description:** This is the description from the definition
 
@@ -50,17 +49,15 @@ Must be one of:
 
 ### <a name="aDictPropertyARequired_a"></a>2.1. ![badge](https://img.shields.io/badge/Required-blue) Property `Test > aDictPropertyARequired > a`
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ### <a name="aDictPropertyARequired_b"></a>2.2. ![badge](https://img.shields.io/badge/Required-blue) Property `Test > aDictPropertyARequired > b`
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

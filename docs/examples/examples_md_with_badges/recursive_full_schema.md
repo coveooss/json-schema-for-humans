@@ -26,19 +26,17 @@
 
 ## <a name="Code"></a>1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Bug > Code`
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** Code property
 
 ## <a name="RecursiveArray"></a>2. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Bug > RecursiveArray`
 
-| Type                      | `array`                                                                                                             |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `array` |
+| ---- | ------- |
+|      |         |
 
 **Description:** RecursiveArray property
 
@@ -68,10 +66,9 @@
 
 ## <a name="DecoratedRecursiveArray"></a>3. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Bug > DecoratedRecursiveArray`
 
-| Type                      | `array of object`                                                                                                   |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `array of object` |
+| ---- | ----------------- |
+|      |                   |
 
 **Description:** DecoratedRecursiveArray property
 
@@ -104,10 +101,9 @@
 
 #### <a name="DecoratedRecursiveArray_items_SomeName"></a>3.1.1. Property `Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > SomeName`
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 #### <a name="DecoratedRecursiveArray_items_TheThing"></a>3.1.2. Property `Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > TheThing`
 

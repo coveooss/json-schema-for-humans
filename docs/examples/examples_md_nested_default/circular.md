@@ -28,12 +28,11 @@
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Default**               | `"Default from c"`                                                        |
-| **Defined in**            | #/definitions/b                                                           |
-|                           |                                                                           |
+| Type           | `string`           |
+| -------------- | ------------------ |
+| **Default**    | `"Default from c"` |
+| **Defined in** | #/definitions/b    |
+|                |                    |
 
 **Description:** Description from b
 

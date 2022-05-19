@@ -18,10 +18,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `number`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `number` |
+| ---- | -------- |
+|      |          |
 
 | Restrictions |          |
 | ------------ | -------- |
@@ -38,10 +37,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `number`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `number` |
+| ---- | -------- |
+|      |          |
 
 | Restrictions |           |
 | ------------ | --------- |

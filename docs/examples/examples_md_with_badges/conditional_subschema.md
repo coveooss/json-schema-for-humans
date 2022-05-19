@@ -68,17 +68,15 @@
 
 ## <a name="street_address"></a>3. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > street_address`
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ## <a name="country"></a>4. ![badge](https://img.shields.io/badge/Optional-yellow) Property `root > country`
 
-| Type                      | `enum (of string)`                                                                                                  |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `enum (of string)` |
+| ---- | ------------------ |
+|      |                    |
 
 Must be one of:
 * "United States of America"

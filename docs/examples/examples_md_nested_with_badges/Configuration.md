@@ -45,11 +45,10 @@ Configuration parameters can be provided in several ways:
 </summary>
 <blockquote>
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** Minify the output HTML document.
 
@@ -62,11 +61,10 @@ Configuration parameters can be provided in several ways:
 </summary>
 <blockquote>
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** Whether to consider the description as markdown and render it accordingly.
 
@@ -79,11 +77,10 @@ Configuration parameters can be provided in several ways:
 </summary>
 <blockquote>
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `false`                                                                                                             |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `false`   |
+|             |           |
 
 **Description:** Add an `Expand all` and a `Collapse all` button at the top of the generated documentation.
 
@@ -96,11 +93,10 @@ Configuration parameters can be provided in several ways:
 </summary>
 <blockquote>
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** For each property, show the relative place of that property in the schema.
 
@@ -113,11 +109,10 @@ Configuration parameters can be provided in several ways:
 </summary>
 <blockquote>
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** If a description is considered big, show only the beginning and add a `Read more` button.
 
@@ -130,11 +125,10 @@ Configuration parameters can be provided in several ways:
 </summary>
 <blockquote>
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** If several `$ref` points to the same definition, only render the documentation for this definition the first time. All other occurrences are replaced by an anchor link to the first occurrence. The first occurrence is the one that is the least nested from the top of the schema and appears first in that nesting level.
 
@@ -149,11 +143,10 @@ Configuration parameters can be provided in several ways:
 </summary>
 <blockquote>
 
-| Type                      | `integer`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `25`                                                                                                                |
-|                           |                                                                                                                     |
+| Type        | `integer` |
+| ----------- | --------- |
+| **Default** | `25`      |
+|             |           |
 
 **Description:** *Advanced option*
 If `link_to_reused_ref` is false and a `$ref` in the schema refers to a parent of itself, we would get a `RecursionError` trying to render the documentation. To avoid this, each reference is checked for circular references.
@@ -171,11 +164,10 @@ In other words, if a schema has a deeply nested element that refers to itself, t
 </summary>
 <blockquote>
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `false`                                                                                                             |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `false`   |
+|             |           |
 
 **Description:** Mark a property as deprecated (with a big red badge) if the description contains the string `[Deprecated`.
 
@@ -188,11 +180,10 @@ In other words, if a schema has a deeply nested element that refers to itself, t
 </summary>
 <blockquote>
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `false`                                                                                                             |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `false`   |
+|             |           |
 
 **Description:** Extract the default value of a property from the description like this: ``[Default `the_default_value`]``.
 
@@ -207,11 +198,10 @@ The default value from the "default" attribute will be used in priority.
 </summary>
 <blockquote>
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** Copy `schema_doc.css` to the same directory as `RESULT_FILE` after generation.
 
@@ -224,11 +214,10 @@ The default value from the "default" attribute will be used in priority.
 </summary>
 <blockquote>
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** Copy `schema_doc.min.js` to the same directory as `RESULT_FILE` after generation.
 
@@ -243,11 +232,10 @@ This file contains the logic for the anchor links.
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Deprecated**            | ![badge](https://img.shields.io/badge/Deprecated-red)                                                               |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type           | `string`                                              |
+| -------------- | ----------------------------------------------------- |
+| **Deprecated** | ![badge](https://img.shields.io/badge/Deprecated-red) |
+|                |                                                       |
 
 **Description:** [Deprecated]
 
@@ -260,11 +248,10 @@ This file contains the logic for the anchor links.
 </summary>
 <blockquote>
 
-| Type                      | `enum (of string)`                                                                                                  |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `"js"`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `enum (of string)` |
+| ----------- | ------------------ |
+| **Default** | `"js"`             |
+|             |                    |
 
 **Description:** The name of the built-in template to use to render the documentation.
 
@@ -285,11 +272,10 @@ Must be one of:
 </summary>
 <blockquote>
 
-| Type                      | `string`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `null`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `string` |
+| ----------- | -------- |
+| **Default** | `null`   |
+|             |          |
 
 **Description:** Path to a custom Jinja2 template file.
 
@@ -306,11 +292,10 @@ If no output file is specified, the extension of the template file will be used 
 </summary>
 <blockquote>
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** Whether to render table of contents.
 
@@ -323,11 +308,10 @@ If no output file is specified, the extension of the template file will be used 
 </summary>
 <blockquote>
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `false`                                                                                                             |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `false`   |
+|             |           |
 
 **Description:** Whether to display examples as YAML instead of JSON
 
@@ -386,11 +370,10 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </summary>
 <blockquote>
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `false`                                                                                                             |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `false`   |
+|             |           |
 
 **Description:** if true generate badges(eg: optional, required) using embedded image (https://img.shields.io).
 
@@ -405,11 +388,10 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </summary>
 <blockquote>
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** if true generate heading numbers to correspond to table of contents.
 
@@ -424,11 +406,10 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </summary>
 <blockquote>
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** if true generate array restrictions section.
 
@@ -446,11 +427,10 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </summary>
 <blockquote>
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** Whether to show the footer linking to the library repo and with the generation datetime
 
@@ -463,11 +443,10 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </summary>
 <blockquote>
 
-| Type                      | `boolean`                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `true`                                                                                                              |
-|                           |                                                                                                                     |
+| Type        | `boolean` |
+| ----------- | --------- |
+| **Default** | `true`    |
+|             |           |
 
 **Description:** Whether the footer should display the generation time
 

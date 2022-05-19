@@ -68,17 +68,15 @@
 
 ## <a name="street_address"></a>3. [Optional] Property `root > street_address`
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ## <a name="country"></a>4. [Optional] Property `root > country`
 
-| Type                      | `enum (of string)`                                                        |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `enum (of string)` |
+| ---- | ------------------ |
+|      |                    |
 
 Must be one of:
 * "United States of America"

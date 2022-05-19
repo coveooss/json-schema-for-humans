@@ -19,10 +19,9 @@
 
 ## <a name="person"></a>1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Person > person`
 
-| Type                      | `array`                                                                                                             |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `array` |
+| ---- | ------- |
+|      |         |
 
 **Description:** A list of people
 
@@ -57,10 +56,9 @@
 
 #### <a name="person_items_children"></a>1.1.1. Property `Person > person > person items > children`
 
-| Type                      | `array`                                                                                                             |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `array` |
+| ---- | ------- |
+|      |         |
 
 **Description:** The children they had
 

@@ -22,28 +22,25 @@
 
 ## <a name="firstName"></a>1. [Optional] Property `Person > firstName`
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** The person's first name.
 
 ## <a name="lastName"></a>2. [Optional] Property `Person > lastName`
 
-| Type                      | `string or null`                                                          |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string or null` |
+| ---- | ---------------- |
+|      |                  |
 
 **Description:** The person's last name.
 
 ## <a name="age"></a>3. [Optional] Property `Person > age`
 
-| Type                      | `integer or number`                                                       |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `integer or number` |
+| ---- | ------------------- |
+|      |                     |
 
 **Description:** Age in years which must be equal to or greater than zero.
 
@@ -54,10 +51,9 @@
 
 ## <a name="anything"></a>4. [Optional] Property `Person > anything`
 
-| Type                      | `integer, string, number or null`                                         |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `integer, string, number or null` |
+| ---- | --------------------------------- |
+|      |                                   |
 
 **Description:** Ay other info you like
 

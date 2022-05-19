@@ -18,11 +18,10 @@
 
 ## <a name="allOf_i0"></a>1. Property `Schema containing a single-element allOf > allOf > my_reference`
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/my_reference                                                |
-|                           |                                                                           |
+| Type           | `string`                   |
+| -------------- | -------------------------- |
+| **Defined in** | #/definitions/my_reference |
+|                |                            |
 
 **Description:** My string definition
 

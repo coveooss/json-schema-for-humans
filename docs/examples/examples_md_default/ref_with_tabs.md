@@ -95,10 +95,9 @@
 
 **Title:** Signature
 
-| Type                      | `array`                                                                   |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `array` |
+| ---- | ------- |
+|      |         |
 
 **Description:** Unique top level property for Multiple Signatures. (multisignature)
 
@@ -151,10 +150,9 @@
 
 **Title:** Algorithm
 
-| Type                      | `enum (of string)`                                                        |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `enum (of string)` |
+| ---- | ------------------ |
+|      |                    |
 
 **Description:** Signature algorithm. The currently recognized JWA [RFC7518] and RFC8037 [RFC8037] asymmetric key algorithms. Note: Unlike RFC8037 [RFC8037] JSF requires explicit Ed* algorithm names instead of "EdDSA".
 
@@ -178,10 +176,9 @@ Must be one of:
 
 **Title:** Algorithm
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** Signature algorithm. Note: If proprietary signature algorithms are added, they must be expressed as URIs.
 
@@ -189,10 +186,9 @@ Must be one of:
 
 **Title:** Key ID
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** Optional. Application specific string identifying the signature key.
 
@@ -245,11 +241,10 @@ Must be one of:
 
 ##### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty"></a>1.1.1.1.1.3.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0 > then > kty`
 
-| Type                      | `enum (of string)`                                                        |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty)            |
-|                           |                                                                           |
+| Type                   | `enum (of string)`                                             |
+| ---------------------- | -------------------------------------------------------------- |
+| **Same definition as** | [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty) |
+|                        |                                                                |
 
 **Description:** Key type indicator.
 
@@ -257,10 +252,9 @@ Must be one of:
 
 **Title:** Curve name
 
-| Type                      | `enum (of string)`                                                        |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `enum (of string)` |
+| ---- | ------------------ |
+|      |                    |
 
 **Description:** EC curve name.
 
@@ -273,10 +267,9 @@ Must be one of:
 
 **Title:** Coordinate
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** EC curve point X. The length of this field must be the full size of a coordinate for the curve specified in the "crv" parameter. For example, if the value of "crv" is "P-521", the decoded argument must be 66 bytes.
 
@@ -284,10 +277,9 @@ Must be one of:
 
 **Title:** Coordinate
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** EC curve point Y. The length of this field must be the full size of a coordinate for the curve specified in the "crv" parameter. For example, if the value of "crv" is "P-256", the decoded argument must be 32 bytes.
 
@@ -314,11 +306,10 @@ Must be one of:
 
 ##### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty"></a>1.1.1.1.1.3.2.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1 > then > kty`
 
-| Type                      | `enum (of string)`                                                        |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty)            |
-|                           |                                                                           |
+| Type                   | `enum (of string)`                                             |
+| ---------------------- | -------------------------------------------------------------- |
+| **Same definition as** | [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty) |
+|                        |                                                                |
 
 **Description:** Key type indicator.
 
@@ -326,10 +317,9 @@ Must be one of:
 
 **Title:** Curve name
 
-| Type                      | `enum (of string)`                                                        |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `enum (of string)` |
+| ---- | ------------------ |
+|      |                    |
 
 **Description:** EdDSA curve name.
 
@@ -341,10 +331,9 @@ Must be one of:
 
 **Title:** Coordinate
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** EdDSA curve point X. The length of this field must be the full size of a coordinate for the curve specified in the "crv" parameter. For example, if the value of "crv" is "Ed25519", the decoded argument must be 32 bytes.
 
@@ -371,11 +360,10 @@ Must be one of:
 
 ##### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty"></a>1.1.1.1.1.3.3.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2 > then > kty`
 
-| Type                      | `enum (of string)`                                                        |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty)            |
-|                           |                                                                           |
+| Type                   | `enum (of string)`                                             |
+| ---------------------- | -------------------------------------------------------------- |
+| **Same definition as** | [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty) |
+|                        |                                                                |
 
 **Description:** Key type indicator.
 
@@ -383,10 +371,9 @@ Must be one of:
 
 **Title:** Modulus
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** RSA modulus.
 
@@ -394,20 +381,18 @@ Must be one of:
 
 **Title:** Exponent
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** RSA exponent.
 
 ##### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_kty"></a>1.1.1.1.1.3.4. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > kty`
 
-| Type                      | `enum (of string)`                                                        |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/keyType                                                     |
-|                           |                                                                           |
+| Type           | `enum (of string)`    |
+| -------------- | --------------------- |
+| **Defined in** | #/definitions/keyType |
+|                |                       |
 
 **Description:** Key type indicator.
 
@@ -420,10 +405,9 @@ Must be one of:
 
 **Title:** Certificate path
 
-| Type                      | `array of string`                                                         |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `array of string` |
+| ---- | ----------------- |
+|      |                   |
 
 **Description:** Optional. Sorted array of X.509 [RFC5280] certificates, where the first element must contain the signature certificate. The certificate path must be contiguous but is not required to be complete.
 
@@ -443,19 +427,17 @@ Must be one of:
 
 ##### <a name="autogenerated_heading_6"></a>1.1.1.1.1.4.1. root > objectA > signature > oneOf > item 0 > signers > Signature > certificatePath > certificatePath items
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ##### <a name="objectA_signature_oneOf_i0_signers_items_excludes"></a>1.1.1.1.1.5. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > excludes`
 
 **Title:** Excludes
 
-| Type                      | `array of string`                                                         |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `array of string` |
+| ---- | ----------------- |
+|      |                   |
 
 **Description:** Optional. Array holding the names of one or more application level properties that must be excluded from the signature process. Note that the "excludes" property itself, must also be excluded from the signature process. Since both the "excludes" property and the associated data it points to are unsigned, a conforming JSF implementation must provide options for specifying which properties to accept.
 
@@ -475,19 +457,17 @@ Must be one of:
 
 ##### <a name="autogenerated_heading_7"></a>1.1.1.1.1.5.1. root > objectA > signature > oneOf > item 0 > signers > Signature > excludes > excludes items
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ##### <a name="objectA_signature_oneOf_i0_signers_items_value"></a>1.1.1.1.1.6. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > value`
 
 **Title:** Signature
 
-| Type                      | `string`                                                                  |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 **Description:** The signature data. Note that the binary representation must follow the JWA [RFC7518] specifications.
 
@@ -507,10 +487,9 @@ Must be one of:
 
 **Title:** Signature
 
-| Type                      | `array`                                                                   |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
+| Type | `array` |
+| ---- | ------- |
+|      |         |
 
 **Description:** Unique top level property for Signature Chains. (signaturechain)
 

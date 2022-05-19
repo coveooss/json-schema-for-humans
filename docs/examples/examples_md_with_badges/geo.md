@@ -20,10 +20,9 @@
 
 ## <a name="latitude"></a>1. ![badge](https://img.shields.io/badge/Required-blue) Property `Longitude and Latitude Values > latitude`
 
-| Type                      | `number`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `number` |
+| ---- | -------- |
+|      |          |
 
 | Restrictions |          |
 | ------------ | -------- |
@@ -33,10 +32,9 @@
 
 ## <a name="longitude"></a>2. ![badge](https://img.shields.io/badge/Required-blue) Property `Longitude and Latitude Values > longitude`
 
-| Type                      | `number`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type | `number` |
+| ---- | -------- |
+|      |          |
 
 | Restrictions |           |
 | ------------ | --------- |
