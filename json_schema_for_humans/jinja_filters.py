@@ -19,7 +19,7 @@ from json_schema_for_humans.schema.schema_node import SchemaNode
 
 SHORT_DESCRIPTION_NUMBER_OF_LINES = 8
 DEFAULT_PATTERN = r"(\[Default - `([^`]+)`\])"
-DEPRECATED_PATTERN = r"\[Deprecated"
+DEPRECATED_MARKER = r"[Deprecated"
 
 
 def is_combining(schema_node: SchemaNode) -> bool:
@@ -46,7 +46,7 @@ def is_deprecated_look_in_description(schema_node: SchemaNode) -> bool:
     if const.DESCRIPTION not in schema_node.keywords:
         return False
 
-    return bool(re.match(DEPRECATED_PATTERN, schema_node.keywords[const.DESCRIPTION].literal))
+    return bool(DEPRECATED_MARKER in schema_node.keywords[const.DESCRIPTION].literal)
 
 
 def get_required_properties(schema_node: SchemaNode) -> List[str]:

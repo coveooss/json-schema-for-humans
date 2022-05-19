@@ -7,7 +7,7 @@
 - [5. [Optional] Property JSON Schema for Humans configuration file > collapse_long_descriptions](#collapse_long_descriptions)
 - [6. [Optional] Property JSON Schema for Humans configuration file > link_to_reused_ref](#link_to_reused_ref)
 - [7. [Optional] Property JSON Schema for Humans configuration file > recursive_detection_depth](#recursive_detection_depth)
-- [8. [Optional] Property JSON Schema for Humans configuration file > deprecated_from_description](#deprecated_from_description)
+- [8. [Optional]~~ Property JSON Schema for Humans configuration file > deprecated_from_description~~](#deprecated_from_description)
 - [9. [Optional] Property JSON Schema for Humans configuration file > default_from_description](#default_from_description)
 - [10. [Optional] Property JSON Schema for Humans configuration file > copy_css](#copy_css)
 - [11. [Optional] Property JSON Schema for Humans configuration file > copy_js](#copy_js)
@@ -159,15 +159,16 @@ In other words, if a schema has a deeply nested element that refers to itself, t
 </details>
 
 <details>
-<summary><strong> <a name="deprecated_from_description"></a>8. [Optional] Property JSON Schema for Humans configuration file > deprecated_from_description</strong>  
+<summary><strong> <a name="deprecated_from_description"></a>8. [Optional]~~ Property JSON Schema for Humans configuration file > deprecated_from_description~~</strong>  
 
 </summary>
 <blockquote>
 
-| Type        | `boolean` |
-| ----------- | --------- |
-| **Default** | `false`   |
-|             |           |
+| Type           | `boolean`                                             |
+| -------------- | ----------------------------------------------------- |
+| **Deprecated** | ![badge](https://img.shields.io/badge/Deprecated-red) |
+| **Default**    | `false`                                               |
+|                |                                                       |
 
 **Description:** Mark a property as deprecated (with a big red badge) if the description contains the string `[Deprecated`.
 

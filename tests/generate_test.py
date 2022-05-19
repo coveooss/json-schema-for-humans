@@ -310,15 +310,15 @@ def test_deprecated_in_description() -> None:
     """Test finding whether a property is deprecated from its description"""
     soup = generate_case("deprecated", GenerationConfiguration(deprecated_from_description=True))
 
-    tests.html_schema_doc_asserts.assert_property_names(soup, ["deprecated1", "deprecated2", "not_deprecated"])
-    tests.html_schema_doc_asserts.assert_deprecated(soup, [True, True, False])
+    tests.html_schema_doc_asserts.assert_property_names(soup, ["deprecated1", "deprecated2", 'deprecated3', 'deprecated4', "not_deprecated"])
+    tests.html_schema_doc_asserts.assert_deprecated(soup, [True, True, True, True, False])
 
 
 def test_deprecated_not_in_description() -> None:
     """Test that the deprecated badge does not get added if the option to get deprecated from description is disabled"""
     soup = generate_case("deprecated", GenerationConfiguration(deprecated_from_description=False))
 
-    tests.html_schema_doc_asserts.assert_deprecated(soup, [False] * 3)
+    tests.html_schema_doc_asserts.assert_deprecated(soup, [False] * 5)
 
 
 def test_with_special_chars() -> None:

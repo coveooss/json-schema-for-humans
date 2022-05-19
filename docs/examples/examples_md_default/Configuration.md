@@ -7,7 +7,7 @@
 - [5. [Optional] Property `JSON Schema for Humans configuration file > collapse_long_descriptions`](#collapse_long_descriptions)
 - [6. [Optional] Property `JSON Schema for Humans configuration file > link_to_reused_ref`](#link_to_reused_ref)
 - [7. [Optional] Property `JSON Schema for Humans configuration file > recursive_detection_depth`](#recursive_detection_depth)
-- [8. [Optional] Property `JSON Schema for Humans configuration file > deprecated_from_description`](#deprecated_from_description)
+- [8. [Optional]~~ Property `JSON Schema for Humans configuration file > deprecated_from_description`~~](#deprecated_from_description)
 - [9. [Optional] Property `JSON Schema for Humans configuration file > default_from_description`](#default_from_description)
 - [10. [Optional] Property `JSON Schema for Humans configuration file > copy_css`](#copy_css)
 - [11. [Optional] Property `JSON Schema for Humans configuration file > copy_js`](#copy_js)
@@ -48,7 +48,7 @@ Configuration parameters can be provided in several ways:
 | - [collapse_long_descriptions](#collapse_long_descriptions )   | No      | boolean          | No           | -          | If a description is considered big, show only the beginning and add a 'Read more ... |
 | - [link_to_reused_ref](#link_to_reused_ref )                   | No      | boolean          | No           | -          | If several '$ref' points to the same definition, only render the documentation f ... |
 | - [recursive_detection_depth](#recursive_detection_depth )     | No      | integer          | No           | -          | *Advanced option* ...                                                                |
-| - [deprecated_from_description](#deprecated_from_description ) | No      | boolean          | No           | -          | Mark a property as deprecated (with a big red badge) if the description contains ... |
+| - [deprecated_from_description](#deprecated_from_description ) | No      | boolean          | [Deprecated] | -          | Mark a property as deprecated (with a big red badge) if the description contains ... |
 | - [default_from_description](#default_from_description )       | No      | boolean          | No           | -          | Extract the default value of a property from the description like this: ''[Defau ... |
 | - [copy_css](#copy_css )                                       | No      | boolean          | No           | -          | Copy 'schema_doc.css' to the same directory as 'RESULT_FILE' after generation.       |
 | - [copy_js](#copy_js )                                         | No      | boolean          | No           | -          | Copy 'schema_doc.min.js' to the same directory as 'RESULT_FILE' after generation ... |
@@ -133,12 +133,13 @@ This option determines the number of times to recursively follow definitions loo
 
 In other words, if a schema has a deeply nested element that refers to itself, this option may need to be increased.
 
-## <a name="deprecated_from_description"></a>8. [Optional] Property `JSON Schema for Humans configuration file > deprecated_from_description`
+## <a name="deprecated_from_description"></a>8. [Optional]~~ Property `JSON Schema for Humans configuration file > deprecated_from_description`~~
 
-| Type        | `boolean` |
-| ----------- | --------- |
-| **Default** | `false`   |
-|             |           |
+| Type           | `boolean`    |
+| -------------- | ------------ |
+| **Deprecated** | [Deprecated] |
+| **Default**    | `false`      |
+|                |              |
 
 **Description:** Mark a property as deprecated (with a big red badge) if the description contains the string `[Deprecated`.
 

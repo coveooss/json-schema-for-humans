@@ -11,6 +11,12 @@
     "deprecated2": {
       "description": "[Deprecated - Use `not_deprecated` instead]"
     },
+    "deprecated3": {
+      "description": "This is [Deprecated]"
+    },
+    "deprecated4": {
+      "description": "This is [Deprecated - Use `not_deprecated` instead]"
+    },
     "not_deprecated": {
       "type": "string"
     }
