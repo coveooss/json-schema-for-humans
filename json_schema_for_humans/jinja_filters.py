@@ -220,7 +220,7 @@ def highlight_json_example(example_text: str) -> str:
 
 def yaml_example(example_text: str) -> str:
     """Filter. Return a YAML version of the provided JSON text"""
-    yaml_text = yaml.dump(json.loads(example_text), allow_unicode=True)
+    yaml_text = yaml.dump(json.loads(example_text), allow_unicode=True, sort_keys=False)
     return yaml_text
 
 
