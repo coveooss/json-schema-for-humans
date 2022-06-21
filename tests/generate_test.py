@@ -310,7 +310,9 @@ def test_deprecated_in_description() -> None:
     """Test finding whether a property is deprecated from its description"""
     soup = generate_case("deprecated", GenerationConfiguration(deprecated_from_description=True))
 
-    tests.html_schema_doc_asserts.assert_property_names(soup, ["deprecated1", "deprecated2", 'deprecated3', 'deprecated4', "not_deprecated"])
+    tests.html_schema_doc_asserts.assert_property_names(
+        soup, ["deprecated1", "deprecated2", "deprecated3", "deprecated4", "not_deprecated"]
+    )
     tests.html_schema_doc_asserts.assert_deprecated(soup, [True, True, True, True, False])
 
 
