@@ -13,7 +13,7 @@
         {{ md_badge("Required", "blue") if sub_property.is_required_property else md_badge("Optional", "yellow") -}}
     {%- endif -%}
     {%- if sub_property is deprecated  -%}~~{%- endif -%}
-    {%- if sub_property.is_pattern_property %}Pattern{% endif %} Property `{% with schema=sub_property %}{%- include "breadcrumbs.md" %}{% endwith %}`
+    {%- if sub_property.is_pattern_property %} Pattern{% endif %} Property `{% with schema=sub_property %}{%- include "breadcrumbs.md" %}{% endwith %}`
     {%- if sub_property is deprecated -%}~~{%- endif -%}
     {%- endfilter %}
   {%- endfilter %}
