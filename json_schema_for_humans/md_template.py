@@ -369,13 +369,16 @@ class MarkdownTemplate(object):
 
         schema_type = schema.type_name
         default_value = schema.default_value
+        schema_format = schema.format
         type_info.append(["Type", "`combining`" if jinja_filters.is_combining(schema) else f"`{schema_type}`"])
         if jinja_filters.deprecated(self.config, schema):
             type_info.append(["**Deprecated**", self.badge("Deprecated", "red")])
 
-        if schema.type_name == const.TYPE_OBJECT:
+        if schema_format:
+            type_info.append(["**Format**", f"`{schema_format}`"])
+        if schema_type == const.TYPE_OBJECT:
             type_info.append(["**Additional properties**", self.additional_properties(schema)])
-        if schema.default_value:
+        if default_value:
             type_info.append(["**Default**", f"`{default_value}`"])
         if schema.should_be_a_link(self.config):
             schema_link_name = schema.links_to.link_name
