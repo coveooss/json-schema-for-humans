@@ -90,11 +90,6 @@ def generate_table(table: List[List[str]]) -> str:
                 output += "| " + "".ljust(max_cell_length[idx_col], "-") + " "
             output += "|\n"
 
-    # add last empty row
-    for cell in max_cell_length.values():
-        output += "| " + "".ljust(cell, " ") + " "
-    output += "|\n"
-
     return output
 
 
