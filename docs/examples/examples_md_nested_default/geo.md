@@ -8,7 +8,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** A geographical coordinate.
 
@@ -20,13 +19,11 @@
 
 | Type | `number` |
 | ---- | -------- |
-|      |          |
 
 | Restrictions |          |
 | ------------ | -------- |
 | **Minimum**  | &ge; -90 |
 | **Maximum**  | &le; 90  |
-|              |          |
 
 </blockquote>
 </details>
@@ -39,13 +36,11 @@
 
 | Type | `number` |
 | ---- | -------- |
-|      |          |
 
 | Restrictions |           |
 | ------------ | --------- |
 | **Minimum**  | &ge; -180 |
 | **Maximum**  | &le; 180  |
-|              |           |
 
 </blockquote>
 </details>

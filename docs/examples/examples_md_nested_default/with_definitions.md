@@ -10,7 +10,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 <details>
 <summary><strong> <a name="billing_address"></a>1. [Optional] Property root > billing_address</strong>  
@@ -22,7 +21,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/address                                                     |
-|                           |                                                                           |
 
 <details>
 <summary><strong> <a name="billing_address_street_address"></a>1.1. [Required] Property root > billing_address > street_address</strong>  
@@ -32,7 +30,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 </blockquote>
 </details>
@@ -45,7 +42,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 </blockquote>
 </details>
@@ -58,7 +54,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 </blockquote>
 </details>
@@ -71,7 +66,6 @@
 
 | Type | `null` |
 | ---- | ------ |
-|      |        |
 
 </blockquote>
 </details>
@@ -89,7 +83,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [billing_address](#billing_address)                                       |
-|                           |                                                                           |
 
 </blockquote>
 </details>

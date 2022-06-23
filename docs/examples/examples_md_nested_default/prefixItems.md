@@ -7,7 +7,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 <details>
 <summary><strong> <a name="address"></a>1. [Optional] Property Address > address</strong>  
@@ -17,7 +16,6 @@
 
 | Type | `array` |
 | ---- | ------- |
-|      |         |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -26,7 +24,6 @@
 | **Items unicity**    | False              |
 | **Additional items** | True               |
 | **Tuple validation** | See below          |
-|                      |                    |
 
 **Example:** 
 

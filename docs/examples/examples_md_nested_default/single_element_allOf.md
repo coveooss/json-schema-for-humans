@@ -7,7 +7,6 @@
 | Type                      | `combining`                                                               |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** Schema containing a single-element allOf
 
@@ -16,7 +15,6 @@
 | All of(Requirement)       |
 | ------------------------- |
 | [my_reference](#allOf_i0) |
-|                           |
 
 <blockquote>
 
@@ -25,7 +23,6 @@
 | Type           | `string`                   |
 | -------------- | -------------------------- |
 | **Defined in** | #/definitions/my_reference |
-|                |                            |
 
 **Description:** My string definition
 

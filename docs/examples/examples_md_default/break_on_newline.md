@@ -7,18 +7,15 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 | Property                   | Pattern | Type   | Deprecated | Definition | Title/Description |
 | -------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
 | - [property1](#property1 ) | No      | string | No         | -          | Line1 ...         |
-|                            |         |        |            |            |                   |
 
 ## <a name="property1"></a>1. [Optional] Property `Hello > property1`
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 **Description:** Line1
 Line2

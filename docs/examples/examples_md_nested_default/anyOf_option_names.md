@@ -9,7 +9,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** JSON Schema for an fstab entry
 
@@ -22,7 +21,6 @@
 | Type                      | `combining`                                                               |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 <blockquote>
 
@@ -32,7 +30,6 @@
 | [diskUUID](#storage_anyOf_i1)   |
 | [item 2](#storage_anyOf_i2)     |
 | [tmpfs](#storage_anyOf_i3)      |
-|                                 |
 
 <blockquote>
 
@@ -42,7 +39,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/diskDevice                                                  |
-|                           |                                                                           |
 
 </blockquote>
 <blockquote>
@@ -53,7 +49,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/diskUUID                                                    |
-|                           |                                                                           |
 
 </blockquote>
 <blockquote>
@@ -63,7 +58,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 </blockquote>
 <blockquote>
@@ -74,7 +68,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/tmpfs                                                       |
-|                           |                                                                           |
 
 </blockquote>
 

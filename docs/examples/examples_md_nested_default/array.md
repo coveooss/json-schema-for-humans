@@ -6,7 +6,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** A schema with an array
 
@@ -18,7 +17,6 @@
 
 | Type | `array of string` |
 | ---- | ----------------- |
-|      |                   |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -27,7 +25,6 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
-|                      |                    |
 
 </blockquote>
 </details>
@@ -40,7 +37,6 @@
 
 | Type | `array` |
 | ---- | ------- |
-|      |         |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -49,7 +45,6 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
-|                      |                    |
 
 </blockquote>
 </details>

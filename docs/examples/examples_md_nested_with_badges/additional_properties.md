@@ -10,10 +10,9 @@
 
 **Title:** Person
 
-| Type                      | `object`                                                                                                                                            |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Should-conform-blue)](#additionalProperties "Each additional property must conform to the following schema") |
-|                           |                                                                                                                                                     |
+| Type                      | `object`                                                                                                                                                     |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Additional properties** | [![Should-conform](https://img.shields.io/badge/Should-conform-blue)](#additionalProperties "Each additional property must conform to the following schema") |
 
 <details>
 <summary><strong> <a name="subType1"></a>1. [Optional] Property Person > subType1</strong>  
@@ -21,10 +20,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                         |
-| ------------------------- | ------------------------------------------------------------------------------------------------ |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Not+allowed-red)](# "Additional Properties not allowed.") |
-|                           |                                                                                                  |
+| Type                      | `object`                                                                                                 |
+| ------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
 
 **Description:** A sub type with additionalProperties false.
 
@@ -36,7 +34,6 @@
 
 | Type | `number` |
 | ---- | -------- |
-|      |          |
 
 </blockquote>
 </details>
@@ -50,10 +47,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 **Description:** A sub type with additionalProperties true.
 
@@ -65,7 +61,6 @@
 
 | Type | `number` |
 | ---- | -------- |
-|      |          |
 
 </blockquote>
 </details>
@@ -81,7 +76,6 @@
 
 | Type | `integer` |
 | ---- | --------- |
-|      |           |
 
 **Description:** This is an integer, it should not show additional properties. (issue #132)
 
@@ -94,10 +88,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 **Description:** additionalProperties schema.
 
@@ -109,7 +102,6 @@
 
 | Type | `number` |
 | ---- | -------- |
-|      |          |
 
 </blockquote>
 </details>
