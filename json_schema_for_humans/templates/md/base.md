@@ -13,4 +13,5 @@
 ----------------------------------------------------------------------------------------------------------------------------
 {% if config.with_footer -%}
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans){% if config.footer_show_time %} on {{ get_local_time() }}{% endif %}
-{%- endif -%}
+
+{% endif -%}
