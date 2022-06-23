@@ -295,17 +295,20 @@ class MarkdownTemplate(object):
         """
         Badge as markdown image link if badge_as_image option set otherwise Badge as text
         """
+        if value:
+            text_badge = f"{name}: {value}"
+        else:
+            text_badge = name
+
         if self.config.template_md_options.get("badge_as_image") and not show_text:
             value_str = ""
-            if value and len(value) > 0:
+            if value:
                 value_str = "-" + quote(value)
             name = quote(name)
             color = quote(color)
-            return f"![badge](https://img.shields.io/badge/{name}{value_str}-{color})"
+            return f"![{text_badge}](https://img.shields.io/badge/{name}{value_str}-{color})"
         else:
-            if value and len(value) > 0:
-                return f"[{name}: {value}]"
-            return f"[{name}]"
+            return f"[{text_badge}]"
 
     def properties_table(self, schema: SchemaNode) -> List[List]:
         """
