@@ -27,6 +27,7 @@ class GenerationConfiguration:
     deprecated_from_description: bool = False
     show_breadcrumbs: bool = True
     collapse_long_descriptions: bool = True
+    collapse_long_examples: bool = True
     default_from_description: bool = False
     expand_buttons: bool = False
     copy_css: bool = True

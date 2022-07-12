@@ -4,7 +4,7 @@
 
 {%- for example in examples -%}
     {%- set example_id = schema.html_id ~ "_ex" ~ loop.index -%}
-    {%- set example_is_long = example is not description_short -%}
+    {%- set example_is_long = config.collapse_long_examples and example is not description_short -%}
     {%- if example_is_long -%}
         <button class="btn btn-light example-show collapsed" data-toggle="collapse" data-target="#{{ example_id }}" aria-controls="{{ example_id }}"></button>
     {%- endif -%}
