@@ -7,7 +7,6 @@
 | Type                      | `object`                                                |
 | ------------------------- | ------------------------------------------------------- |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
-|                           |                                                         |
 
 <details>
 <summary><strong> <a name="outer"></a>1. [Required] Property root > outer</strong>  
@@ -19,7 +18,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/inner schema                                                |
-|                           |                                                                           |
 
 **Description:** We should see this
 
@@ -31,7 +29,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 **Description:** inner description
 
@@ -51,7 +48,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [outer](#outer)                                                           |
-|                           |                                                                           |
 
 **Description:** We should see this too
 

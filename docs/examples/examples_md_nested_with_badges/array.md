@@ -3,10 +3,9 @@
 - [1. [Optional] Property root > fruits](#fruits)
 - [2. [Optional] Property root > vegetables](#vegetables)
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 **Description:** A schema with an array
 
@@ -18,7 +17,6 @@
 
 | Type | `array of string` |
 | ---- | ----------------- |
-|      |                   |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -27,7 +25,6 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
-|                      |                    |
 
 </blockquote>
 </details>
@@ -40,7 +37,6 @@
 
 | Type | `array` |
 | ---- | ------- |
-|      |         |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -49,7 +45,6 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
-|                      |                    |
 
 </blockquote>
 </details>

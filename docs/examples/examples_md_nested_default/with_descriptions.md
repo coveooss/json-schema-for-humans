@@ -16,7 +16,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 <details>
 <summary><strong> <a name="shipping_address"></a>1. [Optional] Property Delivery Schema > shipping_address</strong>  
@@ -28,7 +27,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/address                                                     |
-|                           |                                                                           |
 
 **Description:** Exact address
 
@@ -40,7 +38,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 </blockquote>
 </details>
@@ -53,7 +50,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 </blockquote>
 </details>
@@ -66,7 +62,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 </blockquote>
 </details>
@@ -84,7 +79,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [shipping_address](#shipping_address)                                     |
-|                           |                                                                           |
 
 **Description:** Exact address
 
@@ -101,7 +95,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/delivery_info                                               |
-|                           |                                                                           |
 
 **Description:** Delivery info depending on the delivery type
 
@@ -111,7 +104,6 @@
 | ---------------------------------- |
 | [classic](#delivery_info_oneOf_i0) |
 | [gift](#delivery_info_oneOf_i1)    |
-|                                    |
 
 <blockquote>
 
@@ -121,7 +113,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/classic                                                     |
-|                           |                                                                           |
 
 <details>
 <summary><strong> <a name="delivery_info_oneOf_i0_price"></a>3.1.1. [Optional] Property Delivery Schema > delivery_info > oneOf > item 0 > price</strong>  
@@ -131,7 +122,6 @@
 
 | Type | `number` |
 | ---- | -------- |
-|      |          |
 
 </blockquote>
 </details>
@@ -145,7 +135,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/gift                                                        |
-|                           |                                                                           |
 
 **Description:** The delivery is a gift, no prices displayed
 
@@ -157,7 +146,6 @@
 
 | Type | `boolean` |
 | ---- | --------- |
-|      |           |
 
 </blockquote>
 </details>

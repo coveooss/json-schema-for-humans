@@ -123,7 +123,7 @@ def _copy_additional_file_to_target(
         return
 
     try:
-        shutil.copy(str(source_file_path), str(target_directory / file_to_copy))
+        shutil.copyfile(str(source_file_path), str(target_directory / file_to_copy))
     except shutil.SameFileError:
         print(f"Not copying {file_to_copy} to {target_directory.absolute()}, file already exists")
 

@@ -8,10 +8,9 @@
 
 **Title:** Person
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
 <summary><strong> <a name="not_a_pattern"></a>1. [Optional] Property Person > not_a_pattern</strong>  
@@ -19,14 +18,13 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
 <summary><strong> <a name="not_a_pattern_pattern1"></a>1.1. [Optional]Pattern Property Person > not_a_pattern > Title 4</strong>  
-> All property whose name matches the regular expression 
+> All properties whose name matches the regular expression
 ```.$``` ([Test](https://regex101.com/?regex=.%24))
 must respect the following conditions
 
@@ -35,10 +33,9 @@ must respect the following conditions
 
 **Title:** Title 4
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 **Description:** Description 4
 
@@ -50,7 +47,7 @@ must respect the following conditions
 
 <details>
 <summary><strong> <a name="pattern1"></a>2. [Optional]Pattern Property Person > Title 1</strong>  
-> All property whose name matches the regular expression 
+> All properties whose name matches the regular expression
 ```.*``` ([Test](https://regex101.com/?regex=.%2A))
 must respect the following conditions
 
@@ -59,10 +56,9 @@ must respect the following conditions
 
 **Title:** Title 1
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 **Description:** Description 1
 
@@ -71,7 +67,7 @@ must respect the following conditions
 
 <details>
 <summary><strong> <a name="pattern2"></a>3. [Optional]Pattern Property Person > Title 2</strong>  
-> All property whose name matches the regular expression 
+> All properties whose name matches the regular expression
 ```..``` ([Test](https://regex101.com/?regex=..))
 must respect the following conditions
 
@@ -80,10 +76,9 @@ must respect the following conditions
 
 **Title:** Title 2
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 **Description:** Description 2
 
@@ -92,7 +87,7 @@ must respect the following conditions
 
 <details>
 <summary><strong> <a name="pattern3"></a>4. [Optional]Pattern Property Person > Title 3</strong>  
-> All property whose name matches the regular expression 
+> All properties whose name matches the regular expression
 ```^.``` ([Test](https://regex101.com/?regex=%5E.))
 must respect the following conditions
 
@@ -101,10 +96,9 @@ must respect the following conditions
 
 **Title:** Title 3
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 **Description:** Description 3
 

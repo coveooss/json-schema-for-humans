@@ -6,7 +6,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 <details>
 <summary><strong> <a name="a"></a>1. [Optional] Property root > a</strong>  
@@ -19,7 +18,6 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Default**               | `"Default from a"`                                                        |
 | **Defined in**            | #/definitions/common                                                      |
-|                           |                                                                           |
 
 **Description:** Description of a
 
@@ -37,7 +35,6 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Default**               | `"Default from b"`                                                        |
 | **Same definition as**    | [a](#a)                                                                   |
-|                           |                                                                           |
 
 **Description:** A common description
 

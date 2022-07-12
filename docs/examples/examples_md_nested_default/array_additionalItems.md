@@ -7,7 +7,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** A little food fun
 
@@ -19,7 +18,6 @@
 
 | Type | `array` |
 | ---- | ------- |
-|      |         |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -28,7 +26,6 @@
 | **Items unicity**    | False              |
 | **Additional items** | True               |
 | **Tuple validation** | See below          |
-|                      |                    |
 
 **Example:** 
 
@@ -53,7 +50,6 @@
 
 | Type | `array` |
 | ---- | ------- |
-|      |         |
 
 **Description:** list of address lines
 
@@ -64,7 +60,6 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
-|                      |                    |
 
 </blockquote>
 </details>
@@ -77,7 +72,6 @@
 
 | Type | `array` |
 | ---- | ------- |
-|      |         |
 
 **Description:** This is not a valid JSON Schema, but let's do it anyway.
 
@@ -88,7 +82,6 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | N/A                |
-|                      |                    |
 
 </blockquote>
 </details>

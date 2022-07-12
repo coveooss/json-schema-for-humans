@@ -12,7 +12,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 | Property                               | Pattern | Type        | Deprecated | Definition | Title/Description |
 | -------------------------------------- | ------- | ----------- | ---------- | ---------- | ----------------- |
@@ -20,7 +19,6 @@
 | - [lastName](#lastName )               | No      | string      | No         | -          | Person            |
 | - [age](#age )                         | No      | integer     | No         | -          | Person            |
 | - [driverLicenseId](#driverLicenseId ) | No      | Combination | No         | -          | -                 |
-|                                        |         |             |            |            |                   |
 
 ## <a name="firstName"></a>1. [Optional] Property `Person > firstName`
 
@@ -28,7 +26,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 **Description:** The person's first name.
 
@@ -38,7 +35,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 **Description:** The person's last name.
 
@@ -48,27 +44,23 @@
 
 | Type | `integer` |
 | ---- | --------- |
-|      |           |
 
 **Description:** Age in years which must be equal to or greater than zero.
 
 | Restrictions |        |
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
-|              |        |
 
 ## <a name="driverLicenseId"></a>4. [Optional] Property `Person > driverLicenseId`
 
 | Type                      | `combining`                                                               |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 | All of(Requirement)                            |
 | ---------------------------------------------- |
 | [no driver licence](#driverLicenseId_allOf_i0) |
 | [driver licence id](#driverLicenseId_allOf_i1) |
-|                                                |
 
 ### <a name="driverLicenseId_allOf_i0"></a>4.1. Property `Person > driverLicenseId > allOf > no driver licence`
 
@@ -76,7 +68,6 @@
 
 | Type | `null` |
 | ---- | ------ |
-|      |        |
 
 ### <a name="driverLicenseId_allOf_i1"></a>4.2. Property `Person > driverLicenseId > allOf > driver licence id`
 
@@ -84,7 +75,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
