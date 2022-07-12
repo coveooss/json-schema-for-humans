@@ -29,6 +29,11 @@
       "default": true,
       "description": "If a description is considered big, show only the beginning and add a `Read more` button."
     },
+    "collapse_long_examples" : {
+      "type": "boolean",
+      "default": true,
+      "description": "If an example is considered big, collapse it, it can be displayed with a \"Show\" option."
+    },
     "link_to_reused_ref": {
       "type": "boolean",
       "default": true,
