@@ -9,7 +9,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** Test schema with deprecated in description
 
@@ -23,7 +22,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Deprecated**            | [Deprecated]                                                              |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** [Deprecated]
 
@@ -40,7 +38,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Deprecated**            | [Deprecated]                                                              |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** [Deprecated - Use `not_deprecated` instead]
 
@@ -57,7 +54,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Deprecated**            | [Deprecated]                                                              |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** This is [Deprecated]
 
@@ -74,7 +70,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Deprecated**            | [Deprecated]                                                              |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** This is [Deprecated - Use `not_deprecated` instead]
 
@@ -89,7 +84,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 </blockquote>
 </details>

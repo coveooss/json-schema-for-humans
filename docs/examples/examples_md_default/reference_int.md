@@ -8,13 +8,11 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 | Property                                             | Pattern | Type   | Deprecated | Definition                             | Title/Description                                                |
 | ---------------------------------------------------- | ------- | ------ | ---------- | -------------------------------------- | ---------------------------------------------------------------- |
 | - [extra_options_object](#extra_options_object )     | No      | object | No         | In #/definitions/extra_options/anyOf/0 | This is the one                                                  |
 | - [name_looks_like_an_int](#name_looks_like_an_int ) | No      | object | No         | In #/definitions/10                    | This is just to be annoying. The property name looks like an int |
-|                                                      |         |        |            |                                        |                                                                  |
 
 ## <a name="extra_options_object"></a>1. [Optional] Property `Person > extra_options_object`
 
@@ -22,7 +20,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/extra_options/anyOf/0                                       |
-|                           |                                                                           |
 
 **Description:** This is the one
 
@@ -32,7 +29,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/10                                                          |
-|                           |                                                                           |
 
 **Description:** This is just to be annoying. The property name looks like an int
 

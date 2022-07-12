@@ -9,7 +9,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** Display the issue.
 
@@ -21,7 +20,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 **Description:** Code property
 
@@ -36,7 +34,6 @@
 
 | Type | `array` |
 | ---- | ------- |
-|      |         |
 
 **Description:** RecursiveArray property
 
@@ -47,7 +44,6 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
-|                      |                    |
 
 </blockquote>
 </details>
@@ -60,7 +56,6 @@
 
 | Type | `array of object` |
 | ---- | ----------------- |
-|      |                   |
 
 **Description:** DecoratedRecursiveArray property
 
@@ -71,7 +66,6 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
-|                      |                    |
 
 </blockquote>
 </details>

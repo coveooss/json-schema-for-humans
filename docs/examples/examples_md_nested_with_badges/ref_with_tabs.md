@@ -10,10 +10,9 @@
 - [2. [Optional] Property root > objectB](#objectB)
   - [2.1. [Optional] Property root > objectB > signature](#objectB_signature)
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
 <summary><strong> <a name="objectA"></a>1. [Optional] Property root > objectA</strong>  
@@ -21,10 +20,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
 <summary><strong> <a name="objectA_signature"></a>1.1. [Optional] Property root > objectA > signature</strong>  
@@ -34,11 +32,10 @@
 
 **Title:** Signature
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/signature                                                                                             |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/signature                                                                                                           |
 
 <blockquote>
 
@@ -47,16 +44,14 @@
 | [item 0](#objectA_signature_oneOf_i0)    |
 | [item 1](#objectA_signature_oneOf_i1)    |
 | [Signature](#objectA_signature_oneOf_i2) |
-|                                          |
 
 <blockquote>
 
 #### <a name="objectA_signature_oneOf_i0"></a>1.1.1. Property `root > objectA > signature > oneOf > item 0`
 
-| Type                      | `object`                                                                                         |
-| ------------------------- | ------------------------------------------------------------------------------------------------ |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Not+allowed-red)](# "Additional Properties not allowed.") |
-|                           |                                                                                                  |
+| Type                      | `object`                                                                                                 |
+| ------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
 
 <details>
 <summary><strong> <a name="objectA_signature_oneOf_i0_signers"></a>1.1.1.1. [Optional] Property root > objectA > signature > oneOf > item 0 > signers</strong>  
@@ -68,7 +63,6 @@
 
 | Type | `array` |
 | ---- | ------- |
-|      |         |
 
 **Description:** Unique top level property for Multiple Signatures. (multisignature)
 
@@ -79,7 +73,6 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
-|                      |                    |
 
 </blockquote>
 </details>
@@ -89,10 +82,9 @@
 
 #### <a name="objectA_signature_oneOf_i1"></a>1.1.2. Property `root > objectA > signature > oneOf > item 1`
 
-| Type                      | `object`                                                                                         |
-| ------------------------- | ------------------------------------------------------------------------------------------------ |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Not+allowed-red)](# "Additional Properties not allowed.") |
-|                           |                                                                                                  |
+| Type                      | `object`                                                                                                 |
+| ------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
 
 <details>
 <summary><strong> <a name="objectA_signature_oneOf_i1_chain"></a>1.1.2.1. [Optional] Property root > objectA > signature > oneOf > item 1 > chain</strong>  
@@ -104,7 +96,6 @@
 
 | Type | `array` |
 | ---- | ------- |
-|      |         |
 
 **Description:** Unique top level property for Signature Chains. (signaturechain)
 
@@ -115,7 +106,6 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
-|                      |                    |
 
 </blockquote>
 </details>
@@ -127,11 +117,10 @@
 
 **Title:** Signature
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | [Signature](#objectA_signature_oneOf_i0_signers_items)                                                              |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Same definition as**    | [Signature](#objectA_signature_oneOf_i0_signers_items)                                                                            |
 
 **Description:** Unique top level property for simple signatures. (signaturecore)
 
@@ -151,10 +140,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
 <summary><strong> <a name="objectB_signature"></a>2.1. [Optional] Property root > objectB > signature</strong>  
@@ -164,11 +152,10 @@
 
 **Title:** Signature
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | [signature](#objectA_signature)                                                                                     |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Same definition as**    | [signature](#objectA_signature)                                                                                                   |
 
 </blockquote>
 </details>

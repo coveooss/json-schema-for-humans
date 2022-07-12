@@ -22,7 +22,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** Testing $ref
 
@@ -35,7 +34,6 @@
 | Type           | `string`           |
 | -------------- | ------------------ |
 | **Defined in** | #/definitions/gift |
-|                |                    |
 
 **Description:** A gift, or is it?
 
@@ -51,7 +49,6 @@
 | Type                   | `string`          |
 | ---------------------- | ----------------- |
 | **Same definition as** | [a_gift](#a_gift) |
-|                        |                   |
 
 **Description:** A gift, or is it?
 
@@ -68,7 +65,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/object_def                                                  |
-|                           |                                                                           |
 
 <details>
 <summary><strong> <a name="anchor_with_slash_propertyA"></a>3.1. [Optional] Property root > anchor_with_slash > propertyA</strong>  
@@ -78,7 +74,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 **Description:** Description for object_def/items/propertyA
 
@@ -97,7 +92,6 @@
 | Type           | `array of string`      |
 | -------------- | ---------------------- |
 | **Defined in** | #definitions/array_def |
-|                |                        |
 
 **Description:** Description for array_def
 
@@ -108,7 +102,6 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
-|                      |                    |
 
 </blockquote>
 </details>
@@ -122,7 +115,6 @@
 | Type           | `string`                    |
 | -------------- | --------------------------- |
 | **Defined in** | #/definitions/reference_def |
-|                |                             |
 
 </blockquote>
 </details>
@@ -136,7 +128,6 @@
 | Type           | `string`                                |
 | -------------- | --------------------------------------- |
 | **Defined in** | references.json#/definitions/string_def |
-|                |                                         |
 
 **Description:** Description for string_def
 
@@ -153,7 +144,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [anchor_with_slash](#anchor_with_slash)                                   |
-|                           |                                                                           |
 
 </blockquote>
 </details>
@@ -167,7 +157,6 @@
 | Type                   | `string`                                            |
 | ---------------------- | --------------------------------------------------- |
 | **Same definition as** | [anchor_nested_reference](#anchor_nested_reference) |
-|                        |                                                     |
 
 </blockquote>
 </details>
@@ -182,7 +171,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | with_descriptions.json#/definitions/gift                                  |
-|                           |                                                                           |
 
 **Description:** The delivery is a gift, no prices displayed
 
@@ -194,7 +182,6 @@
 
 | Type | `boolean` |
 | ---- | --------- |
-|      |           |
 
 </blockquote>
 </details>
@@ -212,7 +199,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [other_file_anchor](#other_file_anchor)                                   |
-|                           |                                                                           |
 
 **Description:** The delivery is a gift, no prices displayed
 
@@ -229,7 +215,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [other_file_anchor](#other_file_anchor)                                   |
-|                           |                                                                           |
 
 **Description:** The delivery is a gift, no prices displayed
 
@@ -246,7 +231,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | combining_not.json                                                        |
-|                           |                                                                           |
 
 **Description:** Test schema with a not
 
@@ -259,13 +243,11 @@
 | Type                      | `combining`                                                               |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 #### <a name="autogenerated_heading_2"></a>12.1.1. Must **not** be
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 </blockquote>
 </details>
@@ -283,7 +265,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | reference_schemas/intermediate.json#/properties/cross_file_reference      |
-|                           |                                                                           |
 
 <details>
 <summary><strong> <a name="multi_hierarchy_reference_propertyA"></a>13.1. [Optional] Property root > multi_hierarchy_reference > propertyA</strong>  
@@ -293,7 +274,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 **Description:** Contents of propertyA in final.json
 

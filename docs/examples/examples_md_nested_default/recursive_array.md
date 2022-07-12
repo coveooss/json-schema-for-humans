@@ -7,7 +7,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 <details>
 <summary><strong> <a name="person"></a>1. [Optional] Property Person > person</strong>  
@@ -17,7 +16,6 @@
 
 | Type | `array` |
 | ---- | ------- |
-|      |         |
 
 **Description:** A list of people
 
@@ -28,7 +26,6 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
-|                      |                    |
 
 </blockquote>
 </details>

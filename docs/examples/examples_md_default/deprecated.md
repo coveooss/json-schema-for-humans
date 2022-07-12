@@ -9,7 +9,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** Test schema with deprecated in description
 
@@ -20,7 +19,6 @@
 | - [deprecated3](#deprecated3 )       | No      | object | [Deprecated] | -          | This is [Deprecated]                                |
 | - [deprecated4](#deprecated4 )       | No      | object | [Deprecated] | -          | This is [Deprecated - Use 'not_deprecated' instead] |
 | - [not_deprecated](#not_deprecated ) | No      | string | No           | -          | -                                                   |
-|                                      |         |        |              |            |                                                     |
 
 ## <a name="deprecated1"></a>1. [Optional]~~ Property `root > deprecated1`~~
 
@@ -28,7 +26,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Deprecated**            | [Deprecated]                                                              |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** [Deprecated]
 
@@ -38,7 +35,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Deprecated**            | [Deprecated]                                                              |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** [Deprecated - Use `not_deprecated` instead]
 
@@ -48,7 +44,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Deprecated**            | [Deprecated]                                                              |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** This is [Deprecated]
 
@@ -58,7 +53,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Deprecated**            | [Deprecated]                                                              |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** This is [Deprecated - Use `not_deprecated` instead]
 
@@ -66,7 +60,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

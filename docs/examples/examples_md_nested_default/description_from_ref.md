@@ -6,7 +6,6 @@
 | Type                      | `object`                                                |
 | ------------------------- | ------------------------------------------------------- |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
-|                           |                                                         |
 
 <details>
 <summary><strong> <a name="name"></a>1. [Optional] Property root > name</strong>  
@@ -17,14 +16,12 @@
 | Type           | `string`                    |
 | -------------- | --------------------------- |
 | **Defined in** | #/definitions/filled_string |
-|                |                             |
 
 **Description:** a filled string
 
 | Restrictions   |   |
 | -------------- | - |
 | **Min length** | 1 |
-|                |   |
 
 </blockquote>
 </details>
@@ -38,7 +35,6 @@
 | Type                   | `string`      |
 | ---------------------- | ------------- |
 | **Same definition as** | [name](#name) |
-|                        |               |
 
 **Description:** a filled string
 

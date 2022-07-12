@@ -8,7 +8,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** A geographical coordinate.
 
@@ -16,31 +15,26 @@
 | -------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
 | + [latitude](#latitude )   | No      | number | No         | -          | -                 |
 | + [longitude](#longitude ) | No      | number | No         | -          | -                 |
-|                            |         |        |            |            |                   |
 
 ## <a name="latitude"></a>1. [Required] Property `Longitude and Latitude Values > latitude`
 
 | Type | `number` |
 | ---- | -------- |
-|      |          |
 
 | Restrictions |          |
 | ------------ | -------- |
 | **Minimum**  | &ge; -90 |
 | **Maximum**  | &le; 90  |
-|              |          |
 
 ## <a name="longitude"></a>2. [Required] Property `Longitude and Latitude Values > longitude`
 
 | Type | `number` |
 | ---- | -------- |
-|      |          |
 
 | Restrictions |           |
 | ------------ | --------- |
 | **Minimum**  | &ge; -180 |
 | **Maximum**  | &le; 180  |
-|              |           |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
