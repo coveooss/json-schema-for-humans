@@ -7,7 +7,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** Testing $ref of a remote $ref
 
@@ -21,7 +20,6 @@
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.")                                            |
 | **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/description_from_ref.json |
-|                           |                                                                                                                      |
 
 <details>
 <summary><strong> <a name="described_name"></a>1.1. [Optional] Property root > described > name</strong>  
@@ -32,14 +30,12 @@
 | Type           | `string`                    |
 | -------------- | --------------------------- |
 | **Defined in** | #/definitions/filled_string |
-|                |                             |
 
 **Description:** a filled string
 
 | Restrictions   |   |
 | -------------- | - |
 | **Min length** | 1 |
-|                |   |
 
 </blockquote>
 </details>
@@ -53,7 +49,6 @@
 | Type                   | `string`                |
 | ---------------------- | ----------------------- |
 | **Same definition as** | [name](#described_name) |
-|                        |                         |
 
 **Description:** a filled string
 

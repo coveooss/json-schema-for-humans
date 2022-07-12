@@ -9,7 +9,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 <details>
 <summary><strong> <a name="favorite_os"></a>1. [Optional] Property User Preference > favorite_os</strong>  
@@ -20,7 +19,6 @@
 | Type        | `enum (of string)` |
 | ----------- | ------------------ |
 | **Default** | `"Linux"`          |
-|             |                    |
 
 Must be one of:
 * "Windows"
@@ -39,7 +37,6 @@ Must be one of:
 | Type        | `array of enum (of string)` |
 | ----------- | --------------------------- |
 | **Default** | `["white", "blue"]`         |
-|             |                             |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -48,7 +45,6 @@ Must be one of:
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
-|                      |                    |
 
 </blockquote>
 </details>
@@ -62,13 +58,11 @@ Must be one of:
 | Type        | `integer` |
 | ----------- | --------- |
 | **Default** | `2`       |
-|             |           |
 
 | Restrictions |        |
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 | **Maximum**  | &le; 2 |
-|              |        |
 
 </blockquote>
 </details>

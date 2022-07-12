@@ -8,7 +8,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** Testing $ref with URL with YAML destination
 
@@ -22,7 +21,6 @@
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.")                                                 |
 | **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/yaml.yaml#/definitions/address |
-|                           |                                                                                                                           |
 
 <details>
 <summary><strong> <a name="address_street_address"></a>1.1. [Required] Property root > address > street_address</strong>  
@@ -32,7 +30,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 </blockquote>
 </details>
@@ -45,7 +42,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 </blockquote>
 </details>
@@ -58,7 +54,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 </blockquote>
 </details>

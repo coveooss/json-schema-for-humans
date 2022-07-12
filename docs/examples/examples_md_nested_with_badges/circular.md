@@ -5,10 +5,9 @@
 
 **Title:** Circular reference Schema
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
 <summary><strong> <a name="person"></a>1. [Optional] Property Circular reference Schema > person</strong>  
@@ -16,11 +15,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/a                                                                                                     |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/a                                                                                                                   |
 
 <details>
 <summary><strong> <a name="person_a1"></a>1.1. [Optional] Property Circular reference Schema > person > a1</strong>  
@@ -32,7 +30,6 @@
 | -------------- | ------------------ |
 | **Default**    | `"Default from c"` |
 | **Defined in** | #/definitions/b    |
-|                |                    |
 
 **Description:** Description from b
 

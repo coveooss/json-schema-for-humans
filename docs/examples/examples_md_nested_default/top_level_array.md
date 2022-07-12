@@ -4,7 +4,6 @@
 
 | Type | `array of string` |
 | ---- | ----------------- |
-|      |                   |
 
 **Description:** Sometimes there are no properties
 
@@ -15,7 +14,6 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
-|                      |                    |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

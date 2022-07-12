@@ -6,7 +6,6 @@
 
 | Type | `combining` |
 | ---- | ----------- |
-|      |             |
 
 <blockquote>
 
@@ -15,7 +14,6 @@
 | [1st constant](#oneOf_i0) |
 | [2nd constant](#oneOf_i1) |
 | [0](#oneOf_i2)            |
-|                           |
 
 <blockquote>
 
@@ -25,7 +23,6 @@
 
 | Type | `const` |
 | ---- | ------- |
-|      |         |
 
 Specific value: `[
     1,
@@ -41,7 +38,6 @@ Specific value: `[
 
 | Type | `const` |
 | ---- | ------- |
-|      |         |
 
 Specific value: `{
     "a_key": "a_value",
@@ -57,7 +53,6 @@ Specific value: `{
 
 | Type | `const` |
 | ---- | ------- |
-|      |         |
 
 Specific value: `0`
 
@@ -72,7 +67,6 @@ Specific value: `0`
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | N/A                |
-|                      |                    |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

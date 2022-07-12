@@ -10,7 +10,6 @@
 | Type                      | `combining`                                                               |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** For the combine
 
@@ -20,7 +19,6 @@
 | [diskUUID](#oneOf_i1)   |
 | [nfs](#oneOf_i2)        |
 | [tmpfs](#oneOf_i3)      |
-|                         |
 
 ## <a name="oneOf_i0"></a>1. Property `Combining at top level > oneOf > diskDevice`
 
@@ -28,7 +26,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/diskDevice                                                  |
-|                           |                                                                           |
 
 ## <a name="oneOf_i1"></a>2. Property `Combining at top level > oneOf > diskUUID`
 
@@ -36,7 +33,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/diskUUID                                                    |
-|                           |                                                                           |
 
 ## <a name="oneOf_i2"></a>3. Property `Combining at top level > oneOf > nfs`
 
@@ -44,7 +40,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/nfs                                                         |
-|                           |                                                                           |
 
 ## <a name="oneOf_i3"></a>4. Property `Combining at top level > oneOf > tmpfs`
 
@@ -52,7 +47,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/tmpfs                                                       |
-|                           |                                                                           |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
