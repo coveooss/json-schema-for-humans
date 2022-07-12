@@ -32,7 +32,7 @@
     "collapse_long_examples" : {
       "type": "boolean",
       "default": true,
-      "description": "If an example is considered big, collapse it, it can be displayed with a \"Show\" option."
+      "description": "If an example is considered big, collapse it, it can be displayed with a `Show` option."
     },
     "link_to_reused_ref": {
       "type": "boolean",
