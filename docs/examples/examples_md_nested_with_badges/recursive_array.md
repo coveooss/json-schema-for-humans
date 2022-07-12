@@ -4,10 +4,9 @@
 
 **Title:** Person
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
 <summary><strong> <a name="person"></a>1. [Optional] Property Person > person</strong>  
@@ -17,7 +16,6 @@
 
 | Type | `array` |
 | ---- | ------- |
-|      |         |
 
 **Description:** A list of people
 
@@ -28,7 +26,6 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
-|                      |                    |
 
 </blockquote>
 </details>

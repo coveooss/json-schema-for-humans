@@ -10,7 +10,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 <details>
 <summary><strong> <a name="firstName"></a>1. [Optional] Property Person > firstName</strong>  
@@ -22,7 +21,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 **Description:** the person's first name
 
@@ -48,7 +46,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 **Description:** The person's last name.
 
@@ -71,14 +68,12 @@
 
 | Type | `integer` |
 | ---- | --------- |
-|      |           |
 
 **Description:** Age in years which must be equal to or greater than zero.
 
 | Restrictions |        |
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
-|              |        |
 
 **Example:** 
 
@@ -98,7 +93,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** Any more info you want as an object
 

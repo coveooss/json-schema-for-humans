@@ -11,7 +11,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 <details>
 <summary><strong> <a name="firstName"></a>1. [Optional] Property Person > firstName</strong>  
@@ -23,7 +22,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 **Description:** The person's first name.
 
@@ -40,7 +38,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 **Description:** The person's last name.
 
@@ -49,7 +46,7 @@
 
 <details>
 <summary><strong> <a name="pattern1"></a>3. [Optional]Pattern Property Person > paperSize</strong>  
-> All property whose name matches the regular expression 
+> All properties whose name matches the regular expression
 ```$[a-c][0-9]^``` ([Test](https://regex101.com/?regex=%24%5Ba-c%5D%5B0-9%5D%5E))
 must respect the following conditions
 
@@ -61,7 +58,6 @@ must respect the following conditions
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** Review of a paper size.
 
@@ -75,7 +71,6 @@ must respect the following conditions
 
 | Type | `integer` |
 | ---- | --------- |
-|      |           |
 
 **Description:** Numerical rating for paper size.
 
@@ -92,7 +87,6 @@ must respect the following conditions
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 **Description:** Narrative review of the paper size.
 

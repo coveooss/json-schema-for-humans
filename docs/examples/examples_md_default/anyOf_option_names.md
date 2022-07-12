@@ -9,21 +9,18 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** JSON Schema for an fstab entry
 
 | Property               | Pattern | Type        | Deprecated | Definition | Title/Description |
 | ---------------------- | ------- | ----------- | ---------- | ---------- | ----------------- |
 | + [storage](#storage ) | No      | Combination | No         | -          | -                 |
-|                        |         |             |            |            |                   |
 
 ## <a name="storage"></a>1. [Required] Property `root > storage`
 
 | Type                      | `combining`                                                               |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 | Any of(Option)                  |
 | ------------------------------- |
@@ -31,7 +28,6 @@
 | [diskUUID](#storage_anyOf_i1)   |
 | [item 2](#storage_anyOf_i2)     |
 | [tmpfs](#storage_anyOf_i3)      |
-|                                 |
 
 ### <a name="storage_anyOf_i0"></a>1.1. Property `root > storage > anyOf > diskDevice`
 
@@ -39,7 +35,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/diskDevice                                                  |
-|                           |                                                                           |
 
 ### <a name="storage_anyOf_i1"></a>1.2. Property `root > storage > anyOf > diskUUID`
 
@@ -47,14 +42,12 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/diskUUID                                                    |
-|                           |                                                                           |
 
 ### <a name="storage_anyOf_i2"></a>1.3. Property `root > storage > anyOf > item 2`
 
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 ### <a name="storage_anyOf_i3"></a>1.4. Property `root > storage > anyOf > tmpfs`
 
@@ -62,7 +55,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/tmpfs                                                       |
-|                           |                                                                           |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

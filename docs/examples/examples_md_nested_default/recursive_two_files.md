@@ -9,7 +9,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 <details>
 <summary><strong> <a name="person"></a>1. [Optional] Property Person > person</strong>  
@@ -21,7 +20,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/person                                                      |
-|                           |                                                                           |
 
 **Description:** A human being
 
@@ -33,7 +31,6 @@
 
 | Type | `array` |
 | ---- | ------- |
-|      |         |
 
 **Description:** The children they had
 
@@ -44,7 +41,6 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
-|                      |                    |
 
 </blockquote>
 </details>
@@ -59,7 +55,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [person_children_items](#person_children_items)                           |
-|                           |                                                                           |
 
 **Description:** Person definition from second file. Not the same!
 

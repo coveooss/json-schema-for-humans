@@ -13,13 +13,13 @@
         {{ md_badge("Required", "blue") if sub_property.is_required_property else md_badge("Optional", "yellow") -}}
     {%- endif -%}
     {%- if sub_property is deprecated  -%}~~{%- endif -%}
-    {%- if sub_property.is_pattern_property %}Pattern{% endif %} Property `{% with schema=sub_property %}{%- include "breadcrumbs.md" %}{% endwith %}`
+    {%- if sub_property.is_pattern_property %} Pattern{% endif %} Property `{% with schema=sub_property %}{%- include "breadcrumbs.md" %}{% endwith %}`
     {%- if sub_property is deprecated -%}~~{%- endif -%}
     {%- endfilter %}
   {%- endfilter %}
 
   {% if sub_property.is_pattern_property %}
-> All property whose name matches the regular expression 
+> All properties whose name matches the regular expression
 ```{{ sub_property.property_name }}``` ([Test](https://regex101.com/?regex={{ sub_property.property_name | urlencode }}))
 must respect the following conditions
   {% endif %}

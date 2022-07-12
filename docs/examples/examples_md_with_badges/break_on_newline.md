@@ -1,24 +1,21 @@
 # Hello
 
-- [1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Hello > property1`](#property1)
+- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Hello > property1`](#property1)
 
 **Title:** Hello
 
-| Type                      | `object`                                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
-|                           |                                                                                                                     |
+| Type                      | `object`                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 | Property                   | Pattern | Type   | Deprecated | Definition | Title/Description |
 | -------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
 | - [property1](#property1 ) | No      | string | No         | -          | Line1 ...         |
-|                            |         |        |            |            |                   |
 
-## <a name="property1"></a>1. ![badge](https://img.shields.io/badge/Optional-yellow) Property `Hello > property1`
+## <a name="property1"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Hello > property1`
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 **Description:** Line1
 Line2

@@ -10,7 +10,6 @@
 | Type                      | `combining`                                                               |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** For the combine
 
@@ -22,7 +21,6 @@
 | [diskUUID](#oneOf_i1)   |
 | [nfs](#oneOf_i2)        |
 | [tmpfs](#oneOf_i3)      |
-|                         |
 
 <blockquote>
 
@@ -32,7 +30,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/diskDevice                                                  |
-|                           |                                                                           |
 
 </blockquote>
 <blockquote>
@@ -43,7 +40,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/diskUUID                                                    |
-|                           |                                                                           |
 
 </blockquote>
 <blockquote>
@@ -54,7 +50,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/nfs                                                         |
-|                           |                                                                           |
 
 </blockquote>
 <blockquote>
@@ -65,7 +60,6 @@
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/tmpfs                                                       |
-|                           |                                                                           |
 
 </blockquote>
 

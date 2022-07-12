@@ -13,7 +13,6 @@
 | Type                      | `object`                                                                                                  |
 | ------------------------- | --------------------------------------------------------------------------------------------------------- |
 | **Additional properties** | [[Should-conform]](#additionalProperties "Each additional property must conform to the following schema") |
-|                           |                                                                                                           |
 
 <details>
 <summary><strong> <a name="subType1"></a>1. [Optional] Property Person > subType1</strong>  
@@ -24,7 +23,6 @@
 | Type                      | `object`                                                |
 | ------------------------- | ------------------------------------------------------- |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
-|                           |                                                         |
 
 **Description:** A sub type with additionalProperties false.
 
@@ -36,7 +34,6 @@
 
 | Type | `number` |
 | ---- | -------- |
-|      |          |
 
 </blockquote>
 </details>
@@ -53,7 +50,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** A sub type with additionalProperties true.
 
@@ -65,7 +61,6 @@
 
 | Type | `number` |
 | ---- | -------- |
-|      |          |
 
 </blockquote>
 </details>
@@ -81,7 +76,6 @@
 
 | Type | `integer` |
 | ---- | --------- |
-|      |           |
 
 **Description:** This is an integer, it should not show additional properties. (issue #132)
 
@@ -97,7 +91,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** additionalProperties schema.
 
@@ -109,7 +102,6 @@
 
 | Type | `number` |
 | ---- | -------- |
-|      |          |
 
 </blockquote>
 </details>

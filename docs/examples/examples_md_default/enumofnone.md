@@ -7,18 +7,15 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 | Property                     | Pattern | Type           | Deprecated | Definition | Title/Description |
 | ---------------------------- | ------- | -------------- | ---------- | ---------- | ----------------- |
 | - [enumOfNone](#enumOfNone ) | No      | enum (of null) | No         | -          | enumOfNone        |
-|                              |         |                |            |            |                   |
 
 ## <a name="enumOfNone"></a>1. [Optional] Property `Enum of None > enumOfNone`
 
 | Type | `enum (of null)` |
 | ---- | ---------------- |
-|      |                  |
 
 **Description:** enumOfNone
 

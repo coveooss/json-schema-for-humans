@@ -10,7 +10,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 | Property                   | Pattern | Type    | Deprecated | Definition | Title/Description                   |
 | -------------------------- | ------- | ------- | ---------- | ---------- | ----------------------------------- |
@@ -18,7 +17,6 @@
 | - [lastName](#lastName )   | No      | string  | No         | -          | Person                              |
 | - [age](#age )             | No      | integer | No         | -          | Person                              |
 | - [moreInfo](#moreInfo )   | No      | object  | No         | -          | Any more info you want as an object |
-|                            |         |         |            |            |                                     |
 
 ## <a name="firstName"></a>1. [Optional] Property `Person > firstName`
 
@@ -26,7 +24,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 **Description:** the person's first name
 
@@ -46,7 +43,6 @@
 
 | Type | `string` |
 | ---- | -------- |
-|      |          |
 
 **Description:** The person's last name.
 
@@ -62,14 +58,12 @@
 
 | Type | `integer` |
 | ---- | --------- |
-|      |           |
 
 **Description:** Age in years which must be equal to or greater than zero.
 
 | Restrictions |        |
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
-|              |        |
 
 **Example:** 
 
@@ -82,7 +76,6 @@
 | Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-|                           |                                                                           |
 
 **Description:** Any more info you want as an object
 
