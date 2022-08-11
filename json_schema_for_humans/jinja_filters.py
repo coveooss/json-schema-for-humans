@@ -223,8 +223,11 @@ def highlight_json_example(example_text: str) -> str:
 
 def yaml_example(example_text: str) -> str:
     """Filter. Return a YAML version of the provided JSON text"""
-    yaml_text = yaml.dump(json.loads(example_text), allow_unicode=True, sort_keys=False)
-    return yaml_text
+    loaded_example = json.loads(example_text)
+    if not isinstance(loaded_example, dict):
+        # YAML dump does not like things that are not object
+        return str(loaded_example)
+    return yaml.dump(loaded_example, allow_unicode=True, sort_keys=False)
 
 
 def highlight_yaml_example(example_text: str) -> str:
