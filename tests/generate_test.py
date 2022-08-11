@@ -411,6 +411,7 @@ def test_with_examples() -> None:
 }\n""",
     ]
 
+
 def test_with_examples_as_yaml() -> None:
     soup = generate_case("with_examples", config=GenerationConfiguration(examples_as_yaml=True))
 
@@ -420,12 +421,13 @@ def test_with_examples_as_yaml() -> None:
 
     examples_content = soup.find_all("div", class_="examples")
     examples_content_text = [ex.findChildren()[0].text for ex in examples_content]
-    assert [
-        'Guido\n',
-        'BDFL\n',
-        'Van Rossum\n',
-        "64\n",
-        """birthplace: Haarlem, Netherlands
+    assert (
+        [
+            "Guido\n",
+            "BDFL\n",
+            "Van Rossum\n",
+            "64\n",
+            """birthplace: Haarlem, Netherlands
 favorite_emoji: 🐍
 motto: Beautiful is better than ugly.\\nExplicit is better than implicit.\\nSimple is
   better than complex.\\nComplex is better than complicated.\\nFlat is better than nested.\\nSparse
@@ -438,7 +440,9 @@ motto: Beautiful is better than ugly.\\nExplicit is better than implicit.\\nSimp
   it's a bad idea.\\nIf the implementation is easy to explain, it may be a good idea.\\nNamespaces
   are one honking great idea -- let's do more of those!
 """,
-    ] == examples_content_text
+        ]
+        == examples_content_text
+    )
 
 
 def test_with_urlencoded_anchor() -> None:
