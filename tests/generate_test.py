@@ -663,5 +663,12 @@ def test_prefix_items() -> None:
     tests.html_schema_doc_asserts.assert_descriptions(soup, ["followed by a string"])
 
 
+def test_empty_property_name() -> None:
+    soup = generate_case("empty_property_name")
+
+    tests.html_schema_doc_asserts.assert_property_names(soup, [""])
+    tests.html_schema_doc_asserts.assert_descriptions(soup, ["I don't know why you would want an empty property 🤷"])
+
+
 # TODO: test for uniqueItems
 # TODO: test for contains
