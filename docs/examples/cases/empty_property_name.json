@@ -1,0 +1,12 @@
+{
+  "$id": "https://example.com/schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Empty property name",
+  "type": "object",
+  "properties": {
+    "": {
+      "type": "string",
+      "description": "I don't know why you would want an empty property \uD83E\uDD37"
+    }
+  }
+}
