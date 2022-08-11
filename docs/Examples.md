@@ -1066,6 +1066,64 @@ the description of an attribute
 [examples/examples_md_nested_with_badges/description_with_ref.md](examples/examples_md_nested_with_badges/description_with_ref.md ':include')
 </details>
 
+## --empty_property_name--
+### empty_property_name
+
+
+<details>
+<summary>Json schema - Click here to expand source code...</summary>
+
+[examples/cases/empty_property_name.json](examples/cases/empty_property_name.json ':include :type=code')
+</details>
+
+
+<details>
+<summary>JS template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/empty_property_name.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_default/empty_property_name.html](examples/examples_js_default/empty_property_name.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Flat template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/empty_property_name.html" target="_blank">Open it in full page</a>
+
+[examples/examples_flat_default/empty_property_name.html](examples/examples_flat_default/empty_property_name.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Markdown without badge template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_default/empty_property_name.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_default/empty_property_name.md](examples/examples_md_default/empty_property_name.md ':include')
+</details>
+
+
+<details>
+<summary>Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_with_badges/empty_property_name.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_with_badges/empty_property_name.md](examples/examples_md_with_badges/empty_property_name.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown without badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_nested_default/empty_property_name.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_default/empty_property_name.md](examples/examples_md_nested_default/empty_property_name.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_nested_with_badges/empty_property_name.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_with_badges/empty_property_name.md](examples/examples_md_nested_with_badges/empty_property_name.md ':include')
+</details>
+
 ## --enumofnone--
 ### enumofnone
 
