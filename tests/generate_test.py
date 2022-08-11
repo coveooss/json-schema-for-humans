@@ -411,17 +411,8 @@ def test_with_examples() -> None:
 }\n""",
     ]
 
-
-def test_with_urlencoded_anchor() -> None:
-    soup = generate_case("with_urlencoded_anchor")
-    property_names = soup.find_all("span", class_=["property-name"])
-    property_names_text = [pn.text for pn in property_names]
-    assert "lowerBound" in property_names_text
-    assert "upperBound" in property_names_text
-
-
-def test_with_yaml_examples() -> None:
-    soup = generate_case("with_examples", GenerationConfiguration(examples_as_yaml=True))
+def test_with_examples_as_yaml() -> None:
+    soup = generate_case("with_examples", config=GenerationConfiguration(examples_as_yaml=True))
 
     examples_label = soup.find_all("div", class_=["badge", "badge-secondary"])
     examples_label_text = [ex.text for ex in examples_label]
@@ -429,23 +420,33 @@ def test_with_yaml_examples() -> None:
 
     examples_content = soup.find_all("div", class_="examples")
     examples_content_text = [ex.findChildren()[0].text for ex in examples_content]
-    assert examples_content_text == [
-        "Guido\n...\n",
-        "BDFL\n...\n",
-        "Van Rossum\n...\n",
-        "64\n...\n",
-        "birthplace: Haarlem, Netherlands\nfavorite_emoji: 🐍\n"
-        "motto: Beautiful is better than ugly.\\nExplicit is better than implicit.\\nSimple is\n"
-        "  better than complex.\\nComplex is better than complicated.\\nFlat is better than nested.\\nSparse\n"
-        "  is better than dense.\\nReadability counts.\\nSpecial cases aren't special enough\n"
-        "  to break the rules.\\nAlthough practicality beats purity.\\nErrors should never pass\n"
-        "  silently.\\nUnless explicitly silenced.\\nIn the face of ambiguity, refuse the temptation\n"
-        "  to guess.\\nThere should be one-- and preferably only one --obvious way to do it.\\nAlthough\n"
-        "  that way may not be obvious at first unless you're Dutch.\\nNow is better than never.\\nAlthough\n"
-        "  never is often better than *right* now.\\nIf the implementation is hard to explain,\n"
-        "  it's a bad idea.\\nIf the implementation is easy to explain, it may be a good idea.\\nNamespaces\n"
-        "  are one honking great idea -- let's do more of those!\n",
-    ]
+    assert [
+        'Guido\n',
+        'BDFL\n',
+        'Van Rossum\n',
+        "64\n",
+        """birthplace: Haarlem, Netherlands
+favorite_emoji: 🐍
+motto: Beautiful is better than ugly.\\nExplicit is better than implicit.\\nSimple is
+  better than complex.\\nComplex is better than complicated.\\nFlat is better than nested.\\nSparse
+  is better than dense.\\nReadability counts.\\nSpecial cases aren't special enough
+  to break the rules.\\nAlthough practicality beats purity.\\nErrors should never pass
+  silently.\\nUnless explicitly silenced.\\nIn the face of ambiguity, refuse the temptation
+  to guess.\\nThere should be one-- and preferably only one --obvious way to do it.\\nAlthough
+  that way may not be obvious at first unless you're Dutch.\\nNow is better than never.\\nAlthough
+  never is often better than *right* now.\\nIf the implementation is hard to explain,
+  it's a bad idea.\\nIf the implementation is easy to explain, it may be a good idea.\\nNamespaces
+  are one honking great idea -- let's do more of those!
+""",
+    ] == examples_content_text
+
+
+def test_with_urlencoded_anchor() -> None:
+    soup = generate_case("with_urlencoded_anchor")
+    property_names = soup.find_all("span", class_=["property-name"])
+    property_names_text = [pn.text for pn in property_names]
+    assert "lowerBound" in property_names_text
+    assert "upperBound" in property_names_text
 
 
 def test_pattern_properties() -> None:
