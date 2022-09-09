@@ -47,9 +47,6 @@ pytest = "^6.2.5"
 generate-schema-doc = "json_schema_for_humans.cli:main"
 
 
-[tool.poetry.group.dev.dependencies]
-deptry = "^0.2.14"
-
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
