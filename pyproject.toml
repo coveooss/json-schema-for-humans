@@ -33,6 +33,7 @@ Pygments = "^2.10.0"
 pytz = "^2021.1"
 PyYAML = ">=5.4.1,<7"
 requests = "^2.26.0"
+MarkupSafe = "^2.0"
 
 
 [tool.poetry.dev-dependencies]
@@ -45,6 +46,9 @@ pytest = "^6.2.5"
 [tool.poetry.scripts]
 generate-schema-doc = "json_schema_for_humans.cli:main"
 
+
+[tool.poetry.group.dev.dependencies]
+deptry = "^0.2.14"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
