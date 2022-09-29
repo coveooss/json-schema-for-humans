@@ -4,8 +4,9 @@
 - [2. [Optional] Property root > addressLines](#addressLines)
 - [3. [Optional] Property root > arrayEmpty](#arrayEmpty)
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 **Description:** A little food fun
@@ -16,8 +17,9 @@
 </summary>
 <blockquote>
 
-| Type | `array` |
-| ---- | ------- |
+|          |         |
+| -------- | ------- |
+| **Type** | `array` |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -48,8 +50,9 @@
 </summary>
 <blockquote>
 
-| Type | `array` |
-| ---- | ------- |
+|          |         |
+| -------- | ------- |
+| **Type** | `array` |
 
 **Description:** list of address lines
 
@@ -70,8 +73,9 @@
 </summary>
 <blockquote>
 
-| Type | `array` |
-| ---- | ------- |
+|          |         |
+| -------- | ------- |
+| **Type** | `array` |
 
 **Description:** This is not a valid JSON Schema, but let's do it anyway.
 

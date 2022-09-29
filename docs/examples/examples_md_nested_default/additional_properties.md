@@ -10,8 +10,10 @@
 
 **Title:** Person
 
-| Type                      | `object`                                                                                                  |
+|                           |                                                                                                           |
 | ------------------------- | --------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                  |
+| **Required**              | No                                                                                                        |
 | **Additional properties** | [[Should-conform]](#additionalProperties "Each additional property must conform to the following schema") |
 
 <details>
@@ -20,8 +22,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                |
+|                           |                                                         |
 | ------------------------- | ------------------------------------------------------- |
+| **Type**                  | `object`                                                |
+| **Required**              | No                                                      |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
 **Description:** A sub type with additionalProperties false.
@@ -32,8 +36,10 @@
 </summary>
 <blockquote>
 
-| Type | `number` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `number` |
+| **Required** | No       |
 
 </blockquote>
 </details>
@@ -47,8 +53,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 **Description:** A sub type with additionalProperties true.
@@ -59,8 +67,10 @@
 </summary>
 <blockquote>
 
-| Type | `number` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `number` |
+| **Required** | No       |
 
 </blockquote>
 </details>
@@ -74,8 +84,10 @@
 </summary>
 <blockquote>
 
-| Type | `integer` |
-| ---- | --------- |
+|              |           |
+| ------------ | --------- |
+| **Type**     | `integer` |
+| **Required** | No        |
 
 **Description:** This is an integer, it should not show additional properties. (issue #132)
 
@@ -88,8 +100,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 **Description:** additionalProperties schema.
@@ -100,8 +114,10 @@
 </summary>
 <blockquote>
 
-| Type | `number` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `number` |
+| **Required** | No       |
 
 </blockquote>
 </details>

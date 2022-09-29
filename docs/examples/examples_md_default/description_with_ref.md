@@ -1,11 +1,13 @@
 # Schema Docs
 
-- [1. [Required] Property `root > outer`](#outer)
-  - [1.1. [Required] Property `root > outer > inner`](#outer_inner)
-- [2. [Optional] Property `root > outer2`](#outer2)
+- [1. Property `root > outer`](#outer)
+  - [1.1. Property `root > outer > inner`](#outer_inner)
+- [2. Property `root > outer2`](#outer2)
 
-| Type                      | `object`                                                |
+|                           |                                                         |
 | ------------------------- | ------------------------------------------------------- |
+| **Type**                  | `object`                                                |
+| **Required**              | No                                                      |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
 | Property             | Pattern | Type   | Deprecated | Definition                    | Title/Description      |
@@ -13,10 +15,12 @@
 | + [outer](#outer )   | No      | object | No         | In #/definitions/inner schema | We should see this     |
 | - [outer2](#outer2 ) | No      | object | No         | Same as [outer](#outer )      | We should see this too |
 
-## <a name="outer"></a>1. [Required] Property `root > outer`
+## <a name="outer"></a>1. Property `root > outer`
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | Yes                                                                       |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/inner schema                                                |
 
@@ -26,17 +30,21 @@
 | ------------------------ | ------- | ------ | ---------- | ---------- | ----------------- |
 | + [inner](#outer_inner ) | No      | string | No         | -          | inner description |
 
-### <a name="outer_inner"></a>1.1. [Required] Property `root > outer > inner`
+### <a name="outer_inner"></a>1.1. Property `root > outer > inner`
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
 
 **Description:** inner description
 
-## <a name="outer2"></a>2. [Optional] Property `root > outer2`
+## <a name="outer2"></a>2. Property `root > outer2`
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [outer](#outer)                                                           |
 

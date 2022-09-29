@@ -9,8 +9,10 @@
 
 **Title:** Person
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
@@ -21,8 +23,10 @@
 
 **Title:** Person
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Description:** The person's first name.
 
@@ -37,8 +41,10 @@
 
 **Title:** Person
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Description:** The person's last name.
 
@@ -53,8 +59,10 @@
 
 **Title:** Person
 
-| Type | `integer` |
-| ---- | --------- |
+|              |           |
+| ------------ | --------- |
+| **Type**     | `integer` |
+| **Required** | No        |
 
 **Description:** Age in years which must be equal to or greater than zero.
 
@@ -71,8 +79,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `combining`                                                               |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                               |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <blockquote>
@@ -88,8 +98,10 @@
 
 **Title:** no driver licence
 
-| Type | `null` |
-| ---- | ------ |
+|              |        |
+| ------------ | ------ |
+| **Type**     | `null` |
+| **Required** | No     |
 
 </blockquote>
 <blockquote>
@@ -98,8 +110,10 @@
 
 **Title:** driver licence id
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 </blockquote>
 

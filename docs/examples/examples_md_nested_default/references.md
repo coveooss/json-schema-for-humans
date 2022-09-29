@@ -19,8 +19,10 @@
 - [13. [Optional] Property root > multi_hierarchy_reference](#multi_hierarchy_reference)
   - [13.1. [Optional] Property root > multi_hierarchy_reference > propertyA](#multi_hierarchy_reference_propertyA)
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 **Description:** Testing $ref
@@ -31,8 +33,10 @@
 </summary>
 <blockquote>
 
-| Type           | `string`           |
+|                |                    |
 | -------------- | ------------------ |
+| **Type**       | `string`           |
+| **Required**   | No                 |
 | **Defined in** | #/definitions/gift |
 
 **Description:** A gift, or is it?
@@ -46,8 +50,10 @@
 </summary>
 <blockquote>
 
-| Type                   | `string`          |
+|                        |                   |
 | ---------------------- | ----------------- |
+| **Type**               | `string`          |
+| **Required**           | No                |
 | **Same definition as** | [a_gift](#a_gift) |
 
 **Description:** A gift, or is it?
@@ -61,8 +67,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/object_def                                                  |
 
@@ -72,8 +80,10 @@
 </summary>
 <blockquote>
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Description:** Description for object_def/items/propertyA
 
@@ -89,8 +99,10 @@
 </summary>
 <blockquote>
 
-| Type           | `array of string`      |
+|                |                        |
 | -------------- | ---------------------- |
+| **Type**       | `array of string`      |
+| **Required**   | No                     |
 | **Defined in** | #definitions/array_def |
 
 **Description:** Description for array_def
@@ -112,8 +124,10 @@
 </summary>
 <blockquote>
 
-| Type           | `string`                    |
+|                |                             |
 | -------------- | --------------------------- |
+| **Type**       | `string`                    |
+| **Required**   | No                          |
 | **Defined in** | #/definitions/reference_def |
 
 </blockquote>
@@ -125,8 +139,10 @@
 </summary>
 <blockquote>
 
-| Type           | `string`                                |
+|                |                                         |
 | -------------- | --------------------------------------- |
+| **Type**       | `string`                                |
+| **Required**   | No                                      |
 | **Defined in** | references.json#/definitions/string_def |
 
 **Description:** Description for string_def
@@ -140,8 +156,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [anchor_with_slash](#anchor_with_slash)                                   |
 
@@ -154,8 +172,10 @@
 </summary>
 <blockquote>
 
-| Type                   | `string`                                            |
+|                        |                                                     |
 | ---------------------- | --------------------------------------------------- |
+| **Type**               | `string`                                            |
+| **Required**           | No                                                  |
 | **Same definition as** | [anchor_nested_reference](#anchor_nested_reference) |
 
 </blockquote>
@@ -167,8 +187,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | with_descriptions.json#/definitions/gift                                  |
 
@@ -180,8 +202,10 @@
 </summary>
 <blockquote>
 
-| Type | `boolean` |
-| ---- | --------- |
+|              |           |
+| ------------ | --------- |
+| **Type**     | `boolean` |
+| **Required** | No        |
 
 </blockquote>
 </details>
@@ -195,8 +219,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [other_file_anchor](#other_file_anchor)                                   |
 
@@ -211,8 +237,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [other_file_anchor](#other_file_anchor)                                   |
 
@@ -227,8 +255,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | combining_not.json                                                        |
 
@@ -240,14 +270,18 @@
 </summary>
 <blockquote>
 
-| Type                      | `combining`                                                               |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                               |
+| **Required**              | Yes                                                                       |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 #### <a name="autogenerated_heading_2"></a>12.1.1. Must **not** be
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 </blockquote>
 </details>
@@ -261,8 +295,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | reference_schemas/intermediate.json#/properties/cross_file_reference      |
 
@@ -272,8 +308,10 @@
 </summary>
 <blockquote>
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Description:** Contents of propertyA in final.json
 

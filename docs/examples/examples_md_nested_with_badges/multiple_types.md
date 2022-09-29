@@ -7,8 +7,9 @@
 
 **Title:** Person
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
@@ -17,8 +18,9 @@
 </summary>
 <blockquote>
 
-| Type | `string` |
-| ---- | -------- |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 **Description:** The person's first name.
 
@@ -31,8 +33,9 @@
 </summary>
 <blockquote>
 
-| Type | `string or null` |
-| ---- | ---------------- |
+|          |                  |
+| -------- | ---------------- |
+| **Type** | `string or null` |
 
 **Description:** The person's last name.
 
@@ -45,8 +48,9 @@
 </summary>
 <blockquote>
 
-| Type | `integer or number` |
-| ---- | ------------------- |
+|          |                     |
+| -------- | ------------------- |
+| **Type** | `integer or number` |
 
 **Description:** Age in years which must be equal to or greater than zero.
 
@@ -63,8 +67,9 @@
 </summary>
 <blockquote>
 
-| Type | `integer, string, number or null` |
-| ---- | --------------------------------- |
+|          |                                   |
+| -------- | --------------------------------- |
+| **Type** | `integer, string, number or null` |
 
 **Description:** Ay other info you like
 

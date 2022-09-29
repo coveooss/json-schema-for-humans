@@ -5,8 +5,9 @@
 
 **Title:** Person
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 | Property                                             | Pattern | Type   | Deprecated | Definition                             | Title/Description                                                |
@@ -16,8 +17,9 @@
 
 ## <a name="extra_options_object"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > extra_options_object`
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/extra_options/anyOf/0                                                                                               |
 
@@ -25,8 +27,9 @@
 
 ## <a name="name_looks_like_an_int"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > name_looks_like_an_int`
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/10                                                                                                                  |
 

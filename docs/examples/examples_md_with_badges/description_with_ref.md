@@ -4,8 +4,9 @@
   - [1.1. ![Required](https://img.shields.io/badge/Required-blue) Property `root > outer > inner`](#outer_inner)
 - [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > outer2`](#outer2)
 
-| Type                      | `object`                                                                                                 |
+|                           |                                                                                                          |
 | ------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                 |
 | **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
 
 | Property             | Pattern | Type   | Deprecated | Definition                    | Title/Description      |
@@ -15,8 +16,9 @@
 
 ## <a name="outer"></a>1. ![Required](https://img.shields.io/badge/Required-blue) Property `root > outer`
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/inner schema                                                                                                        |
 
@@ -28,15 +30,17 @@
 
 ### <a name="outer_inner"></a>1.1. ![Required](https://img.shields.io/badge/Required-blue) Property `root > outer > inner`
 
-| Type | `string` |
-| ---- | -------- |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 **Description:** inner description
 
 ## <a name="outer2"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > outer2`
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [outer](#outer)                                                                                                                   |
 

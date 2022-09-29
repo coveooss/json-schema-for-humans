@@ -5,8 +5,10 @@
 
 **Title:** Circular reference Schema
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
@@ -15,8 +17,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/a                                                           |
 
@@ -26,8 +30,10 @@
 </summary>
 <blockquote>
 
-| Type           | `string`           |
+|                |                    |
 | -------------- | ------------------ |
+| **Type**       | `string`           |
+| **Required**   | No                 |
 | **Default**    | `"Default from c"` |
 | **Defined in** | #/definitions/b    |
 

@@ -4,8 +4,10 @@
 
 **Title:** Enum of None
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
@@ -14,8 +16,10 @@
 </summary>
 <blockquote>
 
-| Type | `enum (of null)` |
-| ---- | ---------------- |
+|              |                  |
+| ------------ | ---------------- |
+| **Type**     | `enum (of null)` |
+| **Required** | No               |
 
 **Description:** enumOfNone
 

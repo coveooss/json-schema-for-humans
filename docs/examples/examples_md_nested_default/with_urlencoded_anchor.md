@@ -6,8 +6,10 @@
     - [1.2.1. [Optional] Property root > signingTimeInfo > signingTimeBounds > lowerBound](#signingTimeInfo_signingTimeBounds_lowerBound)
     - [1.2.2. [Optional] Property root > signingTimeInfo > signingTimeBounds > upperBound](#signingTimeInfo_signingTimeBounds_upperBound)
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
@@ -16,8 +18,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/dss2-SigningTimeInfoType                                    |
 
@@ -27,9 +31,11 @@
 </summary>
 <blockquote>
 
-| Type       | `integer`      |
-| ---------- | -------------- |
-| **Format** | `utc-millisec` |
+|              |                |
+| ------------ | -------------- |
+| **Type**     | `integer`      |
+| **Required** | Yes            |
+| **Format**   | `utc-millisec` |
 
 </blockquote>
 </details>
@@ -40,8 +46,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries            |
 
@@ -51,9 +59,11 @@
 </summary>
 <blockquote>
 
-| Type       | `integer`      |
-| ---------- | -------------- |
-| **Format** | `utc-millisec` |
+|              |                |
+| ------------ | -------------- |
+| **Type**     | `integer`      |
+| **Required** | No             |
+| **Format**   | `utc-millisec` |
 
 </blockquote>
 </details>
@@ -64,9 +74,11 @@
 </summary>
 <blockquote>
 
-| Type       | `integer`      |
-| ---------- | -------------- |
-| **Format** | `utc-millisec` |
+|              |                |
+| ------------ | -------------- |
+| **Type**     | `integer`      |
+| **Required** | No             |
+| **Format**   | `utc-millisec` |
 
 </blockquote>
 </details>

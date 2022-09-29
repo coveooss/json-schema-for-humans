@@ -4,8 +4,10 @@
 - [2. [Optional] Property root > addressLines](#addressLines)
 - [3. [Optional] Property root > arrayEmpty](#arrayEmpty)
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 **Description:** A little food fun
@@ -16,8 +18,10 @@
 </summary>
 <blockquote>
 
-| Type | `array` |
-| ---- | ------- |
+|              |         |
+| ------------ | ------- |
+| **Type**     | `array` |
+| **Required** | No      |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -48,8 +52,10 @@
 </summary>
 <blockquote>
 
-| Type | `array` |
-| ---- | ------- |
+|              |         |
+| ------------ | ------- |
+| **Type**     | `array` |
+| **Required** | No      |
 
 **Description:** list of address lines
 
@@ -70,8 +76,10 @@
 </summary>
 <blockquote>
 
-| Type | `array` |
-| ---- | ------- |
+|              |         |
+| ------------ | ------- |
+| **Type**     | `array` |
+| **Required** | No      |
 
 **Description:** This is not a valid JSON Schema, but let's do it anyway.
 

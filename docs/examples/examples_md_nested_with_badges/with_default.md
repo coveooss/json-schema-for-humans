@@ -6,8 +6,9 @@
 
 **Title:** User Preference
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
@@ -16,8 +17,9 @@
 </summary>
 <blockquote>
 
-| Type        | `enum (of string)` |
+|             |                    |
 | ----------- | ------------------ |
+| **Type**    | `enum (of string)` |
 | **Default** | `"Linux"`          |
 
 Must be one of:
@@ -34,8 +36,9 @@ Must be one of:
 </summary>
 <blockquote>
 
-| Type        | `array of enum (of string)` |
+|             |                             |
 | ----------- | --------------------------- |
+| **Type**    | `array of enum (of string)` |
 | **Default** | `["white", "blue"]`         |
 
 |                      | Array restrictions |
@@ -55,8 +58,9 @@ Must be one of:
 </summary>
 <blockquote>
 
-| Type        | `integer` |
+|             |           |
 | ----------- | --------- |
+| **Type**    | `integer` |
 | **Default** | `2`       |
 
 | Restrictions |        |

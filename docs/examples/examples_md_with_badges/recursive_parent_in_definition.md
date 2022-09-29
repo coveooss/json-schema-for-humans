@@ -7,8 +7,9 @@
 
 **Title:** Person
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 | Property                           | Pattern | Type   | Deprecated | Definition                                       | Title/Description                            |
@@ -17,8 +18,9 @@
 
 ## <a name="relationships"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > relationships`
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/person/properties/relationships                                                                                     |
 
@@ -30,8 +32,9 @@
 
 ### <a name="relationships_mother"></a>1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > relationships > mother`
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/person                                                                                                              |
 
@@ -43,8 +46,9 @@
 
 #### <a name="relationships_mother_relationships"></a>1.1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > relationships > mother > relationships`
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 **Description:** Relationships between this person and others
@@ -55,8 +59,9 @@
 
 ##### <a name="relationships_mother_relationships_mother"></a>1.1.1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > relationships > mother > relationships > mother`
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [mother](#relationships_mother)                                                                                                   |
 

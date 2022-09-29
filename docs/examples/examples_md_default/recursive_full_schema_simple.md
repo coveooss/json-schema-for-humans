@@ -1,21 +1,25 @@
 # Person
 
-- [1. [Optional] Property `Person > itself`](#itself)
+- [1. Property `Person > itself`](#itself)
 
 **Title:** Person
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 | Property             | Pattern | Type   | Deprecated | Definition               | Title/Description |
 | -------------------- | ------- | ------ | ---------- | ------------------------ | ----------------- |
 | - [itself](#itself ) | No      | object | No         | Same as [Person](#root ) | -                 |
 
-## <a name="itself"></a>1. [Optional] Property `Person > itself`
+## <a name="itself"></a>1. Property `Person > itself`
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [Person](#root)                                                           |
 

@@ -6,8 +6,10 @@
   - [1.3. Property `root > storage > oneOf > nfs`](#storage_oneOf_i2)
   - [1.4. Property `root > storage > oneOf > tmpfs`](#storage_oneOf_i3)
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 **Description:** JSON Schema for an fstab entry
@@ -18,8 +20,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `combining`                                                               |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                               |
+| **Required**              | Yes                                                                       |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <blockquote>
@@ -35,8 +39,10 @@
 
 ### <a name="storage_oneOf_i0"></a>1.1. Property `root > storage > oneOf > diskDevice`
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/diskDevice                                                  |
 
@@ -45,8 +51,10 @@
 
 ### <a name="storage_oneOf_i1"></a>1.2. Property `root > storage > oneOf > diskUUID`
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/diskUUID                                                    |
 
@@ -55,8 +63,10 @@
 
 ### <a name="storage_oneOf_i2"></a>1.3. Property `root > storage > oneOf > nfs`
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/nfs                                                         |
 
@@ -65,8 +75,10 @@
 
 ### <a name="storage_oneOf_i3"></a>1.4. Property `root > storage > oneOf > tmpfs`
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/tmpfs                                                       |
 

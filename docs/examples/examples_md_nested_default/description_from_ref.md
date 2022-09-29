@@ -3,8 +3,10 @@
 - [1. [Optional] Property root > name](#name)
 - [2. [Optional] Property root > alignment](#alignment)
 
-| Type                      | `object`                                                |
+|                           |                                                         |
 | ------------------------- | ------------------------------------------------------- |
+| **Type**                  | `object`                                                |
+| **Required**              | No                                                      |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
 <details>
@@ -13,8 +15,10 @@
 </summary>
 <blockquote>
 
-| Type           | `string`                    |
+|                |                             |
 | -------------- | --------------------------- |
+| **Type**       | `string`                    |
+| **Required**   | No                          |
 | **Defined in** | #/definitions/filled_string |
 
 **Description:** a filled string
@@ -32,8 +36,10 @@
 </summary>
 <blockquote>
 
-| Type                   | `string`      |
+|                        |               |
 | ---------------------- | ------------- |
+| **Type**               | `string`      |
+| **Required**           | No            |
 | **Same definition as** | [name](#name) |
 
 **Description:** a filled string

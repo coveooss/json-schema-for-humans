@@ -2,8 +2,9 @@
 
 **Title:** Array at top level
 
-| Type | `array of string` |
-| ---- | ----------------- |
+|          |                   |
+| -------- | ----------------- |
+| **Type** | `array of string` |
 
 **Description:** Sometimes there are no properties
 

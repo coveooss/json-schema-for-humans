@@ -4,8 +4,10 @@
 
 **Title:** Empty property name
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 | Property          | Pattern | Type   | Deprecated | Definition | Title/Description                                   |
@@ -14,8 +16,10 @@
 
 ## <a name="__root___"></a>1. Property `Empty property name > `
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Description:** I don't know why you would want an empty property 🤷
 

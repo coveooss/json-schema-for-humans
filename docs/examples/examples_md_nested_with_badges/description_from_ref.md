@@ -3,8 +3,9 @@
 - [1. [Optional] Property root > name](#name)
 - [2. [Optional] Property root > alignment](#alignment)
 
-| Type                      | `object`                                                                                                 |
+|                           |                                                                                                          |
 | ------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                 |
 | **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
 
 <details>
@@ -13,8 +14,9 @@
 </summary>
 <blockquote>
 
-| Type           | `string`                    |
+|                |                             |
 | -------------- | --------------------------- |
+| **Type**       | `string`                    |
 | **Defined in** | #/definitions/filled_string |
 
 **Description:** a filled string
@@ -32,8 +34,9 @@
 </summary>
 <blockquote>
 
-| Type                   | `string`      |
+|                        |               |
 | ---------------------- | ------------- |
+| **Type**               | `string`      |
 | **Same definition as** | [name](#name) |
 
 **Description:** a filled string
