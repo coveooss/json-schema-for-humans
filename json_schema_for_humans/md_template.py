@@ -346,7 +346,7 @@ class MarkdownTemplate(object):
             if sub_property.title:
                 description = sub_property.title
 
-            line.append(escape_for_table(first_line_fixed(description, const.LINE_WIDTH)))
+            line.append(escape_for_table(description))
 
             properties.append(line)
 
