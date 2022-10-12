@@ -33,11 +33,12 @@ Pygments = "^2.10.0"
 pytz = "^2021.1"
 PyYAML = ">=5.4.1,<7"
 requests = "^2.26.0"
+MarkupSafe = "^2.0"
 
 
 [tool.poetry.dev-dependencies]
 beautifulsoup4 = "^4.10.0"
-black = "^21.9b0"
+black = "^22.10"
 pytest = "^6.2.5"
 
 
