@@ -30,6 +30,18 @@
 | **Type**     | `array` |
 | **Required** | No      |
 
+**Example:** 
+
+```json
+[
+    1600,
+    "Pennsylvania",
+    "Avenue",
+    "NW",
+    "Washington"
+]
+```
+
 |                      | Array restrictions |
 | -------------------- | ------------------ |
 | **Min items**        | N/A                |
@@ -91,18 +103,6 @@ Must be one of:
 * "NE"
 * "SW"
 * "SE"
-
-**Example:** 
-
-```json
-[
-    1600,
-    "Pennsylvania",
-    "Avenue",
-    "NW",
-    "Washington"
-]
-```
 
 ## <a name="addressLines"></a>2. Property `root > addressLines`
 

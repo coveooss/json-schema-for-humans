@@ -14,13 +14,13 @@
 
 **Description:** Test schema with deprecated in description
 
-| Property                             | Pattern | Type   | Deprecated   | Definition | Title/Description                                   |
-| ------------------------------------ | ------- | ------ | ------------ | ---------- | --------------------------------------------------- |
-| - [deprecated1](#deprecated1 )       | No      | object | [Deprecated] | -          | [Deprecated]                                        |
-| - [deprecated2](#deprecated2 )       | No      | object | [Deprecated] | -          | [Deprecated - Use 'not_deprecated' instead]         |
-| - [deprecated3](#deprecated3 )       | No      | object | [Deprecated] | -          | This is [Deprecated]                                |
-| - [deprecated4](#deprecated4 )       | No      | object | [Deprecated] | -          | This is [Deprecated - Use 'not_deprecated' instead] |
-| - [not_deprecated](#not_deprecated ) | No      | string | No           | -          | -                                                   |
+| Property                             | Pattern | Type   | Deprecated   | Definition | Title/Description                                     |
+| ------------------------------------ | ------- | ------ | ------------ | ---------- | ----------------------------------------------------- |
+| - [deprecated1](#deprecated1 )       | No      | object | [Deprecated] | -          | [Deprecated]                                          |
+| - [deprecated2](#deprecated2 )       | No      | object | [Deprecated] | -          | [Deprecated - Use \`not_deprecated\` instead]         |
+| - [deprecated3](#deprecated3 )       | No      | object | [Deprecated] | -          | This is [Deprecated]                                  |
+| - [deprecated4](#deprecated4 )       | No      | object | [Deprecated] | -          | This is [Deprecated - Use \`not_deprecated\` instead] |
+| - [not_deprecated](#not_deprecated ) | No      | string | No           | -          | -                                                     |
 
 ## <a name="deprecated1"></a>1. ~~ Property `root > deprecated1`~~
 

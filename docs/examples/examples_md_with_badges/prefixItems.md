@@ -23,6 +23,18 @@
 | -------- | ------- |
 | **Type** | `array` |
 
+**Example:** 
+
+```json
+[
+    1600,
+    "Pennsylvania",
+    "Avenue",
+    "NW",
+    "Washington"
+]
+```
+
 |                      | Array restrictions |
 | -------------------- | ------------------ |
 | **Min items**        | N/A                |
@@ -80,18 +92,6 @@ Must be one of:
 * "NE"
 * "SW"
 * "SE"
-
-**Example:** 
-
-```json
-[
-    1600,
-    "Pennsylvania",
-    "Avenue",
-    "NW",
-    "Washington"
-]
-```
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

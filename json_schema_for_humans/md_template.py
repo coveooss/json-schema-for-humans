@@ -1,4 +1,4 @@
-from typing import Dict, List, Union
+from typing import Dict, List, Union, Optional
 from urllib.parse import quote_plus, quote
 
 import jinja2
@@ -32,9 +32,11 @@ def get_numeric_maximum_restriction(schema_node: SchemaNode, default: str = "N/A
     return maximum_fragment
 
 
-def escape_for_table(example_text: str) -> str:
+def escape_for_table(example_text: Optional[str]) -> str:
     """Filter. escape characters('|', '`') in string to be inserted into markdown table"""
-    return example_text.translate(str.maketrans({"|": "\\|", "`": "\\`"}))
+    if example_text is None:
+        return ""
+    return example_text.translate(str.maketrans({"|": "\\|", "`": "\\`", "\n": "<br />"}))
 
 
 def get_numeric_minimum_restriction(schema_node: SchemaNode, default: str = "N/A") -> str:
@@ -322,7 +324,7 @@ class MarkdownTemplate(object):
         """
         properties = []
         for sub_property in schema.iterate_properties:
-            line = []
+            line: List[str] = []
             # property name
             property_name = "+ " if sub_property.is_required_property else "- "
             property_name += self.format_link(escape_for_table(sub_property.property_name), sub_property.html_id)
@@ -352,7 +354,7 @@ class MarkdownTemplate(object):
             if sub_property.title:
                 description = sub_property.title
 
-            line.append(escape_for_table(first_line_fixed(description, const.LINE_WIDTH)))
+            line.append(escape_for_table(description))
 
             properties.append(line)
 

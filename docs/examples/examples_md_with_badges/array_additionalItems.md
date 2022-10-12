@@ -28,6 +28,18 @@
 | -------- | ------- |
 | **Type** | `array` |
 
+**Example:** 
+
+```json
+[
+    1600,
+    "Pennsylvania",
+    "Avenue",
+    "NW",
+    "Washington"
+]
+```
+
 |                      | Array restrictions |
 | -------------------- | ------------------ |
 | **Min items**        | N/A                |
@@ -85,18 +97,6 @@ Must be one of:
 * "NE"
 * "SW"
 * "SE"
-
-**Example:** 
-
-```json
-[
-    1600,
-    "Pennsylvania",
-    "Avenue",
-    "NW",
-    "Washington"
-]
-```
 
 ## <a name="addressLines"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > addressLines`
 
