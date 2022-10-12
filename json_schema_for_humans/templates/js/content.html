@@ -41,77 +41,69 @@
     {%- elif schema.refers_to -%}
         {{ content(schema.refers_to_merged, True) }}
     {%- else -%}
-        {# Handle having oneOf or allOf with only one condition #}
-        {%- if schema.kw_all_of and (schema.kw_all_of.array_items | length) == 1 -%}
-            {{ content(schema.kw_all_of.array_items[0]) }}
-        {%- elif schema.kw_any_of and (schema.kw_any_of.array_items | length) == 1 -%}
-            {{ content(schema.kw_any_of.array_items[0]) }}
-        {%- else -%}
-            {%- if schema.explicit_no_additional_properties -%}
-                {{ " " }}<span class="badge badge-info no-additional">No Additional Properties</span>
-            {%- endif -%}
-
-            {# Combining: allOf, anyOf, oneOf, not #}
-            {%- if schema.kw_all_of -%}
-                <div class="all-of-value" id="{{ schema.kw_all_of.html_id }}">{{ tabbed_section("allOf", schema.kw_all_of) }}</div>
-            {%- endif -%}
-            {%- if schema.kw_any_of -%}
-                <div class="any-of-value" id="{{ schema.kw_any_of.html_id }}">{{ tabbed_section("anyOf", schema.kw_any_of) }}</div>
-            {%- endif -%}
-            {%- if schema.kw_one_of -%}
-                <div class="one-of-value" id="{{ schema.kw_one_of.html_id }}">{{ tabbed_section("oneOf", schema.kw_one_of) }}</div>
-            {%- endif -%}
-            {%- if schema.kw_not -%}
-                {% include "section_not.html" %}
-            {%- endif -%}
-
-            {# Enum and const #}
-            {%- if schema.kw_enum -%}
-                <div class="enum-value" id="{{ schema.kw_enum.html_id }}">
-                <h4>Must be one of:</h4>
-                <ul class="list-group">
-                {%- for enum_choice in schema.kw_enum.array_items -%}
-                    <li class="list-group-item enum-item">{{ enum_choice.literal | python_to_json }}</li>
-                {%- endfor -%}
-                </ul>
-                </div>
-            {%- endif -%}
-            {%- if schema.kw_const -%}
-                <span class="const-value" id="{{ schema.kw_const.html_id }}">Specific value: <code>{{ schema.kw_const.raw | python_to_json }}</code></span>
-            {%- endif -%}
-
-            {# Pattern (Regular Expression) #}
-            {%- if schema.kw_pattern -%}
-                <span class="pattern-value" id="{{ schema.kw_pattern.html_id }}">Must match regular expression: <code>{{ schema.kw_pattern.literal | escape }}</code></span>
-            {%- endif -%}
-
-            {# Conditional subschema, or if-then-else section #}
-            {%- if schema.has_conditional -%}
-                {% include "section_conditional_subschema.html" %}
-            {%- endif -%}
-
-            {# Required properties that are not defined under "properties". They will only be listed #}
-            {% include "section_undocumented_required_properties.html" %}
-
-            {# Show the requested type(s) #}
-            {% include "badge_type.html" %}
-
-            {# Show array restrictions #}
-            {%- if type_name.startswith("array") -%}
-                {% include "section_array.html" %}
-            {%- endif -%}
-
-            {# Display examples #}
-            {%- set examples = schema.examples -%}
-            {%- if examples -%}
-                {% include "section_examples.html" %}
-            {%- endif -%}
-
-            {# Properties, pattern properties, additional properties #}
-            {%- for sub_property in schema.iterate_properties -%}
-                {% include "section_properties.html" %}
-            {%- endfor -%}
-
+        {%- if schema.explicit_no_additional_properties -%}
+            {{ " " }}<span class="badge badge-info no-additional">No Additional Properties</span>
         {%- endif -%}
+
+        {# Combining: allOf, anyOf, oneOf, not #}
+        {%- if schema.kw_all_of -%}
+            <div class="all-of-value" id="{{ schema.kw_all_of.html_id }}">{{ tabbed_section("allOf", schema.kw_all_of) }}</div>
+        {%- endif -%}
+        {%- if schema.kw_any_of -%}
+            <div class="any-of-value" id="{{ schema.kw_any_of.html_id }}">{{ tabbed_section("anyOf", schema.kw_any_of) }}</div>
+        {%- endif -%}
+        {%- if schema.kw_one_of -%}
+            <div class="one-of-value" id="{{ schema.kw_one_of.html_id }}">{{ tabbed_section("oneOf", schema.kw_one_of) }}</div>
+        {%- endif -%}
+        {%- if schema.kw_not -%}
+            {% include "section_not.html" %}
+        {%- endif -%}
+
+        {# Enum and const #}
+        {%- if schema.kw_enum -%}
+            <div class="enum-value" id="{{ schema.kw_enum.html_id }}">
+            <h4>Must be one of:</h4>
+            <ul class="list-group">
+            {%- for enum_choice in schema.kw_enum.array_items -%}
+                <li class="list-group-item enum-item">{{ enum_choice.literal | python_to_json }}</li>
+            {%- endfor -%}
+            </ul>
+            </div>
+        {%- endif -%}
+        {%- if schema.kw_const -%}
+            <span class="const-value" id="{{ schema.kw_const.html_id }}">Specific value: <code>{{ schema.kw_const.raw | python_to_json }}</code></span>
+        {%- endif -%}
+
+        {# Pattern (Regular Expression) #}
+        {%- if schema.kw_pattern -%}
+            <span class="pattern-value" id="{{ schema.kw_pattern.html_id }}">Must match regular expression: <code>{{ schema.kw_pattern.literal | escape }}</code></span>
+        {%- endif -%}
+
+        {# Conditional subschema, or if-then-else section #}
+        {%- if schema.has_conditional -%}
+            {% include "section_conditional_subschema.html" %}
+        {%- endif -%}
+
+        {# Required properties that are not defined under "properties". They will only be listed #}
+        {% include "section_undocumented_required_properties.html" %}
+
+        {# Show the requested type(s) #}
+        {% include "badge_type.html" %}
+
+        {# Show array restrictions #}
+        {%- if type_name.startswith("array") -%}
+            {% include "section_array.html" %}
+        {%- endif -%}
+
+        {# Display examples #}
+        {%- set examples = schema.examples -%}
+        {%- if examples -%}
+            {% include "section_examples.html" %}
+        {%- endif -%}
+
+        {# Properties, pattern properties, additional properties #}
+        {%- for sub_property in schema.iterate_properties -%}
+            {% include "section_properties.html" %}
+        {%- endfor -%}
     {%- endif -%}
 {%- endmacro -%}
