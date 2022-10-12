@@ -2,8 +2,10 @@
 
 - [1. [Optional] Property root > fruits](#fruits)
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 **Description:** A schema with an array
@@ -14,8 +16,10 @@
 </summary>
 <blockquote>
 
-| Type | `array of string` |
-| ---- | ----------------- |
+|              |                   |
+| ------------ | ----------------- |
+| **Type**     | `array of string` |
+| **Required** | No                |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |

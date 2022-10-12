@@ -6,8 +6,9 @@
 
 **Title:** Bug
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 **Description:** Display the issue.
@@ -18,8 +19,9 @@
 </summary>
 <blockquote>
 
-| Type | `string` |
-| ---- | -------- |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 **Description:** Code property
 
@@ -32,8 +34,9 @@
 </summary>
 <blockquote>
 
-| Type | `array` |
-| ---- | ------- |
+|          |         |
+| -------- | ------- |
+| **Type** | `array` |
 
 **Description:** RecursiveArray property
 
@@ -54,8 +57,9 @@
 </summary>
 <blockquote>
 
-| Type | `array of object` |
-| ---- | ----------------- |
+|          |                   |
+| -------- | ----------------- |
+| **Type** | `array of object` |
 
 **Description:** DecoratedRecursiveArray property
 

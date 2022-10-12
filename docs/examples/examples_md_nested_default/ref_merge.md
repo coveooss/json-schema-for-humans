@@ -7,8 +7,10 @@
 
 **Title:** Test
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
@@ -17,8 +19,10 @@
 </summary>
 <blockquote>
 
-| Type           | `enum (of string)`        |
+|                |                           |
 | -------------- | ------------------------- |
+| **Type**       | `enum (of string)`        |
+| **Required**   | No                        |
 | **Default**    | `"Default from property"` |
 | **Defined in** | #/definitions/aProperty   |
 
@@ -37,8 +41,10 @@ Must be one of:
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Default**               | `{"a": "a", "b": "b"}`                                                    |
 | **Defined in**            | #/definitions/aDictProperty                                               |
@@ -49,8 +55,10 @@ Must be one of:
 </summary>
 <blockquote>
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
 
 </blockquote>
 </details>
@@ -61,8 +69,10 @@ Must be one of:
 </summary>
 <blockquote>
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
 
 </blockquote>
 </details>

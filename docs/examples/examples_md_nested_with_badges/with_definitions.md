@@ -7,8 +7,9 @@
   - [1.4. [Optional] Property root > billing_address > futureProperty](#billing_address_futureProperty)
 - [2. [Optional] Property root > shipping_address](#shipping_address)
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
@@ -17,8 +18,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/address                                                                                                             |
 
@@ -28,8 +30,9 @@
 </summary>
 <blockquote>
 
-| Type | `string` |
-| ---- | -------- |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 </blockquote>
 </details>
@@ -40,8 +43,9 @@
 </summary>
 <blockquote>
 
-| Type | `string` |
-| ---- | -------- |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 </blockquote>
 </details>
@@ -52,8 +56,9 @@
 </summary>
 <blockquote>
 
-| Type | `string` |
-| ---- | -------- |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 </blockquote>
 </details>
@@ -64,8 +69,9 @@
 </summary>
 <blockquote>
 
-| Type | `null` |
-| ---- | ------ |
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
 
 </blockquote>
 </details>
@@ -79,8 +85,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [billing_address](#billing_address)                                                                                               |
 

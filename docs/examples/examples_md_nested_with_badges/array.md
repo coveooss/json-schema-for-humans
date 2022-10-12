@@ -3,8 +3,9 @@
 - [1. [Optional] Property root > fruits](#fruits)
 - [2. [Optional] Property root > vegetables](#vegetables)
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 **Description:** A schema with an array
@@ -15,8 +16,9 @@
 </summary>
 <blockquote>
 
-| Type | `array of string` |
-| ---- | ----------------- |
+|          |                   |
+| -------- | ----------------- |
+| **Type** | `array of string` |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -35,8 +37,9 @@
 </summary>
 <blockquote>
 
-| Type | `array` |
-| ---- | ------- |
+|          |         |
+| -------- | ------- |
+| **Type** | `array` |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |

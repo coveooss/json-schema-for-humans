@@ -13,8 +13,10 @@
 
 **Title:** Delivery Schema
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
@@ -23,8 +25,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/address                                                     |
 
@@ -36,8 +40,10 @@
 </summary>
 <blockquote>
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
 
 </blockquote>
 </details>
@@ -48,8 +54,10 @@
 </summary>
 <blockquote>
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
 
 </blockquote>
 </details>
@@ -60,8 +68,10 @@
 </summary>
 <blockquote>
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
 
 </blockquote>
 </details>
@@ -75,8 +85,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [shipping_address](#shipping_address)                                     |
 
@@ -91,8 +103,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/delivery_info                                               |
 
@@ -109,8 +123,10 @@
 
 ### <a name="delivery_info_oneOf_i0"></a>3.1. Property `Delivery Schema > delivery_info > oneOf > classic`
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/classic                                                     |
 
@@ -120,8 +136,10 @@
 </summary>
 <blockquote>
 
-| Type | `number` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `number` |
+| **Required** | No       |
 
 </blockquote>
 </details>
@@ -131,8 +149,10 @@
 
 ### <a name="delivery_info_oneOf_i1"></a>3.2. Property `Delivery Schema > delivery_info > oneOf > gift`
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/gift                                                        |
 
@@ -144,8 +164,10 @@
 </summary>
 <blockquote>
 
-| Type | `boolean` |
-| ---- | --------- |
+|              |           |
+| ------------ | --------- |
+| **Type**     | `boolean` |
+| **Required** | No        |
 
 </blockquote>
 </details>

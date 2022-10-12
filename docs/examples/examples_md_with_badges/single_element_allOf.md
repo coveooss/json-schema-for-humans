@@ -4,8 +4,9 @@
 
 **Title:** Schema containing a single-element allOf
 
-| Type                      | `combining`                                                                                                                       |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                                                                       |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 **Description:** Schema containing a single-element allOf
@@ -16,8 +17,9 @@
 
 ## <a name="allOf_i0"></a>1. Property `Schema containing a single-element allOf > allOf > my_reference`
 
-| Type           | `string`                   |
+|                |                            |
 | -------------- | -------------------------- |
+| **Type**       | `string`                   |
 | **Defined in** | #/definitions/my_reference |
 
 **Description:** My string definition

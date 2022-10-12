@@ -3,8 +3,10 @@
 - [1. [Optional] Property root > fruits](#fruits)
 - [2. [Optional] Property root > vegetables](#vegetables)
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 **Description:** A schema with an array
@@ -15,8 +17,10 @@
 </summary>
 <blockquote>
 
-| Type | `array of string` |
-| ---- | ----------------- |
+|              |                   |
+| ------------ | ----------------- |
+| **Type**     | `array of string` |
+| **Required** | No                |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -35,8 +39,10 @@
 </summary>
 <blockquote>
 
-| Type | `array` |
-| ---- | ------- |
+|              |         |
+| ------------ | ------- |
+| **Type**     | `array` |
+| **Required** | No      |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |

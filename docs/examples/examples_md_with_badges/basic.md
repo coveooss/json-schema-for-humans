@@ -9,8 +9,9 @@
 
 **Title:** Person
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 | Property                               | Pattern | Type        | Deprecated | Definition | Title/Description |
@@ -24,8 +25,9 @@
 
 **Title:** Person
 
-| Type | `string` |
-| ---- | -------- |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 **Description:** The person's first name.
 
@@ -33,8 +35,9 @@
 
 **Title:** Person
 
-| Type | `string` |
-| ---- | -------- |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 **Description:** The person's last name.
 
@@ -42,8 +45,9 @@
 
 **Title:** Person
 
-| Type | `integer` |
-| ---- | --------- |
+|          |           |
+| -------- | --------- |
+| **Type** | `integer` |
 
 **Description:** Age in years which must be equal to or greater than zero.
 
@@ -53,8 +57,9 @@
 
 ## <a name="driverLicenseId"></a>4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > driverLicenseId`
 
-| Type                      | `combining`                                                                                                                       |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                                                                       |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 | All of(Requirement)                            |
@@ -66,15 +71,17 @@
 
 **Title:** no driver licence
 
-| Type | `null` |
-| ---- | ------ |
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
 
 ### <a name="driverLicenseId_allOf_i1"></a>4.2. Property `Person > driverLicenseId > allOf > driver licence id`
 
 **Title:** driver licence id
 
-| Type | `string` |
-| ---- | -------- |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

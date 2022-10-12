@@ -8,8 +8,10 @@
 
 **Title:** Person
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
@@ -20,8 +22,10 @@
 
 **Title:** Person
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Description:** The person's first name.
 
@@ -36,8 +40,10 @@
 
 **Title:** Person
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Description:** The person's last name.
 
@@ -55,8 +61,10 @@ must respect the following conditions
 
 **Title:** paperSize
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 **Description:** Review of a paper size.
@@ -69,8 +77,10 @@ must respect the following conditions
 
 **Title:** Rating
 
-| Type | `integer` |
-| ---- | --------- |
+|              |           |
+| ------------ | --------- |
+| **Type**     | `integer` |
+| **Required** | Yes       |
 
 **Description:** Numerical rating for paper size.
 
@@ -85,8 +95,10 @@ must respect the following conditions
 
 **Title:** Review
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
 
 **Description:** Narrative review of the paper size.
 

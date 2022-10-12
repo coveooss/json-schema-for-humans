@@ -6,8 +6,10 @@
 - [4. [Optional]~~ Property root > deprecated4~~](#deprecated4)
 - [5. [Optional] Property root > not_deprecated](#not_deprecated)
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 **Description:** Test schema with deprecated in description
@@ -18,8 +20,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Deprecated**            | [Deprecated]                                                              |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
@@ -34,8 +38,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Deprecated**            | [Deprecated]                                                              |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
@@ -50,8 +56,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Deprecated**            | [Deprecated]                                                              |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
@@ -66,8 +74,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Deprecated**            | [Deprecated]                                                              |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
@@ -82,8 +92,10 @@
 </summary>
 <blockquote>
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 </blockquote>
 </details>

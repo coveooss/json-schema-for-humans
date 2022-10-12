@@ -5,8 +5,9 @@
 
 **Title:** Longitude and Latitude Values
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 **Description:** A geographical coordinate.
@@ -18,8 +19,9 @@
 
 ## <a name="latitude"></a>1. ![Required](https://img.shields.io/badge/Required-blue) Property `Longitude and Latitude Values > latitude`
 
-| Type | `number` |
-| ---- | -------- |
+|          |          |
+| -------- | -------- |
+| **Type** | `number` |
 
 | Restrictions |          |
 | ------------ | -------- |
@@ -28,8 +30,9 @@
 
 ## <a name="longitude"></a>2. ![Required](https://img.shields.io/badge/Required-blue) Property `Longitude and Latitude Values > longitude`
 
-| Type | `number` |
-| ---- | -------- |
+|          |          |
+| -------- | -------- |
+| **Type** | `number` |
 
 | Restrictions |           |
 | ------------ | --------- |

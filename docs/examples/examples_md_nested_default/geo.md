@@ -5,8 +5,10 @@
 
 **Title:** Longitude and Latitude Values
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 **Description:** A geographical coordinate.
@@ -17,8 +19,10 @@
 </summary>
 <blockquote>
 
-| Type | `number` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `number` |
+| **Required** | Yes      |
 
 | Restrictions |          |
 | ------------ | -------- |
@@ -34,8 +38,10 @@
 </summary>
 <blockquote>
 
-| Type | `number` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `number` |
+| **Required** | Yes      |
 
 | Restrictions |           |
 | ------------ | --------- |

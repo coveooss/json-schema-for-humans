@@ -4,8 +4,10 @@
   - [1.1. [Required] Property root > outer > inner](#outer_inner)
 - [2. [Optional] Property root > outer2](#outer2)
 
-| Type                      | `object`                                                |
+|                           |                                                         |
 | ------------------------- | ------------------------------------------------------- |
+| **Type**                  | `object`                                                |
+| **Required**              | No                                                      |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
 <details>
@@ -14,8 +16,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | Yes                                                                       |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/inner schema                                                |
 
@@ -27,8 +31,10 @@
 </summary>
 <blockquote>
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
 
 **Description:** inner description
 
@@ -44,8 +50,10 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [outer](#outer)                                                           |
 

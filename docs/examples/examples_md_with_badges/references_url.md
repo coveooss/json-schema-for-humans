@@ -2,8 +2,9 @@
 
 - [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > firstName`](#firstName)
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 **Description:** Testing $ref with URL
@@ -14,8 +15,9 @@
 
 ## <a name="firstName"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > firstName`
 
-| Type           | `string`                                                                                                                    |
+|                |                                                                                                                             |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| **Type**       | `string`                                                                                                                    |
 | **Defined in** | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/basic.json#/properties/firstName |
 
 **Description:** The person's first name.

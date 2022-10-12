@@ -7,8 +7,9 @@
 
 **Title:** Test
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 | Property                                             | Pattern | Type             | Deprecated | Definition                     | Title/Description                           |
@@ -18,8 +19,9 @@
 
 ## <a name="aProperty"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Test > aProperty`
 
-| Type           | `enum (of string)`        |
+|                |                           |
 | -------------- | ------------------------- |
+| **Type**       | `enum (of string)`        |
 | **Default**    | `"Default from property"` |
 | **Defined in** | #/definitions/aProperty   |
 
@@ -31,8 +33,9 @@ Must be one of:
 
 ## <a name="aDictPropertyARequired"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Test > aDictPropertyARequired`
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Default**               | `{"a": "a", "b": "b"}`                                                                                                            |
 | **Defined in**            | #/definitions/aDictProperty                                                                                                       |
@@ -44,13 +47,15 @@ Must be one of:
 
 ### <a name="aDictPropertyARequired_a"></a>2.1. ![Required](https://img.shields.io/badge/Required-blue) Property `Test > aDictPropertyARequired > a`
 
-| Type | `string` |
-| ---- | -------- |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 ### <a name="aDictPropertyARequired_b"></a>2.2. ![Required](https://img.shields.io/badge/Required-blue) Property `Test > aDictPropertyARequired > b`
 
-| Type | `string` |
-| ---- | -------- |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

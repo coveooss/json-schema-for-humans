@@ -4,8 +4,9 @@
 - [2. Property `root > oneOf > 2nd constant`](#oneOf_i1)
 - [3. Property `root > oneOf > 0`](#oneOf_i2)
 
-| Type | `combining` |
-| ---- | ----------- |
+|          |             |
+| -------- | ----------- |
+| **Type** | `combining` |
 
 <blockquote>
 
@@ -21,8 +22,9 @@
 
 **Title:** 1st constant
 
-| Type | `const` |
-| ---- | ------- |
+|          |         |
+| -------- | ------- |
+| **Type** | `const` |
 
 Specific value: `[
     1,
@@ -36,8 +38,9 @@ Specific value: `[
 
 **Title:** 2nd constant
 
-| Type | `const` |
-| ---- | ------- |
+|          |         |
+| -------- | ------- |
+| **Type** | `const` |
 
 Specific value: `{
     "a_key": "a_value",
@@ -51,8 +54,9 @@ Specific value: `{
 
 **Title:** 0
 
-| Type | `const` |
-| ---- | ------- |
+|          |         |
+| -------- | ------- |
+| **Type** | `const` |
 
 Specific value: `0`
 

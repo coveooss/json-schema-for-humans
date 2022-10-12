@@ -6,8 +6,10 @@
 
 **Title:** Bug
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 **Description:** Display the issue.
@@ -18,8 +20,10 @@
 </summary>
 <blockquote>
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Description:** Code property
 
@@ -32,8 +36,10 @@
 </summary>
 <blockquote>
 
-| Type | `array` |
-| ---- | ------- |
+|              |         |
+| ------------ | ------- |
+| **Type**     | `array` |
+| **Required** | No      |
 
 **Description:** RecursiveArray property
 
@@ -54,8 +60,10 @@
 </summary>
 <blockquote>
 
-| Type | `array of object` |
-| ---- | ----------------- |
+|              |                   |
+| ------------ | ----------------- |
+| **Type**     | `array of object` |
+| **Required** | No                |
 
 **Description:** DecoratedRecursiveArray property
 

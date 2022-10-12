@@ -6,8 +6,9 @@
     - [1.2.1. [Optional] Property root > signingTimeInfo > signingTimeBounds > lowerBound](#signingTimeInfo_signingTimeBounds_lowerBound)
     - [1.2.2. [Optional] Property root > signingTimeInfo > signingTimeBounds > upperBound](#signingTimeInfo_signingTimeBounds_upperBound)
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
@@ -16,8 +17,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/dss2-SigningTimeInfoType                                                                                            |
 
@@ -27,8 +29,9 @@
 </summary>
 <blockquote>
 
-| Type       | `integer`      |
+|            |                |
 | ---------- | -------------- |
+| **Type**   | `integer`      |
 | **Format** | `utc-millisec` |
 
 </blockquote>
@@ -40,8 +43,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries                                                                    |
 
@@ -51,8 +55,9 @@
 </summary>
 <blockquote>
 
-| Type       | `integer`      |
+|            |                |
 | ---------- | -------------- |
+| **Type**   | `integer`      |
 | **Format** | `utc-millisec` |
 
 </blockquote>
@@ -64,8 +69,9 @@
 </summary>
 <blockquote>
 
-| Type       | `integer`      |
+|            |                |
 | ---------- | -------------- |
+| **Type**   | `integer`      |
 | **Format** | `utc-millisec` |
 
 </blockquote>

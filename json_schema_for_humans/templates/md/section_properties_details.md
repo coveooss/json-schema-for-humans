@@ -6,11 +6,11 @@
   {% set html_id = sub_property.html_id %}
 
   {% set description = sub_property | get_description %}
-  
+
   {% filter md_heading(depth + 1, html_id) -%}
     {%- filter replace('\n', '') -%}
     {%- if not skip_required and sub_property.property_name -%}
-        {{ md_badge("Required", "blue") if sub_property.is_required_property else md_badge("Optional", "yellow") -}}
+        {{ md_badge("Required", "blue", fallback=False) if sub_property.is_required_property else md_badge("Optional", "yellow", fallback=False) -}}
     {%- endif -%}
     {%- if sub_property is deprecated  -%}~~{%- endif -%}
     {%- if sub_property.is_pattern_property %} Pattern{% endif %} Property `{% with schema=sub_property %}{%- include "breadcrumbs.md" %}{% endwith %}`

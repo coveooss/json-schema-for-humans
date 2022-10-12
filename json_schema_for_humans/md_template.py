@@ -293,16 +293,22 @@ class MarkdownTemplate(object):
         """Format a Markdown link"""
         return f"[{title}](#{link} {tooltip})"
 
-    def badge(self, name: str, color: str, value: str = "", show_text: bool = False) -> str:
+    def badge(self, name: str, color: str, value: str = "", show_text: bool = False, fallback: bool = True) -> str:
         """
-        Badge as markdown image link if badge_as_image option set otherwise Badge as text
+        Badge as markdown image link if badge_as_image option set otherwise Badge as text.
+
+        If fallback is False, nothing will be returned if badge_as_image is false.
         """
+        show_image = self.config.template_md_options.get("badge_as_image")
+        if not show_image and not fallback:
+            return ""
+
         if value:
             text_badge = f"{name}: {value}"
         else:
             text_badge = name
 
-        if self.config.template_md_options.get("badge_as_image") and not show_text:
+        if show_image and not show_text:
             value_str = ""
             if value:
                 value_str = "-" + quote(value)
@@ -372,7 +378,10 @@ class MarkdownTemplate(object):
         schema_type = schema.type_name
         default_value = schema.default_value
         schema_format = schema.format
-        type_info.append(["Type", "`combining`" if jinja_filters.is_combining(schema) else f"`{schema_type}`"])
+        type_info.append(["", ""])
+        type_info.append(["**Type**", "`combining`" if jinja_filters.is_combining(schema) else f"`{schema_type}`"])
+        if not self.config.template_md_options.get("badge_as_image"):
+            type_info.append(["**Required**", "Yes" if schema.is_required_property else "No"])
         if jinja_filters.deprecated(self.config, schema):
             type_info.append(["**Deprecated**", self.badge("Deprecated", "red")])
 

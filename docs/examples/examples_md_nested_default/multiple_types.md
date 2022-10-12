@@ -7,8 +7,10 @@
 
 **Title:** Person
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
@@ -17,8 +19,10 @@
 </summary>
 <blockquote>
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Description:** The person's first name.
 
@@ -31,8 +35,10 @@
 </summary>
 <blockquote>
 
-| Type | `string or null` |
-| ---- | ---------------- |
+|              |                  |
+| ------------ | ---------------- |
+| **Type**     | `string or null` |
+| **Required** | No               |
 
 **Description:** The person's last name.
 
@@ -45,8 +51,10 @@
 </summary>
 <blockquote>
 
-| Type | `integer or number` |
-| ---- | ------------------- |
+|              |                     |
+| ------------ | ------------------- |
+| **Type**     | `integer or number` |
+| **Required** | No                  |
 
 **Description:** Age in years which must be equal to or greater than zero.
 
@@ -63,8 +71,10 @@
 </summary>
 <blockquote>
 
-| Type | `integer, string, number or null` |
-| ---- | --------------------------------- |
+|              |                                   |
+| ------------ | --------------------------------- |
+| **Type**     | `integer, string, number or null` |
+| **Required** | No                                |
 
 **Description:** Ay other info you like
 

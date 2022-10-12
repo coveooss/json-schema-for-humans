@@ -4,8 +4,9 @@
   - [1.1. [Optional] Property root > described > name](#described_name)
   - [1.2. [Optional] Property root > described > alignment](#described_alignment)
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 **Description:** Testing $ref of a remote $ref
@@ -16,8 +17,9 @@
 </summary>
 <blockquote>
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/description_from_ref.json              |
 
@@ -27,8 +29,9 @@
 </summary>
 <blockquote>
 
-| Type           | `string`                    |
+|                |                             |
 | -------------- | --------------------------- |
+| **Type**       | `string`                    |
 | **Defined in** | #/definitions/filled_string |
 
 **Description:** a filled string
@@ -46,8 +49,9 @@
 </summary>
 <blockquote>
 
-| Type                   | `string`                |
+|                        |                         |
 | ---------------------- | ----------------------- |
+| **Type**               | `string`                |
 | **Same definition as** | [name](#described_name) |
 
 **Description:** a filled string

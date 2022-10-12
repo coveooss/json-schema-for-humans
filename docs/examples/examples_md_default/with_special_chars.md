@@ -1,14 +1,16 @@
 # Personne
 
-- [1. [Optional] Property `Personne > prénom`](#pr_nom)
-- [2. [Optional] Property `Personne > nomDeFamille`](#nomDeFamille)
-- [3. [Optional] Property `Personne > âge`](#a_ge)
-- [4. [Optional] Property `Personne > 0 de quoi d'autre`](#a0_de_quoi_d_autre)
+- [1. Property `Personne > prénom`](#pr_nom)
+- [2. Property `Personne > nomDeFamille`](#nomDeFamille)
+- [3. Property `Personne > âge`](#a_ge)
+- [4. Property `Personne > 0 de quoi d'autre`](#a0_de_quoi_d_autre)
 
 **Title:** Personne
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 | Property                                    | Pattern | Type    | Deprecated | Definition | Title/Description                                     |
@@ -18,24 +20,30 @@
 | - [âge](#a_ge )                             | No      | integer | No         | -          | L'âge en années qui doit être plus grand ou égal à 0. |
 | - [0 de quoi d'autre](#a0_de_quoi_d_autre ) | No      | string  | No         | -          | -                                                     |
 
-## <a name="pr_nom"></a>1. [Optional] Property `Personne > prénom`
+## <a name="pr_nom"></a>1. Property `Personne > prénom`
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Description:** Le prénom de la personne.
 
-## <a name="nomDeFamille"></a>2. [Optional] Property `Personne > nomDeFamille`
+## <a name="nomDeFamille"></a>2. Property `Personne > nomDeFamille`
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Description:** Le nom de famille de la personne.
 
-## <a name="a_ge"></a>3. [Optional] Property `Personne > âge`
+## <a name="a_ge"></a>3. Property `Personne > âge`
 
-| Type | `integer` |
-| ---- | --------- |
+|              |           |
+| ------------ | --------- |
+| **Type**     | `integer` |
+| **Required** | No        |
 
 **Description:** L'âge en années qui doit être plus grand ou égal à 0.
 
@@ -43,10 +51,12 @@
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-## <a name="a0_de_quoi_d_autre"></a>4. [Optional] Property `Personne > 0 de quoi d'autre`
+## <a name="a0_de_quoi_d_autre"></a>4. Property `Personne > 0 de quoi d'autre`
 
-| Type | `string` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Examples:** 
 

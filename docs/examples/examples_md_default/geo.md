@@ -1,12 +1,14 @@
 # Longitude and Latitude Values
 
-- [1. [Required] Property `Longitude and Latitude Values > latitude`](#latitude)
-- [2. [Required] Property `Longitude and Latitude Values > longitude`](#longitude)
+- [1. Property `Longitude and Latitude Values > latitude`](#latitude)
+- [2. Property `Longitude and Latitude Values > longitude`](#longitude)
 
 **Title:** Longitude and Latitude Values
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 **Description:** A geographical coordinate.
@@ -16,20 +18,24 @@
 | + [latitude](#latitude )   | No      | number | No         | -          | -                 |
 | + [longitude](#longitude ) | No      | number | No         | -          | -                 |
 
-## <a name="latitude"></a>1. [Required] Property `Longitude and Latitude Values > latitude`
+## <a name="latitude"></a>1. Property `Longitude and Latitude Values > latitude`
 
-| Type | `number` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `number` |
+| **Required** | Yes      |
 
 | Restrictions |          |
 | ------------ | -------- |
 | **Minimum**  | &ge; -90 |
 | **Maximum**  | &le; 90  |
 
-## <a name="longitude"></a>2. [Required] Property `Longitude and Latitude Values > longitude`
+## <a name="longitude"></a>2. Property `Longitude and Latitude Values > longitude`
 
-| Type | `number` |
-| ---- | -------- |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `number` |
+| **Required** | Yes      |
 
 | Restrictions |           |
 | ------------ | --------- |

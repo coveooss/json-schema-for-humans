@@ -7,8 +7,9 @@
 
 **Title:** Personne
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 | Property                                    | Pattern | Type    | Deprecated | Definition | Title/Description                                     |
@@ -20,22 +21,25 @@
 
 ## <a name="pr_nom"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Personne > prénom`
 
-| Type | `string` |
-| ---- | -------- |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 **Description:** Le prénom de la personne.
 
 ## <a name="nomDeFamille"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Personne > nomDeFamille`
 
-| Type | `string` |
-| ---- | -------- |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 **Description:** Le nom de famille de la personne.
 
 ## <a name="a_ge"></a>3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Personne > âge`
 
-| Type | `integer` |
-| ---- | --------- |
+|          |           |
+| -------- | --------- |
+| **Type** | `integer` |
 
 **Description:** L'âge en années qui doit être plus grand ou égal à 0.
 
@@ -45,8 +49,9 @@
 
 ## <a name="a0_de_quoi_d_autre"></a>4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Personne > 0 de quoi d'autre`
 
-| Type | `string` |
-| ---- | -------- |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 **Examples:** 
 

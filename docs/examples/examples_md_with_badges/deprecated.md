@@ -6,8 +6,9 @@
 - [4. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated4`~~](#deprecated4)
 - [5. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > not_deprecated`](#not_deprecated)
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 **Description:** Test schema with deprecated in description
@@ -22,8 +23,9 @@
 
 ## <a name="deprecated1"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated1`~~
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Deprecated**            | ![Deprecated](https://img.shields.io/badge/Deprecated-red)                                                                        |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
@@ -31,8 +33,9 @@
 
 ## <a name="deprecated2"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated2`~~
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Deprecated**            | ![Deprecated](https://img.shields.io/badge/Deprecated-red)                                                                        |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
@@ -40,8 +43,9 @@
 
 ## <a name="deprecated3"></a>3. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated3`~~
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Deprecated**            | ![Deprecated](https://img.shields.io/badge/Deprecated-red)                                                                        |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
@@ -49,8 +53,9 @@
 
 ## <a name="deprecated4"></a>4. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated4`~~
 
-| Type                      | `object`                                                                                                                          |
+|                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
 | **Deprecated**            | ![Deprecated](https://img.shields.io/badge/Deprecated-red)                                                                        |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
@@ -58,8 +63,9 @@
 
 ## <a name="not_deprecated"></a>5. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > not_deprecated`
 
-| Type | `string` |
-| ---- | -------- |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

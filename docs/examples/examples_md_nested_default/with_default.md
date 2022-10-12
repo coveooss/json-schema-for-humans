@@ -6,8 +6,10 @@
 
 **Title:** User Preference
 
-| Type                      | `object`                                                                  |
+|                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
@@ -16,9 +18,11 @@
 </summary>
 <blockquote>
 
-| Type        | `enum (of string)` |
-| ----------- | ------------------ |
-| **Default** | `"Linux"`          |
+|              |                    |
+| ------------ | ------------------ |
+| **Type**     | `enum (of string)` |
+| **Required** | No                 |
+| **Default**  | `"Linux"`          |
 
 Must be one of:
 * "Windows"
@@ -34,9 +38,11 @@ Must be one of:
 </summary>
 <blockquote>
 
-| Type        | `array of enum (of string)` |
-| ----------- | --------------------------- |
-| **Default** | `["white", "blue"]`         |
+|              |                             |
+| ------------ | --------------------------- |
+| **Type**     | `array of enum (of string)` |
+| **Required** | No                          |
+| **Default**  | `["white", "blue"]`         |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -55,9 +61,11 @@ Must be one of:
 </summary>
 <blockquote>
 
-| Type        | `integer` |
-| ----------- | --------- |
-| **Default** | `2`       |
+|              |           |
+| ------------ | --------- |
+| **Type**     | `integer` |
+| **Required** | No        |
+| **Default**  | `2`       |
 
 | Restrictions |        |
 | ------------ | ------ |
