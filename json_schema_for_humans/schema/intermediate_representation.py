@@ -341,6 +341,18 @@ def _load_schema(
     return loaded_schema
 
 
+def _schema_merge(original: dict, to_merge: dict) -> None:
+    """Merge a schema recursively with another, keeping the original one when there is a conflict"""
+    for k, v in to_merge.items():
+        if k in original:
+            # If both are dict, merge them
+            if isinstance(original[k], dict) and isinstance(v, dict):
+                _schema_merge(original[k], v)
+            # Otherwise, keep the original value
+        else:
+            original[k] = v
+
+
 def _build_node(
     config: GenerationConfiguration,
     resolved_references: Dict[str, Dict[str, SchemaNode]],
@@ -387,6 +399,14 @@ def _build_node(
     _record_ref(resolved_references, schema_file_path, path_to_element, new_node)
 
     if isinstance(schema, dict):
+        # Handle having oneOf or allOf with only one condition
+        if SchemaKeyword.ALL_OF.value in schema and len(schema[SchemaKeyword.ALL_OF.value]) == 1:
+            _schema_merge(schema, schema[SchemaKeyword.ALL_OF.value][0])
+            del schema[SchemaKeyword.ALL_OF.value]
+        if SchemaKeyword.ONE_OF.value in schema and len(schema[SchemaKeyword.ONE_OF.value]) == 1:
+            _schema_merge(schema, schema[SchemaKeyword.ONE_OF.value][0])
+            del schema[SchemaKeyword.ONE_OF.value]
+
         keywords = {}
         pattern_id = 1
         for schema_key, schema_value in schema.items():

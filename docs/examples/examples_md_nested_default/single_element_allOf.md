@@ -1,38 +1,49 @@
 # Schema containing a single-element allOf
 
-- [1. Property `Schema containing a single-element allOf > allOf > my_reference`](#allOf_i0)
+- [1. [Optional] Property Schema containing a single-element allOf > prop1](#prop1)
+- [2. [Optional] Property Schema containing a single-element allOf > prop2](#prop2)
 
 **Title:** Schema containing a single-element allOf
 
 |                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `combining`                                                               |
+| **Type**                  | `object`                                                                  |
 | **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 **Description:** Schema containing a single-element allOf
 
+<details>
+<summary><strong> <a name="prop1"></a>1. [Optional] Property Schema containing a single-element allOf > prop1</strong>  
+
+</summary>
 <blockquote>
 
-| All of(Requirement)       |
-| ------------------------- |
-| [my_reference](#allOf_i0) |
-
-<blockquote>
-
-## <a name="allOf_i0"></a>1. Property `Schema containing a single-element allOf > allOf > my_reference`
-
-|                |                            |
-| -------------- | -------------------------- |
-| **Type**       | `string`                   |
-| **Required**   | No                         |
-| **Defined in** | #/definitions/my_reference |
+|                |          |
+| -------------- | -------- |
+| **Type**       | `string` |
+| **Required**   | No       |
+| **Default**    | `"hi"`   |
+| **Defined in** |          |
 
 **Description:** My string definition
 
 </blockquote>
+</details>
+
+<details>
+<summary><strong> <a name="prop2"></a>2. [Optional] Property Schema containing a single-element allOf > prop2</strong>  
+
+</summary>
+<blockquote>
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `number` |
+| **Required** | No       |
 
 </blockquote>
+</details>
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

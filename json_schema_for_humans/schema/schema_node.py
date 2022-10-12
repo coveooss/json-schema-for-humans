@@ -290,7 +290,7 @@ class SchemaNode:
         # return self._refers_to_merged
 
     def get_keyword(self, keyword: SchemaKeyword) -> Optional["SchemaNode"]:
-        """Get the value of a keyword if present and it is not a property (to avoid conflicts with properties being
+        """Get the value of a keyword if present, and it is not a property (to avoid conflicts with properties being
         named like a keyword, e.g. a property named "if")
         """
         possible_keyword = self.keywords.get(keyword.value)

@@ -552,6 +552,8 @@ def test_single_element_allOf() -> None:
     tests.html_schema_doc_asserts.assert_descriptions(
         soup, ["Schema containing a single-element allOf", "My string definition"]
     )
+    tests.html_schema_doc_asserts.assert_types(soup, ["object", "string", "number"])
+    tests.html_schema_doc_asserts.assert_default_values(soup, ['"hi"'])
 
 
 def test_json_with_tabs() -> None:
