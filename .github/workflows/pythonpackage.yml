@@ -26,6 +26,9 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
+    - name: Install Poetry
+      run: curl -sSL https://install.python-poetry.org | python -
+
     - name: Update tools
       run: python -m pip install --upgrade pip setuptools wheel pipx --user
 
