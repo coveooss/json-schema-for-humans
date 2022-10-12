@@ -61,15 +61,15 @@
 
 **Description:** Age in years which must be equal to or greater than zero.
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
-
 **Example:** 
 
 ```json
 64
 ```
+
+| Restrictions |        |
+| ------------ | ------ |
+| **Minimum**  | &ge; 0 |
 
 ## <a name="moreInfo"></a>4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > moreInfo`
 
