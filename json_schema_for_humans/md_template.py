@@ -36,7 +36,7 @@ def escape_for_table(example_text: Optional[str]) -> str:
     """Filter. escape characters('|', '`') in string to be inserted into markdown table"""
     if example_text is None:
         return ""
-    return example_text.translate(str.maketrans({"|": "\\|", "`": "\\`"}))
+    return example_text.translate(str.maketrans({"|": "\\|", "`": "\\`", "\n": "<br />"}))
 
 
 def get_numeric_minimum_restriction(schema_node: SchemaNode, default: str = "N/A") -> str:
@@ -348,7 +348,7 @@ class MarkdownTemplate(object):
             if sub_property.title:
                 description = sub_property.title
 
-            line.append(escape_for_table(first_line_fixed(description, const.LINE_WIDTH)))
+            line.append(escape_for_table(description))
 
             properties.append(line)
 

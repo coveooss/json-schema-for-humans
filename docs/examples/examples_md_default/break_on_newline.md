@@ -10,7 +10,7 @@
 
 | Property                   | Pattern | Type   | Deprecated | Definition | Title/Description |
 | -------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [property1](#property1 ) | No      | string | No         | -          | Line1 ...         |
+| - [property1](#property1 ) | No      | string | No         | -          | Line1<br />Line2  |
 
 ## <a name="property1"></a>1. [Optional] Property `Hello > property1`
 
