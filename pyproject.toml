@@ -38,7 +38,7 @@ MarkupSafe = "^2.0"
 
 [tool.poetry.dev-dependencies]
 beautifulsoup4 = "^4.10.0"
-black = "^21.9b0"
+black = "^22.10"
 pytest = "^6.2.5"
 
 
