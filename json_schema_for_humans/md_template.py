@@ -36,7 +36,7 @@ def escape_for_table(example_text: Optional[str]) -> str:
     """Filter. escape characters('|', '`') in string to be inserted into markdown table"""
     if example_text is None:
         return ""
-    return example_text.translate(str.maketrans({"|": "\\|", "`": "\\`"}))
+    return example_text.translate(str.maketrans({"|": "\\|", "`": "\\`", "\n": "<br />"}))
 
 
 def get_numeric_minimum_restriction(schema_node: SchemaNode, default: str = "N/A") -> str:
