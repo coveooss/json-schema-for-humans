@@ -291,25 +291,28 @@ def _get_node_ref(schema: Union[int, str, List, Dict]) -> str:
 
 
 def _load_schema_from_uri(schema_uri: str, loaded_schemas: Dict[str, Any]):
-    if schema_uri in loaded_schemas:
-        loaded_schema = loaded_schemas[schema_uri]
-    else:
-        if schema_uri.startswith("http"):
-            if schema_uri.endswith(".yaml"):
-                loaded_schema = yaml.safe_load(requests.get(schema_uri).text)
-            else:
-                loaded_schema = requests.get(schema_uri).json()
+    try:
+        if schema_uri in loaded_schemas:
+            loaded_schema = loaded_schemas[schema_uri]
         else:
-            with open(schema_uri, encoding="utf-8") as schema_fp:
-                _, extension = os.path.splitext(schema_uri)
-                if extension == ".json":
-                    loaded_schema = json.load(schema_fp)
+            if schema_uri.startswith("http"):
+                if schema_uri.endswith(".yaml"):
+                    loaded_schema = yaml.safe_load(requests.get(schema_uri).text)
                 else:
-                    loaded_schema = yaml.safe_load(schema_fp)
-        loaded_schemas[schema_uri] = loaded_schema
+                    loaded_schema = requests.get(schema_uri).json()
+            else:
+                with open(schema_uri, encoding="utf-8") as schema_fp:
+                    _, extension = os.path.splitext(schema_uri)
+                    if extension == ".json":
+                        loaded_schema = json.load(schema_fp)
+                    else:
+                        loaded_schema = yaml.safe_load(schema_fp)
+            loaded_schemas[schema_uri] = loaded_schema
 
-    return loaded_schema
-
+        return loaded_schema
+    except Exception as e:
+        print(f"Error loading schema from {schema_uri}: {e}")
+        return {}
 
 def _load_schema(
     schema_uri: str, path_to_element: List[Union[str, int]], loaded_schemas: Dict[str, Any]
