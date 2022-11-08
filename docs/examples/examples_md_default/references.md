@@ -66,12 +66,12 @@
 
 ## <a name="anchor_with_slash"></a>3. Property `root > anchor_with_slash`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/object_def                                                  |
+|                           |                                                         |
+| ------------------------- | ------------------------------------------------------- |
+| **Type**                  | `object`                                                |
+| **Required**              | No                                                      |
+| **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
+| **Defined in**            | #/definitions/object_def                                |
 
 | Property                                     | Pattern | Type   | Deprecated | Definition | Title/Description                          |
 | -------------------------------------------- | ------- | ------ | ---------- | ---------- | ------------------------------------------ |
@@ -135,12 +135,12 @@
 
 ## <a name="same_file_anchor_no_slash"></a>7. Property `root > same_file_anchor_no_slash`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | [anchor_with_slash](#anchor_with_slash)                                   |
+|                           |                                                         |
+| ------------------------- | ------------------------------------------------------- |
+| **Type**                  | `object`                                                |
+| **Required**              | No                                                      |
+| **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
+| **Same definition as**    | [anchor_with_slash](#anchor_with_slash)                 |
 
 ## <a name="same_file_nested_reference"></a>8. Property `root > same_file_nested_reference`
 

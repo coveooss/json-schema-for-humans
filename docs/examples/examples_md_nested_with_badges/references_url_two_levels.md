@@ -17,11 +17,11 @@
 </summary>
 <blockquote>
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/description_from_ref.json              |
+|                           |                                                                                                                      |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                             |
+| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.")             |
+| **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/description_from_ref.json |
 
 <details>
 <summary><strong> <a name="described_name"></a>1.1. [Optional] Property root > described > name</strong>  
