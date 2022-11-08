@@ -283,11 +283,9 @@ class SchemaNode:
         merged_node.keywords.update({k: copy.copy(v) for k, v in self.keywords.items()})
         merged_node.array_items += [copy.copy(i) for i in self.array_items]
 
+        merged_node.literal = self.literal or self.refers_to.literal
+
         return merged_node
-
-        # self._refers_to_merged = merged_node
-
-        # return self._refers_to_merged
 
     def get_keyword(self, keyword: SchemaKeyword) -> Optional["SchemaNode"]:
         """Get the value of a keyword if present, and it is not a property (to avoid conflicts with properties being
