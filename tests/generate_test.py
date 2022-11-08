@@ -677,5 +677,18 @@ def test_empty_property_name() -> None:
     tests.html_schema_doc_asserts.assert_descriptions(soup, ["I don't know why you would want an empty property 🤷"])
 
 
+def test_broken_ref() -> None:
+    soup = generate_case("broken_ref")
+
+    tests.html_schema_doc_asserts.assert_property_names(soup, ["firstName", "lastName"])
+    tests.html_schema_doc_asserts.assert_descriptions(
+        soup,
+        [
+            "The person's first name.",
+            "😅 ERROR in schema generation, a referenced schema could not be loaded, no documentation here unfortunately 🏜️",
+        ],
+    )
+
+
 # TODO: test for uniqueItems
 # TODO: test for contains
