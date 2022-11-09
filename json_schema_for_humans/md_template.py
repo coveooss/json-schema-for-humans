@@ -378,17 +378,22 @@ class MarkdownTemplate(object):
         schema_type = schema.type_name
         default_value = schema.default_value
         schema_format = schema.format
+
+        merged_schema = schema if not schema.refers_to else schema.refers_to_merged
+
         type_info.append(["", ""])
-        type_info.append(["**Type**", "`combining`" if jinja_filters.is_combining(schema) else f"`{schema_type}`"])
+        type_info.append(
+            ["**Type**", "`combining`" if jinja_filters.is_combining(merged_schema) else f"`{schema_type}`"]
+        )
         if not self.config.template_md_options.get("badge_as_image"):
             type_info.append(["**Required**", "Yes" if schema.is_required_property else "No"])
-        if jinja_filters.deprecated(self.config, schema):
+        if jinja_filters.deprecated(self.config, merged_schema):
             type_info.append(["**Deprecated**", self.badge("Deprecated", "red")])
 
         if schema_format:
             type_info.append(["**Format**", f"`{schema_format}`"])
         if schema_type == const.TYPE_OBJECT:
-            type_info.append(["**Additional properties**", self.additional_properties(schema)])
+            type_info.append(["**Additional properties**", self.additional_properties(merged_schema)])
         if default_value:
             type_info.append(["**Default**", f"`{default_value}`"])
         if schema.should_be_a_link(self.config):

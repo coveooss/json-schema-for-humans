@@ -22,7 +22,7 @@
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                                                             |
 | **Required**              | No                                                                                                                   |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.")                                            |
+| **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.")                                                              |
 | **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/description_from_ref.json |
 
 <details>
