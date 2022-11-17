@@ -13,7 +13,7 @@ import yaml
 from json_schema_for_humans import const
 from json_schema_for_humans.const import FileLikeType
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
-from json_schema_for_humans.jinja_filters import escape_property_name_for_id
+from json_schema_for_humans.jinja_filters import encode_property_name_for_id
 from json_schema_for_humans.schema.schema_keyword import SchemaKeyword
 from json_schema_for_humans.schema.schema_node import SchemaNode
 
@@ -462,7 +462,7 @@ def _build_node(
                 for new_property_name, new_property_schema in schema_value.items():
                     new_html_id = html_id
                     new_html_id += "_" if html_id else ""
-                    new_html_id += escape_property_name_for_id(new_property_name)
+                    new_html_id += encode_property_name_for_id(new_property_name)
                     new_node.properties[new_property_name] = _build_node(
                         config=config,
                         resolved_references=resolved_references,
@@ -564,7 +564,7 @@ def _build_node(
                     new_depth += 1
                     new_html_id += "_" if html_id else ""
                     if not parent_key == SchemaKeyword.PATTERN_PROPERTIES.value:
-                        new_html_id += escape_property_name_for_id(schema_key)
+                        new_html_id += encode_property_name_for_id(schema_key)
                     else:
                         new_html_id += f"pattern{pattern_id}"
                         pattern_id += 1

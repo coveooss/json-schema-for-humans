@@ -1,6 +1,7 @@
 import re
 import json
 import yaml
+import binascii
 from datetime import datetime
 from typing import List, Any
 
@@ -188,13 +189,13 @@ def get_numeric_restrictions_text(schema_node: SchemaNode, before_value: str = "
     return result if touched else ""
 
 
-def escape_property_name_for_id(property_name: str) -> str:
-    """Filter. Escape unsafe characters in a property name so that it can be used in an HTML id"""
+def encode_property_name_for_id(property_name: str) -> str:
+    """Filter. Encode property name into hexadecimal string so that it can be used in an HTML id"""
     if not property_name:
         # Handle empty string as a property name
         return ""
 
-    escaped = re.sub("[^0-9a-zA-Z_-]", "_", str(property_name))
+    escaped = binascii.b2a_hex(property_name.encode()).decode()
     if not escaped[0].isalpha():
         escaped = "a" + escaped
     return escaped
