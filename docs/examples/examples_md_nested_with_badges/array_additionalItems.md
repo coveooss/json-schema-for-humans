@@ -1,8 +1,8 @@
 # Schema Docs
 
-- [1. [Optional] Property root > address](#address)
-- [2. [Optional] Property root > addressLines](#addressLines)
-- [3. [Optional] Property root > arrayEmpty](#arrayEmpty)
+- [1. [Optional] Property root > address](#address-72657373)
+- [2. [Optional] Property root > addressLines](#addressLines-696e6573)
+- [3. [Optional] Property root > arrayEmpty](#arrayEmpty-6d707479)
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -12,7 +12,7 @@
 **Description:** A little food fun
 
 <details>
-<summary><strong> <a name="address"></a>1. [Optional] Property root > address</strong>  
+<summary><strong> <a name="address-72657373"></a>1. [Optional] Property root > address</strong>  
 
 </summary>
 <blockquote>
@@ -45,7 +45,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="addressLines"></a>2. [Optional] Property root > addressLines</strong>  
+<summary><strong> <a name="addressLines-696e6573"></a>2. [Optional] Property root > addressLines</strong>  
 
 </summary>
 <blockquote>
@@ -68,7 +68,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="arrayEmpty"></a>3. [Optional] Property root > arrayEmpty</strong>  
+<summary><strong> <a name="arrayEmpty-6d707479"></a>3. [Optional] Property root > arrayEmpty</strong>  
 
 </summary>
 <blockquote>

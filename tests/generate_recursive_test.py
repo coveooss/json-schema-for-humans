@@ -15,7 +15,7 @@ def test_recursive(link_to_reused_ref: bool) -> None:
 
     assert_descriptions(soup, ["A human being", "The children they had", "A human being"])
 
-    assert_ref_link(soup, "#person", "Same definition as person")
+    assert_ref_link(soup, "person", "Same definition as person")
 
 
 @pytest.mark.parametrize("link_to_reused_ref", [True, False])
@@ -39,7 +39,7 @@ def test_recursive_parent_in_definition(link_to_reused_ref: bool) -> None:
         ],
     )
 
-    assert_ref_link(soup, "#relationships_mother", "Same definition as mother")
+    assert_ref_link(soup, "relationships_mother", "Same definition as mother")
 
 
 def test_recursive_array() -> None:
@@ -48,7 +48,7 @@ def test_recursive_array() -> None:
 
     assert_descriptions(soup, ["A list of people", "A human being", "The children they had", "A human being"])
 
-    assert_ref_link(soup, "#person_items", "Same definition as person_items")
+    assert_ref_link(soup, "person_items", "Same definition as person_items")
 
 
 @pytest.mark.parametrize("link_to_reused_ref", [True, False])
@@ -67,9 +67,9 @@ def test_recursive_two_files(link_to_reused_ref: bool) -> None:
     )
 
     if link_to_reused_ref:
-        assert_ref_link(soup, "#person_children_items", "Same definition as person_children_items")
+        assert_ref_link(soup, "person_children_items", "Same definition as person_children_items")
     else:
-        assert not get_ref_link(soup, "#person_children_items")
+        assert not get_ref_link(soup, "person_children_items")
 
 
 @pytest.mark.parametrize("link_to_reused_ref", [True, False])

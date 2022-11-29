@@ -1,7 +1,7 @@
 # Schema containing a single-element allOf
 
-- [1. [Optional] Property Schema containing a single-element allOf > prop1](#prop1)
-- [2. [Optional] Property Schema containing a single-element allOf > prop2](#prop2)
+- [1. [Optional] Property Schema containing a single-element allOf > prop1](#prop1-726f7031)
+- [2. [Optional] Property Schema containing a single-element allOf > prop2](#prop2-726f7032)
 
 **Title:** Schema containing a single-element allOf
 
@@ -14,7 +14,7 @@
 **Description:** Schema containing a single-element allOf
 
 <details>
-<summary><strong> <a name="prop1"></a>1. [Optional] Property Schema containing a single-element allOf > prop1</strong>  
+<summary><strong> <a name="prop1-726f7031"></a>1. [Optional] Property Schema containing a single-element allOf > prop1</strong>  
 
 </summary>
 <blockquote>
@@ -32,7 +32,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="prop2"></a>2. [Optional] Property Schema containing a single-element allOf > prop2</strong>  
+<summary><strong> <a name="prop2-726f7032"></a>2. [Optional] Property Schema containing a single-element allOf > prop2</strong>  
 
 </summary>
 <blockquote>

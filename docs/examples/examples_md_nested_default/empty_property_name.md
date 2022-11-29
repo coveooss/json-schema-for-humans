@@ -1,6 +1,6 @@
 # Empty property name
 
-- [1. Property Empty property name >](#__root___)
+- [1. Property Empty property name >](#a__root___-745f5f5f)
 
 **Title:** Empty property name
 
@@ -11,7 +11,7 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="__root___"></a>1. Property Empty property name ></strong>  
+<summary><strong> <a name="a__root___-745f5f5f"></a>1. Property Empty property name ></strong>  
 
 </summary>
 <blockquote>

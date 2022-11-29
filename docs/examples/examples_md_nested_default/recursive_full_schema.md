@@ -1,8 +1,8 @@
 # Bug
 
-- [1. [Optional] Property Bug > Code](#Code)
-- [2. [Optional] Property Bug > RecursiveArray](#RecursiveArray)
-- [3. [Optional] Property Bug > DecoratedRecursiveArray](#DecoratedRecursiveArray)
+- [1. [Optional] Property Bug > Code](#Code-436f6465)
+- [2. [Optional] Property Bug > RecursiveArray](#RecursiveArray-72726179)
+- [3. [Optional] Property Bug > DecoratedRecursiveArray](#DecoratedRecursiveArray-72726179)
 
 **Title:** Bug
 
@@ -15,7 +15,7 @@
 **Description:** Display the issue.
 
 <details>
-<summary><strong> <a name="Code"></a>1. [Optional] Property Bug > Code</strong>  
+<summary><strong> <a name="Code-436f6465"></a>1. [Optional] Property Bug > Code</strong>  
 
 </summary>
 <blockquote>
@@ -31,7 +31,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="RecursiveArray"></a>2. [Optional] Property Bug > RecursiveArray</strong>  
+<summary><strong> <a name="RecursiveArray-72726179"></a>2. [Optional] Property Bug > RecursiveArray</strong>  
 
 </summary>
 <blockquote>
@@ -55,7 +55,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="DecoratedRecursiveArray"></a>3. [Optional] Property Bug > DecoratedRecursiveArray</strong>  
+<summary><strong> <a name="DecoratedRecursiveArray-72726179"></a>3. [Optional] Property Bug > DecoratedRecursiveArray</strong>  
 
 </summary>
 <blockquote>

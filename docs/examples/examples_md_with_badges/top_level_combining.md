@@ -1,9 +1,9 @@
 # Combining at top level
 
-- [1. Property `Combining at top level > oneOf > diskDevice`](#oneOf_i0)
-- [2. Property `Combining at top level > oneOf > diskUUID`](#oneOf_i1)
-- [3. Property `Combining at top level > oneOf > nfs`](#oneOf_i2)
-- [4. Property `Combining at top level > oneOf > tmpfs`](#oneOf_i3)
+- [1. Property `Combining at top level > oneOf > diskDevice`](#oneOf_i0-665f6930)
+- [2. Property `Combining at top level > oneOf > diskUUID`](#oneOf_i1-665f6931)
+- [3. Property `Combining at top level > oneOf > nfs`](#oneOf_i2-665f6932)
+- [4. Property `Combining at top level > oneOf > tmpfs`](#oneOf_i3-665f6933)
 
 **Title:** Combining at top level
 
@@ -14,14 +14,14 @@
 
 **Description:** For the combine
 
-| One of(Option)          |
-| ----------------------- |
-| [diskDevice](#oneOf_i0) |
-| [diskUUID](#oneOf_i1)   |
-| [nfs](#oneOf_i2)        |
-| [tmpfs](#oneOf_i3)      |
+| One of(Option)                   |
+| -------------------------------- |
+| [diskDevice](#oneOf_i0-665f6930) |
+| [diskUUID](#oneOf_i1-665f6931)   |
+| [nfs](#oneOf_i2-665f6932)        |
+| [tmpfs](#oneOf_i3-665f6933)      |
 
-## <a name="oneOf_i0"></a>1. Property `Combining at top level > oneOf > diskDevice`
+## <a name="oneOf_i0-665f6930"></a>1. Property `Combining at top level > oneOf > diskDevice`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -29,7 +29,7 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/diskDevice                                                                                                          |
 
-## <a name="oneOf_i1"></a>2. Property `Combining at top level > oneOf > diskUUID`
+## <a name="oneOf_i1-665f6931"></a>2. Property `Combining at top level > oneOf > diskUUID`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -37,7 +37,7 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/diskUUID                                                                                                            |
 
-## <a name="oneOf_i2"></a>3. Property `Combining at top level > oneOf > nfs`
+## <a name="oneOf_i2-665f6932"></a>3. Property `Combining at top level > oneOf > nfs`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -45,7 +45,7 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/nfs                                                                                                                 |
 
-## <a name="oneOf_i3"></a>4. Property `Combining at top level > oneOf > tmpfs`
+## <a name="oneOf_i3-665f6933"></a>4. Property `Combining at top level > oneOf > tmpfs`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |

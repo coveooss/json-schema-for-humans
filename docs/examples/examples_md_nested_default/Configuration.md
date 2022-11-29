@@ -1,29 +1,29 @@
 # JSON Schema for Humans configuration file
 
-- [1. [Optional] Property JSON Schema for Humans configuration file > minify](#minify)
-- [2. [Optional] Property JSON Schema for Humans configuration file > description_is_markdown](#description_is_markdown)
-- [3. [Optional] Property JSON Schema for Humans configuration file > expand_buttons](#expand_buttons)
-- [4. [Optional] Property JSON Schema for Humans configuration file > show_breadcrumbs](#show_breadcrumbs)
-- [5. [Optional] Property JSON Schema for Humans configuration file > collapse_long_descriptions](#collapse_long_descriptions)
-- [6. [Optional] Property JSON Schema for Humans configuration file > collapse_long_examples](#collapse_long_examples)
-- [7. [Optional] Property JSON Schema for Humans configuration file > link_to_reused_ref](#link_to_reused_ref)
-- [8. [Optional] Property JSON Schema for Humans configuration file > recursive_detection_depth](#recursive_detection_depth)
-- [9. [Optional]~~ Property JSON Schema for Humans configuration file > deprecated_from_description~~](#deprecated_from_description)
-- [10. [Optional] Property JSON Schema for Humans configuration file > default_from_description](#default_from_description)
-- [11. [Optional] Property JSON Schema for Humans configuration file > copy_css](#copy_css)
-- [12. [Optional] Property JSON Schema for Humans configuration file > copy_js](#copy_js)
-- [13. [Optional]~~ Property JSON Schema for Humans configuration file > templates_directory~~](#templates_directory)
-- [14. [Optional] Property JSON Schema for Humans configuration file > template_name](#template_name)
-- [15. [Optional] Property JSON Schema for Humans configuration file > custom_template_path](#custom_template_path)
-- [16. [Optional] Property JSON Schema for Humans configuration file > show_toc](#show_toc)
-- [17. [Optional] Property JSON Schema for Humans configuration file > examples_as_yaml](#examples_as_yaml)
-- [18. [Optional] Property JSON Schema for Humans configuration file > markdown_options](#markdown_options)
-- [19. [Optional] Property JSON Schema for Humans configuration file > template_md_options](#template_md_options)
-  - [19.1. [Optional] Property JSON Schema for Humans configuration file > template_md_options > badge_as_image](#template_md_options_badge_as_image)
-  - [19.2. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_heading_numbers](#template_md_options_show_heading_numbers)
-  - [19.3. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_array_restrictions](#template_md_options_show_array_restrictions)
-- [20. [Optional] Property JSON Schema for Humans configuration file > with_footer](#with_footer)
-- [21. [Optional] Property JSON Schema for Humans configuration file > footer_show_time](#footer_show_time)
+- [1. [Optional] Property JSON Schema for Humans configuration file > minify](#minify-6e696679)
+- [2. [Optional] Property JSON Schema for Humans configuration file > description_is_markdown](#description_is_markdown-646f776e)
+- [3. [Optional] Property JSON Schema for Humans configuration file > expand_buttons](#expand_buttons-746f6e73)
+- [4. [Optional] Property JSON Schema for Humans configuration file > show_breadcrumbs](#show_breadcrumbs-756d6273)
+- [5. [Optional] Property JSON Schema for Humans configuration file > collapse_long_descriptions](#collapse_long_descriptions-696f6e73)
+- [6. [Optional] Property JSON Schema for Humans configuration file > collapse_long_examples](#collapse_long_examples-706c6573)
+- [7. [Optional] Property JSON Schema for Humans configuration file > link_to_reused_ref](#link_to_reused_ref-5f726566)
+- [8. [Optional] Property JSON Schema for Humans configuration file > recursive_detection_depth](#recursive_detection_depth-65707468)
+- [9. [Optional]~~ Property JSON Schema for Humans configuration file > deprecated_from_description~~](#deprecated_from_description-74696f6e)
+- [10. [Optional] Property JSON Schema for Humans configuration file > default_from_description](#default_from_description-74696f6e)
+- [11. [Optional] Property JSON Schema for Humans configuration file > copy_css](#copy_css-5f637373)
+- [12. [Optional] Property JSON Schema for Humans configuration file > copy_js](#copy_js-795f6a73)
+- [13. [Optional]~~ Property JSON Schema for Humans configuration file > templates_directory~~](#templates_directory-746f7279)
+- [14. [Optional] Property JSON Schema for Humans configuration file > template_name](#template_name-6e616d65)
+- [15. [Optional] Property JSON Schema for Humans configuration file > custom_template_path](#custom_template_path-70617468)
+- [16. [Optional] Property JSON Schema for Humans configuration file > show_toc](#show_toc-5f746f63)
+- [17. [Optional] Property JSON Schema for Humans configuration file > examples_as_yaml](#examples_as_yaml-79616d6c)
+- [18. [Optional] Property JSON Schema for Humans configuration file > markdown_options](#markdown_options-696f6e73)
+- [19. [Optional] Property JSON Schema for Humans configuration file > template_md_options](#template_md_options-696f6e73)
+  - [19.1. [Optional] Property JSON Schema for Humans configuration file > template_md_options > badge_as_image](#template_md_options_badge_as_image-6d616765)
+  - [19.2. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_heading_numbers](#template_md_options_show_heading_numbers-62657273)
+  - [19.3. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_array_restrictions](#template_md_options_show_array_restrictions-696f6e73)
+- [20. [Optional] Property JSON Schema for Humans configuration file > with_footer](#with_footer-6f746572)
+- [21. [Optional] Property JSON Schema for Humans configuration file > footer_show_time](#footer_show_time-74696d65)
 
 **Title:** JSON Schema for Humans configuration file
 
@@ -42,7 +42,7 @@ Configuration parameters can be provided in several ways:
 - From code, by providing a GenerationConfiguration object to the called generation method.
 
 <details>
-<summary><strong> <a name="minify"></a>1. [Optional] Property JSON Schema for Humans configuration file > minify</strong>  
+<summary><strong> <a name="minify-6e696679"></a>1. [Optional] Property JSON Schema for Humans configuration file > minify</strong>  
 
 </summary>
 <blockquote>
@@ -59,7 +59,7 @@ Configuration parameters can be provided in several ways:
 </details>
 
 <details>
-<summary><strong> <a name="description_is_markdown"></a>2. [Optional] Property JSON Schema for Humans configuration file > description_is_markdown</strong>  
+<summary><strong> <a name="description_is_markdown-646f776e"></a>2. [Optional] Property JSON Schema for Humans configuration file > description_is_markdown</strong>  
 
 </summary>
 <blockquote>
@@ -76,7 +76,7 @@ Configuration parameters can be provided in several ways:
 </details>
 
 <details>
-<summary><strong> <a name="expand_buttons"></a>3. [Optional] Property JSON Schema for Humans configuration file > expand_buttons</strong>  
+<summary><strong> <a name="expand_buttons-746f6e73"></a>3. [Optional] Property JSON Schema for Humans configuration file > expand_buttons</strong>  
 
 </summary>
 <blockquote>
@@ -93,7 +93,7 @@ Configuration parameters can be provided in several ways:
 </details>
 
 <details>
-<summary><strong> <a name="show_breadcrumbs"></a>4. [Optional] Property JSON Schema for Humans configuration file > show_breadcrumbs</strong>  
+<summary><strong> <a name="show_breadcrumbs-756d6273"></a>4. [Optional] Property JSON Schema for Humans configuration file > show_breadcrumbs</strong>  
 
 </summary>
 <blockquote>
@@ -110,7 +110,7 @@ Configuration parameters can be provided in several ways:
 </details>
 
 <details>
-<summary><strong> <a name="collapse_long_descriptions"></a>5. [Optional] Property JSON Schema for Humans configuration file > collapse_long_descriptions</strong>  
+<summary><strong> <a name="collapse_long_descriptions-696f6e73"></a>5. [Optional] Property JSON Schema for Humans configuration file > collapse_long_descriptions</strong>  
 
 </summary>
 <blockquote>
@@ -127,7 +127,7 @@ Configuration parameters can be provided in several ways:
 </details>
 
 <details>
-<summary><strong> <a name="collapse_long_examples"></a>6. [Optional] Property JSON Schema for Humans configuration file > collapse_long_examples</strong>  
+<summary><strong> <a name="collapse_long_examples-706c6573"></a>6. [Optional] Property JSON Schema for Humans configuration file > collapse_long_examples</strong>  
 
 </summary>
 <blockquote>
@@ -144,7 +144,7 @@ Configuration parameters can be provided in several ways:
 </details>
 
 <details>
-<summary><strong> <a name="link_to_reused_ref"></a>7. [Optional] Property JSON Schema for Humans configuration file > link_to_reused_ref</strong>  
+<summary><strong> <a name="link_to_reused_ref-5f726566"></a>7. [Optional] Property JSON Schema for Humans configuration file > link_to_reused_ref</strong>  
 
 </summary>
 <blockquote>
@@ -163,7 +163,7 @@ Configuration parameters can be provided in several ways:
 </details>
 
 <details>
-<summary><strong> <a name="recursive_detection_depth"></a>8. [Optional] Property JSON Schema for Humans configuration file > recursive_detection_depth</strong>  
+<summary><strong> <a name="recursive_detection_depth-65707468"></a>8. [Optional] Property JSON Schema for Humans configuration file > recursive_detection_depth</strong>  
 
 </summary>
 <blockquote>
@@ -185,7 +185,7 @@ In other words, if a schema has a deeply nested element that refers to itself, t
 </details>
 
 <details>
-<summary><strong> <a name="deprecated_from_description"></a>9. [Optional]~~ Property JSON Schema for Humans configuration file > deprecated_from_description~~</strong>  
+<summary><strong> <a name="deprecated_from_description-74696f6e"></a>9. [Optional]~~ Property JSON Schema for Humans configuration file > deprecated_from_description~~</strong>  
 
 </summary>
 <blockquote>
@@ -203,7 +203,7 @@ In other words, if a schema has a deeply nested element that refers to itself, t
 </details>
 
 <details>
-<summary><strong> <a name="default_from_description"></a>10. [Optional] Property JSON Schema for Humans configuration file > default_from_description</strong>  
+<summary><strong> <a name="default_from_description-74696f6e"></a>10. [Optional] Property JSON Schema for Humans configuration file > default_from_description</strong>  
 
 </summary>
 <blockquote>
@@ -222,7 +222,7 @@ The default value from the "default" attribute will be used in priority.
 </details>
 
 <details>
-<summary><strong> <a name="copy_css"></a>11. [Optional] Property JSON Schema for Humans configuration file > copy_css</strong>  
+<summary><strong> <a name="copy_css-5f637373"></a>11. [Optional] Property JSON Schema for Humans configuration file > copy_css</strong>  
 
 </summary>
 <blockquote>
@@ -239,7 +239,7 @@ The default value from the "default" attribute will be used in priority.
 </details>
 
 <details>
-<summary><strong> <a name="copy_js"></a>12. [Optional] Property JSON Schema for Humans configuration file > copy_js</strong>  
+<summary><strong> <a name="copy_js-795f6a73"></a>12. [Optional] Property JSON Schema for Humans configuration file > copy_js</strong>  
 
 </summary>
 <blockquote>
@@ -258,7 +258,7 @@ This file contains the logic for the anchor links.
 </details>
 
 <details>
-<summary><strong> <a name="templates_directory"></a>13. [Optional]~~ Property JSON Schema for Humans configuration file > templates_directory~~</strong>  
+<summary><strong> <a name="templates_directory-746f7279"></a>13. [Optional]~~ Property JSON Schema for Humans configuration file > templates_directory~~</strong>  
 
 </summary>
 <blockquote>
@@ -275,7 +275,7 @@ This file contains the logic for the anchor links.
 </details>
 
 <details>
-<summary><strong> <a name="template_name"></a>14. [Optional] Property JSON Schema for Humans configuration file > template_name</strong>  
+<summary><strong> <a name="template_name-6e616d65"></a>14. [Optional] Property JSON Schema for Humans configuration file > template_name</strong>  
 
 </summary>
 <blockquote>
@@ -300,7 +300,7 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="custom_template_path"></a>15. [Optional] Property JSON Schema for Humans configuration file > custom_template_path</strong>  
+<summary><strong> <a name="custom_template_path-70617468"></a>15. [Optional] Property JSON Schema for Humans configuration file > custom_template_path</strong>  
 
 </summary>
 <blockquote>
@@ -321,7 +321,7 @@ If no output file is specified, the extension of the template file will be used 
 </details>
 
 <details>
-<summary><strong> <a name="show_toc"></a>16. [Optional] Property JSON Schema for Humans configuration file > show_toc</strong>  
+<summary><strong> <a name="show_toc-5f746f63"></a>16. [Optional] Property JSON Schema for Humans configuration file > show_toc</strong>  
 
 </summary>
 <blockquote>
@@ -338,7 +338,7 @@ If no output file is specified, the extension of the template file will be used 
 </details>
 
 <details>
-<summary><strong> <a name="examples_as_yaml"></a>17. [Optional] Property JSON Schema for Humans configuration file > examples_as_yaml</strong>  
+<summary><strong> <a name="examples_as_yaml-79616d6c"></a>17. [Optional] Property JSON Schema for Humans configuration file > examples_as_yaml</strong>  
 
 </summary>
 <blockquote>
@@ -355,7 +355,7 @@ If no output file is specified, the extension of the template file will be used 
 </details>
 
 <details>
-<summary><strong> <a name="markdown_options"></a>18. [Optional] Property JSON Schema for Humans configuration file > markdown_options</strong>  
+<summary><strong> <a name="markdown_options-696f6e73"></a>18. [Optional] Property JSON Schema for Humans configuration file > markdown_options</strong>  
 
 </summary>
 <blockquote>
@@ -389,7 +389,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </details>
 
 <details>
-<summary><strong> <a name="template_md_options"></a>19. [Optional] Property JSON Schema for Humans configuration file > template_md_options</strong>  
+<summary><strong> <a name="template_md_options-696f6e73"></a>19. [Optional] Property JSON Schema for Humans configuration file > template_md_options</strong>  
 
 </summary>
 <blockquote>
@@ -403,7 +403,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 **Description:** specific options to md template
 
 <details>
-<summary><strong> <a name="template_md_options_badge_as_image"></a>19.1. [Optional] Property JSON Schema for Humans configuration file > template_md_options > badge_as_image</strong>  
+<summary><strong> <a name="template_md_options_badge_as_image-6d616765"></a>19.1. [Optional] Property JSON Schema for Humans configuration file > template_md_options > badge_as_image</strong>  
 
 </summary>
 <blockquote>
@@ -422,7 +422,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </details>
 
 <details>
-<summary><strong> <a name="template_md_options_show_heading_numbers"></a>19.2. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_heading_numbers</strong>  
+<summary><strong> <a name="template_md_options_show_heading_numbers-62657273"></a>19.2. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_heading_numbers</strong>  
 
 </summary>
 <blockquote>
@@ -441,7 +441,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </details>
 
 <details>
-<summary><strong> <a name="template_md_options_show_array_restrictions"></a>19.3. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_array_restrictions</strong>  
+<summary><strong> <a name="template_md_options_show_array_restrictions-696f6e73"></a>19.3. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_array_restrictions</strong>  
 
 </summary>
 <blockquote>
@@ -463,7 +463,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </details>
 
 <details>
-<summary><strong> <a name="with_footer"></a>20. [Optional] Property JSON Schema for Humans configuration file > with_footer</strong>  
+<summary><strong> <a name="with_footer-6f746572"></a>20. [Optional] Property JSON Schema for Humans configuration file > with_footer</strong>  
 
 </summary>
 <blockquote>
@@ -480,7 +480,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </details>
 
 <details>
-<summary><strong> <a name="footer_show_time"></a>21. [Optional] Property JSON Schema for Humans configuration file > footer_show_time</strong>  
+<summary><strong> <a name="footer_show_time-74696d65"></a>21. [Optional] Property JSON Schema for Humans configuration file > footer_show_time</strong>  
 
 </summary>
 <blockquote>

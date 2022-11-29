@@ -1,7 +1,7 @@
 # Longitude and Latitude Values
 
-- [1. Property `Longitude and Latitude Values > latitude`](#latitude)
-- [2. Property `Longitude and Latitude Values > longitude`](#longitude)
+- [1. Property `Longitude and Latitude Values > latitude`](#latitude-74756465)
+- [2. Property `Longitude and Latitude Values > longitude`](#longitude-74756465)
 
 **Title:** Longitude and Latitude Values
 
@@ -13,12 +13,12 @@
 
 **Description:** A geographical coordinate.
 
-| Property                   | Pattern | Type   | Deprecated | Definition | Title/Description |
-| -------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| + [latitude](#latitude )   | No      | number | No         | -          | -                 |
-| + [longitude](#longitude ) | No      | number | No         | -          | -                 |
+| Property                            | Pattern | Type   | Deprecated | Definition | Title/Description |
+| ----------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
+| + [latitude](#latitude-74756465 )   | No      | number | No         | -          | -                 |
+| + [longitude](#longitude-74756465 ) | No      | number | No         | -          | -                 |
 
-## <a name="latitude"></a>1. Property `Longitude and Latitude Values > latitude`
+## <a name="latitude-74756465"></a>1. Property `Longitude and Latitude Values > latitude`
 
 |              |          |
 | ------------ | -------- |
@@ -30,7 +30,7 @@
 | **Minimum**  | &ge; -90 |
 | **Maximum**  | &le; 90  |
 
-## <a name="longitude"></a>2. Property `Longitude and Latitude Values > longitude`
+## <a name="longitude-74756465"></a>2. Property `Longitude and Latitude Values > longitude`
 
 |              |          |
 | ------------ | -------- |

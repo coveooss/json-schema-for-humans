@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 from unittest.mock import Mock
 
 import tests.html_schema_doc_asserts
+from json_schema_for_humans.schema.schema_node import _escape_html_id
 from json_schema_for_humans.schema.schema_to_render import SchemaToRender
 from json_schema_for_humans.template_renderer import TemplateRenderer
 from json_schema_for_humans.generate import generate_from_file_object
@@ -329,7 +330,7 @@ def test_with_special_chars() -> None:
     tests.html_schema_doc_asserts.assert_property_names(soup, ["prénom", "nomDeFamille", "âge", "0 de quoi d'autre"])
 
     buttons = soup.find_all("button", attrs={"aria-controls": True})
-    expected_targets = ["#pr_nom", "#nomDeFamille", "#a_ge", "#a0_de_quoi_d_autre"]
+    expected_targets = ["#pr_nom-a96e6f6d", "#nomDeFamille-696c6c65", "#a_ge-c3a26765", "#a0_de_quoi_d_autre-75747265"]
     for i, expected_target in enumerate(expected_targets):
         assert buttons[i].attrs["data-target"] == expected_target
 
@@ -503,7 +504,7 @@ def test_pattern_properties_html_id() -> None:
 
     property_divs = soup.find_all("div", class_="property-definition-div")
     property_divs_id = [div.attrs["id"] for div in property_divs]
-    assert property_divs_id == ["not_a_pattern", "not_a_pattern_pattern1", "pattern1", "pattern2", "pattern3"]
+    assert property_divs_id == [_escape_html_id(p) for p in ["not_a_pattern", "not_a_pattern_pattern1", "pattern1", "pattern2", "pattern3"]]
 
 
 def test_conditional_subschema() -> None:
@@ -619,7 +620,7 @@ def test_defaults_with_merge(link_to_reused_ref: bool) -> None:
 def test_long_description(collapse: bool) -> None:
     soup = generate_case("long_description", GenerationConfiguration(collapse_long_descriptions=collapse))
 
-    read_more = soup.find("a", href="#collapseDescription_it_s_hard_to_explain")
+    read_more = soup.find("a", href="#" + _escape_html_id("collapseDescription_it_s_hard_to_explain"))
 
     if collapse:
         assert read_more

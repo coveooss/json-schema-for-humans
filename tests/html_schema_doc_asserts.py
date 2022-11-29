@@ -2,6 +2,8 @@ from typing import List, Optional
 
 from bs4 import BeautifulSoup, Tag
 
+from json_schema_for_humans.schema.schema_node import _escape_html_id
+
 
 def assert_soup_results_text(soup: BeautifulSoup, class_name: str, texts: List[str]) -> None:
     """Assert that all the HTML elements with the provided class found in the schema has the supplied text
@@ -104,6 +106,10 @@ def get_ref_link(soup: BeautifulSoup, ref_html_id: str) -> Optional[Tag]:
 
 
 def assert_ref_link(soup: BeautifulSoup, ref_link_name: str, expected_text: str) -> None:
-    ref_link = get_ref_link(soup, ref_link_name)
-    assert ref_link
+    if ref_link_name != "#root":
+        escaped_ref_link_name = "#" + _escape_html_id(ref_link_name)
+    else:
+        escaped_ref_link_name = ref_link_name
+    ref_link = get_ref_link(soup, escaped_ref_link_name)
+    assert ref_link, f"Cannot find ref {escaped_ref_link_name}"
     assert ref_link.text == expected_text
