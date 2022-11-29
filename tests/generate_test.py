@@ -504,7 +504,9 @@ def test_pattern_properties_html_id() -> None:
 
     property_divs = soup.find_all("div", class_="property-definition-div")
     property_divs_id = [div.attrs["id"] for div in property_divs]
-    assert property_divs_id == [_escape_html_id(p) for p in ["not_a_pattern", "not_a_pattern_pattern1", "pattern1", "pattern2", "pattern3"]]
+    assert property_divs_id == [
+        _escape_html_id(p) for p in ["not_a_pattern", "not_a_pattern_pattern1", "pattern1", "pattern2", "pattern3"]
+    ]
 
 
 def test_conditional_subschema() -> None:
