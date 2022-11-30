@@ -1,6 +1,6 @@
 # Hello
 
-- [1. [Optional] Property Hello > property1](#property1-72747931)
+- [1. [Optional] Property Hello > property1](#property1)
 
 **Title:** Hello
 
@@ -11,7 +11,7 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="property1-72747931"></a>1. [Optional] Property Hello > property1</strong>  
+<summary><strong> <a name="property1"></a>1. [Optional] Property Hello > property1</strong>  
 
 </summary>
 <blockquote>

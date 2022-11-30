@@ -1,10 +1,10 @@
 # Schema Docs
 
-- [1. [Optional]~~ Property root > deprecated1~~](#deprecated1-74656431)
-- [2. [Optional]~~ Property root > deprecated2~~](#deprecated2-74656432)
-- [3. [Optional]~~ Property root > deprecated3~~](#deprecated3-74656433)
-- [4. [Optional]~~ Property root > deprecated4~~](#deprecated4-74656434)
-- [5. [Optional] Property root > not_deprecated](#not_deprecated-61746564)
+- [1. [Optional]~~ Property root > deprecated1~~](#deprecated1)
+- [2. [Optional]~~ Property root > deprecated2~~](#deprecated2)
+- [3. [Optional]~~ Property root > deprecated3~~](#deprecated3)
+- [4. [Optional]~~ Property root > deprecated4~~](#deprecated4)
+- [5. [Optional] Property root > not_deprecated](#not_deprecated)
 
 |                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@
 **Description:** Test schema with deprecated in description
 
 <details>
-<summary><strong> <a name="deprecated1-74656431"></a>1. [Optional]~~ Property root > deprecated1~~</strong>  
+<summary><strong> <a name="deprecated1"></a>1. [Optional]~~ Property root > deprecated1~~</strong>  
 
 </summary>
 <blockquote>
@@ -33,7 +33,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="deprecated2-74656432"></a>2. [Optional]~~ Property root > deprecated2~~</strong>  
+<summary><strong> <a name="deprecated2"></a>2. [Optional]~~ Property root > deprecated2~~</strong>  
 
 </summary>
 <blockquote>
@@ -51,7 +51,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="deprecated3-74656433"></a>3. [Optional]~~ Property root > deprecated3~~</strong>  
+<summary><strong> <a name="deprecated3"></a>3. [Optional]~~ Property root > deprecated3~~</strong>  
 
 </summary>
 <blockquote>
@@ -69,7 +69,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="deprecated4-74656434"></a>4. [Optional]~~ Property root > deprecated4~~</strong>  
+<summary><strong> <a name="deprecated4"></a>4. [Optional]~~ Property root > deprecated4~~</strong>  
 
 </summary>
 <blockquote>
@@ -87,7 +87,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="not_deprecated-61746564"></a>5. [Optional] Property root > not_deprecated</strong>  
+<summary><strong> <a name="not_deprecated"></a>5. [Optional] Property root > not_deprecated</strong>  
 
 </summary>
 <blockquote>

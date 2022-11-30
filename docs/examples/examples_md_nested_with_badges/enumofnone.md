@@ -1,6 +1,6 @@
 # Enum of None
 
-- [1. [Optional] Property Enum of None > enumOfNone](#enumOfNone-4e6f6e65)
+- [1. [Optional] Property Enum of None > enumOfNone](#enumOfNone)
 
 **Title:** Enum of None
 
@@ -10,7 +10,7 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="enumOfNone-4e6f6e65"></a>1. [Optional] Property Enum of None > enumOfNone</strong>  
+<summary><strong> <a name="enumOfNone"></a>1. [Optional] Property Enum of None > enumOfNone</strong>  
 
 </summary>
 <blockquote>

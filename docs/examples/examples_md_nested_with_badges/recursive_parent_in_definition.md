@@ -1,9 +1,9 @@
 # Person
 
-- [1. [Optional] Property Person > relationships](#relationships-68697073)
-  - [1.1. [Optional] Property Person > relationships > mother](#relationships_mother-74686572)
-    - [1.1.1. [Optional] Property Person > relationships > mother > relationships](#relationships_mother_relationships-68697073)
-      - [1.1.1.1. [Optional] Property Person > relationships > mother > relationships > mother](#relationships_mother_relationships_mother-74686572)
+- [1. [Optional] Property Person > relationships](#relationships)
+  - [1.1. [Optional] Property Person > relationships > mother](#relationships_mother)
+    - [1.1.1. [Optional] Property Person > relationships > mother > relationships](#relationships_mother_relationships)
+      - [1.1.1.1. [Optional] Property Person > relationships > mother > relationships > mother](#relationships_mother_relationships_mother)
 
 **Title:** Person
 
@@ -13,7 +13,7 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="relationships-68697073"></a>1. [Optional] Property Person > relationships</strong>  
+<summary><strong> <a name="relationships"></a>1. [Optional] Property Person > relationships</strong>  
 
 </summary>
 <blockquote>
@@ -27,7 +27,7 @@
 **Description:** Relationships between this person and others
 
 <details>
-<summary><strong> <a name="relationships_mother-74686572"></a>1.1. [Optional] Property Person > relationships > mother</strong>  
+<summary><strong> <a name="relationships_mother"></a>1.1. [Optional] Property Person > relationships > mother</strong>  
 
 </summary>
 <blockquote>
@@ -41,7 +41,7 @@
 **Description:** A human being
 
 <details>
-<summary><strong> <a name="relationships_mother_relationships-68697073"></a>1.1.1. [Optional] Property Person > relationships > mother > relationships</strong>  
+<summary><strong> <a name="relationships_mother_relationships"></a>1.1.1. [Optional] Property Person > relationships > mother > relationships</strong>  
 
 </summary>
 <blockquote>
@@ -54,7 +54,7 @@
 **Description:** Relationships between this person and others
 
 <details>
-<summary><strong> <a name="relationships_mother_relationships_mother-74686572"></a>1.1.1.1. [Optional] Property Person > relationships > mother > relationships > mother</strong>  
+<summary><strong> <a name="relationships_mother_relationships_mother"></a>1.1.1.1. [Optional] Property Person > relationships > mother > relationships > mother</strong>  
 
 </summary>
 <blockquote>

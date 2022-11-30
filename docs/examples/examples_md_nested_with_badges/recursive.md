@@ -1,7 +1,7 @@
 # Person
 
-- [1. [Optional] Property Person > person](#person-72736f6e)
-  - [1.1. [Optional] Property Person > person > children](#person_children-6472656e)
+- [1. [Optional] Property Person > person](#person)
+  - [1.1. [Optional] Property Person > person > children](#person_children)
 
 **Title:** Person
 
@@ -11,7 +11,7 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="person-72736f6e"></a>1. [Optional] Property Person > person</strong>  
+<summary><strong> <a name="person"></a>1. [Optional] Property Person > person</strong>  
 
 </summary>
 <blockquote>
@@ -25,7 +25,7 @@
 **Description:** A human being
 
 <details>
-<summary><strong> <a name="person_children-6472656e"></a>1.1. [Optional] Property Person > person > children</strong>  
+<summary><strong> <a name="person_children"></a>1.1. [Optional] Property Person > person > children</strong>  
 
 </summary>
 <blockquote>

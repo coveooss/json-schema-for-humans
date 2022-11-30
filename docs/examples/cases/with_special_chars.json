@@ -20,6 +20,14 @@
     "0 de quoi d'autre": {
       "type": "string",
       "examples": ["🖖", "صباح الخير", "你好"]
+    },
+    "名前" : {
+      "type": "string",
+      "description": "顧客の名前"
+    },
+    "年齢": {
+      "type": "integer",
+      "description": "顧客の年齢"
     }
   }
 }

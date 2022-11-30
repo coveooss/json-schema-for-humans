@@ -1,7 +1,7 @@
 # Schema Docs
 
-- [1. Property `root > name`](#name-6e616d65)
-- [2. Property `root > alignment`](#alignment-6d656e74)
+- [1. Property `root > name`](#name)
+- [2. Property `root > alignment`](#alignment)
 
 |                           |                                                         |
 | ------------------------- | ------------------------------------------------------- |
@@ -9,12 +9,12 @@
 | **Required**              | No                                                      |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
-| Property                            | Pattern | Type   | Deprecated | Definition                      | Title/Description |
-| ----------------------------------- | ------- | ------ | ---------- | ------------------------------- | ----------------- |
-| - [name](#name-6e616d65 )           | No      | string | No         | In #/definitions/filled_string  | a filled string   |
-| - [alignment](#alignment-6d656e74 ) | No      | string | No         | Same as [name](#name-6e616d65 ) | a filled string   |
+| Property                   | Pattern | Type   | Deprecated | Definition                     | Title/Description |
+| -------------------------- | ------- | ------ | ---------- | ------------------------------ | ----------------- |
+| - [name](#name )           | No      | string | No         | In #/definitions/filled_string | a filled string   |
+| - [alignment](#alignment ) | No      | string | No         | Same as [name](#name )         | a filled string   |
 
-## <a name="name-6e616d65"></a>1. Property `root > name`
+## <a name="name"></a>1. Property `root > name`
 
 |                |                             |
 | -------------- | --------------------------- |
@@ -28,7 +28,7 @@
 | -------------- | - |
 | **Min length** | 1 |
 
-## <a name="alignment-6d656e74"></a>2. Property `root > alignment`
+## <a name="alignment"></a>2. Property `root > alignment`
 
 |                        |               |
 | ---------------------- | ------------- |

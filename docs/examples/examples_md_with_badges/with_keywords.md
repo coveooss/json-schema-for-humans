@@ -1,15 +1,15 @@
 # Person
 
-- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > default`](#default-61756c74)
-- [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > examples`](#examples-706c6573)
-- [3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > if`](#if-6966)
-- [4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > then`](#then-7468656e)
-- [5. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > else`](#else-656c7365)
-- [6. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > anyOf`](#anyOf-6e794f66)
-- [7. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > allOf`](#allOf-6c6c4f66)
-- [8. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > not`](#not-6e6f74)
-- [9. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > properties`](#properties-74696573)
-- [10. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > patternProperties`](#patternProperties-74696573)
+- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > default`](#default)
+- [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > examples`](#examples)
+- [3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > if`](#if)
+- [4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > then`](#then)
+- [5. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > else`](#else)
+- [6. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > anyOf`](#anyOf)
+- [7. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > allOf`](#allOf)
+- [8. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > not`](#not)
+- [9. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > properties`](#properties)
+- [10. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > patternProperties`](#patternProperties)
 
 **Title:** Person
 
@@ -18,20 +18,20 @@
 | **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
-| Property                                            | Pattern | Type   | Deprecated | Definition | Title/Description |
-| --------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [default](#default-61756c74 )                     | No      | string | No         | -          | default           |
-| - [examples](#examples-706c6573 )                   | No      | string | No         | -          | examples          |
-| - [if](#if-6966 )                                   | No      | object | No         | -          | if                |
-| - [then](#then-7468656e )                           | No      | object | No         | -          | then              |
-| - [else](#else-656c7365 )                           | No      | object | No         | -          | else              |
-| - [anyOf](#anyOf-6e794f66 )                         | No      | object | No         | -          | anyOf             |
-| - [allOf](#allOf-6c6c4f66 )                         | No      | object | No         | -          | allOf             |
-| - [not](#not-6e6f74 )                               | No      | object | No         | -          | not               |
-| - [properties](#properties-74696573 )               | No      | object | No         | -          | properties        |
-| - [patternProperties](#patternProperties-74696573 ) | No      | object | No         | -          | patternProperties |
+| Property                                   | Pattern | Type   | Deprecated | Definition | Title/Description |
+| ------------------------------------------ | ------- | ------ | ---------- | ---------- | ----------------- |
+| - [default](#default )                     | No      | string | No         | -          | default           |
+| - [examples](#examples )                   | No      | string | No         | -          | examples          |
+| - [if](#if )                               | No      | object | No         | -          | if                |
+| - [then](#then )                           | No      | object | No         | -          | then              |
+| - [else](#else )                           | No      | object | No         | -          | else              |
+| - [anyOf](#anyOf )                         | No      | object | No         | -          | anyOf             |
+| - [allOf](#allOf )                         | No      | object | No         | -          | allOf             |
+| - [not](#not )                             | No      | object | No         | -          | not               |
+| - [properties](#properties )               | No      | object | No         | -          | properties        |
+| - [patternProperties](#patternProperties ) | No      | object | No         | -          | patternProperties |
 
-## <a name="default-61756c74"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > default`
+## <a name="default"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > default`
 
 |          |          |
 | -------- | -------- |
@@ -39,7 +39,7 @@
 
 **Description:** default
 
-## <a name="examples-706c6573"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > examples`
+## <a name="examples"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > examples`
 
 |          |          |
 | -------- | -------- |
@@ -47,7 +47,7 @@
 
 **Description:** examples
 
-## <a name="if-6966"></a>3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > if`
+## <a name="if"></a>3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > if`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -56,7 +56,7 @@
 
 **Description:** if
 
-## <a name="then-7468656e"></a>4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > then`
+## <a name="then"></a>4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > then`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -65,7 +65,7 @@
 
 **Description:** then
 
-## <a name="else-656c7365"></a>5. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > else`
+## <a name="else"></a>5. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > else`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -74,7 +74,7 @@
 
 **Description:** else
 
-## <a name="anyOf-6e794f66"></a>6. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > anyOf`
+## <a name="anyOf"></a>6. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > anyOf`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -83,7 +83,7 @@
 
 **Description:** anyOf
 
-## <a name="allOf-6c6c4f66"></a>7. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > allOf`
+## <a name="allOf"></a>7. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > allOf`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -92,7 +92,7 @@
 
 **Description:** allOf
 
-## <a name="not-6e6f74"></a>8. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > not`
+## <a name="not"></a>8. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > not`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -101,7 +101,7 @@
 
 **Description:** not
 
-## <a name="properties-74696573"></a>9. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > properties`
+## <a name="properties"></a>9. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > properties`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -110,7 +110,7 @@
 
 **Description:** properties
 
-## <a name="patternProperties-74696573"></a>10. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > patternProperties`
+## <a name="patternProperties"></a>10. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > patternProperties`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |

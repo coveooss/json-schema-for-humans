@@ -1,7 +1,7 @@
 # Circular reference Schema
 
-- [1. [Optional] Property Circular reference Schema > person](#person-72736f6e)
-  - [1.1. [Optional] Property Circular reference Schema > person > a1](#person_a1-6e5f6131)
+- [1. [Optional] Property Circular reference Schema > person](#person)
+  - [1.1. [Optional] Property Circular reference Schema > person > a1](#person_a1)
 
 **Title:** Circular reference Schema
 
@@ -11,7 +11,7 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="person-72736f6e"></a>1. [Optional] Property Circular reference Schema > person</strong>  
+<summary><strong> <a name="person"></a>1. [Optional] Property Circular reference Schema > person</strong>  
 
 </summary>
 <blockquote>
@@ -23,7 +23,7 @@
 | **Defined in**            | #/definitions/a                                                                                                                   |
 
 <details>
-<summary><strong> <a name="person_a1-6e5f6131"></a>1.1. [Optional] Property Circular reference Schema > person > a1</strong>  
+<summary><strong> <a name="person_a1"></a>1.1. [Optional] Property Circular reference Schema > person > a1</strong>  
 
 </summary>
 <blockquote>

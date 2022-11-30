@@ -14,43 +14,6 @@ circular_references: Dict["SchemaNode", bool] = {}
 ALLOWED_ID_CHARS = string.ascii_letters + string.digits + "_" + "-"
 
 
-def _escape_html_id(property_name: str) -> str:
-    """Escape property name into alphanumeric characters so that it can be used in an HTML id
-    The result is the escaped string + a dash + the encoded value.
-    The first value is used to name children so that there is only one
-
-    The escaped value is used to preserve a readable property names for direct links
-    The encoded value is useful for cases where all or most of the characters are not in the accepted range which would always produce the same output
-    Examples:
-      - `名前` and `年齢` are both escaped to `__`, but the whole value will be `a_-8de5898d` and `a_-b4e9bda2` respectively
-      - "person " and "person_" are escaped to `person_-736f6e20` and `person_-736f6e5f`
-
-
-    """
-    if not property_name:
-        # Handle empty string as a property name
-        return ""
-
-    new_property_chars: List[str] = []
-    last_was_replaced = False
-    for i, c in enumerate(property_name):
-        if c not in ALLOWED_ID_CHARS:
-            if i == 0:
-                new_property_chars += "a_"
-            elif not last_was_replaced:
-                new_property_chars += "_"
-            last_was_replaced = True
-        else:
-            last_was_replaced = False
-            new_property_chars += c
-    escaped = "".join(new_property_chars)
-
-    encoded = binascii.b2a_hex(property_name.encode("utf-8")).decode()[-8:]
-    if not escaped[0].isalpha():
-        escaped = "a" + escaped
-    return f"{escaped}-{encoded}"
-
-
 class SchemaNode:
     """
     Represents a part of a JSON schema with additional metadata to help with documentation
@@ -125,13 +88,7 @@ class SchemaNode:
         self.depth = depth
         self.file = file
         self.path_to_element = path_to_element
-        if not html_id and not path_to_element:
-            self.original_html_id = ""
-            self.html_id = "root"
-        else:
-            html_id = html_id or "_".join(path_to_element)
-            self.original_html_id = html_id
-            self.html_id = _escape_html_id(self.original_html_id)
+        self.html_id = html_id or "_".join(path_to_element) or "root"
         self.breadcrumb_name = breadcrumb_name
         self.parent = parent
         self.parent_key = parent_key
@@ -175,7 +132,7 @@ class SchemaNode:
     @property
     def link_name(self) -> str:
         """The text to display when linking to this node from somewhere else in the schema"""
-        return self.definition_name or self.original_html_id
+        return self.definition_name or self.html_id
 
     @property
     def name_for_breadcrumbs(self) -> str:

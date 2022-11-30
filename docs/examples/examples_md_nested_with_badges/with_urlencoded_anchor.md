@@ -1,10 +1,10 @@
 # Schema Docs
 
-- [1. [Optional] Property root > signingTimeInfo](#signingTimeInfo-496e666f)
-  - [1.1. [Required] Property root > signingTimeInfo > signingTime](#signingTimeInfo_signingTime-54696d65)
-  - [1.2. [Optional] Property root > signingTimeInfo > signingTimeBounds](#signingTimeInfo_signingTimeBounds-756e6473)
-    - [1.2.1. [Optional] Property root > signingTimeInfo > signingTimeBounds > lowerBound](#signingTimeInfo_signingTimeBounds_lowerBound-6f756e64)
-    - [1.2.2. [Optional] Property root > signingTimeInfo > signingTimeBounds > upperBound](#signingTimeInfo_signingTimeBounds_upperBound-6f756e64)
+- [1. [Optional] Property root > signingTimeInfo](#signingTimeInfo)
+  - [1.1. [Required] Property root > signingTimeInfo > signingTime](#signingTimeInfo_signingTime)
+  - [1.2. [Optional] Property root > signingTimeInfo > signingTimeBounds](#signingTimeInfo_signingTimeBounds)
+    - [1.2.1. [Optional] Property root > signingTimeInfo > signingTimeBounds > lowerBound](#signingTimeInfo_signingTimeBounds_lowerBound)
+    - [1.2.2. [Optional] Property root > signingTimeInfo > signingTimeBounds > upperBound](#signingTimeInfo_signingTimeBounds_upperBound)
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -12,7 +12,7 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="signingTimeInfo-496e666f"></a>1. [Optional] Property root > signingTimeInfo</strong>  
+<summary><strong> <a name="signingTimeInfo"></a>1. [Optional] Property root > signingTimeInfo</strong>  
 
 </summary>
 <blockquote>
@@ -24,7 +24,7 @@
 | **Defined in**            | #/definitions/dss2-SigningTimeInfoType                                                                                            |
 
 <details>
-<summary><strong> <a name="signingTimeInfo_signingTime-54696d65"></a>1.1. [Required] Property root > signingTimeInfo > signingTime</strong>  
+<summary><strong> <a name="signingTimeInfo_signingTime"></a>1.1. [Required] Property root > signingTimeInfo > signingTime</strong>  
 
 </summary>
 <blockquote>
@@ -38,7 +38,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="signingTimeInfo_signingTimeBounds-756e6473"></a>1.2. [Optional] Property root > signingTimeInfo > signingTimeBounds</strong>  
+<summary><strong> <a name="signingTimeInfo_signingTimeBounds"></a>1.2. [Optional] Property root > signingTimeInfo > signingTimeBounds</strong>  
 
 </summary>
 <blockquote>
@@ -50,7 +50,7 @@
 | **Defined in**            | #/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries                                                                    |
 
 <details>
-<summary><strong> <a name="signingTimeInfo_signingTimeBounds_lowerBound-6f756e64"></a>1.2.1. [Optional] Property root > signingTimeInfo > signingTimeBounds > lowerBound</strong>  
+<summary><strong> <a name="signingTimeInfo_signingTimeBounds_lowerBound"></a>1.2.1. [Optional] Property root > signingTimeInfo > signingTimeBounds > lowerBound</strong>  
 
 </summary>
 <blockquote>
@@ -64,7 +64,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="signingTimeInfo_signingTimeBounds_upperBound-6f756e64"></a>1.2.2. [Optional] Property root > signingTimeInfo > signingTimeBounds > upperBound</strong>  
+<summary><strong> <a name="signingTimeInfo_signingTimeBounds_upperBound"></a>1.2.2. [Optional] Property root > signingTimeInfo > signingTimeBounds > upperBound</strong>  
 
 </summary>
 <blockquote>

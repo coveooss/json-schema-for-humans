@@ -1,9 +1,11 @@
 # Personne
 
-- [1. Property `Personne > prénom`](#pr_nom-a96e6f6d)
-- [2. Property `Personne > nomDeFamille`](#nomDeFamille-696c6c65)
-- [3. Property `Personne > âge`](#a_ge-c3a26765)
-- [4. Property `Personne > 0 de quoi d'autre`](#a0_de_quoi_d_autre-75747265)
+- [1. Property `Personne > prénom`](#prénom)
+- [2. Property `Personne > nomDeFamille`](#nomDeFamille)
+- [3. Property `Personne > âge`](#âge)
+- [4. Property `Personne > 0 de quoi d'autre`](#0_de_quoi_dautre)
+- [5. Property `Personne > 名前`](#名前)
+- [6. Property `Personne > 年齢`](#年齢)
 
 **Title:** Personne
 
@@ -13,14 +15,16 @@
 | **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
-| Property                                             | Pattern | Type    | Deprecated | Definition | Title/Description                                     |
-| ---------------------------------------------------- | ------- | ------- | ---------- | ---------- | ----------------------------------------------------- |
-| - [prénom](#pr_nom-a96e6f6d )                        | No      | string  | No         | -          | Le prénom de la personne.                             |
-| - [nomDeFamille](#nomDeFamille-696c6c65 )            | No      | string  | No         | -          | Le nom de famille de la personne.                     |
-| - [âge](#a_ge-c3a26765 )                             | No      | integer | No         | -          | L'âge en années qui doit être plus grand ou égal à 0. |
-| - [0 de quoi d'autre](#a0_de_quoi_d_autre-75747265 ) | No      | string  | No         | -          | -                                                     |
+| Property                                  | Pattern | Type    | Deprecated | Definition | Title/Description                                     |
+| ----------------------------------------- | ------- | ------- | ---------- | ---------- | ----------------------------------------------------- |
+| - [prénom](#prénom )                      | No      | string  | No         | -          | Le prénom de la personne.                             |
+| - [nomDeFamille](#nomDeFamille )          | No      | string  | No         | -          | Le nom de famille de la personne.                     |
+| - [âge](#âge )                            | No      | integer | No         | -          | L'âge en années qui doit être plus grand ou égal à 0. |
+| - [0 de quoi d'autre](#0_de_quoi_dautre ) | No      | string  | No         | -          | -                                                     |
+| - [名前](#名前 )                              | No      | string  | No         | -          | 顧客の名前                                                 |
+| - [年齢](#年齢 )                              | No      | integer | No         | -          | 顧客の年齢                                                 |
 
-## <a name="pr_nom-a96e6f6d"></a>1. Property `Personne > prénom`
+## <a name="prénom"></a>1. Property `Personne > prénom`
 
 |              |          |
 | ------------ | -------- |
@@ -29,7 +33,7 @@
 
 **Description:** Le prénom de la personne.
 
-## <a name="nomDeFamille-696c6c65"></a>2. Property `Personne > nomDeFamille`
+## <a name="nomDeFamille"></a>2. Property `Personne > nomDeFamille`
 
 |              |          |
 | ------------ | -------- |
@@ -38,7 +42,7 @@
 
 **Description:** Le nom de famille de la personne.
 
-## <a name="a_ge-c3a26765"></a>3. Property `Personne > âge`
+## <a name="âge"></a>3. Property `Personne > âge`
 
 |              |           |
 | ------------ | --------- |
@@ -51,7 +55,7 @@
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-## <a name="a0_de_quoi_d_autre-75747265"></a>4. Property `Personne > 0 de quoi d'autre`
+## <a name="0_de_quoi_dautre"></a>4. Property `Personne > 0 de quoi d'autre`
 
 |              |          |
 | ------------ | -------- |
@@ -71,6 +75,24 @@
 ```json
 "你好"
 ```
+
+## <a name="名前"></a>5. Property `Personne > 名前`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+**Description:** 顧客の名前
+
+## <a name="年齢"></a>6. Property `Personne > 年齢`
+
+|              |           |
+| ------------ | --------- |
+| **Type**     | `integer` |
+| **Required** | No        |
+
+**Description:** 顧客の年齢
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

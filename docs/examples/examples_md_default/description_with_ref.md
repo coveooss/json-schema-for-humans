@@ -1,8 +1,8 @@
 # Schema Docs
 
-- [1. Property `root > outer`](#outer-75746572)
-  - [1.1. Property `root > outer > inner`](#outer_inner-6e6e6572)
-- [2. Property `root > outer2`](#outer2-74657232)
+- [1. Property `root > outer`](#outer)
+  - [1.1. Property `root > outer > inner`](#outer_inner)
+- [2. Property `root > outer2`](#outer2)
 
 |                           |                                                         |
 | ------------------------- | ------------------------------------------------------- |
@@ -10,12 +10,12 @@
 | **Required**              | No                                                      |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
-| Property                      | Pattern | Type   | Deprecated | Definition                        | Title/Description      |
-| ----------------------------- | ------- | ------ | ---------- | --------------------------------- | ---------------------- |
-| + [outer](#outer-75746572 )   | No      | object | No         | In #/definitions/inner schema     | We should see this     |
-| - [outer2](#outer2-74657232 ) | No      | object | No         | Same as [outer](#outer-75746572 ) | We should see this too |
+| Property             | Pattern | Type   | Deprecated | Definition                    | Title/Description      |
+| -------------------- | ------- | ------ | ---------- | ----------------------------- | ---------------------- |
+| + [outer](#outer )   | No      | object | No         | In #/definitions/inner schema | We should see this     |
+| - [outer2](#outer2 ) | No      | object | No         | Same as [outer](#outer )      | We should see this too |
 
-## <a name="outer-75746572"></a>1. Property `root > outer`
+## <a name="outer"></a>1. Property `root > outer`
 
 |                           |                                                         |
 | ------------------------- | ------------------------------------------------------- |
@@ -26,11 +26,11 @@
 
 **Description:** We should see this
 
-| Property                          | Pattern | Type   | Deprecated | Definition | Title/Description |
-| --------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| + [inner](#outer_inner-6e6e6572 ) | No      | string | No         | -          | inner description |
+| Property                 | Pattern | Type   | Deprecated | Definition | Title/Description |
+| ------------------------ | ------- | ------ | ---------- | ---------- | ----------------- |
+| + [inner](#outer_inner ) | No      | string | No         | -          | inner description |
 
-### <a name="outer_inner-6e6e6572"></a>1.1. Property `root > outer > inner`
+### <a name="outer_inner"></a>1.1. Property `root > outer > inner`
 
 |              |          |
 | ------------ | -------- |
@@ -39,7 +39,7 @@
 
 **Description:** inner description
 
-## <a name="outer2-74657232"></a>2. Property `root > outer2`
+## <a name="outer2"></a>2. Property `root > outer2`
 
 |                           |                                                         |
 | ------------------------- | ------------------------------------------------------- |

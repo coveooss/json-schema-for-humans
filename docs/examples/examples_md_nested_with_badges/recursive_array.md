@@ -1,6 +1,6 @@
 # Person
 
-- [1. [Optional] Property Person > person](#person-72736f6e)
+- [1. [Optional] Property Person > person](#person)
 
 **Title:** Person
 
@@ -10,7 +10,7 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="person-72736f6e"></a>1. [Optional] Property Person > person</strong>  
+<summary><strong> <a name="person"></a>1. [Optional] Property Person > person</strong>  
 
 </summary>
 <blockquote>

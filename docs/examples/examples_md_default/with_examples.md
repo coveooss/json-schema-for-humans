@@ -1,9 +1,9 @@
 # Person
 
-- [1. Property `Person > firstName`](#firstName-4e616d65)
-- [2. Property `Person > lastName`](#lastName-4e616d65)
-- [3. Property `Person > age`](#age-616765)
-- [4. Property `Person > moreInfo`](#moreInfo-496e666f)
+- [1. Property `Person > firstName`](#firstName)
+- [2. Property `Person > lastName`](#lastName)
+- [3. Property `Person > age`](#age)
+- [4. Property `Person > moreInfo`](#moreInfo)
 
 **Title:** Person
 
@@ -13,14 +13,14 @@
 | **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
-| Property                            | Pattern | Type    | Deprecated | Definition | Title/Description                   |
-| ----------------------------------- | ------- | ------- | ---------- | ---------- | ----------------------------------- |
-| - [firstName](#firstName-4e616d65 ) | No      | string  | No         | -          | Person                              |
-| - [lastName](#lastName-4e616d65 )   | No      | string  | No         | -          | Person                              |
-| - [age](#age-616765 )               | No      | integer | No         | -          | Person                              |
-| - [moreInfo](#moreInfo-496e666f )   | No      | object  | No         | -          | Any more info you want as an object |
+| Property                   | Pattern | Type    | Deprecated | Definition | Title/Description                   |
+| -------------------------- | ------- | ------- | ---------- | ---------- | ----------------------------------- |
+| - [firstName](#firstName ) | No      | string  | No         | -          | Person                              |
+| - [lastName](#lastName )   | No      | string  | No         | -          | Person                              |
+| - [age](#age )             | No      | integer | No         | -          | Person                              |
+| - [moreInfo](#moreInfo )   | No      | object  | No         | -          | Any more info you want as an object |
 
-## <a name="firstName-4e616d65"></a>1. Property `Person > firstName`
+## <a name="firstName"></a>1. Property `Person > firstName`
 
 **Title:** Person
 
@@ -41,7 +41,7 @@
 "BDFL"
 ```
 
-## <a name="lastName-4e616d65"></a>2. Property `Person > lastName`
+## <a name="lastName"></a>2. Property `Person > lastName`
 
 **Title:** Person
 
@@ -58,7 +58,7 @@
 "Van Rossum"
 ```
 
-## <a name="age-616765"></a>3. Property `Person > age`
+## <a name="age"></a>3. Property `Person > age`
 
 **Title:** Person
 
@@ -79,7 +79,7 @@
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-## <a name="moreInfo-496e666f"></a>4. Property `Person > moreInfo`
+## <a name="moreInfo"></a>4. Property `Person > moreInfo`
 
 |                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |

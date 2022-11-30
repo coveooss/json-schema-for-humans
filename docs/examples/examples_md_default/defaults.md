@@ -1,7 +1,7 @@
 # Schema Docs
 
-- [1. Property `root > a`](#a-61)
-- [2. Property `root > b`](#b-62)
+- [1. Property `root > a`](#a)
+- [2. Property `root > b`](#b)
 
 |                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -9,12 +9,12 @@
 | **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
-| Property      | Pattern | Type   | Deprecated | Definition              | Title/Description    |
-| ------------- | ------- | ------ | ---------- | ----------------------- | -------------------- |
-| - [a](#a-61 ) | No      | object | No         | In #/definitions/common | Description of a     |
-| - [b](#b-62 ) | No      | object | No         | Same as [a](#a-61 )     | A common description |
+| Property   | Pattern | Type   | Deprecated | Definition              | Title/Description    |
+| ---------- | ------- | ------ | ---------- | ----------------------- | -------------------- |
+| - [a](#a ) | No      | object | No         | In #/definitions/common | Description of a     |
+| - [b](#b ) | No      | object | No         | Same as [a](#a )        | A common description |
 
-## <a name="a-61"></a>1. Property `root > a`
+## <a name="a"></a>1. Property `root > a`
 
 |                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -26,7 +26,7 @@
 
 **Description:** Description of a
 
-## <a name="b-62"></a>2. Property `root > b`
+## <a name="b"></a>2. Property `root > b`
 
 |                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |

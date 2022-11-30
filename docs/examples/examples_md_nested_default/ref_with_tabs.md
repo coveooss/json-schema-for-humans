@@ -1,14 +1,14 @@
 # Schema Docs
 
-- [1. [Optional] Property root > objectA](#objectA-65637441)
-  - [1.1. [Optional] Property root > objectA > signature](#objectA_signature-74757265)
-    - [1.1.1. Property `root > objectA > signature > oneOf > item 0`](#objectA_signature_oneOf_i0-665f6930)
-      - [1.1.1.1. [Optional] Property root > objectA > signature > oneOf > item 0 > signers](#objectA_signature_oneOf_i0_signers-6e657273)
-    - [1.1.2. Property `root > objectA > signature > oneOf > item 1`](#objectA_signature_oneOf_i1-665f6931)
-      - [1.1.2.1. [Optional] Property root > objectA > signature > oneOf > item 1 > chain](#objectA_signature_oneOf_i1_chain-6861696e)
-    - [1.1.3. Property `root > objectA > signature > oneOf > Signature`](#objectA_signature_oneOf_i2-665f6932)
-- [2. [Optional] Property root > objectB](#objectB-65637442)
-  - [2.1. [Optional] Property root > objectB > signature](#objectB_signature-74757265)
+- [1. [Optional] Property root > objectA](#objectA)
+  - [1.1. [Optional] Property root > objectA > signature](#objectA_signature)
+    - [1.1.1. Property `root > objectA > signature > oneOf > item 0`](#objectA_signature_oneOf_i0)
+      - [1.1.1.1. [Optional] Property root > objectA > signature > oneOf > item 0 > signers](#objectA_signature_oneOf_i0_signers)
+    - [1.1.2. Property `root > objectA > signature > oneOf > item 1`](#objectA_signature_oneOf_i1)
+      - [1.1.2.1. [Optional] Property root > objectA > signature > oneOf > item 1 > chain](#objectA_signature_oneOf_i1_chain)
+    - [1.1.3. Property `root > objectA > signature > oneOf > Signature`](#objectA_signature_oneOf_i2)
+- [2. [Optional] Property root > objectB](#objectB)
+  - [2.1. [Optional] Property root > objectB > signature](#objectB_signature)
 
 |                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -17,7 +17,7 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="objectA-65637441"></a>1. [Optional] Property root > objectA</strong>  
+<summary><strong> <a name="objectA"></a>1. [Optional] Property root > objectA</strong>  
 
 </summary>
 <blockquote>
@@ -29,7 +29,7 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="objectA_signature-74757265"></a>1.1. [Optional] Property root > objectA > signature</strong>  
+<summary><strong> <a name="objectA_signature"></a>1.1. [Optional] Property root > objectA > signature</strong>  
 
 </summary>
 <blockquote>
@@ -45,15 +45,15 @@
 
 <blockquote>
 
-| One of(Option)                                    |
-| ------------------------------------------------- |
-| [item 0](#objectA_signature_oneOf_i0-665f6930)    |
-| [item 1](#objectA_signature_oneOf_i1-665f6931)    |
-| [Signature](#objectA_signature_oneOf_i2-665f6932) |
+| One of(Option)                           |
+| ---------------------------------------- |
+| [item 0](#objectA_signature_oneOf_i0)    |
+| [item 1](#objectA_signature_oneOf_i1)    |
+| [Signature](#objectA_signature_oneOf_i2) |
 
 <blockquote>
 
-#### <a name="objectA_signature_oneOf_i0-665f6930"></a>1.1.1. Property `root > objectA > signature > oneOf > item 0`
+#### <a name="objectA_signature_oneOf_i0"></a>1.1.1. Property `root > objectA > signature > oneOf > item 0`
 
 |                           |                                                         |
 | ------------------------- | ------------------------------------------------------- |
@@ -62,7 +62,7 @@
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i0_signers-6e657273"></a>1.1.1.1. [Optional] Property root > objectA > signature > oneOf > item 0 > signers</strong>  
+<summary><strong> <a name="objectA_signature_oneOf_i0_signers"></a>1.1.1.1. [Optional] Property root > objectA > signature > oneOf > item 0 > signers</strong>  
 
 </summary>
 <blockquote>
@@ -90,7 +90,7 @@
 </blockquote>
 <blockquote>
 
-#### <a name="objectA_signature_oneOf_i1-665f6931"></a>1.1.2. Property `root > objectA > signature > oneOf > item 1`
+#### <a name="objectA_signature_oneOf_i1"></a>1.1.2. Property `root > objectA > signature > oneOf > item 1`
 
 |                           |                                                         |
 | ------------------------- | ------------------------------------------------------- |
@@ -99,7 +99,7 @@
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i1_chain-6861696e"></a>1.1.2.1. [Optional] Property root > objectA > signature > oneOf > item 1 > chain</strong>  
+<summary><strong> <a name="objectA_signature_oneOf_i1_chain"></a>1.1.2.1. [Optional] Property root > objectA > signature > oneOf > item 1 > chain</strong>  
 
 </summary>
 <blockquote>
@@ -127,7 +127,7 @@
 </blockquote>
 <blockquote>
 
-#### <a name="objectA_signature_oneOf_i2-665f6932"></a>1.1.3. Property `root > objectA > signature > oneOf > Signature`
+#### <a name="objectA_signature_oneOf_i2"></a>1.1.3. Property `root > objectA > signature > oneOf > Signature`
 
 **Title:** Signature
 
@@ -151,7 +151,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="objectB-65637442"></a>2. [Optional] Property root > objectB</strong>  
+<summary><strong> <a name="objectB"></a>2. [Optional] Property root > objectB</strong>  
 
 </summary>
 <blockquote>
@@ -163,7 +163,7 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="objectB_signature-74757265"></a>2.1. [Optional] Property root > objectB > signature</strong>  
+<summary><strong> <a name="objectB_signature"></a>2.1. [Optional] Property root > objectB > signature</strong>  
 
 </summary>
 <blockquote>

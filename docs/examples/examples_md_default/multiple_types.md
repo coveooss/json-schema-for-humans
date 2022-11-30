@@ -1,9 +1,9 @@
 # Person
 
-- [1. Property `Person > firstName`](#firstName-4e616d65)
-- [2. Property `Person > lastName`](#lastName-4e616d65)
-- [3. Property `Person > age`](#age-616765)
-- [4. Property `Person > anything`](#anything-68696e67)
+- [1. Property `Person > firstName`](#firstName)
+- [2. Property `Person > lastName`](#lastName)
+- [3. Property `Person > age`](#age)
+- [4. Property `Person > anything`](#anything)
 
 **Title:** Person
 
@@ -13,14 +13,14 @@
 | **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
-| Property                            | Pattern | Type                            | Deprecated | Definition | Title/Description                                         |
-| ----------------------------------- | ------- | ------------------------------- | ---------- | ---------- | --------------------------------------------------------- |
-| - [firstName](#firstName-4e616d65 ) | No      | string                          | No         | -          | The person's first name.                                  |
-| - [lastName](#lastName-4e616d65 )   | No      | string or null                  | No         | -          | The person's last name.                                   |
-| - [age](#age-616765 )               | No      | integer or number               | No         | -          | Age in years which must be equal to or greater than zero. |
-| - [anything](#anything-68696e67 )   | No      | integer, string, number or null | No         | -          | Ay other info you like                                    |
+| Property                   | Pattern | Type                            | Deprecated | Definition | Title/Description                                         |
+| -------------------------- | ------- | ------------------------------- | ---------- | ---------- | --------------------------------------------------------- |
+| - [firstName](#firstName ) | No      | string                          | No         | -          | The person's first name.                                  |
+| - [lastName](#lastName )   | No      | string or null                  | No         | -          | The person's last name.                                   |
+| - [age](#age )             | No      | integer or number               | No         | -          | Age in years which must be equal to or greater than zero. |
+| - [anything](#anything )   | No      | integer, string, number or null | No         | -          | Ay other info you like                                    |
 
-## <a name="firstName-4e616d65"></a>1. Property `Person > firstName`
+## <a name="firstName"></a>1. Property `Person > firstName`
 
 |              |          |
 | ------------ | -------- |
@@ -29,7 +29,7 @@
 
 **Description:** The person's first name.
 
-## <a name="lastName-4e616d65"></a>2. Property `Person > lastName`
+## <a name="lastName"></a>2. Property `Person > lastName`
 
 |              |                  |
 | ------------ | ---------------- |
@@ -38,7 +38,7 @@
 
 **Description:** The person's last name.
 
-## <a name="age-616765"></a>3. Property `Person > age`
+## <a name="age"></a>3. Property `Person > age`
 
 |              |                     |
 | ------------ | ------------------- |
@@ -51,7 +51,7 @@
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-## <a name="anything-68696e67"></a>4. Property `Person > anything`
+## <a name="anything"></a>4. Property `Person > anything`
 
 |              |                                   |
 | ------------ | --------------------------------- |

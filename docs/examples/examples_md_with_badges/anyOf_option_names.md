@@ -1,10 +1,10 @@
 # Schema Docs
 
-- [1. ![Required](https://img.shields.io/badge/Required-blue) Property `root > storage`](#storage-72616765)
-  - [1.1. Property `root > storage > anyOf > diskDevice`](#storage_anyOf_i0-665f6930)
-  - [1.2. Property `root > storage > anyOf > diskUUID`](#storage_anyOf_i1-665f6931)
-  - [1.3. Property `root > storage > anyOf > item 2`](#storage_anyOf_i2-665f6932)
-  - [1.4. Property `root > storage > anyOf > tmpfs`](#storage_anyOf_i3-665f6933)
+- [1. ![Required](https://img.shields.io/badge/Required-blue) Property `root > storage`](#storage)
+  - [1.1. Property `root > storage > anyOf > diskDevice`](#storage_anyOf_i0)
+  - [1.2. Property `root > storage > anyOf > diskUUID`](#storage_anyOf_i1)
+  - [1.3. Property `root > storage > anyOf > item 2`](#storage_anyOf_i2)
+  - [1.4. Property `root > storage > anyOf > tmpfs`](#storage_anyOf_i3)
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -13,25 +13,25 @@
 
 **Description:** JSON Schema for an fstab entry
 
-| Property                        | Pattern | Type        | Deprecated | Definition | Title/Description |
-| ------------------------------- | ------- | ----------- | ---------- | ---------- | ----------------- |
-| + [storage](#storage-72616765 ) | No      | Combination | No         | -          | -                 |
+| Property               | Pattern | Type        | Deprecated | Definition | Title/Description |
+| ---------------------- | ------- | ----------- | ---------- | ---------- | ----------------- |
+| + [storage](#storage ) | No      | Combination | No         | -          | -                 |
 
-## <a name="storage-72616765"></a>1. ![Required](https://img.shields.io/badge/Required-blue) Property `root > storage`
+## <a name="storage"></a>1. ![Required](https://img.shields.io/badge/Required-blue) Property `root > storage`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | **Type**                  | `combining`                                                                                                                       |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
-| Any of(Option)                           |
-| ---------------------------------------- |
-| [diskDevice](#storage_anyOf_i0-665f6930) |
-| [diskUUID](#storage_anyOf_i1-665f6931)   |
-| [item 2](#storage_anyOf_i2-665f6932)     |
-| [tmpfs](#storage_anyOf_i3-665f6933)      |
+| Any of(Option)                  |
+| ------------------------------- |
+| [diskDevice](#storage_anyOf_i0) |
+| [diskUUID](#storage_anyOf_i1)   |
+| [item 2](#storage_anyOf_i2)     |
+| [tmpfs](#storage_anyOf_i3)      |
 
-### <a name="storage_anyOf_i0-665f6930"></a>1.1. Property `root > storage > anyOf > diskDevice`
+### <a name="storage_anyOf_i0"></a>1.1. Property `root > storage > anyOf > diskDevice`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -39,7 +39,7 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/diskDevice                                                                                                          |
 
-### <a name="storage_anyOf_i1-665f6931"></a>1.2. Property `root > storage > anyOf > diskUUID`
+### <a name="storage_anyOf_i1"></a>1.2. Property `root > storage > anyOf > diskUUID`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -47,14 +47,14 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/diskUUID                                                                                                            |
 
-### <a name="storage_anyOf_i2-665f6932"></a>1.3. Property `root > storage > anyOf > item 2`
+### <a name="storage_anyOf_i2"></a>1.3. Property `root > storage > anyOf > item 2`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
-### <a name="storage_anyOf_i3-665f6933"></a>1.4. Property `root > storage > anyOf > tmpfs`
+### <a name="storage_anyOf_i3"></a>1.4. Property `root > storage > anyOf > tmpfs`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |

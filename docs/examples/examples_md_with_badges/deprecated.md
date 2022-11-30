@@ -1,10 +1,10 @@
 # Schema Docs
 
-- [1. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated1`~~](#deprecated1-74656431)
-- [2. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated2`~~](#deprecated2-74656432)
-- [3. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated3`~~](#deprecated3-74656433)
-- [4. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated4`~~](#deprecated4-74656434)
-- [5. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > not_deprecated`](#not_deprecated-61746564)
+- [1. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated1`~~](#deprecated1)
+- [2. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated2`~~](#deprecated2)
+- [3. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated3`~~](#deprecated3)
+- [4. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated4`~~](#deprecated4)
+- [5. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > not_deprecated`](#not_deprecated)
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -13,15 +13,15 @@
 
 **Description:** Test schema with deprecated in description
 
-| Property                                      | Pattern | Type   | Deprecated                                                 | Definition | Title/Description                                     |
-| --------------------------------------------- | ------- | ------ | ---------------------------------------------------------- | ---------- | ----------------------------------------------------- |
-| - [deprecated1](#deprecated1-74656431 )       | No      | object | ![Deprecated](https://img.shields.io/badge/Deprecated-red) | -          | [Deprecated]                                          |
-| - [deprecated2](#deprecated2-74656432 )       | No      | object | ![Deprecated](https://img.shields.io/badge/Deprecated-red) | -          | [Deprecated - Use \`not_deprecated\` instead]         |
-| - [deprecated3](#deprecated3-74656433 )       | No      | object | ![Deprecated](https://img.shields.io/badge/Deprecated-red) | -          | This is [Deprecated]                                  |
-| - [deprecated4](#deprecated4-74656434 )       | No      | object | ![Deprecated](https://img.shields.io/badge/Deprecated-red) | -          | This is [Deprecated - Use \`not_deprecated\` instead] |
-| - [not_deprecated](#not_deprecated-61746564 ) | No      | string | No                                                         | -          | -                                                     |
+| Property                             | Pattern | Type   | Deprecated                                                 | Definition | Title/Description                                     |
+| ------------------------------------ | ------- | ------ | ---------------------------------------------------------- | ---------- | ----------------------------------------------------- |
+| - [deprecated1](#deprecated1 )       | No      | object | ![Deprecated](https://img.shields.io/badge/Deprecated-red) | -          | [Deprecated]                                          |
+| - [deprecated2](#deprecated2 )       | No      | object | ![Deprecated](https://img.shields.io/badge/Deprecated-red) | -          | [Deprecated - Use \`not_deprecated\` instead]         |
+| - [deprecated3](#deprecated3 )       | No      | object | ![Deprecated](https://img.shields.io/badge/Deprecated-red) | -          | This is [Deprecated]                                  |
+| - [deprecated4](#deprecated4 )       | No      | object | ![Deprecated](https://img.shields.io/badge/Deprecated-red) | -          | This is [Deprecated - Use \`not_deprecated\` instead] |
+| - [not_deprecated](#not_deprecated ) | No      | string | No                                                         | -          | -                                                     |
 
-## <a name="deprecated1-74656431"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated1`~~
+## <a name="deprecated1"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated1`~~
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -31,7 +31,7 @@
 
 **Description:** [Deprecated]
 
-## <a name="deprecated2-74656432"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated2`~~
+## <a name="deprecated2"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated2`~~
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -41,7 +41,7 @@
 
 **Description:** [Deprecated - Use `not_deprecated` instead]
 
-## <a name="deprecated3-74656433"></a>3. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated3`~~
+## <a name="deprecated3"></a>3. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated3`~~
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -51,7 +51,7 @@
 
 **Description:** This is [Deprecated]
 
-## <a name="deprecated4-74656434"></a>4. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated4`~~
+## <a name="deprecated4"></a>4. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `root > deprecated4`~~
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -61,7 +61,7 @@
 
 **Description:** This is [Deprecated - Use `not_deprecated` instead]
 
-## <a name="not_deprecated-61746564"></a>5. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > not_deprecated`
+## <a name="not_deprecated"></a>5. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > not_deprecated`
 
 |          |          |
 | -------- | -------- |

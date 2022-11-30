@@ -39,6 +39,7 @@ class GenerationConfiguration:
     custom_template_path: Optional[str] = None
     show_toc: bool = True
     examples_as_yaml: bool = False
+    old_anchor_links: bool = False
     # markdown2 extra parameters can be added here: https://github.com/trentm/python-markdown2/wiki/Extras
     markdown_options: Optional[Dict[str, Any]] = None
     template_md_options: Optional[Dict[str, Any]] = None

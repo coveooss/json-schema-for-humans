@@ -1,6 +1,6 @@
 # Address
 
-- [1. [Optional] Property Address > address](#address-72657373)
+- [1. [Optional] Property Address > address](#address)
 
 **Title:** Address
 
@@ -10,7 +10,7 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="address-72657373"></a>1. [Optional] Property Address > address</strong>  
+<summary><strong> <a name="address"></a>1. [Optional] Property Address > address</strong>  
 
 </summary>
 <blockquote>

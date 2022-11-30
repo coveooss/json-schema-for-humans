@@ -1,9 +1,9 @@
 # Person
 
-- [1. Property `Person > relationships`](#relationships-68697073)
-  - [1.1. Property `Person > relationships > mother`](#relationships_mother-74686572)
-    - [1.1.1. Property `Person > relationships > mother > relationships`](#relationships_mother_relationships-68697073)
-      - [1.1.1.1. Property `Person > relationships > mother > relationships > mother`](#relationships_mother_relationships_mother-74686572)
+- [1. Property `Person > relationships`](#relationships)
+  - [1.1. Property `Person > relationships > mother`](#relationships_mother)
+    - [1.1.1. Property `Person > relationships > mother > relationships`](#relationships_mother_relationships)
+      - [1.1.1.1. Property `Person > relationships > mother > relationships > mother`](#relationships_mother_relationships_mother)
 
 **Title:** Person
 
@@ -13,11 +13,11 @@
 | **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
-| Property                                    | Pattern | Type   | Deprecated | Definition                                       | Title/Description                            |
-| ------------------------------------------- | ------- | ------ | ---------- | ------------------------------------------------ | -------------------------------------------- |
-| - [relationships](#relationships-68697073 ) | No      | object | No         | In #/definitions/person/properties/relationships | Relationships between this person and others |
+| Property                           | Pattern | Type   | Deprecated | Definition                                       | Title/Description                            |
+| ---------------------------------- | ------- | ------ | ---------- | ------------------------------------------------ | -------------------------------------------- |
+| - [relationships](#relationships ) | No      | object | No         | In #/definitions/person/properties/relationships | Relationships between this person and others |
 
-## <a name="relationships-68697073"></a>1. Property `Person > relationships`
+## <a name="relationships"></a>1. Property `Person > relationships`
 
 |                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -28,11 +28,11 @@
 
 **Description:** Relationships between this person and others
 
-| Property                                    | Pattern | Type   | Deprecated | Definition              | Title/Description |
-| ------------------------------------------- | ------- | ------ | ---------- | ----------------------- | ----------------- |
-| - [mother](#relationships_mother-74686572 ) | No      | object | No         | In #/definitions/person | A human being     |
+| Property                           | Pattern | Type   | Deprecated | Definition              | Title/Description |
+| ---------------------------------- | ------- | ------ | ---------- | ----------------------- | ----------------- |
+| - [mother](#relationships_mother ) | No      | object | No         | In #/definitions/person | A human being     |
 
-### <a name="relationships_mother-74686572"></a>1.1. Property `Person > relationships > mother`
+### <a name="relationships_mother"></a>1.1. Property `Person > relationships > mother`
 
 |                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -43,11 +43,11 @@
 
 **Description:** A human being
 
-| Property                                                         | Pattern | Type   | Deprecated | Definition | Title/Description                            |
-| ---------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | -------------------------------------------- |
-| - [relationships](#relationships_mother_relationships-68697073 ) | No      | object | No         | -          | Relationships between this person and others |
+| Property                                                | Pattern | Type   | Deprecated | Definition | Title/Description                            |
+| ------------------------------------------------------- | ------- | ------ | ---------- | ---------- | -------------------------------------------- |
+| - [relationships](#relationships_mother_relationships ) | No      | object | No         | -          | Relationships between this person and others |
 
-#### <a name="relationships_mother_relationships-68697073"></a>1.1.1. Property `Person > relationships > mother > relationships`
+#### <a name="relationships_mother_relationships"></a>1.1.1. Property `Person > relationships > mother > relationships`
 
 |                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -57,11 +57,11 @@
 
 **Description:** Relationships between this person and others
 
-| Property                                                         | Pattern | Type   | Deprecated | Definition                                        | Title/Description |
-| ---------------------------------------------------------------- | ------- | ------ | ---------- | ------------------------------------------------- | ----------------- |
-| - [mother](#relationships_mother_relationships_mother-74686572 ) | No      | object | No         | Same as [mother](#relationships_mother-74686572 ) | A human being     |
+| Property                                                | Pattern | Type   | Deprecated | Definition                               | Title/Description |
+| ------------------------------------------------------- | ------- | ------ | ---------- | ---------------------------------------- | ----------------- |
+| - [mother](#relationships_mother_relationships_mother ) | No      | object | No         | Same as [mother](#relationships_mother ) | A human being     |
 
-##### <a name="relationships_mother_relationships_mother-74686572"></a>1.1.1.1. Property `Person > relationships > mother > relationships > mother`
+##### <a name="relationships_mother_relationships_mother"></a>1.1.1.1. Property `Person > relationships > mother > relationships > mother`
 
 |                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |

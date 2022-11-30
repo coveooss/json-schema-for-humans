@@ -1,6 +1,6 @@
 # Schema Docs
 
-- [1. [Optional] Property root > fruits](#fruits-75697473)
+- [1. [Optional] Property root > fruits](#fruits)
 
 |                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -11,7 +11,7 @@
 **Description:** A schema with an array
 
 <details>
-<summary><strong> <a name="fruits-75697473"></a>1. [Optional] Property root > fruits</strong>  
+<summary><strong> <a name="fruits"></a>1. [Optional] Property root > fruits</strong>  
 
 </summary>
 <blockquote>

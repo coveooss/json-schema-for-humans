@@ -1,7 +1,7 @@
 # Person
 
-- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > extra_options_object`](#extra_options_object-6a656374)
-- [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > name_looks_like_an_int`](#name_looks_like_an_int-5f696e74)
+- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > extra_options_object`](#extra_options_object)
+- [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > name_looks_like_an_int`](#name_looks_like_an_int)
 
 **Title:** Person
 
@@ -10,12 +10,12 @@
 | **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
-| Property                                                      | Pattern | Type   | Deprecated | Definition                             | Title/Description                                                |
-| ------------------------------------------------------------- | ------- | ------ | ---------- | -------------------------------------- | ---------------------------------------------------------------- |
-| - [extra_options_object](#extra_options_object-6a656374 )     | No      | object | No         | In #/definitions/extra_options/anyOf/0 | This is the one                                                  |
-| - [name_looks_like_an_int](#name_looks_like_an_int-5f696e74 ) | No      | object | No         | In #/definitions/10                    | This is just to be annoying. The property name looks like an int |
+| Property                                             | Pattern | Type   | Deprecated | Definition                             | Title/Description                                                |
+| ---------------------------------------------------- | ------- | ------ | ---------- | -------------------------------------- | ---------------------------------------------------------------- |
+| - [extra_options_object](#extra_options_object )     | No      | object | No         | In #/definitions/extra_options/anyOf/0 | This is the one                                                  |
+| - [name_looks_like_an_int](#name_looks_like_an_int ) | No      | object | No         | In #/definitions/10                    | This is just to be annoying. The property name looks like an int |
 
-## <a name="extra_options_object-6a656374"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > extra_options_object`
+## <a name="extra_options_object"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > extra_options_object`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -25,7 +25,7 @@
 
 **Description:** This is the one
 
-## <a name="name_looks_like_an_int-5f696e74"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > name_looks_like_an_int`
+## <a name="name_looks_like_an_int"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > name_looks_like_an_int`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |

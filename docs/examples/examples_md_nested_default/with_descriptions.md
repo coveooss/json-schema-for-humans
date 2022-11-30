@@ -1,15 +1,15 @@
 # Delivery Schema
 
-- [1. [Optional] Property Delivery Schema > shipping_address](#shipping_address-72657373)
-  - [1.1. [Required] Property Delivery Schema > shipping_address > street_address](#shipping_address_street_address-72657373)
-  - [1.2. [Required] Property Delivery Schema > shipping_address > city](#shipping_address_city-63697479)
-  - [1.3. [Required] Property Delivery Schema > shipping_address > state](#shipping_address_state-74617465)
-- [2. [Optional] Property Delivery Schema > billing_address](#billing_address-72657373)
-- [3. [Optional] Property Delivery Schema > delivery_info](#delivery_info-696e666f)
-  - [3.1. Property `Delivery Schema > delivery_info > oneOf > classic`](#delivery_info_oneOf_i0-665f6930)
-    - [3.1.1. [Optional] Property Delivery Schema > delivery_info > oneOf > item 0 > price](#delivery_info_oneOf_i0_price-72696365)
-  - [3.2. Property `Delivery Schema > delivery_info > oneOf > gift`](#delivery_info_oneOf_i1-665f6931)
-    - [3.2.1. [Optional] Property Delivery Schema > delivery_info > oneOf > item 1 > with_wrap](#delivery_info_oneOf_i1_with_wrap-77726170)
+- [1. [Optional] Property Delivery Schema > shipping_address](#shipping_address)
+  - [1.1. [Required] Property Delivery Schema > shipping_address > street_address](#shipping_address_street_address)
+  - [1.2. [Required] Property Delivery Schema > shipping_address > city](#shipping_address_city)
+  - [1.3. [Required] Property Delivery Schema > shipping_address > state](#shipping_address_state)
+- [2. [Optional] Property Delivery Schema > billing_address](#billing_address)
+- [3. [Optional] Property Delivery Schema > delivery_info](#delivery_info)
+  - [3.1. Property `Delivery Schema > delivery_info > oneOf > classic`](#delivery_info_oneOf_i0)
+    - [3.1.1. [Optional] Property Delivery Schema > delivery_info > oneOf > item 0 > price](#delivery_info_oneOf_i0_price)
+  - [3.2. Property `Delivery Schema > delivery_info > oneOf > gift`](#delivery_info_oneOf_i1)
+    - [3.2.1. [Optional] Property Delivery Schema > delivery_info > oneOf > item 1 > with_wrap](#delivery_info_oneOf_i1_with_wrap)
 
 **Title:** Delivery Schema
 
@@ -20,7 +20,7 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="shipping_address-72657373"></a>1. [Optional] Property Delivery Schema > shipping_address</strong>  
+<summary><strong> <a name="shipping_address"></a>1. [Optional] Property Delivery Schema > shipping_address</strong>  
 
 </summary>
 <blockquote>
@@ -35,7 +35,7 @@
 **Description:** Exact address
 
 <details>
-<summary><strong> <a name="shipping_address_street_address-72657373"></a>1.1. [Required] Property Delivery Schema > shipping_address > street_address</strong>  
+<summary><strong> <a name="shipping_address_street_address"></a>1.1. [Required] Property Delivery Schema > shipping_address > street_address</strong>  
 
 </summary>
 <blockquote>
@@ -49,7 +49,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="shipping_address_city-63697479"></a>1.2. [Required] Property Delivery Schema > shipping_address > city</strong>  
+<summary><strong> <a name="shipping_address_city"></a>1.2. [Required] Property Delivery Schema > shipping_address > city</strong>  
 
 </summary>
 <blockquote>
@@ -63,7 +63,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="shipping_address_state-74617465"></a>1.3. [Required] Property Delivery Schema > shipping_address > state</strong>  
+<summary><strong> <a name="shipping_address_state"></a>1.3. [Required] Property Delivery Schema > shipping_address > state</strong>  
 
 </summary>
 <blockquote>
@@ -80,7 +80,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="billing_address-72657373"></a>2. [Optional] Property Delivery Schema > billing_address</strong>  
+<summary><strong> <a name="billing_address"></a>2. [Optional] Property Delivery Schema > billing_address</strong>  
 
 </summary>
 <blockquote>
@@ -98,7 +98,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="delivery_info-696e666f"></a>3. [Optional] Property Delivery Schema > delivery_info</strong>  
+<summary><strong> <a name="delivery_info"></a>3. [Optional] Property Delivery Schema > delivery_info</strong>  
 
 </summary>
 <blockquote>
@@ -114,14 +114,14 @@
 
 <blockquote>
 
-| One of(Option)                              |
-| ------------------------------------------- |
-| [classic](#delivery_info_oneOf_i0-665f6930) |
-| [gift](#delivery_info_oneOf_i1-665f6931)    |
+| One of(Option)                     |
+| ---------------------------------- |
+| [classic](#delivery_info_oneOf_i0) |
+| [gift](#delivery_info_oneOf_i1)    |
 
 <blockquote>
 
-### <a name="delivery_info_oneOf_i0-665f6930"></a>3.1. Property `Delivery Schema > delivery_info > oneOf > classic`
+### <a name="delivery_info_oneOf_i0"></a>3.1. Property `Delivery Schema > delivery_info > oneOf > classic`
 
 |                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -131,7 +131,7 @@
 | **Defined in**            | #/definitions/classic                                                     |
 
 <details>
-<summary><strong> <a name="delivery_info_oneOf_i0_price-72696365"></a>3.1.1. [Optional] Property Delivery Schema > delivery_info > oneOf > item 0 > price</strong>  
+<summary><strong> <a name="delivery_info_oneOf_i0_price"></a>3.1.1. [Optional] Property Delivery Schema > delivery_info > oneOf > item 0 > price</strong>  
 
 </summary>
 <blockquote>
@@ -147,7 +147,7 @@
 </blockquote>
 <blockquote>
 
-### <a name="delivery_info_oneOf_i1-665f6931"></a>3.2. Property `Delivery Schema > delivery_info > oneOf > gift`
+### <a name="delivery_info_oneOf_i1"></a>3.2. Property `Delivery Schema > delivery_info > oneOf > gift`
 
 |                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
@@ -159,7 +159,7 @@
 **Description:** The delivery is a gift, no prices displayed
 
 <details>
-<summary><strong> <a name="delivery_info_oneOf_i1_with_wrap-77726170"></a>3.2.1. [Optional] Property Delivery Schema > delivery_info > oneOf > item 1 > with_wrap</strong>  
+<summary><strong> <a name="delivery_info_oneOf_i1_with_wrap"></a>3.2.1. [Optional] Property Delivery Schema > delivery_info > oneOf > item 1 > with_wrap</strong>  
 
 </summary>
 <blockquote>

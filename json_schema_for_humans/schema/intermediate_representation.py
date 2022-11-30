@@ -2,6 +2,7 @@ import copy
 import json
 import logging
 import os
+import re
 import urllib.parse
 from collections import defaultdict
 from pathlib import Path
@@ -18,12 +19,39 @@ from json_schema_for_humans.schema.schema_node import SchemaNode
 
 ROOT_ID = "__root__"
 
+HTML_ID_FORBIDDEN_CHARS = ['"', "'", "\\", "#", "?", "&"]
+
 
 def _add_html_id_part(html_id: str, part: str) -> str:
     if html_id:
         return f"{html_id}_{part}"
 
     return part
+
+
+def _escape_html_id(config: GenerationConfiguration, html_id: str) -> str:
+    """
+    Escape unsafe characters from a string so that it can be used in an HTML id
+    The old method corresponds to HTML < 5 and only allows letters, numbers, _, and -.
+    The new method works with HTML >= 5 and allow all characters that are not space or typically used to escape
+    """
+    if not html_id:
+        return "root"
+
+    if config.old_anchor_links:
+        escaped = re.sub("[^0-9a-zA-Z_-]", "_", str(html_id))
+        if not escaped[0].isalpha():
+            escaped = "a" + escaped
+        return escaped
+
+    new_html_id = "_".join(html_id.split())
+    new_html_id = "".join([c for c in new_html_id if c not in HTML_ID_FORBIDDEN_CHARS])
+    if html_id.startswith("#"):
+        new_html_id = f"#{new_html_id}"
+    new_html_id = new_html_id.lstrip("_")
+    if not new_html_id:
+        new_html_id = "_"
+    return new_html_id
 
 
 def build_intermediate_representation(
@@ -51,16 +79,16 @@ def build_intermediate_representation(
         raise Exception("Cannot generate documentation since root schema could not be loaded")
 
     intermediate_representation = _build_node(
-        config,
-        resolved_references,
-        reference_users,
-        loaded_schemas,
-        0,
-        "",
-        "root",
-        absolute_schema_path,
-        [],
-        loaded_schema,
+        config=config,
+        resolved_references=resolved_references,
+        reference_users=reference_users,
+        loaded_schemas=loaded_schemas,
+        depth=0,
+        html_id="",
+        breadcrumb_name="root",
+        schema_file_path=absolute_schema_path,
+        path_to_element=[],
+        schema=loaded_schema,
     )
 
     return intermediate_representation
@@ -275,7 +303,7 @@ def _resolve_ref(
         reference_users=reference_users,
         loaded_schemas=loaded_schemas,
         depth=current_node.depth,
-        html_id=current_node.original_html_id,
+        html_id=current_node.html_id,
         breadcrumb_name=current_node.breadcrumb_name,
         schema_file_path=referenced_schema_path,
         path_to_element=referenced_schema_path_to_element,
@@ -397,6 +425,7 @@ def _build_node(
     if not schema_file_path.startswith("http"):
         schema_file_path = os.path.realpath(schema_file_path)
 
+    html_id = _escape_html_id(config, html_id)
     new_node = SchemaNode(
         depth,
         file=schema_file_path,

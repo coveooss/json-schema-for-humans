@@ -1,6 +1,6 @@
 # Long description
 
-- [1. [Optional] Property Long description > it_s_hard_to_explain](#it_s_hard_to_explain-6c61696e)
+- [1. [Optional] Property Long description > it_s_hard_to_explain](#it_s_hard_to_explain)
 
 **Title:** Long description
 
@@ -11,7 +11,7 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="it_s_hard_to_explain-6c61696e"></a>1. [Optional] Property Long description > it_s_hard_to_explain</strong>  
+<summary><strong> <a name="it_s_hard_to_explain"></a>1. [Optional] Property Long description > it_s_hard_to_explain</strong>  
 
 </summary>
 <blockquote>

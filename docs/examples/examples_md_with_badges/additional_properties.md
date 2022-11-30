@@ -1,28 +1,28 @@
 # Person
 
-- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType1`](#subType1-79706531)
-  - [1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType1 > subProp1`](#subType1_subProp1-726f7031)
-- [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType2`](#subType2-79706532)
-  - [2.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType2 > subProp2`](#subType2_subProp2-726f7032)
-- [3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > anInt`](#anInt-6e496e74)
-- [4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > additionalProperties`](#additionalProperties-74696573)
-  - [4.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > additionalProperties > propA`](#additionalProperties_propA-726f7041)
+- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType1`](#subType1)
+  - [1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType1 > subProp1`](#subType1_subProp1)
+- [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType2`](#subType2)
+  - [2.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType2 > subProp2`](#subType2_subProp2)
+- [3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > anInt`](#anInt)
+- [4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > additionalProperties`](#additionalProperties)
+  - [4.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > additionalProperties > propA`](#additionalProperties_propA)
 
 **Title:** Person
 
-|                           |                                                                                                                                                                       |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                                                              |
-| **Additional properties** | [![Should-conform](https://img.shields.io/badge/Should-conform-blue)](#additionalProperties-74696573 "Each additional property must conform to the following schema") |
+|                           |                                                                                                                                                              |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Type**                  | `object`                                                                                                                                                     |
+| **Additional properties** | [![Should-conform](https://img.shields.io/badge/Should-conform-blue)](#additionalProperties "Each additional property must conform to the following schema") |
 
-| Property                                                  | Pattern | Type    | Deprecated | Definition | Title/Description                                                          |
-| --------------------------------------------------------- | ------- | ------- | ---------- | ---------- | -------------------------------------------------------------------------- |
-| - [subType1](#subType1-79706531 )                         | No      | object  | No         | -          | A sub type with additionalProperties false.                                |
-| - [subType2](#subType2-79706532 )                         | No      | object  | No         | -          | A sub type with additionalProperties true.                                 |
-| - [anInt](#anInt-6e496e74 )                               | No      | integer | No         | -          | This is an integer, it should not show additional properties. (issue #132) |
-| - [additionalProperties](#additionalProperties-74696573 ) | No      | object  | No         | -          | additionalProperties schema.                                               |
+| Property                                         | Pattern | Type    | Deprecated | Definition | Title/Description                                                          |
+| ------------------------------------------------ | ------- | ------- | ---------- | ---------- | -------------------------------------------------------------------------- |
+| - [subType1](#subType1 )                         | No      | object  | No         | -          | A sub type with additionalProperties false.                                |
+| - [subType2](#subType2 )                         | No      | object  | No         | -          | A sub type with additionalProperties true.                                 |
+| - [anInt](#anInt )                               | No      | integer | No         | -          | This is an integer, it should not show additional properties. (issue #132) |
+| - [additionalProperties](#additionalProperties ) | No      | object  | No         | -          | additionalProperties schema.                                               |
 
-## <a name="subType1-79706531"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType1`
+## <a name="subType1"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType1`
 
 |                           |                                                                                                          |
 | ------------------------- | -------------------------------------------------------------------------------------------------------- |
@@ -31,17 +31,17 @@
 
 **Description:** A sub type with additionalProperties false.
 
-| Property                                   | Pattern | Type   | Deprecated | Definition | Title/Description |
-| ------------------------------------------ | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [subProp1](#subType1_subProp1-726f7031 ) | No      | number | No         | -          | -                 |
+| Property                          | Pattern | Type   | Deprecated | Definition | Title/Description |
+| --------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
+| - [subProp1](#subType1_subProp1 ) | No      | number | No         | -          | -                 |
 
-### <a name="subType1_subProp1-726f7031"></a>1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType1 > subProp1`
+### <a name="subType1_subProp1"></a>1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType1 > subProp1`
 
 |          |          |
 | -------- | -------- |
 | **Type** | `number` |
 
-## <a name="subType2-79706532"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType2`
+## <a name="subType2"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType2`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -50,18 +50,18 @@
 
 **Description:** A sub type with additionalProperties true.
 
-| Property                                                           | Pattern | Type   | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------------------ | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [subProp2](#subType2_subProp2-726f7032 )                         | No      | number | No         | -          | -                 |
-| - [additionalProperties](#subType2_additionalProperties-74696573 ) | No      | object | No         | -          | -                 |
+| Property                                                  | Pattern | Type   | Deprecated | Definition | Title/Description |
+| --------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
+| - [subProp2](#subType2_subProp2 )                         | No      | number | No         | -          | -                 |
+| - [additionalProperties](#subType2_additionalProperties ) | No      | object | No         | -          | -                 |
 
-### <a name="subType2_subProp2-726f7032"></a>2.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType2 > subProp2`
+### <a name="subType2_subProp2"></a>2.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType2 > subProp2`
 
 |          |          |
 | -------- | -------- |
 | **Type** | `number` |
 
-## <a name="anInt-6e496e74"></a>3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > anInt`
+## <a name="anInt"></a>3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > anInt`
 
 |          |           |
 | -------- | --------- |
@@ -69,7 +69,7 @@
 
 **Description:** This is an integer, it should not show additional properties. (issue #132)
 
-## <a name="additionalProperties-74696573"></a>4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > additionalProperties`
+## <a name="additionalProperties"></a>4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > additionalProperties`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -78,11 +78,11 @@
 
 **Description:** additionalProperties schema.
 
-| Property                                         | Pattern | Type   | Deprecated | Definition | Title/Description |
-| ------------------------------------------------ | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [propA](#additionalProperties_propA-726f7041 ) | No      | number | No         | -          | -                 |
+| Property                                | Pattern | Type   | Deprecated | Definition | Title/Description |
+| --------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
+| - [propA](#additionalProperties_propA ) | No      | number | No         | -          | -                 |
 
-### <a name="additionalProperties_propA-726f7041"></a>4.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > additionalProperties > propA`
+### <a name="additionalProperties_propA"></a>4.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > additionalProperties > propA`
 
 |          |          |
 | -------- | -------- |

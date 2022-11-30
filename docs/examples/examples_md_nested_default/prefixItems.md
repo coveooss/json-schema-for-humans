@@ -1,6 +1,6 @@
 # Address
 
-- [1. [Optional] Property Address > address](#address-72657373)
+- [1. [Optional] Property Address > address](#address)
 
 **Title:** Address
 
@@ -11,7 +11,7 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="address-72657373"></a>1. [Optional] Property Address > address</strong>  
+<summary><strong> <a name="address"></a>1. [Optional] Property Address > address</strong>  
 
 </summary>
 <blockquote>
