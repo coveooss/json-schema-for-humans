@@ -1,5 +1,6 @@
 import re
 import json
+
 import yaml
 from datetime import datetime
 from typing import List, Any
@@ -186,18 +187,6 @@ def get_numeric_restrictions_text(schema_node: SchemaNode, before_value: str = "
         result += f"a multiple of {before_value}{multiple_of}{after_value}"
 
     return result if touched else ""
-
-
-def escape_property_name_for_id(property_name: str) -> str:
-    """Filter. Escape unsafe characters in a property name so that it can be used in an HTML id"""
-    if not property_name:
-        # Handle empty string as a property name
-        return ""
-
-    escaped = re.sub("[^0-9a-zA-Z_-]", "_", str(property_name))
-    if not escaped[0].isalpha():
-        escaped = "a" + escaped
-    return escaped
 
 
 def deprecated(config, schema: SchemaNode) -> bool:

@@ -1,9 +1,11 @@
 # Personne
 
-- [1. [Optional] Property Personne > prénom](#pr_nom)
+- [1. [Optional] Property Personne > prénom](#prénom)
 - [2. [Optional] Property Personne > nomDeFamille](#nomDeFamille)
-- [3. [Optional] Property Personne > âge](#a_ge)
-- [4. [Optional] Property Personne > 0 de quoi d'autre](#a0_de_quoi_d_autre)
+- [3. [Optional] Property Personne > âge](#âge)
+- [4. [Optional] Property Personne > 0 de quoi d'autre](#0_de_quoi_dautre)
+- [5. [Optional] Property Personne > 名前](#名前)
+- [6. [Optional] Property Personne > 年齢](#年齢)
 
 **Title:** Personne
 
@@ -13,7 +15,7 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="pr_nom"></a>1. [Optional] Property Personne > prénom</strong>  
+<summary><strong> <a name="prénom"></a>1. [Optional] Property Personne > prénom</strong>  
 
 </summary>
 <blockquote>
@@ -43,7 +45,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="a_ge"></a>3. [Optional] Property Personne > âge</strong>  
+<summary><strong> <a name="âge"></a>3. [Optional] Property Personne > âge</strong>  
 
 </summary>
 <blockquote>
@@ -62,7 +64,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="a0_de_quoi_d_autre"></a>4. [Optional] Property Personne > 0 de quoi d'autre</strong>  
+<summary><strong> <a name="0_de_quoi_dautre"></a>4. [Optional] Property Personne > 0 de quoi d'autre</strong>  
 
 </summary>
 <blockquote>
@@ -82,6 +84,36 @@
 ```json
 "你好"
 ```
+
+</blockquote>
+</details>
+
+<details>
+<summary><strong> <a name="名前"></a>5. [Optional] Property Personne > 名前</strong>  
+
+</summary>
+<blockquote>
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
+
+**Description:** 顧客の名前
+
+</blockquote>
+</details>
+
+<details>
+<summary><strong> <a name="年齢"></a>6. [Optional] Property Personne > 年齢</strong>  
+
+</summary>
+<blockquote>
+
+|          |           |
+| -------- | --------- |
+| **Type** | `integer` |
+
+**Description:** 顧客の年齢
 
 </blockquote>
 </details>

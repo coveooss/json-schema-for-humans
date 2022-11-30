@@ -1,6 +1,6 @@
 # Empty property name
 
-- [1. Property Empty property name >](#__root___)
+- [1. Property Empty property name >](#root)
 
 **Title:** Empty property name
 
@@ -10,7 +10,7 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="__root___"></a>1. Property Empty property name ></strong>  
+<summary><strong> <a name="root"></a>1. Property Empty property name ></strong>  
 
 </summary>
 <blockquote>

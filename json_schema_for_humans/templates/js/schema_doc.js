@@ -19,7 +19,7 @@ function setAnchor(anchorLinkDestination) {
 
 function anchorOnLoad() {
     // Added to onload on body, checks if there is an anchor link and if so, expand
-    let linkTarget = window.location.hash.split("?")[0].split("&")[0];
+    let linkTarget = decodeURIComponent(window.location.hash.split("?")[0].split("&")[0]);
     if (linkTarget[0] === "#") {
         linkTarget = linkTarget.substr(1);
     }
@@ -37,7 +37,7 @@ function anchorLink(linkTarget) {
             if($( this ).hasClass("collapse")) {
                 $( this ).collapse("show");
             } else if ($( this ).hasClass("tab-pane")) {
-                // We have the pane and not the the tab itself, find the tab
+                // We have the pane and not the tab itself, find the tab
                 const tabToShow = $( "a[href='#" + $( this ).attr("id") + "']" );
                 if (tabToShow) {
                     tabToShow.tab("show");

@@ -105,5 +105,5 @@ def get_ref_link(soup: BeautifulSoup, ref_html_id: str) -> Optional[Tag]:
 
 def assert_ref_link(soup: BeautifulSoup, ref_link_name: str, expected_text: str) -> None:
     ref_link = get_ref_link(soup, ref_link_name)
-    assert ref_link
+    assert ref_link, f"Cannot find ref {ref_link_name}"
     assert ref_link.text == expected_text

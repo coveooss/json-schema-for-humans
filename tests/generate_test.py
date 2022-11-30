@@ -326,10 +326,27 @@ def test_deprecated_not_in_description() -> None:
 def test_with_special_chars() -> None:
     soup = generate_case("with_special_chars", GenerationConfiguration(deprecated_from_description=False))
 
-    tests.html_schema_doc_asserts.assert_property_names(soup, ["prénom", "nomDeFamille", "âge", "0 de quoi d'autre"])
+    tests.html_schema_doc_asserts.assert_property_names(
+        soup, ["prénom", "nomDeFamille", "âge", "0 de quoi d'autre", "名前", "年齢"]
+    )
 
     buttons = soup.find_all("button", attrs={"aria-controls": True})
-    expected_targets = ["#pr_nom", "#nomDeFamille", "#a_ge", "#a0_de_quoi_d_autre"]
+    expected_targets = ["#prénom", "#nomDeFamille", "#âge", "#0_de_quoi_dautre", "#名前", "#年齢"]
+    for i, expected_target in enumerate(expected_targets):
+        assert buttons[i].attrs["data-target"] == expected_target
+
+
+def test_html_id_old_method() -> None:
+    soup = generate_case(
+        "with_special_chars", GenerationConfiguration(deprecated_from_description=False, old_anchor_links=True)
+    )
+
+    tests.html_schema_doc_asserts.assert_property_names(
+        soup, ["prénom", "nomDeFamille", "âge", "0 de quoi d'autre", "名前", "年齢"]
+    )
+
+    buttons = soup.find_all("button", attrs={"aria-controls": True})
+    expected_targets = ["#pr_nom", "#nomDeFamille", "#a_ge", "#a0_de_quoi_d_autre", "#a__", "#a__"]
     for i, expected_target in enumerate(expected_targets):
         assert buttons[i].attrs["data-target"] == expected_target
 

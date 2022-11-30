@@ -94,6 +94,11 @@
       "default": false,
       "description": "Whether to display examples as YAML instead of JSON"
     },
+    "old_anchor_links": {
+      "type": "boolean",
+      "default": false,
+      "description": "Generate HTML ids for anchor links without special characters (keep only letters, digits, `_`, and `-`).\n\nThis is the old behaviour and is only needed for browsers that do not support HTML 5."
+    },
     "markdown_options": {
       "type": "object",
       "default": {
