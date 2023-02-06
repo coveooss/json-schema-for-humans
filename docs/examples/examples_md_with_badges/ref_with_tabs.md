@@ -197,10 +197,10 @@ Must be one of:
 
 **Description:** Optional. Public key object.
 
-| Property                                                                                            | Pattern | Type             | Deprecated | Definition               | Title/Description   |
-| --------------------------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------ | ------------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty )                                   | No      | enum (of string) | No         | In #/definitions/keyType | Key type indicator. |
-| - [additionalProperties](#objectA_signature_oneOf_i0_signers_items_publicKey_additionalProperties ) | No      | object           | No         | -                        | -                   |
+| Property                                                                        | Pattern | Type             | Deprecated | Definition               | Title/Description   |
+| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------ | ------------------- |
+| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty )               | No      | enum (of string) | No         | In #/definitions/keyType | Key type indicator. |
+| - [](#objectA_signature_oneOf_i0_signers_items_publicKey_additionalProperties ) | No      | object           | No         | -                        | -                   |
 
 | All of(Requirement)                                                    |
 | ---------------------------------------------------------------------- |

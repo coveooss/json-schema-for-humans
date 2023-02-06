@@ -35,6 +35,10 @@
     },
     "patternProperties": {
       "description": "patternProperties"
+    },
+    "required": {
+      "description": "required"
     }
-  }
+  },
+  "required": ["default", "examples"]
 }

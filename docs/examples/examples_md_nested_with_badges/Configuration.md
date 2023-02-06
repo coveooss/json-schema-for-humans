@@ -17,13 +17,14 @@
 - [15. [Optional] Property JSON Schema for Humans configuration file > custom_template_path](#custom_template_path)
 - [16. [Optional] Property JSON Schema for Humans configuration file > show_toc](#show_toc)
 - [17. [Optional] Property JSON Schema for Humans configuration file > examples_as_yaml](#examples_as_yaml)
-- [18. [Optional] Property JSON Schema for Humans configuration file > markdown_options](#markdown_options)
-- [19. [Optional] Property JSON Schema for Humans configuration file > template_md_options](#template_md_options)
-  - [19.1. [Optional] Property JSON Schema for Humans configuration file > template_md_options > badge_as_image](#template_md_options_badge_as_image)
-  - [19.2. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_heading_numbers](#template_md_options_show_heading_numbers)
-  - [19.3. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_array_restrictions](#template_md_options_show_array_restrictions)
-- [20. [Optional] Property JSON Schema for Humans configuration file > with_footer](#with_footer)
-- [21. [Optional] Property JSON Schema for Humans configuration file > footer_show_time](#footer_show_time)
+- [18. [Optional] Property JSON Schema for Humans configuration file > old_anchor_links](#old_anchor_links)
+- [19. [Optional] Property JSON Schema for Humans configuration file > markdown_options](#markdown_options)
+- [20. [Optional] Property JSON Schema for Humans configuration file > template_md_options](#template_md_options)
+  - [20.1. [Optional] Property JSON Schema for Humans configuration file > template_md_options > badge_as_image](#template_md_options_badge_as_image)
+  - [20.2. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_heading_numbers](#template_md_options_show_heading_numbers)
+  - [20.3. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_array_restrictions](#template_md_options_show_array_restrictions)
+- [21. [Optional] Property JSON Schema for Humans configuration file > with_footer](#with_footer)
+- [22. [Optional] Property JSON Schema for Humans configuration file > footer_show_time](#footer_show_time)
 
 **Title:** JSON Schema for Humans configuration file
 
@@ -337,7 +338,25 @@ If no output file is specified, the extension of the template file will be used 
 </details>
 
 <details>
-<summary><strong> <a name="markdown_options"></a>18. [Optional] Property JSON Schema for Humans configuration file > markdown_options</strong>  
+<summary><strong> <a name="old_anchor_links"></a>18. [Optional] Property JSON Schema for Humans configuration file > old_anchor_links</strong>  
+
+</summary>
+<blockquote>
+
+|             |           |
+| ----------- | --------- |
+| **Type**    | `boolean` |
+| **Default** | `false`   |
+
+**Description:** Generate HTML ids for anchor links without special characters (keep only letters, digits, `_`, and `-`).
+
+This is the old behaviour and is only needed for browsers that do not support HTML 5.
+
+</blockquote>
+</details>
+
+<details>
+<summary><strong> <a name="markdown_options"></a>19. [Optional] Property JSON Schema for Humans configuration file > markdown_options</strong>  
 
 </summary>
 <blockquote>
@@ -370,7 +389,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </details>
 
 <details>
-<summary><strong> <a name="template_md_options"></a>19. [Optional] Property JSON Schema for Humans configuration file > template_md_options</strong>  
+<summary><strong> <a name="template_md_options"></a>20. [Optional] Property JSON Schema for Humans configuration file > template_md_options</strong>  
 
 </summary>
 <blockquote>
@@ -383,7 +402,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 **Description:** specific options to md template
 
 <details>
-<summary><strong> <a name="template_md_options_badge_as_image"></a>19.1. [Optional] Property JSON Schema for Humans configuration file > template_md_options > badge_as_image</strong>  
+<summary><strong> <a name="template_md_options_badge_as_image"></a>20.1. [Optional] Property JSON Schema for Humans configuration file > template_md_options > badge_as_image</strong>  
 
 </summary>
 <blockquote>
@@ -401,7 +420,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </details>
 
 <details>
-<summary><strong> <a name="template_md_options_show_heading_numbers"></a>19.2. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_heading_numbers</strong>  
+<summary><strong> <a name="template_md_options_show_heading_numbers"></a>20.2. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_heading_numbers</strong>  
 
 </summary>
 <blockquote>
@@ -419,7 +438,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </details>
 
 <details>
-<summary><strong> <a name="template_md_options_show_array_restrictions"></a>19.3. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_array_restrictions</strong>  
+<summary><strong> <a name="template_md_options_show_array_restrictions"></a>20.3. [Optional] Property JSON Schema for Humans configuration file > template_md_options > show_array_restrictions</strong>  
 
 </summary>
 <blockquote>
@@ -440,7 +459,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </details>
 
 <details>
-<summary><strong> <a name="with_footer"></a>20. [Optional] Property JSON Schema for Humans configuration file > with_footer</strong>  
+<summary><strong> <a name="with_footer"></a>21. [Optional] Property JSON Schema for Humans configuration file > with_footer</strong>  
 
 </summary>
 <blockquote>
@@ -456,7 +475,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 </details>
 
 <details>
-<summary><strong> <a name="footer_show_time"></a>21. [Optional] Property JSON Schema for Humans configuration file > footer_show_time</strong>  
+<summary><strong> <a name="footer_show_time"></a>22. [Optional] Property JSON Schema for Humans configuration file > footer_show_time</strong>  
 
 </summary>
 <blockquote>
