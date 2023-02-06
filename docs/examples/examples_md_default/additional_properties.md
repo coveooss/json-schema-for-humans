@@ -16,12 +16,12 @@
 | **Required**              | No                                                                                                        |
 | **Additional properties** | [[Should-conform]](#additionalProperties "Each additional property must conform to the following schema") |
 
-| Property                                         | Pattern | Type    | Deprecated | Definition | Title/Description                                                          |
-| ------------------------------------------------ | ------- | ------- | ---------- | ---------- | -------------------------------------------------------------------------- |
-| - [subType1](#subType1 )                         | No      | object  | No         | -          | A sub type with additionalProperties false.                                |
-| - [subType2](#subType2 )                         | No      | object  | No         | -          | A sub type with additionalProperties true.                                 |
-| - [anInt](#anInt )                               | No      | integer | No         | -          | This is an integer, it should not show additional properties. (issue #132) |
-| - [additionalProperties](#additionalProperties ) | No      | object  | No         | -          | additionalProperties schema.                                               |
+| Property                     | Pattern | Type    | Deprecated | Definition | Title/Description                                                          |
+| ---------------------------- | ------- | ------- | ---------- | ---------- | -------------------------------------------------------------------------- |
+| - [subType1](#subType1 )     | No      | object  | No         | -          | A sub type with additionalProperties false.                                |
+| - [subType2](#subType2 )     | No      | object  | No         | -          | A sub type with additionalProperties true.                                 |
+| - [anInt](#anInt )           | No      | integer | No         | -          | This is an integer, it should not show additional properties. (issue #132) |
+| - [](#additionalProperties ) | No      | object  | No         | -          | additionalProperties schema.                                               |
 
 ## <a name="subType1"></a>1. Property `Person > subType1`
 
@@ -54,10 +54,10 @@
 
 **Description:** A sub type with additionalProperties true.
 
-| Property                                                  | Pattern | Type   | Deprecated | Definition | Title/Description |
-| --------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [subProp2](#subType2_subProp2 )                         | No      | number | No         | -          | -                 |
-| - [additionalProperties](#subType2_additionalProperties ) | No      | object | No         | -          | -                 |
+| Property                              | Pattern | Type   | Deprecated | Definition | Title/Description |
+| ------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
+| - [subProp2](#subType2_subProp2 )     | No      | number | No         | -          | -                 |
+| - [](#subType2_additionalProperties ) | No      | object | No         | -          | -                 |
 
 ### <a name="subType2_subProp2"></a>2.1. Property `Person > subType2 > subProp2`
 

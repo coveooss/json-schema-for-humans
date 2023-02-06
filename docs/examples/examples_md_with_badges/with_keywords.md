@@ -1,7 +1,7 @@
 # Person
 
-- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > default`](#default)
-- [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > examples`](#examples)
+- [1. ![Required](https://img.shields.io/badge/Required-blue) Property `Person > default`](#default)
+- [2. ![Required](https://img.shields.io/badge/Required-blue) Property `Person > examples`](#examples)
 - [3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > if`](#if)
 - [4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > then`](#then)
 - [5. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > else`](#else)
@@ -10,6 +10,7 @@
 - [8. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > not`](#not)
 - [9. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > properties`](#properties)
 - [10. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > patternProperties`](#patternProperties)
+- [11. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > required`](#required)
 
 **Title:** Person
 
@@ -20,8 +21,8 @@
 
 | Property                                   | Pattern | Type   | Deprecated | Definition | Title/Description |
 | ------------------------------------------ | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [default](#default )                     | No      | string | No         | -          | default           |
-| - [examples](#examples )                   | No      | string | No         | -          | examples          |
+| + [default](#default )                     | No      | string | No         | -          | default           |
+| + [examples](#examples )                   | No      | string | No         | -          | examples          |
 | - [if](#if )                               | No      | object | No         | -          | if                |
 | - [then](#then )                           | No      | object | No         | -          | then              |
 | - [else](#else )                           | No      | object | No         | -          | else              |
@@ -30,8 +31,9 @@
 | - [not](#not )                             | No      | object | No         | -          | not               |
 | - [properties](#properties )               | No      | object | No         | -          | properties        |
 | - [patternProperties](#patternProperties ) | No      | object | No         | -          | patternProperties |
+| - [required](#required )                   | No      | object | No         | -          | required          |
 
-## <a name="default"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > default`
+## <a name="default"></a>1. ![Required](https://img.shields.io/badge/Required-blue) Property `Person > default`
 
 |          |          |
 | -------- | -------- |
@@ -39,7 +41,7 @@
 
 **Description:** default
 
-## <a name="examples"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > examples`
+## <a name="examples"></a>2. ![Required](https://img.shields.io/badge/Required-blue) Property `Person > examples`
 
 |          |          |
 | -------- | -------- |
@@ -118,6 +120,15 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 **Description:** patternProperties
+
+## <a name="required"></a>11. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > required`
+
+|                           |                                                                                                                                   |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+
+**Description:** required
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

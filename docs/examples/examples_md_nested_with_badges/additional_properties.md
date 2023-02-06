@@ -5,7 +5,7 @@
 - [2. [Optional] Property Person > subType2](#subType2)
   - [2.1. [Optional] Property Person > subType2 > subProp2](#subType2_subProp2)
 - [3. [Optional] Property Person > anInt](#anInt)
-- [4. [Optional] Property Person > additionalProperties](#additionalProperties)
+- [4. Property Person > additionalProperties](#additionalProperties)
   - [4.1. [Optional] Property Person > additionalProperties > propA](#additionalProperties_propA)
 
 **Title:** Person
@@ -89,7 +89,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="additionalProperties"></a>4. [Optional] Property Person > additionalProperties</strong>  
+<summary><strong> <a name="additionalProperties"></a>4. Property Person > additionalProperties</strong>  
 
 </summary>
 <blockquote>

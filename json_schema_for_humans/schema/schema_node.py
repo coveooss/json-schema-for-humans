@@ -34,6 +34,7 @@ class SchemaNode:
         array_items: List["SchemaNode"] = None,
         array_items_def: Optional["SchemaNode"] = None,
         tuple_validation_items: Optional[List["SchemaNode"]] = None,
+        property_name: Optional[str] = None,
         links_to: "SchemaNode" = None,
         refers_to: "SchemaNode" = None,
         is_displayed: bool = True,
@@ -79,6 +80,7 @@ class SchemaNode:
         :param tuple_validation_items: Like array_items_def, but defined by position (i.e the element at position i in
                                        a JSON file respecting the schema must respect the schema at position i of this
                                        array)
+        :param: When the node is under `property`, the name of the property
         :param links_to: If the same node is documented elsewhere, the other SchemaNode that documents it
         :param refers_to: If there is a $ref, this should contain the SchemaNode object for it
         :param is_displayed: Instructs the templates if this part should be fully documented.
@@ -108,6 +110,7 @@ class SchemaNode:
         self.pattern_properties: Dict[str, "SchemaNode"] = {}
         self.array_items_def: Optional["SchemaNode"] = array_items_def
         self.tuple_validation_items: List["SchemaNode"] = tuple_validation_items or []
+        self.property_name = property_name
 
     @property
     def explicit_no_additional_properties(self) -> bool:
@@ -140,11 +143,11 @@ class SchemaNode:
 
     @property
     def is_property(self) -> bool:
-        return bool(self.parent and self.property_name in self.parent.properties.keys())
+        return self.parent_key == SchemaKeyword.PROPERTIES.value
 
     @property
     def is_pattern_property(self) -> bool:
-        return bool(self.parent and self.property_name in self.parent.pattern_properties.keys())
+        return self.parent_key == SchemaKeyword.PATTERN_PROPERTIES.value
 
     @property
     def is_additional_properties(self) -> bool:
@@ -297,7 +300,7 @@ class SchemaNode:
         named like a keyword, e.g. a property named "if")
         """
         possible_keyword = self.keywords.get(keyword.value)
-        if possible_keyword and isinstance(possible_keyword, SchemaNode) and not possible_keyword.is_property:
+        if possible_keyword and isinstance(possible_keyword, SchemaNode) and not possible_keyword.is_a_property_node:
             return possible_keyword
 
         return None
@@ -412,10 +415,6 @@ class SchemaNode:
         return title
 
     @property
-    def property_name(self) -> Optional[str]:
-        return self.parent_key
-
-    @property
     def property_display_name(self) -> Optional[str]:
         """The name to display in documentation for this property.
 
@@ -423,10 +422,10 @@ class SchemaNode:
         in which case it is that title
         """
         if self.is_pattern_property:
-            return self.title or self.parent_key
+            return self.title or self.property_name
         if self.is_additional_properties:
             return "Additional Properties"
-        return self.parent_key
+        return self.breadcrumb_name
 
     @property
     def type_name(self) -> str:

@@ -593,9 +593,22 @@ def test_json_with_tabs() -> None:
 def test_schema_with_keywords_as_properties() -> None:
     """Test rendering a schema in which properties are named the same as JSON schema keywords"""
     soup = generate_case("with_keywords")
-    keywords = ["default", "examples", "if", "then", "else", "anyOf", "allOf", "not", "properties", "patternProperties"]
+    keywords = [
+        "default",
+        "examples",
+        "if",
+        "then",
+        "else",
+        "anyOf",
+        "allOf",
+        "not",
+        "properties",
+        "patternProperties",
+        "required",
+    ]
     tests.html_schema_doc_asserts.assert_property_names(soup, keywords)
     tests.html_schema_doc_asserts.assert_descriptions(soup, keywords)
+    tests.html_schema_doc_asserts.assert_required(soup, [True] * 2 + [False] * 9)
 
 
 def test_ref_merge() -> None:

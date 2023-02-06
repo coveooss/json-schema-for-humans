@@ -17,13 +17,14 @@
 - [15. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > custom_template_path`](#custom_template_path)
 - [16. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > show_toc`](#show_toc)
 - [17. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > examples_as_yaml`](#examples_as_yaml)
-- [18. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > markdown_options`](#markdown_options)
-- [19. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options`](#template_md_options)
-  - [19.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`](#template_md_options_badge_as_image)
-  - [19.2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`](#template_md_options_show_heading_numbers)
-  - [19.3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`](#template_md_options_show_array_restrictions)
-- [20. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > with_footer`](#with_footer)
-- [21. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > footer_show_time`](#footer_show_time)
+- [18. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > old_anchor_links`](#old_anchor_links)
+- [19. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > markdown_options`](#markdown_options)
+- [20. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options`](#template_md_options)
+  - [20.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`](#template_md_options_badge_as_image)
+  - [20.2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`](#template_md_options_show_heading_numbers)
+  - [20.3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`](#template_md_options_show_array_restrictions)
+- [21. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > with_footer`](#with_footer)
+- [22. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > footer_show_time`](#footer_show_time)
 
 **Title:** JSON Schema for Humans configuration file
 
@@ -59,6 +60,7 @@ Configuration parameters can be provided in several ways:
 | - [custom_template_path](#custom_template_path )               | No      | string           | No                                                         | -          | Path to a custom Jinja2 template file.<br /><br />There can be multiple files to split the template, but this path should be the entry point.<br /><br />If no output file is specified, the extension of the template file will be used to determine the output documentation extension. i.e. if the template is in ./custom_template/content.html, the resulting documentation will have the html extension.                                                                                                         |
 | - [show_toc](#show_toc )                                       | No      | boolean          | No                                                         | -          | Whether to render table of contents.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | - [examples_as_yaml](#examples_as_yaml )                       | No      | boolean          | No                                                         | -          | Whether to display examples as YAML instead of JSON                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| - [old_anchor_links](#old_anchor_links )                       | No      | boolean          | No                                                         | -          | Generate HTML ids for anchor links without special characters (keep only letters, digits, \`_\`, and \`-\`).<br /><br />This is the old behaviour and is only needed for browsers that do not support HTML 5.                                                                                                                                                                                                                                                                                                          |
 | - [markdown_options](#markdown_options )                       | No      | object           | No                                                         | -          | [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for the descriptions. \`description_is_markdown\` must be true for this to have any effect.<br /><br />**WARNING**<br />Adding an extra, even if the value is false, will activate it. For example \`{"break-on-newline": false}\` will activate the \`break-on-newline\` extra.                                                                                                                                                          |
 | - [template_md_options](#template_md_options )                 | No      | object           | No                                                         | -          | specific options to md template                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | - [with_footer](#with_footer )                                 | No      | boolean          | No                                                         | -          | Whether to show the footer linking to the library repo and with the generation datetime                                                                                                                                                                                                                                                                                                                                                                                                                                |
@@ -241,7 +243,18 @@ If no output file is specified, the extension of the template file will be used 
 
 **Description:** Whether to display examples as YAML instead of JSON
 
-## <a name="markdown_options"></a>18. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > markdown_options`
+## <a name="old_anchor_links"></a>18. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > old_anchor_links`
+
+|             |           |
+| ----------- | --------- |
+| **Type**    | `boolean` |
+| **Default** | `false`   |
+
+**Description:** Generate HTML ids for anchor links without special characters (keep only letters, digits, `_`, and `-`).
+
+This is the old behaviour and is only needed for browsers that do not support HTML 5.
+
+## <a name="markdown_options"></a>19. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > markdown_options`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -267,7 +280,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 }
 ```
 
-## <a name="template_md_options"></a>19. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options`
+## <a name="template_md_options"></a>20. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -282,7 +295,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 | - [show_heading_numbers](#template_md_options_show_heading_numbers )       | No      | boolean | No         | -          | if true generate heading numbers to correspond to table of contents.<br /><br /> if false, do not generate heading numbers            |
 | - [show_array_restrictions](#template_md_options_show_array_restrictions ) | No      | boolean | No         | -          | if true generate array restrictions section.<br /><br /> if false, do not generate                                                    |
 
-### <a name="template_md_options_badge_as_image"></a>19.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`
+### <a name="template_md_options_badge_as_image"></a>20.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`
 
 |             |           |
 | ----------- | --------- |
@@ -293,7 +306,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 
  if false, use text instead
 
-### <a name="template_md_options_show_heading_numbers"></a>19.2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`
+### <a name="template_md_options_show_heading_numbers"></a>20.2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`
 
 |             |           |
 | ----------- | --------- |
@@ -304,7 +317,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 
  if false, do not generate heading numbers
 
-### <a name="template_md_options_show_array_restrictions"></a>19.3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`
+### <a name="template_md_options_show_array_restrictions"></a>20.3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`
 
 |             |           |
 | ----------- | --------- |
@@ -315,7 +328,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 
  if false, do not generate
 
-## <a name="with_footer"></a>20. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > with_footer`
+## <a name="with_footer"></a>21. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > with_footer`
 
 |             |           |
 | ----------- | --------- |
@@ -324,7 +337,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 
 **Description:** Whether to show the footer linking to the library repo and with the generation datetime
 
-## <a name="footer_show_time"></a>21. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > footer_show_time`
+## <a name="footer_show_time"></a>22. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > footer_show_time`
 
 |             |           |
 | ----------- | --------- |

@@ -86,6 +86,7 @@ def build_intermediate_representation(
         depth=0,
         html_id="",
         breadcrumb_name="root",
+        property_name=None,
         schema_file_path=absolute_schema_path,
         path_to_element=[],
         schema=loaded_schema,
@@ -305,6 +306,7 @@ def _resolve_ref(
         depth=current_node.depth,
         html_id=current_node.html_id,
         breadcrumb_name=current_node.breadcrumb_name,
+        property_name=current_node.property_name,
         schema_file_path=referenced_schema_path,
         path_to_element=referenced_schema_path_to_element,
         schema=_load_schema(referenced_schema_path, referenced_schema_path_to_element, loaded_schemas),
@@ -405,6 +407,7 @@ def _build_node(
     depth: int,
     html_id: str,
     breadcrumb_name: str,
+    property_name: Optional[str],
     schema_file_path: str,
     path_to_element: List[Union[str, int]],
     schema: Optional[Union[Dict, List, int, str]],
@@ -417,6 +420,7 @@ def _build_node(
                   figure out the less nested one in order to display it.
     :param html_id: HTML ID for the current element. Used for anchor links.
     :param breadcrumb_name: Name of the node in the breadcrumbs
+    :param property_name: Name of the property, if it is a property
     :param schema_file_path: Real path to the schema (absolute path with symlinks resolved)
     :param path_to_element: Path from the root of the schema to the current element
     :param schema: The JSON schema part being represented
@@ -435,6 +439,7 @@ def _build_node(
         parent=parent,
         parent_key=parent_key,
         ref_path=_get_node_ref(schema),
+        property_name=property_name,
     )
     if html_id == "root":
         html_id = ""
@@ -504,11 +509,12 @@ def _build_node(
                         depth=depth + 1,
                         html_id=_add_html_id_part(html_id, new_property_name),
                         breadcrumb_name=new_property_name,
+                        property_name=new_property_name,
                         schema_file_path=schema_file_path,
                         path_to_element=copy.deepcopy(path_to_element) + [new_property_name],
                         schema=new_property_schema,
                         parent=new_node,
-                        parent_key=new_property_name,
+                        parent_key=schema_key,
                     )
             elif schema_key == SchemaKeyword.ADDITIONAL_PROPERTIES.value:
                 if schema_value is False:
@@ -522,11 +528,12 @@ def _build_node(
                         depth=depth + 1,
                         html_id=_add_html_id_part(html_id, SchemaKeyword.ADDITIONAL_PROPERTIES.value),
                         breadcrumb_name=SchemaKeyword.ADDITIONAL_PROPERTIES.value,
+                        property_name=None,
                         schema_file_path=schema_file_path,
                         path_to_element=copy.deepcopy(path_to_element) + [SchemaKeyword.ADDITIONAL_PROPERTIES.value],
                         schema=schema_value,
                         parent=new_node,
-                        parent_key=SchemaKeyword.ADDITIONAL_PROPERTIES.value,
+                        parent_key=schema_key,
                     )
             elif schema_key == SchemaKeyword.PATTERN_PROPERTIES.value:
                 for new_property_name, new_property_schema in schema_value.items():
@@ -538,11 +545,12 @@ def _build_node(
                         depth=depth + 1,
                         html_id=_add_html_id_part(html_id, f"pattern{pattern_id}"),
                         breadcrumb_name=new_property_name,
+                        property_name=new_property_name,
                         schema_file_path=schema_file_path,
                         path_to_element=copy.deepcopy(path_to_element) + [new_property_name],
                         schema=new_property_schema,
                         parent=new_node,
-                        parent_key=new_property_name,
+                        parent_key=schema_key,
                     )
                     pattern_id += 1
             elif schema_key in [SchemaKeyword.ITEMS.value, SchemaKeyword.PREFIX_ITEMS.value]:
@@ -560,6 +568,7 @@ def _build_node(
                                 depth=depth + 1,
                                 html_id=_add_html_id_part(html_id, f"items_i{i}"),
                                 breadcrumb_name=item_breadcrumb_name,
+                                property_name=None,
                                 schema_file_path=schema_file_path,
                                 path_to_element=copy.deepcopy(path_to_element) + [item_breadcrumb_name],
                                 schema=array_item_schema,
@@ -577,6 +586,7 @@ def _build_node(
                         depth=depth + 1,
                         html_id=_add_html_id_part(html_id, "items"),
                         breadcrumb_name=breadcrumb_name,
+                        property_name=None,
                         schema_file_path=schema_file_path,
                         path_to_element=copy.deepcopy(path_to_element) + [breadcrumb_name],
                         schema=schema_value,
@@ -603,6 +613,7 @@ def _build_node(
                     depth=new_depth,
                     html_id=new_html_id,
                     breadcrumb_name=schema_key,
+                    property_name=None,
                     schema_file_path=schema_file_path,
                     path_to_element=copy.deepcopy(path_to_element) + [schema_key],
                     schema=schema_value,
@@ -623,6 +634,7 @@ def _build_node(
                     depth=depth + 1,
                     html_id=_add_html_id_part(html_id, f"i{i}"),
                     breadcrumb_name=f"item {i}",
+                    property_name=None,
                     schema_file_path=schema_file_path,
                     path_to_element=path_to_element + [i],
                     schema=element,

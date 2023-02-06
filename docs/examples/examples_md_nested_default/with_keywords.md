@@ -1,7 +1,7 @@
 # Person
 
-- [1. [Optional] Property Person > default](#default)
-- [2. [Optional] Property Person > examples](#examples)
+- [1. [Required] Property Person > default](#default)
+- [2. [Required] Property Person > examples](#examples)
 - [3. [Optional] Property Person > if](#if)
 - [4. [Optional] Property Person > then](#then)
 - [5. [Optional] Property Person > else](#else)
@@ -10,6 +10,7 @@
 - [8. [Optional] Property Person > not](#not)
 - [9. [Optional] Property Person > properties](#properties)
 - [10. [Optional] Property Person > patternProperties](#patternProperties)
+- [11. [Optional] Property Person > required](#required)
 
 **Title:** Person
 
@@ -20,7 +21,7 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="default"></a>1. [Optional] Property Person > default</strong>  
+<summary><strong> <a name="default"></a>1. [Required] Property Person > default</strong>  
 
 </summary>
 <blockquote>
@@ -28,7 +29,7 @@
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
-| **Required** | No       |
+| **Required** | Yes      |
 
 **Description:** default
 
@@ -36,7 +37,7 @@
 </details>
 
 <details>
-<summary><strong> <a name="examples"></a>2. [Optional] Property Person > examples</strong>  
+<summary><strong> <a name="examples"></a>2. [Required] Property Person > examples</strong>  
 
 </summary>
 <blockquote>
@@ -44,7 +45,7 @@
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
-| **Required** | No       |
+| **Required** | Yes      |
 
 **Description:** examples
 
@@ -183,6 +184,23 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 **Description:** patternProperties
+
+</blockquote>
+</details>
+
+<details>
+<summary><strong> <a name="required"></a>11. [Optional] Property Person > required</strong>  
+
+</summary>
+<blockquote>
+
+|                           |                                                                           |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                  |
+| **Required**              | No                                                                        |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+
+**Description:** required
 
 </blockquote>
 </details>
