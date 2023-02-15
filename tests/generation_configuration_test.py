@@ -67,6 +67,14 @@ def test_override_template_md_options() -> None:
         "badge_as_image": False,
         "show_heading_numbers": True,
         "show_array_restrictions": True,
+        "properties_table_columns": [
+            "Property",
+            "Pattern",
+            "Type",
+            "Deprecated",
+            "Definition",
+            "Title/Definition",
+        ],
     }
 
     # override badge_as_image key

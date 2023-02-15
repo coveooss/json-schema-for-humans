@@ -325,42 +325,52 @@ class MarkdownTemplate(object):
         properties = []
         for sub_property in schema.iterate_properties:
             line: List[str] = []
-            # property name
-            property_name = "+ " if sub_property.is_required_property else "- "
-            property_name += self.format_link(escape_for_table(sub_property.property_name), sub_property.html_id)
-            line.append(property_name)
-            # pattern
-            line.append("Yes" if sub_property.is_pattern_property else "No")
-            # type
-            line.append(
-                "Combination" if jinja_filters.is_combining(sub_property) else escape_for_table(sub_property.type_name)
-            )
-            # Deprecated
-            line.append(
-                self.badge("Deprecated", "red") if jinja_filters.deprecated(self.config, sub_property) else "No"
-            )
-            # Link
-            if sub_property.should_be_a_link(self.config):
-                line.append(
-                    "Same as " + self.format_link(sub_property.links_to.link_name, sub_property.links_to.html_id)
-                )
-            elif sub_property.refers_to:
-                line.append("In " + sub_property.ref_path)
-            else:
-                line.append("-")
-
-            # title or description
-            description = sub_property.description or "-"
-            if sub_property.title:
-                description = sub_property.title
-
-            line.append(escape_for_table(description))
+            for field in self.config.template_md_options.get("properties_table_columns"):
+                if field == "Property":
+                    # property name
+                    property_name = "+ " if sub_property.is_required_property else "- "
+                    property_name += self.format_link(escape_for_table(sub_property.property_name), sub_property.html_id)
+                    line.append(property_name)
+                elif field == "Pattern":
+                    # pattern
+                    line.append("Yes" if sub_property.is_pattern_property else "No")
+                elif field == "Type":
+                    # type
+                    line.append(
+                        "Combination" if jinja_filters.is_combining(sub_property) else escape_for_table(sub_property.type_name)
+                    )
+                elif field == "Deprecated":
+                    # Deprecated
+                    line.append(
+                        self.badge("Deprecated", "red") \
+                            if jinja_filters.deprecated(self.config, sub_property) \
+                            else "No"
+                    )
+                elif field == "Definition":
+                    # Link
+                    if sub_property.should_be_a_link(self.config):
+                        line.append(
+                            "Same as " + self.format_link(sub_property.links_to.link_name, sub_property.links_to.html_id)
+                        )
+                    elif sub_property.refers_to:
+                        line.append("In " + sub_property.ref_path)
+                    else:
+                        line.append("-")
+                elif field == "Title/Description":
+                    # title or description
+                    description = sub_property.description or "-"
+                    if sub_property.title:
+                        description = sub_property.title
+                    line.append(escape_for_table(description))
+                else:
+                    raise ValueError(f"Unknown field {field} for properties table")
 
             properties.append(line)
 
         if properties:
             # add header
-            properties.insert(0, ["Property", "Pattern", "Type", "Deprecated", "Definition", "Title/Description"])
+            headers = self.config.template_md_options.get("properties_table_columns")
+            properties.insert(0, headers)
 
         return properties
 

@@ -139,6 +139,21 @@
           "type": "boolean",
           "description": "if true generate array restrictions section.\n\n if false, do not generate",
           "default": true
+        },
+        "properties_table_columns": {
+          "type": "array",
+          "description": "array of column names to display in the properties table.\n\n if empty, the default is ['Property','Pattern','Type','Deprecated','Definition','Title/Description']",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Property",
+              "Pattern",
+              "Type",
+              "Deprecated",
+              "Definition",
+              "Title/Description"
+            ]
+          }
         }
       }
     },
