@@ -4,6 +4,10 @@
     {{ node.name_for_breadcrumbs }}{%- if not loop.last %} > {% endif -%}
   {%- endfor -%}
 {%- else -%}
-  {{- schema.property_name -}}
+  {%- if schema.property_name -%}
+    {{- schema.property_name -}}
+  {%- else -%}
+    {{ schema.name_for_breadcrumbs }}
+  {%- endif -%}
 {% endif %}
 {% endfilter %}
