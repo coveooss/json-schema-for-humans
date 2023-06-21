@@ -1,0 +1,3 @@
+{%- macro restriction(inner_text, css_class_name, html_id) -%}
+    <p><span class="badge badge-light restriction {{ css_class_name }}-restriction" id="{{ html_id }}">{{ inner_text }}</span></p>
+{%- endmacro -%}

@@ -1,0 +1,36 @@
+{%- if schema.kw_min_items -%}
+    {{ restriction("Must contain a minimum of <code>" ~ schema.kw_min_items.literal ~ "</code> items", "min-items", schema.kw_min_items.html_id) }}
+{%- endif -%}
+{%- if schema.kw_max_items -%}
+    {{ restriction("Must contain a maximum of <code>" ~ schema.kw_max_items.literal ~ "</code> items", "max-items", schema.kw_max_items.html_id) }}
+{%- endif -%}
+{%- if schema.kw_unique_items and schema.kw_unique_items.literal == True -%}
+    {{ restriction("All items must be unique", "unique-items", schema.kw_unique_items.html_id) }}
+{%- endif -%}
+{%- if schema.array_items_def -%}
+    <h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="{{ schema.array_items_def.html_id }}">
+            {{ content(schema.array_items_def) }}
+        </div>
+    </div>
+{%- endif -%}
+{%- if schema.tuple_validation_items -%}
+<h4>Tuple Validation</h4>
+    {% for item in schema.tuple_validation_items %}
+    <h5>Item at {{ loop.index }} must be:</h5>
+    <div class="card">
+        <div class="card-body items-definition" id="{{ item.html_id }}">
+            {{ content(item) }}
+        </div>
+    </div>
+    {% endfor %}
+{%- endif -%}
+{%- if schema.kw_contains and schema.kw_contains.literal != {} -%}
+    <h4>At least one of the items must be:</h4>
+    <div class="card">
+        <div class="card-body items-contain-definition" id="{{ schema.kw_contains.html_id }}">
+            {{ content(schema.kw_contains) }}
+        </div>
+    </div>
+{%- endif -%}

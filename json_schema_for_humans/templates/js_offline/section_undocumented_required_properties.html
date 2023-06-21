@@ -1,0 +1,11 @@
+{%- set undocumented_required_properties = schema | get_undocumented_required_properties -%}
+{%- if undocumented_required_properties-%}
+    <div class="enum-value">
+    <h4>The following properties are required:</h4>
+    <ul class="list-group">
+    {%- for required_property in undocumented_required_properties -%}
+        <li class="list-group-item required-property">{{ required_property }}</li>
+    {%- endfor -%}
+    </ul>
+    </div>
+{%- endif -%}

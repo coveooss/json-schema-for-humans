@@ -1,0 +1,58 @@
+<h2 class="handle">
+    <label>Conditional Subschema</label>
+</h2>
+<p>If the conditions in the "If" tab are respected, then the conditions in the "Then" tab should be respected.
+    Otherwise, the conditions in the "Else" tab should be respected.</p>
+<ul class="nav nav-tabs" id="{{ schema.html_id }}_condition_tabs" role="tablist">
+    {% set tab_id = schema.kw_if.html_id %}
+    <li class="nav-item">
+        <a class="nav-link active"
+           id="{{ tab_id  }}" data-toggle="tab" href="#tab-pane_{{ tab_id }}" role="tab"
+           onclick="setAnchor('#{{ tab_id }}')"
+        >If</a>
+    </li>
+
+    {% if schema.kw_then %}
+        {% set tab_id = schema.kw_then.html_id %}
+        <li class="nav-item">
+            <a class="nav-link"
+               id="{{ tab_id }}" data-toggle="tab" href="#tab-pane_{{ tab_id }}" role="tab"
+               onclick="setAnchor('#{{ tab_id }}')"
+            >Then</a>
+        </li>
+    {%- endif -%}
+
+    {%- if schema.kw_else -%}
+        {%- set tab_id = schema.kw_else.html_id -%}
+        <li class="nav-item">
+            <a class="nav-link"
+               id="{{ tab_id }}" data-toggle="tab" href="#tab-pane_{{ tab_id }}" role="tab"
+               onclick="setAnchor('#{{ tab_id }}')"
+            >Else</a>
+        </li>
+    {%- endif -%}
+</ul>
+
+<div class="tab-content card">
+    {% set tab_id = schema.kw_if.html_id %}
+    <div class="tab-pane fade card-body active show"
+         id="tab-pane_{{ tab_id }}" role="tabpanel">
+        {{ content(schema.kw_if) }}
+    </div>
+
+    {% if schema.kw_then %}
+        {% set tab_id = schema.kw_then.html_id %}
+        <div class="tab-pane fade card-body"
+             id="tab-pane_{{ tab_id }}" role="tabpanel">
+            {{ content(schema.kw_then) }}
+        </div>
+    {%- endif -%}
+
+    {%- if schema.kw_else -%}
+        {% set tab_id = schema.kw_else.html_id %}
+        <div class="tab-pane fade card-body"
+             id="tab-pane_{{ tab_id }}" role="tabpanel">
+            {{ content(schema.kw_else) }}
+        </div>
+    {%- endif -%}
+</div>
