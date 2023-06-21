@@ -101,8 +101,7 @@ class GenerationConfiguration:
         if self.template_name:
             return DocumentationTemplate(self.template_name).result_extension
 
-        raise ValueError(
-            "Trying to get extension for configuration with no template")
+        raise ValueError("Trying to get extension for configuration with no template")
 
     @property
     def template_path(self) -> Optional[Path]:
@@ -130,8 +129,7 @@ def get_final_config(
     link_to_reused_ref: bool,
     copy_css: bool = False,
     copy_js: bool = False,
-    config: Optional[Union[str, Path, FileLikeType,
-                           Dict[str, Any], GenerationConfiguration]] = None,
+    config: Optional[Union[str, Path, FileLikeType, Dict[str, Any], GenerationConfiguration]] = None,
     config_parameters: List[str] = None,
 ) -> GenerationConfiguration:
     if config:
@@ -156,15 +154,13 @@ def get_final_config(
             logging.info(CONFIG_DEPRECATION_MESSAGE)
 
     if config_parameters:
-        final_config = _apply_config_cli_parameters(
-            final_config, config_parameters)
+        final_config = _apply_config_cli_parameters(final_config, config_parameters)
 
     return final_config
 
 
 def _load_config(
-    config_parameter: Union[str, Path, FileLikeType,
-                            Dict[str, Any], GenerationConfiguration]
+    config_parameter: Union[str, Path, FileLikeType, Dict[str, Any], GenerationConfiguration]
 ) -> GenerationConfiguration:
     """Load the configuration from either the path (as str or Path) to a config file, the open config file object,
     The loaded config as a dict or the GenerateConfiguration object directly.
