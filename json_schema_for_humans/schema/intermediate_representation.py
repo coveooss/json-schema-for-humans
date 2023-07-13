@@ -19,7 +19,7 @@ from json_schema_for_humans.schema.schema_node import SchemaNode
 
 ROOT_ID = "__root__"
 
-HTML_ID_FORBIDDEN_CHARS = ['"', "'", "\\", "#", "?", "&","."]
+HTML_ID_FORBIDDEN_CHARS = ['"', "'", "\\", "#", "?", "&", ".", "$"]
 
 
 def _add_html_id_part(html_id: str, part: str) -> str:
