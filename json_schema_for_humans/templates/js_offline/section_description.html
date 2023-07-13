@@ -1,0 +1,16 @@
+
+{# Display description #}
+{%- if description -%}
+    {%- if not config.collapse_long_descriptions or description is description_short -%}
+        <span class="description">{{ description }}</span>
+    {%- else -%}
+        <div class="description collapse" id="collapseDescription_{{ schema.html_id }}">
+            {{ description }}
+        </div>
+        <div>
+            <a class="collapse-description-link collapsed" data-toggle="collapse" href="#collapseDescription_{{ schema.html_id }}"
+               aria-expanded="false" aria-controls="collapseDescription{{ schema.html_id }}"
+            ></a>
+        </div>
+    {%- endif -%}
+{%- endif -%}

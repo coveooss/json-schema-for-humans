@@ -1,0 +1,25 @@
+<h2 class="handle">
+  <label>{% if operator == "allOf" -%}All of{% elif operator == "anyOf" -%}Any of{% elif operator == "oneOf" -%}One of{% endif -%}</label>
+</h2>
+{%- set tab_label = "Option" -%}
+{%- if operator == "allOf" -%}
+    {%- set tab_label = "Requirement" -%}
+{%- endif -%}
+<ul class="nav nav-tabs" id="tabs{{ current_node.html_id }}_{{ operator }}" role="tablist">
+    {%- for node in current_node.array_items -%}
+        <li class="nav-item">
+            <a class="nav-link {% if loop.index == 1 -%}active {% endif -%} {{ operator }}-option"
+               id="{{ node.html_id }}" data-toggle="tab" href="#tab-pane_{{ node.html_id }}" role="tab"
+               onclick="setAnchor('#{{ node.html_id }}')"
+            >{{ node.definition_name or tab_label ~ " " ~ loop.index }}</a>
+        </li>
+    {%- endfor -%}
+</ul>
+<div class="tab-content card">
+    {%- for node in current_node.array_items -%}
+        <div class="tab-pane fade card-body {% if loop.index == 1 -%}active show{% endif -%}"
+             id="tab-pane_{{ node.html_id }}" role="tabpanel">
+            {{ content(node) }}
+        </div>
+    {%- endfor -%}
+</div>

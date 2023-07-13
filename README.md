@@ -170,6 +170,10 @@ This is the default template. It uses Bootstrap along with minimal Javascript to
 
 When using this template, you need to include the Javascript file (`schema_doc.min.js`) that is automatically copied next to the output HTML file (`schema_doc.html` by default).
 
+### js_offline
+
+This schema is identical to the js template, but all CSS and JavaScript resources are bundled so that the generated documentation can be used in an offline setting.
+
 ### flat
 
 *Note*: This template is a work in progress

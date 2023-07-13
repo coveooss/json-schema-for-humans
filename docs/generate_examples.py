@@ -18,7 +18,7 @@ from json_schema_for_humans.generation_configuration import GenerationConfigurat
 EXAMPLES_DIR = os.path.join(CURRENT_DIR, "examples")
 JSON_EXAMPLES_DIR = os.path.join(EXAMPLES_DIR, "cases")
 
-TEMPLATE_NAMES = ["js", "flat", "md", "md_nested"]
+TEMPLATE_NAMES = ["js", "js_offline", "flat", "md", "md_nested"]
 if len(sys.argv) >= 2:
     TEMPLATE_NAMES = [sys.argv[1]]
 
@@ -92,6 +92,18 @@ CONFIGURATIONS: List[ExampleConfiguration] = [
         "config": GenerationConfiguration(
             minify=False,
             template_name="js",
+            deprecated_from_description=True,
+            expand_buttons=True,
+            footer_show_time=False,
+        ),
+        "md_example_template": MD_EXAMPLE_JS_TEMPLATE,
+    },
+    {
+        "title": "JS Offline template",
+        "dir_name": "examples_js_offline_default",
+        "config": GenerationConfiguration(
+            minify=False,
+            template_name="js_offline",
             deprecated_from_description=True,
             expand_buttons=True,
             footer_show_time=False,

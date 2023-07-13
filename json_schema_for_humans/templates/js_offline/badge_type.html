@@ -1,0 +1,14 @@
+{%- if type_name == "string" -%}
+    {%- if schema.kw_min_length -%}
+        {{ restriction("Must be at least <code>" ~ schema.kw_min_length.literal ~ "</code> characters long", "min-length", schema.kw_min_length.html_id) }}
+    {%- endif -%}
+    {%- if schema.kw_max_length -%}
+        {{ restriction("Must be at most <code>" ~ schema.kw_max_length.literal ~ "</code> characters long", "max-length", schema.kw_max_length.html_id) }}
+    {%- endif -%}
+{%- endif -%}
+{%- if type_name in ["integer", "number"] -%}
+    {%- set restriction_text = (schema | get_numeric_restrictions_text("<code>", "</code>")) -%}
+    {%- if restriction_text -%}
+        {{ restriction(schema | get_numeric_restrictions_text("<code>", "</code>"), "numeric", schema.html_id ~ "_number") }}
+    {%- endif -%}
+{%- endif -%}
