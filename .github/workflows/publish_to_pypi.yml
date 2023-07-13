@@ -20,13 +20,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Python 3.9
+      - name: Set up Python 3.11
         uses: actions/setup-python@v2
         with:
-          python-version: 3.9
+          python-version: 3.11
 
       - name: Publish to pypi
-        uses: coveooss/pypi-publish-with-poetry@v1
+        uses: coveooss/pypi-publish-with-poetry@v2
         with:
           project-name: json-schema-for-humans
           pypi-token: ${{ secrets.PYPI_TOKEN }}
