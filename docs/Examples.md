@@ -409,6 +409,72 @@ Here you can browse various example schemas and their rendition with several tem
 [examples/examples_md_nested_with_badges/array_example.md](examples/examples_md_nested_with_badges/array_example.md ':include')
 </details>
 
+## --array_items_draft_2020_12--
+### array_items_draft_2020_12
+
+
+<details>
+<summary>Json schema - Click here to expand source code...</summary>
+
+[examples/cases/array_items_draft_2020_12.json](examples/cases/array_items_draft_2020_12.json ':include :type=code')
+</details>
+
+
+<details>
+<summary>JS template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/array_items_draft_2020_12.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_default/array_items_draft_2020_12.html](examples/examples_js_default/array_items_draft_2020_12.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/array_items_draft_2020_12.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/array_items_draft_2020_12.html](examples/examples_js_offline_default/array_items_draft_2020_12.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Flat template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/array_items_draft_2020_12.html" target="_blank">Open it in full page</a>
+
+[examples/examples_flat_default/array_items_draft_2020_12.html](examples/examples_flat_default/array_items_draft_2020_12.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Markdown without badge template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_default/array_items_draft_2020_12.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_default/array_items_draft_2020_12.md](examples/examples_md_default/array_items_draft_2020_12.md ':include')
+</details>
+
+
+<details>
+<summary>Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_with_badges/array_items_draft_2020_12.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_with_badges/array_items_draft_2020_12.md](examples/examples_md_with_badges/array_items_draft_2020_12.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown without badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_nested_default/array_items_draft_2020_12.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_default/array_items_draft_2020_12.md](examples/examples_md_nested_default/array_items_draft_2020_12.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_nested_with_badges/array_items_draft_2020_12.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_with_badges/array_items_draft_2020_12.md](examples/examples_md_nested_with_badges/array_items_draft_2020_12.md ':include')
+</details>
+
 ## --basic--
 ### Basic schema
 
