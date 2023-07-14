@@ -58,6 +58,12 @@ The default value for `RESULT_FILE_OR_DIR` depends on the context:
 
 In a case where more than one schema is provided as input, `RESULT_FILE_OR_DIR` must be a directory. The output documentation will have the same name as the input schema, but with a different extension (`html` or `md`).
 
+#### Choosing a template
+
+To choose a template on the CLI, use `--config template_name=[TEMPLATE_NAME]`.
+For example `--config template_name=js` (HTML) or `--config template_name=md` (Markdown).
+The list of available templates is [documented here](https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/Configuration.html#template_name)
+
 #### CLI options
 
 #### --config
