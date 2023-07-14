@@ -449,7 +449,7 @@ class MarkdownTemplate(object):
             ],
             [
                 "**Additional items**",
-                "True" if schema.kw_additional_items and schema.kw_additional_items.literal is True else "False",
+                "True" if schema.array_additional_items else "False",
             ],
             [
                 "**Tuple validation**",

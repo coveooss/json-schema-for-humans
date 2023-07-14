@@ -136,7 +136,7 @@ The following are supported:
 - Required properties
 - Pattern properties
 - Default values
-- Array `minItems`, `maxItems`, `uniqueItems`, `items`, `prefixItems`, and `contains`
+- Array `minItems`, `maxItems`, `uniqueItems`, `items`, `prefixItems`, `additionalItems`, and `contains`
 - Combining schema with `oneOf`, `allOf`, `anyOf`, and `not`
 - Examples
 - Conditional subschemas

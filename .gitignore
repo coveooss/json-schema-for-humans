@@ -146,3 +146,5 @@ include
 
 # Temporary files
 tmp
+
+docs/examples/.DS_Store

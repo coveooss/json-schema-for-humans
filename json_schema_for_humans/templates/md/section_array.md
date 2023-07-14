@@ -30,3 +30,10 @@
     {% include "content.md" %}
 {% endwith %}
 {% endif %}
+
+{% if schema.array_additional_items_def %}
+{{ "Additional items must be" | md_heading(depth+1) }}
+{% with schema=schema.array_additional_items_def, skip_headers=False, depth=depth+1, skip_required=True %}
+    {% include "content.md" %}
+{% endwith %}
+{% endif %}

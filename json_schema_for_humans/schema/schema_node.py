@@ -33,6 +33,8 @@ class SchemaNode:
         keywords: Dict[str, Union["SchemaNode", str, List[str]]] = None,
         array_items: List["SchemaNode"] = None,
         array_items_def: Optional["SchemaNode"] = None,
+        array_additional_items_def: Optional["SchemaNode"] = None,
+        array_additional_items: bool = False,
         tuple_validation_items: Optional[List["SchemaNode"]] = None,
         property_name: Optional[str] = None,
         links_to: "SchemaNode" = None,
@@ -109,6 +111,8 @@ class SchemaNode:
         self.no_additional_properties: bool = False
         self.pattern_properties: Dict[str, "SchemaNode"] = {}
         self.array_items_def: Optional["SchemaNode"] = array_items_def
+        self.array_additional_items_def: Optional["SchemaNode"] = array_additional_items_def
+        self.array_additional_items = array_additional_items
         self.tuple_validation_items: List["SchemaNode"] = tuple_validation_items or []
         self.property_name = property_name
 
