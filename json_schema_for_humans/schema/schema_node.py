@@ -406,6 +406,10 @@ class SchemaNode:
         return self.get_keyword(SchemaKeyword.REQUIRED)
 
     @property
+    def kw_type(self) -> Optional["SchemaNode"]:
+        return self.get_keyword(SchemaKeyword.TYPE)
+
+    @property
     def title(self) -> Optional[str]:
         title_kw = self.get_keyword(SchemaKeyword.TITLE)
         if not title_kw:
@@ -445,6 +449,17 @@ class SchemaNode:
             current_node = referenced_schema
 
         return name or const.TYPE_OBJECT
+
+    @property
+    def is_object(self) -> bool:
+        """Check if the node is either of type object or has object in its types"""
+        if not self.kw_type:
+            return True  # no type is assumed to be object
+        if self.kw_type.literal:
+            return self.kw_type.literal == const.TYPE_OBJECT
+        if self.kw_type.array_items:
+            return any(node.literal == const.TYPE_OBJECT for node in self.kw_type.array_items)
+        return False
 
     @property
     def raw(self) -> Optional[Union[int, bool, str, List, Dict]]:
