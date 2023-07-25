@@ -151,7 +151,7 @@ These are **not** supported at the moment (PRs welcome!):
 References are supported:
 
 - To another part of the schema, e.g. `{ $ref: "#/definitions/something" }`
-- To a local file, `{"$ref": "references.json"}`, `{"$ref": "references.json#/definitions/something"}`
+- To a local file, `{"$ref": "references.json"}`, `{"$ref": "references.json#/definitions/something"}`, `{"$ref": "file://./references.json"}`, `{"$ref": "file://./references.json#/definitions/something}`
 - To a URL, `{"$ref": "http://example.com/schema.json"}`, `{"$ref": "http://example.com/schema.json#/definitions/something"}`
 
 
