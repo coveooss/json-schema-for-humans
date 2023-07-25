@@ -40,7 +40,7 @@
       "$ref": "#/definitions/gift"
     },
     "file_prefix": {
-      "$ref": "file://./references.json#/definitions/gift"
+      "$ref": "#/definitions/gift"
     },
     "anchor_with_slash": {
       "$ref": "#/definitions/object_def"
