@@ -193,12 +193,12 @@ def deprecated(config, schema: SchemaNode) -> bool:
     return is_deprecated_look_in_description(schema) if config.deprecated_from_description else is_deprecated(schema)
 
 
-def first_line(example_text: str, max_length: int = 0) -> str:
+def first_line(example_text: str) -> str:
     """Filter. Retrieve first line of string + add ... at the end if text has multiple lines cut line at max_length"""
     lines = example_text.splitlines()
     result = lines[0]
-    etc = (max_length and len(result) > max_length) or len(lines) > 1
-    return f"{result[:max_length]}{' ...' if etc else ''}"
+    etc = len(lines) > 1
+    return f"{result}{' ...' if etc else ''}"
 
 
 def get_local_time() -> str:
