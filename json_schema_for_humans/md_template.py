@@ -1,3 +1,4 @@
+import logging
 from typing import Dict, List, Optional, Union
 from urllib.parse import quote, quote_plus
 
@@ -322,6 +323,7 @@ class MarkdownTemplate(object):
         Generate list of properties ready to be rendered by generate_table filter
         """
         properties = []
+        header = {}
         for sub_property in schema.iterate_properties:
             line: List[str] = []
 
@@ -355,13 +357,19 @@ class MarkdownTemplate(object):
             }
 
             for colname in self.config.properties_table_columns:
-                line.append(header2value[colname.lower()])
+                try:
+                    line.append(header2value[colname.lower()])
+                    header[colname.title()] = ""
+                except KeyError:
+                    logging.warning(
+                        "No value found for column '%s', passed in config 'properties_table_columns'. Ignoring.",
+                        colname,
+                    )
 
             properties.append(line)
 
-        if properties:
-            # Add header
-            properties.insert(0, [name.title() for name in self.config.properties_table_columns])
+        if header:
+            properties.insert(0, list(header))
 
         return properties
 
