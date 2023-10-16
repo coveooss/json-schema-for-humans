@@ -4,7 +4,7 @@ import os
 from dataclasses import dataclass
 from json import JSONDecodeError
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Optional, Union, Tuple
 
 import yaml
 from dataclasses_json import dataclass_json
@@ -48,7 +48,7 @@ class GenerationConfiguration:
     template_md_options: Optional[Dict[str, Any]] = None
     with_footer: bool = True
     footer_show_time: bool = True
-    properties_table_columns: tuple[str] = (
+    properties_table_columns: Tuple[str] = (
         "Property",
         "Pattern",
         "Type",
