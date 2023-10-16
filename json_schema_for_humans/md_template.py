@@ -291,7 +291,10 @@ class MarkdownTemplate(object):
     @staticmethod
     def format_link(title: str, link: str, tooltip: str = "") -> str:
         """Format a Markdown link"""
-        return f"[{title}](#{link} {tooltip})"
+        if tooltip:
+            return f"[{title}](#{link} {tooltip})"
+        else:
+            return f"[{title}](#{link})"
 
     def badge(self, name: str, color: str, value: str = "", show_text: bool = False, fallback: bool = True) -> str:
         """
