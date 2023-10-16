@@ -354,6 +354,7 @@ class MarkdownTemplate(object):
                 else "No",
                 "definition": definition_info,
                 "title/description": escape_for_table(description),
+                "default": sub_property.default_value if sub_property.default_value is not None else "-",
             }
 
             for colname in self.config.properties_table_columns:
