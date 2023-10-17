@@ -345,6 +345,9 @@ class MarkdownTemplate(object):
             else:
                 definition_info = "-"
 
+            if sub_property.property_name is None or not sub_property.property_name.strip():
+                continue
+
             header2value = {
                 "property": self.format_link(escape_for_table(sub_property.property_name), sub_property.html_id),
                 "required": "Yes" if sub_property.is_required_property else "No",
