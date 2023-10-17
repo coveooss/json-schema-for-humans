@@ -246,14 +246,14 @@ class MarkdownTemplate(object):
         if nested:
             menu = "<strong>"
 
-        # generate markdown title with anchor (except if depth 0)
+        # generate markdown title
         if depth == 0:
             menu += f" {title}"
         else:
             if self.config.template_md_options.get("show_heading_numbers"):
-                menu += f' <a name="{html_id}"></a>{heading_numbers} {title}'
+                menu += f" {heading_numbers} {title}"
             else:
-                menu += f' <a name="{html_id}"></a>{title}'
+                menu += f" {title}"
 
         # store current heading in toc
         toc_menu = f"[{title}](#{html_id})"
@@ -263,7 +263,12 @@ class MarkdownTemplate(object):
 
         if nested:
             menu += "</strong>"
-        return menu
+
+        if depth == 0:
+            return menu
+        else:
+            # Add anchor link
+            return f'<a name="{html_id}"></a>\n{menu}'
 
     def get_toc(self) -> str:
         """
