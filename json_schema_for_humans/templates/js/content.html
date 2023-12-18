@@ -15,6 +15,10 @@
             {%- include "breadcrumbs.html" -%}
         {%- endif -%}
 
+        {%- if schema.title -%}
+            {%- if schema.depth == 0 %}{{ " " }}<h1>{{ schema.title }}</h1>{% else %}<h4>{{ schema.title }}</h4>{%- endif -%}
+        {%- endif -%}
+
         {# Display type #}
         {%- if not schema is combining -%}
             <span class="badge badge-dark value-type">Type: {{ type_name }}</span>
