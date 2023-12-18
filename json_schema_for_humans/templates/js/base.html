@@ -18,9 +18,6 @@
     <title>{%- if title -%}{{ title }}{%- else -%}Schema Docs{%- endif -%}</title>
 </head>
 <body onload="anchorOnLoad();" id="root">
-    {%- if title -%}
-        <h1>{{ title }}</h1>
-    {%- endif -%}
     {%- if config.expand_buttons -%}
         <div class="text-right">
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
