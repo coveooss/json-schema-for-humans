@@ -7,7 +7,8 @@
 
   {% set description = sub_property | get_description %}
 <details>
-<summary>{% filter md_heading(depth + 1, html_id, True) -%}
+<summary>
+    {% filter md_heading(depth + 1, html_id, True) -%}
       {%- filter replace('\n', '') -%}
     {%- if not skip_required and sub_property.property_name -%}
         {{ md_badge("Required", "blue", show_text=True) if sub_property.is_required_property else md_badge("Optional", "yellow", show_text=True) -}}

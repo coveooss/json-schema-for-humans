@@ -42,7 +42,8 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="allOf_i0_then_postal_code"></a>1.1.1. [Optional] Property root > allOf > item 0 > then > postal_code</strong>  
+<summary>
+<strong> <a name="allOf_i0_then_postal_code"></a>1.1.1. [Optional] Property root > allOf > item 0 > then > postal_code</strong>  
 
 </summary>
 <blockquote>
@@ -77,7 +78,8 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="allOf_i1_then_postal_code"></a>2.1.1. [Optional] Property root > allOf > item 1 > then > postal_code</strong>  
+<summary>
+<strong> <a name="allOf_i1_then_postal_code"></a>2.1.1. [Optional] Property root > allOf > item 1 > then > postal_code</strong>  
 
 </summary>
 <blockquote>
@@ -112,7 +114,8 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="allOf_i2_then_postal_code"></a>3.1.1. [Optional] Property root > allOf > item 2 > then > postal_code</strong>  
+<summary>
+<strong> <a name="allOf_i2_then_postal_code"></a>3.1.1. [Optional] Property root > allOf > item 2 > then > postal_code</strong>  
 
 </summary>
 <blockquote>
@@ -134,7 +137,8 @@
 </blockquote>
 
 <details>
-<summary><strong> <a name="street_address"></a>4. [Optional] Property root > street_address</strong>  
+<summary>
+<strong> <a name="street_address"></a>4. [Optional] Property root > street_address</strong>  
 
 </summary>
 <blockquote>
@@ -147,7 +151,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="country"></a>5. [Optional] Property root > country</strong>  
+<summary>
+<strong> <a name="country"></a>5. [Optional] Property root > country</strong>  
 
 </summary>
 <blockquote>

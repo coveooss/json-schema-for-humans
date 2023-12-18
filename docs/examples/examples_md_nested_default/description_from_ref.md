@@ -10,7 +10,8 @@
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
 <details>
-<summary><strong> <a name="name"></a>1. [Optional] Property root > name</strong>  
+<summary>
+<strong> <a name="name"></a>1. [Optional] Property root > name</strong>  
 
 </summary>
 <blockquote>
@@ -31,7 +32,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="alignment"></a>2. [Optional] Property root > alignment</strong>  
+<summary>
+<strong> <a name="alignment"></a>2. [Optional] Property root > alignment</strong>  
 
 </summary>
 <blockquote>

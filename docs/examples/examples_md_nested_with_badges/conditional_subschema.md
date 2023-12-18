@@ -20,7 +20,8 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="then_postal_code"></a>1.1. [Optional] Property root > then > postal_code</strong>  
+<summary>
+<strong> <a name="then_postal_code"></a>1.1. [Optional] Property root > then > postal_code</strong>  
 
 </summary>
 <blockquote>
@@ -45,7 +46,8 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="else_postal_code"></a>2.1. [Optional] Property root > else > postal_code</strong>  
+<summary>
+<strong> <a name="else_postal_code"></a>2.1. [Optional] Property root > else > postal_code</strong>  
 
 </summary>
 <blockquote>
@@ -63,7 +65,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="street_address"></a>3. [Optional] Property root > street_address</strong>  
+<summary>
+<strong> <a name="street_address"></a>3. [Optional] Property root > street_address</strong>  
 
 </summary>
 <blockquote>
@@ -76,7 +79,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="country"></a>4. [Optional] Property root > country</strong>  
+<summary>
+<strong> <a name="country"></a>4. [Optional] Property root > country</strong>  
 
 </summary>
 <blockquote>

@@ -12,7 +12,8 @@
 **Description:** Test schema with a not
 
 <details>
-<summary><strong> <a name="not_a_string"></a>1. [Required] Property root > not_a_string</strong>  
+<summary>
+<strong> <a name="not_a_string"></a>1. [Required] Property root > not_a_string</strong>  
 
 </summary>
 <blockquote>

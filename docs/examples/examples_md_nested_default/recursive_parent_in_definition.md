@@ -14,7 +14,8 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="relationships"></a>1. [Optional] Property Person > relationships</strong>  
+<summary>
+<strong> <a name="relationships"></a>1. [Optional] Property Person > relationships</strong>  
 
 </summary>
 <blockquote>
@@ -29,7 +30,8 @@
 **Description:** Relationships between this person and others
 
 <details>
-<summary><strong> <a name="relationships_mother"></a>1.1. [Optional] Property Person > relationships > mother</strong>  
+<summary>
+<strong> <a name="relationships_mother"></a>1.1. [Optional] Property Person > relationships > mother</strong>  
 
 </summary>
 <blockquote>
@@ -44,7 +46,8 @@
 **Description:** A human being
 
 <details>
-<summary><strong> <a name="relationships_mother_relationships"></a>1.1.1. [Optional] Property Person > relationships > mother > relationships</strong>  
+<summary>
+<strong> <a name="relationships_mother_relationships"></a>1.1.1. [Optional] Property Person > relationships > mother > relationships</strong>  
 
 </summary>
 <blockquote>
@@ -58,7 +61,8 @@
 **Description:** Relationships between this person and others
 
 <details>
-<summary><strong> <a name="relationships_mother_relationships_mother"></a>1.1.1.1. [Optional] Property Person > relationships > mother > relationships > mother</strong>  
+<summary>
+<strong> <a name="relationships_mother_relationships_mother"></a>1.1.1.1. [Optional] Property Person > relationships > mother > relationships > mother</strong>  
 
 </summary>
 <blockquote>

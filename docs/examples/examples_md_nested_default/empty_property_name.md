@@ -11,7 +11,8 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="root"></a>1. Property Empty property name ></strong>  
+<summary>
+<strong> <a name="root"></a>1. Property Empty property name ></strong>  
 
 </summary>
 <blockquote>

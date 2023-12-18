@@ -14,7 +14,8 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="billing_address"></a>1. [Optional] Property root > billing_address</strong>  
+<summary>
+<strong> <a name="billing_address"></a>1. [Optional] Property root > billing_address</strong>  
 
 </summary>
 <blockquote>
@@ -27,7 +28,8 @@
 | **Defined in**            | #/definitions/address                                                     |
 
 <details>
-<summary><strong> <a name="billing_address_street_address"></a>1.1. [Required] Property root > billing_address > street_address</strong>  
+<summary>
+<strong> <a name="billing_address_street_address"></a>1.1. [Required] Property root > billing_address > street_address</strong>  
 
 </summary>
 <blockquote>
@@ -41,7 +43,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="billing_address_city"></a>1.2. [Required] Property root > billing_address > city</strong>  
+<summary>
+<strong> <a name="billing_address_city"></a>1.2. [Required] Property root > billing_address > city</strong>  
 
 </summary>
 <blockquote>
@@ -55,7 +58,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="billing_address_state"></a>1.3. [Required] Property root > billing_address > state</strong>  
+<summary>
+<strong> <a name="billing_address_state"></a>1.3. [Required] Property root > billing_address > state</strong>  
 
 </summary>
 <blockquote>
@@ -69,7 +73,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="billing_address_futureProperty"></a>1.4. [Optional] Property root > billing_address > futureProperty</strong>  
+<summary>
+<strong> <a name="billing_address_futureProperty"></a>1.4. [Optional] Property root > billing_address > futureProperty</strong>  
 
 </summary>
 <blockquote>
@@ -86,7 +91,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="shipping_address"></a>2. [Optional] Property root > shipping_address</strong>  
+<summary>
+<strong> <a name="shipping_address"></a>2. [Optional] Property root > shipping_address</strong>  
 
 </summary>
 <blockquote>

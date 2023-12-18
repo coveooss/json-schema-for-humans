@@ -14,7 +14,8 @@
 **Description:** Testing $ref with URL with YAML destination
 
 <details>
-<summary><strong> <a name="address"></a>1. [Optional] Property root > address</strong>  
+<summary>
+<strong> <a name="address"></a>1. [Optional] Property root > address</strong>  
 
 </summary>
 <blockquote>
@@ -27,7 +28,8 @@
 | **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/yaml.yaml#/definitions/address |
 
 <details>
-<summary><strong> <a name="address_street_address"></a>1.1. [Required] Property root > address > street_address</strong>  
+<summary>
+<strong> <a name="address_street_address"></a>1.1. [Required] Property root > address > street_address</strong>  
 
 </summary>
 <blockquote>
@@ -41,7 +43,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="address_city"></a>1.2. [Required] Property root > address > city</strong>  
+<summary>
+<strong> <a name="address_city"></a>1.2. [Required] Property root > address > city</strong>  
 
 </summary>
 <blockquote>
@@ -55,7 +58,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="address_state"></a>1.3. [Required] Property root > address > state</strong>  
+<summary>
+<strong> <a name="address_state"></a>1.3. [Required] Property root > address > state</strong>  
 
 </summary>
 <blockquote>

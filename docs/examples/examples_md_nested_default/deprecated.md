@@ -15,7 +15,8 @@
 **Description:** Test schema with deprecated in description
 
 <details>
-<summary><strong> <a name="deprecated1"></a>1. [Optional]~~ Property root > deprecated1~~</strong>  
+<summary>
+<strong> <a name="deprecated1"></a>1. [Optional]~~ Property root > deprecated1~~</strong>  
 
 </summary>
 <blockquote>
@@ -33,7 +34,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="deprecated2"></a>2. [Optional]~~ Property root > deprecated2~~</strong>  
+<summary>
+<strong> <a name="deprecated2"></a>2. [Optional]~~ Property root > deprecated2~~</strong>  
 
 </summary>
 <blockquote>
@@ -51,7 +53,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="deprecated3"></a>3. [Optional]~~ Property root > deprecated3~~</strong>  
+<summary>
+<strong> <a name="deprecated3"></a>3. [Optional]~~ Property root > deprecated3~~</strong>  
 
 </summary>
 <blockquote>
@@ -69,7 +72,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="deprecated4"></a>4. [Optional]~~ Property root > deprecated4~~</strong>  
+<summary>
+<strong> <a name="deprecated4"></a>4. [Optional]~~ Property root > deprecated4~~</strong>  
 
 </summary>
 <blockquote>
@@ -87,7 +91,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="not_deprecated"></a>5. [Optional] Property root > not_deprecated</strong>  
+<summary>
+<strong> <a name="not_deprecated"></a>5. [Optional] Property root > not_deprecated</strong>  
 
 </summary>
 <blockquote>

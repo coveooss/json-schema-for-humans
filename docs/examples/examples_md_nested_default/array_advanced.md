@@ -15,7 +15,8 @@
 **Description:** A little food fun
 
 <details>
-<summary><strong> <a name="fruits"></a>1. [Optional] Property root > fruits</strong>  
+<summary>
+<strong> <a name="fruits"></a>1. [Optional] Property root > fruits</strong>  
 
 </summary>
 <blockquote>
@@ -50,7 +51,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="vegetables"></a>2. [Optional] Property root > vegetables</strong>  
+<summary>
+<strong> <a name="vegetables"></a>2. [Optional] Property root > vegetables</strong>  
 
 </summary>
 <blockquote>

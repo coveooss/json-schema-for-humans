@@ -12,19 +12,6 @@ current_dir = os.path.abspath(os.path.dirname(__file__))
 parent_dir = os.path.abspath(os.path.dirname(current_dir))
 examples_dir = os.path.join(parent_dir, "docs", "examples")
 
-config_badge = GenerationConfiguration(
-    template_name="md",
-    template_md_options={"badge_as_image": True},
-    deprecated_from_description=True,
-    footer_show_time=False,
-)
-config_no_badge = GenerationConfiguration(
-    template_name="md",
-    template_md_options={"badge_as_image": False},
-    deprecated_from_description=True,
-    footer_show_time=False,
-)
-
 
 @dataclass
 class TestCase:
@@ -46,11 +33,25 @@ def list_cases() -> List[str]:
 class TestMdGenerate(MdUtilsAsserts):
     @pytest.mark.parametrize("test_case", list_cases())
     @pytest.mark.parametrize("with_badge", [True, False])
-    def test_basic(self, test_case: str, with_badge: bool):
+    @pytest.mark.parametrize("nested", [True, False])
+    def test_basic(self, test_case: str, with_badge: bool, nested: bool):
         """Test rendering a basic schema with title"""
+        dir_name = "examples_md"
+        if nested:
+            dir_name = f"{dir_name}_nested"
+        if with_badge:
+            dir_name = f"{dir_name}_with_badges"
+        else:
+            dir_name = f"{dir_name}_default"
+
         self.assert_case_equals(
             examples_dir,
-            "examples_md_with_badges" if with_badge else "examples_md_default",
+            dir_name,
             test_case,
-            config_badge if with_badge else config_no_badge,
+            GenerationConfiguration(
+                template_name="md_nested" if nested else "md",
+                template_md_options={"badge_as_image": with_badge},
+                deprecated_from_description=True,
+                footer_show_time=False,
+            ),
         )

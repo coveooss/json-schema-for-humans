@@ -11,7 +11,8 @@
 **Description:** Testing $ref with URL
 
 <details>
-<summary><strong> <a name="firstName"></a>1. [Optional] Property root > firstName</strong>  
+<summary>
+<strong> <a name="firstName"></a>1. [Optional] Property root > firstName</strong>  
 
 </summary>
 <blockquote>

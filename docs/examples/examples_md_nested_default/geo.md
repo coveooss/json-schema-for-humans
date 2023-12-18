@@ -14,7 +14,8 @@
 **Description:** A geographical coordinate.
 
 <details>
-<summary><strong> <a name="latitude"></a>1. [Required] Property Longitude and Latitude Values > latitude</strong>  
+<summary>
+<strong> <a name="latitude"></a>1. [Required] Property Longitude and Latitude Values > latitude</strong>  
 
 </summary>
 <blockquote>
@@ -33,7 +34,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="longitude"></a>2. [Required] Property Longitude and Latitude Values > longitude</strong>  
+<summary>
+<strong> <a name="longitude"></a>2. [Required] Property Longitude and Latitude Values > longitude</strong>  
 
 </summary>
 <blockquote>

@@ -15,7 +15,8 @@
 **Description:** JSON Schema for an fstab entry
 
 <details>
-<summary><strong> <a name="storage"></a>1. [Required] Property root > storage</strong>  
+<summary>
+<strong> <a name="storage"></a>1. [Required] Property root > storage</strong>  
 
 </summary>
 <blockquote>

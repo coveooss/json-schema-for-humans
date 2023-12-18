@@ -17,7 +17,8 @@
 **Description:** A little food fun
 
 <details>
-<summary><strong> <a name="address"></a>1. [Optional] Property root > address</strong>  
+<summary>
+<strong> <a name="address"></a>1. [Optional] Property root > address</strong>  
 
 </summary>
 <blockquote>
@@ -100,7 +101,8 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="addressLines"></a>2. [Optional] Property root > addressLines</strong>  
+<summary>
+<strong> <a name="addressLines"></a>2. [Optional] Property root > addressLines</strong>  
 
 </summary>
 <blockquote>
@@ -133,7 +135,8 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="arrayEmpty"></a>3. [Optional] Property root > arrayEmpty</strong>  
+<summary>
+<strong> <a name="arrayEmpty"></a>3. [Optional] Property root > arrayEmpty</strong>  
 
 </summary>
 <blockquote>
