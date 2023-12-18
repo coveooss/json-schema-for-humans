@@ -37,7 +37,7 @@
     {% endwith %}
 {% else %}
     {# Properties, pattern properties, additional properties #}
-    {% if schema.type_name == "object" %}
+    {% if schema.is_object %}
     {{- schema | md_properties_table | md_generate_table -}}
     {% endif %}
 
@@ -88,7 +88,7 @@
     {% endif %}
 
     {# details of Properties, pattern properties, additional properties #}
-    {% if schema.type_name == "object" %}
+    {% if schema.is_object %}
     {% include "section_properties_details.md" %}
     {% endif %}
 {% endif %}

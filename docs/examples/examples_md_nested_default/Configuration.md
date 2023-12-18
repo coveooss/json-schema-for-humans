@@ -289,11 +289,20 @@ This file contains the logic for the anchor links.
 
 **Description:** The name of the built-in template to use to render the documentation.
 
-`js` is the default and uses javascript for anchor links, collapsible sections and tabs. `flat` uses no javascript, but has no interactivity.
+`js` is the default and uses javascript for anchor links, collapsible sections and tabs.
+
+`js_offline` is identical to `js` except that all CSS, fonts and JavaScript are bundled for offline use.
+
+`flat` uses no javascript, but has no interactivity.
+
+`md` is the markdown template.
+
+`md_nested` is the markdown template with collapsible nested sections.
 
 Must be one of:
 * "flat"
 * "js"
+* "js_offline"
 * "md"
 * "md_nested"
 

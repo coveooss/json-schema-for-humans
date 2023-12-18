@@ -14,6 +14,9 @@ from json_schema_for_humans.const import (
     FileLikeType,
     DEFAULT_CSS_FILE_NAME,
     DEFAULT_JS_FILE_NAME,
+    OFFLINE_CSS_FILE_NAMES,
+    OFFLINE_FONT_FILE_NAMES,
+    OFFLINE_JS_FILE_NAMES,
 )
 
 DEFAULT_PROPERTIES_TABLE_COLUMNS = [
@@ -80,10 +83,15 @@ class GenerationConfiguration:
     @property
     def files_to_copy(self) -> List[str]:
         files_to_copy: List[str] = []
-        if self.copy_js:
-            files_to_copy.append(DEFAULT_JS_FILE_NAME)
-        if self.copy_css:
-            files_to_copy.append(DEFAULT_CSS_FILE_NAME)
+        if self.template_name == "js_offline":
+            files_to_copy.extend(OFFLINE_JS_FILE_NAMES)
+            files_to_copy.extend(OFFLINE_CSS_FILE_NAMES)
+            files_to_copy.extend(OFFLINE_FONT_FILE_NAMES)
+        else:
+            if self.copy_js:
+                files_to_copy.append(DEFAULT_JS_FILE_NAME)
+            if self.copy_css:
+                files_to_copy.append(DEFAULT_CSS_FILE_NAME)
         return files_to_copy
 
     @property
@@ -206,4 +214,5 @@ def _apply_config_cli_parameters(
                 parameter_value = True
         current_configuration_as_dict[parameter_name] = parameter_value
 
-    return GenerationConfiguration.from_dict(current_configuration_as_dict)  # type: ignore
+    # type: ignore
+    return GenerationConfiguration.from_dict(current_configuration_as_dict)

@@ -121,6 +121,8 @@ def _copy_additional_file_to_target(
     source_file_path = source_directory / file_to_copy
     if not source_file_path.exists():
         return
+    parent = (target_directory / file_to_copy).parent
+    parent.mkdir(exist_ok=True, parents=True)
 
     try:
         shutil.copyfile(str(source_file_path), str(target_directory / file_to_copy))

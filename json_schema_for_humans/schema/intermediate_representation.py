@@ -19,7 +19,7 @@ from json_schema_for_humans.schema.schema_node import SchemaNode
 
 ROOT_ID = "__root__"
 
-HTML_ID_FORBIDDEN_CHARS = ['"', "'", "\\", "#", "?", "&"]
+HTML_ID_FORBIDDEN_CHARS = ['"', "'", "\\", "#", "?", "&", ".", "$"]
 
 
 def _add_html_id_part(html_id: str, part: str) -> str:
@@ -576,23 +576,45 @@ def _build_node(
                                 parent_key=schema_key,
                             )
                         )
+                elif not isinstance(schema_value, bool):
+                    if SchemaKeyword.PREFIX_ITEMS.value not in schema.keys():
+                        breadcrumb_name = f"{breadcrumb_name} items"
+                        new_node.array_items_def = _build_node(
+                            config=config,
+                            resolved_references=resolved_references,
+                            reference_users=reference_users,
+                            loaded_schemas=loaded_schemas,
+                            depth=depth + 1,
+                            html_id=_add_html_id_part(html_id, "items"),
+                            breadcrumb_name=breadcrumb_name,
+                            property_name=None,
+                            schema_file_path=schema_file_path,
+                            path_to_element=copy.deepcopy(path_to_element) + [breadcrumb_name],
+                            schema=schema_value,
+                            parent=new_node,
+                            parent_key=schema_key,
+                        )
+                    else:
+                        breadcrumb_name = f"{breadcrumb_name} additional items"
+                        new_node.array_additional_items_def = _build_node(
+                            config=config,
+                            resolved_references=resolved_references,
+                            reference_users=reference_users,
+                            loaded_schemas=loaded_schemas,
+                            depth=depth + 1,
+                            html_id=_add_html_id_part(html_id, "additional_items"),
+                            breadcrumb_name=breadcrumb_name,
+                            property_name=None,
+                            schema_file_path=schema_file_path,
+                            path_to_element=copy.deepcopy(path_to_element) + [breadcrumb_name],
+                            schema=schema_value,
+                            parent=new_node,
+                            parent_key=schema_key,
+                        )
                 else:
-                    breadcrumb_name = f"{breadcrumb_name} items"
-                    new_node.array_items_def = _build_node(
-                        config=config,
-                        resolved_references=resolved_references,
-                        reference_users=reference_users,
-                        loaded_schemas=loaded_schemas,
-                        depth=depth + 1,
-                        html_id=_add_html_id_part(html_id, "items"),
-                        breadcrumb_name=breadcrumb_name,
-                        property_name=None,
-                        schema_file_path=schema_file_path,
-                        path_to_element=copy.deepcopy(path_to_element) + [breadcrumb_name],
-                        schema=schema_value,
-                        parent=new_node,
-                        parent_key=schema_key,
-                    )
+                    new_node.array_additional_items = schema_value
+            elif schema_key == SchemaKeyword.ADDITIONAL_ITEMS.value:
+                new_node.array_additional_items = schema_value
             else:
                 # Add the property name (correctly escaped) to the ID
                 new_depth = depth

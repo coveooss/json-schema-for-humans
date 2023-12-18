@@ -84,7 +84,7 @@
     {% endif %}
 
     {# details of Properties, pattern properties, additional properties #}
-    {% if schema.type_name == "object" %}
+    {% if schema.is_object %}
     {% with skip_required=False %}
         {% include "section_properties_details.md" %}
     {% endwith %}

@@ -151,9 +151,9 @@ def array_items(schema: SchemaNode, title: str) -> List[List[str]]:
     return items
 
 
-def first_line_fixed(example_text: str, max_length: int = 0) -> str:
-    """first_line truncated but replace ` with ' to avoid to have only one ` to avoid issues with jekyll"""
-    return jinja_filters.first_line(example_text, max_length).translate(str.maketrans({"`": "'"}))
+def first_line_fixed(example_text: str) -> str:
+    """first_line but replace ` with ' to avoid unbalanced `s in markdown"""
+    return jinja_filters.first_line(example_text).translate(str.maketrans({"`": "'"}))
 
 
 def array_items_restrictions(schema: SchemaNode) -> List[List[str]]:
@@ -174,7 +174,7 @@ def array_items_restrictions(schema: SchemaNode) -> List[List[str]]:
         items_restrictions.append(
             [
                 f"[{item_label}](#{item_html_id})",
-                escape_for_table(first_line_fixed(item.description or "-", const.LINE_WIDTH)),
+                escape_for_table(first_line_fixed(item.description or "-")),
             ]
         )
 
@@ -200,7 +200,6 @@ class MarkdownTemplate(object):
         env.filters["md_array_items"] = array_items
         env.filters["md_restrictions_table"] = restrictions_table
         env.filters["md_generate_table"] = generate_table
-        env.filters["md_first_line"] = first_line_fixed
 
         env.globals["md_badge"] = self.badge
         env.globals["md_get_toc"] = self.get_toc
@@ -459,7 +458,7 @@ class MarkdownTemplate(object):
             ],
             [
                 "**Additional items**",
-                "True" if schema.kw_additional_items and schema.kw_additional_items.literal is True else "False",
+                "True" if schema.array_additional_items else "False",
             ],
             [
                 "**Tuple validation**",

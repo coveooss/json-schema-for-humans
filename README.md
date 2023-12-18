@@ -58,6 +58,12 @@ The default value for `RESULT_FILE_OR_DIR` depends on the context:
 
 In a case where more than one schema is provided as input, `RESULT_FILE_OR_DIR` must be a directory. The output documentation will have the same name as the input schema, but with a different extension (`html` or `md`).
 
+#### Choosing a template
+
+To choose a template on the CLI, use `--config template_name=[TEMPLATE_NAME]`.
+For example `--config template_name=js` (HTML) or `--config template_name=md` (Markdown).
+The list of available templates is [documented here](https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/Configuration.html#template_name)
+
 #### CLI options
 
 #### --config
@@ -130,7 +136,7 @@ The following are supported:
 - Required properties
 - Pattern properties
 - Default values
-- Array `minItems`, `maxItems`, `uniqueItems`, `items`, `prefixItems`, and `contains`
+- Array `minItems`, `maxItems`, `uniqueItems`, `items`, `prefixItems`, `additionalItems`, and `contains`
 - Combining schema with `oneOf`, `allOf`, `anyOf`, and `not`
 - Examples
 - Conditional subschemas
@@ -145,7 +151,7 @@ These are **not** supported at the moment (PRs welcome!):
 References are supported:
 
 - To another part of the schema, e.g. `{ $ref: "#/definitions/something" }`
-- To a local file, `{"$ref": "references.json"}`, `{"$ref": "references.json#/definitions/something"}`
+- To a local file, `{"$ref": "references.json"}`, `{"$ref": "references.json#/definitions/something"}`, `{"$ref": "file:references.json"}`, `{"$ref": "file:references.json#/definitions/something}`
 - To a URL, `{"$ref": "http://example.com/schema.json"}`, `{"$ref": "http://example.com/schema.json#/definitions/something"}`
 
 
@@ -169,6 +175,10 @@ This is the default template. It uses Bootstrap along with minimal Javascript to
 - Long descriptions are collapsed by default
 
 When using this template, you need to include the Javascript file (`schema_doc.min.js`) that is automatically copied next to the output HTML file (`schema_doc.html` by default).
+
+### js_offline
+
+This schema is identical to the js template, but all CSS and JavaScript resources are bundled so that the generated documentation can be used in an offline setting.
 
 ### flat
 

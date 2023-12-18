@@ -29,6 +29,14 @@ Here you can browse various example schemas and their rendition with several tem
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/additional_properties.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/additional_properties.html](examples/examples_js_offline_default/additional_properties.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/additional_properties.html" target="_blank">Open it in full page</a>
 
@@ -83,6 +91,14 @@ Here you can browse various example schemas and their rendition with several tem
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/anyOf_option_names.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/anyOf_option_names.html](examples/examples_js_default/anyOf_option_names.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/anyOf_option_names.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/anyOf_option_names.html](examples/examples_js_offline_default/anyOf_option_names.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -147,6 +163,14 @@ Here you can browse various example schemas and their rendition with several tem
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/array.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/array.html](examples/examples_js_offline_default/array.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/array.html" target="_blank">Open it in full page</a>
 
@@ -201,6 +225,14 @@ Here you can browse various example schemas and their rendition with several tem
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/array_additionalItems.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/array_additionalItems.html](examples/examples_js_default/array_additionalItems.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/array_additionalItems.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/array_additionalItems.html](examples/examples_js_offline_default/array_additionalItems.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -265,6 +297,14 @@ Here you can browse various example schemas and their rendition with several tem
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/array_advanced.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/array_advanced.html](examples/examples_js_offline_default/array_advanced.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/array_advanced.html" target="_blank">Open it in full page</a>
 
@@ -323,6 +363,14 @@ Here you can browse various example schemas and their rendition with several tem
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/array_example.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/array_example.html](examples/examples_js_offline_default/array_example.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/array_example.html" target="_blank">Open it in full page</a>
 
@@ -361,6 +409,72 @@ Here you can browse various example schemas and their rendition with several tem
 [examples/examples_md_nested_with_badges/array_example.md](examples/examples_md_nested_with_badges/array_example.md ':include')
 </details>
 
+## --array_items_draft_2020_12--
+### array_items_draft_2020_12
+
+
+<details>
+<summary>Json schema - Click here to expand source code...</summary>
+
+[examples/cases/array_items_draft_2020_12.json](examples/cases/array_items_draft_2020_12.json ':include :type=code')
+</details>
+
+
+<details>
+<summary>JS template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/array_items_draft_2020_12.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_default/array_items_draft_2020_12.html](examples/examples_js_default/array_items_draft_2020_12.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/array_items_draft_2020_12.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/array_items_draft_2020_12.html](examples/examples_js_offline_default/array_items_draft_2020_12.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Flat template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/array_items_draft_2020_12.html" target="_blank">Open it in full page</a>
+
+[examples/examples_flat_default/array_items_draft_2020_12.html](examples/examples_flat_default/array_items_draft_2020_12.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Markdown without badge template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_default/array_items_draft_2020_12.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_default/array_items_draft_2020_12.md](examples/examples_md_default/array_items_draft_2020_12.md ':include')
+</details>
+
+
+<details>
+<summary>Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_with_badges/array_items_draft_2020_12.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_with_badges/array_items_draft_2020_12.md](examples/examples_md_with_badges/array_items_draft_2020_12.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown without badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_nested_default/array_items_draft_2020_12.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_default/array_items_draft_2020_12.md](examples/examples_md_nested_default/array_items_draft_2020_12.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_nested_with_badges/array_items_draft_2020_12.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_with_badges/array_items_draft_2020_12.md](examples/examples_md_nested_with_badges/array_items_draft_2020_12.md ':include')
+</details>
+
 ## --basic--
 ### Basic schema
 
@@ -379,6 +493,14 @@ Here you can browse various example schemas and their rendition with several tem
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/basic.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/basic.html](examples/examples_js_default/basic.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/basic.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/basic.html](examples/examples_js_offline_default/basic.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -441,6 +563,14 @@ Here you can browse various example schemas and their rendition with several tem
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/break_on_newline.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/break_on_newline.html](examples/examples_js_offline_default/break_on_newline.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/break_on_newline.html" target="_blank">Open it in full page</a>
 
@@ -495,6 +625,14 @@ Here you can browse various example schemas and their rendition with several tem
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/broken_ref.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/broken_ref.html](examples/examples_js_default/broken_ref.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/broken_ref.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/broken_ref.html](examples/examples_js_offline_default/broken_ref.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -557,6 +695,14 @@ Here you can browse various example schemas and their rendition with several tem
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/circular.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/circular.html](examples/examples_js_offline_default/circular.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/circular.html" target="_blank">Open it in full page</a>
 
@@ -612,6 +758,14 @@ Here you can browse various example schemas and their rendition with several tem
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/combining_not.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/combining_not.html](examples/examples_js_default/combining_not.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/combining_not.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/combining_not.html](examples/examples_js_offline_default/combining_not.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -676,6 +830,14 @@ Here you can browse various example schemas and their rendition with several tem
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/combining_oneOf.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/combining_oneOf.html](examples/examples_js_offline_default/combining_oneOf.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/combining_oneOf.html" target="_blank">Open it in full page</a>
 
@@ -730,6 +892,14 @@ Here you can browse various example schemas and their rendition with several tem
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/complex_const.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/complex_const.html](examples/examples_js_default/complex_const.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/complex_const.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/complex_const.html](examples/examples_js_offline_default/complex_const.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -792,6 +962,14 @@ Here you can browse various example schemas and their rendition with several tem
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/conditional_subschema.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/conditional_subschema.html](examples/examples_js_offline_default/conditional_subschema.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/conditional_subschema.html" target="_blank">Open it in full page</a>
 
@@ -850,6 +1028,14 @@ Here you can browse various example schemas and their rendition with several tem
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/conditional_subschema_no_else.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/conditional_subschema_no_else.html](examples/examples_js_offline_default/conditional_subschema_no_else.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/conditional_subschema_no_else.html" target="_blank">Open it in full page</a>
 
@@ -904,6 +1090,14 @@ Here you can browse various example schemas and their rendition with several tem
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/defaults.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/defaults.html](examples/examples_js_default/defaults.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/defaults.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/defaults.html](examples/examples_js_offline_default/defaults.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -970,6 +1164,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/deprecated.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/deprecated.html](examples/examples_js_offline_default/deprecated.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/deprecated.html" target="_blank">Open it in full page</a>
 
@@ -1024,6 +1226,14 @@ the description of an attribute
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/description_from_ref.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/description_from_ref.html](examples/examples_js_default/description_from_ref.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/description_from_ref.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/description_from_ref.html](examples/examples_js_offline_default/description_from_ref.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -1086,6 +1296,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/description_markdown.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/description_markdown.html](examples/examples_js_offline_default/description_markdown.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/description_markdown.html" target="_blank">Open it in full page</a>
 
@@ -1140,6 +1358,14 @@ the description of an attribute
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/description_with_ref.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/description_with_ref.html](examples/examples_js_default/description_with_ref.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/description_with_ref.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/description_with_ref.html](examples/examples_js_offline_default/description_with_ref.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -1202,6 +1428,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/empty_property_name.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/empty_property_name.html](examples/examples_js_offline_default/empty_property_name.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/empty_property_name.html" target="_blank">Open it in full page</a>
 
@@ -1256,6 +1490,14 @@ the description of an attribute
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/enumofnone.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/enumofnone.html](examples/examples_js_default/enumofnone.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/enumofnone.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/enumofnone.html](examples/examples_js_offline_default/enumofnone.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -1320,6 +1562,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/geo.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/geo.html](examples/examples_js_offline_default/geo.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/geo.html" target="_blank">Open it in full page</a>
 
@@ -1378,6 +1628,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/html_in_patterns.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/html_in_patterns.html](examples/examples_js_offline_default/html_in_patterns.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/html_in_patterns.html" target="_blank">Open it in full page</a>
 
@@ -1432,6 +1690,14 @@ the description of an attribute
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/long_description.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/long_description.html](examples/examples_js_default/long_description.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/long_description.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/long_description.html](examples/examples_js_offline_default/long_description.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -1496,6 +1762,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/multiple_types.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/multiple_types.html](examples/examples_js_offline_default/multiple_types.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/multiple_types.html" target="_blank">Open it in full page</a>
 
@@ -1552,6 +1826,14 @@ the description of an attribute
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/pattern_properties.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/pattern_properties.html](examples/examples_js_default/pattern_properties.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/pattern_properties.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/pattern_properties.html](examples/examples_js_offline_default/pattern_properties.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -1614,6 +1896,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/pattern_properties_html_id.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/pattern_properties_html_id.html](examples/examples_js_offline_default/pattern_properties_html_id.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/pattern_properties_html_id.html" target="_blank">Open it in full page</a>
 
@@ -1668,6 +1958,14 @@ the description of an attribute
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/prefixItems.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/prefixItems.html](examples/examples_js_default/prefixItems.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/prefixItems.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/prefixItems.html](examples/examples_js_offline_default/prefixItems.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -1730,6 +2028,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/recursive.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/recursive.html](examples/examples_js_offline_default/recursive.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/recursive.html" target="_blank">Open it in full page</a>
 
@@ -1784,6 +2090,14 @@ the description of an attribute
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/recursive_array.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/recursive_array.html](examples/examples_js_default/recursive_array.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/recursive_array.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/recursive_array.html](examples/examples_js_offline_default/recursive_array.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -1846,6 +2160,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/recursive_full_schema.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/recursive_full_schema.html](examples/examples_js_offline_default/recursive_full_schema.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/recursive_full_schema.html" target="_blank">Open it in full page</a>
 
@@ -1900,6 +2222,14 @@ the description of an attribute
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/recursive_full_schema_simple.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/recursive_full_schema_simple.html](examples/examples_js_default/recursive_full_schema_simple.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/recursive_full_schema_simple.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/recursive_full_schema_simple.html](examples/examples_js_offline_default/recursive_full_schema_simple.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -1962,6 +2292,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/recursive_parent_in_definition.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/recursive_parent_in_definition.html](examples/examples_js_offline_default/recursive_parent_in_definition.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/recursive_parent_in_definition.html" target="_blank">Open it in full page</a>
 
@@ -2016,6 +2354,14 @@ the description of an attribute
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/recursive_two_files.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/recursive_two_files.html](examples/examples_js_default/recursive_two_files.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/recursive_two_files.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/recursive_two_files.html](examples/examples_js_offline_default/recursive_two_files.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -2078,6 +2424,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/recursive_two_files2.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/recursive_two_files2.html](examples/examples_js_offline_default/recursive_two_files2.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/recursive_two_files2.html" target="_blank">Open it in full page</a>
 
@@ -2132,6 +2486,14 @@ the description of an attribute
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/ref_merge.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/ref_merge.html](examples/examples_js_default/ref_merge.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/ref_merge.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/ref_merge.html](examples/examples_js_offline_default/ref_merge.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -2194,6 +2556,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/ref_with_tabs.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/ref_with_tabs.html](examples/examples_js_offline_default/ref_with_tabs.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/ref_with_tabs.html" target="_blank">Open it in full page</a>
 
@@ -2248,6 +2618,14 @@ the description of an attribute
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/reference_int.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/reference_int.html](examples/examples_js_default/reference_int.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/reference_int.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/reference_int.html](examples/examples_js_offline_default/reference_int.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -2311,6 +2689,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/references.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/references.html](examples/examples_js_offline_default/references.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/references.html" target="_blank">Open it in full page</a>
 
@@ -2365,6 +2751,14 @@ the description of an attribute
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/references_url.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/references_url.html](examples/examples_js_default/references_url.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/references_url.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/references_url.html](examples/examples_js_offline_default/references_url.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -2427,6 +2821,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/references_url_two_levels.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/references_url_two_levels.html](examples/examples_js_offline_default/references_url_two_levels.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/references_url_two_levels.html" target="_blank">Open it in full page</a>
 
@@ -2481,6 +2883,14 @@ the description of an attribute
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/references_url_yaml.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/references_url_yaml.html](examples/examples_js_default/references_url_yaml.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/references_url_yaml.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/references_url_yaml.html](examples/examples_js_offline_default/references_url_yaml.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -2543,6 +2953,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/required_properties_order.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/required_properties_order.html](examples/examples_js_offline_default/required_properties_order.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/required_properties_order.html" target="_blank">Open it in full page</a>
 
@@ -2597,6 +3015,14 @@ the description of an attribute
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/single_element_allOf.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/single_element_allOf.html](examples/examples_js_default/single_element_allOf.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/single_element_allOf.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/single_element_allOf.html](examples/examples_js_offline_default/single_element_allOf.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -2659,6 +3085,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/top_level_array.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/top_level_array.html](examples/examples_js_offline_default/top_level_array.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/top_level_array.html" target="_blank">Open it in full page</a>
 
@@ -2717,6 +3151,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/top_level_combining.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/top_level_combining.html](examples/examples_js_offline_default/top_level_combining.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/top_level_combining.html" target="_blank">Open it in full page</a>
 
@@ -2755,6 +3197,72 @@ the description of an attribute
 [examples/examples_md_nested_with_badges/top_level_combining.md](examples/examples_md_nested_with_badges/top_level_combining.md ':include')
 </details>
 
+## --type_object_null--
+### type_object_null
+
+
+<details>
+<summary>Json schema - Click here to expand source code...</summary>
+
+[examples/cases/type_object_null.json](examples/cases/type_object_null.json ':include :type=code')
+</details>
+
+
+<details>
+<summary>JS template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/type_object_null.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_default/type_object_null.html](examples/examples_js_default/type_object_null.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/type_object_null.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/type_object_null.html](examples/examples_js_offline_default/type_object_null.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Flat template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/type_object_null.html" target="_blank">Open it in full page</a>
+
+[examples/examples_flat_default/type_object_null.html](examples/examples_flat_default/type_object_null.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Markdown without badge template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_default/type_object_null.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_default/type_object_null.md](examples/examples_md_default/type_object_null.md ':include')
+</details>
+
+
+<details>
+<summary>Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_with_badges/type_object_null.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_with_badges/type_object_null.md](examples/examples_md_with_badges/type_object_null.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown without badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_nested_default/type_object_null.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_default/type_object_null.md](examples/examples_md_nested_default/type_object_null.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_nested_with_badges/type_object_null.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_with_badges/type_object_null.md](examples/examples_md_nested_with_badges/type_object_null.md ':include')
+</details>
+
 ## --with_default--
 ### With default value
 
@@ -2772,6 +3280,14 @@ the description of an attribute
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/with_default.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/with_default.html](examples/examples_js_default/with_default.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/with_default.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/with_default.html](examples/examples_js_offline_default/with_default.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -2836,6 +3352,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/with_definitions.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/with_definitions.html](examples/examples_js_offline_default/with_definitions.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/with_definitions.html" target="_blank">Open it in full page</a>
 
@@ -2890,6 +3414,14 @@ the description of an attribute
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/with_descriptions.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/with_descriptions.html](examples/examples_js_default/with_descriptions.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/with_descriptions.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/with_descriptions.html](examples/examples_js_offline_default/with_descriptions.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -2954,6 +3486,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/with_examples.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/with_examples.html](examples/examples_js_offline_default/with_examples.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/with_examples.html" target="_blank">Open it in full page</a>
 
@@ -3008,6 +3548,14 @@ the description of an attribute
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/with_keywords.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/with_keywords.html](examples/examples_js_default/with_keywords.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/with_keywords.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/with_keywords.html](examples/examples_js_offline_default/with_keywords.html ':include :type=iframe width=100% height=400px')
 </details>
 
 
@@ -3070,6 +3618,14 @@ the description of an attribute
 
 
 <details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/with_special_chars.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/with_special_chars.html](examples/examples_js_offline_default/with_special_chars.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
 <summary>Flat template - Click here to expand the rendered result...</summary>
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/with_special_chars.html" target="_blank">Open it in full page</a>
 
@@ -3124,6 +3680,14 @@ the description of an attribute
 <a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/with_urlencoded_anchor.html" target="_blank">Open it in full page</a>
 
 [examples/examples_js_default/with_urlencoded_anchor.html](examples/examples_js_default/with_urlencoded_anchor.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/with_urlencoded_anchor.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/with_urlencoded_anchor.html](examples/examples_js_offline_default/with_urlencoded_anchor.html ':include :type=iframe width=100% height=400px')
 </details>
 
 

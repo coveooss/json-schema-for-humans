@@ -33,6 +33,8 @@ class SchemaNode:
         keywords: Dict[str, Union["SchemaNode", str, List[str]]] = None,
         array_items: List["SchemaNode"] = None,
         array_items_def: Optional["SchemaNode"] = None,
+        array_additional_items_def: Optional["SchemaNode"] = None,
+        array_additional_items: bool = False,
         tuple_validation_items: Optional[List["SchemaNode"]] = None,
         property_name: Optional[str] = None,
         links_to: "SchemaNode" = None,
@@ -109,6 +111,8 @@ class SchemaNode:
         self.no_additional_properties: bool = False
         self.pattern_properties: Dict[str, "SchemaNode"] = {}
         self.array_items_def: Optional["SchemaNode"] = array_items_def
+        self.array_additional_items_def: Optional["SchemaNode"] = array_additional_items_def
+        self.array_additional_items = array_additional_items
         self.tuple_validation_items: List["SchemaNode"] = tuple_validation_items or []
         self.property_name = property_name
 
@@ -406,6 +410,10 @@ class SchemaNode:
         return self.get_keyword(SchemaKeyword.REQUIRED)
 
     @property
+    def kw_type(self) -> Optional["SchemaNode"]:
+        return self.get_keyword(SchemaKeyword.TYPE)
+
+    @property
     def title(self) -> Optional[str]:
         title_kw = self.get_keyword(SchemaKeyword.TITLE)
         if not title_kw:
@@ -445,6 +453,17 @@ class SchemaNode:
             current_node = referenced_schema
 
         return name or const.TYPE_OBJECT
+
+    @property
+    def is_object(self) -> bool:
+        """Check if the node is either of type object or has object in its types"""
+        if not self.kw_type:
+            return True  # no type is assumed to be object
+        if self.kw_type.literal:
+            return self.kw_type.literal == const.TYPE_OBJECT
+        if self.kw_type.array_items:
+            return any(node.literal == const.TYPE_OBJECT for node in self.kw_type.array_items)
+        return False
 
     @property
     def raw(self) -> Optional[Union[int, bool, str, List, Dict]]:

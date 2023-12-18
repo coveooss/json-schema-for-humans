@@ -1,0 +1,54 @@
+{% set html_id = sub_property.html_id %}
+<div class="accordion" id="accordion{{ html_id }}">
+    <div class="card">
+        <div class="card-header" id="heading{{ html_id }}">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#{{ html_id }}"
+                        aria-expanded="{{ expanded }}" aria-controls="{{ html_id }}" onclick="setAnchor('#{{ html_id }}')">
+
+                    {%- if sub_property.is_additional_properties -%}
+                        <em>
+                    {%- endif -%}
+                    <span class="property-name">{{ sub_property.property_display_name | escape }}</span>
+                    {%- if sub_property.is_additional_properties -%}
+                        </em>
+                    {%- endif -%}
+                    {%- if sub_property.is_required_property -%}
+                        {{ " " }}<span class="badge badge-warning required-property">Required</span>
+                    {%- endif -%}
+                    {%- if sub_property is deprecated -%}
+                        {{ " " }}<span class="badge badge-danger deprecated-property">Deprecated</span>
+                    {%- endif -%}
+                    {%- if sub_property.is_pattern_property -%}
+                        {{ " " }}<span class="badge badge-info pattern-property">Pattern Property</span>
+                    {%- endif -%}
+                </button>
+            </h2>
+        </div>
+
+        <div id="{{ html_id }}"
+             class="collapse{% if expanded %} show{% endif %} property-definition-div" aria-labelledby="heading{{ html_id }}"
+             data-parent="#accordion{{ html_id }}">
+            <div class="card-body pl-5">
+                {%- if sub_property.is_pattern_property -%}
+                    <h2 class="handle">
+                        <label>Pattern Property</label>
+                    </h2>
+                    <p>All properties whose name matches the following regular expression must respect the following conditions</p>
+                    <span class="pattern-value">Property name regular expression: <code>{{ sub_property.property_name | escape }}</code></span>
+                    <br/>
+                {%- endif -%}
+
+                {%- if sub_property.is_additional_properties -%}
+                    {%- if sub_property.is_additional_properties_schema -%}
+                        <p class="additional-properties">Each additional property must conform to the following schema</p>
+                    {%- else -%}
+                        <p class="additional-properties">Additional Properties of any type are allowed.</p>
+                    {%- endif -%}
+                {%- endif -%}
+
+                {{ content(sub_property) }}
+            </div>
+        </div>
+    </div>
+</div>

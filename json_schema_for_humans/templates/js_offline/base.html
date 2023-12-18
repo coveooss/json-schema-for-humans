@@ -1,0 +1,39 @@
+{% from 'content.html' import content with context %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/overpass300,400,600,800.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link href="css/bootstrap-4.3.1.min.css" rel="stylesheet">
+    <script src="js/bootstrap-4.3.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/schema_doc.css">
+    <!-- <script src="js/facf9fa52c.js"></script> -->
+    <script src="js/schema_doc.min.js"></script>
+    <meta charset="utf-8"/>
+    {%- set title = schema.keywords.get("title") -%}
+    {% if title %}
+        {% set title = title.literal %}
+    {% endif %}
+    <title>{%- if title -%}{{ title }}{%- else -%}Schema Docs{%- endif -%}</title>
+</head>
+<body onload="anchorOnLoad();" id="root">
+    {%- if title -%}
+        <h1>{{ title }}</h1>
+    {%- endif -%}
+    {%- if config.expand_buttons -%}
+        <div class="text-right">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
+        </div>
+    {%- endif -%}
+
+    {{ content(schema) }}
+
+    {% if config.with_footer -%}
+    <footer>
+        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a>{%- if config.footer_show_time %} on {{ get_local_time() }}{%- endif -%}</p>
+    </footer>
+    {%- endif -%}
+</body>
+</html>

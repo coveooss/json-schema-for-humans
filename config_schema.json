@@ -73,11 +73,12 @@
       "enum": [
         "flat",
         "js",
+        "js_offline",
         "md",
         "md_nested"
       ],
       "default": "js",
-      "description": "The name of the built-in template to use to render the documentation.\n\n`js` is the default and uses javascript for anchor links, collapsible sections and tabs. `flat` uses no javascript, but has no interactivity."
+      "description": "The name of the built-in template to use to render the documentation.\n\n`js` is the default and uses javascript for anchor links, collapsible sections and tabs.\n\n`js_offline` is identical to `js` except that all CSS, fonts and JavaScript are bundled for offline use.\n\n`flat` uses no javascript, but has no interactivity.\n\n`md` is the markdown template.\n\n`md_nested` is the markdown template with collapsible nested sections."
     },
     "custom_template_path": {
       "type": "string",

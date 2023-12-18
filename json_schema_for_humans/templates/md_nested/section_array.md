@@ -1,10 +1,21 @@
 {{ schema | md_array_restrictions | md_generate_table }}
 
-{% if schema.kw_items %}
+{% if schema.array_items_def or schema.tuple_validation_items %}
 {{ schema | md_array_items_restrictions | md_generate_table }}
+{% endif %}
 
-{% for item in schema.kw_items %}
-    {% filter md_heading(depth+1, item.html_id) %}
+{% if schema.array_items_def %}
+{% filter md_heading(depth+1) %}
+{% with schema=schema.array_items_def %}{%- include "breadcrumbs.md" %}{% endwith %}
+{% endfilter %}
+{% with schema=schema.array_items_def, skip_headers=False, depth=depth+1, skip_required=True %}
+    {% include "content.md" %}
+{% endwith %}
+{% endif %}
+
+{% if schema.tuple_validation_items %}
+{% for item in schema.tuple_validation_items %}
+    {% filter md_heading(depth+1) %}
     {% with schema=item %}{%- include "breadcrumbs.md" %}{% endwith %}
     {% endfilter %}
     {% with schema=item, skip_headers=False, depth=depth+1, skip_required=True %}
@@ -16,6 +27,13 @@
 {% if schema.kw_contains and schema.kw_contains.literal != {} %}
 {{ "At least one of the items must be" | md_heading(depth+1) }}
 {% with schema=schema.kw_contains, skip_headers=False, depth=depth+1, skip_required=True %}
+    {% include "content.md" %}
+{% endwith %}
+{% endif %}
+
+{% if schema.array_additional_items_def %}
+{{ "Additional items must be" | md_heading(depth+1) }}
+{% with schema=schema.array_additional_items_def, skip_headers=False, depth=depth+1, skip_required=True %}
     {% include "content.md" %}
 {% endwith %}
 {% endif %}
