@@ -328,7 +328,9 @@ class MarkdownTemplate(object):
                 if field == "Property":
                     # property name
                     property_name = "+ " if sub_property.is_required_property else "- "
-                    property_name += self.format_link(escape_for_table(sub_property.property_name), sub_property.html_id)
+                    property_name += self.format_link(
+                        escape_for_table(sub_property.property_name), sub_property.html_id
+                    )
                     line.append(property_name)
                 elif field == "Pattern":
                     # pattern
@@ -336,20 +338,21 @@ class MarkdownTemplate(object):
                 elif field == "Type":
                     # type
                     line.append(
-                        "Combination" if jinja_filters.is_combining(sub_property) else escape_for_table(sub_property.type_name)
+                        "Combination"
+                        if jinja_filters.is_combining(sub_property)
+                        else escape_for_table(sub_property.type_name)
                     )
                 elif field == "Deprecated":
                     # Deprecated
                     line.append(
-                        self.badge("Deprecated", "red") \
-                            if jinja_filters.deprecated(self.config, sub_property) \
-                            else "No"
+                        self.badge("Deprecated", "red") if jinja_filters.deprecated(self.config, sub_property) else "No"
                     )
                 elif field == "Definition":
                     # Link
                     if sub_property.should_be_a_link(self.config):
                         line.append(
-                            "Same as " + self.format_link(sub_property.links_to.link_name, sub_property.links_to.html_id)
+                            "Same as "
+                            + self.format_link(sub_property.links_to.link_name, sub_property.links_to.html_id)
                         )
                     elif sub_property.refers_to:
                         line.append("In " + sub_property.ref_path)

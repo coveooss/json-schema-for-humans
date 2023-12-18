@@ -73,7 +73,7 @@ def test_override_template_md_options() -> None:
             "Type",
             "Deprecated",
             "Definition",
-            "Title/Definition",
+            "Title/Description",
         ],
     }
 
