@@ -45,7 +45,8 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="objectA"></a>1. [Optional] Property root > objectA</strong>  
+<summary>
+<strong> <a name="objectA"></a>1. [Optional] Property root > objectA</strong>  
 
 </summary>
 <blockquote>
@@ -56,7 +57,8 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="objectA_signature"></a>1.1. [Optional] Property root > objectA > signature</strong>  
+<summary>
+<strong> <a name="objectA_signature"></a>1.1. [Optional] Property root > objectA > signature</strong>  
 
 </summary>
 <blockquote>
@@ -87,7 +89,8 @@
 | **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i0_signers"></a>1.1.1.1. [Optional] Property root > objectA > signature > oneOf > item 0 > signers</strong>  
+<summary>
+<strong> <a name="objectA_signature_oneOf_i0_signers"></a>1.1.1.1. [Optional] Property root > objectA > signature > oneOf > item 0 > signers</strong>  
 
 </summary>
 <blockquote>
@@ -121,7 +124,8 @@
 | **Defined in**            | #/definitions/signer                                                                                     |
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i0_signers_items_algorithm"></a>1.1.1.1.1.1. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm</strong>  
+<summary>
+<strong> <a name="objectA_signature_oneOf_i0_signers_items_algorithm"></a>1.1.1.1.1.1. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm</strong>  
 
 </summary>
 <blockquote>
@@ -188,7 +192,8 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i0_signers_items_keyId"></a>1.1.1.1.1.2. [Optional] Property root > objectA > signature > oneOf > item 0 > signers > Signature > keyId</strong>  
+<summary>
+<strong> <a name="objectA_signature_oneOf_i0_signers_items_keyId"></a>1.1.1.1.1.2. [Optional] Property root > objectA > signature > oneOf > item 0 > signers > Signature > keyId</strong>  
 
 </summary>
 <blockquote>
@@ -205,7 +210,8 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey"></a>1.1.1.1.1.3. [Optional] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey</strong>  
+<summary>
+<strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey"></a>1.1.1.1.1.3. [Optional] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey</strong>  
 
 </summary>
 <blockquote>
@@ -245,7 +251,8 @@ Must be one of:
 | **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty"></a>1.1.1.1.1.3.1.1.1. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0 > then > kty</strong>  
+<summary>
+<strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty"></a>1.1.1.1.1.3.1.1.1. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0 > then > kty</strong>  
 
 </summary>
 <blockquote>
@@ -261,7 +268,8 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_crv"></a>1.1.1.1.1.3.1.1.2. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0 > then > crv</strong>  
+<summary>
+<strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_crv"></a>1.1.1.1.1.3.1.1.2. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0 > then > crv</strong>  
 
 </summary>
 <blockquote>
@@ -283,7 +291,8 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_x"></a>1.1.1.1.1.3.1.1.3. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0 > then > x</strong>  
+<summary>
+<strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_x"></a>1.1.1.1.1.3.1.1.3. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0 > then > x</strong>  
 
 </summary>
 <blockquote>
@@ -300,7 +309,8 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_y"></a>1.1.1.1.1.3.1.1.4. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0 > then > y</strong>  
+<summary>
+<strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_y"></a>1.1.1.1.1.3.1.1.4. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0 > then > y</strong>  
 
 </summary>
 <blockquote>
@@ -334,7 +344,8 @@ Must be one of:
 | **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty"></a>1.1.1.1.1.3.2.1.1. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1 > then > kty</strong>  
+<summary>
+<strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty"></a>1.1.1.1.1.3.2.1.1. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1 > then > kty</strong>  
 
 </summary>
 <blockquote>
@@ -350,7 +361,8 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_crv"></a>1.1.1.1.1.3.2.1.2. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1 > then > crv</strong>  
+<summary>
+<strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_crv"></a>1.1.1.1.1.3.2.1.2. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1 > then > crv</strong>  
 
 </summary>
 <blockquote>
@@ -371,7 +383,8 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_x"></a>1.1.1.1.1.3.2.1.3. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1 > then > x</strong>  
+<summary>
+<strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_x"></a>1.1.1.1.1.3.2.1.3. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1 > then > x</strong>  
 
 </summary>
 <blockquote>
@@ -405,7 +418,8 @@ Must be one of:
 | **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty"></a>1.1.1.1.1.3.3.1.1. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2 > then > kty</strong>  
+<summary>
+<strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty"></a>1.1.1.1.1.3.3.1.1. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2 > then > kty</strong>  
 
 </summary>
 <blockquote>
@@ -421,7 +435,8 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_n"></a>1.1.1.1.1.3.3.1.2. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2 > then > n</strong>  
+<summary>
+<strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_n"></a>1.1.1.1.1.3.3.1.2. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2 > then > n</strong>  
 
 </summary>
 <blockquote>
@@ -438,7 +453,8 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_e"></a>1.1.1.1.1.3.3.1.3. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2 > then > e</strong>  
+<summary>
+<strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_e"></a>1.1.1.1.1.3.3.1.3. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2 > then > e</strong>  
 
 </summary>
 <blockquote>
@@ -459,7 +475,8 @@ Must be one of:
 </blockquote>
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_kty"></a>1.1.1.1.1.3.4. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > kty</strong>  
+<summary>
+<strong> <a name="objectA_signature_oneOf_i0_signers_items_publicKey_kty"></a>1.1.1.1.1.3.4. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > kty</strong>  
 
 </summary>
 <blockquote>
@@ -483,7 +500,8 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i0_signers_items_certificatePath"></a>1.1.1.1.1.4. [Optional] Property root > objectA > signature > oneOf > item 0 > signers > Signature > certificatePath</strong>  
+<summary>
+<strong> <a name="objectA_signature_oneOf_i0_signers_items_certificatePath"></a>1.1.1.1.1.4. [Optional] Property root > objectA > signature > oneOf > item 0 > signers > Signature > certificatePath</strong>  
 
 </summary>
 <blockquote>
@@ -518,7 +536,8 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i0_signers_items_excludes"></a>1.1.1.1.1.5. [Optional] Property root > objectA > signature > oneOf > item 0 > signers > Signature > excludes</strong>  
+<summary>
+<strong> <a name="objectA_signature_oneOf_i0_signers_items_excludes"></a>1.1.1.1.1.5. [Optional] Property root > objectA > signature > oneOf > item 0 > signers > Signature > excludes</strong>  
 
 </summary>
 <blockquote>
@@ -553,7 +572,8 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i0_signers_items_value"></a>1.1.1.1.1.6. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > value</strong>  
+<summary>
+<strong> <a name="objectA_signature_oneOf_i0_signers_items_value"></a>1.1.1.1.1.6. [Required] Property root > objectA > signature > oneOf > item 0 > signers > Signature > value</strong>  
 
 </summary>
 <blockquote>
@@ -583,7 +603,8 @@ Must be one of:
 | **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
 
 <details>
-<summary><strong> <a name="objectA_signature_oneOf_i1_chain"></a>1.1.2.1. [Optional] Property root > objectA > signature > oneOf > item 1 > chain</strong>  
+<summary>
+<strong> <a name="objectA_signature_oneOf_i1_chain"></a>1.1.2.1. [Optional] Property root > objectA > signature > oneOf > item 1 > chain</strong>  
 
 </summary>
 <blockquote>
@@ -645,7 +666,8 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="objectB"></a>2. [Optional] Property root > objectB</strong>  
+<summary>
+<strong> <a name="objectB"></a>2. [Optional] Property root > objectB</strong>  
 
 </summary>
 <blockquote>
@@ -656,7 +678,8 @@ Must be one of:
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="objectB_signature"></a>2.1. [Optional] Property root > objectB > signature</strong>  
+<summary>
+<strong> <a name="objectB_signature"></a>2.1. [Optional] Property root > objectB > signature</strong>  
 
 </summary>
 <blockquote>

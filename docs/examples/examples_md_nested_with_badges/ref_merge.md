@@ -13,7 +13,8 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="aProperty"></a>1. [Optional] Property Test > aProperty</strong>  
+<summary>
+<strong> <a name="aProperty"></a>1. [Optional] Property Test > aProperty</strong>  
 
 </summary>
 <blockquote>
@@ -34,7 +35,8 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="aDictPropertyARequired"></a>2. [Optional] Property Test > aDictPropertyARequired</strong>  
+<summary>
+<strong> <a name="aDictPropertyARequired"></a>2. [Optional] Property Test > aDictPropertyARequired</strong>  
 
 </summary>
 <blockquote>
@@ -47,7 +49,8 @@ Must be one of:
 | **Defined in**            | #/definitions/aDictProperty                                                                                                       |
 
 <details>
-<summary><strong> <a name="aDictPropertyARequired_a"></a>2.1. [Required] Property Test > aDictPropertyARequired > a</strong>  
+<summary>
+<strong> <a name="aDictPropertyARequired_a"></a>2.1. [Required] Property Test > aDictPropertyARequired > a</strong>  
 
 </summary>
 <blockquote>
@@ -60,7 +63,8 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="aDictPropertyARequired_b"></a>2.2. [Required] Property Test > aDictPropertyARequired > b</strong>  
+<summary>
+<strong> <a name="aDictPropertyARequired_b"></a>2.2. [Required] Property Test > aDictPropertyARequired > b</strong>  
 
 </summary>
 <blockquote>

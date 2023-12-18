@@ -14,7 +14,8 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="group1"></a>1. [Optional] Property Undocumented Required Properties order > group1</strong>  
+<summary>
+<strong> <a name="group1"></a>1. [Optional] Property Undocumented Required Properties order > group1</strong>  
 
 </summary>
 <blockquote>
@@ -33,7 +34,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="group2"></a>2. [Optional] Property Undocumented Required Properties order > group2</strong>  
+<summary>
+<strong> <a name="group2"></a>2. [Optional] Property Undocumented Required Properties order > group2</strong>  
 
 </summary>
 <blockquote>

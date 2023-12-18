@@ -11,7 +11,8 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="enumOfNone"></a>1. [Optional] Property Enum of None > enumOfNone</strong>  
+<summary>
+<strong> <a name="enumOfNone"></a>1. [Optional] Property Enum of None > enumOfNone</strong>  
 
 </summary>
 <blockquote>

@@ -15,7 +15,8 @@
 **Description:** A schema with an array
 
 <details>
-<summary><strong> <a name="fruits"></a>1. [Optional] Property root > fruits</strong>  
+<summary>
+<strong> <a name="fruits"></a>1. [Optional] Property root > fruits</strong>  
 
 </summary>
 <blockquote>
@@ -46,7 +47,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="vegetables"></a>2. [Optional] Property root > vegetables</strong>  
+<summary>
+<strong> <a name="vegetables"></a>2. [Optional] Property root > vegetables</strong>  
 
 </summary>
 <blockquote>
@@ -76,7 +78,8 @@
 | **Defined in**            | #/definitions/veggie                                                                                                              |
 
 <details>
-<summary><strong> <a name="vegetables_items_veggieName"></a>2.1.1. [Required] Property root > vegetables > vegetables items > veggieName</strong>  
+<summary>
+<strong> <a name="vegetables_items_veggieName"></a>2.1.1. [Required] Property root > vegetables > vegetables items > veggieName</strong>  
 
 </summary>
 <blockquote>
@@ -91,7 +94,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="vegetables_items_veggieLike"></a>2.1.2. [Required] Property root > vegetables > vegetables items > veggieLike</strong>  
+<summary>
+<strong> <a name="vegetables_items_veggieLike"></a>2.1.2. [Required] Property root > vegetables > vegetables items > veggieLike</strong>  
 
 </summary>
 <blockquote>

@@ -29,7 +29,8 @@
 **Description:** Testing $ref
 
 <details>
-<summary><strong> <a name="a_gift"></a>1. [Optional] Property root > a_gift</strong>  
+<summary>
+<strong> <a name="a_gift"></a>1. [Optional] Property root > a_gift</strong>  
 
 </summary>
 <blockquote>
@@ -46,7 +47,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="file_prefix"></a>2. [Optional] Property root > file_prefix</strong>  
+<summary>
+<strong> <a name="file_prefix"></a>2. [Optional] Property root > file_prefix</strong>  
 
 </summary>
 <blockquote>
@@ -63,7 +65,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="anchor_with_slash"></a>3. [Optional] Property root > anchor_with_slash</strong>  
+<summary>
+<strong> <a name="anchor_with_slash"></a>3. [Optional] Property root > anchor_with_slash</strong>  
 
 </summary>
 <blockquote>
@@ -76,7 +79,8 @@
 | **Defined in**            | #/definitions/object_def                                |
 
 <details>
-<summary><strong> <a name="anchor_with_slash_propertyA"></a>3.1. [Optional] Property root > anchor_with_slash > propertyA</strong>  
+<summary>
+<strong> <a name="anchor_with_slash_propertyA"></a>3.1. [Optional] Property root > anchor_with_slash > propertyA</strong>  
 
 </summary>
 <blockquote>
@@ -95,7 +99,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="anchor_no_slash"></a>4. [Optional] Property root > anchor_no_slash</strong>  
+<summary>
+<strong> <a name="anchor_no_slash"></a>4. [Optional] Property root > anchor_no_slash</strong>  
 
 </summary>
 <blockquote>
@@ -131,7 +136,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="anchor_nested_reference"></a>5. [Optional] Property root > anchor_nested_reference</strong>  
+<summary>
+<strong> <a name="anchor_nested_reference"></a>5. [Optional] Property root > anchor_nested_reference</strong>  
 
 </summary>
 <blockquote>
@@ -146,7 +152,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="same_file_anchor_with_slash"></a>6. [Optional] Property root > same_file_anchor_with_slash</strong>  
+<summary>
+<strong> <a name="same_file_anchor_with_slash"></a>6. [Optional] Property root > same_file_anchor_with_slash</strong>  
 
 </summary>
 <blockquote>
@@ -163,7 +170,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="same_file_anchor_no_slash"></a>7. [Optional] Property root > same_file_anchor_no_slash</strong>  
+<summary>
+<strong> <a name="same_file_anchor_no_slash"></a>7. [Optional] Property root > same_file_anchor_no_slash</strong>  
 
 </summary>
 <blockquote>
@@ -179,7 +187,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="same_file_nested_reference"></a>8. [Optional] Property root > same_file_nested_reference</strong>  
+<summary>
+<strong> <a name="same_file_nested_reference"></a>8. [Optional] Property root > same_file_nested_reference</strong>  
 
 </summary>
 <blockquote>
@@ -194,7 +203,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="other_file_anchor"></a>9. [Optional] Property root > other_file_anchor</strong>  
+<summary>
+<strong> <a name="other_file_anchor"></a>9. [Optional] Property root > other_file_anchor</strong>  
 
 </summary>
 <blockquote>
@@ -209,7 +219,8 @@
 **Description:** The delivery is a gift, no prices displayed
 
 <details>
-<summary><strong> <a name="other_file_anchor_with_wrap"></a>9.1. [Optional] Property root > other_file_anchor > with_wrap</strong>  
+<summary>
+<strong> <a name="other_file_anchor_with_wrap"></a>9.1. [Optional] Property root > other_file_anchor > with_wrap</strong>  
 
 </summary>
 <blockquote>
@@ -226,7 +237,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="other_file_dot_anchor"></a>10. [Optional] Property root > other_file_dot_anchor</strong>  
+<summary>
+<strong> <a name="other_file_dot_anchor"></a>10. [Optional] Property root > other_file_dot_anchor</strong>  
 
 </summary>
 <blockquote>
@@ -244,7 +256,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="other_file_dot_dot_anchor"></a>11. [Optional] Property root > other_file_dot_dot_anchor</strong>  
+<summary>
+<strong> <a name="other_file_dot_dot_anchor"></a>11. [Optional] Property root > other_file_dot_dot_anchor</strong>  
 
 </summary>
 <blockquote>
@@ -262,7 +275,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="other_file_only"></a>12. [Optional] Property root > other_file_only</strong>  
+<summary>
+<strong> <a name="other_file_only"></a>12. [Optional] Property root > other_file_only</strong>  
 
 </summary>
 <blockquote>
@@ -277,7 +291,8 @@
 **Description:** Test schema with a not
 
 <details>
-<summary><strong> <a name="other_file_only_not_a_string"></a>12.1. [Required] Property root > other_file_only > not_a_string</strong>  
+<summary>
+<strong> <a name="other_file_only_not_a_string"></a>12.1. [Required] Property root > other_file_only > not_a_string</strong>  
 
 </summary>
 <blockquote>
@@ -302,7 +317,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="multi_hierarchy_reference"></a>13. [Optional] Property root > multi_hierarchy_reference</strong>  
+<summary>
+<strong> <a name="multi_hierarchy_reference"></a>13. [Optional] Property root > multi_hierarchy_reference</strong>  
 
 </summary>
 <blockquote>
@@ -315,7 +331,8 @@
 | **Defined in**            | reference_schemas/intermediate.json#/properties/cross_file_reference      |
 
 <details>
-<summary><strong> <a name="multi_hierarchy_reference_propertyA"></a>13.1. [Optional] Property root > multi_hierarchy_reference > propertyA</strong>  
+<summary>
+<strong> <a name="multi_hierarchy_reference_propertyA"></a>13.1. [Optional] Property root > multi_hierarchy_reference > propertyA</strong>  
 
 </summary>
 <blockquote>

@@ -10,7 +10,8 @@
 | **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
 
 <details>
-<summary><strong> <a name="outer"></a>1. [Required] Property root > outer</strong>  
+<summary>
+<strong> <a name="outer"></a>1. [Required] Property root > outer</strong>  
 
 </summary>
 <blockquote>
@@ -24,7 +25,8 @@
 **Description:** We should see this
 
 <details>
-<summary><strong> <a name="outer_inner"></a>1.1. [Required] Property root > outer > inner</strong>  
+<summary>
+<strong> <a name="outer_inner"></a>1.1. [Required] Property root > outer > inner</strong>  
 
 </summary>
 <blockquote>
@@ -42,7 +44,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="outer2"></a>2. [Optional] Property root > outer2</strong>  
+<summary>
+<strong> <a name="outer2"></a>2. [Optional] Property root > outer2</strong>  
 
 </summary>
 <blockquote>

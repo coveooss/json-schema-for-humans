@@ -16,7 +16,8 @@
 | **Additional properties** | [![Should-conform](https://img.shields.io/badge/Should-conform-blue)](#additionalProperties "Each additional property must conform to the following schema") |
 
 <details>
-<summary><strong> <a name="subType1"></a>1. [Optional] Property Person > subType1</strong>  
+<summary>
+<strong> <a name="subType1"></a>1. [Optional] Property Person > subType1</strong>  
 
 </summary>
 <blockquote>
@@ -29,7 +30,8 @@
 **Description:** A sub type with additionalProperties false.
 
 <details>
-<summary><strong> <a name="subType1_subProp1"></a>1.1. [Optional] Property Person > subType1 > subProp1</strong>  
+<summary>
+<strong> <a name="subType1_subProp1"></a>1.1. [Optional] Property Person > subType1 > subProp1</strong>  
 
 </summary>
 <blockquote>
@@ -45,7 +47,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="subType2"></a>2. [Optional] Property Person > subType2</strong>  
+<summary>
+<strong> <a name="subType2"></a>2. [Optional] Property Person > subType2</strong>  
 
 </summary>
 <blockquote>
@@ -58,7 +61,8 @@
 **Description:** A sub type with additionalProperties true.
 
 <details>
-<summary><strong> <a name="subType2_subProp2"></a>2.1. [Optional] Property Person > subType2 > subProp2</strong>  
+<summary>
+<strong> <a name="subType2_subProp2"></a>2.1. [Optional] Property Person > subType2 > subProp2</strong>  
 
 </summary>
 <blockquote>
@@ -74,7 +78,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="anInt"></a>3. [Optional] Property Person > anInt</strong>  
+<summary>
+<strong> <a name="anInt"></a>3. [Optional] Property Person > anInt</strong>  
 
 </summary>
 <blockquote>
@@ -89,7 +94,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="additionalProperties"></a>4. Property Person > additionalProperties</strong>  
+<summary>
+<strong> <a name="additionalProperties"></a>4. Property Person > additionalProperties</strong>  
 
 </summary>
 <blockquote>
@@ -102,7 +108,8 @@
 **Description:** additionalProperties schema.
 
 <details>
-<summary><strong> <a name="additionalProperties_propA"></a>4.1. [Optional] Property Person > additionalProperties > propA</strong>  
+<summary>
+<strong> <a name="additionalProperties_propA"></a>4.1. [Optional] Property Person > additionalProperties > propA</strong>  
 
 </summary>
 <blockquote>

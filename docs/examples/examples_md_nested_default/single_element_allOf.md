@@ -14,7 +14,8 @@
 **Description:** Schema containing a single-element allOf
 
 <details>
-<summary><strong> <a name="prop1"></a>1. [Optional] Property Schema containing a single-element allOf > prop1</strong>  
+<summary>
+<strong> <a name="prop1"></a>1. [Optional] Property Schema containing a single-element allOf > prop1</strong>  
 
 </summary>
 <blockquote>
@@ -32,7 +33,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="prop2"></a>2. [Optional] Property Schema containing a single-element allOf > prop2</strong>  
+<summary>
+<strong> <a name="prop2"></a>2. [Optional] Property Schema containing a single-element allOf > prop2</strong>  
 
 </summary>
 <blockquote>

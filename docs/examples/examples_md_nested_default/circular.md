@@ -12,7 +12,8 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="person"></a>1. [Optional] Property Circular reference Schema > person</strong>  
+<summary>
+<strong> <a name="person"></a>1. [Optional] Property Circular reference Schema > person</strong>  
 
 </summary>
 <blockquote>
@@ -25,7 +26,8 @@
 | **Defined in**            | #/definitions/a                                                           |
 
 <details>
-<summary><strong> <a name="person_a1"></a>1.1. [Optional] Property Circular reference Schema > person > a1</strong>  
+<summary>
+<strong> <a name="person_a1"></a>1.1. [Optional] Property Circular reference Schema > person > a1</strong>  
 
 </summary>
 <blockquote>

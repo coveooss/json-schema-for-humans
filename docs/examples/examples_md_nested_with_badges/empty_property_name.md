@@ -10,7 +10,8 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="root"></a>1. Property Empty property name ></strong>  
+<summary>
+<strong> <a name="root"></a>1. Property Empty property name ></strong>  
 
 </summary>
 <blockquote>

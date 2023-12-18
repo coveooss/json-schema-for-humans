@@ -19,7 +19,8 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="shipping_address"></a>1. [Optional] Property Delivery Schema > shipping_address</strong>  
+<summary>
+<strong> <a name="shipping_address"></a>1. [Optional] Property Delivery Schema > shipping_address</strong>  
 
 </summary>
 <blockquote>
@@ -33,7 +34,8 @@
 **Description:** Exact address
 
 <details>
-<summary><strong> <a name="shipping_address_street_address"></a>1.1. [Required] Property Delivery Schema > shipping_address > street_address</strong>  
+<summary>
+<strong> <a name="shipping_address_street_address"></a>1.1. [Required] Property Delivery Schema > shipping_address > street_address</strong>  
 
 </summary>
 <blockquote>
@@ -46,7 +48,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="shipping_address_city"></a>1.2. [Required] Property Delivery Schema > shipping_address > city</strong>  
+<summary>
+<strong> <a name="shipping_address_city"></a>1.2. [Required] Property Delivery Schema > shipping_address > city</strong>  
 
 </summary>
 <blockquote>
@@ -59,7 +62,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="shipping_address_state"></a>1.3. [Required] Property Delivery Schema > shipping_address > state</strong>  
+<summary>
+<strong> <a name="shipping_address_state"></a>1.3. [Required] Property Delivery Schema > shipping_address > state</strong>  
 
 </summary>
 <blockquote>
@@ -75,7 +79,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="billing_address"></a>2. [Optional] Property Delivery Schema > billing_address</strong>  
+<summary>
+<strong> <a name="billing_address"></a>2. [Optional] Property Delivery Schema > billing_address</strong>  
 
 </summary>
 <blockquote>
@@ -92,7 +97,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="delivery_info"></a>3. [Optional] Property Delivery Schema > delivery_info</strong>  
+<summary>
+<strong> <a name="delivery_info"></a>3. [Optional] Property Delivery Schema > delivery_info</strong>  
 
 </summary>
 <blockquote>
@@ -123,7 +129,8 @@
 | **Defined in**            | #/definitions/classic                                                                                                             |
 
 <details>
-<summary><strong> <a name="delivery_info_oneOf_i0_price"></a>3.1.1. [Optional] Property Delivery Schema > delivery_info > oneOf > item 0 > price</strong>  
+<summary>
+<strong> <a name="delivery_info_oneOf_i0_price"></a>3.1.1. [Optional] Property Delivery Schema > delivery_info > oneOf > item 0 > price</strong>  
 
 </summary>
 <blockquote>
@@ -149,7 +156,8 @@
 **Description:** The delivery is a gift, no prices displayed
 
 <details>
-<summary><strong> <a name="delivery_info_oneOf_i1_with_wrap"></a>3.2.1. [Optional] Property Delivery Schema > delivery_info > oneOf > item 1 > with_wrap</strong>  
+<summary>
+<strong> <a name="delivery_info_oneOf_i1_with_wrap"></a>3.2.1. [Optional] Property Delivery Schema > delivery_info > oneOf > item 1 > with_wrap</strong>  
 
 </summary>
 <blockquote>

@@ -12,7 +12,8 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="prop1"></a>1. [Optional] Property Person > prop1</strong>  
+<summary>
+<strong> <a name="prop1"></a>1. [Optional] Property Person > prop1</strong>  
 
 </summary>
 <blockquote>
@@ -23,7 +24,8 @@
 | **Required** | No               |
 
 <details>
-<summary><strong> <a name="prop1_lol"></a>1.1. [Optional] Property Person > prop1 > lol</strong>  
+<summary>
+<strong> <a name="prop1_lol"></a>1.1. [Optional] Property Person > prop1 > lol</strong>  
 
 </summary>
 <blockquote>

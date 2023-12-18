@@ -14,7 +14,8 @@
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="favorite_os"></a>1. [Optional] Property User Preference > favorite_os</strong>  
+<summary>
+<strong> <a name="favorite_os"></a>1. [Optional] Property User Preference > favorite_os</strong>  
 
 </summary>
 <blockquote>
@@ -34,7 +35,8 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="favorite_colors"></a>2. [Optional] Property User Preference > favorite_colors</strong>  
+<summary>
+<strong> <a name="favorite_colors"></a>2. [Optional] Property User Preference > favorite_colors</strong>  
 
 </summary>
 <blockquote>
@@ -76,7 +78,8 @@ Must be one of:
 </details>
 
 <details>
-<summary><strong> <a name="desired_number_of_shoes"></a>3. [Optional] Property User Preference > desired_number_of_shoes</strong>  
+<summary>
+<strong> <a name="desired_number_of_shoes"></a>3. [Optional] Property User Preference > desired_number_of_shoes</strong>  
 
 </summary>
 <blockquote>

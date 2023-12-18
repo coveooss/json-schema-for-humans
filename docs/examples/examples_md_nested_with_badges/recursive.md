@@ -12,7 +12,8 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="person"></a>1. [Optional] Property Person > person</strong>  
+<summary>
+<strong> <a name="person"></a>1. [Optional] Property Person > person</strong>  
 
 </summary>
 <blockquote>
@@ -26,7 +27,8 @@
 **Description:** A human being
 
 <details>
-<summary><strong> <a name="person_children"></a>1.1. [Optional] Property Person > person > children</strong>  
+<summary>
+<strong> <a name="person_children"></a>1.1. [Optional] Property Person > person > children</strong>  
 
 </summary>
 <blockquote>

@@ -18,7 +18,8 @@
 **Description:** Display the issue.
 
 <details>
-<summary><strong> <a name="Code"></a>1. [Optional] Property Bug > Code</strong>  
+<summary>
+<strong> <a name="Code"></a>1. [Optional] Property Bug > Code</strong>  
 
 </summary>
 <blockquote>
@@ -33,7 +34,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="RecursiveArray"></a>2. [Optional] Property Bug > RecursiveArray</strong>  
+<summary>
+<strong> <a name="RecursiveArray"></a>2. [Optional] Property Bug > RecursiveArray</strong>  
 
 </summary>
 <blockquote>
@@ -70,7 +72,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="DecoratedRecursiveArray"></a>3. [Optional] Property Bug > DecoratedRecursiveArray</strong>  
+<summary>
+<strong> <a name="DecoratedRecursiveArray"></a>3. [Optional] Property Bug > DecoratedRecursiveArray</strong>  
 
 </summary>
 <blockquote>
@@ -101,7 +104,8 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="DecoratedRecursiveArray_items_SomeName"></a>3.1.1. [Optional] Property Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > SomeName</strong>  
+<summary>
+<strong> <a name="DecoratedRecursiveArray_items_SomeName"></a>3.1.1. [Optional] Property Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > SomeName</strong>  
 
 </summary>
 <blockquote>
@@ -114,7 +118,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="DecoratedRecursiveArray_items_TheThing"></a>3.1.2. [Optional] Property Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > TheThing</strong>  
+<summary>
+<strong> <a name="DecoratedRecursiveArray_items_TheThing"></a>3.1.2. [Optional] Property Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > TheThing</strong>  
 
 </summary>
 <blockquote>

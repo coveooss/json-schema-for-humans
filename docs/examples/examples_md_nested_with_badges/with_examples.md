@@ -13,7 +13,8 @@
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
 <details>
-<summary><strong> <a name="firstName"></a>1. [Optional] Property Person > firstName</strong>  
+<summary>
+<strong> <a name="firstName"></a>1. [Optional] Property Person > firstName</strong>  
 
 </summary>
 <blockquote>
@@ -39,7 +40,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="lastName"></a>2. [Optional] Property Person > lastName</strong>  
+<summary>
+<strong> <a name="lastName"></a>2. [Optional] Property Person > lastName</strong>  
 
 </summary>
 <blockquote>
@@ -62,7 +64,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="age"></a>3. [Optional] Property Person > age</strong>  
+<summary>
+<strong> <a name="age"></a>3. [Optional] Property Person > age</strong>  
 
 </summary>
 <blockquote>
@@ -89,7 +92,8 @@
 </details>
 
 <details>
-<summary><strong> <a name="moreInfo"></a>4. [Optional] Property Person > moreInfo</strong>  
+<summary>
+<strong> <a name="moreInfo"></a>4. [Optional] Property Person > moreInfo</strong>  
 
 </summary>
 <blockquote>

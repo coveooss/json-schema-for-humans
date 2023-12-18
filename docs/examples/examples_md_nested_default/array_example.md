@@ -12,7 +12,8 @@
 **Description:** A schema with an array
 
 <details>
-<summary><strong> <a name="fruits"></a>1. [Optional] Property root > fruits</strong>  
+<summary>
+<strong> <a name="fruits"></a>1. [Optional] Property root > fruits</strong>  
 
 </summary>
 <blockquote>
