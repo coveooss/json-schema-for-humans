@@ -19,6 +19,15 @@ from json_schema_for_humans.const import (
     OFFLINE_JS_FILE_NAMES,
 )
 
+DEFAULT_PROPERTIES_TABLE_COLUMNS = [
+    "Property",
+    "Pattern",
+    "Type",
+    "Deprecated",
+    "Definition",
+    "Title/Description",
+]
+
 
 @dataclass_json
 @dataclass
@@ -62,6 +71,7 @@ class GenerationConfiguration:
             "badge_as_image": False,
             "show_heading_numbers": True,
             "show_array_restrictions": True,
+            "properties_table_columns": DEFAULT_PROPERTIES_TABLE_COLUMNS,
         }
         default_template_md_options.update(self.template_md_options or {})
         self.template_md_options = default_template_md_options
