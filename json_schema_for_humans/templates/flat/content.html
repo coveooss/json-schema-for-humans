@@ -61,7 +61,14 @@
             <h4>Must be one of:</h4>
             <ul class="list-group">
             {%- for enum_choice in schema.kw_enum.array_items -%}
-                <li class="list-group-item enum-item">{{ enum_choice.literal | python_to_json }}</li>
+                <li class="list-group-item enum-item">
+                    {%- if schema.kw_meta_enum -%}<strong>{%- endif -%}
+                    {{ enum_choice.literal | python_to_json }}
+                    {%- if schema.kw_meta_enum -%}</strong>{%- endif -%}
+                    {%- if schema.kw_meta_enum -%}
+                        : {{ schema.enum_description(enum_choice.literal) }}
+                    {%- endif -%}
+                </li>
             {%- endfor -%}
             </ul>
             </div>
