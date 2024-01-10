@@ -17,6 +17,7 @@ class SchemaKeyword(Enum):
     PATTERN = "pattern"
     CONST = "const"
     ENUM = "enum"
+    META_ENUM = "meta:enum"
     ELSE = "else"
     THEN = "then"
     IF = "if"

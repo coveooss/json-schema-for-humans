@@ -346,6 +346,10 @@ class SchemaNode:
         return self.get_keyword(SchemaKeyword.ENUM)
 
     @property
+    def kw_meta_enum(self) -> Optional["SchemaNode"]:
+        return self.get_keyword(SchemaKeyword.META_ENUM)
+
+    @property
     def kw_const(self) -> Optional["SchemaNode"]:
         return self.get_keyword(SchemaKeyword.CONST)
 
@@ -464,6 +468,15 @@ class SchemaNode:
         if self.kw_type.array_items:
             return any(node.literal == const.TYPE_OBJECT for node in self.kw_type.array_items)
         return False
+
+    def enum_description(self, value: str) -> Optional["SchemaNode"]:
+        meta_enum_node = self.get_keyword(SchemaKeyword.META_ENUM)
+        if not meta_enum_node:
+            return None
+        description = meta_enum_node.raw.get(value)
+        if not description:
+            return None
+        return description
 
     @property
     def raw(self) -> Optional[Union[int, bool, str, List, Dict]]:

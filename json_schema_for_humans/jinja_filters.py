@@ -89,6 +89,12 @@ def python_to_json(value: Any) -> Any:
 def get_description(env: Environment, schema_node: SchemaNode) -> str:
     """Filter. Get the description of a property or an empty string"""
     description = schema_node.description
+    return get_description_literal(env, description)
+
+
+@pass_environment
+def get_description_literal(env: Environment, description: str) -> str:
+    """Filter. Get the description of a property or an empty string"""
 
     config: GenerationConfiguration = env.globals["jsfh_config"]
     if config.default_from_description:
