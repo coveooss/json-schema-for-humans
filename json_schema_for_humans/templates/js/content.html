@@ -72,9 +72,8 @@
                 <li class="list-group-item enum-item">
                     {%- if schema.kw_meta_enum -%}<strong>{%- endif -%}
                     {{ enum_choice.literal | python_to_json }}
-                    {%- if schema.kw_meta_enum -%}</strong>{%- endif -%}
-                    {%- if schema.kw_meta_enum -%}
-                        : {{ schema.enum_description(enum_choice.literal) }}
+                    {%- if schema.kw_meta_enum -%}</strong>
+                        : {{ (schema.enum_description(enum_choice.literal) | get_description_literal) }}
                     {%- endif -%}
                 </li>
             {%- endfor -%}
