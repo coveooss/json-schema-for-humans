@@ -482,7 +482,7 @@ def _build_node(
         for schema_key, schema_value in schema.items():
             # These won't be needed to render the documentation.
             # The definitions will be reached from references, otherwise they are useless
-            if schema_key in ["$id", "$ref", "$schema", "definitions"]:
+            if schema_key in ["$id", "$ref", "$schema", "definitions", "$defs"]:
                 continue
 
             # Examples are rendered in JSON because they will be represented that way in the documentation,
