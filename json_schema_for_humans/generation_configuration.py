@@ -60,10 +60,14 @@ class GenerationConfiguration:
 
     def __post_init__(self) -> None:
         default_markdown_options = {
-            "break-on-newline": True,
             "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
             "tables": None,
         }
+        if 'breaks' not in self.markdown_options:
+            default_markdown_options['breaks'] = {
+                'on_newline': True,
+                'on_backslash': True,
+            }
         default_markdown_options.update(self.markdown_options or {})
         self.markdown_options = default_markdown_options
 
