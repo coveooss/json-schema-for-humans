@@ -47,6 +47,7 @@ class TemplateRenderer:
         )
         env.filters["get_type_name"] = templating_utils.get_type_name
         env.filters["get_description"] = jinja_filters.get_description
+        env.filters["get_description_literal"] = jinja_filters.get_description_literal
         env.filters["get_numeric_restrictions_text"] = jinja_filters.get_numeric_restrictions_text
 
         env.filters["get_required_properties"] = jinja_filters.get_required_properties
