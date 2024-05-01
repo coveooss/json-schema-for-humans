@@ -1,7 +1,6 @@
-import binascii
 import copy
 import string
-from typing import Any, Dict, Iterable, Iterator, List, Optional, Set, Union, cast, Final
+from typing import Any, Dict, Iterable, Iterator, List, Optional, Set, Union, cast
 
 from json_schema_for_humans import const
 from json_schema_for_humans.schema.schema_keyword import SchemaKeyword
@@ -11,7 +10,7 @@ from json_schema_for_humans.generation_configuration import GenerationConfigurat
 circular_references: Dict["SchemaNode", bool] = {}
 
 
-ALLOWED_ID_CHARS: Final = string.ascii_letters + string.digits + "_" + "-"
+ALLOWED_ID_CHARS = string.ascii_letters + string.digits + "_" + "-"
 ALLOWED_KEYWORDS_WITH_REF = [SchemaKeyword.DESCRIPTION.value]
 
 
