@@ -12,7 +12,7 @@ def _get_schema_paths(schema_file_or_dir: Union[str, Path]) -> List[Path]:
     if isinstance(schema_file_or_dir, str):
         schema_file_or_dir = Path(schema_file_or_dir)
 
-    if schema_file_or_dir.is_file():
+    if schema_file_or_dir.is_file() or (schema_file_or_dir.is_absolute() and not schema_file_or_dir.is_dir()):
         schema_file_paths.append(schema_file_or_dir)
     elif schema_file_or_dir.is_dir():
         for glob_pattern in ["**/*.json", "**/*.yaml", "**/*.yml"]:
