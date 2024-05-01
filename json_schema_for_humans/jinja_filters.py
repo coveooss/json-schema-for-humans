@@ -7,7 +7,7 @@ from typing import List, Any
 
 from jinja2 import pass_environment, Environment
 from markdown2 import Markdown
-from markupsafe import Markup
+from markupsafe import Markup, escape as markupsafe_escape
 from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
 from pygments.lexers.javascript import JavascriptLexer
@@ -105,7 +105,7 @@ def get_description_literal(env: Environment, description: str) -> str:
     if description and config.description_is_markdown and not config.result_extension == "md":
         # Markdown templates are expected to already have Markdown descriptions
         md: Markdown = env.globals["jsfh_md"]
-        description = Markup(md.convert(description))
+        description = Markup(md.convert(markupsafe_escape(description)))
 
     return description
 
