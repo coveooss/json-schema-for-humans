@@ -124,7 +124,7 @@ This should not be necessary in normal scenarios.
 
 ## What's supported
 
-See the excellent [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/index.html) to understand what are those checks
+See the excellent [Understanding JSON Schema](https://json-schema.org/understanding-json-schema) to understand what are those checks
 
 The following are supported:
 - Types

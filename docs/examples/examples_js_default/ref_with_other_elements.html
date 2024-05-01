@@ -13,14 +13,14 @@
     <meta charset="utf-8"/>
         
     
-    <title>Person</title>
+    <title>OF</title>
 </head>
 <body onload="anchorOnLoad();" id="root"><div class="text-right">
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
         </div>
 
-    <div class="breadcrumbs"></div> <h1>Person</h1><span class="badge badge-dark value-type">Type: object</span><br/>
+    <div class="breadcrumbs"></div> <h1>OF</h1><span class="badge badge-dark value-type">Type: object</span><br/>
 
         
 
@@ -28,6 +28,46 @@
         
 
         
+<div class="accordion" id="accordionuuid">
+    <div class="card">
+        <div class="card-header" id="headinguuid">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#uuid"
+                        aria-expanded="" aria-controls="uuid" onclick="setAnchor('#uuid')"><span class="property-name">uuid</span></button>
+            </h2>
+        </div>
+
+        <div id="uuid"
+             class="collapse property-definition-div" aria-labelledby="headinguuid"
+             data-parent="#accordionuuid">
+            <div class="card-body pl-5">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#uuid" onclick="anchorLink('uuid')">uuid</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Unique Identifer</p>
+</span>
+
+    
+        
+
+        
+        <p><span class="badge badge-light restriction min-length-restriction" id="uuid_minLength">Must be at least <code>5</code> characters long</span></p><p><span class="badge badge-light restriction max-length-restriction" id="uuid_maxLength">Must be at most <code>250</code> characters long</span></p>
+
+        <br/>
+<div class="badge badge-secondary">Example:</div>
+<br/><div id="uuid_ex1" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;29292929292929292929292&quot;</span>
+</pre></div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="accordion" id="accordionfirstName">
     <div class="card">
         <div class="card-header" id="headingfirstName">
@@ -49,15 +89,21 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#firstName" onclick="anchorLink('firstName')">firstName</a></div><h4>Person</h4><span class="badge badge-dark value-type">Type: string</span><br/>
-<span class="description"><p>The person&#39;s first name.</p>
+    <a href="#firstName" onclick="anchorLink('firstName')">firstName</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>first name</p>
 </span>
+
+    
         
 
         
-        
+        <p><span class="badge badge-light restriction min-length-restriction" id="firstName_minLength">Must be at least <code>10</code> characters long</span></p><p><span class="badge badge-light restriction max-length-restriction" id="uuid_maxLength">Must be at most <code>250</code> characters long</span></p>
 
-        
+        <br/>
+<div class="badge badge-secondary">Example:</div>
+<br/><div id="uuid_ex1" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;John&quot;</span>
+</pre></div>
+</div>
             </div>
         </div>
     </div>
@@ -83,17 +129,21 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#lastName" onclick="anchorLink('lastName')">lastName</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
-<span class="description"><p>😅 ERROR in schema generation, a referenced schema could not be loaded, no documentation here unfortunately 🏜️</p>
+    <a href="#lastName" onclick="anchorLink('lastName')">lastName</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>last name</p>
 </span>
 
     
         
 
         
-        
+        <p><span class="badge badge-light restriction min-length-restriction" id="uuid_minLength">Must be at least <code>5</code> characters long</span></p><p><span class="badge badge-light restriction max-length-restriction" id="lastName_maxLength">Must be at most <code>10</code> characters long</span></p>
 
-        
+        <br/>
+<div class="badge badge-secondary">Example:</div>
+<br/><div id="uuid_ex1" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;Doe&quot;</span>
+</pre></div>
+</div>
             </div>
         </div>
     </div>

@@ -39,7 +39,7 @@
 | **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Default**               | `"Default from b"`                                                                                                                |
-| **Same definition as**    | [a](#a)                                                                                                                           |
+| **Defined in**            | #/definitions/common                                                                                                              |
 
 **Description:** A common description
 
