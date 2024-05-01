@@ -205,4 +205,4 @@ Contributions are welcomed to improve it!
 
 
 ## Contributing
-[See CONTRIBUTING.md](CONTRIBUTING.md)
+[See CONTRIBUTING.md](https://github.com/coveooss/json-schema-for-humans/blob/main/CONTRIBUTING.md)
