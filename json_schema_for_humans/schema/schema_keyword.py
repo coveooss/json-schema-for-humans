@@ -5,6 +5,7 @@ class SchemaKeyword(Enum):
     REQUIRED = "required"
     TITLE = "title"
     CONTAINS = "contains"
+    DESCRIPTION = "description"
     EXAMPLES = "examples"
     ITEMS = "items"
     PREFIX_ITEMS = "prefixItems"

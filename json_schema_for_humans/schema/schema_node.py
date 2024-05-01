@@ -1,7 +1,7 @@
 import binascii
 import copy
 import string
-from typing import Any, Dict, Iterable, Iterator, List, Optional, Set, Union, cast
+from typing import Any, Dict, Iterable, Iterator, List, Optional, Set, Union, cast, Final
 
 from json_schema_for_humans import const
 from json_schema_for_humans.schema.schema_keyword import SchemaKeyword
@@ -11,7 +11,8 @@ from json_schema_for_humans.generation_configuration import GenerationConfigurat
 circular_references: Dict["SchemaNode", bool] = {}
 
 
-ALLOWED_ID_CHARS = string.ascii_letters + string.digits + "_" + "-"
+ALLOWED_ID_CHARS: Final = string.ascii_letters + string.digits + "_" + "-"
+ALLOWED_KEYWORDS_WITH_REF = [SchemaKeyword.DESCRIPTION.value]
 
 
 class SchemaNode:
@@ -497,6 +498,11 @@ class SchemaNode:
         """
         if not self.links_to or self.is_displayed:
             return False
+
+        # If there are elements next to "$ref", we need to merge them and display, so we can't link
+        # However, we still do not want to display it if it has circular references
+        if self.refers_to and any(k not in ALLOWED_KEYWORDS_WITH_REF for k in self.keywords.keys() or self.array_items):
+            return self.has_circular_reference(config)
 
         if config.link_to_reused_ref:
             return True

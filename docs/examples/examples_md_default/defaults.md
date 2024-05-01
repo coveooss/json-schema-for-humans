@@ -12,7 +12,7 @@
 | Property   | Pattern | Type   | Deprecated | Definition              | Title/Description    |
 | ---------- | ------- | ------ | ---------- | ----------------------- | -------------------- |
 | - [a](#a ) | No      | object | No         | In #/definitions/common | Description of a     |
-| - [b](#b ) | No      | object | No         | Same as [a](#a )        | A common description |
+| - [b](#b ) | No      | object | No         | In #/definitions/common | A common description |
 
 ## <a name="a"></a>1. Property `root > a`
 
@@ -34,7 +34,7 @@
 | **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Default**               | `"Default from b"`                                                        |
-| **Same definition as**    | [a](#a)                                                                   |
+| **Defined in**            | #/definitions/common                                                      |
 
 **Description:** A common description
 
