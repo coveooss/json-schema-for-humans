@@ -7,7 +7,7 @@ from typing import List, Any
 
 from jinja2 import pass_environment, Environment
 from markdown2 import Markdown
-from markupsafe import Markup,escape as markupsafe_escape
+from markupsafe import Markup, escape as markupsafe_escape
 from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
 from pygments.lexers.javascript import JavascriptLexer
