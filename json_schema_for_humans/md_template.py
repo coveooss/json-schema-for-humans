@@ -241,7 +241,7 @@ class MarkdownTemplate(object):
                 heading_numbers += f"{self.headings[curDepth]}."
 
         # markdown menu depth
-        menu = "#" * min((depth + 1), 5)
+        menu = "#" * min((depth + 1), 6)
         if nested:
             menu = "<strong>"
 
