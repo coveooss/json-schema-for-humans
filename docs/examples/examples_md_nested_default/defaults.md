@@ -42,7 +42,7 @@
 | **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Default**               | `"Default from b"`                                                        |
-| **Same definition as**    | [a](#a)                                                                   |
+| **Defined in**            | #/definitions/common                                                      |
 
 **Description:** A common description
 

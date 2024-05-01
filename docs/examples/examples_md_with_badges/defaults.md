@@ -11,7 +11,7 @@
 | Property   | Pattern | Type   | Deprecated | Definition              | Title/Description    |
 | ---------- | ------- | ------ | ---------- | ----------------------- | -------------------- |
 | - [a](#a ) | No      | object | No         | In #/definitions/common | Description of a     |
-| - [b](#b ) | No      | object | No         | Same as [a](#a )        | A common description |
+| - [b](#b ) | No      | object | No         | In #/definitions/common | A common description |
 
 ## <a name="a"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > a`
 
@@ -31,7 +31,7 @@
 | **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Default**               | `"Default from b"`                                                                                                                |
-| **Same definition as**    | [a](#a)                                                                                                                           |
+| **Defined in**            | #/definitions/common                                                                                                              |
 
 **Description:** A common description
 
