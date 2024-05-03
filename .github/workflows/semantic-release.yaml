@@ -8,9 +8,12 @@ permissions:
 
 jobs:
   semantic-release:
+    environment: production
     runs-on: [ ubuntu-latest ]
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.COMMIT_TOKEN }}
       - uses: actions/setup-node@v4
         with:
           node-version: 'lts/*'
@@ -24,6 +27,6 @@ jobs:
       - name: Release
         shell: bash
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.COMMIT_TOKEN }}
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
         run: npx semantic-release
