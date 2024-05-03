@@ -6,6 +6,7 @@ import re
 import urllib.parse
 from collections import defaultdict
 from pathlib import Path
+from tempfile import _TemporaryFileWrapper
 from typing import Any, Dict, List, Optional, Tuple, Union
 
 import requests
@@ -55,7 +56,7 @@ def _escape_html_id(config: GenerationConfiguration, html_id: str) -> str:
 
 
 def build_intermediate_representation(
-    schema_path: Union[str, Path, FileLikeType],
+    schema_path: Union[str, Path, FileLikeType, _TemporaryFileWrapper],
     config: GenerationConfiguration,
     loaded_schemas: Optional[Dict[str, Any]] = None,
 ) -> SchemaNode:
@@ -98,11 +99,11 @@ def build_intermediate_representation(
 def _record_ref(
     resolved_references: Dict[str, Dict[str, SchemaNode]],
     schema_real_path: str,
-    path_to_element: List[Union[str, int]],
+    path_to_element: List[str],
     current_node: SchemaNode,
 ) -> None:
     """Record that the node is describing the schema at the provided path"""
-    path_to_element_str = "/".join(str(e) for e in path_to_element)
+    path_to_element_str = "/".join(path_to_element)
     resolved_references[schema_real_path][path_to_element_str] = current_node
 
 
@@ -152,7 +153,7 @@ def _find_ref(
         return None, None
 
     # Check if the node has already been documented (also for infinite loops)
-    already_resolved = resolved_references.get(referenced_schema_path, {}).get(anchor_part, {})
+    already_resolved: Optional[SchemaNode] = resolved_references.get(referenced_schema_path, {}).get(anchor_part)
     if already_resolved:
         # The node is already documented elsewhere. Let's link to it
         current_node.is_displayed = False
@@ -186,6 +187,8 @@ def _find_ref(
             elif other_user.depth > current_node.depth:
                 other_is_better = False
                 i_am_better = True
+
+        assert other_user
 
         # There is at least one other node having the same reference as the current node.
         if other_is_better:
@@ -316,7 +319,7 @@ def _resolve_ref(
     return new_reference, new_reference
 
 
-def _get_schema_path(schema_path: Union[str, Path, FileLikeType]) -> str:
+def _get_schema_path(schema_path: Union[str, Path, FileLikeType, _TemporaryFileWrapper]) -> str:
     if isinstance(schema_path, Path):
         return str(schema_path.resolve())
     elif isinstance(schema_path, str):
@@ -358,7 +361,7 @@ def _load_schema_from_uri(schema_uri: str, loaded_schemas: Dict[str, Any]) -> Op
 
 
 def _load_schema(
-    schema_uri: str, path_to_element: List[Union[str, int]], loaded_schemas: Dict[str, Any]
+    schema_uri: str, path_to_element: List[str], loaded_schemas: Dict[str, Any]
 ) -> Optional[Union[Dict, List, int, str]]:
     """Load the schema at the provided path or URL.
 
@@ -369,20 +372,28 @@ def _load_schema(
     loaded_schema = _load_schema_from_uri(schema_uri, loaded_schemas)
 
     if path_to_element:
+        path_to_element_str = "/".join(path_to_element)
         for path_part in path_to_element:
             if not path_part:
                 # Empty string
                 continue
-            try:
-                path_part_int = int(path_part)
-                loaded_schema = loaded_schema[path_part_int]
-                continue
-            except (KeyError, ValueError):
-                # KeyError: The part looks like a int but it is a string (property named "0" for example
-                # ValueError: Normal case, the path part is a string
+
+            if isinstance(loaded_schema, list):
+                try:
+                    path_part_int = int(path_part)
+                    loaded_schema = loaded_schema[path_part_int]
+                    continue
+                except (IndexError, ValueError):
+                    pass
+            elif isinstance(loaded_schema, dict):
                 if path_part == ROOT_ID:
                     return loaded_schema
-                loaded_schema = loaded_schema[path_part]
+
+                if path_part in loaded_schema:
+                    loaded_schema = loaded_schema[path_part]
+                    continue
+
+            logging.warning(f"Path {path_to_element_str} not found in schema at URI {schema_uri}")
 
     return loaded_schema
 
@@ -409,7 +420,7 @@ def _build_node(
     breadcrumb_name: str,
     property_name: Optional[str],
     schema_file_path: str,
-    path_to_element: List[Union[str, int]],
+    path_to_element: List[str],
     schema: Optional[Union[Dict, List, int, str]],
     parent: Optional[SchemaNode] = None,
     parent_key: Optional[str] = None,
@@ -488,15 +499,33 @@ def _build_node(
             # Examples are rendered in JSON because they will be represented that way in the documentation,
             # no need for a SchemaNode object
             if schema_key == SchemaKeyword.EXAMPLES.value:
-                keywords[schema_key] = [
-                    json.dumps(example, indent=4, separators=(",", ": "), ensure_ascii=False)
-                    for example in schema_value
-                ]
+                keywords[schema_key] = SchemaNode(
+                    depth=depth + 1,
+                    file=schema_file_path,
+                    path_to_element=path_to_element + [schema_key],
+                    html_id=_add_html_id_part(html_id, schema_key),
+                    array_items=[
+                        SchemaNode(
+                            depth=depth + 1,
+                            file=schema_file_path,
+                            path_to_element=path_to_element + [schema_key],
+                            html_id=_add_html_id_part(html_id, schema_key),
+                            literal=json.dumps(example, indent=4, separators=(",", ": "), ensure_ascii=False),
+                        )
+                        for example in schema_value
+                    ],
+                )
                 continue
 
             # The default value will be printed as-is, no need for a SchemaNode object
             if schema_key == "default":
-                keywords[schema_key] = json.dumps(schema_value, ensure_ascii=False)
+                keywords[schema_key] = SchemaNode(
+                    depth=depth + 1,
+                    file=schema_file_path,
+                    path_to_element=path_to_element + [schema_key],
+                    html_id=_add_html_id_part(html_id, schema_key),
+                    literal=json.dumps(schema_value, ensure_ascii=False),
+                )
                 continue
 
             if schema_key == SchemaKeyword.PROPERTIES.value:
@@ -658,7 +687,7 @@ def _build_node(
                     breadcrumb_name=f"item {i}",
                     property_name=None,
                     schema_file_path=schema_file_path,
-                    path_to_element=path_to_element + [i],
+                    path_to_element=path_to_element + [str(i)],
                     schema=element,
                     parent=new_node,
                 )

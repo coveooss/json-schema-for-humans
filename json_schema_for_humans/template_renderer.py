@@ -1,8 +1,9 @@
 import re
+from typing import Optional
 
-import htmlmin
+import htmlmin  # type: ignore  # No stubs available
 import jinja2
-import markdown2
+import markdown2  # type: ignore  # No stubs available
 from jinja2 import FileSystemLoader, Template
 from jinja2.ext import loopcontrols
 
@@ -21,7 +22,7 @@ def _minify(rendered: str, is_markdown: bool, is_html: bool) -> str:
 
 
 class TemplateRenderer:
-    def __init__(self, config: GenerationConfiguration, template: Template = None):
+    def __init__(self, config: GenerationConfiguration, template: Optional[Template] = None):
         self.config = config
         self.template = template or self._get_jinja_template()
 

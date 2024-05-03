@@ -9,8 +9,8 @@ from json_schema_for_humans.cli import main
 from tests.test_utils import (
     assert_css_and_js_copied,
     assert_css_and_js_not_copied,
-    get_test_case_path,
     get_nonexistent_output_path,
+    get_test_case_path,
 )
 
 

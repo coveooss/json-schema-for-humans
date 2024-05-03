@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Union, Dict, Any, List, Tuple
+from typing import Any, Dict, List, Tuple, Union
 
 import pytest
 from _pytest.monkeypatch import MonkeyPatch
@@ -78,8 +78,8 @@ def test_get_schema_paths(is_path: bool, case: GetSchemaPathsTestCase, tmpdir: P
 
     monkeypatch.chdir(tmpdir)
 
-    get_schema_path_arg = Path(case.input_path) if is_path else str(case.input_path)
-    assert [str(p) for p in _get_schema_paths(get_schema_path_arg)] == [
+    get_schema_path_arg = Path(case.input_path) if is_path else case.input_path
+    assert [str(p) for p in _get_schema_paths(get_schema_path_arg)] == [  # type:ignore[arg-type]
         # Convert to path and back to ensure normalization (e.g. running on Windows)
         str(Path(p).absolute())
         for p in case.expected_schema_paths

@@ -1,4 +1,4 @@
-from typing import List, Optional, Type, Union, TYPE_CHECKING
+from typing import TYPE_CHECKING, List, Optional, Type, Union
 
 from json_schema_for_humans import const
 
@@ -6,10 +6,38 @@ if TYPE_CHECKING:
     from json_schema_for_humans.schema.schema_node import SchemaNode
 
 
+def schema_keyword_to_int(schema_node: "SchemaNode", keyword: str) -> Optional[int]:
+    """Extract an integer from a schema keyword"""
+    keyword_value = schema_node.keywords.get(keyword)
+    if keyword_value:
+        keyword_value_literal = keyword_value.literal
+        if isinstance(keyword_value_literal, int):
+            return keyword_value_literal
+    return None
+
+
+def schema_keyword_to_str(schema_node: "SchemaNode", keyword: str) -> Optional[str]:
+    """Extract a str from a schema keyword or return None"""
+    keyword_value = schema_node.keywords.get(keyword)
+    if keyword_value:
+        keyword_value_literal = keyword_value.literal
+        if isinstance(keyword_value_literal, str):
+            return keyword_value_literal
+    return None
+
+
+def schema_keyword_convert_to_str(schema_node: "SchemaNode", keyword: str) -> Optional[str]:
+    """Extract and convert to str from a schema keyword or return None"""
+    keyword_value = schema_node.keywords.get(keyword)
+    if keyword_value:
+        return str(keyword_value.literal)
+    return None
+
+
 def get_type_name(schema_node: "SchemaNode") -> Optional[str]:
     """Filter. Return the type of a property taking into account the type of items for array and enum"""
 
-    def _python_type_to_json_type(python_type: Type[Union[str, int, float, bool, list, dict]]) -> str:
+    def _python_type_to_json_type(python_type: Type[Union[str, int, float, bool, list, dict, None]]) -> str:
         return {
             str: const.TYPE_STRING,
             int: const.TYPE_INTEGER,
@@ -36,9 +64,10 @@ def get_type_name(schema_node: "SchemaNode") -> Optional[str]:
             if not items:
                 return type_name
 
-            subtype = items.keywords.get(const.TYPE)
-            if subtype:
-                subtype = subtype.literal
+            subtype_node = items.keywords.get(const.TYPE)
+            subtype: Optional[str] = None
+            if subtype_node:
+                subtype = subtype_node.literal_str
             if const.TYPE_ENUM in items.keywords:
                 subtype = _enum_type(items.keywords[const.TYPE_ENUM].array_items)
 
@@ -56,14 +85,18 @@ def get_type_name(schema_node: "SchemaNode") -> Optional[str]:
         return _enum_type(schema_node.keywords[const.TYPE_ENUM].array_items)
 
     type_node = schema_node.keywords.get(const.TYPE)
+    type_names: List[str] = []
     if type_node:
         if isinstance(type_node, str):
             type_names = [type_node]
         elif type_node.array_items:
-            type_names = [node.literal for node in type_node.array_items]
-        else:
-            type_names = [type_node.literal]
+            type_names = [node.literal_str for node in type_node.array_items if node.literal_str]
+        elif type_node.literal_str:
+            type_names = [type_node.literal_str]
     else:
+        return None
+
+    if not type_names:
         return None
 
     type_names = [_add_subtype_if_array(type_name) for type_name in type_names]
