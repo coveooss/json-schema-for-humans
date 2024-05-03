@@ -1,16 +1,18 @@
 import os
 import tempfile
-from typing import Dict, Any
+from io import TextIOWrapper
+from typing import Any, Dict, cast
+from unittest.mock import Mock
 
 import pytest
 from bs4 import BeautifulSoup
-from unittest.mock import Mock
 
 import tests.html_schema_doc_asserts
-from json_schema_for_humans.schema.schema_to_render import SchemaToRender
-from json_schema_for_humans.template_renderer import TemplateRenderer
+from json_schema_for_humans.const import FileLikeType
 from json_schema_for_humans.generate import generate_from_file_object
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
+from json_schema_for_humans.schema.schema_to_render import SchemaToRender
+from json_schema_for_humans.template_renderer import TemplateRenderer
 from tests.test_utils import generate_case
 
 current_dir = os.path.abspath(os.path.dirname(__file__))

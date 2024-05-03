@@ -1,6 +1,6 @@
 from enum import Enum
-from io import TextIOWrapper, FileIO
-from typing import Union, TextIO
+from io import FileIO, TextIOWrapper
+from typing import TextIO, Union
 
 TYPE_ARRAY = "array"
 TYPE_BOOLEAN = "boolean"
@@ -45,6 +45,7 @@ class DocumentationTemplate(Enum):
             return "html"
         if self in [self.MD, self.MD_NESTED]:
             return "md"
+        return "html"
 
 
 DEFAULT_TEMPLATE_FILE_NAME = "base.html"

@@ -1,6 +1,7 @@
 import shutil
 from datetime import datetime
 from pathlib import Path
+from tempfile import _TemporaryFileWrapper
 from typing import Any, Dict, List, Optional, Union
 
 from json_schema_for_humans.const import FileLikeType
@@ -18,7 +19,7 @@ def generate_from_schema(
     default_from_description: bool = False,
     expand_buttons: bool = False,
     link_to_reused_ref: bool = True,
-    config: GenerationConfiguration = None,
+    config: Optional[GenerationConfiguration] = None,
 ) -> str:
     config = config or get_final_config(
         minify=minify,
@@ -34,6 +35,8 @@ def generate_from_schema(
     for rendered_content in generate_schemas_doc(schemas_to_render, template_renderer, loaded_schemas).items():
         return rendered_content[1]
 
+    raise ValueError(f"Unable to find a schema to render from {schema_file}")
+
 
 def generate_from_filename(
     schema_file_name: Union[str, Path],
@@ -45,7 +48,7 @@ def generate_from_filename(
     copy_css: bool = True,
     copy_js: bool = True,
     link_to_reused_ref: bool = True,
-    config: GenerationConfiguration = None,
+    config: Optional[GenerationConfiguration] = None,
 ) -> None:
     """Generate the schema documentation from a filename"""
     config = config or get_final_config(
@@ -66,8 +69,8 @@ def generate_from_filename(
 
 
 def generate_from_file_object(
-    schema_file: FileLikeType,
-    result_file: FileLikeType,
+    schema_file: Union[FileLikeType, _TemporaryFileWrapper],
+    result_file: Union[FileLikeType, _TemporaryFileWrapper],
     minify: bool = True,
     deprecated_from_description: bool = False,
     default_from_description: bool = False,
@@ -75,7 +78,7 @@ def generate_from_file_object(
     copy_css: bool = True,
     copy_js: bool = True,
     link_to_reused_ref: bool = True,
-    config: GenerationConfiguration = None,
+    config: Optional[GenerationConfiguration] = None,
 ) -> None:
     """Generate the JSON schema documentation from opened file objects for both input and output files. The
     result_file should be opened in write mode.

@@ -1,7 +1,7 @@
 import logging
 import os
 from pathlib import Path
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock, patch
 
 import pytest
 import yaml
@@ -16,10 +16,7 @@ from json_schema_for_humans.generate import (
     generate_from_schema,
     generate_schemas_doc,
 )
-from json_schema_for_humans.generation_configuration import (
-    GenerationConfiguration,
-    CONFIG_DEPRECATION_MESSAGE,
-)
+from json_schema_for_humans.generation_configuration import CONFIG_DEPRECATION_MESSAGE, GenerationConfiguration
 from json_schema_for_humans.schema.schema_importer import get_schemas_to_render
 from json_schema_for_humans.template_renderer import TemplateRenderer
 from tests.html_schema_doc_asserts import assert_basic_case

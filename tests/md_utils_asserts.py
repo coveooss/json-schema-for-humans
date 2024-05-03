@@ -1,9 +1,10 @@
 import os
+import re
+from typing import Optional
 
 from json_schema_for_humans.generate import generate_from_schema
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
 from tests.test_utils import get_test_case_path
-import re
 
 GENERATED_TIMESTAMP_REGEXP = re.compile(
     r"on [0-9]{4}-[0-9]{2}-[0-9]{2} at [0-9]{2}:[0-9]{2}:[0-9]{2} \+[0-9]{4}", re.IGNORECASE | re.MULTILINE
@@ -15,7 +16,7 @@ class MdUtilsAsserts:
         """Get the expected md for a test case"""
         return os.path.realpath(os.path.join(example_dir, f"{name}.md"))
 
-    def generate_case(self, case_name: str, config: GenerationConfiguration = None) -> str:
+    def generate_case(self, case_name: str, config: Optional[GenerationConfiguration] = None) -> str:
         """Get the generated markdown schema string for a given schema test case"""
         return generate_from_schema(get_test_case_path(case_name), None, config=config)
 
@@ -29,7 +30,7 @@ class MdUtilsAsserts:
         return content
 
     def assert_case_equals(
-        self, example_dir: str, test_case: str, case_name: str, config: GenerationConfiguration = None
+        self, example_dir: str, test_case: str, case_name: str, config: Optional[GenerationConfiguration] = None
     ) -> None:
         content = self.generate_case(case_name, config)
         expected_content = self.get_expected_case(example_dir, test_case, case_name)

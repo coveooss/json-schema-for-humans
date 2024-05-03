@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from typing import Optional, List, Union
+from typing import List, Optional, Union
 
 import click
 
@@ -37,6 +37,9 @@ def get_schemas_to_render(
 
     if not result_file_or_dir:
         return [SchemaToRender(schema_file_path, None, None) for schema_file_path in schema_file_paths]
+
+    if isinstance(result_file_or_dir, str):
+        result_file_or_dir = Path(result_file_or_dir)
 
     # Compute output_dir where additional files will be copied if necessary
     result_path_is_dir = Path(result_file_or_dir).is_dir()

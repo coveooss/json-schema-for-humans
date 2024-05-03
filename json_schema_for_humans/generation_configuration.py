@@ -4,19 +4,19 @@ import os
 from dataclasses import dataclass
 from json import JSONDecodeError
 from pathlib import Path
-from typing import Any, Union, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Union
 
 import yaml
 from dataclasses_json import dataclass_json
 
 from json_schema_for_humans.const import (
-    DocumentationTemplate,
-    FileLikeType,
     DEFAULT_CSS_FILE_NAME,
     DEFAULT_JS_FILE_NAME,
     OFFLINE_CSS_FILE_NAMES,
     OFFLINE_FONT_FILE_NAMES,
     OFFLINE_JS_FILE_NAMES,
+    DocumentationTemplate,
+    FileLikeType,
 )
 
 DEFAULT_PROPERTIES_TABLE_COLUMNS = [
@@ -114,7 +114,7 @@ class GenerationConfiguration:
         raise ValueError("Trying to get extension for configuration with no template")
 
     @property
-    def template_path(self) -> Optional[Path]:
+    def template_path(self) -> Path:
         if self.custom_template_path:
             return Path(self.custom_template_path)
 
@@ -140,7 +140,7 @@ def get_final_config(
     copy_css: bool = False,
     copy_js: bool = False,
     config: Optional[Union[str, Path, FileLikeType, Dict[str, Any], GenerationConfiguration]] = None,
-    config_parameters: List[str] = None,
+    config_parameters: Optional[List[str]] = None,
 ) -> GenerationConfiguration:
     if config:
         final_config = _load_config(config)
@@ -214,5 +214,4 @@ def _apply_config_cli_parameters(
                 parameter_value = True
         current_configuration_as_dict[parameter_name] = parameter_value
 
-    # type: ignore
-    return GenerationConfiguration.from_dict(current_configuration_as_dict)
+    return GenerationConfiguration.from_dict(current_configuration_as_dict)  # type: ignore[attr-defined]
