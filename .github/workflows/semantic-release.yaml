@@ -25,6 +25,5 @@ jobs:
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PYPI_USERNAME: 'coveo'
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
         run: npx semantic-release
