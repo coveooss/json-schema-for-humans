@@ -148,3 +148,6 @@ include
 tmp
 
 docs/examples/.DS_Store
+
+# npm stuff
+node_modules/
