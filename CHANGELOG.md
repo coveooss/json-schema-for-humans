@@ -1,3 +1,4 @@
+# [1.0.0](https://github.com/coveooss/json-schema-for-humans/compare/v0.47.5...v1.0.0) (2024-05-03)
 
 # 0.48
 
