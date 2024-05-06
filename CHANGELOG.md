@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/coveooss/json-schema-for-humans/compare/v1.0.0...v1.0.1) (2024-05-06)
+
+
+### Bug Fixes
+
+* Move types packages to dev-dependencies ([#242](https://github.com/coveooss/json-schema-for-humans/issues/242)) ([8050904](https://github.com/coveooss/json-schema-for-humans/commit/805090460bbbce5dccb5eb9a5d7c960a8cdae73e))
+
 # [1.0.0](https://github.com/coveooss/json-schema-for-humans/compare/v0.47.5...v1.0.0) (2024-05-03)
 
 # 0.48
