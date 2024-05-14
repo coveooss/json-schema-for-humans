@@ -54,7 +54,7 @@ def get_type_name(schema_node: "SchemaNode") -> Optional[str]:
             for python_type_name in set(type(v.literal) for v in enum_values)
         ]
         if enum_type_names:
-            return f"{const.TYPE_ENUM} (of {' or '.join(enum_type_names)})"
+            return f"{const.TYPE_ENUM} (of {' or '.join(sorted(enum_type_names))})"
 
         return const.TYPE_ENUM
 
