@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/coveooss/json-schema-for-humans/compare/v1.0.1...v1.0.2) (2024-05-16)
+
+
+### Bug Fixes
+
+* Fix for unstable enum description templating_utils.py ([#243](https://github.com/coveooss/json-schema-for-humans/issues/243)) ([c304af8](https://github.com/coveooss/json-schema-for-humans/commit/c304af8f0a104e18b3b4f42ee280392918c62368))
+
 ## [1.0.1](https://github.com/coveooss/json-schema-for-humans/compare/v1.0.0...v1.0.1) (2024-05-06)
 
 
