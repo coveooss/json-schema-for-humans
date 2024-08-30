@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/coveooss/json-schema-for-humans/compare/v1.0.2...v1.0.3) (2024-08-30)
+
+
+### Bug Fixes
+
+* new properties are ignored whith allOf using $ref ([#249](https://github.com/coveooss/json-schema-for-humans/issues/249)) ([7049af7](https://github.com/coveooss/json-schema-for-humans/commit/7049af7bc51b40d7ea6b9117b89125e03b98fde7))
+
 ## [1.0.2](https://github.com/coveooss/json-schema-for-humans/compare/v1.0.1...v1.0.2) (2024-05-16)
 
 
