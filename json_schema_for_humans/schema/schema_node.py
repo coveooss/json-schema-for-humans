@@ -290,6 +290,26 @@ class SchemaNode:
 
         return [example.literal_str for example in possible_examples.array_items if example.literal_str]
 
+    def _merge_node(self, other: "SchemaNode"):
+        merged_node = copy.copy(self)
+        merged_node.keywords = {k: copy.copy(v) for k, v in self.keywords.items()}
+        merged_node.array_items = [copy.copy(i) for i in self.array_items]
+        merged_node.properties = {k: copy.copy(v) for k, v in self.properties.items()}
+
+        merged_node.keywords.update({k: copy.copy(v) for k, v in other.keywords.items()})
+        merged_node.array_items += [copy.copy(i) for i in other.array_items]
+
+        # Merge node properties, ignoring conflicts
+        for k, v in other.properties.items():
+            if k in merged_node.properties:
+                merged_node.properties[k] = merged_node.properties[k]._merge_node(v)
+            else:
+                merged_node.properties[k] = v
+
+        merged_node.literal = self.literal or other.literal
+
+        return merged_node
+
     @property
     def refers_to_merged(self) -> Optional["SchemaNode"]:
         """The referenced node, with values from the current node merged in"""
@@ -299,16 +319,7 @@ class SchemaNode:
         if not self.refers_to:
             return None
 
-        merged_node = copy.copy(self.refers_to)
-        merged_node.keywords = {k: copy.copy(v) for k, v in self.refers_to.keywords.items()}
-        merged_node.array_items = [copy.copy(i) for i in self.refers_to.array_items]
-
-        merged_node.keywords.update({k: copy.copy(v) for k, v in self.keywords.items()})
-        merged_node.array_items += [copy.copy(i) for i in self.array_items]
-
-        merged_node.literal = self.literal or self.refers_to.literal
-
-        return merged_node
+        return self.refers_to._merge_node(self)
 
     def get_keyword(self, keyword: SchemaKeyword) -> Optional["SchemaNode"]:
         """Get the value of a keyword if present, and it is not a property (to avoid conflicts with properties being
