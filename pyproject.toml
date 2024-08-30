@@ -11,7 +11,7 @@ classifiers = [
     "Programming Language :: Python :: 3.8",
     "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
-    "Development Status :: 4 - Beta",
+    "Development Status :: 6 - Mature",
     "Intended Audience :: Developers",
     "Topic :: Documentation"
 ]
@@ -25,15 +25,15 @@ include = [
 [tool.poetry.dependencies]
 python = "^3.8"
 click = "^8.0.1"
-dataclasses-json = "^0.5.6"
+dataclasses-json = "^0.6.7"
 htmlmin = "^0.1.12"
 Jinja2 = ">3"
-markdown2 = "^2.4.1"
-Pygments = "^2.10.0"
+markdown2 = "^2.5.0"
+Pygments = "^2.18.0"
 pytz = "*"
-PyYAML = ">=5.4.1,<7"
-requests = "^2.31.0"
-MarkupSafe = "^2.0"
+PyYAML = "^6.0.2"
+requests = "^2.32.3"
+MarkupSafe = "^2.1.5"
 
 
 [tool.poetry.scripts]
@@ -42,13 +42,13 @@ generate-schema-doc = "json_schema_for_humans.cli:main"
 
 [tool.poetry.group.dev.dependencies]
 beautifulsoup4 = "^4.10.0"
-black = "^22.10"
-pytest = "^6.2.5"
-mypy = "^1.10.0"
-types-requests = "^2.31.0"
-types-pygments = "^2.17.0.20240310"
-types-beautifulsoup4 = "^4.12.0.20240229"
-types-pyyaml = "^6.0.12.20240311"
+black = "^24.8.0"
+pytest = "^8.3.2"
+mypy = "^1.11.2"
+types-requests = "^2.32.0"
+types-pygments = "^2.18.0.20240506"
+types-beautifulsoup4 = "^4.12.0.20240511"
+types-pyyaml = "^6.0.12.20240808"
 types-pytz = "^2024.1.0.20240417"
 
 
