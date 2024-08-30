@@ -42,7 +42,7 @@ generate-schema-doc = "json_schema_for_humans.cli:main"
 
 [tool.poetry.group.dev.dependencies]
 beautifulsoup4 = "^4.10.0"
-black = "^22.10"
+black = "^24.0.0"
 pytest = "^6.2.5"
 mypy = "^1.10.0"
 types-requests = "^2.31.0"
