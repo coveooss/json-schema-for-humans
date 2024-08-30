@@ -5,7 +5,7 @@
 {% endif %}
 
 {% if schema.array_items_def %}
-{% filter md_heading(depth+1) %}
+{% filter md_heading(depth+1, schema.array_items_def.html_id) %}
 {% with schema=schema.array_items_def %}{%- include "breadcrumbs.md" %}{% endwith %}
 {% endfilter %}
 {% with schema=schema.array_items_def, skip_headers=False, depth=depth+1, skip_required=True %}
