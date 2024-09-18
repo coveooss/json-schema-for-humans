@@ -22,7 +22,7 @@
 | **Type**     | `array of string` |
 | **Required** | No                |
 
-**Example:** 
+**Example:**
 
 ```json
 [
@@ -50,7 +50,7 @@
 | **Type**     | `string` |
 | **Required** | No       |
 
-**Example:** 
+**Example:**
 
 ```json
 "apple"

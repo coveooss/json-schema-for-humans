@@ -32,7 +32,7 @@
 | **Min length** | 5   |
 | **Max length** | 250 |
 
-**Example:** 
+**Example:**
 
 ```json
 "29292929292929292929292"
@@ -61,7 +61,7 @@
 | **Min length** | 10  |
 | **Max length** | 250 |
 
-**Example:** 
+**Example:**
 
 ```json
 "John"
@@ -90,7 +90,7 @@
 | **Min length** | 5  |
 | **Max length** | 10 |
 
-**Example:** 
+**Example:**
 
 ```json
 "Doe"
