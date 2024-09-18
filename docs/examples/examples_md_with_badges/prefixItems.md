@@ -23,7 +23,7 @@
 | -------- | ------- |
 | **Type** | `array` |
 
-**Example:** 
+**Example:**
 
 ```json
 [

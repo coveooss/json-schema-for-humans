@@ -77,7 +77,7 @@
 | -------- | -------- |
 | **Type** | `string` |
 
-**Examples:** 
+**Examples:**
 
 ```json
 "🖖"

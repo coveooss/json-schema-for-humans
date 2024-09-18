@@ -27,7 +27,7 @@
 
 **Description:** the person's first name
 
-**Examples:** 
+**Examples:**
 
 ```json
 "Guido"
@@ -54,7 +54,7 @@
 
 **Description:** The person's last name.
 
-**Example:** 
+**Example:**
 
 ```json
 "Van Rossum"
@@ -82,7 +82,7 @@
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-**Example:** 
+**Example:**
 
 ```json
 64
@@ -105,7 +105,7 @@
 
 **Description:** Any more info you want as an object
 
-**Example:** 
+**Example:**
 
 ```json
 {
