@@ -27,6 +27,7 @@
 | **Default**  | `"Linux"`          |
 
 Must be one of:
+
 * "Windows"
 * "Mac"
 * "Linux"
@@ -67,6 +68,7 @@ Must be one of:
 | **Required** | No                 |
 
 Must be one of:
+
 * "green"
 * "blue"
 * "orange"

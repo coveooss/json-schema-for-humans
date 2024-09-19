@@ -174,6 +174,7 @@
 | **Required** | No                 |
 
 Must be one of:
+
 * "United States of America"
 * "Canada"
 * "Netherlands"

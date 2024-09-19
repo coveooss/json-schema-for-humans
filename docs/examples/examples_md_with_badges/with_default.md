@@ -26,6 +26,7 @@
 | **Default** | `"Linux"`          |
 
 Must be one of:
+
 * "Windows"
 * "Mac"
 * "Linux"
@@ -56,6 +57,7 @@ Must be one of:
 | **Type** | `enum (of string)` |
 
 Must be one of:
+
 * "green"
 * "blue"
 * "orange"
