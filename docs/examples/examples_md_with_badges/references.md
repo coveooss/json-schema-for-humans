@@ -20,10 +20,10 @@
 - [13. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > multi_hierarchy_reference`](#multi_hierarchy_reference)
   - [13.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > multi_hierarchy_reference > propertyA`](#multi_hierarchy_reference_propertyA)
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                                 |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                        |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)]("Additional Properties of any type are allowed.") |
 
 **Description:** Testing $ref
 
@@ -63,11 +63,11 @@
 
 ## <a name="anchor_with_slash"></a>3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > anchor_with_slash`
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
-| **Defined in**            | #/definitions/object_def                                                                                 |
+|                           |                                                                                                        |
+| ------------------------- | ------------------------------------------------------------------------------------------------------ |
+| **Type**                  | `object`                                                                                               |
+| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)]("Additional Properties not allowed.") |
+| **Defined in**            | #/definitions/object_def                                                                               |
 
 | Property                                     | Pattern | Type   | Deprecated | Definition | Title/Description                          |
 | -------------------------------------------- | ------- | ------ | ---------- | ---------- | ------------------------------------------ |
@@ -126,11 +126,11 @@
 
 ## <a name="same_file_anchor_no_slash"></a>7. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > same_file_anchor_no_slash`
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
-| **Same definition as**    | [anchor_with_slash](#anchor_with_slash)                                                                  |
+|                           |                                                                                                        |
+| ------------------------- | ------------------------------------------------------------------------------------------------------ |
+| **Type**                  | `object`                                                                                               |
+| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)]("Additional Properties not allowed.") |
+| **Same definition as**    | [anchor_with_slash](#anchor_with_slash)                                                                |
 
 ## <a name="same_file_nested_reference"></a>8. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > same_file_nested_reference`
 
@@ -141,11 +141,11 @@
 
 ## <a name="other_file_anchor"></a>9. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > other_file_anchor`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | with_descriptions.json#/definitions/gift                                                                                          |
+|                           |                                                                                                                                 |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                        |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)]("Additional Properties of any type are allowed.") |
+| **Defined in**            | with_descriptions.json#/definitions/gift                                                                                        |
 
 **Description:** The delivery is a gift, no prices displayed
 
@@ -161,31 +161,31 @@
 
 ## <a name="other_file_dot_anchor"></a>10. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > other_file_dot_anchor`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | [other_file_anchor](#other_file_anchor)                                                                                           |
+|                           |                                                                                                                                 |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                        |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)]("Additional Properties of any type are allowed.") |
+| **Same definition as**    | [other_file_anchor](#other_file_anchor)                                                                                         |
 
 **Description:** The delivery is a gift, no prices displayed
 
 ## <a name="other_file_dot_dot_anchor"></a>11. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > other_file_dot_dot_anchor`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | [other_file_anchor](#other_file_anchor)                                                                                           |
+|                           |                                                                                                                                 |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                        |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)]("Additional Properties of any type are allowed.") |
+| **Same definition as**    | [other_file_anchor](#other_file_anchor)                                                                                         |
 
 **Description:** The delivery is a gift, no prices displayed
 
 ## <a name="other_file_only"></a>12. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > other_file_only`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | combining_not.json                                                                                                                |
+|                           |                                                                                                                                 |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                        |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)]("Additional Properties of any type are allowed.") |
+| **Defined in**            | combining_not.json                                                                                                              |
 
 **Description:** Test schema with a not
 
@@ -195,10 +195,10 @@
 
 ### <a name="other_file_only_not_a_string"></a>12.1. ![Required](https://img.shields.io/badge/Required-blue) Property `root > other_file_only > not_a_string`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `combining`                                                                                                                       |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                                 |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                                                                     |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)]("Additional Properties of any type are allowed.") |
 
 #### <a name="autogenerated_heading_2"></a>12.1.1. Must **not** be
 
@@ -208,11 +208,11 @@
 
 ## <a name="multi_hierarchy_reference"></a>13. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > multi_hierarchy_reference`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | reference_schemas/intermediate.json#/properties/cross_file_reference                                                              |
+|                           |                                                                                                                                 |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                        |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)]("Additional Properties of any type are allowed.") |
+| **Defined in**            | reference_schemas/intermediate.json#/properties/cross_file_reference                                                            |
 
 | Property                                             | Pattern | Type   | Deprecated | Definition | Title/Description                   |
 | ---------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------------------------- |

@@ -7,11 +7,11 @@
 
 **Title:** Test
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                |
+| **Required**              | No                                                                      |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.") |
 
 <details>
 <summary>
@@ -43,13 +43,13 @@ Must be one of:
 </summary>
 <blockquote>
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Default**               | `{"a": "a", "b": "b"}`                                                    |
-| **Defined in**            | #/definitions/aDictProperty                                               |
+|                           |                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                |
+| **Required**              | No                                                                      |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.") |
+| **Default**               | `{"a": "a", "b": "b"}`                                                  |
+| **Defined in**            | #/definitions/aDictProperty                                             |
 
 <details>
 <summary>

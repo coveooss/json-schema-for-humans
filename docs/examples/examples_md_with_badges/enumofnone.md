@@ -4,10 +4,10 @@
 
 **Title:** Enum of None
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                                 |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                        |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)]("Additional Properties of any type are allowed.") |
 
 | Property                     | Pattern | Type           | Deprecated | Definition | Title/Description |
 | ---------------------------- | ------- | -------------- | ---------- | ---------- | ----------------- |

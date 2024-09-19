@@ -4,11 +4,11 @@
   - [1.1. [Required] Property root > outer > inner](#outer_inner)
 - [2. [Optional] Property root > outer2](#outer2)
 
-|                           |                                                         |
-| ------------------------- | ------------------------------------------------------- |
-| **Type**                  | `object`                                                |
-| **Required**              | No                                                      |
-| **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
+|                           |                                                       |
+| ------------------------- | ----------------------------------------------------- |
+| **Type**                  | `object`                                              |
+| **Required**              | No                                                    |
+| **Additional properties** | [[Not allowed]]("Additional Properties not allowed.") |
 
 <details>
 <summary>
@@ -17,12 +17,12 @@
 </summary>
 <blockquote>
 
-|                           |                                                         |
-| ------------------------- | ------------------------------------------------------- |
-| **Type**                  | `object`                                                |
-| **Required**              | Yes                                                     |
-| **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
-| **Defined in**            | #/definitions/inner schema                              |
+|                           |                                                       |
+| ------------------------- | ----------------------------------------------------- |
+| **Type**                  | `object`                                              |
+| **Required**              | Yes                                                   |
+| **Additional properties** | [[Not allowed]]("Additional Properties not allowed.") |
+| **Defined in**            | #/definitions/inner schema                            |
 
 **Description:** We should see this
 
@@ -53,12 +53,12 @@
 </summary>
 <blockquote>
 
-|                           |                                                         |
-| ------------------------- | ------------------------------------------------------- |
-| **Type**                  | `object`                                                |
-| **Required**              | No                                                      |
-| **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
-| **Same definition as**    | [outer](#outer)                                         |
+|                           |                                                       |
+| ------------------------- | ----------------------------------------------------- |
+| **Type**                  | `object`                                              |
+| **Required**              | No                                                    |
+| **Additional properties** | [[Not allowed]]("Additional Properties not allowed.") |
+| **Same definition as**    | [outer](#outer)                                       |
 
 **Description:** We should see this too
 

@@ -9,10 +9,10 @@
 
 **Title:** Person
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                                 |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                        |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)]("Additional Properties of any type are allowed.") |
 
 | Property                               | Pattern | Type        | Deprecated | Definition | Title/Description |
 | -------------------------------------- | ------- | ----------- | ---------- | ---------- | ----------------- |
@@ -57,10 +57,10 @@
 
 ## <a name="driverLicenseId"></a>4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > driverLicenseId`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `combining`                                                                                                                       |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                                 |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                                                                     |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)]("Additional Properties of any type are allowed.") |
 
 | All of(Requirement)                            |
 | ---------------------------------------------- |

@@ -30,11 +30,11 @@
 
 **Title:** JSON Schema for Humans configuration file
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                |
+| **Required**              | No                                                                      |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.") |
 
 **Description:** Choose how to generate JSON Schema for Humans documentation file.
 
@@ -286,11 +286,11 @@ This is the old behaviour and is only needed for browsers that do not support HT
 
 ## <a name="markdown_options"></a>19. Property `JSON Schema for Humans configuration file > markdown_options`
 
-|                           |                                                                                                                         |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                |
-| **Required**              | No                                                                                                                      |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.")                                               |
+|                           |                                                                                                                       |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                              |
+| **Required**              | No                                                                                                                    |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.")                                               |
 | **Default**               | `{"fenced-code-blocks": {"break-on-newline": true, "cssclass": "highlight jumbotron", "tables": null}, "tables": null}` |
 
 **Description:** [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for the descriptions. `description_is_markdown` must be true for this to have any effect.
@@ -313,11 +313,11 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 
 ## <a name="template_md_options"></a>20. Property `JSON Schema for Humans configuration file > template_md_options`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                |
+| **Required**              | No                                                                      |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.") |
 
 **Description:** specific options to md template
 

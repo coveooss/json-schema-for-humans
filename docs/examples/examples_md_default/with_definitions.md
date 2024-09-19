@@ -7,11 +7,11 @@
   - [1.4. Property `root > billing_address > futureProperty`](#billing_address_futureProperty)
 - [2. Property `root > shipping_address`](#shipping_address)
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                |
+| **Required**              | No                                                                      |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.") |
 
 | Property                                 | Pattern | Type   | Deprecated | Definition                                   | Title/Description |
 | ---------------------------------------- | ------- | ------ | ---------- | -------------------------------------------- | ----------------- |
@@ -20,12 +20,12 @@
 
 ## <a name="billing_address"></a>1. Property `root > billing_address`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/address                                                     |
+|                           |                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                |
+| **Required**              | No                                                                      |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/address                                                   |
 
 | Property                                             | Pattern | Type   | Deprecated | Definition | Title/Description |
 | ---------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
@@ -64,12 +64,12 @@
 
 ## <a name="shipping_address"></a>2. Property `root > shipping_address`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | [billing_address](#billing_address)                                       |
+|                           |                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                |
+| **Required**              | No                                                                      |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.") |
+| **Same definition as**    | [billing_address](#billing_address)                                     |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
