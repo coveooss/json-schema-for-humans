@@ -30,6 +30,7 @@
 **Description:** This is the description from the definition
 
 Must be one of:
+
 * "value1"
 * "value2"
 

@@ -64,6 +64,7 @@
 | **Type** | `enum (of string)` |
 
 Must be one of:
+
 * "Street"
 * "Avenue"
 * "Boulevard"
@@ -77,6 +78,7 @@ Must be one of:
 | **Type** | `enum (of string)` |
 
 Must be one of:
+
 * "NW"
 * "NE"
 * "SW"

@@ -251,6 +251,7 @@
 **Description:** Signature algorithm. The currently recognized JWA [RFC7518] and RFC8037 [RFC8037] asymmetric key algorithms. Note: Unlike RFC8037 [RFC8037] JSF requires explicit Ed* algorithm names instead of "EdDSA".
 
 Must be one of:
+
 * "RS256"
 * "RS384"
 * "RS512"
@@ -386,6 +387,7 @@ Must be one of:
 **Description:** EC curve name.
 
 Must be one of:
+
 * "P-256"
 * "P-384"
 * "P-521"
@@ -485,6 +487,7 @@ Must be one of:
 **Description:** EdDSA curve name.
 
 Must be one of:
+
 * "Ed25519"
 * "Ed448"
 
@@ -605,6 +608,7 @@ Must be one of:
 **Description:** Key type indicator.
 
 Must be one of:
+
 * "EC"
 * "OKP"
 * "RSA"
@@ -814,6 +818,7 @@ Must be one of:
 **Description:** Signature algorithm. The currently recognized JWA [RFC7518] and RFC8037 [RFC8037] asymmetric key algorithms. Note: Unlike RFC8037 [RFC8037] JSF requires explicit Ed* algorithm names instead of "EdDSA".
 
 Must be one of:
+
 * "RS256"
 * "RS384"
 * "RS512"
@@ -949,6 +954,7 @@ Must be one of:
 **Description:** EC curve name.
 
 Must be one of:
+
 * "P-256"
 * "P-384"
 * "P-521"
@@ -1048,6 +1054,7 @@ Must be one of:
 **Description:** EdDSA curve name.
 
 Must be one of:
+
 * "Ed25519"
 * "Ed448"
 
@@ -1168,6 +1175,7 @@ Must be one of:
 **Description:** Key type indicator.
 
 Must be one of:
+
 * "EC"
 * "OKP"
 * "RSA"
@@ -1401,6 +1409,7 @@ Must be one of:
 **Description:** Signature algorithm. The currently recognized JWA [RFC7518] and RFC8037 [RFC8037] asymmetric key algorithms. Note: Unlike RFC8037 [RFC8037] JSF requires explicit Ed* algorithm names instead of "EdDSA".
 
 Must be one of:
+
 * "RS256"
 * "RS384"
 * "RS512"
@@ -1536,6 +1545,7 @@ Must be one of:
 **Description:** EC curve name.
 
 Must be one of:
+
 * "P-256"
 * "P-384"
 * "P-521"
@@ -1635,6 +1645,7 @@ Must be one of:
 **Description:** EdDSA curve name.
 
 Must be one of:
+
 * "Ed25519"
 * "Ed448"
 
@@ -1755,6 +1766,7 @@ Must be one of:
 **Description:** Key type indicator.
 
 Must be one of:
+
 * "EC"
 * "OKP"
 * "RSA"
@@ -1964,6 +1976,7 @@ Must be one of:
 **Description:** Signature algorithm. The currently recognized JWA [RFC7518] and RFC8037 [RFC8037] asymmetric key algorithms. Note: Unlike RFC8037 [RFC8037] JSF requires explicit Ed* algorithm names instead of "EdDSA".
 
 Must be one of:
+
 * "RS256"
 * "RS384"
 * "RS512"
@@ -2099,6 +2112,7 @@ Must be one of:
 **Description:** EC curve name.
 
 Must be one of:
+
 * "P-256"
 * "P-384"
 * "P-521"
@@ -2198,6 +2212,7 @@ Must be one of:
 **Description:** EdDSA curve name.
 
 Must be one of:
+
 * "Ed25519"
 * "Ed448"
 
@@ -2318,6 +2333,7 @@ Must be one of:
 **Description:** Key type indicator.
 
 Must be one of:
+
 * "EC"
 * "OKP"
 * "RSA"

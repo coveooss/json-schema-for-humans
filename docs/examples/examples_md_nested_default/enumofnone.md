@@ -25,6 +25,7 @@
 **Description:** enumOfNone
 
 Must be one of:
+
 * null
 
 </blockquote>

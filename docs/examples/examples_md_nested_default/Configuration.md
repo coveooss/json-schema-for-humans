@@ -316,6 +316,7 @@ This file contains the logic for the anchor links.
 `md_nested` is the markdown template with collapsible nested sections.
 
 Must be one of:
+
 * "flat"
 * "js"
 * "js_offline"
@@ -549,6 +550,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 | **Required** | No                 |
 
 Must be one of:
+
 * "Property"
 * "Pattern"
 * "Type"
