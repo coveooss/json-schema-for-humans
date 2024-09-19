@@ -5,11 +5,11 @@
   - [1.2. [Required] Property root > address > city](#address_city)
   - [1.3. [Required] Property root > address > state](#address_state)
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                |
+| **Required**              | No                                                                      |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.") |
 
 **Description:** Testing $ref with URL with YAML destination
 
@@ -24,7 +24,7 @@
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                                                                  |
 | **Required**              | No                                                                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.")                                                 |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.")                                                   |
 | **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/yaml.yaml#/definitions/address |
 
 <details>
