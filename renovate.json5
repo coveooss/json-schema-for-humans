@@ -1,10 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended",
     "github>coveooss/renovate-presets",
     "schedule:earlyMondays",
     "group:allNonMajor"
-  ],
-  "rebaseWhen": "auto"
+  ]
 }
