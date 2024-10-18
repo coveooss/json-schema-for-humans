@@ -74,6 +74,7 @@
 | **Type** | `enum (of string)` |
 
 Must be one of:
+
 * "United States of America"
 * "Canada"
 

@@ -85,6 +85,7 @@
 | **Required** | No                 |
 
 Must be one of:
+
 * "Street"
 * "Avenue"
 * "Boulevard"
@@ -99,6 +100,7 @@ Must be one of:
 | **Required** | No                 |
 
 Must be one of:
+
 * "NW"
 * "NE"
 * "SW"
