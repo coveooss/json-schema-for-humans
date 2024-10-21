@@ -425,16 +425,16 @@ class MarkdownTemplate(object):
                     break
                 else:
                     badge_any_type = self.badge("Any type", "green", "allowed")
-                    additional_properties = f'[{badge_any_type}](# "Additional Properties of any type are allowed.")'
+                    additional_properties = f'[{badge_any_type}]("Additional Properties of any type are allowed.")'
                     break
 
         if not additional_properties:
             if schema.explicit_no_additional_properties:
                 badge_not_allowed = self.badge("Not allowed", "red")
-                additional_properties = f'[{badge_not_allowed}](# "Additional Properties not allowed.")'
+                additional_properties = f'[{badge_not_allowed}]("Additional Properties not allowed.")'
             else:
                 badge_allowed = self.badge("Any type", "green", "allowed")
-                additional_properties = f'[{badge_allowed}](# "Additional Properties of any type are allowed.")'
+                additional_properties = f'[{badge_allowed}]("Additional Properties of any type are allowed.")'
 
         return additional_properties
 

@@ -20,11 +20,11 @@
 - [13. Property `root > multi_hierarchy_reference`](#multi_hierarchy_reference)
   - [13.1. Property `root > multi_hierarchy_reference > propertyA`](#multi_hierarchy_reference_propertyA)
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                |
+| **Required**              | No                                                                      |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.") |
 
 **Description:** Testing $ref
 
@@ -66,12 +66,12 @@
 
 ## <a name="anchor_with_slash"></a>3. Property `root > anchor_with_slash`
 
-|                           |                                                         |
-| ------------------------- | ------------------------------------------------------- |
-| **Type**                  | `object`                                                |
-| **Required**              | No                                                      |
-| **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
-| **Defined in**            | #/definitions/object_def                                |
+|                           |                                                       |
+| ------------------------- | ----------------------------------------------------- |
+| **Type**                  | `object`                                              |
+| **Required**              | No                                                    |
+| **Additional properties** | [[Not allowed]]("Additional Properties not allowed.") |
+| **Defined in**            | #/definitions/object_def                              |
 
 | Property                                     | Pattern | Type   | Deprecated | Definition | Title/Description                          |
 | -------------------------------------------- | ------- | ------ | ---------- | ---------- | ------------------------------------------ |
@@ -135,12 +135,12 @@
 
 ## <a name="same_file_anchor_no_slash"></a>7. Property `root > same_file_anchor_no_slash`
 
-|                           |                                                         |
-| ------------------------- | ------------------------------------------------------- |
-| **Type**                  | `object`                                                |
-| **Required**              | No                                                      |
-| **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
-| **Same definition as**    | [anchor_with_slash](#anchor_with_slash)                 |
+|                           |                                                       |
+| ------------------------- | ----------------------------------------------------- |
+| **Type**                  | `object`                                              |
+| **Required**              | No                                                    |
+| **Additional properties** | [[Not allowed]]("Additional Properties not allowed.") |
+| **Same definition as**    | [anchor_with_slash](#anchor_with_slash)               |
 
 ## <a name="same_file_nested_reference"></a>8. Property `root > same_file_nested_reference`
 
@@ -152,12 +152,12 @@
 
 ## <a name="other_file_anchor"></a>9. Property `root > other_file_anchor`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | with_descriptions.json#/definitions/gift                                  |
+|                           |                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                |
+| **Required**              | No                                                                      |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.") |
+| **Defined in**            | with_descriptions.json#/definitions/gift                                |
 
 **Description:** The delivery is a gift, no prices displayed
 
@@ -174,34 +174,34 @@
 
 ## <a name="other_file_dot_anchor"></a>10. Property `root > other_file_dot_anchor`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | [other_file_anchor](#other_file_anchor)                                   |
+|                           |                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                |
+| **Required**              | No                                                                      |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.") |
+| **Same definition as**    | [other_file_anchor](#other_file_anchor)                                 |
 
 **Description:** The delivery is a gift, no prices displayed
 
 ## <a name="other_file_dot_dot_anchor"></a>11. Property `root > other_file_dot_dot_anchor`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | [other_file_anchor](#other_file_anchor)                                   |
+|                           |                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                |
+| **Required**              | No                                                                      |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.") |
+| **Same definition as**    | [other_file_anchor](#other_file_anchor)                                 |
 
 **Description:** The delivery is a gift, no prices displayed
 
 ## <a name="other_file_only"></a>12. Property `root > other_file_only`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | combining_not.json                                                        |
+|                           |                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                |
+| **Required**              | No                                                                      |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.") |
+| **Defined in**            | combining_not.json                                                      |
 
 **Description:** Test schema with a not
 
@@ -211,11 +211,11 @@
 
 ### <a name="other_file_only_not_a_string"></a>12.1. Property `root > other_file_only > not_a_string`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `combining`                                                               |
-| **Required**              | Yes                                                                       |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                             |
+| **Required**              | Yes                                                                     |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.") |
 
 #### <a name="autogenerated_heading_2"></a>12.1.1. Must **not** be
 
@@ -226,12 +226,12 @@
 
 ## <a name="multi_hierarchy_reference"></a>13. Property `root > multi_hierarchy_reference`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | reference_schemas/intermediate.json#/properties/cross_file_reference      |
+|                           |                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                |
+| **Required**              | No                                                                      |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.") |
+| **Defined in**            | reference_schemas/intermediate.json#/properties/cross_file_reference    |
 
 | Property                                             | Pattern | Type   | Deprecated | Definition | Title/Description                   |
 | ---------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------------------------- |

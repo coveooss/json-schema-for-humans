@@ -3,10 +3,10 @@
 - [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > a`](#a)
 - [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > b`](#b)
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                                 |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                        |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)]("Additional Properties of any type are allowed.") |
 
 | Property   | Pattern | Type   | Deprecated | Definition              | Title/Description    |
 | ---------- | ------- | ------ | ---------- | ----------------------- | -------------------- |
@@ -15,23 +15,23 @@
 
 ## <a name="a"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > a`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `"Default from a"`                                                                                                                |
-| **Defined in**            | #/definitions/common                                                                                                              |
+|                           |                                                                                                                                 |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                        |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)]("Additional Properties of any type are allowed.") |
+| **Default**               | `"Default from a"`                                                                                                              |
+| **Defined in**            | #/definitions/common                                                                                                            |
 
 **Description:** Description of a
 
 ## <a name="b"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > b`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `"Default from b"`                                                                                                                |
-| **Defined in**            | #/definitions/common                                                                                                              |
+|                           |                                                                                                                                 |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                        |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)]("Additional Properties of any type are allowed.") |
+| **Default**               | `"Default from b"`                                                                                                              |
+| **Defined in**            | #/definitions/common                                                                                                            |
 
 **Description:** A common description
 

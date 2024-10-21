@@ -10,11 +10,11 @@
 
 **Title:** Bug
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                |
+| **Required**              | No                                                                      |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.") |
 
 **Description:** Display the issue.
 
@@ -56,12 +56,12 @@
 
 ### <a name="RecursiveArray_items"></a>2.1. Bug > RecursiveArray > #
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | [Bug](#root)                                                              |
+|                           |                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                |
+| **Required**              | No                                                                      |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.") |
+| **Same definition as**    | [Bug](#root)                                                            |
 
 **Description:** Display the issue.
 
@@ -88,11 +88,11 @@
 
 ### <a name="DecoratedRecursiveArray_items"></a>3.1. Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                |
+| **Required**              | No                                                                      |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.") |
 
 | Property                                               | Pattern | Type   | Deprecated | Definition            | Title/Description  |
 | ------------------------------------------------------ | ------- | ------ | ---------- | --------------------- | ------------------ |
@@ -108,12 +108,12 @@
 
 #### <a name="DecoratedRecursiveArray_items_TheThing"></a>3.1.2. Property `Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > TheThing`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | [Bug](#root)                                                              |
+|                           |                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                |
+| **Required**              | No                                                                      |
+| **Additional properties** | [[Any type: allowed]]("Additional Properties of any type are allowed.") |
+| **Same definition as**    | [Bug](#root)                                                            |
 
 **Description:** Display the issue.
 

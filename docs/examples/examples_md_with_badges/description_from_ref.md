@@ -3,10 +3,10 @@
 - [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > name`](#name)
 - [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > alignment`](#alignment)
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
+|                           |                                                                                                        |
+| ------------------------- | ------------------------------------------------------------------------------------------------------ |
+| **Type**                  | `object`                                                                                               |
+| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)]("Additional Properties not allowed.") |
 
 | Property                   | Pattern | Type   | Deprecated | Definition                     | Title/Description |
 | -------------------------- | ------- | ------ | ---------- | ------------------------------ | ----------------- |
