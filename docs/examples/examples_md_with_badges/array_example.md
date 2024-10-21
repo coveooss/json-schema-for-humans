@@ -20,7 +20,7 @@
 | -------- | ----------------- |
 | **Type** | `array of string` |
 
-**Example:** 
+**Example:**
 
 ```json
 [
@@ -47,7 +47,7 @@
 | -------- | -------- |
 | **Type** | `string` |
 
-**Example:** 
+**Example:**
 
 ```json
 "apple"

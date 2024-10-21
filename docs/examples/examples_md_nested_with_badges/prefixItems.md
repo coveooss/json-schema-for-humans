@@ -82,7 +82,7 @@ Must be one of:
 * "SW"
 * "SE"
 
-**Example:** 
+**Example:**
 
 ```json
 [

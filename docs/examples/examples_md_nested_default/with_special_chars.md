@@ -82,7 +82,7 @@
 | **Type**     | `string` |
 | **Required** | No       |
 
-**Examples:** 
+**Examples:**
 
 ```json
 "🖖"
