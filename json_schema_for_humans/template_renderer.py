@@ -22,9 +22,7 @@ def _minify(rendered: str, is_markdown: bool, is_html: bool) -> str:
 
 
 class TemplateRenderer:
-    def __init__(
-        self, config: GenerationConfiguration, template: Optional[Template] = None
-    ):
+    def __init__(self, config: GenerationConfiguration, template: Optional[Template] = None):
         self.config = config
         self.template = template or self._get_jinja_template()
 
@@ -51,15 +49,11 @@ class TemplateRenderer:
         env.filters["get_type_name"] = templating_utils.get_type_name
         env.filters["get_description"] = jinja_filters.get_description
         env.filters["get_description_literal"] = jinja_filters.get_description_literal
-        env.filters["get_numeric_restrictions_text"] = (
-            jinja_filters.get_numeric_restrictions_text
-        )
+        env.filters["get_numeric_restrictions_text"] = jinja_filters.get_numeric_restrictions_text
 
         env.filters["get_required_properties"] = jinja_filters.get_required_properties
         env.filters["get_first_property"] = jinja_filters.get_first_property
-        env.filters["get_undocumented_required_properties"] = (
-            jinja_filters.get_undocumented_required_properties
-        )
+        env.filters["get_undocumented_required_properties"] = jinja_filters.get_undocumented_required_properties
         env.filters["highlight_json_example"] = jinja_filters.highlight_json_example
         env.filters["highlight_yaml_example"] = jinja_filters.highlight_yaml_example
         env.filters["yaml_example"] = jinja_filters.yaml_example
@@ -67,9 +61,7 @@ class TemplateRenderer:
 
         env.tests["combining"] = jinja_filters.is_combining
         env.tests["description_short"] = jinja_filters.is_text_short
-        env.tests["deprecated"] = lambda schema: jinja_filters.deprecated(
-            self.config, schema
-        )
+        env.tests["deprecated"] = lambda schema: jinja_filters.deprecated(self.config, schema)
         env.globals["examples_as_yaml"] = self.config.examples_as_yaml
         env.globals["get_local_time"] = jinja_filters.get_local_time
 
@@ -82,8 +74,6 @@ class TemplateRenderer:
         rendered = self.template.render(schema=intermediate_schema, config=self.config)
 
         if self.config.minify:
-            rendered = _minify(
-                rendered, self.config.template_is_markdown, self.config.template_is_html
-            )
+            rendered = _minify(rendered, self.config.template_is_markdown, self.config.template_is_html)
 
         return rendered
