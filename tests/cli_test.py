@@ -166,7 +166,7 @@ def test_config_parameters_flags_yes() -> None:
 
         with open("schema_doc.html", "r", encoding="utf-8") as schema_doc:
             soup = BeautifulSoup(schema_doc.read(), "html.parser")
-            expand_button = soup.find("button", text="Expand all")
+            expand_button = soup.find("button", string="Expand all")
             assert expand_button
 
 
