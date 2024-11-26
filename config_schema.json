@@ -104,11 +104,10 @@
       "type": "object",
       "default": {
         "fenced-code-blocks": {
-          "break-on-newline": true,
-          "cssclass": "highlight jumbotron",
-          "tables": null
+          "cssclass": "highlight jumbotron"
         },
-        "tables": null
+        "tables": null,
+        "break-on-newline": true,
       },
       "description": "[Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for the descriptions. `description_is_markdown` must be true for this to have any effect.\n\n**WARNING**\nAdding an extra, even if the value is false, will activate it. For example `{\"break-on-newline\": false}` will activate the `break-on-newline` extra.",
       "examples": [
