@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/coveooss/json-schema-for-humans/compare/v1.0.3...v1.0.4) (2024-11-27)
+
+
+### Bug Fixes
+
+* **python:** support python3.13 and drop python3.8 ([#273](https://github.com/coveooss/json-schema-for-humans/issues/273)) ([063410e](https://github.com/coveooss/json-schema-for-humans/commit/063410e6cf13975c0a01280c404287a996a537dd))
+
 ## [1.0.3](https://github.com/coveooss/json-schema-for-humans/compare/v1.0.2...v1.0.3) (2024-08-30)
 
 

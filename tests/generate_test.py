@@ -1,14 +1,12 @@
 import os
 import tempfile
-from io import TextIOWrapper
-from typing import Any, Dict, cast
+from typing import Any, Dict
 from unittest.mock import Mock
 
 import pytest
 from bs4 import BeautifulSoup
 
 import tests.html_schema_doc_asserts
-from json_schema_for_humans.const import FileLikeType
 from json_schema_for_humans.generate import generate_from_file_object
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
 from json_schema_for_humans.schema.schema_to_render import SchemaToRender
@@ -548,7 +546,7 @@ def test_html_in_patterns() -> None:
 def test_yaml() -> None:
     """Test loading the schema from a YAML file. The schema is the same as the case "with_definitions"."""
     with tempfile.NamedTemporaryFile(mode="w+") as temp_file:
-        with open(os.path.abspath(os.path.join(examples_dir, "cases", f"yaml.yaml"))) as schema_fp:
+        with open(os.path.abspath(os.path.join(examples_dir, "cases", "yaml.yaml"))) as schema_fp:
             generate_from_file_object(schema_fp, temp_file, True, False, False, True)
 
         temp_file.seek(0)
@@ -579,7 +577,7 @@ def test_json_with_tabs() -> None:
     """Test loading the schema when tabs are present rather than spaces. Regression test for #45"""
     temp_schema_file = tempfile.NamedTemporaryFile(mode="w+", delete=False, suffix=".json")
     created_filename = temp_schema_file.name
-    with open(os.path.abspath(os.path.join(examples_dir, "cases", f"basic.json"))) as schema_fp:
+    with open(os.path.abspath(os.path.join(examples_dir, "cases", "basic.json"))) as schema_fp:
         for line in schema_fp:
             temp_schema_file.write(line.replace("  ", "\t"))
     with tempfile.NamedTemporaryFile(mode="w+") as temp_html_file:
