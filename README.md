@@ -99,7 +99,7 @@ The following methods are available to import from `json_schema_for_humans.gener
 | ------------------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------- | ------------------ |
 | generate_from_schema      | `schema_file` as str or `pathlib.Path`           | Rendered doc as a str                                                                                | No                 |
 | generate_from_filename    | `schema_file_name` as str or `pathlib.Path`      | Rendered doc written to the file at path `result_file_name`                                          | Yes                |
-w| generate_from_file_object | `schema_file` as an open file object (read mode) | Rendered doc written to the file at `result_file`, which must be an open file object (in write mode) | Yes                |
+| generate_from_file_object | `schema_file` as an open file object (read mode) | Rendered doc written to the file at `result_file`, which must be an open file object (in write mode) | Yes                |
 
 Notes:
 
