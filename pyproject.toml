@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "json-schema-for-humans"
-version = "1.0.4"
+version = "1.1.1"
 description = "Generate static HTML documentation from JSON schemas"
 authors = ["Denis Blanchette <tools@coveo.com>", "AbdulRahman Al Hamali <tools@coveo.com>"]
 license = "Apache-2.0"
@@ -30,7 +30,6 @@ include = [
 python = "^3.9"
 click = "^8.0.1"
 dataclasses-json = "^0.6.7"
-htmlmin2 = "^0.1.13"
 Jinja2 = ">3"
 markdown2 = "^2.5.0"
 Pygments = "^2.18.0"

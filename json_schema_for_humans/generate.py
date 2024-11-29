@@ -14,7 +14,7 @@ from json_schema_for_humans.template_renderer import TemplateRenderer
 def generate_from_schema(
     schema_file: Union[str, Path],
     loaded_schemas: Optional[Dict[str, Any]] = None,
-    minify: bool = True,
+    minify: bool = False,
     deprecated_from_description: bool = False,
     default_from_description: bool = False,
     expand_buttons: bool = False,
@@ -22,7 +22,6 @@ def generate_from_schema(
     config: Optional[GenerationConfiguration] = None,
 ) -> str:
     config = config or get_final_config(
-        minify=minify,
         deprecated_from_description=deprecated_from_description,
         default_from_description=default_from_description,
         expand_buttons=expand_buttons,
@@ -41,7 +40,7 @@ def generate_from_schema(
 def generate_from_filename(
     schema_file_name: Union[str, Path],
     result_file_name: str,
-    minify: bool = True,
+    minify: bool = False,
     deprecated_from_description: bool = False,
     default_from_description: bool = False,
     expand_buttons: bool = False,
@@ -52,7 +51,6 @@ def generate_from_filename(
 ) -> None:
     """Generate the schema documentation from a filename"""
     config = config or get_final_config(
-        minify=minify,
         deprecated_from_description=deprecated_from_description,
         default_from_description=default_from_description,
         expand_buttons=expand_buttons,
@@ -71,7 +69,7 @@ def generate_from_filename(
 def generate_from_file_object(
     schema_file: Union[FileLikeType, _TemporaryFileWrapper],
     result_file: Union[FileLikeType, _TemporaryFileWrapper],
-    minify: bool = True,
+    minify: bool = False,
     deprecated_from_description: bool = False,
     default_from_description: bool = False,
     expand_buttons: bool = False,
@@ -84,7 +82,6 @@ def generate_from_file_object(
     result_file should be opened in write mode.
     """
     config = config or get_final_config(
-        minify=minify,
         deprecated_from_description=deprecated_from_description,
         default_from_description=default_from_description,
         expand_buttons=expand_buttons,

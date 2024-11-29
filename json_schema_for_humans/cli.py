@@ -23,7 +23,6 @@ from json_schema_for_humans.template_renderer import TemplateRenderer
     help="Override generation parameters from the configuration file. "
     "Format is parameter_name=parameter_value. For example: --config minify=false. Can be repeated.",
 )
-@click.option("--minify/--no-minify", default=True, help="Run minification on the HTML result")
 @click.option(
     "--deprecated-from-description", is_flag=True, help="Look in the description to find if an attribute is deprecated"
 )
@@ -43,6 +42,7 @@ from json_schema_for_humans.template_renderer import TemplateRenderer
     help="If set and 2 parts of the schema refer to the same definition, the definition will only be rendered once "
     "and all other references will be replaced by a link.",
 )
+@click.option("--minify/--no-minify", default=False, help="Deprecated")
 def main(
     schema_files_or_dir: str,
     output_path_or_file: Optional[Path],
@@ -57,7 +57,6 @@ def main(
     link_to_reused_ref: bool,
 ) -> None:
     final_config = get_final_config(
-        minify=minify,
         deprecated_from_description=deprecated_from_description,
         default_from_description=default_from_description,
         expand_buttons=expand_buttons,

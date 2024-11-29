@@ -45,7 +45,7 @@
 <div class="card">
     <div class="card-header" id="minify">
         <h2 class="mb-0">
-            <a href="#minify"><span class="property-name">minify</span></a></h2>
+            <a href="#minify"><span class="property-name">minify</span></a> <span class="badge badge-danger deprecated-property">Deprecated</span></h2>
     </div>
 
     <div class="card-body property-definition-div">
@@ -65,7 +65,7 @@
 
 
 
-<p>Minify the output HTML document.</p>
+<p>[Deprecated]</p>
 
 
 
@@ -103,7 +103,45 @@
 
 
 
-<p>Whether to consider the description as markdown and render it accordingly.</p>
+<p>Applies to HTML templates only. Whether to consider the description as Markdown and render it accordingly.</p>
+
+
+
+
+
+        
+
+        
+        
+
+        
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header" id="allow_html_description">
+        <h2 class="mb-0">
+            <a href="#allow_html_description"><span class="property-name">allow_html_description</span></a></h2>
+    </div>
+
+    <div class="card-body property-definition-div">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#allow_html_description">allow_html_description</a></div><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: false</span><br/>
+
+
+
+
+
+
+
+<p>Applies to HTML templates only. Don&#39;t escape HTML tags in descriptions. Can be needed when description is Markdown and contains already escaped blocks</p>
 
 
 

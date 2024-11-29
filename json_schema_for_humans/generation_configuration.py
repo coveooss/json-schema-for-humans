@@ -36,6 +36,7 @@ class GenerationConfiguration:
 
     minify: bool = True
     description_is_markdown: bool = True
+    allow_html_description: bool = False
     deprecated_from_description: bool = False
     show_breadcrumbs: bool = True
     collapse_long_descriptions: bool = True
@@ -132,7 +133,6 @@ CONFIG_DEPRECATION_MESSAGE = (
 
 
 def get_final_config(
-    minify: bool,
     deprecated_from_description: bool,
     default_from_description: bool,
     expand_buttons: bool,
@@ -146,7 +146,6 @@ def get_final_config(
         final_config = _load_config(config)
     else:
         final_config = GenerationConfiguration(
-            minify=minify,
             deprecated_from_description=deprecated_from_description,
             default_from_description=default_from_description,
             expand_buttons=expand_buttons,
@@ -154,13 +153,7 @@ def get_final_config(
             copy_css=copy_css,
             copy_js=copy_js,
         )
-        if (
-            not minify
-            or deprecated_from_description
-            or default_from_description
-            or expand_buttons
-            or not link_to_reused_ref
-        ):
+        if deprecated_from_description or default_from_description or expand_buttons or not link_to_reused_ref:
             logging.info(CONFIG_DEPRECATION_MESSAGE)
 
     if config_parameters:

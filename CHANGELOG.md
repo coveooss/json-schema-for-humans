@@ -1,3 +1,17 @@
+## [1.1.1](https://github.com/coveooss/json-schema-for-humans/compare/v1.1.0...v1.1.1) (2024-11-29)
+
+
+### Bug Fixes
+
+* Deprecate `minify` CLI option ([b428474](https://github.com/coveooss/json-schema-for-humans/commit/b428474ba6eeee0c0dd66ce9ae842a4a46c3b3d6))
+
+# [1.1.0](https://github.com/coveooss/json-schema-for-humans/compare/v1.0.4...v1.1.0) (2024-11-29)
+
+
+### Features
+
+* Add `allow_html_description` config option ([#282](https://github.com/coveooss/json-schema-for-humans/issues/282)) ([6c5f00e](https://github.com/coveooss/json-schema-for-humans/commit/6c5f00e9d74095214a74820800d7389fac1ddcbe))
+
 ## [1.0.4](https://github.com/coveooss/json-schema-for-humans/compare/v1.0.3...v1.0.4) (2024-11-27)
 
 

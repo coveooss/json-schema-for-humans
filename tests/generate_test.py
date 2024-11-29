@@ -386,7 +386,7 @@ def test_description_markdown_with_default_options() -> None:
 
     assert (
         str(soup.find("span", class_="description"))
-        == '<span class="description"><p>DOC<br/> * List 1<br/> * List 2</p> </span>'
+        == '<span class="description"><p>DOC<br/>\n* List 1<br/>\n* List 2</p>\n</span>'
     )
 
 
@@ -403,7 +403,7 @@ def test_description_markdown_with_custom_options() -> None:
 
     assert (
         str(soup.find("span", class_="description"))
-        == """<span class="description"><p>DOC </p> <ul> <li>List 1</li> <li>List 2</li> </ul> </span>"""
+        == """<span class="description"><p>DOC </p>\n<ul>\n<li>List 1</li>\n<li>List 2</li>\n</ul>\n</span>"""
     )
 
 
@@ -675,7 +675,7 @@ def test_complex_const() -> None:
 
     tests.html_schema_doc_asserts.assert_types(soup, ["const", "const", "const"])
     tests.html_schema_doc_asserts.assert_const(
-        soup, ["[ 1, 2 ]", '{ "a_key": "a_value", "another_key": "another_value" }', "0"]
+        soup, ["[\n    1,\n    2\n]", '{\n    "a_key": "a_value",\n    "another_key": "another_value"\n}', "0"]
     )
 
 
