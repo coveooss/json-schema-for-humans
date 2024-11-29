@@ -3,11 +3,11 @@
 - [1. Property `root > fruits`](#fruits)
   - [1.1. root > fruits > fruits items](#fruits_items)
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 **Description:** A schema with an array
 

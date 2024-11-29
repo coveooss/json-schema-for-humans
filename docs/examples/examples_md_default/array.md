@@ -7,11 +7,11 @@
     - [2.1.1. Property `root > vegetables > vegetables items > veggieName`](#vegetables_items_veggieName)
     - [2.1.2. Property `root > vegetables > vegetables items > veggieLike`](#vegetables_items_veggieLike)
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 **Description:** A schema with an array
 
@@ -67,12 +67,12 @@
 
 ### <a name="vegetables_items"></a>2.1. root > vegetables > veggie
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/veggie                                                      |
+|                           |                      |
+| ------------------------- | -------------------- |
+| **Type**                  | `object`             |
+| **Required**              | No                   |
+| **Additional properties** | Any type allowed     |
+| **Defined in**            | #/definitions/veggie |
 
 | Property                                      | Pattern | Type    | Deprecated | Definition | Title/Description          |
 | --------------------------------------------- | ------- | ------- | ---------- | ---------- | -------------------------- |

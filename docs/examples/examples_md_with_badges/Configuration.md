@@ -32,10 +32,10 @@
 
 **Title:** JSON Schema for Humans configuration file
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 **Description:** Choose how to generate JSON Schema for Humans documentation file.
 
@@ -276,7 +276,7 @@ This is the old behaviour and is only needed for browsers that do not support HT
 |                           |                                                                                                                                     |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                                                                            |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.")   |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)                                                         |
 | **Default**               | `{"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": null, "breaks": {"on_newline": true, "on_backslash": true}}` |
 
 **Description:** (Only used with `description_is_markdown`)
@@ -297,10 +297,10 @@ This is the old behaviour and is only needed for browsers that do not support HT
 
 ## <a name="template_md_options"></a>19. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 **Description:** specific options to md template
 
@@ -400,30 +400,33 @@ Must be one of:
 
 ## <a name="allow_html_description"></a>22. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > allow_html_description`~~
 
-|                |                                                            |
-| -------------- | ---------------------------------------------------------- |
-| **Type**       | `boolean`                                                  |
-| **Deprecated** | ![Deprecated](https://img.shields.io/badge/Deprecated-red) |
-| **Default**    | `false`                                                    |
+|                |           |
+| -------------- | --------- |
+| **Type**       | `boolean` |
+| **Deprecated** |
+| !              | [         | D | e | p | r | e | c | a | t | e | d | ] | ( | h | t | t | p | s | : | / | / | i | m | g | . | s | h | i | e | l | d | s | . | i | o | / | b | a | d | g | e | / | D | e | p | r | e | c | a | t | e | d | - | r | e | d | ) |
+| **Default**    | `false`   |
 
 **Description:** [Deprecated]
 
 ## <a name="minify"></a>23. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > minify`~~
 
-|                |                                                            |
-| -------------- | ---------------------------------------------------------- |
-| **Type**       | `boolean`                                                  |
-| **Deprecated** | ![Deprecated](https://img.shields.io/badge/Deprecated-red) |
-| **Default**    | `true`                                                     |
+|                |           |
+| -------------- | --------- |
+| **Type**       | `boolean` |
+| **Deprecated** |
+| !              | [         | D | e | p | r | e | c | a | t | e | d | ] | ( | h | t | t | p | s | : | / | / | i | m | g | . | s | h | i | e | l | d | s | . | i | o | / | b | a | d | g | e | / | D | e | p | r | e | c | a | t | e | d | - | r | e | d | ) |
+| **Default**    | `true`    |
 
 **Description:** [Deprecated]
 
 ## <a name="templates_directory"></a>24. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > templates_directory`~~
 
-|                |                                                            |
-| -------------- | ---------------------------------------------------------- |
-| **Type**       | `string`                                                   |
-| **Deprecated** | ![Deprecated](https://img.shields.io/badge/Deprecated-red) |
+|                |          |
+| -------------- | -------- |
+| **Type**       | `string` |
+| **Deprecated** |
+| !              | [        | D | e | p | r | e | c | a | t | e | d | ] | ( | h | t | t | p | s | : | / | / | i | m | g | . | s | h | i | e | l | d | s | . | i | o | / | b | a | d | g | e | / | D | e | p | r | e | c | a | t | e | d | - | r | e | d | ) |
 
 **Description:** [Deprecated]
 

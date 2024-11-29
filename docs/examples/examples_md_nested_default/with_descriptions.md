@@ -13,11 +13,11 @@
 
 **Title:** Delivery Schema
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 <details>
 <summary>
@@ -26,12 +26,12 @@
 </summary>
 <blockquote>
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/address                                                     |
+|                           |                       |
+| ------------------------- | --------------------- |
+| **Type**                  | `object`              |
+| **Required**              | No                    |
+| **Additional properties** | Any type allowed      |
+| **Defined in**            | #/definitions/address |
 
 **Description:** Exact address
 
@@ -90,12 +90,12 @@
 </summary>
 <blockquote>
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | [shipping_address](#shipping_address)                                     |
+|                           |                                       |
+| ------------------------- | ------------------------------------- |
+| **Type**                  | `object`                              |
+| **Required**              | No                                    |
+| **Additional properties** | Any type allowed                      |
+| **Same definition as**    | [shipping_address](#shipping_address) |
 
 **Description:** Exact address
 
@@ -109,12 +109,12 @@
 </summary>
 <blockquote>
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `combining`                                                               |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/delivery_info                                               |
+|                           |                             |
+| ------------------------- | --------------------------- |
+| **Type**                  | `combining`                 |
+| **Required**              | No                          |
+| **Additional properties** | Any type allowed            |
+| **Defined in**            | #/definitions/delivery_info |
 
 **Description:** Delivery info depending on the delivery type
 
@@ -129,12 +129,12 @@
 
 ### <a name="delivery_info_oneOf_i0"></a>3.1. Property `Delivery Schema > delivery_info > oneOf > classic`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/classic                                                     |
+|                           |                       |
+| ------------------------- | --------------------- |
+| **Type**                  | `object`              |
+| **Required**              | No                    |
+| **Additional properties** | Any type allowed      |
+| **Defined in**            | #/definitions/classic |
 
 <details>
 <summary>
@@ -156,12 +156,12 @@
 
 ### <a name="delivery_info_oneOf_i1"></a>3.2. Property `Delivery Schema > delivery_info > oneOf > gift`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/gift                                                        |
+|                           |                    |
+| ------------------------- | ------------------ |
+| **Type**                  | `object`           |
+| **Required**              | No                 |
+| **Additional properties** | Any type allowed   |
+| **Defined in**            | #/definitions/gift |
 
 **Description:** The delivery is a gift, no prices displayed
 

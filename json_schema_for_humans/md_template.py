@@ -30,7 +30,7 @@ def get_numeric_maximum_restriction(schema_node: SchemaNode, default: str = "N/A
 
 
 def escape_for_table(example_text: Optional[str]) -> str:
-    """Filter. escape characters('|', '`') in string to be inserted into markdown table"""
+    """Filter. escape characters('|', '`') in string to be inserted into Markdown table"""
     if example_text is None:
         return ""
     return example_text.translate(str.maketrans({"|": "\\|", "`": "\\`", "\n": "<br />"}))  # type:ignore[arg-type]
@@ -181,6 +181,20 @@ class MarkdownTemplate(object):
         self.toc = {}
         self.config = config
 
+        self.should_conform_badge = self.badge("Should-conform", "blue")
+        if self.config.md_badge_as_image:
+            self.badge_not_allowed = self.badge("Not allowed", "red")
+            self.badge_allowed = self.badge("Any type", "green", "allowed")
+            self.deprecated_badge = self.badge("Deprecated", "red")
+            self.required_badge = self.badge("Required", "blue")
+            self.optional_badge = self.badge("Optional", "yellow")
+        else:
+            self.badge_not_allowed = "Not allowed"
+            self.badge_allowed = "Any type allowed"
+            self.deprecated_badge = "Deprecated"
+            self.required_badge = ""
+            self.optional_badge = ""
+
     def register_jinja(self, env: jinja2.Environment):
         env.filters["md_get_numeric_minimum_restriction"] = get_numeric_minimum_restriction
         env.filters["md_get_numeric_maximum_restriction"] = get_numeric_maximum_restriction
@@ -194,7 +208,8 @@ class MarkdownTemplate(object):
         env.filters["md_restrictions_table"] = restrictions_table
         env.filters["md_generate_table"] = generate_table
 
-        env.globals["md_badge"] = self.badge
+        env.globals["required_badge"] = self.required_badge
+        env.globals["optional_badge"] = self.optional_badge
         env.globals["md_get_toc"] = self.get_toc
 
     def heading(self, title: str, depth: int, html_id: Union[bool, str] = False, nested: bool = False) -> str:
@@ -285,30 +300,21 @@ class MarkdownTemplate(object):
         """Format a Markdown link"""
         return f"[{title}](#{link} {tooltip})"
 
-    def badge(self, name: str, color: str, value: str = "", show_text: bool = False, fallback: bool = True) -> str:
+    def badge(self, name: str, color: str, value: str = "") -> str:
         """
-        Badge as markdown image link if badge_as_image option set otherwise Badge as text.
-
-        If fallback is False, nothing will be returned if badge_as_image is false.
+        Badge as markdown image link
         """
-        show_image = self.config.template_md_options.get("badge_as_image")
-        if not show_image and not fallback:
-            return ""
-
         if value:
             text_badge = f"{name}: {value}"
         else:
             text_badge = name
 
-        if show_image and not show_text:
-            value_str = ""
-            if value:
-                value_str = "-" + quote(value)
-            name = quote(name)
-            color = quote(color)
-            return f"![{text_badge}](https://img.shields.io/badge/{name}{value_str}-{color})"
-        else:
-            return f"[{text_badge}]"
+        value_str = ""
+        if value:
+            value_str = "-" + quote(value)
+        name = quote(name)
+        color = quote(color)
+        return f"![{text_badge}](https://img.shields.io/badge/{name}{value_str}-{color})"
 
     def properties_table(self, schema: SchemaNode) -> List[List]:
         """
@@ -337,9 +343,7 @@ class MarkdownTemplate(object):
                     )
                 elif field == "Deprecated":
                     # Deprecated
-                    line.append(
-                        self.badge("Deprecated", "red") if jinja_filters.deprecated(self.config, sub_property) else "No"
-                    )
+                    line.append(self.deprecated_badge if jinja_filters.deprecated(self.config, sub_property) else "No")
                 elif field == "Definition":
                     # Link
                     if sub_property.should_be_a_link(self.config):
@@ -392,10 +396,12 @@ class MarkdownTemplate(object):
         type_info.append(
             ["**Type**", "`combining`" if jinja_filters.is_combining(merged_schema) else f"`{schema_type}`"]
         )
-        if not self.config.template_md_options.get("badge_as_image"):
+        if not self.config.md_badge_as_image:
             type_info.append(["**Required**", "Yes" if schema.is_required_property else "No"])
         if jinja_filters.deprecated(self.config, merged_schema):
-            type_info.append(["**Deprecated**", self.badge("Deprecated", "red")])
+            type_info.append(["**Deprecated**"])
+            if self.config.md_badge_as_image:
+                type_info.append(self.deprecated_badge)
 
         if schema_format:
             type_info.append(["**Format**", f"`{schema_format}`"])
@@ -416,25 +422,25 @@ class MarkdownTemplate(object):
     def additional_properties(self, schema: SchemaNode) -> str:
         """additional properties badge generation"""
         additional_properties = ""
+
         for sub_property in schema.iterate_properties:
             if sub_property.is_additional_properties:
                 if sub_property.is_additional_properties_schema:
                     html_id = sub_property.html_id
-                    should_conform_badge = self.badge("Should-conform", "blue")
-                    additional_properties = f'[{should_conform_badge}](#{html_id} "Each additional property must conform to the following schema")'
+                    if self.config.md_badge_as_image:
+                        additional_properties = f"[{self.should_conform_badge}](#{html_id})"
+                    else:
+                        additional_properties = f"[Each additional property must conform to the schema](#{html_id})"
                     break
                 else:
-                    badge_any_type = self.badge("Any type", "green", "allowed")
-                    additional_properties = f'[{badge_any_type}](# "Additional Properties of any type are allowed.")'
+                    additional_properties = self.badge_allowed
                     break
 
         if not additional_properties:
             if schema.explicit_no_additional_properties:
-                badge_not_allowed = self.badge("Not allowed", "red")
-                additional_properties = f'[{badge_not_allowed}](# "Additional Properties not allowed.")'
+                additional_properties = self.badge_not_allowed
             else:
-                badge_allowed = self.badge("Any type", "green", "allowed")
-                additional_properties = f'[{badge_allowed}](# "Additional Properties of any type are allowed.")'
+                additional_properties = self.badge_allowed
 
         return additional_properties
 

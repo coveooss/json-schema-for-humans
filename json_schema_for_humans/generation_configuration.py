@@ -132,6 +132,10 @@ class GenerationConfiguration:
             / f"base.{DocumentationTemplate(self.template_name).result_extension}"
         )
 
+    @property
+    def md_badge_as_image(self) -> bool:
+        return (self.template_md_options or {}).get("badge_as_image") is True
+
 
 CONFIG_DEPRECATION_MESSAGE = (
     "JSON Schema for humans: Please supply a GenerationConfiguration object instead of individual options"

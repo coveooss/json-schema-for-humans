@@ -10,11 +10,11 @@
 
 **Title:** Person
 
-|                           |                                                                                                           |
-| ------------------------- | --------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                  |
-| **Required**              | No                                                                                                        |
-| **Additional properties** | [[Should-conform]](#additionalProperties "Each additional property must conform to the following schema") |
+|                           |                                                                              |
+| ------------------------- | ---------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                     |
+| **Required**              | No                                                                           |
+| **Additional properties** | [Each additional property must conform to the schema](#additionalProperties) |
 
 <details>
 <summary>
@@ -23,11 +23,11 @@
 </summary>
 <blockquote>
 
-|                           |                                                         |
-| ------------------------- | ------------------------------------------------------- |
-| **Type**                  | `object`                                                |
-| **Required**              | No                                                      |
-| **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
+|                           |             |
+| ------------------------- | ----------- |
+| **Type**                  | `object`    |
+| **Required**              | No          |
+| **Additional properties** | Not allowed |
 
 **Description:** A sub type with additionalProperties false.
 
@@ -56,11 +56,11 @@
 </summary>
 <blockquote>
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 **Description:** A sub type with additionalProperties true.
 
@@ -106,11 +106,11 @@
 </summary>
 <blockquote>
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 **Description:** additionalProperties schema.
 

@@ -6,11 +6,11 @@
   - [1.3. Property `root > storage > oneOf > nfs`](#storage_oneOf_i2)
   - [1.4. Property `root > storage > oneOf > tmpfs`](#storage_oneOf_i3)
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 **Description:** JSON Schema for an fstab entry
 
@@ -20,11 +20,11 @@
 
 ## <a name="storage"></a>1. Property `root > storage`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `combining`                                                               |
-| **Required**              | Yes                                                                       |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `combining`      |
+| **Required**              | Yes              |
+| **Additional properties** | Any type allowed |
 
 | One of(Option)                  |
 | ------------------------------- |
@@ -35,39 +35,39 @@
 
 ### <a name="storage_oneOf_i0"></a>1.1. Property `root > storage > oneOf > diskDevice`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/diskDevice                                                  |
+|                           |                          |
+| ------------------------- | ------------------------ |
+| **Type**                  | `object`                 |
+| **Required**              | No                       |
+| **Additional properties** | Any type allowed         |
+| **Defined in**            | #/definitions/diskDevice |
 
 ### <a name="storage_oneOf_i1"></a>1.2. Property `root > storage > oneOf > diskUUID`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/diskUUID                                                    |
+|                           |                        |
+| ------------------------- | ---------------------- |
+| **Type**                  | `object`               |
+| **Required**              | No                     |
+| **Additional properties** | Any type allowed       |
+| **Defined in**            | #/definitions/diskUUID |
 
 ### <a name="storage_oneOf_i2"></a>1.3. Property `root > storage > oneOf > nfs`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/nfs                                                         |
+|                           |                   |
+| ------------------------- | ----------------- |
+| **Type**                  | `object`          |
+| **Required**              | No                |
+| **Additional properties** | Any type allowed  |
+| **Defined in**            | #/definitions/nfs |
 
 ### <a name="storage_oneOf_i3"></a>1.4. Property `root > storage > oneOf > tmpfs`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/tmpfs                                                       |
+|                           |                     |
+| ------------------------- | ------------------- |
+| **Type**                  | `object`            |
+| **Required**              | No                  |
+| **Additional properties** | Any type allowed    |
+| **Defined in**            | #/definitions/tmpfs |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

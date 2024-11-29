@@ -32,11 +32,11 @@
 
 **Title:** JSON Schema for Humans configuration file
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 **Description:** Choose how to generate JSON Schema for Humans documentation file.
 
@@ -409,7 +409,7 @@ This is the old behaviour and is only needed for browsers that do not support HT
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                                                                            |
 | **Required**              | No                                                                                                                                  |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.")                                                           |
+| **Additional properties** | Any type allowed                                                                                                                    |
 | **Default**               | `{"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": null, "breaks": {"on_newline": true, "on_backslash": true}}` |
 
 **Description:** (Only used with `description_is_markdown`)
@@ -438,11 +438,11 @@ This is the old behaviour and is only needed for browsers that do not support HT
 </summary>
 <blockquote>
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 **Description:** specific options to md template
 
@@ -598,12 +598,12 @@ Must be one of:
 </summary>
 <blockquote>
 
-|                |              |
-| -------------- | ------------ |
-| **Type**       | `boolean`    |
-| **Required**   | No           |
-| **Deprecated** | [Deprecated] |
-| **Default**    | `false`      |
+|                |           |
+| -------------- | --------- |
+| **Type**       | `boolean` |
+| **Required**   | No        |
+| **Deprecated** |
+| **Default**    | `false`   |
 
 **Description:** [Deprecated]
 
@@ -617,12 +617,12 @@ Must be one of:
 </summary>
 <blockquote>
 
-|                |              |
-| -------------- | ------------ |
-| **Type**       | `boolean`    |
-| **Required**   | No           |
-| **Deprecated** | [Deprecated] |
-| **Default**    | `true`       |
+|                |           |
+| -------------- | --------- |
+| **Type**       | `boolean` |
+| **Required**   | No        |
+| **Deprecated** |
+| **Default**    | `true`    |
 
 **Description:** [Deprecated]
 
@@ -636,11 +636,11 @@ Must be one of:
 </summary>
 <blockquote>
 
-|                |              |
-| -------------- | ------------ |
-| **Type**       | `string`     |
-| **Required**   | No           |
-| **Deprecated** | [Deprecated] |
+|                |          |
+| -------------- | -------- |
+| **Type**       | `string` |
+| **Required**   | No       |
+| **Deprecated** |
 
 **Description:** [Deprecated]
 

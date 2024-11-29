@@ -5,11 +5,11 @@
   - [1.2. Property `root > address > city`](#address_city)
   - [1.3. Property `root > address > state`](#address_state)
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 **Description:** Testing $ref with URL with YAML destination
 
@@ -23,7 +23,7 @@
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                                                                  |
 | **Required**              | No                                                                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.")                                                 |
+| **Additional properties** | Any type allowed                                                                                                          |
 | **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/yaml.yaml#/definitions/address |
 
 | Property                                     | Pattern | Type   | Deprecated | Definition | Title/Description |

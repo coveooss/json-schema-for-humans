@@ -4,10 +4,10 @@
   - [1.1. [Optional] Property root > described > name](#described_name)
   - [1.2. [Optional] Property root > described > alignment](#described_alignment)
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 **Description:** Testing $ref of a remote $ref
 
@@ -21,7 +21,7 @@
 |                           |                                                                                                                      |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                                                             |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.")             |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red)                                                       |
 | **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/description_from_ref.json |
 
 <details>

@@ -4,11 +4,11 @@
   - [1.1. Property `root > described > name`](#described_name)
   - [1.2. Property `root > described > alignment`](#described_alignment)
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 **Description:** Testing $ref of a remote $ref
 
@@ -22,7 +22,7 @@
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                                                             |
 | **Required**              | No                                                                                                                   |
-| **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.")                                                              |
+| **Additional properties** | Not allowed                                                                                                          |
 | **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/description_from_ref.json |
 
 | Property                             | Pattern | Type   | Deprecated | Definition                       | Title/Description |
