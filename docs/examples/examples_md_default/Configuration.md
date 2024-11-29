@@ -46,7 +46,7 @@ Configuration parameters can be provided in several ways:
 
 | Property                                                       | Pattern | Type             | Deprecated   | Definition | Title/Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | -------------------------------------------------------------- | ------- | ---------------- | ------------ | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| - [minify](#minify )                                           | No      | boolean          | No           | -          | Minify the output HTML document.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| - [minify](#minify )                                           | No      | boolean          | No           | -          | Minify the output document (markdown only).                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | - [description_is_markdown](#description_is_markdown )         | No      | boolean          | No           | -          | Whether to consider the description as markdown and render it accordingly.                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | - [expand_buttons](#expand_buttons )                           | No      | boolean          | No           | -          | Add an \`Expand all\` and a \`Collapse all\` button at the top of the generated documentation.                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | - [show_breadcrumbs](#show_breadcrumbs )                       | No      | boolean          | No           | -          | For each property, show the relative place of that property in the schema.                                                                                                                                                                                                                                                                                                                                                                                                                                             |
@@ -77,7 +77,7 @@ Configuration parameters can be provided in several ways:
 | **Required** | No        |
 | **Default**  | `true`    |
 
-**Description:** Minify the output HTML document.
+**Description:** Minify the output document (markdown only).
 
 ## <a name="description_is_markdown"></a>2. Property `JSON Schema for Humans configuration file > description_is_markdown`
 
@@ -286,12 +286,12 @@ This is the old behaviour and is only needed for browsers that do not support HT
 
 ## <a name="markdown_options"></a>19. Property `JSON Schema for Humans configuration file > markdown_options`
 
-|                           |                                                                                                                         |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                |
-| **Required**              | No                                                                                                                      |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.")                                               |
-| **Default**               | `{"fenced-code-blocks": {"break-on-newline": true, "cssclass": "highlight jumbotron", "tables": null}, "tables": null}` |
+|                           |                                                                                                         |
+| ------------------------- | ------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                |
+| **Required**              | No                                                                                                      |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.")                               |
+| **Default**               | `{"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": null, "break-on-newline": true}` |
 
 **Description:** [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for the descriptions. `description_is_markdown` must be true for this to have any effect.
 

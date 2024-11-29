@@ -57,7 +57,7 @@ Configuration parameters can be provided in several ways:
 | **Required** | No        |
 | **Default**  | `true`    |
 
-**Description:** Minify the output HTML document.
+**Description:** Minify the output document (markdown only).
 
 </blockquote>
 </details>
@@ -410,12 +410,12 @@ This is the old behaviour and is only needed for browsers that do not support HT
 </summary>
 <blockquote>
 
-|                           |                                                                                                                         |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                |
-| **Required**              | No                                                                                                                      |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.")                                               |
-| **Default**               | `{"fenced-code-blocks": {"break-on-newline": true, "cssclass": "highlight jumbotron", "tables": null}, "tables": null}` |
+|                           |                                                                                                         |
+| ------------------------- | ------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                |
+| **Required**              | No                                                                                                      |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.")                               |
+| **Default**               | `{"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": null, "break-on-newline": true}` |
 
 **Description:** [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for the descriptions. `description_is_markdown` must be true for this to have any effect.
 

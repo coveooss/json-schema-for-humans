@@ -55,7 +55,7 @@ Configuration parameters can be provided in several ways:
 | **Type**    | `boolean` |
 | **Default** | `true`    |
 
-**Description:** Minify the output HTML document.
+**Description:** Minify the output document (markdown only).
 
 </blockquote>
 </details>
@@ -395,7 +395,7 @@ This is the old behaviour and is only needed for browsers that do not support HT
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `{"fenced-code-blocks": {"break-on-newline": true, "cssclass": "highlight jumbotron", "tables": null}, "tables": null}`           |
+| **Default**               | `{"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": null, "break-on-newline": true}`                           |
 
 **Description:** [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for the descriptions. `description_is_markdown` must be true for this to have any effect.
 
