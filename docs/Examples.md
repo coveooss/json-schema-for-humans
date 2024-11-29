@@ -1608,6 +1608,72 @@ the description of an attribute
 [examples/examples_md_nested_with_badges/geo.md](examples/examples_md_nested_with_badges/geo.md ':include')
 </details>
 
+## --html_in_description--
+### html_in_description
+
+
+<details>
+<summary>Json schema - Click here to expand source code...</summary>
+
+[examples/cases/html_in_description.json](examples/cases/html_in_description.json ':include :type=code')
+</details>
+
+
+<details>
+<summary>JS template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/html_in_description.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_default/html_in_description.html](examples/examples_js_default/html_in_description.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/html_in_description.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/html_in_description.html](examples/examples_js_offline_default/html_in_description.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Flat template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/html_in_description.html" target="_blank">Open it in full page</a>
+
+[examples/examples_flat_default/html_in_description.html](examples/examples_flat_default/html_in_description.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Markdown without badge template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_default/html_in_description.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_default/html_in_description.md](examples/examples_md_default/html_in_description.md ':include')
+</details>
+
+
+<details>
+<summary>Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_with_badges/html_in_description.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_with_badges/html_in_description.md](examples/examples_md_with_badges/html_in_description.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown without badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_nested_default/html_in_description.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_default/html_in_description.md](examples/examples_md_nested_default/html_in_description.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_nested_with_badges/html_in_description.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_with_badges/html_in_description.md](examples/examples_md_nested_with_badges/html_in_description.md ':include')
+</details>
+
 ## --html_in_patterns--
 ### html_in_patterns
 
