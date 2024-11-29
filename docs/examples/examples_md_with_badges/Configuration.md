@@ -1,33 +1,34 @@
 # JSON Schema for Humans configuration file
 
-- [1. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > minify`~~](#minify)
-- [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > description_is_markdown`](#description_is_markdown)
-- [3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > allow_html_description`](#allow_html_description)
-- [4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > expand_buttons`](#expand_buttons)
-- [5. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > show_breadcrumbs`](#show_breadcrumbs)
-- [6. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > collapse_long_descriptions`](#collapse_long_descriptions)
-- [7. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > collapse_long_examples`](#collapse_long_examples)
-- [8. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > link_to_reused_ref`](#link_to_reused_ref)
-- [9. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > recursive_detection_depth`](#recursive_detection_depth)
-- [10. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > deprecated_from_description`~~](#deprecated_from_description)
-- [11. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > default_from_description`](#default_from_description)
-- [12. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > copy_css`](#copy_css)
-- [13. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > copy_js`](#copy_js)
-- [14. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > templates_directory`~~](#templates_directory)
-- [15. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_name`](#template_name)
-- [16. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > custom_template_path`](#custom_template_path)
-- [17. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > show_toc`](#show_toc)
-- [18. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > examples_as_yaml`](#examples_as_yaml)
-- [19. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > old_anchor_links`](#old_anchor_links)
-- [20. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > markdown_options`](#markdown_options)
-- [21. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options`](#template_md_options)
-  - [21.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`](#template_md_options_badge_as_image)
-  - [21.2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`](#template_md_options_show_heading_numbers)
-  - [21.3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`](#template_md_options_show_array_restrictions)
-  - [21.4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > properties_table_columns`](#template_md_options_properties_table_columns)
-    - [21.4.1. JSON Schema for Humans configuration file > template_md_options > properties_table_columns > properties_table_columns items](#template_md_options_properties_table_columns_items)
-- [22. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > with_footer`](#with_footer)
-- [23. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > footer_show_time`](#footer_show_time)
+- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > description_is_markdown`](#description_is_markdown)
+- [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > description_safe_mode`](#description_safe_mode)
+- [3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > expand_buttons`](#expand_buttons)
+- [4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > show_breadcrumbs`](#show_breadcrumbs)
+- [5. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > collapse_long_descriptions`](#collapse_long_descriptions)
+- [6. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > collapse_long_examples`](#collapse_long_examples)
+- [7. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > link_to_reused_ref`](#link_to_reused_ref)
+- [8. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > recursive_detection_depth`](#recursive_detection_depth)
+- [9. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > deprecated_from_description`](#deprecated_from_description)
+- [10. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > default_from_description`](#default_from_description)
+- [11. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > copy_css`](#copy_css)
+- [12. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > copy_js`](#copy_js)
+- [13. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_name`](#template_name)
+- [14. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > custom_template_path`](#custom_template_path)
+- [15. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > show_toc`](#show_toc)
+- [16. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > examples_as_yaml`](#examples_as_yaml)
+- [17. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > old_anchor_links`](#old_anchor_links)
+- [18. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > markdown_options`](#markdown_options)
+- [19. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options`](#template_md_options)
+  - [19.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`](#template_md_options_badge_as_image)
+  - [19.2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`](#template_md_options_show_heading_numbers)
+  - [19.3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`](#template_md_options_show_array_restrictions)
+  - [19.4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > properties_table_columns`](#template_md_options_properties_table_columns)
+    - [19.4.1. JSON Schema for Humans configuration file > template_md_options > properties_table_columns > properties_table_columns items](#template_md_options_properties_table_columns_items)
+- [20. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > with_footer`](#with_footer)
+- [21. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > footer_show_time`](#footer_show_time)
+- [22. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > allow_html_description`~~](#allow_html_description)
+- [23. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > minify`~~](#minify)
+- [24. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > templates_directory`~~](#templates_directory)
 
 **Title:** JSON Schema for Humans configuration file
 
@@ -44,61 +45,64 @@ Configuration parameters can be provided in several ways:
 - On the CLI using a config file `--config-file config.json`
 - From code, by providing a GenerationConfiguration object to the called generation method.
 
-| Property                                                       | Pattern | Type             | Deprecated                                                 | Definition | Title/Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| -------------------------------------------------------------- | ------- | ---------------- | ---------------------------------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| - [minify](#minify )                                           | No      | boolean          | ![Deprecated](https://img.shields.io/badge/Deprecated-red) | -          | [Deprecated]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| - [description_is_markdown](#description_is_markdown )         | No      | boolean          | No                                                         | -          | Applies to HTML templates only. Whether to consider the description as Markdown and render it accordingly.                                                                                                                                                                                                                                                                                                                                                                                                             |
-| - [allow_html_description](#allow_html_description )           | No      | boolean          | No                                                         | -          | Applies to HTML templates only. Don't escape HTML tags in descriptions. Can be needed when description is Markdown and contains already escaped blocks                                                                                                                                                                                                                                                                                                                                                                 |
-| - [expand_buttons](#expand_buttons )                           | No      | boolean          | No                                                         | -          | Add an \`Expand all\` and a \`Collapse all\` button at the top of the generated documentation.                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| - [show_breadcrumbs](#show_breadcrumbs )                       | No      | boolean          | No                                                         | -          | For each property, show the relative place of that property in the schema.                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| - [collapse_long_descriptions](#collapse_long_descriptions )   | No      | boolean          | No                                                         | -          | If a description is considered big, show only the beginning and add a \`Read more\` button.                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| - [collapse_long_examples](#collapse_long_examples )           | No      | boolean          | No                                                         | -          | If an example is considered big, collapse it, it can be displayed with a \`Show\` option.                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| - [link_to_reused_ref](#link_to_reused_ref )                   | No      | boolean          | No                                                         | -          | If several \`$ref\` points to the same definition, only render the documentation for this definition the first time. All other occurrences are replaced by an anchor link to the first occurrence. The first occurrence is the one that is the least nested from the top of the schema and appears first in that nesting level.<br /><br />*Note*: If this option is off and the schema contains recursive definitions, the generation will crash!                                                                     |
-| - [recursive_detection_depth](#recursive_detection_depth )     | No      | integer          | No                                                         | -          | *Advanced option*<br />If \`link_to_reused_ref\` is false and a \`$ref\` in the schema refers to a parent of itself, we would get a \`RecursionError\` trying to render the documentation. To avoid this, each reference is checked for circular references.<br /><br />This option determines the number of times to recursively follow definitions looking for a circular reference.<br /><br />In other words, if a schema has a deeply nested element that refers to itself, this option may need to be increased. |
-| - [deprecated_from_description](#deprecated_from_description ) | No      | boolean          | ![Deprecated](https://img.shields.io/badge/Deprecated-red) | -          | Mark a property as deprecated (with a big red badge) if the description contains the string \`[Deprecated\`.                                                                                                                                                                                                                                                                                                                                                                                                           |
-| - [default_from_description](#default_from_description )       | No      | boolean          | No                                                         | -          | Extract the default value of a property from the description like this: \`\`[Default \`the_default_value\`]\`\`.<br /><br />The default value from the "default" attribute will be used in priority.                                                                                                                                                                                                                                                                                                                   |
-| - [copy_css](#copy_css )                                       | No      | boolean          | No                                                         | -          | Copy \`schema_doc.css\` to the same directory as \`RESULT_FILE\` after generation.                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| - [copy_js](#copy_js )                                         | No      | boolean          | No                                                         | -          | Copy \`schema_doc.min.js\` to the same directory as \`RESULT_FILE\` after generation.<br /><br />This file contains the logic for the anchor links.                                                                                                                                                                                                                                                                                                                                                                    |
-| - [templates_directory](#templates_directory )                 | No      | string           | ![Deprecated](https://img.shields.io/badge/Deprecated-red) | -          | [Deprecated]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| - [template_name](#template_name )                             | No      | enum (of string) | No                                                         | -          | The name of the built-in template to use to render the documentation.<br /><br />\`js\` is the default and uses javascript for anchor links, collapsible sections and tabs.<br /><br />\`js_offline\` is identical to \`js\` except that all CSS, fonts and JavaScript are bundled for offline use.<br /><br />\`flat\` uses no javascript, but has no interactivity.<br /><br />\`md\` is the markdown template.<br /><br />\`md_nested\` is the markdown template with collapsible nested sections.                  |
-| - [custom_template_path](#custom_template_path )               | No      | string           | No                                                         | -          | Path to a custom Jinja2 template file.<br /><br />There can be multiple files to split the template, but this path should be the entry point.<br /><br />If no output file is specified, the extension of the template file will be used to determine the output documentation extension. i.e. if the template is in ./custom_template/content.html, the resulting documentation will have the html extension.                                                                                                         |
-| - [show_toc](#show_toc )                                       | No      | boolean          | No                                                         | -          | Whether to render table of contents.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| - [examples_as_yaml](#examples_as_yaml )                       | No      | boolean          | No                                                         | -          | Whether to display examples as YAML instead of JSON                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| - [old_anchor_links](#old_anchor_links )                       | No      | boolean          | No                                                         | -          | Generate HTML ids for anchor links without special characters (keep only letters, digits, \`_\`, and \`-\`).<br /><br />This is the old behaviour and is only needed for browsers that do not support HTML 5.                                                                                                                                                                                                                                                                                                          |
-| - [markdown_options](#markdown_options )                       | No      | object           | No                                                         | -          | [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for the descriptions. \`description_is_markdown\` must be true for this to have any effect.<br /><br />**WARNING**<br />Adding an extra, even if the value is false, will activate it. For example \`{"break-on-newline": false}\` will activate the \`break-on-newline\` extra.                                                                                                                                                          |
-| - [template_md_options](#template_md_options )                 | No      | object           | No                                                         | -          | specific options to md template                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| - [with_footer](#with_footer )                                 | No      | boolean          | No                                                         | -          | Whether to show the footer linking to the library repo and with the generation datetime                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| - [footer_show_time](#footer_show_time )                       | No      | boolean          | No                                                         | -          | Whether the footer should display the generation time                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Property                                                       | Pattern | Type                     | Deprecated                                                 | Definition | Title/Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| -------------------------------------------------------------- | ------- | ------------------------ | ---------------------------------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| - [description_is_markdown](#description_is_markdown )         | No      | boolean                  | No                                                         | -          | (HTML outputs only)<br />Whether to consider the description as Markdown and render it accordingly.                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| - [description_safe_mode](#description_safe_mode )             | No      | enum (of null or string) | No                                                         | -          | (HTML outputs only)<br />(Only used with \`description_is_markdown\`)<br />How are HTML tags in descriptions handled. Correspond to the \`safe_mode\` option of the markdown2 library.<br /><br />- "escape": Escape all HTML tags in descriptions<br />- "replace": Replace HTML tags with \`[HTML_REMOVED]\`<br />- null: Allow HTML in descriptions                                                                                                                                                                 |
+| - [expand_buttons](#expand_buttons )                           | No      | boolean                  | No                                                         | -          | Add an \`Expand all\` and a \`Collapse all\` button at the top of the generated documentation.                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| - [show_breadcrumbs](#show_breadcrumbs )                       | No      | boolean                  | No                                                         | -          | For each property, show the relative place of that property in the schema.                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| - [collapse_long_descriptions](#collapse_long_descriptions )   | No      | boolean                  | No                                                         | -          | If a description is considered big, show only the beginning and add a \`Read more\` button.                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| - [collapse_long_examples](#collapse_long_examples )           | No      | boolean                  | No                                                         | -          | If an example is considered big, collapse it, it can be displayed with a \`Show\` option.                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| - [link_to_reused_ref](#link_to_reused_ref )                   | No      | boolean                  | No                                                         | -          | If several \`$ref\` points to the same definition, only render the documentation for this definition the first time. All other occurrences are replaced by an anchor link to the first occurrence. The first occurrence is the one that is the least nested from the top of the schema and appears first in that nesting level.<br /><br />*Note*: If this option is off and the schema contains recursive definitions, the generation will crash!                                                                     |
+| - [recursive_detection_depth](#recursive_detection_depth )     | No      | integer                  | No                                                         | -          | *Advanced option*<br />If \`link_to_reused_ref\` is false and a \`$ref\` in the schema refers to a parent of itself, we would get a \`RecursionError\` trying to render the documentation. To avoid this, each reference is checked for circular references.<br /><br />This option determines the number of times to recursively follow definitions looking for a circular reference.<br /><br />In other words, if a schema has a deeply nested element that refers to itself, this option may need to be increased. |
+| - [deprecated_from_description](#deprecated_from_description ) | No      | boolean                  | No                                                         | -          | Mark a property as deprecated (with a big red badge) if the description contains the string \`[​Deprecated\`.                                                                                                                                                                                                                                                                                                                                                                                                          |
+| - [default_from_description](#default_from_description )       | No      | boolean                  | No                                                         | -          | Extract the default value of a property from the description like this: \`\`[Default \`the_default_value\`]\`\`.<br /><br />The default value from the "default" attribute will be used in priority.                                                                                                                                                                                                                                                                                                                   |
+| - [copy_css](#copy_css )                                       | No      | boolean                  | No                                                         | -          | Copy \`schema_doc.css\` to the same directory as \`RESULT_FILE\` after generation.                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| - [copy_js](#copy_js )                                         | No      | boolean                  | No                                                         | -          | Copy \`schema_doc.min.js\` to the same directory as \`RESULT_FILE\` after generation.<br /><br />This file contains the logic for the anchor links.                                                                                                                                                                                                                                                                                                                                                                    |
+| - [template_name](#template_name )                             | No      | enum (of string)         | No                                                         | -          | The name of the built-in template to use to render the documentation.<br /><br />\`js\` is the default and uses javascript for anchor links, collapsible sections and tabs.<br /><br />\`js_offline\` is identical to \`js\` except that all CSS, fonts and JavaScript are bundled for offline use.<br /><br />\`flat\` uses no javascript, but has no interactivity.<br /><br />\`md\` is the markdown template.<br /><br />\`md_nested\` is the markdown template with collapsible nested sections.                  |
+| - [custom_template_path](#custom_template_path )               | No      | string                   | No                                                         | -          | Path to a custom Jinja2 template file.<br /><br />There can be multiple files to split the template, but this path should be the entry point.<br /><br />If no output file is specified, the extension of the template file will be used to determine the output documentation extension. i.e. if the template is in ./custom_template/content.html, the resulting documentation will have the html extension.                                                                                                         |
+| - [show_toc](#show_toc )                                       | No      | boolean                  | No                                                         | -          | Whether to render table of contents.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| - [examples_as_yaml](#examples_as_yaml )                       | No      | boolean                  | No                                                         | -          | Whether to display examples as YAML instead of JSON                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| - [old_anchor_links](#old_anchor_links )                       | No      | boolean                  | No                                                         | -          | Generate HTML ids for anchor links without special characters (keep only letters, digits, \`_\`, and \`-\`).<br /><br />This is the old behaviour and is only needed for browsers that do not support HTML 5.                                                                                                                                                                                                                                                                                                          |
+| - [markdown_options](#markdown_options )                       | No      | object                   | No                                                         | -          | [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for the descriptions. \`description_is_markdown\` must be true for this to have any effect.<br /><br />**WARNING**<br />Adding an extra, even if the value is false, will activate it. For example \`{"break-on-newline": false}\` will activate the \`break-on-newline\` extra.                                                                                                                                                          |
+| - [template_md_options](#template_md_options )                 | No      | object                   | No                                                         | -          | specific options to md template                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| - [with_footer](#with_footer )                                 | No      | boolean                  | No                                                         | -          | Whether to show the footer linking to the library repo and with the generation datetime                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| - [footer_show_time](#footer_show_time )                       | No      | boolean                  | No                                                         | -          | Whether the footer should display the generation time                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| - [allow_html_description](#allow_html_description )           | No      | boolean                  | ![Deprecated](https://img.shields.io/badge/Deprecated-red) | -          | [Deprecated]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| - [minify](#minify )                                           | No      | boolean                  | ![Deprecated](https://img.shields.io/badge/Deprecated-red) | -          | [Deprecated]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| - [templates_directory](#templates_directory )                 | No      | string                   | ![Deprecated](https://img.shields.io/badge/Deprecated-red) | -          | [Deprecated]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
-## <a name="minify"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > minify`~~
-
-|                |                                                            |
-| -------------- | ---------------------------------------------------------- |
-| **Type**       | `boolean`                                                  |
-| **Deprecated** | ![Deprecated](https://img.shields.io/badge/Deprecated-red) |
-| **Default**    | `true`                                                     |
-
-**Description:** [Deprecated]
-
-## <a name="description_is_markdown"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > description_is_markdown`
+## <a name="description_is_markdown"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > description_is_markdown`
 
 |             |           |
 | ----------- | --------- |
 | **Type**    | `boolean` |
 | **Default** | `true`    |
 
-**Description:** Applies to HTML templates only. Whether to consider the description as Markdown and render it accordingly.
+**Description:** (HTML outputs only)
+Whether to consider the description as Markdown and render it accordingly.
 
-## <a name="allow_html_description"></a>3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > allow_html_description`
+## <a name="description_safe_mode"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > description_safe_mode`
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `boolean` |
-| **Default** | `false`   |
+|             |                            |
+| ----------- | -------------------------- |
+| **Type**    | `enum (of null or string)` |
+| **Default** | `"escape"`                 |
 
-**Description:** Applies to HTML templates only. Don't escape HTML tags in descriptions. Can be needed when description is Markdown and contains already escaped blocks
+**Description:** (HTML outputs only)
+(Only used with `description_is_markdown`)
+How are HTML tags in descriptions handled. Correspond to the `safe_mode` option of the markdown2 library.
 
-## <a name="expand_buttons"></a>4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > expand_buttons`
+- "escape": Escape all HTML tags in descriptions
+- "replace": Replace HTML tags with `[HTML_REMOVED]`
+- null: Allow HTML in descriptions
+
+Must be one of:
+* null
+* "escape"
+* "replace"
+
+## <a name="expand_buttons"></a>3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > expand_buttons`
 
 |             |           |
 | ----------- | --------- |
@@ -107,7 +111,7 @@ Configuration parameters can be provided in several ways:
 
 **Description:** Add an `Expand all` and a `Collapse all` button at the top of the generated documentation.
 
-## <a name="show_breadcrumbs"></a>5. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > show_breadcrumbs`
+## <a name="show_breadcrumbs"></a>4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > show_breadcrumbs`
 
 |             |           |
 | ----------- | --------- |
@@ -116,7 +120,7 @@ Configuration parameters can be provided in several ways:
 
 **Description:** For each property, show the relative place of that property in the schema.
 
-## <a name="collapse_long_descriptions"></a>6. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > collapse_long_descriptions`
+## <a name="collapse_long_descriptions"></a>5. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > collapse_long_descriptions`
 
 |             |           |
 | ----------- | --------- |
@@ -125,7 +129,7 @@ Configuration parameters can be provided in several ways:
 
 **Description:** If a description is considered big, show only the beginning and add a `Read more` button.
 
-## <a name="collapse_long_examples"></a>7. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > collapse_long_examples`
+## <a name="collapse_long_examples"></a>6. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > collapse_long_examples`
 
 |             |           |
 | ----------- | --------- |
@@ -134,7 +138,7 @@ Configuration parameters can be provided in several ways:
 
 **Description:** If an example is considered big, collapse it, it can be displayed with a `Show` option.
 
-## <a name="link_to_reused_ref"></a>8. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > link_to_reused_ref`
+## <a name="link_to_reused_ref"></a>7. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > link_to_reused_ref`
 
 |             |           |
 | ----------- | --------- |
@@ -145,7 +149,7 @@ Configuration parameters can be provided in several ways:
 
 *Note*: If this option is off and the schema contains recursive definitions, the generation will crash!
 
-## <a name="recursive_detection_depth"></a>9. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > recursive_detection_depth`
+## <a name="recursive_detection_depth"></a>8. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > recursive_detection_depth`
 
 |             |           |
 | ----------- | --------- |
@@ -159,17 +163,16 @@ This option determines the number of times to recursively follow definitions loo
 
 In other words, if a schema has a deeply nested element that refers to itself, this option may need to be increased.
 
-## <a name="deprecated_from_description"></a>10. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > deprecated_from_description`~~
+## <a name="deprecated_from_description"></a>9. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > deprecated_from_description`
 
-|                |                                                            |
-| -------------- | ---------------------------------------------------------- |
-| **Type**       | `boolean`                                                  |
-| **Deprecated** | ![Deprecated](https://img.shields.io/badge/Deprecated-red) |
-| **Default**    | `false`                                                    |
+|             |           |
+| ----------- | --------- |
+| **Type**    | `boolean` |
+| **Default** | `false`   |
 
-**Description:** Mark a property as deprecated (with a big red badge) if the description contains the string `[Deprecated`.
+**Description:** Mark a property as deprecated (with a big red badge) if the description contains the string `[​Deprecated`.
 
-## <a name="default_from_description"></a>11. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > default_from_description`
+## <a name="default_from_description"></a>10. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > default_from_description`
 
 |             |           |
 | ----------- | --------- |
@@ -180,7 +183,7 @@ In other words, if a schema has a deeply nested element that refers to itself, t
 
 The default value from the "default" attribute will be used in priority.
 
-## <a name="copy_css"></a>12. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > copy_css`
+## <a name="copy_css"></a>11. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > copy_css`
 
 |             |           |
 | ----------- | --------- |
@@ -189,7 +192,7 @@ The default value from the "default" attribute will be used in priority.
 
 **Description:** Copy `schema_doc.css` to the same directory as `RESULT_FILE` after generation.
 
-## <a name="copy_js"></a>13. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > copy_js`
+## <a name="copy_js"></a>12. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > copy_js`
 
 |             |           |
 | ----------- | --------- |
@@ -200,16 +203,7 @@ The default value from the "default" attribute will be used in priority.
 
 This file contains the logic for the anchor links.
 
-## <a name="templates_directory"></a>14. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > templates_directory`~~
-
-|                |                                                            |
-| -------------- | ---------------------------------------------------------- |
-| **Type**       | `string`                                                   |
-| **Deprecated** | ![Deprecated](https://img.shields.io/badge/Deprecated-red) |
-
-**Description:** [Deprecated]
-
-## <a name="template_name"></a>15. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_name`
+## <a name="template_name"></a>13. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_name`
 
 |             |                    |
 | ----------- | ------------------ |
@@ -235,7 +229,7 @@ Must be one of:
 * "md"
 * "md_nested"
 
-## <a name="custom_template_path"></a>16. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > custom_template_path`
+## <a name="custom_template_path"></a>14. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > custom_template_path`
 
 |             |          |
 | ----------- | -------- |
@@ -248,7 +242,7 @@ There can be multiple files to split the template, but this path should be the e
 
 If no output file is specified, the extension of the template file will be used to determine the output documentation extension. i.e. if the template is in ./custom_template/content.html, the resulting documentation will have the html extension.
 
-## <a name="show_toc"></a>17. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > show_toc`
+## <a name="show_toc"></a>15. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > show_toc`
 
 |             |           |
 | ----------- | --------- |
@@ -257,7 +251,7 @@ If no output file is specified, the extension of the template file will be used 
 
 **Description:** Whether to render table of contents.
 
-## <a name="examples_as_yaml"></a>18. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > examples_as_yaml`
+## <a name="examples_as_yaml"></a>16. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > examples_as_yaml`
 
 |             |           |
 | ----------- | --------- |
@@ -266,7 +260,7 @@ If no output file is specified, the extension of the template file will be used 
 
 **Description:** Whether to display examples as YAML instead of JSON
 
-## <a name="old_anchor_links"></a>19. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > old_anchor_links`
+## <a name="old_anchor_links"></a>17. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > old_anchor_links`
 
 |             |           |
 | ----------- | --------- |
@@ -277,7 +271,7 @@ If no output file is specified, the extension of the template file will be used 
 
 This is the old behaviour and is only needed for browsers that do not support HTML 5.
 
-## <a name="markdown_options"></a>20. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > markdown_options`
+## <a name="markdown_options"></a>18. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > markdown_options`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -303,7 +297,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 }
 ```
 
-## <a name="template_md_options"></a>21. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options`
+## <a name="template_md_options"></a>19. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -319,7 +313,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 | - [show_array_restrictions](#template_md_options_show_array_restrictions )   | No      | boolean                   | No         | -          | if true generate array restrictions section.<br /><br /> if false, do not generate                                                                                         |
 | - [properties_table_columns](#template_md_options_properties_table_columns ) | No      | array of enum (of string) | No         | -          | array of column names to display in the properties table.<br /><br /> if empty, the default is ['Property','Pattern','Type','Deprecated','Definition','Title/Description'] |
 
-### <a name="template_md_options_badge_as_image"></a>21.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`
+### <a name="template_md_options_badge_as_image"></a>19.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`
 
 |             |           |
 | ----------- | --------- |
@@ -330,7 +324,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 
  if false, use text instead
 
-### <a name="template_md_options_show_heading_numbers"></a>21.2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`
+### <a name="template_md_options_show_heading_numbers"></a>19.2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`
 
 |             |           |
 | ----------- | --------- |
@@ -341,7 +335,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 
  if false, do not generate heading numbers
 
-### <a name="template_md_options_show_array_restrictions"></a>21.3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`
+### <a name="template_md_options_show_array_restrictions"></a>19.3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`
 
 |             |           |
 | ----------- | --------- |
@@ -352,7 +346,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 
  if false, do not generate
 
-### <a name="template_md_options_properties_table_columns"></a>21.4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > properties_table_columns`
+### <a name="template_md_options_properties_table_columns"></a>19.4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > template_md_options > properties_table_columns`
 
 |          |                             |
 | -------- | --------------------------- |
@@ -374,7 +368,7 @@ Adding an extra, even if the value is false, will activate it. For example `{"br
 | ------------------------------------------------------------------------------------- | ----------- |
 | [properties_table_columns items](#template_md_options_properties_table_columns_items) | -           |
 
-#### <a name="template_md_options_properties_table_columns_items"></a>21.4.1. JSON Schema for Humans configuration file > template_md_options > properties_table_columns > properties_table_columns items
+#### <a name="template_md_options_properties_table_columns_items"></a>19.4.1. JSON Schema for Humans configuration file > template_md_options > properties_table_columns > properties_table_columns items
 
 |          |                    |
 | -------- | ------------------ |
@@ -388,7 +382,7 @@ Must be one of:
 * "Definition"
 * "Title/Description"
 
-## <a name="with_footer"></a>22. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > with_footer`
+## <a name="with_footer"></a>20. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > with_footer`
 
 |             |           |
 | ----------- | --------- |
@@ -397,7 +391,7 @@ Must be one of:
 
 **Description:** Whether to show the footer linking to the library repo and with the generation datetime
 
-## <a name="footer_show_time"></a>23. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > footer_show_time`
+## <a name="footer_show_time"></a>21. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > footer_show_time`
 
 |             |           |
 | ----------- | --------- |
@@ -405,6 +399,35 @@ Must be one of:
 | **Default** | `true`    |
 
 **Description:** Whether the footer should display the generation time
+
+## <a name="allow_html_description"></a>22. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > allow_html_description`~~
+
+|                |                                                            |
+| -------------- | ---------------------------------------------------------- |
+| **Type**       | `boolean`                                                  |
+| **Deprecated** | ![Deprecated](https://img.shields.io/badge/Deprecated-red) |
+| **Default**    | `false`                                                    |
+
+**Description:** [Deprecated]
+
+## <a name="minify"></a>23. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > minify`~~
+
+|                |                                                            |
+| -------------- | ---------------------------------------------------------- |
+| **Type**       | `boolean`                                                  |
+| **Deprecated** | ![Deprecated](https://img.shields.io/badge/Deprecated-red) |
+| **Default**    | `true`                                                     |
+
+**Description:** [Deprecated]
+
+## <a name="templates_directory"></a>24. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > templates_directory`~~
+
+|                |                                                            |
+| -------------- | ---------------------------------------------------------- |
+| **Type**       | `string`                                                   |
+| **Deprecated** | ![Deprecated](https://img.shields.io/badge/Deprecated-red) |
+
+**Description:** [Deprecated]
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

@@ -721,5 +721,52 @@ def test_broken_ref() -> None:
     )
 
 
+def test_html_in_description_unsafe() -> None:
+    soup = generate_case("html_in_description", config=GenerationConfiguration(description_safe_mode=None))
+
+    description_nodes = soup.find_all(attrs={"class": "description"})
+
+    assert len(description_nodes) == 3
+
+    # It should be HTML, so BeautifulSoup should be able to parse it as such
+    raw_html_node = description_nodes[0]
+    assert "href" in raw_html_node.find("a").attrs.keys()
+
+    html_in_markdown_node = description_nodes[1]
+    assert html_in_markdown_node.descendents is None
+    assert "Here is some HTML" in html_in_markdown_node.text
+
+    json_in_markdown_node = description_nodes[2]
+    assert "Here is some JSON" in json_in_markdown_node.text
+
+
+def test_html_in_description_escape() -> None:
+    soup = generate_case("html_in_description", config=GenerationConfiguration(description_safe_mode="escape"))
+
+    description_nodes = soup.find_all(attrs={"class": "description"})
+
+    assert len(description_nodes) == 3
+
+    # It should not be HTML
+    raw_html_node = description_nodes[0]
+    assert raw_html_node.descendents is None
+    assert raw_html_node.text == '<br/><br/><br/><br/><a href="https://example.com">A link to example.com</a>\n'
+
+
+def test_html_in_description_replace() -> None:
+    soup = generate_case("html_in_description", config=GenerationConfiguration(description_safe_mode="replace"))
+
+    description_nodes = soup.find_all(attrs={"class": "description"})
+
+    assert len(description_nodes) == 3
+
+    raw_html_node = description_nodes[0]
+    assert raw_html_node.descendents is None
+    assert (
+        raw_html_node.text
+        == "[HTML_REMOVED][HTML_REMOVED][HTML_REMOVED][HTML_REMOVED][HTML_REMOVED]A link to example.com[HTML_REMOVED]\n"
+    )
+
+
 # TODO: test for uniqueItems
 # TODO: test for contains

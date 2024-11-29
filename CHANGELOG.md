@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/coveooss/json-schema-for-humans/compare/v1.1.1...v1.2.0) (2024-11-29)
+
+
+### Features
+
+* Add `description_safe_mode` config option ([#283](https://github.com/coveooss/json-schema-for-humans/issues/283)) ([a17ce95](https://github.com/coveooss/json-schema-for-humans/commit/a17ce95475e3e9b83e340ef35f4bb30427b62a7b))
+
 ## [1.1.1](https://github.com/coveooss/json-schema-for-humans/compare/v1.1.0...v1.1.1) (2024-11-29)
 
 

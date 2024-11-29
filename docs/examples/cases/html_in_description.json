@@ -1,0 +1,23 @@
+{
+  "$id": "https://example.com/html.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HTML in descriptions",
+  "type": "object",
+  "properties": {
+    "raw_html": {
+      "type": "string",
+      "description": "<br/><br/><br/><br/><a href=\"https://example.com\">A link to example.com</a>",
+      "title": "Some raw HTML"
+    },
+    "html_in_markdown": {
+      "type": "string",
+      "description": "Here is some HTML:\n```html\n<br/><br/><br/><br/><a href=\"https://example.com\">A link to example.com</a>\n```",
+      "title": "Some HTML in Markdown"
+    },
+    "json_in_markdown": {
+      "type": "string",
+      "description": "Here is some JSON:\n```json\n{\n  \"property\": \"value\"\n}\n```",
+      "title": "Some JSON in Markdown"
+    }
+  }
+}

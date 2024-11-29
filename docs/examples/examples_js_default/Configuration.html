@@ -44,40 +44,6 @@
         
 
         
-<div class="accordion" id="accordionminify">
-    <div class="card">
-        <div class="card-header" id="headingminify">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#minify"
-                        aria-expanded="" aria-controls="minify" onclick="setAnchor('#minify')"><span class="property-name">minify</span> <span class="badge badge-danger deprecated-property">Deprecated</span></button>
-            </h2>
-        </div>
-
-        <div id="minify"
-             class="collapse property-definition-div" aria-labelledby="headingminify"
-             data-parent="#accordionminify">
-            <div class="card-body pl-5">
-
-    <div class="breadcrumbs">root
-        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path
-                fill-rule="evenodd"
-                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
-            />
-        </svg>
-    <a href="#minify" onclick="anchorLink('minify')">minify</a></div><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: true</span><br/>
-<span class="description"><p>[Deprecated]</p>
-</span>
-        
-
-        
-        
-
-        
-            </div>
-        </div>
-    </div>
-</div>
 <div class="accordion" id="accordiondescription_is_markdown">
     <div class="card">
         <div class="card-header" id="headingdescription_is_markdown">
@@ -100,7 +66,8 @@
             />
         </svg>
     <a href="#description_is_markdown" onclick="anchorLink('description_is_markdown')">description_is_markdown</a></div><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: true</span><br/>
-<span class="description"><p>Applies to HTML templates only. Whether to consider the description as Markdown and render it accordingly.</p>
+<span class="description"><p>(HTML outputs only)<br />
+Whether to consider the description as Markdown and render it accordingly.</p>
 </span>
         
 
@@ -112,18 +79,18 @@
         </div>
     </div>
 </div>
-<div class="accordion" id="accordionallow_html_description">
+<div class="accordion" id="accordiondescription_safe_mode">
     <div class="card">
-        <div class="card-header" id="headingallow_html_description">
+        <div class="card-header" id="headingdescription_safe_mode">
             <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#allow_html_description"
-                        aria-expanded="" aria-controls="allow_html_description" onclick="setAnchor('#allow_html_description')"><span class="property-name">allow_html_description</span></button>
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#description_safe_mode"
+                        aria-expanded="" aria-controls="description_safe_mode" onclick="setAnchor('#description_safe_mode')"><span class="property-name">description_safe_mode</span></button>
             </h2>
         </div>
 
-        <div id="allow_html_description"
-             class="collapse property-definition-div" aria-labelledby="headingallow_html_description"
-             data-parent="#accordionallow_html_description">
+        <div id="description_safe_mode"
+             class="collapse property-definition-div" aria-labelledby="headingdescription_safe_mode"
+             data-parent="#accordiondescription_safe_mode">
             <div class="card-body pl-5">
 
     <div class="breadcrumbs">root
@@ -133,9 +100,27 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#allow_html_description" onclick="anchorLink('allow_html_description')">allow_html_description</a></div><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: false</span><br/>
-<span class="description"><p>Applies to HTML templates only. Don&#39;t escape HTML tags in descriptions. Can be needed when description is Markdown and contains already escaped blocks</p>
-</span>
+    <a href="#description_safe_mode" onclick="anchorLink('description_safe_mode')">description_safe_mode</a></div><span class="badge badge-dark value-type">Type: enum (of null or string)</span> <span class="badge badge-success default-value">Default: "escape"</span><br/>
+<div class="description collapse" id="collapseDescription_description_safe_mode">
+            <p>(HTML outputs only)<br />
+(Only used with <code>description_is_markdown</code>)<br />
+How are HTML tags in descriptions handled. Correspond to the <code>safe_mode</code> option of the markdown2 library.</p>
+
+<ul>
+<li>"escape": Escape all HTML tags in descriptions</li>
+<li>"replace": Replace HTML tags with <code>[HTML_REMOVED]</code></li>
+<li>null: Allow HTML in descriptions</li>
+</ul>
+
+        </div>
+        <div>
+            <a class="collapse-description-link collapsed" data-toggle="collapse" href="#collapseDescription_description_safe_mode"
+               aria-expanded="false" aria-controls="collapseDescriptiondescription_safe_mode"
+            ></a>
+        </div><div class="enum-value" id="description_safe_mode_enum">
+            <h4>Must be one of:</h4>
+            <ul class="list-group"><li class="list-group-item enum-item">null</li><li class="list-group-item enum-item">"escape"</li><li class="list-group-item enum-item">"replace"</li></ul>
+            </div>
         
 
         
@@ -376,7 +361,7 @@ If <code>link_to_reused_ref</code> is false and a <code>$ref</code> in the schem
         <div class="card-header" id="headingdeprecated_from_description">
             <h2 class="mb-0">
                 <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#deprecated_from_description"
-                        aria-expanded="" aria-controls="deprecated_from_description" onclick="setAnchor('#deprecated_from_description')"><span class="property-name">deprecated_from_description</span> <span class="badge badge-danger deprecated-property">Deprecated</span></button>
+                        aria-expanded="" aria-controls="deprecated_from_description" onclick="setAnchor('#deprecated_from_description')"><span class="property-name">deprecated_from_description</span></button>
             </h2>
         </div>
 
@@ -393,7 +378,7 @@ If <code>link_to_reused_ref</code> is false and a <code>$ref</code> in the schem
             />
         </svg>
     <a href="#deprecated_from_description" onclick="anchorLink('deprecated_from_description')">deprecated_from_description</a></div><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: false</span><br/>
-<span class="description"><p>Mark a property as deprecated (with a big red badge) if the description contains the string <code>[Deprecated</code>.</p>
+<span class="description"><p>Mark a property as deprecated (with a big red badge) if the description contains the string <code>[​Deprecated</code>.</p>
 </span>
         
 
@@ -429,7 +414,7 @@ If <code>link_to_reused_ref</code> is false and a <code>$ref</code> in the schem
     <a href="#default_from_description" onclick="anchorLink('default_from_description')">default_from_description</a></div><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: false</span><br/>
 <span class="description"><p>Extract the default value of a property from the description like this: <code>[Default `the_default_value`]</code>.</p>
 
-<p>The default value from the &#34;default&#34; attribute will be used in priority.</p>
+<p>The default value from the "default" attribute will be used in priority.</p>
 </span>
         
 
@@ -500,40 +485,6 @@ If <code>link_to_reused_ref</code> is false and a <code>$ref</code> in the schem
 <span class="description"><p>Copy <code>schema_doc.min.js</code> to the same directory as <code>RESULT_FILE</code> after generation.</p>
 
 <p>This file contains the logic for the anchor links.</p>
-</span>
-        
-
-        
-        
-
-        
-            </div>
-        </div>
-    </div>
-</div>
-<div class="accordion" id="accordiontemplates_directory">
-    <div class="card">
-        <div class="card-header" id="headingtemplates_directory">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#templates_directory"
-                        aria-expanded="" aria-controls="templates_directory" onclick="setAnchor('#templates_directory')"><span class="property-name">templates_directory</span> <span class="badge badge-danger deprecated-property">Deprecated</span></button>
-            </h2>
-        </div>
-
-        <div id="templates_directory"
-             class="collapse property-definition-div" aria-labelledby="headingtemplates_directory"
-             data-parent="#accordiontemplates_directory">
-            <div class="card-body pl-5">
-
-    <div class="breadcrumbs">root
-        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path
-                fill-rule="evenodd"
-                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
-            />
-        </svg>
-    <a href="#templates_directory" onclick="anchorLink('templates_directory')">templates_directory</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
-<span class="description"><p>[Deprecated]</p>
 </span>
         
 
@@ -774,7 +725,7 @@ If <code>link_to_reused_ref</code> is false and a <code>$ref</code> in the schem
             <p><a href="https://github.com/trentm/python-markdown2/wiki/Extras">Markdown 2 options</a> for the descriptions. <code>description_is_markdown</code> must be true for this to have any effect.</p>
 
 <p><strong>WARNING</strong><br />
-Adding an extra, even if the value is false, will activate it. For example <code>{&amp;#34;break-on-newline&amp;#34;: false}</code> will activate the <code>break-on-newline</code> extra.</p>
+Adding an extra, even if the value is false, will activate it. For example <code>{"break-on-newline": false}</code> will activate the <code>break-on-newline</code> extra.</p>
 
         </div>
         <div>
@@ -993,7 +944,7 @@ Adding an extra, even if the value is false, will activate it. For example <code
     <a href="#template_md_options_properties_table_columns" onclick="anchorLink('template_md_options_properties_table_columns')">properties_table_columns</a></div><span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
 <span class="description"><p>array of column names to display in the properties table.</p>
 
-<p>if empty, the default is [&#39;Property&#39;,&#39;Pattern&#39;,&#39;Type&#39;,&#39;Deprecated&#39;,&#39;Definition&#39;,&#39;Title/Description&#39;]</p>
+<p>if empty, the default is ['Property','Pattern','Type','Deprecated','Definition','Title/Description']</p>
 </span>
         
 
@@ -1104,6 +1055,108 @@ Adding an extra, even if the value is false, will activate it. For example <code
         </svg>
     <a href="#footer_show_time" onclick="anchorLink('footer_show_time')">footer_show_time</a></div><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: true</span><br/>
 <span class="description"><p>Whether the footer should display the generation time</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionallow_html_description">
+    <div class="card">
+        <div class="card-header" id="headingallow_html_description">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#allow_html_description"
+                        aria-expanded="" aria-controls="allow_html_description" onclick="setAnchor('#allow_html_description')"><span class="property-name">allow_html_description</span> <span class="badge badge-danger deprecated-property">Deprecated</span></button>
+            </h2>
+        </div>
+
+        <div id="allow_html_description"
+             class="collapse property-definition-div" aria-labelledby="headingallow_html_description"
+             data-parent="#accordionallow_html_description">
+            <div class="card-body pl-5">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#allow_html_description" onclick="anchorLink('allow_html_description')">allow_html_description</a></div><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: false</span><br/>
+<span class="description"><p>[Deprecated]</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionminify">
+    <div class="card">
+        <div class="card-header" id="headingminify">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#minify"
+                        aria-expanded="" aria-controls="minify" onclick="setAnchor('#minify')"><span class="property-name">minify</span> <span class="badge badge-danger deprecated-property">Deprecated</span></button>
+            </h2>
+        </div>
+
+        <div id="minify"
+             class="collapse property-definition-div" aria-labelledby="headingminify"
+             data-parent="#accordionminify">
+            <div class="card-body pl-5">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#minify" onclick="anchorLink('minify')">minify</a></div><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: true</span><br/>
+<span class="description"><p>[Deprecated]</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiontemplates_directory">
+    <div class="card">
+        <div class="card-header" id="headingtemplates_directory">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#templates_directory"
+                        aria-expanded="" aria-controls="templates_directory" onclick="setAnchor('#templates_directory')"><span class="property-name">templates_directory</span> <span class="badge badge-danger deprecated-property">Deprecated</span></button>
+            </h2>
+        </div>
+
+        <div id="templates_directory"
+             class="collapse property-definition-div" aria-labelledby="headingtemplates_directory"
+             data-parent="#accordiontemplates_directory">
+            <div class="card-body pl-5">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#templates_directory" onclick="anchorLink('templates_directory')">templates_directory</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>[Deprecated]</p>
 </span>
         
 

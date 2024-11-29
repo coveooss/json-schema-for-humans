@@ -9,9 +9,9 @@
     <meta charset="utf-8"/>
         
     
-    <title>Person</title>
+    <title>HTML in descriptions</title>
 </head>
-<body id="root"><h1>Person</h1>
+<body id="root"><h1>HTML in descriptions</h1>
 
     <div class="breadcrumbs"></div><span class="badge badge-dark value-type">Type: object</span><br/>
 
@@ -34,9 +34,9 @@
         
 
 <div class="card">
-    <div class="card-header" id="firstName">
+    <div class="card-header" id="raw_html">
         <h2 class="mb-0">
-            <a href="#firstName"><span class="property-name">firstName</span></a></h2>
+            <a href="#raw_html"><span class="property-name">raw_html</span></a></h2>
     </div>
 
     <div class="card-body property-definition-div">
@@ -48,7 +48,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#firstName">firstName</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+    <a href="#raw_html">raw_html</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
 
 
 
@@ -56,7 +56,7 @@
 
 
 
-<p>The person's first name.</p>
+<p>&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a href="https://example.com"&gt;A link to example.com&lt;/a&gt;</p>
 
 
 
@@ -72,9 +72,9 @@
 </div>
 
 <div class="card">
-    <div class="card-header" id="lastName">
+    <div class="card-header" id="html_in_markdown">
         <h2 class="mb-0">
-            <a href="#lastName"><span class="property-name">lastName</span></a></h2>
+            <a href="#html_in_markdown"><span class="property-name">html_in_markdown</span></a></h2>
     </div>
 
     <div class="card-body property-definition-div">
@@ -86,7 +86,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#lastName">lastName</a></div><span class="badge badge-dark value-type">Type: string or null</span><br/>
+    <a href="#html_in_markdown">html_in_markdown</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
 
 
 
@@ -94,7 +94,12 @@
 
 
 
-<p>The person's last name.</p>
+<p>Here is some HTML:</p>
+
+<div class="highlight jumbotron">
+<pre><span></span><code><span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;&lt;</span><span class="nt">br</span><span class="p">/&gt;&lt;</span><span class="nt">br</span><span class="p">/&gt;&lt;</span><span class="nt">br</span><span class="p">/&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://example.com&quot;</span><span class="p">&gt;</span>A link to example.com<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre>
+</div>
 
 
 
@@ -110,9 +115,9 @@
 </div>
 
 <div class="card">
-    <div class="card-header" id="age">
+    <div class="card-header" id="json_in_markdown">
         <h2 class="mb-0">
-            <a href="#age"><span class="property-name">age</span></a></h2>
+            <a href="#json_in_markdown"><span class="property-name">json_in_markdown</span></a></h2>
     </div>
 
     <div class="card-body property-definition-div">
@@ -124,7 +129,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#age">age</a></div><span class="badge badge-dark value-type">Type: integer or number</span><br/>
+    <a href="#json_in_markdown">json_in_markdown</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
 
 
 
@@ -132,45 +137,14 @@
 
 
 
-<p>Age in years which must be equal to or greater than zero.</p>
+<p>Here is some JSON:</p>
 
-
-
-
-
-        
-
-        
-        
-
-        
-    </div>
+<div class="highlight jumbotron">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;property&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span>
+<span class="p">}</span>
+</code></pre>
 </div>
-
-<div class="card">
-    <div class="card-header" id="anything">
-        <h2 class="mb-0">
-            <a href="#anything"><span class="property-name">anything</span></a></h2>
-    </div>
-
-    <div class="card-body property-definition-div">
-
-    <div class="breadcrumbs">root
-        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path
-                fill-rule="evenodd"
-                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
-            />
-        </svg>
-    <a href="#anything">anything</a></div><span class="badge badge-dark value-type">Type: integer, string, number or null</span><br/>
-
-
-
-
-
-
-
-<p>Ay other info you like</p>
 
 
 
