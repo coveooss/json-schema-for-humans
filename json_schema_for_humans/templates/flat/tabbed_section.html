@@ -9,7 +9,7 @@
 {%- endif -%}
 {%- for node in current_node.array_items -%}
     <div class="card">
-        <h3 class="ml-2 mt-2"><a id="{{ node.html_id }}" href="#{{ node.html_id }}">{{ node.definition_name or tab_label ~ " " ~ loop.index }}</a></h3>
+        <h3 class="ms-3 mt-3 card-title"><a class="card-title" id="{{ node.html_id }}" href="#{{ node.html_id }}">{{ node.definition_name or tab_label ~ " " ~ loop.index }}</a></h3>
         <div class="card-body">
             {{ content(node) }}
         </div>

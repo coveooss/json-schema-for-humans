@@ -14,13 +14,13 @@
             </a>
 
             {%- if sub_property.is_required_property -%}
-                {{ " " }}<span class="badge badge-warning required-property">Required</span>
+                {{ " " }}<span class="badge text-bg-warning required-property">Required</span>
             {%- endif -%}
             {%- if sub_property is deprecated -%}
-                {{ " " }}<span class="badge badge-danger deprecated-property">Deprecated</span>
+                {{ " " }}<span class="badge text-bg-danger deprecated-property">Deprecated</span>
             {%- endif -%}
             {%- if sub_property.is_pattern_property -%}
-                {{ " " }}<span class="badge badge-info pattern-property">Pattern Property</span>
+                {{ " " }}<span class="badge text-bg-info pattern-property">Pattern Property</span>
             {%- endif -%}
         </h2>
     </div>

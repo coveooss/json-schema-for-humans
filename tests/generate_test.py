@@ -333,7 +333,7 @@ def test_with_special_chars() -> None:
     buttons = soup.find_all("button", attrs={"aria-controls": True})
     expected_targets = ["#prénom", "#nomDeFamille", "#âge", "#0_de_quoi_dautre", "#名前", "#年齢"]
     for i, expected_target in enumerate(expected_targets):
-        assert buttons[i].attrs["data-target"] == expected_target
+        assert buttons[i].attrs["data-bs-target"] == expected_target
 
 
 def test_html_id_old_method() -> None:
@@ -348,7 +348,7 @@ def test_html_id_old_method() -> None:
     buttons = soup.find_all("button", attrs={"aria-controls": True})
     expected_targets = ["#pr_nom", "#nomDeFamille", "#a_ge", "#a0_de_quoi_d_autre", "#a__", "#a__"]
     for i, expected_target in enumerate(expected_targets):
-        assert buttons[i].attrs["data-target"] == expected_target
+        assert buttons[i].attrs["data-bs-target"] == expected_target
 
 
 def test_description_with_ref() -> None:
@@ -473,7 +473,7 @@ def test_with_urlencoded_anchor() -> None:
 def test_pattern_properties() -> None:
     soup = generate_case("pattern_properties")
 
-    pattern_label = soup.find_all("span", class_=["badge-info"])
+    pattern_label = soup.find_all("span", class_=["text-bg-info"])
     pattern_label_text = [ex.text for ex in pattern_label]
     assert pattern_label_text == ["Pattern Property"]
 
@@ -501,7 +501,7 @@ def test_pattern_properties_html_id() -> None:
     """Test the HTML IDs generated for patterns under patternProperties"""
     soup = generate_case("pattern_properties_html_id")
 
-    pattern_label = soup.find_all("span", class_=["badge-info"])
+    pattern_label = soup.find_all("span", class_=["text-bg-info"])
     pattern_label_text = [ex.text for ex in pattern_label]
     assert pattern_label_text == ["Pattern Property"] * 4
 

@@ -5,8 +5,8 @@
 <head>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,800">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="schema_doc.css">
     <script src="https://use.fontawesome.com/facf9fa52c.js"></script>
     <script src="schema_doc.min.js"></script>
@@ -14,11 +14,11 @@
     <title>Schema Docs</title>
 </head>
 <body onload="anchorOnLoad();" id="root"><div class="text-right">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
         </div>
 
-    <div class="breadcrumbs"></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <div class="breadcrumbs"></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 
         
 
@@ -27,18 +27,16 @@
 
         
 <div class="accordion" id="accordiona">
-    <div class="card">
-        <div class="card-header" id="headinga">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#a"
-                        aria-expanded="" aria-controls="a" onclick="setAnchor('#a')"><span class="property-name">a</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headinga">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a"
+                    aria-expanded="" aria-controls="a" onclick="setAnchor('#a')"><span class="property-name">a</span></button>
+        </h2>
 
         <div id="a"
-             class="collapse property-definition-div" aria-labelledby="headinga"
-             data-parent="#accordiona">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headinga"
+             data-bs-parent="#accordiona">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +45,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#a" onclick="anchorLink('a')">a</a></div><span class="badge badge-dark value-type">Type: object</span> <span class="badge badge-success default-value">Default: "Default from a"</span><br/>
+    <a href="#a" onclick="anchorLink('a')">a</a></div><span class="badge text-bg-dark value-type">Type: object</span> <span class="badge text-bg-success default-value">Default: "Default from a"</span><br/>
 <span class="description"><p>Description of a</p>
 </span>
 
@@ -63,18 +61,16 @@
     </div>
 </div>
 <div class="accordion" id="accordionb">
-    <div class="card">
-        <div class="card-header" id="headingb">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#b"
-                        aria-expanded="" aria-controls="b" onclick="setAnchor('#b')"><span class="property-name">b</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingb">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#b"
+                    aria-expanded="" aria-controls="b" onclick="setAnchor('#b')"><span class="property-name">b</span></button>
+        </h2>
 
         <div id="b"
-             class="collapse property-definition-div" aria-labelledby="headingb"
-             data-parent="#accordionb">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingb"
+             data-bs-parent="#accordionb">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -83,7 +79,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#b" onclick="anchorLink('b')">b</a></div><span class="badge badge-dark value-type">Type: object</span> <span class="badge badge-success default-value">Default: "Default from b"</span><br/>
+    <a href="#b" onclick="anchorLink('b')">b</a></div><span class="badge text-bg-dark value-type">Type: object</span> <span class="badge text-bg-success default-value">Default: "Default from b"</span><br/>
 <span class="description"><p>A common description</p>
 </span>
 

@@ -5,8 +5,8 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/overpass300,400,600,800.css">
     <script src="js/jquery-3.4.1.min.js"></script>
-    <link href="css/bootstrap-4.3.1.min.css" rel="stylesheet">
-    <script src="js/bootstrap-4.3.1.min.js"></script>
+    <link href="css/bootstrap-5.3.3.min.css" rel="stylesheet">
+    <script src="js/bootstrap-5.3.3.bundle.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/schema_doc.css">
     <!-- <script src="js/facf9fa52c.js"></script> -->
     <script src="js/schema_doc.min.js"></script>
@@ -14,11 +14,11 @@
     <title>Schema Docs</title>
 </head>
 <body onload="anchorOnLoad();" id="root"><div class="text-right">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
         </div>
 
-    <div class="breadcrumbs"></div><span class="badge badge-dark value-type">Type: string</span><br/>
+    <div class="breadcrumbs"></div><span class="badge text-bg-dark value-type">Type: string</span><br/>
 <span class="pattern-value" id="pattern">Must match regular expression: <code>^(&lt;&lt;variable:([-+/*0-9A-Za-z_]+)&gt;&gt;|&lt;&lt;auto&gt;&gt;)$</code></span>
         
 
@@ -27,18 +27,16 @@
 
         
 <div class="accordion" id="accordionpattern1">
-    <div class="card">
-        <div class="card-header" id="headingpattern1">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#pattern1"
-                        aria-expanded="" aria-controls="pattern1" onclick="setAnchor('#pattern1')"><span class="property-name">$[a-c][0-9]^&lt;a&gt;</span> <span class="badge badge-info pattern-property">Pattern Property</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingpattern1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#pattern1"
+                    aria-expanded="" aria-controls="pattern1" onclick="setAnchor('#pattern1')"><span class="property-name">$[a-c][0-9]^&lt;a&gt;</span> <span class="badge text-bg-info pattern-property">Pattern Property</span></button>
+        </h2>
 
         <div id="pattern1"
-             class="collapse property-definition-div" aria-labelledby="headingpattern1"
-             data-parent="#accordionpattern1">
-            <div class="card-body pl-5"><h2 class="handle">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingpattern1"
+             data-bs-parent="#accordionpattern1">
+            <div class="accordion-body pl-5"><h2 class="handle">
                         <label>Pattern Property</label>
                     </h2>
                     <p>All properties whose name matches the following regular expression must respect the following conditions</p>
@@ -52,7 +50,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#pattern1" onclick="anchorLink('pattern1')">$[a-c][0-9]^<a></a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+    <a href="#pattern1" onclick="anchorLink('pattern1')">$[a-c][0-9]^<a></a></div><span class="badge text-bg-dark value-type">Type: string</span><br/>
 
         
 

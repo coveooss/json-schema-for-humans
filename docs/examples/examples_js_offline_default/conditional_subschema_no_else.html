@@ -5,8 +5,8 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/overpass300,400,600,800.css">
     <script src="js/jquery-3.4.1.min.js"></script>
-    <link href="css/bootstrap-4.3.1.min.css" rel="stylesheet">
-    <script src="js/bootstrap-4.3.1.min.js"></script>
+    <link href="css/bootstrap-5.3.3.min.css" rel="stylesheet">
+    <script src="js/bootstrap-5.3.3.bundle.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/schema_doc.css">
     <!-- <script src="js/facf9fa52c.js"></script> -->
     <script src="js/schema_doc.min.js"></script>
@@ -14,8 +14,8 @@
     <title>Schema Docs</title>
 </head>
 <body onload="anchorOnLoad();" id="root"><div class="text-right">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
         </div>
 
     <div class="breadcrumbs"></div><br/>
@@ -23,17 +23,17 @@
   <label>All of</label>
 </h2><ul class="nav nav-tabs" id="tabsallOf_allOf" role="tablist"><li class="nav-item">
             <a class="nav-link active allOf-option"
-               id="allOf_i0" data-toggle="tab" href="#tab-pane_allOf_i0" role="tab"
+               id="allOf_i0" data-bs-toggle="tab" href="#tab-pane_allOf_i0" role="tab"
                onclick="setAnchor('#allOf_i0')"
             >Requirement 1</a>
         </li><li class="nav-item">
             <a class="nav-link allOf-option"
-               id="allOf_i1" data-toggle="tab" href="#tab-pane_allOf_i1" role="tab"
+               id="allOf_i1" data-bs-toggle="tab" href="#tab-pane_allOf_i1" role="tab"
                onclick="setAnchor('#allOf_i1')"
             >Requirement 2</a>
         </li><li class="nav-item">
             <a class="nav-link allOf-option"
-               id="allOf_i2" data-toggle="tab" href="#tab-pane_allOf_i2" role="tab"
+               id="allOf_i2" data-bs-toggle="tab" href="#tab-pane_allOf_i2" role="tab"
                onclick="setAnchor('#allOf_i2')"
             >Requirement 3</a>
         </li></ul>
@@ -55,7 +55,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#allOf_i0" onclick="anchorLink('allOf_i0')">item 0</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#allOf_i0" onclick="anchorLink('allOf_i0')">item 0</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <h2 class="handle">
     <label>Conditional Subschema</label>
 </h2>
@@ -65,7 +65,7 @@
     
     <li class="nav-item">
         <a class="nav-link active"
-           id="allOf_i0_if" data-toggle="tab" href="#tab-pane_allOf_i0_if" role="tab"
+           id="allOf_i0_if" data-bs-toggle="tab" href="#tab-pane_allOf_i0_if" role="tab"
            onclick="setAnchor('#allOf_i0_if')"
         >If</a>
     </li>
@@ -74,7 +74,7 @@
         
         <li class="nav-item">
             <a class="nav-link"
-               id="allOf_i0_then" data-toggle="tab" href="#tab-pane_allOf_i0_then" role="tab"
+               id="allOf_i0_then" data-bs-toggle="tab" href="#tab-pane_allOf_i0_then" role="tab"
                onclick="setAnchor('#allOf_i0_then')"
             >Then</a>
         </li></ul>
@@ -106,7 +106,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#allOf_i0_if" onclick="anchorLink('allOf_i0_if')">if</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#allOf_i0_if" onclick="anchorLink('allOf_i0_if')">if</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 
         
 
@@ -115,18 +115,16 @@
 
         
 <div class="accordion" id="accordionallOf_i0_if_country">
-    <div class="card">
-        <div class="card-header" id="headingallOf_i0_if_country">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#allOf_i0_if_country"
-                        aria-expanded="" aria-controls="allOf_i0_if_country" onclick="setAnchor('#allOf_i0_if_country')"><span class="property-name">country</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingallOf_i0_if_country">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#allOf_i0_if_country"
+                    aria-expanded="" aria-controls="allOf_i0_if_country" onclick="setAnchor('#allOf_i0_if_country')"><span class="property-name">country</span></button>
+        </h2>
 
         <div id="allOf_i0_if_country"
-             class="collapse property-definition-div" aria-labelledby="headingallOf_i0_if_country"
-             data-parent="#accordionallOf_i0_if_country">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingallOf_i0_if_country"
+             data-bs-parent="#accordionallOf_i0_if_country">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -156,7 +154,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#allOf_i0_if_country" onclick="anchorLink('allOf_i0_if_country')">country</a></div><span class="badge badge-dark value-type">Type: const</span><br/>
+    <a href="#allOf_i0_if_country" onclick="anchorLink('allOf_i0_if_country')">country</a></div><span class="badge text-bg-dark value-type">Type: const</span><br/>
 <span class="const-value" id="allOf_i0_if_country_const">Specific value: <code>"United States of America"</code></span>
         
 
@@ -197,7 +195,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#allOf_i0_then" onclick="anchorLink('allOf_i0_then')">then</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#allOf_i0_then" onclick="anchorLink('allOf_i0_then')">then</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 
         
 
@@ -206,18 +204,16 @@
 
         
 <div class="accordion" id="accordionallOf_i0_then_postal_code">
-    <div class="card">
-        <div class="card-header" id="headingallOf_i0_then_postal_code">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#allOf_i0_then_postal_code"
-                        aria-expanded="" aria-controls="allOf_i0_then_postal_code" onclick="setAnchor('#allOf_i0_then_postal_code')"><span class="property-name">postal_code</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingallOf_i0_then_postal_code">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#allOf_i0_then_postal_code"
+                    aria-expanded="" aria-controls="allOf_i0_then_postal_code" onclick="setAnchor('#allOf_i0_then_postal_code')"><span class="property-name">postal_code</span></button>
+        </h2>
 
         <div id="allOf_i0_then_postal_code"
-             class="collapse property-definition-div" aria-labelledby="headingallOf_i0_then_postal_code"
-             data-parent="#accordionallOf_i0_then_postal_code">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingallOf_i0_then_postal_code"
+             data-bs-parent="#accordionallOf_i0_then_postal_code">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -247,7 +243,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#allOf_i0_then_postal_code" onclick="anchorLink('allOf_i0_then_postal_code')">postal_code</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#allOf_i0_then_postal_code" onclick="anchorLink('allOf_i0_then_postal_code')">postal_code</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <span class="pattern-value" id="allOf_i0_then_postal_code_pattern">Must match regular expression: <code>[0-9]{5}(-[0-9]{4})?</code></span>
         
 
@@ -284,7 +280,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#allOf_i1" onclick="anchorLink('allOf_i1')">item 1</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#allOf_i1" onclick="anchorLink('allOf_i1')">item 1</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <h2 class="handle">
     <label>Conditional Subschema</label>
 </h2>
@@ -294,7 +290,7 @@
     
     <li class="nav-item">
         <a class="nav-link active"
-           id="allOf_i1_if" data-toggle="tab" href="#tab-pane_allOf_i1_if" role="tab"
+           id="allOf_i1_if" data-bs-toggle="tab" href="#tab-pane_allOf_i1_if" role="tab"
            onclick="setAnchor('#allOf_i1_if')"
         >If</a>
     </li>
@@ -303,7 +299,7 @@
         
         <li class="nav-item">
             <a class="nav-link"
-               id="allOf_i1_then" data-toggle="tab" href="#tab-pane_allOf_i1_then" role="tab"
+               id="allOf_i1_then" data-bs-toggle="tab" href="#tab-pane_allOf_i1_then" role="tab"
                onclick="setAnchor('#allOf_i1_then')"
             >Then</a>
         </li></ul>
@@ -335,7 +331,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#allOf_i1_if" onclick="anchorLink('allOf_i1_if')">if</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#allOf_i1_if" onclick="anchorLink('allOf_i1_if')">if</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 
         
 
@@ -344,18 +340,16 @@
 
         
 <div class="accordion" id="accordionallOf_i1_if_country">
-    <div class="card">
-        <div class="card-header" id="headingallOf_i1_if_country">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#allOf_i1_if_country"
-                        aria-expanded="" aria-controls="allOf_i1_if_country" onclick="setAnchor('#allOf_i1_if_country')"><span class="property-name">country</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingallOf_i1_if_country">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#allOf_i1_if_country"
+                    aria-expanded="" aria-controls="allOf_i1_if_country" onclick="setAnchor('#allOf_i1_if_country')"><span class="property-name">country</span></button>
+        </h2>
 
         <div id="allOf_i1_if_country"
-             class="collapse property-definition-div" aria-labelledby="headingallOf_i1_if_country"
-             data-parent="#accordionallOf_i1_if_country">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingallOf_i1_if_country"
+             data-bs-parent="#accordionallOf_i1_if_country">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -385,7 +379,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#allOf_i1_if_country" onclick="anchorLink('allOf_i1_if_country')">country</a></div><span class="badge badge-dark value-type">Type: const</span><br/>
+    <a href="#allOf_i1_if_country" onclick="anchorLink('allOf_i1_if_country')">country</a></div><span class="badge text-bg-dark value-type">Type: const</span><br/>
 <span class="const-value" id="allOf_i1_if_country_const">Specific value: <code>"Canada"</code></span>
         
 
@@ -426,7 +420,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#allOf_i1_then" onclick="anchorLink('allOf_i1_then')">then</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#allOf_i1_then" onclick="anchorLink('allOf_i1_then')">then</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 
         
 
@@ -435,18 +429,16 @@
 
         
 <div class="accordion" id="accordionallOf_i1_then_postal_code">
-    <div class="card">
-        <div class="card-header" id="headingallOf_i1_then_postal_code">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#allOf_i1_then_postal_code"
-                        aria-expanded="" aria-controls="allOf_i1_then_postal_code" onclick="setAnchor('#allOf_i1_then_postal_code')"><span class="property-name">postal_code</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingallOf_i1_then_postal_code">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#allOf_i1_then_postal_code"
+                    aria-expanded="" aria-controls="allOf_i1_then_postal_code" onclick="setAnchor('#allOf_i1_then_postal_code')"><span class="property-name">postal_code</span></button>
+        </h2>
 
         <div id="allOf_i1_then_postal_code"
-             class="collapse property-definition-div" aria-labelledby="headingallOf_i1_then_postal_code"
-             data-parent="#accordionallOf_i1_then_postal_code">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingallOf_i1_then_postal_code"
+             data-bs-parent="#accordionallOf_i1_then_postal_code">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -476,7 +468,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#allOf_i1_then_postal_code" onclick="anchorLink('allOf_i1_then_postal_code')">postal_code</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#allOf_i1_then_postal_code" onclick="anchorLink('allOf_i1_then_postal_code')">postal_code</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <span class="pattern-value" id="allOf_i1_then_postal_code_pattern">Must match regular expression: <code>[A-Z][0-9][A-Z] [0-9][A-Z][0-9]</code></span>
         
 
@@ -513,7 +505,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#allOf_i2" onclick="anchorLink('allOf_i2')">item 2</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#allOf_i2" onclick="anchorLink('allOf_i2')">item 2</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <h2 class="handle">
     <label>Conditional Subschema</label>
 </h2>
@@ -523,7 +515,7 @@
     
     <li class="nav-item">
         <a class="nav-link active"
-           id="allOf_i2_if" data-toggle="tab" href="#tab-pane_allOf_i2_if" role="tab"
+           id="allOf_i2_if" data-bs-toggle="tab" href="#tab-pane_allOf_i2_if" role="tab"
            onclick="setAnchor('#allOf_i2_if')"
         >If</a>
     </li>
@@ -532,7 +524,7 @@
         
         <li class="nav-item">
             <a class="nav-link"
-               id="allOf_i2_then" data-toggle="tab" href="#tab-pane_allOf_i2_then" role="tab"
+               id="allOf_i2_then" data-bs-toggle="tab" href="#tab-pane_allOf_i2_then" role="tab"
                onclick="setAnchor('#allOf_i2_then')"
             >Then</a>
         </li></ul>
@@ -564,7 +556,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#allOf_i2_if" onclick="anchorLink('allOf_i2_if')">if</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#allOf_i2_if" onclick="anchorLink('allOf_i2_if')">if</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 
         
 
@@ -573,18 +565,16 @@
 
         
 <div class="accordion" id="accordionallOf_i2_if_country">
-    <div class="card">
-        <div class="card-header" id="headingallOf_i2_if_country">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#allOf_i2_if_country"
-                        aria-expanded="" aria-controls="allOf_i2_if_country" onclick="setAnchor('#allOf_i2_if_country')"><span class="property-name">country</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingallOf_i2_if_country">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#allOf_i2_if_country"
+                    aria-expanded="" aria-controls="allOf_i2_if_country" onclick="setAnchor('#allOf_i2_if_country')"><span class="property-name">country</span></button>
+        </h2>
 
         <div id="allOf_i2_if_country"
-             class="collapse property-definition-div" aria-labelledby="headingallOf_i2_if_country"
-             data-parent="#accordionallOf_i2_if_country">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingallOf_i2_if_country"
+             data-bs-parent="#accordionallOf_i2_if_country">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -614,7 +604,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#allOf_i2_if_country" onclick="anchorLink('allOf_i2_if_country')">country</a></div><span class="badge badge-dark value-type">Type: const</span><br/>
+    <a href="#allOf_i2_if_country" onclick="anchorLink('allOf_i2_if_country')">country</a></div><span class="badge text-bg-dark value-type">Type: const</span><br/>
 <span class="const-value" id="allOf_i2_if_country_const">Specific value: <code>"Netherlands"</code></span>
         
 
@@ -655,7 +645,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#allOf_i2_then" onclick="anchorLink('allOf_i2_then')">then</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#allOf_i2_then" onclick="anchorLink('allOf_i2_then')">then</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 
         
 
@@ -664,18 +654,16 @@
 
         
 <div class="accordion" id="accordionallOf_i2_then_postal_code">
-    <div class="card">
-        <div class="card-header" id="headingallOf_i2_then_postal_code">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#allOf_i2_then_postal_code"
-                        aria-expanded="" aria-controls="allOf_i2_then_postal_code" onclick="setAnchor('#allOf_i2_then_postal_code')"><span class="property-name">postal_code</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingallOf_i2_then_postal_code">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#allOf_i2_then_postal_code"
+                    aria-expanded="" aria-controls="allOf_i2_then_postal_code" onclick="setAnchor('#allOf_i2_then_postal_code')"><span class="property-name">postal_code</span></button>
+        </h2>
 
         <div id="allOf_i2_then_postal_code"
-             class="collapse property-definition-div" aria-labelledby="headingallOf_i2_then_postal_code"
-             data-parent="#accordionallOf_i2_then_postal_code">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingallOf_i2_then_postal_code"
+             data-bs-parent="#accordionallOf_i2_then_postal_code">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -705,7 +693,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#allOf_i2_then_postal_code" onclick="anchorLink('allOf_i2_then_postal_code')">postal_code</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#allOf_i2_then_postal_code" onclick="anchorLink('allOf_i2_then_postal_code')">postal_code</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <span class="pattern-value" id="allOf_i2_then_postal_code_pattern">Must match regular expression: <code>[0-9]{4} [A-Z]{2}</code></span>
         
 
@@ -732,18 +720,16 @@
 
         
 <div class="accordion" id="accordionstreet_address">
-    <div class="card">
-        <div class="card-header" id="headingstreet_address">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#street_address"
-                        aria-expanded="" aria-controls="street_address" onclick="setAnchor('#street_address')"><span class="property-name">street_address</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingstreet_address">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#street_address"
+                    aria-expanded="" aria-controls="street_address" onclick="setAnchor('#street_address')"><span class="property-name">street_address</span></button>
+        </h2>
 
         <div id="street_address"
-             class="collapse property-definition-div" aria-labelledby="headingstreet_address"
-             data-parent="#accordionstreet_address">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingstreet_address"
+             data-bs-parent="#accordionstreet_address">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -752,7 +738,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#street_address" onclick="anchorLink('street_address')">street_address</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+    <a href="#street_address" onclick="anchorLink('street_address')">street_address</a></div><span class="badge text-bg-dark value-type">Type: string</span><br/>
 
         
 
@@ -765,18 +751,16 @@
     </div>
 </div>
 <div class="accordion" id="accordioncountry">
-    <div class="card">
-        <div class="card-header" id="headingcountry">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#country"
-                        aria-expanded="" aria-controls="country" onclick="setAnchor('#country')"><span class="property-name">country</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingcountry">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#country"
+                    aria-expanded="" aria-controls="country" onclick="setAnchor('#country')"><span class="property-name">country</span></button>
+        </h2>
 
         <div id="country"
-             class="collapse property-definition-div" aria-labelledby="headingcountry"
-             data-parent="#accordioncountry">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingcountry"
+             data-bs-parent="#accordioncountry">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -785,7 +769,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#country" onclick="anchorLink('country')">country</a></div><span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+    <a href="#country" onclick="anchorLink('country')">country</a></div><span class="badge text-bg-dark value-type">Type: enum (of string)</span><br/>
 <div class="enum-value" id="country_enum">
                 <h4>Must be one of:</h4>
                 <ul class="list-group"><li class="list-group-item enum-item">"United States of America"</li><li class="list-group-item enum-item">"Canada"</li><li class="list-group-item enum-item">"Netherlands"</li></ul>

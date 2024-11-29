@@ -5,8 +5,8 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/overpass300,400,600,800.css">
     <script src="js/jquery-3.4.1.min.js"></script>
-    <link href="css/bootstrap-4.3.1.min.css" rel="stylesheet">
-    <script src="js/bootstrap-4.3.1.min.js"></script>
+    <link href="css/bootstrap-5.3.3.min.css" rel="stylesheet">
+    <script src="js/bootstrap-5.3.3.bundle.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/schema_doc.css">
     <!-- <script src="js/facf9fa52c.js"></script> -->
     <script src="js/schema_doc.min.js"></script>
@@ -16,11 +16,11 @@
     <title>Person</title>
 </head>
 <body onload="anchorOnLoad();" id="root"><div class="text-right">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
         </div>
 
-    <div class="breadcrumbs"></div> <h1>Person</h1><span class="badge badge-dark value-type">Type: object</span><br/>
+    <div class="breadcrumbs"></div> <h1>Person</h1><span class="badge text-bg-dark value-type">Type: object</span><br/>
 
         
 
@@ -29,18 +29,16 @@
 
         
 <div class="accordion" id="accordiondefault">
-    <div class="card">
-        <div class="card-header" id="headingdefault">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#default"
-                        aria-expanded="" aria-controls="default" onclick="setAnchor('#default')"><span class="property-name">default</span> <span class="badge badge-warning required-property">Required</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingdefault">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#default"
+                    aria-expanded="" aria-controls="default" onclick="setAnchor('#default')"><span class="property-name">default</span> <span class="badge text-bg-warning required-property">Required</span></button>
+        </h2>
 
         <div id="default"
-             class="collapse property-definition-div" aria-labelledby="headingdefault"
-             data-parent="#accordiondefault">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingdefault"
+             data-bs-parent="#accordiondefault">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +47,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#default" onclick="anchorLink('default')">default</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+    <a href="#default" onclick="anchorLink('default')">default</a></div><span class="badge text-bg-dark value-type">Type: string</span><br/>
 <span class="description"><p>default</p>
 </span>
         
@@ -63,18 +61,16 @@
     </div>
 </div>
 <div class="accordion" id="accordionexamples">
-    <div class="card">
-        <div class="card-header" id="headingexamples">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#examples"
-                        aria-expanded="" aria-controls="examples" onclick="setAnchor('#examples')"><span class="property-name">examples</span> <span class="badge badge-warning required-property">Required</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingexamples">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#examples"
+                    aria-expanded="" aria-controls="examples" onclick="setAnchor('#examples')"><span class="property-name">examples</span> <span class="badge text-bg-warning required-property">Required</span></button>
+        </h2>
 
         <div id="examples"
-             class="collapse property-definition-div" aria-labelledby="headingexamples"
-             data-parent="#accordionexamples">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingexamples"
+             data-bs-parent="#accordionexamples">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -83,7 +79,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#examples" onclick="anchorLink('examples')">examples</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+    <a href="#examples" onclick="anchorLink('examples')">examples</a></div><span class="badge text-bg-dark value-type">Type: string</span><br/>
 <span class="description"><p>examples</p>
 </span>
         
@@ -97,18 +93,16 @@
     </div>
 </div>
 <div class="accordion" id="accordionif">
-    <div class="card">
-        <div class="card-header" id="headingif">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#if"
-                        aria-expanded="" aria-controls="if" onclick="setAnchor('#if')"><span class="property-name">if</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingif">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#if"
+                    aria-expanded="" aria-controls="if" onclick="setAnchor('#if')"><span class="property-name">if</span></button>
+        </h2>
 
         <div id="if"
-             class="collapse property-definition-div" aria-labelledby="headingif"
-             data-parent="#accordionif">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingif"
+             data-bs-parent="#accordionif">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -117,7 +111,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#if" onclick="anchorLink('if')">if</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#if" onclick="anchorLink('if')">if</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <span class="description"><p>if</p>
 </span>
         
@@ -131,18 +125,16 @@
     </div>
 </div>
 <div class="accordion" id="accordionthen">
-    <div class="card">
-        <div class="card-header" id="headingthen">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#then"
-                        aria-expanded="" aria-controls="then" onclick="setAnchor('#then')"><span class="property-name">then</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingthen">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#then"
+                    aria-expanded="" aria-controls="then" onclick="setAnchor('#then')"><span class="property-name">then</span></button>
+        </h2>
 
         <div id="then"
-             class="collapse property-definition-div" aria-labelledby="headingthen"
-             data-parent="#accordionthen">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingthen"
+             data-bs-parent="#accordionthen">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -151,7 +143,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#then" onclick="anchorLink('then')">then</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#then" onclick="anchorLink('then')">then</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <span class="description"><p>then</p>
 </span>
         
@@ -165,18 +157,16 @@
     </div>
 </div>
 <div class="accordion" id="accordionelse">
-    <div class="card">
-        <div class="card-header" id="headingelse">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#else"
-                        aria-expanded="" aria-controls="else" onclick="setAnchor('#else')"><span class="property-name">else</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingelse">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#else"
+                    aria-expanded="" aria-controls="else" onclick="setAnchor('#else')"><span class="property-name">else</span></button>
+        </h2>
 
         <div id="else"
-             class="collapse property-definition-div" aria-labelledby="headingelse"
-             data-parent="#accordionelse">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingelse"
+             data-bs-parent="#accordionelse">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -185,7 +175,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#else" onclick="anchorLink('else')">else</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#else" onclick="anchorLink('else')">else</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <span class="description"><p>else</p>
 </span>
         
@@ -199,18 +189,16 @@
     </div>
 </div>
 <div class="accordion" id="accordionanyOf">
-    <div class="card">
-        <div class="card-header" id="headinganyOf">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#anyOf"
-                        aria-expanded="" aria-controls="anyOf" onclick="setAnchor('#anyOf')"><span class="property-name">anyOf</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headinganyOf">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#anyOf"
+                    aria-expanded="" aria-controls="anyOf" onclick="setAnchor('#anyOf')"><span class="property-name">anyOf</span></button>
+        </h2>
 
         <div id="anyOf"
-             class="collapse property-definition-div" aria-labelledby="headinganyOf"
-             data-parent="#accordionanyOf">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headinganyOf"
+             data-bs-parent="#accordionanyOf">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -219,7 +207,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#anyOf" onclick="anchorLink('anyOf')">anyOf</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#anyOf" onclick="anchorLink('anyOf')">anyOf</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <span class="description"><p>anyOf</p>
 </span>
         
@@ -233,18 +221,16 @@
     </div>
 </div>
 <div class="accordion" id="accordionallOf">
-    <div class="card">
-        <div class="card-header" id="headingallOf">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#allOf"
-                        aria-expanded="" aria-controls="allOf" onclick="setAnchor('#allOf')"><span class="property-name">allOf</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingallOf">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#allOf"
+                    aria-expanded="" aria-controls="allOf" onclick="setAnchor('#allOf')"><span class="property-name">allOf</span></button>
+        </h2>
 
         <div id="allOf"
-             class="collapse property-definition-div" aria-labelledby="headingallOf"
-             data-parent="#accordionallOf">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingallOf"
+             data-bs-parent="#accordionallOf">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -253,7 +239,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#allOf" onclick="anchorLink('allOf')">allOf</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#allOf" onclick="anchorLink('allOf')">allOf</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <span class="description"><p>allOf</p>
 </span>
         
@@ -267,18 +253,16 @@
     </div>
 </div>
 <div class="accordion" id="accordionnot">
-    <div class="card">
-        <div class="card-header" id="headingnot">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#not"
-                        aria-expanded="" aria-controls="not" onclick="setAnchor('#not')"><span class="property-name">not</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingnot">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#not"
+                    aria-expanded="" aria-controls="not" onclick="setAnchor('#not')"><span class="property-name">not</span></button>
+        </h2>
 
         <div id="not"
-             class="collapse property-definition-div" aria-labelledby="headingnot"
-             data-parent="#accordionnot">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingnot"
+             data-bs-parent="#accordionnot">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -287,7 +271,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#not" onclick="anchorLink('not')">not</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#not" onclick="anchorLink('not')">not</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <span class="description"><p>not</p>
 </span>
         
@@ -301,18 +285,16 @@
     </div>
 </div>
 <div class="accordion" id="accordionproperties">
-    <div class="card">
-        <div class="card-header" id="headingproperties">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#properties"
-                        aria-expanded="" aria-controls="properties" onclick="setAnchor('#properties')"><span class="property-name">properties</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingproperties">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#properties"
+                    aria-expanded="" aria-controls="properties" onclick="setAnchor('#properties')"><span class="property-name">properties</span></button>
+        </h2>
 
         <div id="properties"
-             class="collapse property-definition-div" aria-labelledby="headingproperties"
-             data-parent="#accordionproperties">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingproperties"
+             data-bs-parent="#accordionproperties">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -321,7 +303,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#properties" onclick="anchorLink('properties')">properties</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#properties" onclick="anchorLink('properties')">properties</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <span class="description"><p>properties</p>
 </span>
         
@@ -335,18 +317,16 @@
     </div>
 </div>
 <div class="accordion" id="accordionpatternProperties">
-    <div class="card">
-        <div class="card-header" id="headingpatternProperties">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#patternProperties"
-                        aria-expanded="" aria-controls="patternProperties" onclick="setAnchor('#patternProperties')"><span class="property-name">patternProperties</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingpatternProperties">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#patternProperties"
+                    aria-expanded="" aria-controls="patternProperties" onclick="setAnchor('#patternProperties')"><span class="property-name">patternProperties</span></button>
+        </h2>
 
         <div id="patternProperties"
-             class="collapse property-definition-div" aria-labelledby="headingpatternProperties"
-             data-parent="#accordionpatternProperties">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingpatternProperties"
+             data-bs-parent="#accordionpatternProperties">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -355,7 +335,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#patternProperties" onclick="anchorLink('patternProperties')">patternProperties</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#patternProperties" onclick="anchorLink('patternProperties')">patternProperties</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <span class="description"><p>patternProperties</p>
 </span>
         
@@ -369,18 +349,16 @@
     </div>
 </div>
 <div class="accordion" id="accordionrequired">
-    <div class="card">
-        <div class="card-header" id="headingrequired">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#required"
-                        aria-expanded="" aria-controls="required" onclick="setAnchor('#required')"><span class="property-name">required</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingrequired">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#required"
+                    aria-expanded="" aria-controls="required" onclick="setAnchor('#required')"><span class="property-name">required</span></button>
+        </h2>
 
         <div id="required"
-             class="collapse property-definition-div" aria-labelledby="headingrequired"
-             data-parent="#accordionrequired">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingrequired"
+             data-bs-parent="#accordionrequired">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -389,7 +367,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#required" onclick="anchorLink('required')">required</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#required" onclick="anchorLink('required')">required</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <span class="description"><p>required</p>
 </span>
         

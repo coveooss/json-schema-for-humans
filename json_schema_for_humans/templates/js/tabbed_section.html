@@ -9,7 +9,7 @@
     {%- for node in current_node.array_items -%}
         <li class="nav-item">
             <a class="nav-link {% if loop.index == 1 -%}active {% endif -%} {{ operator }}-option"
-               id="{{ node.html_id }}" data-toggle="tab" href="#tab-pane_{{ node.html_id }}" role="tab"
+               id="{{ node.html_id }}" data-bs-toggle="tab" href="#tab-pane_{{ node.html_id }}" role="tab"
                onclick="setAnchor('#{{ node.html_id }}')"
             >{{ node.definition_name or tab_label ~ " " ~ loop.index }}</a>
         </li>
