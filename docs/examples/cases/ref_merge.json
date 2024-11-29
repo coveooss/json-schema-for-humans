@@ -21,6 +21,7 @@
   },
   "definitions": {
     "aProperty": {
+      "title": "Title from definition",
       "default": "Default from definition",
       "type": "string",
       "enum": [

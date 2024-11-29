@@ -2,7 +2,7 @@
 
 - [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Bug > Code`](#Code)
 - [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Bug > RecursiveArray`](#RecursiveArray)
-  - [2.1. Bug > RecursiveArray > #](#RecursiveArray_items)
+  - [2.1. Bug > RecursiveArray > Bug](#RecursiveArray_items)
 - [3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Bug > DecoratedRecursiveArray`](#DecoratedRecursiveArray)
   - [3.1. Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items](#DecoratedRecursiveArray_items)
     - [3.1.1. Property `Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > SomeName`](#DecoratedRecursiveArray_items_SomeName)
@@ -49,9 +49,11 @@
 
 | Each item of this array must be | Description        |
 | ------------------------------- | ------------------ |
-| [#](#RecursiveArray_items)      | Display the issue. |
+| [Bug](#RecursiveArray_items)    | Display the issue. |
 
-### <a name="RecursiveArray_items"></a>2.1. Bug > RecursiveArray > #
+### <a name="RecursiveArray_items"></a>2.1. Bug > RecursiveArray > Bug
+
+**Title:** Bug
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -88,10 +90,10 @@
 | **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 
-| Property                                               | Pattern | Type   | Deprecated | Definition            | Title/Description  |
-| ------------------------------------------------------ | ------- | ------ | ---------- | --------------------- | ------------------ |
-| - [SomeName](#DecoratedRecursiveArray_items_SomeName ) | No      | string | No         | -                     | -                  |
-| - [TheThing](#DecoratedRecursiveArray_items_TheThing ) | No      | object | No         | Same as [Bug](#root ) | Display the issue. |
+| Property                                               | Pattern | Type   | Deprecated | Definition            | Title/Description |
+| ------------------------------------------------------ | ------- | ------ | ---------- | --------------------- | ----------------- |
+| - [SomeName](#DecoratedRecursiveArray_items_SomeName ) | No      | string | No         | -                     | -                 |
+| - [TheThing](#DecoratedRecursiveArray_items_TheThing ) | No      | object | No         | Same as [Bug](#root ) | Bug               |
 
 #### <a name="DecoratedRecursiveArray_items_SomeName"></a>3.1.1. Property `Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > SomeName`
 
@@ -100,6 +102,8 @@
 | **Type** | `string` |
 
 #### <a name="DecoratedRecursiveArray_items_TheThing"></a>3.1.2. Property `Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > TheThing`
+
+**Title:** Bug
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |

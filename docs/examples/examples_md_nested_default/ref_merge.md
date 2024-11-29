@@ -20,6 +20,8 @@
 </summary>
 <blockquote>
 
+**Title:** Title from definition
+
 |                |                           |
 | -------------- | ------------------------- |
 | **Type**       | `enum (of string)`        |
