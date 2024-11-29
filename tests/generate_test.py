@@ -615,7 +615,9 @@ def test_ref_merge() -> None:
     """Test case where a schema has elements next to $ref"""
     soup = generate_case("ref_merge")
 
-    tests.html_schema_doc_asserts.assert_soup_select_results_text(soup, "#aProperty > div > h4", ["Title from definition"])
+    tests.html_schema_doc_asserts.assert_soup_select_results_text(
+        soup, "#aProperty > div > h4", ["Title from definition"]
+    )
     tests.html_schema_doc_asserts.assert_descriptions(soup, ["This is the description from the definition"])
     tests.html_schema_doc_asserts.assert_types(soup, ["object", "enum (of string)", "object", "string", "string"])
     tests.html_schema_doc_asserts.assert_property_names(soup, ["aProperty", "aDictPropertyARequired", "a", "b"])
