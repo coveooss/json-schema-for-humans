@@ -1,11 +1,11 @@
 import copy
 import string
-from typing import Any, Dict, Iterable, Iterator, List, Optional, Set, Union, cast
+from typing import Any, Dict, Iterable, Iterator, List, Optional, Set, Union
 
 from json_schema_for_humans import const
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
 from json_schema_for_humans.schema.schema_keyword import SchemaKeyword
-from json_schema_for_humans.templating_utils import get_type_name, schema_keyword_to_str
+from json_schema_for_humans.templating_utils import get_type_name, schema_keyword_lookup_to_str
 
 circular_references: Dict["SchemaNode", bool] = {}
 
@@ -249,21 +249,7 @@ class SchemaNode:
 
     @property
     def description(self) -> str:
-        description = schema_keyword_to_str(self, const.DESCRIPTION)
-
-        seen = set()
-        current_node = self
-        while not description and current_node.refers_to:
-            if current_node in seen:
-                break
-            seen.add(current_node)
-            referenced_schema = current_node.refers_to
-            referenced_description_node = referenced_schema.keywords.get(const.DESCRIPTION)
-            if referenced_description_node:
-                description = referenced_description_node.literal_str
-            current_node = referenced_schema
-
-        return description or ""
+        return schema_keyword_lookup_to_str(self, SchemaKeyword.DESCRIPTION) or ""
 
     @property
     def literal_str(self) -> Optional[str]:
@@ -461,12 +447,7 @@ class SchemaNode:
 
     @property
     def title(self) -> Optional[str]:
-        title_kw = self.get_keyword(SchemaKeyword.TITLE)
-        if not title_kw:
-            return None
-        title = title_kw.literal
-        title = cast(str, title)
-        return title
+        return schema_keyword_lookup_to_str(self, SchemaKeyword.TITLE) or ""
 
     @property
     def property_display_name(self) -> Optional[str]:
