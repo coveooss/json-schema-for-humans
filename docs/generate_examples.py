@@ -1,9 +1,10 @@
 """Run this to populate the example cases from the code to Jekyll folder"""
+
 import os
 import re
 import sys
 from pathlib import Path
-from typing import TypedDict, List
+from typing import List, TypedDict
 
 import yaml
 
@@ -13,7 +14,8 @@ sys.path.insert(0, PARENT_DIR)
 
 from json_schema_for_humans.const import FileLikeType
 from json_schema_for_humans.generate import generate_from_filename
-from json_schema_for_humans.generation_configuration import GenerationConfiguration
+from json_schema_for_humans.generation_configuration import \
+    GenerationConfiguration
 
 EXAMPLES_DIR = os.path.join(CURRENT_DIR, "examples")
 JSON_EXAMPLES_DIR = os.path.join(EXAMPLES_DIR, "cases")
@@ -191,18 +193,20 @@ def generate_each_template(examples_md_file: FileLikeType, case_path: str, case_
     """
     print(f"Generating example {case_name}")
 
-    examples_md_file.write(f"\n## --{case_name}--")
+    examples_md_file.write(f"\n## --{case_name}--")  # type:ignore[arg-type]
     if case_name in CASES_DESCRIPTION_DICT:
         case_data = CASES_DESCRIPTION_DICT[case_name]
         case_display_name = case_data["display_name"]
         case_description = case_data["description"]
-        examples_md_file.write(f"\n### {case_display_name}\n\n")
+        examples_md_file.write(f"\n### {case_display_name}\n\n")  # type:ignore[arg-type]
         if case_description:
-            examples_md_file.write(f"**Description:** {case_description}\n")
+            examples_md_file.write(f"**Description:** {case_description}\n")  # type:ignore[arg-type]
     else:
-        examples_md_file.write(f"\n### {case_name}\n")
+        examples_md_file.write(f"\n### {case_name}\n")  # type:ignore[arg-type]
 
-    examples_md_file.write(MD_EXAMPLE_JSON_TEMPLATE.format(file_url=case_url, title="Json schema"))
+    examples_md_file.write(
+        MD_EXAMPLE_JSON_TEMPLATE.format(file_url=case_url, title="Json schema")  # type:ignore[arg-type]
+    )
     for config in CONFIGURATIONS:
         template_configuration = config["config"]
         example_dir_name = config["dir_name"]
@@ -211,7 +215,7 @@ def generate_each_template(examples_md_file: FileLikeType, case_path: str, case_
         examples_md_file.write(
             config["md_example_template"].format(
                 file_url=f"examples/{example_dir_name}/{example_file_name}", title=config["title"]
-            )
+            )  # type:ignore[arg-type]
         )
 
         example_dest_dir = os.path.join(EXAMPLES_DIR, example_dir_name)

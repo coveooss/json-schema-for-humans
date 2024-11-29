@@ -1,0 +1,8 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>coveooss/renovate-presets",
+    "schedule:earlyMondays",
+    "group:allNonMajor"
+  ]
+}

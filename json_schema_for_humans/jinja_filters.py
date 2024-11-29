@@ -1,22 +1,22 @@
-import re
 import json
+import re
+from datetime import datetime
+from typing import Any, List, Optional, cast
 
 import yaml
-from datetime import datetime
-from typing import List, Any
-
-from jinja2 import pass_environment, Environment
-from markdown2 import Markdown
-from markupsafe import Markup, escape as markupsafe_escape
+from jinja2 import Environment, pass_environment
+from markdown2 import Markdown  # type: ignore
+from markupsafe import escape as markupsafe_escape
 from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
-from pygments.lexers.javascript import JavascriptLexer
 from pygments.lexers.data import YamlLexer
+from pygments.lexers.javascript import JavascriptLexer
 from pytz import reference
 
 from json_schema_for_humans import const
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
 from json_schema_for_humans.schema.schema_node import SchemaNode
+from json_schema_for_humans.templating_utils import schema_keyword_convert_to_str, schema_keyword_to_str
 
 SHORT_DESCRIPTION_NUMBER_OF_LINES = 8
 DEFAULT_PATTERN = r"(\[Default - `([^`]+)`\])"
@@ -47,13 +47,14 @@ def is_deprecated_look_in_description(schema_node: SchemaNode) -> bool:
     if const.DESCRIPTION not in schema_node.keywords:
         return False
 
-    return bool(DEPRECATED_MARKER in schema_node.keywords[const.DESCRIPTION].literal)
+    return bool(DEPRECATED_MARKER in (schema_node.keywords[const.DESCRIPTION].literal_str or ""))
 
 
 def get_required_properties(schema_node: SchemaNode) -> List[str]:
-    required_properties = schema_node.keywords.get("required") or []
-    if required_properties:
-        required_properties = [p.literal for p in required_properties.array_items]
+    required_properties_node: Optional[SchemaNode] = schema_node.keywords.get("required")
+    required_properties: List[str] = []
+    if required_properties_node:
+        required_properties = [p.literal_str for p in required_properties_node.array_items if p.literal_str]
 
     return required_properties
 
@@ -96,23 +97,23 @@ def get_description(env: Environment, schema_node: SchemaNode) -> str:
 def get_description_literal(env: Environment, description: str) -> str:
     """Filter. Get the description of a property or an empty string"""
 
-    config: GenerationConfiguration = env.globals["jsfh_config"]
+    config: GenerationConfiguration = cast(GenerationConfiguration, env.globals["jsfh_config"])
     if config.default_from_description:
         match = re.match(DEFAULT_PATTERN, description)
         if match:
             description = description[match.span(1)[1] :].lstrip()
 
-    if description and config.description_is_markdown and not config.result_extension == "md":
+    if description and not config.result_extension == "md" and config.description_is_markdown:
         # Markdown templates are expected to already have Markdown descriptions
         md: Markdown = env.globals["jsfh_md"]
-        description = Markup(md.convert(markupsafe_escape(description)))
+        description = md.convert(description)
 
     return description
 
 
 def get_default(schema_node: SchemaNode) -> str:
     """Filter. Return the default value for a property"""
-    return schema_node.default_value
+    return str(schema_node.default_value) if schema_node.default_value is not None else ""
 
 
 def get_default_look_in_description(schema_node: SchemaNode) -> str:
@@ -121,10 +122,9 @@ def get_default_look_in_description(schema_node: SchemaNode) -> str:
     if default_value:
         return default_value
 
-    description = schema_node.keywords.get(const.DESCRIPTION)
+    description = schema_keyword_to_str(schema_node, const.DESCRIPTION)
     if not description:
         return ""
-    description = description.literal
 
     match = re.match(DEFAULT_PATTERN, description)
     if not match:
@@ -135,21 +135,11 @@ def get_default_look_in_description(schema_node: SchemaNode) -> str:
 
 def get_numeric_restrictions_text(schema_node: SchemaNode, before_value: str = "", after_value: str = "") -> str:
     """Filter. Get the text to display about restrictions on a numeric type(integer or number)"""
-    multiple_of = schema_node.keywords.get(const.MULTIPLE_OF)
-    if multiple_of:
-        multiple_of = multiple_of.literal
-    maximum = schema_node.keywords.get(const.MAXIMUM)
-    if maximum:
-        maximum = maximum.literal
-    exclusive_maximum = schema_node.keywords.get(const.EXCLUSIVE_MAXIMUM)
-    if exclusive_maximum:
-        exclusive_maximum = exclusive_maximum.literal
-    minimum = schema_node.keywords.get(const.MINIMUM)
-    if minimum:
-        minimum = minimum.literal
-    exclusive_minimum = schema_node.keywords.get(const.EXCLUSIVE_MINIMUM)
-    if exclusive_minimum:
-        exclusive_minimum = exclusive_minimum.literal
+    multiple_of = schema_keyword_convert_to_str(schema_node, const.MULTIPLE_OF)
+    maximum = schema_keyword_convert_to_str(schema_node, const.MAXIMUM)
+    exclusive_maximum = schema_keyword_convert_to_str(schema_node, const.EXCLUSIVE_MAXIMUM)
+    minimum = schema_keyword_convert_to_str(schema_node, const.MINIMUM)
+    exclusive_minimum = schema_keyword_convert_to_str(schema_node, const.EXCLUSIVE_MINIMUM)
 
     # Fix minimum and exclusive_minimum both there
     if minimum is not None and exclusive_minimum is not None:

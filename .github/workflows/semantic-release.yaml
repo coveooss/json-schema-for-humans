@@ -1,0 +1,32 @@
+name: Release
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  semantic-release:
+    environment: production
+    runs-on: [ ubuntu-latest ]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.COMMIT_TOKEN }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+      - name: Install semantic-release
+        shell: bash
+        run: npm install
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Release
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.COMMIT_TOKEN }}
+          PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
+        run: npx semantic-release

@@ -43,44 +43,6 @@
         
 
 <div class="card">
-    <div class="card-header" id="minify">
-        <h2 class="mb-0">
-            <a href="#minify"><span class="property-name">minify</span></a></h2>
-    </div>
-
-    <div class="card-body property-definition-div">
-
-    <div class="breadcrumbs">root
-        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path
-                fill-rule="evenodd"
-                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
-            />
-        </svg>
-    <a href="#minify">minify</a></div><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: true</span><br/>
-
-
-
-
-
-
-
-<p>Minify the output HTML document.</p>
-
-
-
-
-
-        
-
-        
-        
-
-        
-    </div>
-</div>
-
-<div class="card">
     <div class="card-header" id="description_is_markdown">
         <h2 class="mb-0">
             <a href="#description_is_markdown"><span class="property-name">description_is_markdown</span></a></h2>
@@ -103,12 +65,62 @@
 
 
 
-<p>Whether to consider the description as markdown and render it accordingly.</p>
+<p>(HTML outputs only)<br />
+Whether to consider the description as Markdown and render it accordingly.</p>
 
 
 
 
 
+        
+
+        
+        
+
+        
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header" id="description_safe_mode">
+        <h2 class="mb-0">
+            <a href="#description_safe_mode"><span class="property-name">description_safe_mode</span></a></h2>
+    </div>
+
+    <div class="card-body property-definition-div">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#description_safe_mode">description_safe_mode</a></div><span class="badge badge-dark value-type">Type: enum (of null or string)</span> <span class="badge badge-success default-value">Default: "escape"</span><br/>
+
+
+
+
+
+
+
+<p>(HTML outputs only)<br />
+(Only used with <code>description_is_markdown</code>)<br />
+How are HTML tags in descriptions handled. Correspond to the <code>safe_mode</code> option of the markdown2 library.</p>
+
+<ul>
+<li>"escape": Escape all HTML tags in descriptions</li>
+<li>"replace": Replace HTML tags with <code>[HTML_REMOVED]</code></li>
+<li>null: Allow HTML in descriptions</li>
+</ul>
+
+
+
+
+<div class="enum-value" id="description_safe_mode_enum">
+                <h4>Must be one of:</h4>
+                <ul class="list-group"><li class="list-group-item enum-item">null</li><li class="list-group-item enum-item">"escape"</li><li class="list-group-item enum-item">"replace"</li></ul>
+            </div>
         
 
         
@@ -356,7 +368,7 @@ If <code>link_to_reused_ref</code> is false and a <code>$ref</code> in the schem
 <div class="card">
     <div class="card-header" id="deprecated_from_description">
         <h2 class="mb-0">
-            <a href="#deprecated_from_description"><span class="property-name">deprecated_from_description</span></a> <span class="badge badge-danger deprecated-property">Deprecated</span></h2>
+            <a href="#deprecated_from_description"><span class="property-name">deprecated_from_description</span></a></h2>
     </div>
 
     <div class="card-body property-definition-div">
@@ -376,7 +388,7 @@ If <code>link_to_reused_ref</code> is false and a <code>$ref</code> in the schem
 
 
 
-<p>Mark a property as deprecated (with a big red badge) if the description contains the string <code>[Deprecated</code>.</p>
+<p>Mark a property as deprecated (with a big red badge) if the description contains the string <code>[​Deprecated</code>.</p>
 
 
 
@@ -416,7 +428,7 @@ If <code>link_to_reused_ref</code> is false and a <code>$ref</code> in the schem
 
 <p>Extract the default value of a property from the description like this: <code>[Default `the_default_value`]</code>.</p>
 
-<p>The default value from the &#34;default&#34; attribute will be used in priority.</p>
+<p>The default value from the "default" attribute will be used in priority.</p>
 
 
 
@@ -495,44 +507,6 @@ If <code>link_to_reused_ref</code> is false and a <code>$ref</code> in the schem
 <p>Copy <code>schema_doc.min.js</code> to the same directory as <code>RESULT_FILE</code> after generation.</p>
 
 <p>This file contains the logic for the anchor links.</p>
-
-
-
-
-
-        
-
-        
-        
-
-        
-    </div>
-</div>
-
-<div class="card">
-    <div class="card-header" id="templates_directory">
-        <h2 class="mb-0">
-            <a href="#templates_directory"><span class="property-name">templates_directory</span></a> <span class="badge badge-danger deprecated-property">Deprecated</span></h2>
-    </div>
-
-    <div class="card-body property-definition-div">
-
-    <div class="breadcrumbs">root
-        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path
-                fill-rule="evenodd"
-                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
-            />
-        </svg>
-    <a href="#templates_directory">templates_directory</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
-
-
-
-
-
-
-
-<p>[Deprecated]</p>
 
 
 
@@ -771,7 +745,7 @@ If <code>link_to_reused_ref</code> is false and a <code>$ref</code> in the schem
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#markdown_options">markdown_options</a></div><span class="badge badge-dark value-type">Type: object</span> <span class="badge badge-success default-value">Default: {"fenced-code-blocks": {"break-on-newline": true, "cssclass": "highlight jumbotron", "tables": null}, "tables": null}</span><br/>
+    <a href="#markdown_options">markdown_options</a></div><span class="badge badge-dark value-type">Type: object</span> <span class="badge badge-success default-value">Default: {"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": null, "break-on-newline": true}</span><br/>
 
 
 
@@ -782,7 +756,7 @@ If <code>link_to_reused_ref</code> is false and a <code>$ref</code> in the schem
 <p><a href="https://github.com/trentm/python-markdown2/wiki/Extras">Markdown 2 options</a> for the descriptions. <code>description_is_markdown</code> must be true for this to have any effect.</p>
 
 <p><strong>WARNING</strong><br />
-Adding an extra, even if the value is false, will activate it. For example <code>{&amp;#34;break-on-newline&amp;#34;: false}</code> will activate the <code>break-on-newline</code> extra.</p>
+Adding an extra, even if the value is false, will activate it. For example <code>{"break-on-newline": false}</code> will activate the <code>break-on-newline</code> extra.</p>
 
 
 
@@ -1017,7 +991,7 @@ Adding an extra, even if the value is false, will activate it. For example <code
 
 <p>array of column names to display in the properties table.</p>
 
-<p>if empty, the default is [&#39;Property&#39;,&#39;Pattern&#39;,&#39;Type&#39;,&#39;Deprecated&#39;,&#39;Definition&#39;,&#39;Title/Description&#39;]</p>
+<p>if empty, the default is ['Property','Pattern','Type','Deprecated','Definition','Title/Description']</p>
 
 
 
@@ -1145,6 +1119,120 @@ Adding an extra, even if the value is false, will activate it. For example <code
 
 
 <p>Whether the footer should display the generation time</p>
+
+
+
+
+
+        
+
+        
+        
+
+        
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header" id="allow_html_description">
+        <h2 class="mb-0">
+            <a href="#allow_html_description"><span class="property-name">allow_html_description</span></a> <span class="badge badge-danger deprecated-property">Deprecated</span></h2>
+    </div>
+
+    <div class="card-body property-definition-div">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#allow_html_description">allow_html_description</a></div><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: false</span><br/>
+
+
+
+
+
+
+
+<p>[Deprecated]</p>
+
+
+
+
+
+        
+
+        
+        
+
+        
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header" id="minify">
+        <h2 class="mb-0">
+            <a href="#minify"><span class="property-name">minify</span></a> <span class="badge badge-danger deprecated-property">Deprecated</span></h2>
+    </div>
+
+    <div class="card-body property-definition-div">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#minify">minify</a></div><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: true</span><br/>
+
+
+
+
+
+
+
+<p>[Deprecated]</p>
+
+
+
+
+
+        
+
+        
+        
+
+        
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header" id="templates_directory">
+        <h2 class="mb-0">
+            <a href="#templates_directory"><span class="property-name">templates_directory</span></a> <span class="badge badge-danger deprecated-property">Deprecated</span></h2>
+    </div>
+
+    <div class="card-body property-definition-div">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#templates_directory">templates_directory</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+
+
+
+
+
+
+
+<p>[Deprecated]</p>
 
 
 

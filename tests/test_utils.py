@@ -1,9 +1,10 @@
 import os
 from pathlib import Path
+from typing import Optional
 
 from bs4 import BeautifulSoup
 
-from json_schema_for_humans.const import DEFAULT_JS_FILE_NAME, DEFAULT_CSS_FILE_NAME
+from json_schema_for_humans.const import DEFAULT_CSS_FILE_NAME, DEFAULT_JS_FILE_NAME
 from json_schema_for_humans.generate import generate_from_schema
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
 
@@ -39,7 +40,7 @@ def get_nonexistent_output_path(name: str) -> str:
     return os.path.realpath(os.path.join(parent_dir, "not", "a", "path", f"{name}.html"))
 
 
-def generate_case(case_name: str, config: GenerationConfiguration = None) -> BeautifulSoup:
+def generate_case(case_name: str, config: Optional[GenerationConfiguration] = None) -> BeautifulSoup:
     """Get the BeautifulSoup object for a test case"""
     return BeautifulSoup(
         generate_from_schema(get_test_case_path(case_name), None, config=config),

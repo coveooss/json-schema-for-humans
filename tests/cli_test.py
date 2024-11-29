@@ -9,8 +9,8 @@ from json_schema_for_humans.cli import main
 from tests.test_utils import (
     assert_css_and_js_copied,
     assert_css_and_js_not_copied,
-    get_test_case_path,
     get_nonexistent_output_path,
+    get_test_case_path,
 )
 
 
@@ -166,7 +166,7 @@ def test_config_parameters_flags_yes() -> None:
 
         with open("schema_doc.html", "r", encoding="utf-8") as schema_doc:
             soup = BeautifulSoup(schema_doc.read(), "html.parser")
-            expand_button = soup.find("button", text="Expand all")
+            expand_button = soup.find("button", string="Expand all")
             assert expand_button
 
 

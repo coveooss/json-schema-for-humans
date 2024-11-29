@@ -1,6 +1,6 @@
-from typing import List, Optional
+from typing import List, Optional, Union
 
-from bs4 import BeautifulSoup, Tag
+from bs4 import BeautifulSoup, NavigableString, Tag
 
 
 def assert_soup_results_text(soup: BeautifulSoup, class_name: str, texts: List[str]) -> None:
@@ -28,7 +28,11 @@ def assert_enum_values(soup: BeautifulSoup, enum_values: List[List[str]]) -> Non
 
 def assert_title(soup: BeautifulSoup, title: str) -> None:
     """Assert the result file contains the provided title"""
+    assert soup.head
+    assert soup.head.title
     assert soup.head.title.string == title
+    assert soup.body
+    assert soup.body.h1
     assert soup.body.h1.string == title
 
 
@@ -98,7 +102,7 @@ def assert_basic_case(soup: BeautifulSoup) -> None:
     assert_required(soup, [False] * 4)
 
 
-def get_ref_link(soup: BeautifulSoup, ref_html_id: str) -> Optional[Tag]:
+def get_ref_link(soup: BeautifulSoup, ref_html_id: str) -> Optional[Union[Tag, NavigableString]]:
     """Get a link for a reused ref that redirects to a specified HTML id"""
     return soup.find("a", href=ref_html_id, class_="ref-link")
 

@@ -4,15 +4,15 @@
   "title": "JSON Schema for Humans configuration file",
   "description": "Choose how to generate JSON Schema for Humans documentation file.\n\nConfiguration parameters can be provided in several ways:\n\n- On the CLI using `--config parameter_name=value` (example: `--config template_name=flat`)\n- On the CLI using a config file `--config-file config.json`\n- From code, by providing a GenerationConfiguration object to the called generation method.",
   "properties": {
-    "minify": {
-      "type": "boolean",
-      "default": true,
-      "description": "Minify the output HTML document."
-    },
     "description_is_markdown": {
       "type": "boolean",
       "default": true,
-      "description": "Whether to consider the description as markdown and render it accordingly."
+      "description": "(HTML outputs only)\nWhether to consider the description as Markdown and render it accordingly."
+    },
+    "description_safe_mode": {
+      "enum": [null, "escape", "replace"],
+      "default": "escape",
+      "description": "(HTML outputs only)\n(Only used with `description_is_markdown`)\nHow are HTML tags in descriptions handled. Correspond to the `safe_mode` option of the markdown2 library.\n\n- \"escape\": Escape all HTML tags in descriptions\n- \"replace\": Replace HTML tags with `[HTML_REMOVED]`\n- null: Allow HTML in descriptions"
     },
     "expand_buttons": {
       "type": "boolean",
@@ -47,7 +47,7 @@
     "deprecated_from_description": {
       "type": "boolean",
       "default": false,
-      "description": "Mark a property as deprecated (with a big red badge) if the description contains the string `[Deprecated`."
+      "description": "Mark a property as deprecated (with a big red badge) if the description contains the string `[\u200BDeprecated`."
     },
     "default_from_description": {
       "type": "boolean",
@@ -63,10 +63,6 @@
       "type": "boolean",
       "default": true,
       "description": "Copy `schema_doc.min.js` to the same directory as `RESULT_FILE` after generation.\n\nThis file contains the logic for the anchor links."
-    },
-    "templates_directory": {
-      "type": "string",
-      "description": "[Deprecated]"
     },
     "template_name": {
       "type": "string",
@@ -104,11 +100,10 @@
       "type": "object",
       "default": {
         "fenced-code-blocks": {
-          "break-on-newline": true,
-          "cssclass": "highlight jumbotron",
-          "tables": null
+          "cssclass": "highlight jumbotron"
         },
-        "tables": null
+        "tables": null,
+        "break-on-newline": true
       },
       "description": "[Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for the descriptions. `description_is_markdown` must be true for this to have any effect.\n\n**WARNING**\nAdding an extra, even if the value is false, will activate it. For example `{\"break-on-newline\": false}` will activate the `break-on-newline` extra.",
       "examples": [
@@ -167,6 +162,20 @@
       "type": "boolean",
       "description": "Whether the footer should display the generation time",
       "default": true
+    },
+    "allow_html_description": {
+      "type": "boolean",
+      "default": false,
+      "description": "[Deprecated]"
+    },
+    "minify": {
+      "type": "boolean",
+      "default": true,
+      "description": "[Deprecated]"
+    },
+    "templates_directory": {
+      "type": "string",
+      "description": "[Deprecated]"
     }
   }
 }

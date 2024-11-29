@@ -1,8 +1,8 @@
 import re
+from typing import Optional
 
-import htmlmin
 import jinja2
-import markdown2
+import markdown2  # type: ignore  # No stubs available
 from jinja2 import FileSystemLoader, Template
 from jinja2.ext import loopcontrols
 
@@ -12,16 +12,8 @@ from json_schema_for_humans.md_template import MarkdownTemplate
 from json_schema_for_humans.schema.schema_node import SchemaNode
 
 
-def _minify(rendered: str, is_markdown: bool, is_html: bool) -> str:
-    if is_markdown:
-        return re.sub(r"\n\s*\n", "\n\n", rendered)
-    if is_html:
-        return htmlmin.minify(rendered)
-    return rendered
-
-
 class TemplateRenderer:
-    def __init__(self, config: GenerationConfiguration, template: Template = None):
+    def __init__(self, config: GenerationConfiguration, template: Optional[Template] = None):
         self.config = config
         self.template = template or self._get_jinja_template()
 
@@ -30,11 +22,13 @@ class TemplateRenderer:
         env = jinja2.Environment(
             loader=loader,
             extensions=[loopcontrols],
-            trim_blocks=(self.config.template_is_markdown),
-            lstrip_blocks=(self.config.template_is_markdown),
+            trim_blocks=self.config.template_is_markdown,
+            lstrip_blocks=self.config.template_is_markdown,
         )
         env.globals["jsfh_config"] = self.config
-        env.globals["jsfh_md"] = markdown2.Markdown(extras=self.config.markdown_options)
+        env.globals["jsfh_md"] = markdown2.Markdown(
+            extras=self.config.markdown_options, safe_mode=self.config.description_safe_mode
+        )
         if self.config.template_is_markdown:
             md_template = MarkdownTemplate(self.config)
             md_template.register_jinja(env)
@@ -72,7 +66,7 @@ class TemplateRenderer:
     def render(self, intermediate_schema: SchemaNode) -> str:
         rendered = self.template.render(schema=intermediate_schema, config=self.config)
 
-        if self.config.minify:
-            rendered = _minify(rendered, self.config.template_is_markdown, self.config.template_is_html)
+        if self.config.template_is_markdown:
+            rendered = re.sub(r"\n\s*\n", "\n\n", rendered)
 
         return rendered

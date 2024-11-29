@@ -1,20 +1,17 @@
-from typing import Dict, List, Union, Optional
-from urllib.parse import quote_plus, quote
+from typing import Dict, List, Optional, Union
+from urllib.parse import quote, quote_plus
 
 import jinja2
 
 from json_schema_for_humans import const, jinja_filters
 from json_schema_for_humans.schema.schema_node import SchemaNode
+from json_schema_for_humans.templating_utils import schema_keyword_to_int
 
 
 def get_numeric_maximum_restriction(schema_node: SchemaNode, default: str = "N/A") -> str:
     """Filter. Get the text to display about maximum restriction on a numeric type(integer or number)"""
-    maximum = schema_node.keywords.get(const.MAXIMUM)
-    if maximum:
-        maximum = maximum.literal
-    exclusive_maximum = schema_node.keywords.get(const.EXCLUSIVE_MAXIMUM)
-    if exclusive_maximum:
-        exclusive_maximum = exclusive_maximum.literal
+    maximum = schema_keyword_to_int(schema_node, const.MAXIMUM)
+    exclusive_maximum = schema_keyword_to_int(schema_node, const.EXCLUSIVE_MAXIMUM)
 
     # Fix maximum and exclusive_maximum both there
     if maximum is not None and exclusive_maximum is not None:
@@ -36,17 +33,13 @@ def escape_for_table(example_text: Optional[str]) -> str:
     """Filter. escape characters('|', '`') in string to be inserted into markdown table"""
     if example_text is None:
         return ""
-    return example_text.translate(str.maketrans({"|": "\\|", "`": "\\`", "\n": "<br />"}))
+    return example_text.translate(str.maketrans({"|": "\\|", "`": "\\`", "\n": "<br />"}))  # type:ignore[arg-type]
 
 
 def get_numeric_minimum_restriction(schema_node: SchemaNode, default: str = "N/A") -> str:
     """Filter. Get the text to display about minimum restriction on a numeric type (integer or number)"""
-    minimum = schema_node.keywords.get(const.MINIMUM)
-    if minimum:
-        minimum = minimum.literal
-    exclusive_minimum = schema_node.keywords.get(const.EXCLUSIVE_MINIMUM)
-    if exclusive_minimum:
-        exclusive_minimum = exclusive_minimum.literal
+    minimum = schema_keyword_to_int(schema_node, const.MINIMUM)
+    exclusive_minimum = schema_keyword_to_int(schema_node, const.EXCLUSIVE_MINIMUM)
 
     # Fix minimum and exclusive_minimum both there
     if minimum is not None and exclusive_minimum is not None:
@@ -109,9 +102,9 @@ def restrictions_table(schema: SchemaNode) -> List[List[str]]:
         restrictions.append(["**Min length**", str(schema.kw_min_length.literal)])
     if schema.kw_max_length:
         restrictions.append(["**Max length**", str(schema.kw_max_length.literal)])
-    if schema.kw_pattern:
-        pattern_code = schema.kw_pattern.literal.replace("|", "\\|")
-        pattern_url = quote_plus(schema.kw_pattern.literal)
+    if schema.kw_pattern and schema.kw_pattern.literal_str:
+        pattern_code = schema.kw_pattern.literal_str.replace("|", "\\|")
+        pattern_url = quote_plus(schema.kw_pattern.literal_str)
         example_url = ""
         if len(schema.examples) > 0:
             example_url = "&testString=" + quote_plus(schema.examples[0])
@@ -121,11 +114,11 @@ def restrictions_table(schema: SchemaNode) -> List[List[str]]:
                 f"```{pattern_code}``` [Test](https://regex101.com/?regex={pattern_url}{example_url})",
             ]
         )
-    if schema.keywords.get("multipleOf"):
-        restrictions.append(["**Multiple of**", str(schema.keywords.get("multipleOf").literal)])
-    if schema.keywords.get("minimum") or schema.keywords.get("exclusiveMinimum"):
+    if schema.kw_multiple_of and schema.kw_multiple_of.literal_to_str:
+        restrictions.append(["**Multiple of**", schema.kw_multiple_of.literal_to_str])
+    if schema.kw_minimum or schema.kw_exclusive_minimum:
         restrictions.append(["**Minimum**", str(get_numeric_minimum_restriction(schema))])
-    if schema.keywords.get("maximum") or schema.keywords.get("exclusiveMaximum"):
+    if schema.kw_maximum or schema.kw_exclusive_maximum:
         restrictions.append(["**Maximum**", str(get_numeric_maximum_restriction(schema))])
 
     if len(restrictions) > 0:
@@ -153,7 +146,7 @@ def array_items(schema: SchemaNode, title: str) -> List[List[str]]:
 
 def first_line_fixed(example_text: str) -> str:
     """first_line but replace ` with ' to avoid unbalanced `s in markdown"""
-    return jinja_filters.first_line(example_text).translate(str.maketrans({"`": "'"}))
+    return jinja_filters.first_line(example_text).translate(str.maketrans({"`": "'"}))  # type:ignore[arg-type]
 
 
 def array_items_restrictions(schema: SchemaNode) -> List[List[str]]:
@@ -350,6 +343,7 @@ class MarkdownTemplate(object):
                 elif field == "Definition":
                     # Link
                     if sub_property.should_be_a_link(self.config):
+                        assert sub_property.links_to
                         line.append(
                             "Same as "
                             + self.format_link(sub_property.links_to.link_name, sub_property.links_to.html_id)
@@ -392,6 +386,7 @@ class MarkdownTemplate(object):
         schema_format = schema.format
 
         merged_schema = schema if not schema.refers_to else schema.refers_to_merged
+        assert merged_schema
 
         type_info.append(["", ""])
         type_info.append(
@@ -409,6 +404,7 @@ class MarkdownTemplate(object):
         if default_value:
             type_info.append(["**Default**", f"`{default_value}`"])
         if schema.should_be_a_link(self.config):
+            assert schema.links_to
             schema_link_name = schema.links_to.link_name
             html_id = schema.links_to.html_id
             type_info.append(["**Same definition as**", f"[{ schema_link_name }](#{ html_id })"])
@@ -465,10 +461,12 @@ class MarkdownTemplate(object):
             ],
             [
                 "**Tuple validation**",
-                "See below"
-                if schema.array_items_def
-                or schema.tuple_validation_items
-                or (schema.kw_contains and schema.kw_contains.literal != {})
-                else "N/A",
+                (
+                    "See below"
+                    if schema.array_items_def
+                    or schema.tuple_validation_items
+                    or (schema.kw_contains and schema.kw_contains.literal != {})
+                    else "N/A"
+                ),
             ],
         ]

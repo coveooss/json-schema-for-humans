@@ -4,19 +4,19 @@ import os
 from dataclasses import dataclass
 from json import JSONDecodeError
 from pathlib import Path
-from typing import Any, Union, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Union
 
 import yaml
 from dataclasses_json import dataclass_json
 
 from json_schema_for_humans.const import (
-    DocumentationTemplate,
-    FileLikeType,
     DEFAULT_CSS_FILE_NAME,
     DEFAULT_JS_FILE_NAME,
     OFFLINE_CSS_FILE_NAMES,
     OFFLINE_FONT_FILE_NAMES,
     OFFLINE_JS_FILE_NAMES,
+    DocumentationTemplate,
+    FileLikeType,
 )
 
 DEFAULT_PROPERTIES_TABLE_COLUMNS = [
@@ -36,6 +36,8 @@ class GenerationConfiguration:
 
     minify: bool = True
     description_is_markdown: bool = True
+    allow_html_description: bool = False
+    description_safe_mode: Optional[str] = "escape"
     deprecated_from_description: bool = False
     show_breadcrumbs: bool = True
     collapse_long_descriptions: bool = True
@@ -118,7 +120,7 @@ class GenerationConfiguration:
         raise ValueError("Trying to get extension for configuration with no template")
 
     @property
-    def template_path(self) -> Optional[Path]:
+    def template_path(self) -> Path:
         if self.custom_template_path:
             return Path(self.custom_template_path)
 
@@ -136,7 +138,6 @@ CONFIG_DEPRECATION_MESSAGE = (
 
 
 def get_final_config(
-    minify: bool,
     deprecated_from_description: bool,
     default_from_description: bool,
     expand_buttons: bool,
@@ -144,13 +145,12 @@ def get_final_config(
     copy_css: bool = False,
     copy_js: bool = False,
     config: Optional[Union[str, Path, FileLikeType, Dict[str, Any], GenerationConfiguration]] = None,
-    config_parameters: List[str] = None,
+    config_parameters: Optional[List[str]] = None,
 ) -> GenerationConfiguration:
     if config:
         final_config = _load_config(config)
     else:
         final_config = GenerationConfiguration(
-            minify=minify,
             deprecated_from_description=deprecated_from_description,
             default_from_description=default_from_description,
             expand_buttons=expand_buttons,
@@ -158,13 +158,7 @@ def get_final_config(
             copy_css=copy_css,
             copy_js=copy_js,
         )
-        if (
-            not minify
-            or deprecated_from_description
-            or default_from_description
-            or expand_buttons
-            or not link_to_reused_ref
-        ):
+        if deprecated_from_description or default_from_description or expand_buttons or not link_to_reused_ref:
             logging.info(CONFIG_DEPRECATION_MESSAGE)
 
     if config_parameters:
@@ -218,5 +212,4 @@ def _apply_config_cli_parameters(
                 parameter_value = True
         current_configuration_as_dict[parameter_name] = parameter_value
 
-    # type: ignore
-    return GenerationConfiguration.from_dict(current_configuration_as_dict)
+    return GenerationConfiguration.from_dict(current_configuration_as_dict)  # type: ignore[attr-defined]

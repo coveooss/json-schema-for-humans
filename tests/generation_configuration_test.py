@@ -1,5 +1,5 @@
-from json_schema_for_humans.generation_configuration import GenerationConfiguration
 from json_schema_for_humans.const import DocumentationTemplate
+from json_schema_for_humans.generation_configuration import GenerationConfiguration
 
 
 def test_default_values() -> None:
@@ -80,7 +80,7 @@ def test_override_template_md_options() -> None:
     # override badge_as_image key
     config = GenerationConfiguration(
         deprecated_from_description=True,
-        template_name=DocumentationTemplate.MD,
+        template_name=DocumentationTemplate.MD.value,
         template_md_options={"badge_as_image": "test"},
     )
     assert config.template_md_options is not None
@@ -89,7 +89,7 @@ def test_override_template_md_options() -> None:
     # override badge_as_image key
     config = GenerationConfiguration(
         deprecated_from_description=True,
-        template_name=DocumentationTemplate.MD,
+        template_name=DocumentationTemplate.MD.value,
         template_md_options={"badge_as_image": True},
     )
     assert config.template_md_options is not None

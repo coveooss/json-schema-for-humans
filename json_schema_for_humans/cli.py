@@ -1,10 +1,10 @@
 from pathlib import Path
-from typing import Optional, List, Union
+from typing import List, Optional, Union
 
 import click
 
-from json_schema_for_humans.const import FileLikeType, DEFAULT_CSS_FILE_NAME, DEFAULT_JS_FILE_NAME
-from json_schema_for_humans.generate import generate_schemas_doc, copy_additional_files_to_target
+from json_schema_for_humans.const import DEFAULT_CSS_FILE_NAME, DEFAULT_JS_FILE_NAME, FileLikeType
+from json_schema_for_humans.generate import copy_additional_files_to_target, generate_schemas_doc
 from json_schema_for_humans.generation_configuration import get_final_config
 from json_schema_for_humans.schema.schema_importer import get_result_output, get_schemas_to_render
 from json_schema_for_humans.schema.schema_to_render import SchemaToRender
@@ -23,7 +23,6 @@ from json_schema_for_humans.template_renderer import TemplateRenderer
     help="Override generation parameters from the configuration file. "
     "Format is parameter_name=parameter_value. For example: --config minify=false. Can be repeated.",
 )
-@click.option("--minify/--no-minify", default=True, help="Run minification on the HTML result")
 @click.option(
     "--deprecated-from-description", is_flag=True, help="Look in the description to find if an attribute is deprecated"
 )
@@ -43,6 +42,7 @@ from json_schema_for_humans.template_renderer import TemplateRenderer
     help="If set and 2 parts of the schema refer to the same definition, the definition will only be rendered once "
     "and all other references will be replaced by a link.",
 )
+@click.option("--minify/--no-minify", default=False, help="Deprecated")
 def main(
     schema_files_or_dir: str,
     output_path_or_file: Optional[Path],
@@ -56,8 +56,7 @@ def main(
     copy_js: bool,
     link_to_reused_ref: bool,
 ) -> None:
-    config = get_final_config(
-        minify=minify,
+    final_config = get_final_config(
         deprecated_from_description=deprecated_from_description,
         default_from_description=default_from_description,
         expand_buttons=expand_buttons,
@@ -69,22 +68,25 @@ def main(
     )
 
     schemas_to_render = get_schemas_to_render_from_cli_arguments(
-        schema_files_or_dir, output_path_or_file, config.result_extension
+        schema_files_or_dir, output_path_or_file, final_config.result_extension
     )
 
-    template_renderer = TemplateRenderer(config)
+    template_renderer = TemplateRenderer(final_config)
     generate_schemas_doc(schemas_to_render, template_renderer)
-    copy_additional_files_to_target(schemas_to_render, config)
+    copy_additional_files_to_target(schemas_to_render, final_config)
 
 
 def get_schemas_to_render_from_cli_arguments(
     schema_files_or_dir: Union[str, Path], output_path_or_file: Optional[Path], result_extension: str
 ) -> List[SchemaToRender]:
-    schema_files_or_dir = schema_files_or_dir.split(",")
-    result_output = get_result_output(output_path_or_file, schema_files_or_dir, result_extension)
+    if isinstance(schema_files_or_dir, Path):
+        schema_files_or_dir_to_render = [str(schema_files_or_dir)]
+    else:
+        schema_files_or_dir_to_render = schema_files_or_dir.split(",")
+    result_output = get_result_output(output_path_or_file, schema_files_or_dir_to_render, result_extension)
 
     schemas_to_render: List[SchemaToRender] = []
-    for schema_file_or_dir_part in schema_files_or_dir:
+    for schema_file_or_dir_part in schema_files_or_dir_to_render:
         schemas_to_render += get_schemas_to_render(schema_file_or_dir_part, result_output, result_extension)
 
     return schemas_to_render

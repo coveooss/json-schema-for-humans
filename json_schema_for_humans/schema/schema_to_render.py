@@ -1,6 +1,8 @@
 from dataclasses import dataclass
+from io import FileIO
 from pathlib import Path
-from typing import Optional, Dict, Any, Union
+from tempfile import _TemporaryFileWrapper
+from typing import Any, Dict, Optional, TextIO, Union
 
 from json_schema_for_humans.const import FileLikeType
 from json_schema_for_humans.schema.intermediate_representation import build_intermediate_representation
@@ -15,8 +17,8 @@ class NoResultFileError(EnvironmentError):
 class SchemaToRender:
     def __init__(
         self,
-        schema_file: Union[Path, FileLikeType],
-        result_file: Optional[Union[Path, FileLikeType]],
+        schema_file: Union[Path, FileLikeType, _TemporaryFileWrapper],
+        result_file: Optional[Union[Path, FileLikeType, _TemporaryFileWrapper]],
         output_dir: Optional[Path],
     ):
         self.schema_file = schema_file
@@ -68,6 +70,8 @@ class SchemaToRender:
         if isinstance(self.result_file, Path):
             with self.result_file.open("w", encoding="utf-8") as fp:
                 fp.write(rendered)
+        elif isinstance(self.result_file, FileIO):
+            self.result_file.write(rendered.encode("utf-8"))
         else:
             # self.result_file is file-like object
             self.result_file.write(rendered)

@@ -3,9 +3,9 @@ import string
 from typing import Any, Dict, Iterable, Iterator, List, Optional, Set, Union, cast
 
 from json_schema_for_humans import const
-from json_schema_for_humans.schema.schema_keyword import SchemaKeyword
-from json_schema_for_humans.templating_utils import get_type_name
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
+from json_schema_for_humans.schema.schema_keyword import SchemaKeyword
+from json_schema_for_humans.templating_utils import get_type_name, schema_keyword_to_str
 
 circular_references: Dict["SchemaNode", bool] = {}
 
@@ -23,22 +23,22 @@ class SchemaNode:
         self,
         depth: int,
         file: str,
-        path_to_element: List[Union[str, int]],
+        path_to_element: List[str],
         html_id: str,
         breadcrumb_name: str = "",
         ref_path="",
-        parent: "SchemaNode" = None,
-        parent_key: str = None,
+        parent: Optional["SchemaNode"] = None,
+        parent_key: Optional[str] = None,
         literal: Optional[Union[str, int, bool]] = None,
-        keywords: Dict[str, Union["SchemaNode", str, List[str]]] = None,
-        array_items: List["SchemaNode"] = None,
+        keywords: Optional[Dict[str, "SchemaNode"]] = None,
+        array_items: Optional[List["SchemaNode"]] = None,
         array_items_def: Optional["SchemaNode"] = None,
         array_additional_items_def: Optional["SchemaNode"] = None,
         array_additional_items: bool = False,
         tuple_validation_items: Optional[List["SchemaNode"]] = None,
         property_name: Optional[str] = None,
-        links_to: "SchemaNode" = None,
-        refers_to: "SchemaNode" = None,
+        links_to: Optional["SchemaNode"] = None,
+        refers_to: Optional["SchemaNode"] = None,
         is_displayed: bool = True,
     ):
         """
@@ -183,12 +183,12 @@ class SchemaNode:
         if not required_properties:
             return []
 
-        return [r.literal for r in required_properties.array_items]
+        return [r.literal_str for r in required_properties.array_items if r.literal_str]
 
     @property
     def is_required_property(self) -> bool:
         """Check if the current node represents a property and that this property is required by its parent"""
-        return self.parent and self.property_name in self.parent.required_properties
+        return bool(self.parent and self.property_name in self.parent.required_properties)
 
     @property
     def nodes_from_root(self) -> Iterator["SchemaNode"]:
@@ -201,7 +201,7 @@ class SchemaNode:
 
         if len(nodes) == 1:
             # Don't want to display "root" alone at the root
-            return []
+            return iter([])
 
         return reversed(nodes)
 
@@ -218,7 +218,7 @@ class SchemaNode:
     @property
     def flat_path(self) -> str:
         """String representation of the path to this node from the root of the current schema"""
-        return "/".join(str(part) for part in self.path_to_element)
+        return "/".join(self.path_to_element)
 
     @property
     def default_value(self) -> Optional[Any]:
@@ -226,7 +226,7 @@ class SchemaNode:
             default = node.keywords.get(const.DEFAULT)
             if isinstance(default, SchemaNode) and default.is_a_property_node:
                 return None
-            return default
+            return default.literal if default else ""
 
         seen = set()
         current_node = self
@@ -244,15 +244,12 @@ class SchemaNode:
     def format(self) -> Optional[str]:
         format_val = self.keywords.get(const.FORMAT)
         if format_val:
-            return format_val.literal
+            return format_val.literal_str
         return None
 
     @property
     def description(self) -> str:
-        description = ""
-        description_node = self.keywords.get(const.DESCRIPTION)
-        if description_node:
-            description = description_node.literal
+        description = schema_keyword_to_str(self, const.DESCRIPTION)
 
         seen = set()
         current_node = self
@@ -263,10 +260,24 @@ class SchemaNode:
             referenced_schema = current_node.refers_to
             referenced_description_node = referenced_schema.keywords.get(const.DESCRIPTION)
             if referenced_description_node:
-                description = referenced_description_node.literal
+                description = referenced_description_node.literal_str
             current_node = referenced_schema
 
-        return description
+        return description or ""
+
+    @property
+    def literal_str(self) -> Optional[str]:
+        """Return the literal value if it is a str"""
+        if isinstance(self.literal, str):
+            return self.literal
+        return None
+
+    @property
+    def literal_to_str(self) -> Optional[str]:
+        """Return the literal value converted to str"""
+        if self.literal:
+            return str(self.literal)
+        return None
 
     @property
     def examples(self) -> List[str]:
@@ -277,7 +288,27 @@ class SchemaNode:
         if isinstance(possible_examples, SchemaNode) and possible_examples.is_a_property_node:
             return []
 
-        return possible_examples
+        return [example.literal_str for example in possible_examples.array_items if example.literal_str]
+
+    def _merge_node(self, other: "SchemaNode"):
+        merged_node = copy.copy(self)
+        merged_node.keywords = {k: copy.copy(v) for k, v in self.keywords.items()}
+        merged_node.array_items = [copy.copy(i) for i in self.array_items]
+        merged_node.properties = {k: copy.copy(v) for k, v in self.properties.items()}
+
+        merged_node.keywords.update({k: copy.copy(v) for k, v in other.keywords.items()})
+        merged_node.array_items += [copy.copy(i) for i in other.array_items]
+
+        # Merge node properties, ignoring conflicts
+        for k, v in other.properties.items():
+            if k in merged_node.properties:
+                merged_node.properties[k] = merged_node.properties[k]._merge_node(v)
+            else:
+                merged_node.properties[k] = v
+
+        merged_node.literal = self.literal or other.literal
+
+        return merged_node
 
     @property
     def refers_to_merged(self) -> Optional["SchemaNode"]:
@@ -288,16 +319,7 @@ class SchemaNode:
         if not self.refers_to:
             return None
 
-        merged_node = copy.copy(self.refers_to)
-        merged_node.keywords = {k: copy.copy(v) for k, v in self.refers_to.keywords.items()}
-        merged_node.array_items = [copy.copy(i) for i in self.refers_to.array_items]
-
-        merged_node.keywords.update({k: copy.copy(v) for k, v in self.keywords.items()})
-        merged_node.array_items += [copy.copy(i) for i in self.array_items]
-
-        merged_node.literal = self.literal or self.refers_to.literal
-
-        return merged_node
+        return self.refers_to._merge_node(self)
 
     def get_keyword(self, keyword: SchemaKeyword) -> Optional["SchemaNode"]:
         """Get the value of a keyword if present, and it is not a property (to avoid conflicts with properties being
@@ -376,6 +398,26 @@ class SchemaNode:
     @property
     def kw_max_length(self) -> Optional["SchemaNode"]:
         return self.get_keyword(SchemaKeyword.MAX_LENGTH)
+
+    @property
+    def kw_multiple_of(self) -> Optional["SchemaNode"]:
+        return self.get_keyword(SchemaKeyword.MULTIPLE_OF)
+
+    @property
+    def kw_minimum(self) -> Optional["SchemaNode"]:
+        return self.get_keyword(SchemaKeyword.MINIMUM)
+
+    @property
+    def kw_exclusive_minimum(self) -> Optional["SchemaNode"]:
+        return self.get_keyword(SchemaKeyword.EXCLUSIVE_MINIMUM)
+
+    @property
+    def kw_maximum(self) -> Optional["SchemaNode"]:
+        return self.get_keyword(SchemaKeyword.MAXIMUM)
+
+    @property
+    def kw_exclusive_maximum(self) -> Optional["SchemaNode"]:
+        return self.get_keyword(SchemaKeyword.EXCLUSIVE_MAXIMUM)
 
     @property
     def kw_items(self) -> Optional[List["SchemaNode"]]:
@@ -473,7 +515,10 @@ class SchemaNode:
         meta_enum_node = self.get_keyword(SchemaKeyword.META_ENUM)
         if not meta_enum_node:
             return None
-        description = meta_enum_node.raw.get(value)
+        raw_node = meta_enum_node.raw
+        if not isinstance(raw_node, dict):
+            return None
+        description = raw_node.get(value)
         if not description:
             return None
         return description

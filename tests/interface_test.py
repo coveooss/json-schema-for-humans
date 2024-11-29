@@ -1,7 +1,7 @@
 import logging
 import os
 from pathlib import Path
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock, patch
 
 import pytest
 import yaml
@@ -16,10 +16,7 @@ from json_schema_for_humans.generate import (
     generate_from_schema,
     generate_schemas_doc,
 )
-from json_schema_for_humans.generation_configuration import (
-    GenerationConfiguration,
-    CONFIG_DEPRECATION_MESSAGE,
-)
+from json_schema_for_humans.generation_configuration import CONFIG_DEPRECATION_MESSAGE, GenerationConfiguration
 from json_schema_for_humans.schema.schema_importer import get_schemas_to_render
 from json_schema_for_humans.template_renderer import TemplateRenderer
 from tests.html_schema_doc_asserts import assert_basic_case
@@ -160,41 +157,45 @@ def _assert_deprecation_message(caplog: LogCaptureFixture, must_be_present: bool
         assert CONFIG_DEPRECATION_MESSAGE not in log_records
 
 
-@pytest.mark.parametrize("minify, expect_warning", [(True, False), (False, True)])
+@pytest.mark.parametrize("deprecated_from_description, expect_warning", [(True, True), (False, False)])
 def test_generate_from_schema_deprecation_warning(
-    tmp_path: Path, caplog: LogCaptureFixture, minify: bool, expect_warning: bool
+    tmp_path: Path, caplog: LogCaptureFixture, deprecated_from_description: bool, expect_warning: bool
 ) -> None:
     caplog.set_level(logging.INFO)
 
-    generate_from_schema(get_test_case_path("basic"), minify=minify)
+    generate_from_schema(get_test_case_path("basic"), deprecated_from_description=deprecated_from_description)
 
     _assert_deprecation_message(caplog, expect_warning)
 
 
-@pytest.mark.parametrize("minify, expect_warning", [(True, False), (False, True)])
+@pytest.mark.parametrize("deprecated_from_description, expect_warning", [(True, True), (False, False)])
 def test_generate_from_file_object_deprecation_warning(
-    tmp_path: Path, caplog: LogCaptureFixture, minify: bool, expect_warning: bool
+    tmp_path: Path, caplog: LogCaptureFixture, deprecated_from_description: bool, expect_warning: bool
 ) -> None:
     result_file_path = tmp_path / "result_file.html"
 
     caplog.set_level(logging.INFO)
     with open(get_test_case_path("basic")) as test_case_fp:
         with result_file_path.open("w", encoding="utf-8") as result_write_fp:
-            generate_from_file_object(test_case_fp, result_write_fp, minify=minify)
+            generate_from_file_object(
+                test_case_fp, result_write_fp, deprecated_from_description=deprecated_from_description
+            )
 
     _assert_deprecation_message(caplog, expect_warning)
 
 
-@pytest.mark.parametrize("minify, expect_warning", [(True, False), (False, True)])
+@pytest.mark.parametrize("deprecated_from_description, expect_warning", [(True, True), (False, False)])
 def test_generate_from_file_name_deprecation_warning(
-    tmp_path: Path, caplog: LogCaptureFixture, minify: bool, expect_warning: bool
+    tmp_path: Path, caplog: LogCaptureFixture, deprecated_from_description: bool, expect_warning: bool
 ) -> None:
     test_case_path = get_test_case_path("basic")
     result_path = tmp_path / "result_file.html"
 
     caplog.set_level(logging.INFO)
 
-    generate_from_filename(test_case_path, str(result_path.resolve()), minify=minify)
+    generate_from_filename(
+        test_case_path, str(result_path.resolve()), deprecated_from_description=deprecated_from_description
+    )
 
     _assert_deprecation_message(caplog, expect_warning)
 

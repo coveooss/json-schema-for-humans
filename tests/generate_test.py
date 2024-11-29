@@ -1,16 +1,16 @@
 import os
 import tempfile
-from typing import Dict, Any
+from typing import Any, Dict
+from unittest.mock import Mock
 
 import pytest
 from bs4 import BeautifulSoup
-from unittest.mock import Mock
 
 import tests.html_schema_doc_asserts
-from json_schema_for_humans.schema.schema_to_render import SchemaToRender
-from json_schema_for_humans.template_renderer import TemplateRenderer
 from json_schema_for_humans.generate import generate_from_file_object
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
+from json_schema_for_humans.schema.schema_to_render import SchemaToRender
+from json_schema_for_humans.template_renderer import TemplateRenderer
 from tests.test_utils import generate_case
 
 current_dir = os.path.abspath(os.path.dirname(__file__))
@@ -386,7 +386,7 @@ def test_description_markdown_with_default_options() -> None:
 
     assert (
         str(soup.find("span", class_="description"))
-        == '<span class="description"><p>DOC<br/> * List 1<br/> * List 2</p> </span>'
+        == '<span class="description"><p>DOC<br/>\n* List 1<br/>\n* List 2</p>\n</span>'
     )
 
 
@@ -403,7 +403,7 @@ def test_description_markdown_with_custom_options() -> None:
 
     assert (
         str(soup.find("span", class_="description"))
-        == """<span class="description"><p>DOC </p> <ul> <li>List 1</li> <li>List 2</li> </ul> </span>"""
+        == """<span class="description"><p>DOC </p>\n<ul>\n<li>List 1</li>\n<li>List 2</li>\n</ul>\n</span>"""
     )
 
 
@@ -546,7 +546,7 @@ def test_html_in_patterns() -> None:
 def test_yaml() -> None:
     """Test loading the schema from a YAML file. The schema is the same as the case "with_definitions"."""
     with tempfile.NamedTemporaryFile(mode="w+") as temp_file:
-        with open(os.path.abspath(os.path.join(examples_dir, "cases", f"yaml.yaml"))) as schema_fp:
+        with open(os.path.abspath(os.path.join(examples_dir, "cases", "yaml.yaml"))) as schema_fp:
             generate_from_file_object(schema_fp, temp_file, True, False, False, True)
 
         temp_file.seek(0)
@@ -577,7 +577,7 @@ def test_json_with_tabs() -> None:
     """Test loading the schema when tabs are present rather than spaces. Regression test for #45"""
     temp_schema_file = tempfile.NamedTemporaryFile(mode="w+", delete=False, suffix=".json")
     created_filename = temp_schema_file.name
-    with open(os.path.abspath(os.path.join(examples_dir, "cases", f"basic.json"))) as schema_fp:
+    with open(os.path.abspath(os.path.join(examples_dir, "cases", "basic.json"))) as schema_fp:
         for line in schema_fp:
             temp_schema_file.write(line.replace("  ", "\t"))
     with tempfile.NamedTemporaryFile(mode="w+") as temp_html_file:
@@ -674,7 +674,7 @@ def test_complex_const() -> None:
 
     tests.html_schema_doc_asserts.assert_types(soup, ["const", "const", "const"])
     tests.html_schema_doc_asserts.assert_const(
-        soup, ["[ 1, 2 ]", '{ "a_key": "a_value", "another_key": "another_value" }', "0"]
+        soup, ["[\n    1,\n    2\n]", '{\n    "a_key": "a_value",\n    "another_key": "another_value"\n}', "0"]
     )
 
 
@@ -717,6 +717,53 @@ def test_broken_ref() -> None:
             "The person's first name.",
             "😅 ERROR in schema generation, a referenced schema could not be loaded, no documentation here unfortunately 🏜️",
         ],
+    )
+
+
+def test_html_in_description_unsafe() -> None:
+    soup = generate_case("html_in_description", config=GenerationConfiguration(description_safe_mode=None))
+
+    description_nodes = soup.find_all(attrs={"class": "description"})
+
+    assert len(description_nodes) == 3
+
+    # It should be HTML, so BeautifulSoup should be able to parse it as such
+    raw_html_node = description_nodes[0]
+    assert "href" in raw_html_node.find("a").attrs.keys()
+
+    html_in_markdown_node = description_nodes[1]
+    assert html_in_markdown_node.descendents is None
+    assert "Here is some HTML" in html_in_markdown_node.text
+
+    json_in_markdown_node = description_nodes[2]
+    assert "Here is some JSON" in json_in_markdown_node.text
+
+
+def test_html_in_description_escape() -> None:
+    soup = generate_case("html_in_description", config=GenerationConfiguration(description_safe_mode="escape"))
+
+    description_nodes = soup.find_all(attrs={"class": "description"})
+
+    assert len(description_nodes) == 3
+
+    # It should not be HTML
+    raw_html_node = description_nodes[0]
+    assert raw_html_node.descendents is None
+    assert raw_html_node.text == '<br/><br/><br/><br/><a href="https://example.com">A link to example.com</a>\n'
+
+
+def test_html_in_description_replace() -> None:
+    soup = generate_case("html_in_description", config=GenerationConfiguration(description_safe_mode="replace"))
+
+    description_nodes = soup.find_all(attrs={"class": "description"})
+
+    assert len(description_nodes) == 3
+
+    raw_html_node = description_nodes[0]
+    assert raw_html_node.descendents is None
+    assert (
+        raw_html_node.text
+        == "[HTML_REMOVED][HTML_REMOVED][HTML_REMOVED][HTML_REMOVED][HTML_REMOVED]A link to example.com[HTML_REMOVED]\n"
     )
 
 
