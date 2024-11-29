@@ -7,11 +7,11 @@
   - [1.4. [Optional] Property root > billing_address > futureProperty](#billing_address_futureProperty)
 - [2. [Optional] Property root > shipping_address](#shipping_address)
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 <details>
 <summary>
@@ -20,12 +20,12 @@
 </summary>
 <blockquote>
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/address                                                     |
+|                           |                       |
+| ------------------------- | --------------------- |
+| **Type**                  | `object`              |
+| **Required**              | No                    |
+| **Additional properties** | Any type allowed      |
+| **Defined in**            | #/definitions/address |
 
 <details>
 <summary>
@@ -97,12 +97,12 @@
 </summary>
 <blockquote>
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Same definition as**    | [billing_address](#billing_address)                                       |
+|                           |                                     |
+| ------------------------- | ----------------------------------- |
+| **Type**                  | `object`                            |
+| **Required**              | No                                  |
+| **Additional properties** | Any type allowed                    |
+| **Same definition as**    | [billing_address](#billing_address) |
 
 </blockquote>
 </details>

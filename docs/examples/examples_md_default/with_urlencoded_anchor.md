@@ -6,11 +6,11 @@
     - [1.2.1. Property `root > signingTimeInfo > signingTimeBounds > lowerBound`](#signingTimeInfo_signingTimeBounds_lowerBound)
     - [1.2.2. Property `root > signingTimeInfo > signingTimeBounds > upperBound`](#signingTimeInfo_signingTimeBounds_upperBound)
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 | Property                               | Pattern | Type   | Deprecated | Definition                                | Title/Description |
 | -------------------------------------- | ------- | ------ | ---------- | ----------------------------------------- | ----------------- |
@@ -18,12 +18,12 @@
 
 ## <a name="signingTimeInfo"></a>1. Property `root > signingTimeInfo`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/dss2-SigningTimeInfoType                                    |
+|                           |                                        |
+| ------------------------- | -------------------------------------- |
+| **Type**                  | `object`                               |
+| **Required**              | No                                     |
+| **Additional properties** | Any type allowed                       |
+| **Defined in**            | #/definitions/dss2-SigningTimeInfoType |
 
 | Property                                                   | Pattern | Type    | Deprecated | Definition                                                        | Title/Description |
 | ---------------------------------------------------------- | ------- | ------- | ---------- | ----------------------------------------------------------------- | ----------------- |
@@ -40,12 +40,12 @@
 
 ### <a name="signingTimeInfo_signingTimeBounds"></a>1.2. Property `root > signingTimeInfo > signingTimeBounds`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries            |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Required**              | No                                                             |
+| **Additional properties** | Any type allowed                                               |
+| **Defined in**            | #/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries |
 
 | Property                                                       | Pattern | Type    | Deprecated | Definition | Title/Description |
 | -------------------------------------------------------------- | ------- | ------- | ---------- | ---------- | ----------------- |

@@ -6,11 +6,11 @@
 - [4. [Optional]~~ Property root > deprecated4~~](#deprecated4)
 - [5. [Optional] Property root > not_deprecated](#not_deprecated)
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 **Description:** Test schema with deprecated in description
 
@@ -21,12 +21,12 @@
 </summary>
 <blockquote>
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Deprecated**            | [Deprecated]                                                              |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Deprecated**            |
+| **Additional properties** | Any type allowed |
 
 **Description:** [Deprecated]
 
@@ -40,12 +40,12 @@
 </summary>
 <blockquote>
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Deprecated**            | [Deprecated]                                                              |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Deprecated**            |
+| **Additional properties** | Any type allowed |
 
 **Description:** [Deprecated - Use `not_deprecated` instead]
 
@@ -59,12 +59,12 @@
 </summary>
 <blockquote>
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Deprecated**            | [Deprecated]                                                              |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Deprecated**            |
+| **Additional properties** | Any type allowed |
 
 **Description:** This is [Deprecated]
 
@@ -78,12 +78,12 @@
 </summary>
 <blockquote>
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Deprecated**            | [Deprecated]                                                              |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Deprecated**            |
+| **Additional properties** | Any type allowed |
 
 **Description:** This is [Deprecated - Use `not_deprecated` instead]
 

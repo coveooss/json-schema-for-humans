@@ -5,11 +5,11 @@
 
 **Title:** Circular reference Schema
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 | Property             | Pattern | Type   | Deprecated | Definition         | Title/Description |
 | -------------------- | ------- | ------ | ---------- | ------------------ | ----------------- |
@@ -17,12 +17,12 @@
 
 ## <a name="person"></a>1. Property `Circular reference Schema > person`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/a                                                           |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
+| **Defined in**            | #/definitions/a  |
 
 | Property            | Pattern | Type   | Deprecated | Definition         | Title/Description  |
 | ------------------- | ------- | ------ | ---------- | ------------------ | ------------------ |

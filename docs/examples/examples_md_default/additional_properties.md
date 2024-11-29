@@ -10,11 +10,11 @@
 
 **Title:** Person
 
-|                           |                                                                                                           |
-| ------------------------- | --------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                  |
-| **Required**              | No                                                                                                        |
-| **Additional properties** | [[Should-conform]](#additionalProperties "Each additional property must conform to the following schema") |
+|                           |                                                                              |
+| ------------------------- | ---------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                     |
+| **Required**              | No                                                                           |
+| **Additional properties** | [Each additional property must conform to the schema](#additionalProperties) |
 
 | Property                     | Pattern | Type    | Deprecated | Definition | Title/Description                                                          |
 | ---------------------------- | ------- | ------- | ---------- | ---------- | -------------------------------------------------------------------------- |
@@ -25,11 +25,11 @@
 
 ## <a name="subType1"></a>1. Property `Person > subType1`
 
-|                           |                                                         |
-| ------------------------- | ------------------------------------------------------- |
-| **Type**                  | `object`                                                |
-| **Required**              | No                                                      |
-| **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
+|                           |             |
+| ------------------------- | ----------- |
+| **Type**                  | `object`    |
+| **Required**              | No          |
+| **Additional properties** | Not allowed |
 
 **Description:** A sub type with additionalProperties false.
 
@@ -46,11 +46,11 @@
 
 ## <a name="subType2"></a>2. Property `Person > subType2`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 **Description:** A sub type with additionalProperties true.
 
@@ -77,11 +77,11 @@
 
 ## <a name="additionalProperties"></a>4. Property `Person > additionalProperties`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 **Description:** additionalProperties schema.
 

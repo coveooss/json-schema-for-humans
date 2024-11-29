@@ -3,11 +3,11 @@
 - [1. Property `root > name`](#name)
 - [2. Property `root > alignment`](#alignment)
 
-|                           |                                                         |
-| ------------------------- | ------------------------------------------------------- |
-| **Type**                  | `object`                                                |
-| **Required**              | No                                                      |
-| **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
+|                           |             |
+| ------------------------- | ----------- |
+| **Type**                  | `object`    |
+| **Required**              | No          |
+| **Additional properties** | Not allowed |
 
 | Property                   | Pattern | Type   | Deprecated | Definition                     | Title/Description |
 | -------------------------- | ------- | ------ | ---------- | ------------------------------ | ----------------- |

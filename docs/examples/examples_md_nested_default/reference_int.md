@@ -5,11 +5,11 @@
 
 **Title:** Person
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 <details>
 <summary>
@@ -18,12 +18,12 @@
 </summary>
 <blockquote>
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/extra_options/anyOf/0                                       |
+|                           |                                     |
+| ------------------------- | ----------------------------------- |
+| **Type**                  | `object`                            |
+| **Required**              | No                                  |
+| **Additional properties** | Any type allowed                    |
+| **Defined in**            | #/definitions/extra_options/anyOf/0 |
 
 **Description:** This is the one
 
@@ -37,12 +37,12 @@
 </summary>
 <blockquote>
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/10                                                          |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
+| **Defined in**            | #/definitions/10 |
 
 **Description:** This is just to be annoying. The property name looks like an int
 

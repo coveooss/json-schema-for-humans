@@ -7,11 +7,11 @@
 
 **Title:** Test
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 | Property                                             | Pattern | Type             | Deprecated | Definition                     | Title/Description     |
 | ---------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------------ | --------------------- |
@@ -37,13 +37,13 @@ Must be one of:
 
 ## <a name="aDictPropertyARequired"></a>2. Property `Test > aDictPropertyARequired`
 
-|                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-| **Default**               | `{"a": "a", "b": "b"}`                                                    |
-| **Defined in**            | #/definitions/aDictProperty                                               |
+|                           |                             |
+| ------------------------- | --------------------------- |
+| **Type**                  | `object`                    |
+| **Required**              | No                          |
+| **Additional properties** | Any type allowed            |
+| **Default**               | `{"a": "a", "b": "b"}`      |
+| **Defined in**            | #/definitions/aDictProperty |
 
 | Property                          | Pattern | Type   | Deprecated | Definition | Title/Description |
 | --------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |

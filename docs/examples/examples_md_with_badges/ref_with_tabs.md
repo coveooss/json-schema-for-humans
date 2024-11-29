@@ -127,10 +127,10 @@
         - [2.1.3.5.1. root > objectA > signature > oneOf > item 0 > signers > Signature > excludes > excludes items](#objectA_signature_oneOf_i0_signers_items_excludes_items)
       - [2.1.3.6. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > value`](#objectA_signature_oneOf_i0_signers_items_value)
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 | Property               | Pattern | Type   | Deprecated | Definition | Title/Description |
 | ---------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
@@ -139,10 +139,10 @@
 
 ## <a name="objectA"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > objectA`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 | Property                           | Pattern | Type   | Deprecated | Definition                 | Title/Description |
 | ---------------------------------- | ------- | ------ | ---------- | -------------------------- | ----------------- |
@@ -152,11 +152,11 @@
 
 **Title:** Signature
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `combining`                                                                                                                       |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/signature                                                                                                           |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Defined in**            | #/definitions/signature                                                     |
 
 | One of(Option)                           |
 | ---------------------------------------- |
@@ -166,10 +166,10 @@
 
 #### <a name="objectA_signature_oneOf_i0"></a>1.1.1. Property `root > objectA > signature > oneOf > item 0`
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
 
 | Property                                          | Pattern | Type  | Deprecated | Definition | Title/Description |
 | ------------------------------------------------- | ------- | ----- | ---------- | ---------- | ----------------- |
@@ -201,11 +201,11 @@
 
 **Title:** Signature
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
-| **Defined in**            | #/definitions/signer                                                                                     |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
+| **Defined in**            | #/definitions/signer                                           |
 
 | Property                                                                        | Pattern | Type            | Deprecated | Definition                 | Title/Description |
 | ------------------------------------------------------------------------------- | ------- | --------------- | ---------- | -------------------------- | ----------------- |
@@ -218,10 +218,10 @@
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_algorithm"></a>1.1.1.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `combining`                                                                                                                       |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 | One of(Option)                                                            |
 | ------------------------------------------------------------------------- |
@@ -279,11 +279,11 @@ Must be one of:
 
 **Title:** Public key
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `combining`                                                                                                                       |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/publicKey                                                                                                           |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Defined in**            | #/definitions/publicKey                                                     |
 
 **Description:** Optional. Public key object.
 
@@ -300,17 +300,17 @@ Must be one of:
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0"></a>1.1.1.1.1.3.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 ###### <a name="autogenerated_heading_2"></a>1.1.1.1.1.3.1.1. If (kty = "EC")
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
 
 | Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
 | ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
@@ -367,17 +367,17 @@ Must be one of:
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1"></a>1.1.1.1.1.3.2. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 ###### <a name="autogenerated_heading_3"></a>1.1.1.1.1.3.2.1. If (kty = "OKP")
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
 
 | Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
 | ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
@@ -422,17 +422,17 @@ Must be one of:
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2"></a>1.1.1.1.1.3.3. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 ###### <a name="autogenerated_heading_4"></a>1.1.1.1.1.3.3.1. If (kty = "RSA")
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
 
 | Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
 | ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
@@ -555,10 +555,10 @@ Must be one of:
 
 #### <a name="objectA_signature_oneOf_i1"></a>1.1.2. Property `root > objectA > signature > oneOf > item 1`
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
 
 | Property                                      | Pattern | Type  | Deprecated | Definition | Title/Description |
 | --------------------------------------------- | ------- | ----- | ---------- | ---------- | ----------------- |
@@ -590,21 +590,21 @@ Must be one of:
 
 **Title:** Signature
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
-| **Same definition as**    | [Signature](#objectA_signature_oneOf_i0_signers_items)                                                   |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
+| **Same definition as**    | [Signature](#objectA_signature_oneOf_i0_signers_items)         |
 
 #### <a name="objectA_signature_oneOf_i2"></a>1.1.3. Property `root > objectA > signature > oneOf > Signature`
 
 **Title:** Signature
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
-| **Defined in**            | #/definitions/signer                                                                                     |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
+| **Defined in**            | #/definitions/signer                                           |
 
 **Description:** Unique top level property for simple signatures. (signaturecore)
 
@@ -619,10 +619,10 @@ Must be one of:
 
 ##### <a name="objectA_signature_oneOf_i0_signers_items_algorithm"></a>1.1.3.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `combining`                                                                                                                       |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 | One of(Option)                                                            |
 | ------------------------------------------------------------------------- |
@@ -680,11 +680,11 @@ Must be one of:
 
 **Title:** Public key
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `combining`                                                                                                                       |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/publicKey                                                                                                           |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Defined in**            | #/definitions/publicKey                                                     |
 
 **Description:** Optional. Public key object.
 
@@ -701,17 +701,17 @@ Must be one of:
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0"></a>1.1.3.3.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 ###### <a name="autogenerated_heading_5"></a>1.1.3.3.1.1. If (kty = "EC")
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
 
 | Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
 | ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
@@ -768,17 +768,17 @@ Must be one of:
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1"></a>1.1.3.3.2. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 ###### <a name="autogenerated_heading_6"></a>1.1.3.3.2.1. If (kty = "OKP")
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
 
 | Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
 | ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
@@ -823,17 +823,17 @@ Must be one of:
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2"></a>1.1.3.3.3. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 ###### <a name="autogenerated_heading_7"></a>1.1.3.3.3.1. If (kty = "RSA")
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
 
 | Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
 | ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
@@ -956,10 +956,10 @@ Must be one of:
 
 ## <a name="objectB"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > objectB`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 | Property                           | Pattern | Type   | Deprecated | Definition                 | Title/Description |
 | ---------------------------------- | ------- | ------ | ---------- | -------------------------- | ----------------- |
@@ -969,11 +969,11 @@ Must be one of:
 
 **Title:** Signature
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `combining`                                                                                                                       |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/signature                                                                                                           |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Defined in**            | #/definitions/signature                                                     |
 
 | One of(Option)                           |
 | ---------------------------------------- |
@@ -983,10 +983,10 @@ Must be one of:
 
 #### <a name="objectA_signature_oneOf_i0"></a>2.1.1. Property `root > objectA > signature > oneOf > item 0`
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
 
 | Property                                          | Pattern | Type  | Deprecated | Definition | Title/Description |
 | ------------------------------------------------- | ------- | ----- | ---------- | ---------- | ----------------- |
@@ -1018,11 +1018,11 @@ Must be one of:
 
 **Title:** Signature
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
-| **Defined in**            | #/definitions/signer                                                                                     |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
+| **Defined in**            | #/definitions/signer                                           |
 
 | Property                                                                        | Pattern | Type            | Deprecated | Definition                 | Title/Description |
 | ------------------------------------------------------------------------------- | ------- | --------------- | ---------- | -------------------------- | ----------------- |
@@ -1035,10 +1035,10 @@ Must be one of:
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_algorithm"></a>2.1.1.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `combining`                                                                                                                       |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 | One of(Option)                                                            |
 | ------------------------------------------------------------------------- |
@@ -1096,11 +1096,11 @@ Must be one of:
 
 **Title:** Public key
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `combining`                                                                                                                       |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/publicKey                                                                                                           |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Defined in**            | #/definitions/publicKey                                                     |
 
 **Description:** Optional. Public key object.
 
@@ -1117,17 +1117,17 @@ Must be one of:
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0"></a>2.1.1.1.1.3.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 ###### <a name="autogenerated_heading_8"></a>2.1.1.1.1.3.1.1. If (kty = "EC")
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
 
 | Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
 | ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
@@ -1184,17 +1184,17 @@ Must be one of:
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1"></a>2.1.1.1.1.3.2. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 ###### <a name="autogenerated_heading_9"></a>2.1.1.1.1.3.2.1. If (kty = "OKP")
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
 
 | Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
 | ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
@@ -1239,17 +1239,17 @@ Must be one of:
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2"></a>2.1.1.1.1.3.3. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 ###### <a name="autogenerated_heading_10"></a>2.1.1.1.1.3.3.1. If (kty = "RSA")
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
 
 | Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
 | ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
@@ -1372,10 +1372,10 @@ Must be one of:
 
 #### <a name="objectA_signature_oneOf_i1"></a>2.1.2. Property `root > objectA > signature > oneOf > item 1`
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
 
 | Property                                      | Pattern | Type  | Deprecated | Definition | Title/Description |
 | --------------------------------------------- | ------- | ----- | ---------- | ---------- | ----------------- |
@@ -1407,21 +1407,21 @@ Must be one of:
 
 **Title:** Signature
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
-| **Same definition as**    | [Signature](#objectA_signature_oneOf_i0_signers_items)                                                   |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
+| **Same definition as**    | [Signature](#objectA_signature_oneOf_i0_signers_items)         |
 
 #### <a name="objectA_signature_oneOf_i2"></a>2.1.3. Property `root > objectA > signature > oneOf > Signature`
 
 **Title:** Signature
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
-| **Defined in**            | #/definitions/signer                                                                                     |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
+| **Defined in**            | #/definitions/signer                                           |
 
 **Description:** Unique top level property for simple signatures. (signaturecore)
 
@@ -1436,10 +1436,10 @@ Must be one of:
 
 ##### <a name="objectA_signature_oneOf_i0_signers_items_algorithm"></a>2.1.3.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `combining`                                                                                                                       |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 | One of(Option)                                                            |
 | ------------------------------------------------------------------------- |
@@ -1497,11 +1497,11 @@ Must be one of:
 
 **Title:** Public key
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `combining`                                                                                                                       |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/definitions/publicKey                                                                                                           |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Defined in**            | #/definitions/publicKey                                                     |
 
 **Description:** Optional. Public key object.
 
@@ -1518,17 +1518,17 @@ Must be one of:
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0"></a>2.1.3.3.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 ###### <a name="autogenerated_heading_11"></a>2.1.3.3.1.1. If (kty = "EC")
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
 
 | Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
 | ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
@@ -1585,17 +1585,17 @@ Must be one of:
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1"></a>2.1.3.3.2. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 ###### <a name="autogenerated_heading_12"></a>2.1.3.3.2.1. If (kty = "OKP")
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
 
 | Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
 | ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
@@ -1640,17 +1640,17 @@ Must be one of:
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2"></a>2.1.3.3.3. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2`
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 ###### <a name="autogenerated_heading_13"></a>2.1.3.3.3.1. If (kty = "RSA")
 
-|                           |                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                 |
-| **Additional properties** | [![Not allowed](https://img.shields.io/badge/Not%20allowed-red)](# "Additional Properties not allowed.") |
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
 
 | Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
 | ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
