@@ -104,10 +104,13 @@ def get_description_literal(env: Environment, description: str) -> str:
         if match:
             description = description[match.span(1)[1] :].lstrip()
 
-    if description and config.description_is_markdown and not config.result_extension == "md":
-        # Markdown templates are expected to already have Markdown descriptions
-        md: Markdown = env.globals["jsfh_md"]
-        description = Markup(md.convert(markupsafe_escape(description)))
+    if description and not config.result_extension == "md":
+        if not config.allow_html_description:
+            description = markupsafe_escape(description)
+        if config.description_is_markdown:
+            # Markdown templates are expected to already have Markdown descriptions
+            md: Markdown = env.globals["jsfh_md"]
+            description = Markup(md.convert(description))
 
     return description
 

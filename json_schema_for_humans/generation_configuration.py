@@ -36,6 +36,7 @@ class GenerationConfiguration:
 
     minify: bool = True
     description_is_markdown: bool = True
+    allow_html_description: bool = False
     deprecated_from_description: bool = False
     show_breadcrumbs: bool = True
     collapse_long_descriptions: bool = True
