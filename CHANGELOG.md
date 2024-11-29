@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/coveooss/json-schema-for-humans/compare/v1.3.0...v1.3.1) (2024-11-29)
+
+
+### Bug Fixes
+
+* Fix markdown "break on newline" configurability ([#236](https://github.com/coveooss/json-schema-for-humans/issues/236)) ([c0c9d09](https://github.com/coveooss/json-schema-for-humans/commit/c0c9d09e00427786dc571d4cd71b7c36c80dc811))
+
 # [1.3.0](https://github.com/coveooss/json-schema-for-humans/compare/v1.2.0...v1.3.0) (2024-11-29)
 
 
