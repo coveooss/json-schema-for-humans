@@ -6,7 +6,10 @@ def test_default_values() -> None:
     """Test init GenerationConfiguration with default values"""
     config = GenerationConfiguration()
     assert config.markdown_options == {
-        "break-on-newline": True,
+        "breaks": {
+            "on_newline": True,
+            "on_backslash": True,
+        },
         "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
         "tables": None,
     }
@@ -18,9 +21,9 @@ def test_override_markdown_options() -> None:
     """Test init GenerationConfiguration with default values"""
 
     # override break-on-newline key
-    config = GenerationConfiguration(markdown_options={"break-on-newline": False})
+    config = GenerationConfiguration(markdown_options={"breaks": {"on_newline": False}})
     assert config.markdown_options == {
-        "break-on-newline": False,
+        "breaks": {"on_newline": False},
         "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
         "tables": None,
     }
@@ -31,14 +34,14 @@ def test_override_markdown_options() -> None:
         }
     )
     assert config.markdown_options == {
-        "break-on-newline": True,
+        "breaks": {"on_newline": True, "on_backslash": True},
         "fenced-code-blocks": {"cssclass": "test"},
         "tables": None,
     }
     # override tables key
     config = GenerationConfiguration(markdown_options={"tables": ["test"]})
     assert config.markdown_options == {
-        "break-on-newline": True,
+        "breaks": {"on_newline": True, "on_backslash": True},
         "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
         "tables": ["test"],
     }
@@ -46,7 +49,7 @@ def test_override_markdown_options() -> None:
     # add a new key
     config = GenerationConfiguration(markdown_options={"newKey": "test"})
     assert config.markdown_options == {
-        "break-on-newline": True,
+        "breaks": {"on_newline": True, "on_backslash": True},
         "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
         "tables": None,
         "newKey": "test",
