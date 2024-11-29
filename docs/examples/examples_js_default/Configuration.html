@@ -49,7 +49,7 @@
         <div class="card-header" id="headingminify">
             <h2 class="mb-0">
                 <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#minify"
-                        aria-expanded="" aria-controls="minify" onclick="setAnchor('#minify')"><span class="property-name">minify</span></button>
+                        aria-expanded="" aria-controls="minify" onclick="setAnchor('#minify')"><span class="property-name">minify</span> <span class="badge badge-danger deprecated-property">Deprecated</span></button>
             </h2>
         </div>
 
@@ -66,7 +66,7 @@
             />
         </svg>
     <a href="#minify" onclick="anchorLink('minify')">minify</a></div><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: true</span><br/>
-<span class="description"><p>Minify the output HTML document.</p>
+<span class="description"><p>[Deprecated]</p>
 </span>
         
 
@@ -100,7 +100,41 @@
             />
         </svg>
     <a href="#description_is_markdown" onclick="anchorLink('description_is_markdown')">description_is_markdown</a></div><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: true</span><br/>
-<span class="description"><p>Whether to consider the description as markdown and render it accordingly.</p>
+<span class="description"><p>Applies to HTML templates only. Whether to consider the description as Markdown and render it accordingly.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionallow_html_description">
+    <div class="card">
+        <div class="card-header" id="headingallow_html_description">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#allow_html_description"
+                        aria-expanded="" aria-controls="allow_html_description" onclick="setAnchor('#allow_html_description')"><span class="property-name">allow_html_description</span></button>
+            </h2>
+        </div>
+
+        <div id="allow_html_description"
+             class="collapse property-definition-div" aria-labelledby="headingallow_html_description"
+             data-parent="#accordionallow_html_description">
+            <div class="card-body pl-5">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#allow_html_description" onclick="anchorLink('allow_html_description')">allow_html_description</a></div><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: false</span><br/>
+<span class="description"><p>Applies to HTML templates only. Don&#39;t escape HTML tags in descriptions. Can be needed when description is Markdown and contains already escaped blocks</p>
 </span>
         
 
@@ -735,7 +769,7 @@ If <code>link_to_reused_ref</code> is false and a <code>$ref</code> in the schem
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#markdown_options" onclick="anchorLink('markdown_options')">markdown_options</a></div><span class="badge badge-dark value-type">Type: object</span> <span class="badge badge-success default-value">Default: {"fenced-code-blocks": {"break-on-newline": true, "cssclass": "highlight jumbotron", "tables": null}, "tables": null}</span><br/>
+    <a href="#markdown_options" onclick="anchorLink('markdown_options')">markdown_options</a></div><span class="badge badge-dark value-type">Type: object</span> <span class="badge badge-success default-value">Default: {"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": null, "break-on-newline": true}</span><br/>
 <div class="description collapse" id="collapseDescription_markdown_options">
             <p><a href="https://github.com/trentm/python-markdown2/wiki/Extras">Markdown 2 options</a> for the descriptions. <code>description_is_markdown</code> must be true for this to have any effect.</p>
 

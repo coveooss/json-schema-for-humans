@@ -7,12 +7,17 @@
     "minify": {
       "type": "boolean",
       "default": true,
-      "description": "Minify the output HTML document."
+      "description": "[Deprecated]"
     },
     "description_is_markdown": {
       "type": "boolean",
       "default": true,
-      "description": "Whether to consider the description as markdown and render it accordingly."
+      "description": "Applies to HTML templates only. Whether to consider the description as Markdown and render it accordingly."
+    },
+    "allow_html_description": {
+      "type": "boolean",
+      "default": false,
+      "description": "Applies to HTML templates only. Don't escape HTML tags in descriptions. Can be needed when description is Markdown and contains already escaped blocks"
     },
     "expand_buttons": {
       "type": "boolean",
