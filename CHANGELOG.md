@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/coveooss/json-schema-for-humans/compare/v1.3.1...v1.3.2) (2024-11-29)
+
+
+### Bug Fixes
+
+* Badge will not have invalid links anymore ([#284](https://github.com/coveooss/json-schema-for-humans/issues/284)) ([c05f229](https://github.com/coveooss/json-schema-for-humans/commit/c05f229e2a0e48d44826aff71548daff658a967c))
+
 ## [1.3.1](https://github.com/coveooss/json-schema-for-humans/compare/v1.3.0...v1.3.1) (2024-11-29)
 
 
