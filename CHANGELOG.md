@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/coveooss/json-schema-for-humans/compare/v1.2.0...v1.3.0) (2024-11-29)
+
+
+### Features
+
+* Look up property title by following references ([#280](https://github.com/coveooss/json-schema-for-humans/issues/280)) ([57f68d6](https://github.com/coveooss/json-schema-for-humans/commit/57f68d6be7670882718e0e1931610e32e0963ad3)), closes [#278](https://github.com/coveooss/json-schema-for-humans/issues/278)
+
 # [1.2.0](https://github.com/coveooss/json-schema-for-humans/compare/v1.1.1...v1.2.0) (2024-11-29)
 
 
