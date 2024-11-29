@@ -12,7 +12,7 @@
     "description_safe_mode": {
       "enum": [null, "escape", "replace"],
       "default": "escape",
-      "description": "(HTML outputs only)\nHow are HTML tags in descriptions handled. Correspond to the `safe_mode` option of the markdown2 library.\n\n- \"escape\": Escape all HTML tags in descriptions\n- \"replace\": Replace HTML tags with `[HTML_REMOVED]`\n- null: Allow HTML in descriptions"
+      "description": "(HTML outputs only)\n(Only used with `description_is_markdown`)\nHow are HTML tags in descriptions handled. Correspond to the `safe_mode` option of the markdown2 library.\n\n- \"escape\": Escape all HTML tags in descriptions\n- \"replace\": Replace HTML tags with `[HTML_REMOVED]`\n- null: Allow HTML in descriptions"
     },
     "expand_buttons": {
       "type": "boolean",

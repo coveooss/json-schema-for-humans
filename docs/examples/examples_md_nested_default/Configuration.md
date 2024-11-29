@@ -79,6 +79,7 @@ Whether to consider the description as Markdown and render it accordingly.
 | **Default**  | `"escape"`                 |
 
 **Description:** (HTML outputs only)
+(Only used with `description_is_markdown`)
 How are HTML tags in descriptions handled. Correspond to the `safe_mode` option of the markdown2 library.
 
 - "escape": Escape all HTML tags in descriptions
