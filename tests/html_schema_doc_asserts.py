@@ -13,6 +13,16 @@ def assert_soup_results_text(soup: BeautifulSoup, class_name: str, texts: List[s
     assert elements_text == texts
 
 
+def assert_soup_select_results_text(soup: BeautifulSoup, selector: str, texts: List[str]) -> None:
+    """Assert that all the HTML elements selected by the provided CSS selector has the supplied text
+
+    There must be exactly as many elements as the length of the supplied values and they must be in the same order
+    """
+    elements_text = [element.text.strip() for element in soup.select(selector)]
+
+    assert elements_text == texts
+
+
 def assert_property_names(soup: BeautifulSoup, property_names: List[str]) -> None:
     assert_soup_results_text(soup, "property-name", property_names)
 

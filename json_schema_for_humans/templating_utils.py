@@ -1,6 +1,7 @@
 from typing import TYPE_CHECKING, List, Optional, Type, Union
 
 from json_schema_for_humans import const
+from json_schema_for_humans.schema.schema_keyword import SchemaKeyword
 
 if TYPE_CHECKING:
     from json_schema_for_humans.schema.schema_node import SchemaNode
@@ -24,6 +25,30 @@ def schema_keyword_to_str(schema_node: "SchemaNode", keyword: str) -> Optional[s
         if isinstance(keyword_value_literal, str):
             return keyword_value_literal
     return None
+
+
+def schema_keyword_lookup_to_str(schema_node: "SchemaNode", keyword: SchemaKeyword) -> Optional[str]:
+    """Look up the str value of a schema keyword or return None
+
+    If the keyword is not found on the given node, follow referenced nodes until
+    the keyword is found. Returns None if the keyword is not found or is not a
+    literal str.
+    """
+    value = schema_keyword_to_str(schema_node, keyword.value)
+
+    seen = set()
+    current_node = schema_node
+    while not value and current_node.refers_to:
+        if current_node in seen:
+            break
+        seen.add(current_node)
+        referenced_schema = current_node.refers_to
+        referenced_keyword_node = referenced_schema.keywords.get(keyword.value)
+        if referenced_keyword_node:
+            value = referenced_keyword_node.literal_str
+        current_node = referenced_schema
+
+    return value
 
 
 def schema_keyword_convert_to_str(schema_node: "SchemaNode", keyword: str) -> Optional[str]:

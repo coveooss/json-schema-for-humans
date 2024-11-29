@@ -12,9 +12,11 @@
 
 | Property             | Pattern | Type   | Deprecated | Definition               | Title/Description |
 | -------------------- | ------- | ------ | ---------- | ------------------------ | ----------------- |
-| - [itself](#itself ) | No      | object | No         | Same as [Person](#root ) | -                 |
+| - [itself](#itself ) | No      | object | No         | Same as [Person](#root ) | Person            |
 
 ## <a name="itself"></a>1. Property `Person > itself`
+
+**Title:** Person
 
 |                           |                                                                           |
 | ------------------------- | ------------------------------------------------------------------------- |
