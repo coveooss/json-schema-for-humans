@@ -62,7 +62,7 @@ class GenerationConfiguration:
 
     def __post_init__(self) -> None:
         self.markdown_options = self.markdown_options or {}
-        default_markdown_options = {
+        default_markdown_options: Dict[str, Any] = {
             "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
             "tables": None,
         }
