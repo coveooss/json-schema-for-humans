@@ -30,7 +30,6 @@ include = [
 python = "^3.9"
 click = "^8.0.1"
 dataclasses-json = "^0.6.7"
-htmlmin2 = "^0.1.13"
 Jinja2 = ">3"
 markdown2 = "^2.5.0"
 Pygments = "^2.18.0"

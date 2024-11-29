@@ -23,7 +23,7 @@ from json_schema_for_humans.template_renderer import TemplateRenderer
     help="Override generation parameters from the configuration file. "
     "Format is parameter_name=parameter_value. For example: --config minify=false. Can be repeated.",
 )
-@click.option("--minify/--no-minify", default=True, help="Run minification on the HTML result")
+@click.option("--minify/--no-minify", default=True, help="Run minification on the result (markdown templates only)")
 @click.option(
     "--deprecated-from-description", is_flag=True, help="Look in the description to find if an attribute is deprecated"
 )

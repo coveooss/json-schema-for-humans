@@ -7,7 +7,7 @@
     "minify": {
       "type": "boolean",
       "default": true,
-      "description": "Minify the output HTML document."
+      "description": "Minify the output document (markdown only)."
     },
     "description_is_markdown": {
       "type": "boolean",
