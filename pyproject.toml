@@ -36,7 +36,6 @@ Pygments = "^2.18.0"
 pytz = "*"
 PyYAML = "^6.0.2"
 requests = "^2.32.3"
-MarkupSafe = "^2.1.5"
 
 
 [tool.poetry.scripts]

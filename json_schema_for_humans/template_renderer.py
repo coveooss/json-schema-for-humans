@@ -26,7 +26,9 @@ class TemplateRenderer:
             lstrip_blocks=self.config.template_is_markdown,
         )
         env.globals["jsfh_config"] = self.config
-        env.globals["jsfh_md"] = markdown2.Markdown(extras=self.config.markdown_options)
+        env.globals["jsfh_md"] = markdown2.Markdown(
+            extras=self.config.markdown_options, safe_mode=self.config.description_safe_mode
+        )
         if self.config.template_is_markdown:
             md_template = MarkdownTemplate(self.config)
             md_template.register_jinja(env)
