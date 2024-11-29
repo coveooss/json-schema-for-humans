@@ -61,6 +61,7 @@ class GenerationConfiguration:
     footer_show_time: bool = True
 
     def __post_init__(self) -> None:
+        self.markdown_options = self.markdown_options or {}
         default_markdown_options = {
             "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
             "tables": None,
@@ -70,7 +71,7 @@ class GenerationConfiguration:
                 "on_newline": True,
                 "on_backslash": True,
             }
-        default_markdown_options.update(self.markdown_options or {})
+        default_markdown_options.update(self.markdown_options)
         self.markdown_options = default_markdown_options
 
         default_template_md_options = {
