@@ -61,12 +61,17 @@ class GenerationConfiguration:
     footer_show_time: bool = True
 
     def __post_init__(self) -> None:
-        default_markdown_options = {
-            "break-on-newline": True,
+        self.markdown_options = self.markdown_options or {}
+        default_markdown_options: Dict[str, Any] = {
             "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
             "tables": None,
         }
-        default_markdown_options.update(self.markdown_options or {})
+        if "breaks" not in self.markdown_options:
+            default_markdown_options["breaks"] = {
+                "on_newline": True,
+                "on_backslash": True,
+            }
+        default_markdown_options.update(self.markdown_options)
         self.markdown_options = default_markdown_options
 
         default_template_md_options = {

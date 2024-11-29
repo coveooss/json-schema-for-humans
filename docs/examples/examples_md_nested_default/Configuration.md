@@ -405,17 +405,15 @@ This is the old behaviour and is only needed for browsers that do not support HT
 </summary>
 <blockquote>
 
-|                           |                                                                                                         |
-| ------------------------- | ------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                |
-| **Required**              | No                                                                                                      |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.")                               |
-| **Default**               | `{"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": null, "break-on-newline": true}` |
+|                           |                                                                                                                                     |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                            |
+| **Required**              | No                                                                                                                                  |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.")                                                           |
+| **Default**               | `{"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": null, "breaks": {"on_newline": true, "on_backslash": true}}` |
 
-**Description:** [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for the descriptions. `description_is_markdown` must be true for this to have any effect.
-
-**WARNING**
-Adding an extra, even if the value is false, will activate it. For example `{"break-on-newline": false}` will activate the `break-on-newline` extra.
+**Description:** (Only used with `description_is_markdown`)
+[Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for the descriptions.
 
 **Example:** 
 

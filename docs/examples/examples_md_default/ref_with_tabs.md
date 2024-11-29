@@ -4,7 +4,7 @@
   - [1.1. Property `root > objectA > signature`](#objectA_signature)
     - [1.1.1. Property `root > objectA > signature > oneOf > item 0`](#objectA_signature_oneOf_i0)
       - [1.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers`](#objectA_signature_oneOf_i0_signers)
-        - [1.1.1.1.1. root > objectA > signature > oneOf > item 0 > signers > signer](#objectA_signature_oneOf_i0_signers_items)
+        - [1.1.1.1.1. root > objectA > signature > oneOf > item 0 > signers > Signature](#objectA_signature_oneOf_i0_signers_items)
           - [1.1.1.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm`](#objectA_signature_oneOf_i0_signers_items_algorithm)
             - [1.1.1.1.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm > oneOf > Algorithm`](#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i0)
             - [1.1.1.1.1.1.2. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm > oneOf > Algorithm`](#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i1)
@@ -34,7 +34,7 @@
           - [1.1.1.1.1.6. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > value`](#objectA_signature_oneOf_i0_signers_items_value)
     - [1.1.2. Property `root > objectA > signature > oneOf > item 1`](#objectA_signature_oneOf_i1)
       - [1.1.2.1. Property `root > objectA > signature > oneOf > item 1 > chain`](#objectA_signature_oneOf_i1_chain)
-        - [1.1.2.1.1. root > objectA > signature > oneOf > item 1 > chain > signer](#objectA_signature_oneOf_i1_chain_items)
+        - [1.1.2.1.1. root > objectA > signature > oneOf > item 1 > chain > Signature](#objectA_signature_oneOf_i1_chain_items)
     - [1.1.3. Property `root > objectA > signature > oneOf > Signature`](#objectA_signature_oneOf_i2)
       - [1.1.3.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm`](#objectA_signature_oneOf_i0_signers_items_algorithm)
         - [1.1.3.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm > oneOf > Algorithm`](#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i0)
@@ -67,7 +67,7 @@
   - [2.1. Property `root > objectB > signature`](#objectB_signature)
     - [2.1.1. Property `root > objectA > signature > oneOf > item 0`](#objectA_signature_oneOf_i0)
       - [2.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers`](#objectA_signature_oneOf_i0_signers)
-        - [2.1.1.1.1. root > objectA > signature > oneOf > item 0 > signers > signer](#objectA_signature_oneOf_i0_signers_items)
+        - [2.1.1.1.1. root > objectA > signature > oneOf > item 0 > signers > Signature](#objectA_signature_oneOf_i0_signers_items)
           - [2.1.1.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm`](#objectA_signature_oneOf_i0_signers_items_algorithm)
             - [2.1.1.1.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm > oneOf > Algorithm`](#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i0)
             - [2.1.1.1.1.1.2. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm > oneOf > Algorithm`](#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i1)
@@ -97,7 +97,7 @@
           - [2.1.1.1.1.6. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > value`](#objectA_signature_oneOf_i0_signers_items_value)
     - [2.1.2. Property `root > objectA > signature > oneOf > item 1`](#objectA_signature_oneOf_i1)
       - [2.1.2.1. Property `root > objectA > signature > oneOf > item 1 > chain`](#objectA_signature_oneOf_i1_chain)
-        - [2.1.2.1.1. root > objectA > signature > oneOf > item 1 > chain > signer](#objectA_signature_oneOf_i1_chain_items)
+        - [2.1.2.1.1. root > objectA > signature > oneOf > item 1 > chain > Signature](#objectA_signature_oneOf_i1_chain_items)
     - [2.1.3. Property `root > objectA > signature > oneOf > Signature`](#objectA_signature_oneOf_i2)
       - [2.1.3.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm`](#objectA_signature_oneOf_i0_signers_items_algorithm)
         - [2.1.3.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm > oneOf > Algorithm`](#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i0)
@@ -198,11 +198,13 @@
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
 
-| Each item of this array must be                     | Description |
-| --------------------------------------------------- | ----------- |
-| [signer](#objectA_signature_oneOf_i0_signers_items) | -           |
+| Each item of this array must be                        | Description |
+| ------------------------------------------------------ | ----------- |
+| [Signature](#objectA_signature_oneOf_i0_signers_items) | -           |
 
-###### <a name="objectA_signature_oneOf_i0_signers_items"></a>1.1.1.1.1. root > objectA > signature > oneOf > item 0 > signers > signer
+###### <a name="objectA_signature_oneOf_i0_signers_items"></a>1.1.1.1.1. root > objectA > signature > oneOf > item 0 > signers > Signature
+
+**Title:** Signature
 
 |                           |                                                         |
 | ------------------------- | ------------------------------------------------------- |
@@ -296,10 +298,10 @@ Must be one of:
 
 **Description:** Optional. Public key object.
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition               | Title/Description   |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------ | ------------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty )               | No      | enum (of string) | No         | In #/definitions/keyType | Key type indicator. |
-| - [](#objectA_signature_oneOf_i0_signers_items_publicKey_additionalProperties ) | No      | object           | No         | -                        | -                   |
+| Property                                                                        | Pattern | Type             | Deprecated | Definition               | Title/Description |
+| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------ | ----------------- |
+| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty )               | No      | enum (of string) | No         | In #/definitions/keyType | Key type          |
+| - [](#objectA_signature_oneOf_i0_signers_items_publicKey_additionalProperties ) | No      | object           | No         | -                        | -                 |
 
 | All of(Requirement)                                                    |
 | ---------------------------------------------------------------------- |
@@ -323,14 +325,16 @@ Must be one of:
 | **Required**              | No                                                      |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description   |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ------------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type indicator. |
-| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name          |
-| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_x )     | No      | string           | No         | -                                                                       | Coordinate          |
-| + [y](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_y )     | No      | string           | No         | -                                                                       | Coordinate          |
+| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
+| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
+| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
+| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name        |
+| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_x )     | No      | string           | No         | -                                                                       | Coordinate        |
+| + [y](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_y )     | No      | string           | No         | -                                                                       | Coordinate        |
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty"></a>1.1.1.1.1.3.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0 > then > kty`
+
+**Title:** Key type
 
 |                        |                                                                |
 | ---------------------- | -------------------------------------------------------------- |
@@ -394,13 +398,15 @@ Must be one of:
 | **Required**              | No                                                      |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description   |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ------------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type indicator. |
-| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name          |
-| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_x )     | No      | string           | No         | -                                                                       | Coordinate          |
+| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
+| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
+| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
+| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name        |
+| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_x )     | No      | string           | No         | -                                                                       | Coordinate        |
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty"></a>1.1.1.1.1.3.2.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1 > then > kty`
+
+**Title:** Key type
 
 |                        |                                                                |
 | ---------------------- | -------------------------------------------------------------- |
@@ -452,13 +458,15 @@ Must be one of:
 | **Required**              | No                                                      |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description   |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ------------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type indicator. |
-| + [n](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_n )     | No      | string           | No         | -                                                                       | Modulus             |
-| + [e](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_e )     | No      | string           | No         | -                                                                       | Exponent            |
+| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
+| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
+| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
+| + [n](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_n )     | No      | string           | No         | -                                                                       | Modulus           |
+| + [e](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_e )     | No      | string           | No         | -                                                                       | Exponent          |
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty"></a>1.1.1.1.1.3.3.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2 > then > kty`
+
+**Title:** Key type
 
 |                        |                                                                |
 | ---------------------- | -------------------------------------------------------------- |
@@ -491,6 +499,8 @@ Must be one of:
 **Description:** RSA exponent.
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_kty"></a>1.1.1.1.1.3.4. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > kty`
+
+**Title:** Key type
 
 |                |                       |
 | -------------- | --------------------- |
@@ -607,11 +617,13 @@ Must be one of:
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
 
-| Each item of this array must be                   | Description |
-| ------------------------------------------------- | ----------- |
-| [signer](#objectA_signature_oneOf_i1_chain_items) | -           |
+| Each item of this array must be                      | Description |
+| ---------------------------------------------------- | ----------- |
+| [Signature](#objectA_signature_oneOf_i1_chain_items) | -           |
 
-###### <a name="objectA_signature_oneOf_i1_chain_items"></a>1.1.2.1.1. root > objectA > signature > oneOf > item 1 > chain > signer
+###### <a name="objectA_signature_oneOf_i1_chain_items"></a>1.1.2.1.1. root > objectA > signature > oneOf > item 1 > chain > Signature
+
+**Title:** Signature
 
 |                           |                                                         |
 | ------------------------- | ------------------------------------------------------- |
@@ -718,10 +730,10 @@ Must be one of:
 
 **Description:** Optional. Public key object.
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition               | Title/Description   |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------ | ------------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty )               | No      | enum (of string) | No         | In #/definitions/keyType | Key type indicator. |
-| - [](#objectA_signature_oneOf_i0_signers_items_publicKey_additionalProperties ) | No      | object           | No         | -                        | -                   |
+| Property                                                                        | Pattern | Type             | Deprecated | Definition               | Title/Description |
+| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------ | ----------------- |
+| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty )               | No      | enum (of string) | No         | In #/definitions/keyType | Key type          |
+| - [](#objectA_signature_oneOf_i0_signers_items_publicKey_additionalProperties ) | No      | object           | No         | -                        | -                 |
 
 | All of(Requirement)                                                    |
 | ---------------------------------------------------------------------- |
@@ -745,14 +757,16 @@ Must be one of:
 | **Required**              | No                                                      |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description   |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ------------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type indicator. |
-| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name          |
-| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_x )     | No      | string           | No         | -                                                                       | Coordinate          |
-| + [y](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_y )     | No      | string           | No         | -                                                                       | Coordinate          |
+| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
+| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
+| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
+| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name        |
+| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_x )     | No      | string           | No         | -                                                                       | Coordinate        |
+| + [y](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_y )     | No      | string           | No         | -                                                                       | Coordinate        |
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty"></a>1.1.3.3.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0 > then > kty`
+
+**Title:** Key type
 
 |                        |                                                                |
 | ---------------------- | -------------------------------------------------------------- |
@@ -816,13 +830,15 @@ Must be one of:
 | **Required**              | No                                                      |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description   |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ------------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type indicator. |
-| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name          |
-| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_x )     | No      | string           | No         | -                                                                       | Coordinate          |
+| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
+| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
+| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
+| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name        |
+| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_x )     | No      | string           | No         | -                                                                       | Coordinate        |
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty"></a>1.1.3.3.2.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1 > then > kty`
+
+**Title:** Key type
 
 |                        |                                                                |
 | ---------------------- | -------------------------------------------------------------- |
@@ -874,13 +890,15 @@ Must be one of:
 | **Required**              | No                                                      |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description   |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ------------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type indicator. |
-| + [n](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_n )     | No      | string           | No         | -                                                                       | Modulus             |
-| + [e](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_e )     | No      | string           | No         | -                                                                       | Exponent            |
+| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
+| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
+| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
+| + [n](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_n )     | No      | string           | No         | -                                                                       | Modulus           |
+| + [e](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_e )     | No      | string           | No         | -                                                                       | Exponent          |
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty"></a>1.1.3.3.3.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2 > then > kty`
+
+**Title:** Key type
 
 |                        |                                                                |
 | ---------------------- | -------------------------------------------------------------- |
@@ -913,6 +931,8 @@ Must be one of:
 **Description:** RSA exponent.
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_kty"></a>1.1.3.3.4. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > kty`
+
+**Title:** Key type
 
 |                |                       |
 | -------------- | --------------------- |
@@ -1058,11 +1078,13 @@ Must be one of:
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
 
-| Each item of this array must be                     | Description |
-| --------------------------------------------------- | ----------- |
-| [signer](#objectA_signature_oneOf_i0_signers_items) | -           |
+| Each item of this array must be                        | Description |
+| ------------------------------------------------------ | ----------- |
+| [Signature](#objectA_signature_oneOf_i0_signers_items) | -           |
 
-###### <a name="objectA_signature_oneOf_i0_signers_items"></a>2.1.1.1.1. root > objectA > signature > oneOf > item 0 > signers > signer
+###### <a name="objectA_signature_oneOf_i0_signers_items"></a>2.1.1.1.1. root > objectA > signature > oneOf > item 0 > signers > Signature
+
+**Title:** Signature
 
 |                           |                                                         |
 | ------------------------- | ------------------------------------------------------- |
@@ -1156,10 +1178,10 @@ Must be one of:
 
 **Description:** Optional. Public key object.
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition               | Title/Description   |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------ | ------------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty )               | No      | enum (of string) | No         | In #/definitions/keyType | Key type indicator. |
-| - [](#objectA_signature_oneOf_i0_signers_items_publicKey_additionalProperties ) | No      | object           | No         | -                        | -                   |
+| Property                                                                        | Pattern | Type             | Deprecated | Definition               | Title/Description |
+| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------ | ----------------- |
+| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty )               | No      | enum (of string) | No         | In #/definitions/keyType | Key type          |
+| - [](#objectA_signature_oneOf_i0_signers_items_publicKey_additionalProperties ) | No      | object           | No         | -                        | -                 |
 
 | All of(Requirement)                                                    |
 | ---------------------------------------------------------------------- |
@@ -1183,14 +1205,16 @@ Must be one of:
 | **Required**              | No                                                      |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description   |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ------------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type indicator. |
-| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name          |
-| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_x )     | No      | string           | No         | -                                                                       | Coordinate          |
-| + [y](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_y )     | No      | string           | No         | -                                                                       | Coordinate          |
+| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
+| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
+| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
+| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name        |
+| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_x )     | No      | string           | No         | -                                                                       | Coordinate        |
+| + [y](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_y )     | No      | string           | No         | -                                                                       | Coordinate        |
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty"></a>2.1.1.1.1.3.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0 > then > kty`
+
+**Title:** Key type
 
 |                        |                                                                |
 | ---------------------- | -------------------------------------------------------------- |
@@ -1254,13 +1278,15 @@ Must be one of:
 | **Required**              | No                                                      |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description   |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ------------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type indicator. |
-| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name          |
-| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_x )     | No      | string           | No         | -                                                                       | Coordinate          |
+| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
+| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
+| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
+| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name        |
+| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_x )     | No      | string           | No         | -                                                                       | Coordinate        |
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty"></a>2.1.1.1.1.3.2.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1 > then > kty`
+
+**Title:** Key type
 
 |                        |                                                                |
 | ---------------------- | -------------------------------------------------------------- |
@@ -1312,13 +1338,15 @@ Must be one of:
 | **Required**              | No                                                      |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description   |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ------------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type indicator. |
-| + [n](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_n )     | No      | string           | No         | -                                                                       | Modulus             |
-| + [e](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_e )     | No      | string           | No         | -                                                                       | Exponent            |
+| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
+| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
+| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
+| + [n](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_n )     | No      | string           | No         | -                                                                       | Modulus           |
+| + [e](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_e )     | No      | string           | No         | -                                                                       | Exponent          |
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty"></a>2.1.1.1.1.3.3.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2 > then > kty`
+
+**Title:** Key type
 
 |                        |                                                                |
 | ---------------------- | -------------------------------------------------------------- |
@@ -1351,6 +1379,8 @@ Must be one of:
 **Description:** RSA exponent.
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_kty"></a>2.1.1.1.1.3.4. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > kty`
+
+**Title:** Key type
 
 |                |                       |
 | -------------- | --------------------- |
@@ -1467,11 +1497,13 @@ Must be one of:
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
 
-| Each item of this array must be                   | Description |
-| ------------------------------------------------- | ----------- |
-| [signer](#objectA_signature_oneOf_i1_chain_items) | -           |
+| Each item of this array must be                      | Description |
+| ---------------------------------------------------- | ----------- |
+| [Signature](#objectA_signature_oneOf_i1_chain_items) | -           |
 
-###### <a name="objectA_signature_oneOf_i1_chain_items"></a>2.1.2.1.1. root > objectA > signature > oneOf > item 1 > chain > signer
+###### <a name="objectA_signature_oneOf_i1_chain_items"></a>2.1.2.1.1. root > objectA > signature > oneOf > item 1 > chain > Signature
+
+**Title:** Signature
 
 |                           |                                                         |
 | ------------------------- | ------------------------------------------------------- |
@@ -1578,10 +1610,10 @@ Must be one of:
 
 **Description:** Optional. Public key object.
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition               | Title/Description   |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------ | ------------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty )               | No      | enum (of string) | No         | In #/definitions/keyType | Key type indicator. |
-| - [](#objectA_signature_oneOf_i0_signers_items_publicKey_additionalProperties ) | No      | object           | No         | -                        | -                   |
+| Property                                                                        | Pattern | Type             | Deprecated | Definition               | Title/Description |
+| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------ | ----------------- |
+| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty )               | No      | enum (of string) | No         | In #/definitions/keyType | Key type          |
+| - [](#objectA_signature_oneOf_i0_signers_items_publicKey_additionalProperties ) | No      | object           | No         | -                        | -                 |
 
 | All of(Requirement)                                                    |
 | ---------------------------------------------------------------------- |
@@ -1605,14 +1637,16 @@ Must be one of:
 | **Required**              | No                                                      |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description   |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ------------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type indicator. |
-| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name          |
-| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_x )     | No      | string           | No         | -                                                                       | Coordinate          |
-| + [y](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_y )     | No      | string           | No         | -                                                                       | Coordinate          |
+| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
+| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
+| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
+| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name        |
+| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_x )     | No      | string           | No         | -                                                                       | Coordinate        |
+| + [y](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_y )     | No      | string           | No         | -                                                                       | Coordinate        |
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty"></a>2.1.3.3.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0 > then > kty`
+
+**Title:** Key type
 
 |                        |                                                                |
 | ---------------------- | -------------------------------------------------------------- |
@@ -1676,13 +1710,15 @@ Must be one of:
 | **Required**              | No                                                      |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description   |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ------------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type indicator. |
-| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name          |
-| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_x )     | No      | string           | No         | -                                                                       | Coordinate          |
+| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
+| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
+| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
+| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name        |
+| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_x )     | No      | string           | No         | -                                                                       | Coordinate        |
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty"></a>2.1.3.3.2.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1 > then > kty`
+
+**Title:** Key type
 
 |                        |                                                                |
 | ---------------------- | -------------------------------------------------------------- |
@@ -1734,13 +1770,15 @@ Must be one of:
 | **Required**              | No                                                      |
 | **Additional properties** | [[Not allowed]](# "Additional Properties not allowed.") |
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description   |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ------------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type indicator. |
-| + [n](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_n )     | No      | string           | No         | -                                                                       | Modulus             |
-| + [e](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_e )     | No      | string           | No         | -                                                                       | Exponent            |
+| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
+| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
+| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
+| + [n](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_n )     | No      | string           | No         | -                                                                       | Modulus           |
+| + [e](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_e )     | No      | string           | No         | -                                                                       | Exponent          |
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty"></a>2.1.3.3.3.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2 > then > kty`
+
+**Title:** Key type
 
 |                        |                                                                |
 | ---------------------- | -------------------------------------------------------------- |
@@ -1773,6 +1811,8 @@ Must be one of:
 **Description:** RSA exponent.
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_kty"></a>2.1.3.3.4. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > kty`
+
+**Title:** Key type
 
 |                |                       |
 | -------------- | --------------------- |
