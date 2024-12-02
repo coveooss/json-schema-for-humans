@@ -39,13 +39,13 @@
 | -------- | -------- |
 | **Type** | `string` |
 
-**Example:** 
+**Example:**
 
 ```json
 "apple"
 ```
 
-**Example:** 
+**Example:**
 
 ```json
 [

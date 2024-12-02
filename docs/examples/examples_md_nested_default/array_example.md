@@ -42,13 +42,13 @@
 | **Type**     | `string` |
 | **Required** | No       |
 
-**Example:** 
+**Example:**
 
 ```json
 "apple"
 ```
 
-**Example:** 
+**Example:**
 
 ```json
 [

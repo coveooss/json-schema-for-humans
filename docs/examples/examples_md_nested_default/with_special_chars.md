@@ -82,14 +82,16 @@
 | **Type**     | `string` |
 | **Required** | No       |
 
-**Examples:** 
+**Examples:**
 
 ```json
 "🖖"
 ```
+
 ```json
 "صباح الخير"
 ```
+
 ```json
 "你好"
 ```

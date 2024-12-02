@@ -25,7 +25,7 @@
 | **Type**     | `array` |
 | **Required** | No      |
 
-**Example:** 
+**Example:**
 
 ```json
 [
