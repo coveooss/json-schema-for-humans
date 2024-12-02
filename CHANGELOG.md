@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/coveooss/json-schema-for-humans/compare/v1.3.2...v1.3.3) (2024-12-02)
+
+
+### Bug Fixes
+
+* Extra space in MD example section ([#287](https://github.com/coveooss/json-schema-for-humans/issues/287)) ([99f52c7](https://github.com/coveooss/json-schema-for-humans/commit/99f52c7ec1efa09312d49f30d491e4d3e3a89832)), closes [#263](https://github.com/coveooss/json-schema-for-humans/issues/263)
+
 ## [1.3.2](https://github.com/coveooss/json-schema-for-humans/compare/v1.3.1...v1.3.2) (2024-11-29)
 
 
