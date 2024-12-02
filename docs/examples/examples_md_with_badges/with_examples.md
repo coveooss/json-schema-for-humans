@@ -29,7 +29,7 @@
 
 **Description:** the person's first name
 
-**Examples:** 
+**Examples:**
 
 ```json
 "Guido"
@@ -49,7 +49,7 @@
 
 **Description:** The person's last name.
 
-**Example:** 
+**Example:**
 
 ```json
 "Van Rossum"
@@ -65,7 +65,7 @@
 
 **Description:** Age in years which must be equal to or greater than zero.
 
-**Example:** 
+**Example:**
 
 ```json
 64
@@ -84,7 +84,7 @@
 
 **Description:** Any more info you want as an object
 
-**Example:** 
+**Example:**
 
 ```json
 {

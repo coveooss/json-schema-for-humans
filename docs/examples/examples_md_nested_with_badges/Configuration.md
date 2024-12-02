@@ -396,7 +396,7 @@ This is the old behaviour and is only needed for browsers that do not support HT
 **Description:** (Only used with `description_is_markdown`)
 [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for the descriptions.
 
-**Example:** 
+**Example:**
 
 ```json
 {
