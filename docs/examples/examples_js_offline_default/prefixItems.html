@@ -5,8 +5,8 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/overpass300,400,600,800.css">
     <script src="js/jquery-3.4.1.min.js"></script>
-    <link href="css/bootstrap-4.3.1.min.css" rel="stylesheet">
-    <script src="js/bootstrap-4.3.1.min.js"></script>
+    <link href="css/bootstrap-5.3.3.min.css" rel="stylesheet">
+    <script src="js/bootstrap-5.3.3.bundle.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/schema_doc.css">
     <!-- <script src="js/facf9fa52c.js"></script> -->
     <script src="js/schema_doc.min.js"></script>
@@ -16,11 +16,11 @@
     <title>Address</title>
 </head>
 <body onload="anchorOnLoad();" id="root"><div class="text-right">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
         </div>
 
-    <div class="breadcrumbs"></div> <h1>Address</h1><span class="badge badge-dark value-type">Type: object</span><br/>
+    <div class="breadcrumbs"></div> <h1>Address</h1><span class="badge text-bg-dark value-type">Type: object</span><br/>
 
         
 
@@ -29,18 +29,16 @@
 
         
 <div class="accordion" id="accordionaddress">
-    <div class="card">
-        <div class="card-header" id="headingaddress">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#address"
-                        aria-expanded="" aria-controls="address" onclick="setAnchor('#address')"><span class="property-name">address</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingaddress">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#address"
+                    aria-expanded="" aria-controls="address" onclick="setAnchor('#address')"><span class="property-name">address</span></button>
+        </h2>
 
         <div id="address"
-             class="collapse property-definition-div" aria-labelledby="headingaddress"
-             data-parent="#accordionaddress">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingaddress"
+             data-bs-parent="#accordionaddress">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +47,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#address" onclick="anchorLink('address')">address</a></div><span class="badge badge-dark value-type">Type: array</span><br/>
+    <a href="#address" onclick="anchorLink('address')">address</a></div><span class="badge text-bg-dark value-type">Type: array</span><br/>
 
         
 
@@ -77,7 +75,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#address_items_i0" onclick="anchorLink('address_items_i0')">a number</a></div><h4>a number</h4><span class="badge badge-dark value-type">Type: number</span><br/>
+    <a href="#address_items_i0" onclick="anchorLink('address_items_i0')">a number</a></div><h4>a number</h4><span class="badge text-bg-dark value-type">Type: number</span><br/>
 
         
 
@@ -107,7 +105,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#address_items_i1" onclick="anchorLink('address_items_i1')">address item 1</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+    <a href="#address_items_i1" onclick="anchorLink('address_items_i1')">address item 1</a></div><span class="badge text-bg-dark value-type">Type: string</span><br/>
 <span class="description"><p>followed by a string</p>
 </span>
         
@@ -138,7 +136,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#address_items_i2" onclick="anchorLink('address_items_i2')">again a string</a></div><h4>again a string</h4><span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+    <a href="#address_items_i2" onclick="anchorLink('address_items_i2')">again a string</a></div><h4>again a string</h4><span class="badge text-bg-dark value-type">Type: enum (of string)</span><br/>
 <div class="enum-value" id="address_items_i2_enum">
                 <h4>Must be one of:</h4>
                 <ul class="list-group"><li class="list-group-item enum-item">"Street"</li><li class="list-group-item enum-item">"Avenue"</li><li class="list-group-item enum-item">"Boulevard"</li></ul>
@@ -171,7 +169,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#address_items_i3" onclick="anchorLink('address_items_i3')">finally an enum</a></div><h4>finally an enum</h4><span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+    <a href="#address_items_i3" onclick="anchorLink('address_items_i3')">finally an enum</a></div><h4>finally an enum</h4><span class="badge text-bg-dark value-type">Type: enum (of string)</span><br/>
 <div class="enum-value" id="address_items_i3_enum">
                 <h4>Must be one of:</h4>
                 <ul class="list-group"><li class="list-group-item enum-item">"NW"</li><li class="list-group-item enum-item">"NE"</li><li class="list-group-item enum-item">"SW"</li><li class="list-group-item enum-item">"SE"</li></ul>
@@ -185,9 +183,9 @@
         </div>
     </div>
     <br/>
-<div class="badge badge-secondary">Example:</div>
+<div class="badge text-bg-secondary">Example:</div>
 <br/><div id="address_ex1" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="p">[</span>
-<span class="w">    </span><span class="mf">1600</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">1600</span><span class="p">,</span>
 <span class="w">    </span><span class="s2">&quot;Pennsylvania&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="s2">&quot;Avenue&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="s2">&quot;NW&quot;</span><span class="p">,</span>

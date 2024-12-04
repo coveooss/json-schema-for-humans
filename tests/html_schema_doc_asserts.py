@@ -77,7 +77,7 @@ def assert_default_values(soup: BeautifulSoup, default_values: List[str]) -> Non
 
 def assert_badges(soup: BeautifulSoup, badge_class_name: str, expected_values: List[bool]) -> None:
     """Assert that the badge with the given class name is either present or not for all properties"""
-    property_cards = soup.find_all(class_="property-name-button")
+    property_cards = soup.find_all(class_="accordion-button")
     assert len(property_cards) == len(expected_values)
 
     for i, property_card in enumerate(property_cards):
