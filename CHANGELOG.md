@@ -1,3 +1,10 @@
+## [1.3.4](https://github.com/coveooss/json-schema-for-humans/compare/v1.3.3...v1.3.4) (2024-12-06)
+
+
+### Bug Fixes
+
+* const with value null wrongly displayed ([#288](https://github.com/coveooss/json-schema-for-humans/issues/288)) ([e2642b2](https://github.com/coveooss/json-schema-for-humans/commit/e2642b253c2479ee013a0151ca41af8fe6d96e60))
+
 ## [1.3.3](https://github.com/coveooss/json-schema-for-humans/compare/v1.3.2...v1.3.3) (2024-12-02)
 
 
