@@ -14,6 +14,10 @@ ALLOWED_ID_CHARS = string.ascii_letters + string.digits + "_" + "-"
 ALLOWED_KEYWORDS_WITH_REF = [SchemaKeyword.DESCRIPTION.value]
 
 
+class NotSet:
+    """A class to represent a value that is not set"""
+
+
 class SchemaNode:
     """
     Represents a part of a JSON schema with additional metadata to help with documentation
@@ -115,6 +119,7 @@ class SchemaNode:
         self.array_additional_items = array_additional_items
         self.tuple_validation_items: List["SchemaNode"] = tuple_validation_items or []
         self.property_name = property_name
+        self.const = NotSet
 
     @property
     def explicit_no_additional_properties(self) -> bool:
@@ -533,6 +538,19 @@ class SchemaNode:
             return True
 
         return self.has_circular_reference(config)
+
+    @property
+    def is_const(self) -> bool:
+        """Check if the node is a const node"""
+        return self.const is not NotSet
+
+    @property
+    def const_value(self) -> Any:
+        """Get the value of the const node"""
+        if self.const is NotSet:
+            return None
+
+        return self.const
 
     def node_is_parent(self, node_to_check: "SchemaNode") -> bool:
         """Check if the provided node is a parent of the current node"""

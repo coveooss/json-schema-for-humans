@@ -675,9 +675,9 @@ def test_complex_const() -> None:
     """Test the keyword "const" used with an array or a dict"""
     soup = generate_case("complex_const")
 
-    tests.html_schema_doc_asserts.assert_types(soup, ["const", "const", "const"])
+    tests.html_schema_doc_asserts.assert_types(soup, ["const", "const", "const", "const"])
     tests.html_schema_doc_asserts.assert_const(
-        soup, ["[\n    1,\n    2\n]", '{\n    "a_key": "a_value",\n    "another_key": "another_value"\n}', "0"]
+        soup, ["[\n    1,\n    2\n]", '{\n    "a_key": "a_value",\n    "another_key": "another_value"\n}', "0", "null"]
     )
 
 

@@ -644,6 +644,8 @@ def _build_node(
                     new_node.array_additional_items = schema_value
             elif schema_key == SchemaKeyword.ADDITIONAL_ITEMS.value:
                 new_node.array_additional_items = schema_value
+            elif schema_key == SchemaKeyword.CONST.value:
+                new_node.const = schema_value
             else:
                 # Add the property name (correctly escaped) to the ID
                 new_depth = depth

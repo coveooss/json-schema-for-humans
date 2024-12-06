@@ -3,6 +3,7 @@
 - [1. Property `root > oneOf > 1st constant`](#oneOf_i0)
 - [2. Property `root > oneOf > 2nd constant`](#oneOf_i1)
 - [3. Property `root > oneOf > 0`](#oneOf_i2)
+- [4. Property `root > oneOf > null`](#oneOf_i3)
 
 |              |             |
 | ------------ | ----------- |
@@ -14,6 +15,7 @@
 | [1st constant](#oneOf_i0) |
 | [2nd constant](#oneOf_i1) |
 | [0](#oneOf_i2)            |
+| [null](#oneOf_i3)         |
 
 ## <a name="oneOf_i0"></a>1. Property `root > oneOf > 1st constant`
 
@@ -53,6 +55,17 @@ Specific value: `{
 | **Required** | No      |
 
 Specific value: `0`
+
+## <a name="oneOf_i3"></a>4. Property `root > oneOf > null`
+
+**Title:** null
+
+|              |         |
+| ------------ | ------- |
+| **Type**     | `const` |
+| **Required** | No      |
+
+Specific value: `null`
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |

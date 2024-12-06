@@ -80,8 +80,8 @@
             </ul>
             </div>
         {%- endif -%}
-        {%- if schema.kw_const -%}
-            <span class="const-value" id="{{ schema.kw_const.html_id }}">Specific value: <code>{{ schema.kw_const.raw | python_to_json }}</code></span>
+        {%- if schema.is_const -%}
+            <span class="const-value" id="{{ schema.html_id }}_const">Specific value: <code>{{ schema.const_value | python_to_json }}</code></span>
         {%- endif -%}
 
         {# Pattern (Regular Expression) #}
