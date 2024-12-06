@@ -18,6 +18,10 @@
     {
       "title": "0",
       "const": 0
+    },
+    {
+      "title": "null",
+      "const": null
     }
   ]
 }

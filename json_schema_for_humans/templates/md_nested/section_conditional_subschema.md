@@ -5,7 +5,7 @@
         {%- filter md_heading(depth) -%}If (
             {{- first_property.property_name | md_escape_for_table -}}
             {{- " = " -}}
-            {{- first_property.kw_const.literal | python_to_json -}}
+            {{- first_property.const_value | python_to_json -}}
         ){%- endfilter -%}
         {% with schema=schema.kw_then, skip_headers=False, depth=depth %}
             {% include "content.md" %}
@@ -15,7 +15,7 @@
         {%- filter md_heading(depth) -%}Else (i.e. {{ " " }}
             {{- first_property.property_name | md_escape_for_table -}}
             {{- " != " -}}
-            {{- first_property.kw_const.literal | python_to_json -}}
+            {{- first_property.const_value | python_to_json -}}
         ){%- endfilter -%}
         {% with schema=schema.kw_else, skip_headers=False, depth=depth %}
             {% include "content.md" %}

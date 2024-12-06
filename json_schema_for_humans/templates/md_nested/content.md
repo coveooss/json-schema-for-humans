@@ -55,8 +55,8 @@
     {% if schema.kw_enum -%}
         {% include "section_one_of.md" %}
     {%- endif %}
-    {%- if schema.kw_const -%}
-        Specific value: `{{ schema.kw_const.raw | python_to_json }}`
+    {%- if schema.is_const -%}
+        Specific value: `{{ schema.const_value | python_to_json }}`
     {%- endif -%}
 
     {# Conditional subschema, or if-then-else section #}

@@ -104,7 +104,7 @@ def get_type_name(schema_node: "SchemaNode") -> Optional[str]:
 
         return type_name
 
-    if const.TYPE_CONST in schema_node.keywords:
+    if schema_node.is_const:
         return const.TYPE_CONST
     if const.TYPE_ENUM in schema_node.keywords:
         return _enum_type(schema_node.keywords[const.TYPE_ENUM].array_items)

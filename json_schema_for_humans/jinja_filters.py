@@ -6,7 +6,6 @@ from typing import Any, List, Optional, cast
 import yaml
 from jinja2 import Environment, pass_environment
 from markdown2 import Markdown  # type: ignore
-from markupsafe import escape as markupsafe_escape
 from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
 from pygments.lexers.data import YamlLexer
@@ -83,6 +82,9 @@ def python_to_json(value: Any) -> Any:
 
     Used to display a string literals more explicitly for default and const values.
     """
+    if value is None:
+        return "null"
+
     return json.dumps(value, indent=4, separators=(",", ": "), ensure_ascii=False)
 
 
