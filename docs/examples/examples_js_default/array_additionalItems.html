@@ -5,8 +5,8 @@
 <head>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,800">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="schema_doc.css">
     <script src="https://use.fontawesome.com/facf9fa52c.js"></script>
     <script src="schema_doc.min.js"></script>
@@ -14,11 +14,11 @@
     <title>Schema Docs</title>
 </head>
 <body onload="anchorOnLoad();" id="root"><div class="text-right">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
         </div>
 
-    <div class="breadcrumbs"></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <div class="breadcrumbs"></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <span class="description"><p>A little food fun</p>
 </span>
         
@@ -28,18 +28,16 @@
 
         
 <div class="accordion" id="accordionaddress">
-    <div class="card">
-        <div class="card-header" id="headingaddress">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#address"
-                        aria-expanded="" aria-controls="address" onclick="setAnchor('#address')"><span class="property-name">address</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingaddress">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#address"
+                    aria-expanded="" aria-controls="address" onclick="setAnchor('#address')"><span class="property-name">address</span></button>
+        </h2>
 
         <div id="address"
-             class="collapse property-definition-div" aria-labelledby="headingaddress"
-             data-parent="#accordionaddress">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingaddress"
+             data-bs-parent="#accordionaddress">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +46,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#address" onclick="anchorLink('address')">address</a></div><span class="badge badge-dark value-type">Type: array</span><br/>
+    <a href="#address" onclick="anchorLink('address')">address</a></div><span class="badge text-bg-dark value-type">Type: array</span><br/>
 
         
 
@@ -76,7 +74,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#address_items_i0" onclick="anchorLink('address_items_i0')">a number</a></div><h4>a number</h4><span class="badge badge-dark value-type">Type: number</span><br/>
+    <a href="#address_items_i0" onclick="anchorLink('address_items_i0')">a number</a></div><h4>a number</h4><span class="badge text-bg-dark value-type">Type: number</span><br/>
 
         
 
@@ -106,7 +104,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#address_items_i1" onclick="anchorLink('address_items_i1')">address item 1</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+    <a href="#address_items_i1" onclick="anchorLink('address_items_i1')">address item 1</a></div><span class="badge text-bg-dark value-type">Type: string</span><br/>
 <span class="description"><p>followed by a string</p>
 </span>
         
@@ -137,7 +135,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#address_items_i2" onclick="anchorLink('address_items_i2')">again a string</a></div><h4>again a string</h4><span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+    <a href="#address_items_i2" onclick="anchorLink('address_items_i2')">again a string</a></div><h4>again a string</h4><span class="badge text-bg-dark value-type">Type: enum (of string)</span><br/>
 <div class="enum-value" id="address_items_i2_enum">
             <h4>Must be one of:</h4>
             <ul class="list-group"><li class="list-group-item enum-item">"Street"</li><li class="list-group-item enum-item">"Avenue"</li><li class="list-group-item enum-item">"Boulevard"</li></ul>
@@ -170,7 +168,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#address_items_i3" onclick="anchorLink('address_items_i3')">finally an enum</a></div><h4>finally an enum</h4><span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+    <a href="#address_items_i3" onclick="anchorLink('address_items_i3')">finally an enum</a></div><h4>finally an enum</h4><span class="badge text-bg-dark value-type">Type: enum (of string)</span><br/>
 <div class="enum-value" id="address_items_i3_enum">
             <h4>Must be one of:</h4>
             <ul class="list-group"><li class="list-group-item enum-item">"NW"</li><li class="list-group-item enum-item">"NE"</li><li class="list-group-item enum-item">"SW"</li><li class="list-group-item enum-item">"SE"</li></ul>
@@ -184,9 +182,9 @@
         </div>
     </div>
     <br/>
-<div class="badge badge-secondary">Example:</div>
+<div class="badge text-bg-secondary">Example:</div>
 <br/><div id="address_ex1" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="p">[</span>
-<span class="w">    </span><span class="mf">1600</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">1600</span><span class="p">,</span>
 <span class="w">    </span><span class="s2">&quot;Pennsylvania&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="s2">&quot;Avenue&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="s2">&quot;NW&quot;</span><span class="p">,</span>
@@ -199,18 +197,16 @@
     </div>
 </div>
 <div class="accordion" id="accordionaddressLines">
-    <div class="card">
-        <div class="card-header" id="headingaddressLines">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#addressLines"
-                        aria-expanded="" aria-controls="addressLines" onclick="setAnchor('#addressLines')"><span class="property-name">addressLines</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingaddressLines">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#addressLines"
+                    aria-expanded="" aria-controls="addressLines" onclick="setAnchor('#addressLines')"><span class="property-name">addressLines</span></button>
+        </h2>
 
         <div id="addressLines"
-             class="collapse property-definition-div" aria-labelledby="headingaddressLines"
-             data-parent="#accordionaddressLines">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingaddressLines"
+             data-bs-parent="#accordionaddressLines">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -219,7 +215,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#addressLines" onclick="anchorLink('addressLines')">addressLines</a></div><span class="badge badge-dark value-type">Type: array</span><br/>
+    <a href="#addressLines" onclick="anchorLink('addressLines')">addressLines</a></div><span class="badge text-bg-dark value-type">Type: array</span><br/>
 <span class="description"><p>list of address lines</p>
 </span>
         
@@ -227,7 +223,7 @@
         
         
 
-         <span class="badge badge-info no-additional">No Additional Items</span><h4>Tuple Validation</h4>
+         <span class="badge text-bg-info no-additional">No Additional Items</span><h4>Tuple Validation</h4>
     
     <h5>Item at 1 must be:</h5>
     <div class="card">
@@ -248,7 +244,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#addressLines_items_i0" onclick="anchorLink('addressLines_items_i0')">addressLines item 0</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+    <a href="#addressLines_items_i0" onclick="anchorLink('addressLines_items_i0')">addressLines item 0</a></div><span class="badge text-bg-dark value-type">Type: string</span><br/>
 
         
 
@@ -264,18 +260,16 @@
     </div>
 </div>
 <div class="accordion" id="accordionarrayEmpty">
-    <div class="card">
-        <div class="card-header" id="headingarrayEmpty">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#arrayEmpty"
-                        aria-expanded="" aria-controls="arrayEmpty" onclick="setAnchor('#arrayEmpty')"><span class="property-name">arrayEmpty</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingarrayEmpty">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#arrayEmpty"
+                    aria-expanded="" aria-controls="arrayEmpty" onclick="setAnchor('#arrayEmpty')"><span class="property-name">arrayEmpty</span></button>
+        </h2>
 
         <div id="arrayEmpty"
-             class="collapse property-definition-div" aria-labelledby="headingarrayEmpty"
-             data-parent="#accordionarrayEmpty">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingarrayEmpty"
+             data-bs-parent="#accordionarrayEmpty">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -284,7 +278,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#arrayEmpty" onclick="anchorLink('arrayEmpty')">arrayEmpty</a></div><span class="badge badge-dark value-type">Type: array</span><br/>
+    <a href="#arrayEmpty" onclick="anchorLink('arrayEmpty')">arrayEmpty</a></div><span class="badge text-bg-dark value-type">Type: array</span><br/>
 <span class="description"><p>This is not a valid JSON Schema, but let's do it anyway.</p>
 </span>
         
@@ -292,7 +286,7 @@
         
         
 
-         <span class="badge badge-info no-additional">No Additional Items</span>
+         <span class="badge text-bg-info no-additional">No Additional Items</span>
             </div>
         </div>
     </div>

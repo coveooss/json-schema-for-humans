@@ -153,3 +153,5 @@ tmp
 
 # npm stuff
 node_modules/
+
+config.json

@@ -5,8 +5,8 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/overpass300,400,600,800.css">
     <script src="js/jquery-3.4.1.min.js"></script>
-    <link href="css/bootstrap-4.3.1.min.css" rel="stylesheet">
-    <script src="js/bootstrap-4.3.1.min.js"></script>
+    <link href="css/bootstrap-5.3.3.min.css" rel="stylesheet">
+    <script src="js/bootstrap-5.3.3.bundle.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/schema_doc.css">
     <!-- <script src="js/facf9fa52c.js"></script> -->
     <script src="js/schema_doc.min.js"></script>
@@ -14,11 +14,11 @@
     <title>Schema Docs</title>
 </head>
 <body onload="anchorOnLoad();" id="root"><div class="text-right">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
         </div>
 
-    <div class="breadcrumbs"></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <div class="breadcrumbs"></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 
         
 
@@ -27,18 +27,16 @@
 
         
 <div class="accordion" id="accordionbilling_address">
-    <div class="card">
-        <div class="card-header" id="headingbilling_address">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#billing_address"
-                        aria-expanded="" aria-controls="billing_address" onclick="setAnchor('#billing_address')"><span class="property-name">billing_address</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingbilling_address">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#billing_address"
+                    aria-expanded="" aria-controls="billing_address" onclick="setAnchor('#billing_address')"><span class="property-name">billing_address</span></button>
+        </h2>
 
         <div id="billing_address"
-             class="collapse property-definition-div" aria-labelledby="headingbilling_address"
-             data-parent="#accordionbilling_address">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingbilling_address"
+             data-bs-parent="#accordionbilling_address">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +45,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#billing_address" onclick="anchorLink('billing_address')">billing_address</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#billing_address" onclick="anchorLink('billing_address')">billing_address</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 
 
     
@@ -58,18 +56,16 @@
 
         
 <div class="accordion" id="accordionbilling_address_street_address">
-    <div class="card">
-        <div class="card-header" id="headingbilling_address_street_address">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#billing_address_street_address"
-                        aria-expanded="" aria-controls="billing_address_street_address" onclick="setAnchor('#billing_address_street_address')"><span class="property-name">street_address</span> <span class="badge badge-warning required-property">Required</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingbilling_address_street_address">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#billing_address_street_address"
+                    aria-expanded="" aria-controls="billing_address_street_address" onclick="setAnchor('#billing_address_street_address')"><span class="property-name">street_address</span> <span class="badge text-bg-warning required-property">Required</span></button>
+        </h2>
 
         <div id="billing_address_street_address"
-             class="collapse property-definition-div" aria-labelledby="headingbilling_address_street_address"
-             data-parent="#accordionbilling_address_street_address">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingbilling_address_street_address"
+             data-bs-parent="#accordionbilling_address_street_address">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +81,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#billing_address_street_address" onclick="anchorLink('billing_address_street_address')">street_address</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+    <a href="#billing_address_street_address" onclick="anchorLink('billing_address_street_address')">street_address</a></div><span class="badge text-bg-dark value-type">Type: string</span><br/>
 
         
 
@@ -98,18 +94,16 @@
     </div>
 </div>
 <div class="accordion" id="accordionbilling_address_city">
-    <div class="card">
-        <div class="card-header" id="headingbilling_address_city">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#billing_address_city"
-                        aria-expanded="" aria-controls="billing_address_city" onclick="setAnchor('#billing_address_city')"><span class="property-name">city</span> <span class="badge badge-warning required-property">Required</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingbilling_address_city">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#billing_address_city"
+                    aria-expanded="" aria-controls="billing_address_city" onclick="setAnchor('#billing_address_city')"><span class="property-name">city</span> <span class="badge text-bg-warning required-property">Required</span></button>
+        </h2>
 
         <div id="billing_address_city"
-             class="collapse property-definition-div" aria-labelledby="headingbilling_address_city"
-             data-parent="#accordionbilling_address_city">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingbilling_address_city"
+             data-bs-parent="#accordionbilling_address_city">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -125,7 +119,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#billing_address_city" onclick="anchorLink('billing_address_city')">city</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+    <a href="#billing_address_city" onclick="anchorLink('billing_address_city')">city</a></div><span class="badge text-bg-dark value-type">Type: string</span><br/>
 
         
 
@@ -138,18 +132,16 @@
     </div>
 </div>
 <div class="accordion" id="accordionbilling_address_state">
-    <div class="card">
-        <div class="card-header" id="headingbilling_address_state">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#billing_address_state"
-                        aria-expanded="" aria-controls="billing_address_state" onclick="setAnchor('#billing_address_state')"><span class="property-name">state</span> <span class="badge badge-warning required-property">Required</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingbilling_address_state">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#billing_address_state"
+                    aria-expanded="" aria-controls="billing_address_state" onclick="setAnchor('#billing_address_state')"><span class="property-name">state</span> <span class="badge text-bg-warning required-property">Required</span></button>
+        </h2>
 
         <div id="billing_address_state"
-             class="collapse property-definition-div" aria-labelledby="headingbilling_address_state"
-             data-parent="#accordionbilling_address_state">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingbilling_address_state"
+             data-bs-parent="#accordionbilling_address_state">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -165,7 +157,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#billing_address_state" onclick="anchorLink('billing_address_state')">state</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+    <a href="#billing_address_state" onclick="anchorLink('billing_address_state')">state</a></div><span class="badge text-bg-dark value-type">Type: string</span><br/>
 
         
 
@@ -178,18 +170,16 @@
     </div>
 </div>
 <div class="accordion" id="accordionbilling_address_futureProperty">
-    <div class="card">
-        <div class="card-header" id="headingbilling_address_futureProperty">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#billing_address_futureProperty"
-                        aria-expanded="" aria-controls="billing_address_futureProperty" onclick="setAnchor('#billing_address_futureProperty')"><span class="property-name">futureProperty</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingbilling_address_futureProperty">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#billing_address_futureProperty"
+                    aria-expanded="" aria-controls="billing_address_futureProperty" onclick="setAnchor('#billing_address_futureProperty')"><span class="property-name">futureProperty</span></button>
+        </h2>
 
         <div id="billing_address_futureProperty"
-             class="collapse property-definition-div" aria-labelledby="headingbilling_address_futureProperty"
-             data-parent="#accordionbilling_address_futureProperty">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingbilling_address_futureProperty"
+             data-bs-parent="#accordionbilling_address_futureProperty">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -205,7 +195,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#billing_address_futureProperty" onclick="anchorLink('billing_address_futureProperty')">futureProperty</a></div><span class="badge badge-dark value-type">Type: null</span><br/>
+    <a href="#billing_address_futureProperty" onclick="anchorLink('billing_address_futureProperty')">futureProperty</a></div><span class="badge text-bg-dark value-type">Type: null</span><br/>
 
         
 
@@ -222,18 +212,16 @@
     </div>
 </div>
 <div class="accordion" id="accordionshipping_address">
-    <div class="card">
-        <div class="card-header" id="headingshipping_address">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#shipping_address"
-                        aria-expanded="" aria-controls="shipping_address" onclick="setAnchor('#shipping_address')"><span class="property-name">shipping_address</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingshipping_address">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#shipping_address"
+                    aria-expanded="" aria-controls="shipping_address" onclick="setAnchor('#shipping_address')"><span class="property-name">shipping_address</span></button>
+        </h2>
 
         <div id="shipping_address"
-             class="collapse property-definition-div" aria-labelledby="headingshipping_address"
-             data-parent="#accordionshipping_address">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingshipping_address"
+             data-bs-parent="#accordionshipping_address">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -242,7 +230,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#shipping_address" onclick="anchorLink('shipping_address')">shipping_address</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#shipping_address" onclick="anchorLink('shipping_address')">shipping_address</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <a href="#billing_address" onclick="anchorLink('billing_address')" class="ref-link">Same definition as billing_address</a>
             </div>
         </div>

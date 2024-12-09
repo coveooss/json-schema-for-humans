@@ -7,7 +7,7 @@
     {% set tab_id = schema.kw_if.html_id %}
     <li class="nav-item">
         <a class="nav-link active"
-           id="{{ tab_id  }}" data-toggle="tab" href="#tab-pane_{{ tab_id }}" role="tab"
+           id="{{ tab_id  }}" data-bs-toggle="tab" href="#tab-pane_{{ tab_id }}" role="tab"
         >If</a>
     </li>
 
@@ -15,7 +15,7 @@
         {% set tab_id = schema.kw_then.html_id %}
         <li class="nav-item">
             <a class="nav-link"
-               id="{{ tab_id }}" data-toggle="tab" href="#tab-pane_{{ tab_id }}" role="tab"
+               id="{{ tab_id }}" data-bs-toggle="tab" href="#tab-pane_{{ tab_id }}" role="tab"
             >Then</a>
         </li>
     {%- endif -%}
@@ -24,7 +24,7 @@
         {%- set tab_id = schema.kw_else.html_id -%}
         <li class="nav-item">
             <a class="nav-link"
-               id="{{ tab_id }}" data-toggle="tab" href="#tab-pane_{{ tab_id }}" role="tab"
+               id="{{ tab_id }}" data-bs-toggle="tab" href="#tab-pane_{{ tab_id }}" role="tab"
             >Else</a>
         </li>
     {%- endif -%}

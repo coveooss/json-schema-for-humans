@@ -53,7 +53,7 @@ DEFAULT_TEMPLATE_FILE_NAME = "base.html"
 DEFAULT_CSS_FILE_NAME = "schema_doc.css"
 DEFAULT_JS_FILE_NAME = "schema_doc.min.js"
 OFFLINE_CSS_FILE_NAMES = [
-    "css/bootstrap-4.3.1.min.css",
+    "css/bootstrap-5.3.3.min.css",
     "css/facf9fa52c.css",
     "css/font-awesome-4.7.0.min.css",
     "css/overpass300,400,600,800.css",
@@ -72,7 +72,7 @@ OFFLINE_FONT_FILE_NAMES = [
     "font/qFdH35WCmI96Ajtm81GrU9vyww.woff2",
 ]
 OFFLINE_JS_FILE_NAMES = [
-    "js/bootstrap-4.3.1.min.js",
+    "js/bootstrap-5.3.3.bundle.min.js",
     "js/facf9fa52c.js",
     "js/jquery-3.4.1.min.js",
     "js/schema_doc.min.js",

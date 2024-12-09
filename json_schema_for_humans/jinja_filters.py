@@ -8,8 +8,7 @@ from jinja2 import Environment, pass_environment
 from markdown2 import Markdown  # type: ignore
 from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
-from pygments.lexers.data import YamlLexer
-from pygments.lexers.javascript import JavascriptLexer
+from pygments.lexers import JsonLexer, YamlLexer
 from pytz import reference
 
 from json_schema_for_humans import const
@@ -204,8 +203,8 @@ def get_local_time() -> str:
 
 
 def highlight_json_example(example_text: str) -> str:
-    """Filter. Return an highlighted version of the provided JSON text"""
-    return highlight(example_text, JavascriptLexer(), HtmlFormatter())
+    """Filter. Return a highlighted version of the provided JSON text"""
+    return highlight(example_text, JsonLexer(), HtmlFormatter())
 
 
 def yaml_example(example_text: str) -> str:
