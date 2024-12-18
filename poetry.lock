@@ -290,13 +290,13 @@ i18n = ["Babel (>=2.7)"]
 
 [[package]]
 name = "markdown2"
-version = "2.5.1"
+version = "2.5.2"
 description = "A fast and complete Python implementation of Markdown"
 optional = false
-python-versions = "<4,>=3.8"
+python-versions = "<4,>=3.9"
 files = [
-    {file = "markdown2-2.5.1-py2.py3-none-any.whl", hash = "sha256:190ae60a4bd0425c60c863bede18a9f3d45b1cbf3fbc9f40b4fac336ff2c520b"},
-    {file = "markdown2-2.5.1.tar.gz", hash = "sha256:12fc04ea5a87f7bb4b65acf5bf3af1183b20838cc7d543b74c92ec7eea4bbc74"},
+    {file = "markdown2-2.5.2-py3-none-any.whl", hash = "sha256:bed80d301a33845be633acde47a67cf265c57ddf9cbe3cb11c49c18016c2f581"},
+    {file = "markdown2-2.5.2.tar.gz", hash = "sha256:3ac02226a901c4b2f6fc21dbd17c26d118d2c25bcbb28cee093a1f8b5c46f3f1"},
 ]
 
 [package.extras]
@@ -527,13 +527,13 @@ windows-terminal = ["colorama (>=0.4.6)"]
 
 [[package]]
 name = "pytest"
-version = "8.3.3"
+version = "8.3.4"
 description = "pytest: simple powerful testing with Python"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "pytest-8.3.3-py3-none-any.whl", hash = "sha256:a6853c7375b2663155079443d2e45de913a911a11d669df02a50814944db57b2"},
-    {file = "pytest-8.3.3.tar.gz", hash = "sha256:70b98107bd648308a7952b06e6ca9a50bc660be218d53c257cc1fc94fda10181"},
+    {file = "pytest-8.3.4-py3-none-any.whl", hash = "sha256:50e16d954148559c9a74109af1eaf0c945ba2d8f30f0a3d3335edde19788b6f6"},
+    {file = "pytest-8.3.4.tar.gz", hash = "sha256:965370d062bce11e73868e0335abac31b4d3de0e82f4007408d242b4f8610761"},
 ]
 
 [package.dependencies]
