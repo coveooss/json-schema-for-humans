@@ -26,9 +26,9 @@
     - [19.4.1. JSON Schema for Humans configuration file > template_md_options > properties_table_columns > properties_table_columns items](#template_md_options_properties_table_columns_items)
 - [20. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > with_footer`](#with_footer)
 - [21. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `JSON Schema for Humans configuration file > footer_show_time`](#footer_show_time)
-- [22. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > allow_html_description`~~](#allow_html_description)
-- [23. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > minify`~~](#minify)
-- [24. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > templates_directory`~~](#templates_directory)
+- [22. ![Optional](https://img.shields.io/badge/Optional-yellow) ~~Property `JSON Schema for Humans configuration file > allow_html_description`~~](#allow_html_description)
+- [23. ![Optional](https://img.shields.io/badge/Optional-yellow) ~~Property `JSON Schema for Humans configuration file > minify`~~](#minify)
+- [24. ![Optional](https://img.shields.io/badge/Optional-yellow) ~~Property `JSON Schema for Humans configuration file > templates_directory`~~](#templates_directory)
 
 **Title:** JSON Schema for Humans configuration file
 
@@ -398,7 +398,7 @@ Must be one of:
 
 **Description:** Whether the footer should display the generation time
 
-## <a name="allow_html_description"></a>22. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > allow_html_description`~~
+## <a name="allow_html_description"></a>22. ![Optional](https://img.shields.io/badge/Optional-yellow) ~~Property `JSON Schema for Humans configuration file > allow_html_description`~~
 
 |                |           |
 | -------------- | --------- |
@@ -409,7 +409,7 @@ Must be one of:
 
 **Description:** [Deprecated]
 
-## <a name="minify"></a>23. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > minify`~~
+## <a name="minify"></a>23. ![Optional](https://img.shields.io/badge/Optional-yellow) ~~Property `JSON Schema for Humans configuration file > minify`~~
 
 |                |           |
 | -------------- | --------- |
@@ -420,7 +420,7 @@ Must be one of:
 
 **Description:** [Deprecated]
 
-## <a name="templates_directory"></a>24. ![Optional](https://img.shields.io/badge/Optional-yellow)~~ Property `JSON Schema for Humans configuration file > templates_directory`~~
+## <a name="templates_directory"></a>24. ![Optional](https://img.shields.io/badge/Optional-yellow) ~~Property `JSON Schema for Humans configuration file > templates_directory`~~
 
 |                |          |
 | -------------- | -------- |

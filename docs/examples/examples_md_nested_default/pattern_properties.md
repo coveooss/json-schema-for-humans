@@ -2,7 +2,7 @@
 
 - [1. [Optional] Property Person > firstName](#firstName)
 - [2. [Optional] Property Person > lastName](#lastName)
-- [3. [Optional]Pattern Property Person > paperSize](#pattern1)
+- [3. [Optional] Pattern Property Person > paperSize](#pattern1)
   - [3.1. [Required] Property Person > paperSize > rating](#pattern1_rating)
   - [3.2. [Required] Property Person > paperSize > review](#pattern1_review)
 
@@ -54,7 +54,7 @@
 
 <details>
 <summary>
-<strong> <a name="pattern1"></a>3. [Optional]Pattern Property Person > paperSize</strong>  
+<strong> <a name="pattern1"></a>3. [Optional] Pattern Property Person > paperSize</strong>  
 > All properties whose name matches the regular expression
 ```$[a-c][0-9]^``` ([Test](https://regex101.com/?regex=%24%5Ba-c%5D%5B0-9%5D%5E))
 must respect the following conditions
