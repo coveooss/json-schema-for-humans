@@ -13,8 +13,8 @@
       {%- if not skip_required and sub_property.property_name -%}
         {{ "[Required]" if sub_property.is_required_property else "[Optional]" -}}
       {%- endif -%}
-      {%- if sub_property is deprecated  -%}~~{%- endif -%}
-      {%- if sub_property.is_pattern_property %}Pattern{% endif %} Property {% with schema=sub_property %}{%- include "breadcrumbs.md" %}{% endwith %}
+      {%- if sub_property is deprecated  -%}~~ {%- endif -%}
+      {%- if sub_property.is_pattern_property %}Pattern {% endif %}Property {% with schema=sub_property %}{%- include "breadcrumbs.md" %}{% endwith %}
       {%- if sub_property is deprecated -%}~~{%- endif -%}
     {%- endfilter %}
   {%- endfilter %}
