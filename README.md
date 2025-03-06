@@ -154,8 +154,8 @@ The following are supported:
 These are **not** supported at the moment (PRs welcome!):
 
 - Property names and size
-- Property dependencies
-- Media
+- [Property dependencies](https://json-schema.org/understanding-json-schema/reference/conditionals#dependentRequired)
+- [Media](https://json-schema.org/understanding-json-schema/reference/non_json_data)
 
 ## References
 
