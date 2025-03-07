@@ -1,10 +1,10 @@
 # Person
 
 - [1. [Optional] Property Person > not_a_pattern](#not_a_pattern)
-  - [1.1. [Optional]Pattern Property Person > not_a_pattern > Title 4](#not_a_pattern_pattern1)
-- [2. [Optional]Pattern Property Person > Title 1](#pattern1)
-- [3. [Optional]Pattern Property Person > Title 2](#pattern2)
-- [4. [Optional]Pattern Property Person > Title 3](#pattern3)
+  - [1.1. [Optional] Pattern Property Person > not_a_pattern > Title 4](#not_a_pattern_pattern1)
+- [2. [Optional] Pattern Property Person > Title 1](#pattern1)
+- [3. [Optional] Pattern Property Person > Title 2](#pattern2)
+- [4. [Optional] Pattern Property Person > Title 3](#pattern3)
 
 **Title:** Person
 
@@ -29,7 +29,7 @@
 
 <details>
 <summary>
-<strong> <a name="not_a_pattern_pattern1"></a>1.1. [Optional]Pattern Property Person > not_a_pattern > Title 4</strong>  
+<strong> <a name="not_a_pattern_pattern1"></a>1.1. [Optional] Pattern Property Person > not_a_pattern > Title 4</strong>  
 > All properties whose name matches the regular expression
 ```.$``` ([Test](https://regex101.com/?regex=.%24))
 must respect the following conditions
@@ -55,7 +55,7 @@ must respect the following conditions
 
 <details>
 <summary>
-<strong> <a name="pattern1"></a>2. [Optional]Pattern Property Person > Title 1</strong>  
+<strong> <a name="pattern1"></a>2. [Optional] Pattern Property Person > Title 1</strong>  
 > All properties whose name matches the regular expression
 ```.*``` ([Test](https://regex101.com/?regex=.%2A))
 must respect the following conditions
@@ -78,7 +78,7 @@ must respect the following conditions
 
 <details>
 <summary>
-<strong> <a name="pattern2"></a>3. [Optional]Pattern Property Person > Title 2</strong>  
+<strong> <a name="pattern2"></a>3. [Optional] Pattern Property Person > Title 2</strong>  
 > All properties whose name matches the regular expression
 ```..``` ([Test](https://regex101.com/?regex=..))
 must respect the following conditions
@@ -101,7 +101,7 @@ must respect the following conditions
 
 <details>
 <summary>
-<strong> <a name="pattern3"></a>4. [Optional]Pattern Property Person > Title 3</strong>  
+<strong> <a name="pattern3"></a>4. [Optional] Pattern Property Person > Title 3</strong>  
 > All properties whose name matches the regular expression
 ```^.``` ([Test](https://regex101.com/?regex=%5E.))
 must respect the following conditions
