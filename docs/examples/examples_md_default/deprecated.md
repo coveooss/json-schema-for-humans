@@ -1,9 +1,9 @@
 # Schema Docs
 
-- [1. ~~ Property `root > deprecated1`~~](#deprecated1)
-- [2. ~~ Property `root > deprecated2`~~](#deprecated2)
-- [3. ~~ Property `root > deprecated3`~~](#deprecated3)
-- [4. ~~ Property `root > deprecated4`~~](#deprecated4)
+- [1. ~~Property `root > deprecated1`~~](#deprecated1)
+- [2. ~~Property `root > deprecated2`~~](#deprecated2)
+- [3. ~~Property `root > deprecated3`~~](#deprecated3)
+- [4. ~~Property `root > deprecated4`~~](#deprecated4)
 - [5. Property `root > not_deprecated`](#not_deprecated)
 
 |                           |                  |
@@ -22,7 +22,7 @@
 | - [deprecated4](#deprecated4 )       | No      | object | Deprecated | -          | This is [Deprecated - Use \`not_deprecated\` instead] |
 | - [not_deprecated](#not_deprecated ) | No      | string | No         | -          | -                                                     |
 
-## <a name="deprecated1"></a>1. ~~ Property `root > deprecated1`~~
+## <a name="deprecated1"></a>1. ~~Property `root > deprecated1`~~
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -33,7 +33,7 @@
 
 **Description:** [Deprecated]
 
-## <a name="deprecated2"></a>2. ~~ Property `root > deprecated2`~~
+## <a name="deprecated2"></a>2. ~~Property `root > deprecated2`~~
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -44,7 +44,7 @@
 
 **Description:** [Deprecated - Use `not_deprecated` instead]
 
-## <a name="deprecated3"></a>3. ~~ Property `root > deprecated3`~~
+## <a name="deprecated3"></a>3. ~~Property `root > deprecated3`~~
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -55,7 +55,7 @@
 
 **Description:** This is [Deprecated]
 
-## <a name="deprecated4"></a>4. ~~ Property `root > deprecated4`~~
+## <a name="deprecated4"></a>4. ~~Property `root > deprecated4`~~
 
 |                           |                  |
 | ------------------------- | ---------------- |
