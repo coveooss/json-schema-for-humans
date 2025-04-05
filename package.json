@@ -3,9 +3,9 @@
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^10.0.3",
+    "@semantic-release/github": "^11.0.0",
     "conventional-changelog-conventionalcommits": "^7.0.2",
-    "semantic-release": "^23.0.8",
+    "semantic-release": "^24.0.0",
     "semantic-release-pypi": "^4.0.0"
   }
 }
