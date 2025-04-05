@@ -5,8 +5,8 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/overpass300,400,600,800.css">
     <script src="js/jquery-3.4.1.min.js"></script>
-    <link href="css/bootstrap-4.3.1.min.css" rel="stylesheet">
-    <script src="js/bootstrap-4.3.1.min.js"></script>
+    <link href="css/bootstrap-5.3.3.min.css" rel="stylesheet">
+    <script src="js/bootstrap-5.3.3.bundle.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/schema_doc.css">
     <!-- <script src="js/facf9fa52c.js"></script> -->
     <script src="js/schema_doc.min.js"></script>
@@ -16,11 +16,11 @@
     <title>Person</title>
 </head>
 <body onload="anchorOnLoad();" id="root"><div class="text-right">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
         </div>
 
-    <div class="breadcrumbs"></div> <h1>Person</h1><span class="badge badge-dark value-type">Type: object</span><br/>
+    <div class="breadcrumbs"></div> <h1>Person</h1><span class="badge text-bg-dark value-type">Type: object</span><br/>
 
         
 
@@ -29,18 +29,16 @@
 
         
 <div class="accordion" id="accordionrelationships">
-    <div class="card">
-        <div class="card-header" id="headingrelationships">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#relationships"
-                        aria-expanded="" aria-controls="relationships" onclick="setAnchor('#relationships')"><span class="property-name">relationships</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingrelationships">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#relationships"
+                    aria-expanded="" aria-controls="relationships" onclick="setAnchor('#relationships')"><span class="property-name">relationships</span></button>
+        </h2>
 
         <div id="relationships"
-             class="collapse property-definition-div" aria-labelledby="headingrelationships"
-             data-parent="#accordionrelationships">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingrelationships"
+             data-bs-parent="#accordionrelationships">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +47,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#relationships" onclick="anchorLink('relationships')">relationships</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#relationships" onclick="anchorLink('relationships')">relationships</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <span class="description"><p>Relationships between this person and others</p>
 </span>
 
@@ -61,18 +59,16 @@
 
         
 <div class="accordion" id="accordionrelationships_mother">
-    <div class="card">
-        <div class="card-header" id="headingrelationships_mother">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#relationships_mother"
-                        aria-expanded="" aria-controls="relationships_mother" onclick="setAnchor('#relationships_mother')"><span class="property-name">mother</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingrelationships_mother">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#relationships_mother"
+                    aria-expanded="" aria-controls="relationships_mother" onclick="setAnchor('#relationships_mother')"><span class="property-name">mother</span></button>
+        </h2>
 
         <div id="relationships_mother"
-             class="collapse property-definition-div" aria-labelledby="headingrelationships_mother"
-             data-parent="#accordionrelationships_mother">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingrelationships_mother"
+             data-bs-parent="#accordionrelationships_mother">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -88,7 +84,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#relationships_mother" onclick="anchorLink('relationships_mother')">mother</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#relationships_mother" onclick="anchorLink('relationships_mother')">mother</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <span class="description"><p>A human being</p>
 </span>
 
@@ -100,18 +96,16 @@
 
         
 <div class="accordion" id="accordionrelationships_mother_relationships">
-    <div class="card">
-        <div class="card-header" id="headingrelationships_mother_relationships">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#relationships_mother_relationships"
-                        aria-expanded="" aria-controls="relationships_mother_relationships" onclick="setAnchor('#relationships_mother_relationships')"><span class="property-name">relationships</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingrelationships_mother_relationships">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#relationships_mother_relationships"
+                    aria-expanded="" aria-controls="relationships_mother_relationships" onclick="setAnchor('#relationships_mother_relationships')"><span class="property-name">relationships</span></button>
+        </h2>
 
         <div id="relationships_mother_relationships"
-             class="collapse property-definition-div" aria-labelledby="headingrelationships_mother_relationships"
-             data-parent="#accordionrelationships_mother_relationships">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingrelationships_mother_relationships"
+             data-bs-parent="#accordionrelationships_mother_relationships">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -134,7 +128,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#relationships_mother_relationships" onclick="anchorLink('relationships_mother_relationships')">relationships</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#relationships_mother_relationships" onclick="anchorLink('relationships_mother_relationships')">relationships</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <span class="description"><p>Relationships between this person and others</p>
 </span>
         
@@ -144,18 +138,16 @@
 
         
 <div class="accordion" id="accordionrelationships_mother_relationships_mother">
-    <div class="card">
-        <div class="card-header" id="headingrelationships_mother_relationships_mother">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#relationships_mother_relationships_mother"
-                        aria-expanded="" aria-controls="relationships_mother_relationships_mother" onclick="setAnchor('#relationships_mother_relationships_mother')"><span class="property-name">mother</span></button>
-            </h2>
-        </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingrelationships_mother_relationships_mother">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#relationships_mother_relationships_mother"
+                    aria-expanded="" aria-controls="relationships_mother_relationships_mother" onclick="setAnchor('#relationships_mother_relationships_mother')"><span class="property-name">mother</span></button>
+        </h2>
 
         <div id="relationships_mother_relationships_mother"
-             class="collapse property-definition-div" aria-labelledby="headingrelationships_mother_relationships_mother"
-             data-parent="#accordionrelationships_mother_relationships_mother">
-            <div class="card-body pl-5">
+             class="accordion-collapse collapse property-definition-div" aria-labelledby="headingrelationships_mother_relationships_mother"
+             data-bs-parent="#accordionrelationships_mother_relationships_mother">
+            <div class="accordion-body pl-5">
 
     <div class="breadcrumbs">root
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -185,7 +177,7 @@
                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
             />
         </svg>
-    <a href="#relationships_mother_relationships_mother" onclick="anchorLink('relationships_mother_relationships_mother')">mother</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+    <a href="#relationships_mother_relationships_mother" onclick="anchorLink('relationships_mother_relationships_mother')">mother</a></div><span class="badge text-bg-dark value-type">Type: object</span><br/>
 <span class="description"><p>A human being</p>
 </span><a href="#relationships_mother" onclick="anchorLink('relationships_mother')" class="ref-link">Same definition as mother</a>
             </div>

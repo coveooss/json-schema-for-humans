@@ -17,13 +17,13 @@
 
         {# Display type #}
         {%- if not schema is combining -%}
-            <span class="badge badge-dark value-type">Type: {{ type_name }}</span>
+            <span class="badge text-bg-dark value-type">Type: {{ type_name }}</span>
         {%- endif -%}
 
         {# Display default #}
         {%- set default_value = schema.default_value -%}
         {%- if default_value -%}
-            {{ " " }}<span class="badge badge-success default-value">Default: {{ default_value }}</span>
+            {{ " " }}<span class="badge text-bg-success default-value">Default: {{ default_value }}</span>
         {%- endif -%}
         <br/>
 
@@ -38,7 +38,7 @@
         {{ content(schema.refers_to_merged, True) }}
     {%- else -%}
         {%- if schema.explicit_no_additional_properties -%}
-            {{ " " }}<span class="badge badge-info no-additional">No Additional Properties</span>
+            {{ " " }}<span class="badge text-bg-info no-additional">No Additional Properties</span>
         {%- endif -%}
 
         {# Combining: allOf, anyOf, oneOf, not #}
