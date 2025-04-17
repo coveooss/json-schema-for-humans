@@ -16,7 +16,7 @@
                     {%- if sub_property.is_required_property -%}
                         {{ " " }}<span class="badge badge-warning required-property">Required</span>
                     {%- endif -%}
-                    {%- if sub_property is deprecated -%}
+                    {%- if sub_property.kw_deprecated -%}
                         {{ " " }}<span class="badge badge-danger deprecated-property">Deprecated</span>
                     {%- endif -%}
                     {%- if sub_property.is_pattern_property -%}

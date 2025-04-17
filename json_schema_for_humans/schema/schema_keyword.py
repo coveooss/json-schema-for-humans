@@ -36,3 +36,4 @@ class SchemaKeyword(Enum):
     ADDITIONAL_PROPERTIES = "additionalProperties"
     FORMAT = "format"
     TYPE = "type"
+    DEPRECATED = "deprecated"
