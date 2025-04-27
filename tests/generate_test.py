@@ -415,7 +415,7 @@ def test_with_examples() -> None:
     assert examples_label_text == ["Examples:", "Example:", "Example:", "Example:"]
 
     examples_content = soup.find_all("div", class_="examples")
-    examples_content_text = [ex.findChildren()[0].text for ex in examples_content]
+    examples_content_text = [ex.find_all()[0].text for ex in examples_content]
     assert examples_content_text == [
         '"Guido"\n',
         '"BDFL"\n',
@@ -437,7 +437,7 @@ def test_with_examples_as_yaml() -> None:
     assert examples_label_text == ["Examples:", "Example:", "Example:", "Example:"]
 
     examples_content = soup.find_all("div", class_="examples")
-    examples_content_text = [ex.findChildren()[0].text for ex in examples_content]
+    examples_content_text = [ex.find_all()[0].text for ex in examples_content]
     assert (
         [
             "Guido\n",
@@ -478,7 +478,7 @@ def test_pattern_properties() -> None:
     assert pattern_label_text == ["Pattern Property"]
 
     pattern_content = soup.find_all("span", class_="pattern-value")
-    pattern_content_text = [ex.findChildren()[0].text for ex in pattern_content]
+    pattern_content_text = [ex.find_all()[0].text for ex in pattern_content]
     assert pattern_content_text == ["$[a-c][0-9]^"]
 
     tests.html_schema_doc_asserts.assert_property_names(
@@ -506,7 +506,7 @@ def test_pattern_properties_html_id() -> None:
     assert pattern_label_text == ["Pattern Property"] * 4
 
     pattern_content = soup.find_all("span", class_="pattern-value")
-    pattern_content_text = [ex.findChildren()[0].text for ex in pattern_content]
+    pattern_content_text = [ex.find_all()[0].text for ex in pattern_content]
     assert pattern_content_text == [".$", ".*", "..", "^."]
 
     tests.html_schema_doc_asserts.assert_property_names(
