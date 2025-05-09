@@ -1,3 +1,8 @@
+**This file is not updated anymore**
+
+For newer versions, see the GitHub releases 
+
+
 ## [1.3.4](https://github.com/coveooss/json-schema-for-humans/compare/v1.3.3...v1.3.4) (2024-12-06)
 
 
