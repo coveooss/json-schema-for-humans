@@ -30,6 +30,6 @@ jobs:
       - name: Release
         shell: bash
         env:
-          GITHUB_TOKEN: ${{ secrets.COMMIT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
         run: npx semantic-release
