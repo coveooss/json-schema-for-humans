@@ -14,19 +14,6 @@
         "preset": "conventionalcommits"
       }
     ],
-    [
-      "@semantic-release/changelog",
-      {
-        "changelogFile": "CHANGELOG.md"
-      }
-    ],
-    "semantic-release-pypi",
-    [
-      "@semantic-release/git",
-      {
-          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
-          "assets": ["pyproject.toml", "CHANGELOG.md"]
-      }
-    ]
+    "semantic-release-pypi"
   ]
 }
