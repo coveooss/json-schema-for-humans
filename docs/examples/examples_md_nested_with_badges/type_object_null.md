@@ -1,7 +1,7 @@
 # Person
 
-- [1. [Optional] Property Person > prop1](#prop1)
-  - [1.1. [Optional] Property Person > prop1 > lol](#prop1_lol)
+- [1. [Optional] PropertyPerson > prop1](#prop1)
+  - [1.1. [Optional] PropertyPerson > prop1 > lol](#prop1_lol)
 
 **Title:** Person
 
@@ -11,7 +11,7 @@
 
 <details>
 <summary>
-<strong> <a name="prop1"></a>1. [Optional] Property Person > prop1</strong>  
+<strong> <a name="prop1"></a>1. [Optional] PropertyPerson > prop1</strong>  
 
 </summary>
 <blockquote>
@@ -22,7 +22,7 @@
 
 <details>
 <summary>
-<strong> <a name="prop1_lol"></a>1.1. [Optional] Property Person > prop1 > lol</strong>  
+<strong> <a name="prop1_lol"></a>1.1. [Optional] PropertyPerson > prop1 > lol</strong>  
 
 </summary>
 <blockquote>

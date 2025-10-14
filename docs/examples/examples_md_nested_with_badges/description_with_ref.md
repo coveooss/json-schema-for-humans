@@ -1,8 +1,8 @@
 # Schema Docs
 
-- [1. [Required] Property root > outer](#outer)
-  - [1.1. [Required] Property root > outer > inner](#outer_inner)
-- [2. [Optional] Property root > outer2](#outer2)
+- [1. [Required] Propertyroot > outer](#outer)
+  - [1.1. [Required] Propertyroot > outer > inner](#outer_inner)
+- [2. [Optional] Propertyroot > outer2](#outer2)
 
 |                           |                                                                |
 | ------------------------- | -------------------------------------------------------------- |
@@ -11,7 +11,7 @@
 
 <details>
 <summary>
-<strong> <a name="outer"></a>1. [Required] Property root > outer</strong>  
+<strong> <a name="outer"></a>1. [Required] Propertyroot > outer</strong>  
 
 </summary>
 <blockquote>
@@ -26,7 +26,7 @@
 
 <details>
 <summary>
-<strong> <a name="outer_inner"></a>1.1. [Required] Property root > outer > inner</strong>  
+<strong> <a name="outer_inner"></a>1.1. [Required] Propertyroot > outer > inner</strong>  
 
 </summary>
 <blockquote>
@@ -45,7 +45,7 @@
 
 <details>
 <summary>
-<strong> <a name="outer2"></a>2. [Optional] Property root > outer2</strong>  
+<strong> <a name="outer2"></a>2. [Optional] Propertyroot > outer2</strong>  
 
 </summary>
 <blockquote>

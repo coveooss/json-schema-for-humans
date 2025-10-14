@@ -1,9 +1,9 @@
 # Person
 
-- [1. [Optional] Property Person > firstName](#firstName)
-- [2. [Optional] Property Person > lastName](#lastName)
-- [3. [Optional] Property Person > age](#age)
-- [4. [Optional] Property Person > moreInfo](#moreInfo)
+- [1. [Optional] PropertyPerson > firstName](#firstName)
+- [2. [Optional] PropertyPerson > lastName](#lastName)
+- [3. [Optional] PropertyPerson > age](#age)
+- [4. [Optional] PropertyPerson > moreInfo](#moreInfo)
 
 **Title:** Person
 
@@ -14,7 +14,7 @@
 
 <details>
 <summary>
-<strong> <a name="firstName"></a>1. [Optional] Property Person > firstName</strong>  
+<strong> <a name="firstName"></a>1. [Optional] PropertyPerson > firstName</strong>  
 
 </summary>
 <blockquote>
@@ -43,7 +43,7 @@
 
 <details>
 <summary>
-<strong> <a name="lastName"></a>2. [Optional] Property Person > lastName</strong>  
+<strong> <a name="lastName"></a>2. [Optional] PropertyPerson > lastName</strong>  
 
 </summary>
 <blockquote>
@@ -68,7 +68,7 @@
 
 <details>
 <summary>
-<strong> <a name="age"></a>3. [Optional] Property Person > age</strong>  
+<strong> <a name="age"></a>3. [Optional] PropertyPerson > age</strong>  
 
 </summary>
 <blockquote>
@@ -97,7 +97,7 @@
 
 <details>
 <summary>
-<strong> <a name="moreInfo"></a>4. [Optional] Property Person > moreInfo</strong>  
+<strong> <a name="moreInfo"></a>4. [Optional] PropertyPerson > moreInfo</strong>  
 
 </summary>
 <blockquote>

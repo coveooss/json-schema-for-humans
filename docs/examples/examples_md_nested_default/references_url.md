@@ -1,6 +1,6 @@
 # Schema Docs
 
-- [1. [Optional] Property root > firstName](#firstName)
+- [1. [Optional] Propertyroot > firstName](#firstName)
 
 |              |          |
 | ------------ | -------- |
@@ -11,7 +11,7 @@
 
 <details>
 <summary>
-<strong> <a name="firstName"></a>1. [Optional] Property root > firstName</strong>  
+<strong> <a name="firstName"></a>1. [Optional] Propertyroot > firstName</strong>  
 
 </summary>
 <blockquote>

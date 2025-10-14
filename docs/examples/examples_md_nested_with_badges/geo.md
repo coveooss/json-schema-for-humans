@@ -1,7 +1,7 @@
 # Longitude and Latitude Values
 
-- [1. [Required] Property Longitude and Latitude Values > latitude](#latitude)
-- [2. [Required] Property Longitude and Latitude Values > longitude](#longitude)
+- [1. [Required] PropertyLongitude and Latitude Values > latitude](#latitude)
+- [2. [Required] PropertyLongitude and Latitude Values > longitude](#longitude)
 
 **Title:** Longitude and Latitude Values
 
@@ -13,7 +13,7 @@
 
 <details>
 <summary>
-<strong> <a name="latitude"></a>1. [Required] Property Longitude and Latitude Values > latitude</strong>  
+<strong> <a name="latitude"></a>1. [Required] PropertyLongitude and Latitude Values > latitude</strong>  
 
 </summary>
 <blockquote>
@@ -32,7 +32,7 @@
 
 <details>
 <summary>
-<strong> <a name="longitude"></a>2. [Required] Property Longitude and Latitude Values > longitude</strong>  
+<strong> <a name="longitude"></a>2. [Required] PropertyLongitude and Latitude Values > longitude</strong>  
 
 </summary>
 <blockquote>

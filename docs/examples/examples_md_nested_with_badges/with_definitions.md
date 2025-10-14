@@ -1,11 +1,11 @@
 # Schema Docs
 
-- [1. [Optional] Property root > billing_address](#billing_address)
-  - [1.1. [Required] Property root > billing_address > street_address](#billing_address_street_address)
-  - [1.2. [Required] Property root > billing_address > city](#billing_address_city)
-  - [1.3. [Required] Property root > billing_address > state](#billing_address_state)
-  - [1.4. [Optional] Property root > billing_address > futureProperty](#billing_address_futureProperty)
-- [2. [Optional] Property root > shipping_address](#shipping_address)
+- [1. [Optional] Propertyroot > billing_address](#billing_address)
+  - [1.1. [Required] Propertyroot > billing_address > street_address](#billing_address_street_address)
+  - [1.2. [Required] Propertyroot > billing_address > city](#billing_address_city)
+  - [1.3. [Required] Propertyroot > billing_address > state](#billing_address_state)
+  - [1.4. [Optional] Propertyroot > billing_address > futureProperty](#billing_address_futureProperty)
+- [2. [Optional] Propertyroot > shipping_address](#shipping_address)
 
 |          |          |
 | -------- | -------- |
@@ -13,7 +13,7 @@
 
 <details>
 <summary>
-<strong> <a name="billing_address"></a>1. [Optional] Property root > billing_address</strong>  
+<strong> <a name="billing_address"></a>1. [Optional] Propertyroot > billing_address</strong>  
 
 </summary>
 <blockquote>
@@ -25,7 +25,7 @@
 
 <details>
 <summary>
-<strong> <a name="billing_address_street_address"></a>1.1. [Required] Property root > billing_address > street_address</strong>  
+<strong> <a name="billing_address_street_address"></a>1.1. [Required] Propertyroot > billing_address > street_address</strong>  
 
 </summary>
 <blockquote>
@@ -39,7 +39,7 @@
 
 <details>
 <summary>
-<strong> <a name="billing_address_city"></a>1.2. [Required] Property root > billing_address > city</strong>  
+<strong> <a name="billing_address_city"></a>1.2. [Required] Propertyroot > billing_address > city</strong>  
 
 </summary>
 <blockquote>
@@ -53,7 +53,7 @@
 
 <details>
 <summary>
-<strong> <a name="billing_address_state"></a>1.3. [Required] Property root > billing_address > state</strong>  
+<strong> <a name="billing_address_state"></a>1.3. [Required] Propertyroot > billing_address > state</strong>  
 
 </summary>
 <blockquote>
@@ -67,7 +67,7 @@
 
 <details>
 <summary>
-<strong> <a name="billing_address_futureProperty"></a>1.4. [Optional] Property root > billing_address > futureProperty</strong>  
+<strong> <a name="billing_address_futureProperty"></a>1.4. [Optional] Propertyroot > billing_address > futureProperty</strong>  
 
 </summary>
 <blockquote>
@@ -84,7 +84,7 @@
 
 <details>
 <summary>
-<strong> <a name="shipping_address"></a>2. [Optional] Property root > shipping_address</strong>  
+<strong> <a name="shipping_address"></a>2. [Optional] Propertyroot > shipping_address</strong>  
 
 </summary>
 <blockquote>

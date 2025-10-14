@@ -1,6 +1,6 @@
 # Person
 
-- [1. [Optional] Property Person > itself](#itself)
+- [1. [Optional] PropertyPerson > itself](#itself)
 
 **Title:** Person
 
@@ -11,7 +11,7 @@
 
 <details>
 <summary>
-<strong> <a name="itself"></a>1. [Optional] Property Person > itself</strong>  
+<strong> <a name="itself"></a>1. [Optional] PropertyPerson > itself</strong>  
 
 </summary>
 <blockquote>

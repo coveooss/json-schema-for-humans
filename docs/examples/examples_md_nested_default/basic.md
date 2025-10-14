@@ -1,9 +1,9 @@
 # Person
 
-- [1. [Optional] Property Person > firstName](#firstName)
-- [2. [Optional] Property Person > lastName](#lastName)
-- [3. [Optional] Property Person > age](#age)
-- [4. [Optional] Property Person > driverLicenseId](#driverLicenseId)
+- [1. [Optional] PropertyPerson > firstName](#firstName)
+- [2. [Optional] PropertyPerson > lastName](#lastName)
+- [3. [Optional] PropertyPerson > age](#age)
+- [4. [Optional] PropertyPerson > driverLicenseId](#driverLicenseId)
   - [4.1. Property `Person > driverLicenseId > allOf > no driver licence`](#driverLicenseId_allOf_i0)
   - [4.2. Property `Person > driverLicenseId > allOf > driver licence id`](#driverLicenseId_allOf_i1)
 
@@ -16,7 +16,7 @@
 
 <details>
 <summary>
-<strong> <a name="firstName"></a>1. [Optional] Property Person > firstName</strong>  
+<strong> <a name="firstName"></a>1. [Optional] PropertyPerson > firstName</strong>  
 
 </summary>
 <blockquote>
@@ -35,7 +35,7 @@
 
 <details>
 <summary>
-<strong> <a name="lastName"></a>2. [Optional] Property Person > lastName</strong>  
+<strong> <a name="lastName"></a>2. [Optional] PropertyPerson > lastName</strong>  
 
 </summary>
 <blockquote>
@@ -54,7 +54,7 @@
 
 <details>
 <summary>
-<strong> <a name="age"></a>3. [Optional] Property Person > age</strong>  
+<strong> <a name="age"></a>3. [Optional] PropertyPerson > age</strong>  
 
 </summary>
 <blockquote>
@@ -77,7 +77,7 @@
 
 <details>
 <summary>
-<strong> <a name="driverLicenseId"></a>4. [Optional] Property Person > driverLicenseId</strong>  
+<strong> <a name="driverLicenseId"></a>4. [Optional] PropertyPerson > driverLicenseId</strong>  
 
 </summary>
 <blockquote>

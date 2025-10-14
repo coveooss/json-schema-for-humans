@@ -1,10 +1,10 @@
 # Schema Docs
 
-- [1. [Optional] ~~Property root > deprecated1~~](#deprecated1)
-- [2. [Optional] ~~Property root > deprecated2~~](#deprecated2)
-- [3. [Optional] ~~Property root > deprecated3~~](#deprecated3)
-- [4. [Optional] ~~Property root > deprecated4~~](#deprecated4)
-- [5. [Optional] Property root > not_deprecated](#not_deprecated)
+- [1. [Optional] ~~Propertyroot > deprecated1~~](#deprecated1)
+- [2. [Optional] ~~Propertyroot > deprecated2~~](#deprecated2)
+- [3. [Optional] ~~Propertyroot > deprecated3~~](#deprecated3)
+- [4. [Optional] ~~Propertyroot > deprecated4~~](#deprecated4)
+- [5. [Optional] Propertyroot > not_deprecated](#not_deprecated)
 
 |          |          |
 | -------- | -------- |
@@ -14,7 +14,7 @@
 
 <details>
 <summary>
-<strong> <a name="deprecated1"></a>1. [Optional] ~~Property root > deprecated1~~</strong>  
+<strong> <a name="deprecated1"></a>1. [Optional] ~~Propertyroot > deprecated1~~</strong>  
 
 </summary>
 <blockquote>
@@ -32,7 +32,7 @@
 
 <details>
 <summary>
-<strong> <a name="deprecated2"></a>2. [Optional] ~~Property root > deprecated2~~</strong>  
+<strong> <a name="deprecated2"></a>2. [Optional] ~~Propertyroot > deprecated2~~</strong>  
 
 </summary>
 <blockquote>
@@ -50,7 +50,7 @@
 
 <details>
 <summary>
-<strong> <a name="deprecated3"></a>3. [Optional] ~~Property root > deprecated3~~</strong>  
+<strong> <a name="deprecated3"></a>3. [Optional] ~~Propertyroot > deprecated3~~</strong>  
 
 </summary>
 <blockquote>
@@ -68,7 +68,7 @@
 
 <details>
 <summary>
-<strong> <a name="deprecated4"></a>4. [Optional] ~~Property root > deprecated4~~</strong>  
+<strong> <a name="deprecated4"></a>4. [Optional] ~~Propertyroot > deprecated4~~</strong>  
 
 </summary>
 <blockquote>
@@ -86,7 +86,7 @@
 
 <details>
 <summary>
-<strong> <a name="not_deprecated"></a>5. [Optional] Property root > not_deprecated</strong>  
+<strong> <a name="not_deprecated"></a>5. [Optional] Propertyroot > not_deprecated</strong>  
 
 </summary>
 <blockquote>

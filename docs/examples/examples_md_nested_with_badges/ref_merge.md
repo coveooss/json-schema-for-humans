@@ -1,9 +1,9 @@
 # Test
 
-- [1. [Optional] Property Test > aProperty](#aProperty)
-- [2. [Optional] Property Test > aDictPropertyARequired](#aDictPropertyARequired)
-  - [2.1. [Required] Property Test > aDictPropertyARequired > a](#aDictPropertyARequired_a)
-  - [2.2. [Required] Property Test > aDictPropertyARequired > b](#aDictPropertyARequired_b)
+- [1. [Optional] PropertyTest > aProperty](#aProperty)
+- [2. [Optional] PropertyTest > aDictPropertyARequired](#aDictPropertyARequired)
+  - [2.1. [Required] PropertyTest > aDictPropertyARequired > a](#aDictPropertyARequired_a)
+  - [2.2. [Required] PropertyTest > aDictPropertyARequired > b](#aDictPropertyARequired_b)
 
 **Title:** Test
 
@@ -13,7 +13,7 @@
 
 <details>
 <summary>
-<strong> <a name="aProperty"></a>1. [Optional] Property Test > aProperty</strong>  
+<strong> <a name="aProperty"></a>1. [Optional] PropertyTest > aProperty</strong>  
 
 </summary>
 <blockquote>
@@ -37,7 +37,7 @@ Must be one of:
 
 <details>
 <summary>
-<strong> <a name="aDictPropertyARequired"></a>2. [Optional] Property Test > aDictPropertyARequired</strong>  
+<strong> <a name="aDictPropertyARequired"></a>2. [Optional] PropertyTest > aDictPropertyARequired</strong>  
 
 </summary>
 <blockquote>
@@ -50,7 +50,7 @@ Must be one of:
 
 <details>
 <summary>
-<strong> <a name="aDictPropertyARequired_a"></a>2.1. [Required] Property Test > aDictPropertyARequired > a</strong>  
+<strong> <a name="aDictPropertyARequired_a"></a>2.1. [Required] PropertyTest > aDictPropertyARequired > a</strong>  
 
 </summary>
 <blockquote>
@@ -64,7 +64,7 @@ Must be one of:
 
 <details>
 <summary>
-<strong> <a name="aDictPropertyARequired_b"></a>2.2. [Required] Property Test > aDictPropertyARequired > b</strong>  
+<strong> <a name="aDictPropertyARequired_b"></a>2.2. [Required] PropertyTest > aDictPropertyARequired > b</strong>  
 
 </summary>
 <blockquote>

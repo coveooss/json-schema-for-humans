@@ -1,8 +1,8 @@
 # Schema Docs
 
-- [1. [Optional] Property root > described](#described)
-  - [1.1. [Optional] Property root > described > name](#described_name)
-  - [1.2. [Optional] Property root > described > alignment](#described_alignment)
+- [1. [Optional] Propertyroot > described](#described)
+  - [1.1. [Optional] Propertyroot > described > name](#described_name)
+  - [1.2. [Optional] Propertyroot > described > alignment](#described_alignment)
 
 |          |          |
 | -------- | -------- |
@@ -12,7 +12,7 @@
 
 <details>
 <summary>
-<strong> <a name="described"></a>1. [Optional] Property root > described</strong>  
+<strong> <a name="described"></a>1. [Optional] Propertyroot > described</strong>  
 
 </summary>
 <blockquote>
@@ -25,7 +25,7 @@
 
 <details>
 <summary>
-<strong> <a name="described_name"></a>1.1. [Optional] Property root > described > name</strong>  
+<strong> <a name="described_name"></a>1.1. [Optional] Propertyroot > described > name</strong>  
 
 </summary>
 <blockquote>
@@ -46,7 +46,7 @@
 
 <details>
 <summary>
-<strong> <a name="described_alignment"></a>1.2. [Optional] Property root > described > alignment</strong>  
+<strong> <a name="described_alignment"></a>1.2. [Optional] Propertyroot > described > alignment</strong>  
 
 </summary>
 <blockquote>

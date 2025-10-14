@@ -1,9 +1,9 @@
 # Person
 
-- [1. [Optional] Property Person > relationships](#relationships)
-  - [1.1. [Optional] Property Person > relationships > mother](#relationships_mother)
-    - [1.1.1. [Optional] Property Person > relationships > mother > relationships](#relationships_mother_relationships)
-      - [1.1.1.1. [Optional] Property Person > relationships > mother > relationships > mother](#relationships_mother_relationships_mother)
+- [1. [Optional] PropertyPerson > relationships](#relationships)
+  - [1.1. [Optional] PropertyPerson > relationships > mother](#relationships_mother)
+    - [1.1.1. [Optional] PropertyPerson > relationships > mother > relationships](#relationships_mother_relationships)
+      - [1.1.1.1. [Optional] PropertyPerson > relationships > mother > relationships > mother](#relationships_mother_relationships_mother)
 
 **Title:** Person
 
@@ -14,7 +14,7 @@
 
 <details>
 <summary>
-<strong> <a name="relationships"></a>1. [Optional] Property Person > relationships</strong>  
+<strong> <a name="relationships"></a>1. [Optional] PropertyPerson > relationships</strong>  
 
 </summary>
 <blockquote>
@@ -29,7 +29,7 @@
 
 <details>
 <summary>
-<strong> <a name="relationships_mother"></a>1.1. [Optional] Property Person > relationships > mother</strong>  
+<strong> <a name="relationships_mother"></a>1.1. [Optional] PropertyPerson > relationships > mother</strong>  
 
 </summary>
 <blockquote>
@@ -44,7 +44,7 @@
 
 <details>
 <summary>
-<strong> <a name="relationships_mother_relationships"></a>1.1.1. [Optional] Property Person > relationships > mother > relationships</strong>  
+<strong> <a name="relationships_mother_relationships"></a>1.1.1. [Optional] PropertyPerson > relationships > mother > relationships</strong>  
 
 </summary>
 <blockquote>
@@ -58,7 +58,7 @@
 
 <details>
 <summary>
-<strong> <a name="relationships_mother_relationships_mother"></a>1.1.1.1. [Optional] Property Person > relationships > mother > relationships > mother</strong>  
+<strong> <a name="relationships_mother_relationships_mother"></a>1.1.1.1. [Optional] PropertyPerson > relationships > mother > relationships > mother</strong>  
 
 </summary>
 <blockquote>

@@ -41,6 +41,10 @@
             {{ " " }}<span class="badge badge-info no-additional">No Additional Properties</span>
         {%- endif -%}
 
+        {%- if schema.explicit_no_unevaluated_properties -%}
+            {{ " " }}<span class="badge badge-primary no-unevaluated">No Unevaluated Properties</span>
+        {%- endif -%}
+
         {# Combining: allOf, anyOf, oneOf, not #}
         {%- if schema.kw_all_of -%}
             <div class="all-of-value" id="{{ schema.kw_all_of.html_id }}">{{ tabbed_section("allOf", schema.kw_all_of) }}</div>

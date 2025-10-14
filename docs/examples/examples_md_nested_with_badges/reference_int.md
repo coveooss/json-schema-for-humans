@@ -1,7 +1,7 @@
 # Person
 
-- [1. [Optional] Property Person > extra_options_object](#extra_options_object)
-- [2. [Optional] Property Person > name_looks_like_an_int](#name_looks_like_an_int)
+- [1. [Optional] PropertyPerson > extra_options_object](#extra_options_object)
+- [2. [Optional] PropertyPerson > name_looks_like_an_int](#name_looks_like_an_int)
 
 **Title:** Person
 
@@ -11,7 +11,7 @@
 
 <details>
 <summary>
-<strong> <a name="extra_options_object"></a>1. [Optional] Property Person > extra_options_object</strong>  
+<strong> <a name="extra_options_object"></a>1. [Optional] PropertyPerson > extra_options_object</strong>  
 
 </summary>
 <blockquote>
@@ -28,7 +28,7 @@
 
 <details>
 <summary>
-<strong> <a name="name_looks_like_an_int"></a>2. [Optional] Property Person > name_looks_like_an_int</strong>  
+<strong> <a name="name_looks_like_an_int"></a>2. [Optional] PropertyPerson > name_looks_like_an_int</strong>  
 
 </summary>
 <blockquote>

@@ -1,7 +1,7 @@
 # Person
 
-- [1. [Optional] Property Person > firstName](#firstName)
-- [2. [Optional] Property Person > lastName](#lastName)
+- [1. [Optional] PropertyPerson > firstName](#firstName)
+- [2. [Optional] PropertyPerson > lastName](#lastName)
 
 **Title:** Person
 
@@ -12,7 +12,7 @@
 
 <details>
 <summary>
-<strong> <a name="firstName"></a>1. [Optional] Property Person > firstName</strong>  
+<strong> <a name="firstName"></a>1. [Optional] PropertyPerson > firstName</strong>  
 
 </summary>
 <blockquote>
@@ -31,7 +31,7 @@
 
 <details>
 <summary>
-<strong> <a name="lastName"></a>2. [Optional] Property Person > lastName</strong>  
+<strong> <a name="lastName"></a>2. [Optional] PropertyPerson > lastName</strong>  
 
 </summary>
 <blockquote>

@@ -1,16 +1,16 @@
 # Person
 
-- [1. [Required] Property Person > default](#default)
-- [2. [Required] Property Person > examples](#examples)
-- [3. [Optional] Property Person > if](#if)
-- [4. [Optional] Property Person > then](#then)
-- [5. [Optional] Property Person > else](#else)
-- [6. [Optional] Property Person > anyOf](#anyOf)
-- [7. [Optional] Property Person > allOf](#allOf)
-- [8. [Optional] Property Person > not](#not)
-- [9. [Optional] Property Person > properties](#properties)
-- [10. [Optional] Property Person > patternProperties](#patternProperties)
-- [11. [Optional] Property Person > required](#required)
+- [1. [Required] PropertyPerson > default](#default)
+- [2. [Required] PropertyPerson > examples](#examples)
+- [3. [Optional] PropertyPerson > if](#if)
+- [4. [Optional] PropertyPerson > then](#then)
+- [5. [Optional] PropertyPerson > else](#else)
+- [6. [Optional] PropertyPerson > anyOf](#anyOf)
+- [7. [Optional] PropertyPerson > allOf](#allOf)
+- [8. [Optional] PropertyPerson > not](#not)
+- [9. [Optional] PropertyPerson > properties](#properties)
+- [10. [Optional] PropertyPerson > patternProperties](#patternProperties)
+- [11. [Optional] PropertyPerson > required](#required)
 
 **Title:** Person
 
@@ -20,7 +20,7 @@
 
 <details>
 <summary>
-<strong> <a name="default"></a>1. [Required] Property Person > default</strong>  
+<strong> <a name="default"></a>1. [Required] PropertyPerson > default</strong>  
 
 </summary>
 <blockquote>
@@ -36,7 +36,7 @@
 
 <details>
 <summary>
-<strong> <a name="examples"></a>2. [Required] Property Person > examples</strong>  
+<strong> <a name="examples"></a>2. [Required] PropertyPerson > examples</strong>  
 
 </summary>
 <blockquote>
@@ -52,7 +52,7 @@
 
 <details>
 <summary>
-<strong> <a name="if"></a>3. [Optional] Property Person > if</strong>  
+<strong> <a name="if"></a>3. [Optional] PropertyPerson > if</strong>  
 
 </summary>
 <blockquote>
@@ -68,7 +68,7 @@
 
 <details>
 <summary>
-<strong> <a name="then"></a>4. [Optional] Property Person > then</strong>  
+<strong> <a name="then"></a>4. [Optional] PropertyPerson > then</strong>  
 
 </summary>
 <blockquote>
@@ -84,7 +84,7 @@
 
 <details>
 <summary>
-<strong> <a name="else"></a>5. [Optional] Property Person > else</strong>  
+<strong> <a name="else"></a>5. [Optional] PropertyPerson > else</strong>  
 
 </summary>
 <blockquote>
@@ -100,7 +100,7 @@
 
 <details>
 <summary>
-<strong> <a name="anyOf"></a>6. [Optional] Property Person > anyOf</strong>  
+<strong> <a name="anyOf"></a>6. [Optional] PropertyPerson > anyOf</strong>  
 
 </summary>
 <blockquote>
@@ -116,7 +116,7 @@
 
 <details>
 <summary>
-<strong> <a name="allOf"></a>7. [Optional] Property Person > allOf</strong>  
+<strong> <a name="allOf"></a>7. [Optional] PropertyPerson > allOf</strong>  
 
 </summary>
 <blockquote>
@@ -132,7 +132,7 @@
 
 <details>
 <summary>
-<strong> <a name="not"></a>8. [Optional] Property Person > not</strong>  
+<strong> <a name="not"></a>8. [Optional] PropertyPerson > not</strong>  
 
 </summary>
 <blockquote>
@@ -148,7 +148,7 @@
 
 <details>
 <summary>
-<strong> <a name="properties"></a>9. [Optional] Property Person > properties</strong>  
+<strong> <a name="properties"></a>9. [Optional] PropertyPerson > properties</strong>  
 
 </summary>
 <blockquote>
@@ -164,7 +164,7 @@
 
 <details>
 <summary>
-<strong> <a name="patternProperties"></a>10. [Optional] Property Person > patternProperties</strong>  
+<strong> <a name="patternProperties"></a>10. [Optional] PropertyPerson > patternProperties</strong>  
 
 </summary>
 <blockquote>
@@ -180,7 +180,7 @@
 
 <details>
 <summary>
-<strong> <a name="required"></a>11. [Optional] Property Person > required</strong>  
+<strong> <a name="required"></a>11. [Optional] PropertyPerson > required</strong>  
 
 </summary>
 <blockquote>

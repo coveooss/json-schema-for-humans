@@ -1,7 +1,7 @@
 # Schema Docs
 
-- [1. [Optional] Property root > a](#a)
-- [2. [Optional] Property root > b](#b)
+- [1. [Optional] Propertyroot > a](#a)
+- [2. [Optional] Propertyroot > b](#b)
 
 |          |          |
 | -------- | -------- |
@@ -9,7 +9,7 @@
 
 <details>
 <summary>
-<strong> <a name="a"></a>1. [Optional] Property root > a</strong>  
+<strong> <a name="a"></a>1. [Optional] Propertyroot > a</strong>  
 
 </summary>
 <blockquote>
@@ -27,7 +27,7 @@
 
 <details>
 <summary>
-<strong> <a name="b"></a>2. [Optional] Property root > b</strong>  
+<strong> <a name="b"></a>2. [Optional] Propertyroot > b</strong>  
 
 </summary>
 <blockquote>

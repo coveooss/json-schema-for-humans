@@ -1,6 +1,6 @@
 # Schema Docs
 
-- [1. [Required] Property root > storage](#storage)
+- [1. [Required] Propertyroot > storage](#storage)
   - [1.1. Property `root > storage > oneOf > diskDevice`](#storage_oneOf_i0)
   - [1.2. Property `root > storage > oneOf > diskUUID`](#storage_oneOf_i1)
   - [1.3. Property `root > storage > oneOf > nfs`](#storage_oneOf_i2)
@@ -14,7 +14,7 @@
 
 <details>
 <summary>
-<strong> <a name="storage"></a>1. [Required] Property root > storage</strong>  
+<strong> <a name="storage"></a>1. [Required] Propertyroot > storage</strong>  
 
 </summary>
 <blockquote>
