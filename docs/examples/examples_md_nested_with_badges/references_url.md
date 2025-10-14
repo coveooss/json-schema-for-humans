@@ -2,10 +2,9 @@
 
 - [1. [Optional] Property root > firstName](#firstName)
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 **Description:** Testing $ref with URL
 

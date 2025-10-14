@@ -7,11 +7,10 @@
   - [1.4. [Optional] Property root > billing_address > futureProperty](#billing_address_futureProperty)
 - [2. [Optional] Property root > shipping_address](#shipping_address)
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 <details>
 <summary>
@@ -20,12 +19,11 @@
 </summary>
 <blockquote>
 
-|                           |                       |
-| ------------------------- | --------------------- |
-| **Type**                  | `object`              |
-| **Required**              | No                    |
-| **Additional properties** | Any type allowed      |
-| **Defined in**            | #/definitions/address |
+|                |                       |
+| -------------- | --------------------- |
+| **Type**       | `object`              |
+| **Required**   | No                    |
+| **Defined in** | #/definitions/address |
 
 <details>
 <summary>
@@ -97,12 +95,11 @@
 </summary>
 <blockquote>
 
-|                           |                                     |
-| ------------------------- | ----------------------------------- |
-| **Type**                  | `object`                            |
-| **Required**              | No                                  |
-| **Additional properties** | Any type allowed                    |
-| **Same definition as**    | [billing_address](#billing_address) |
+|                        |                                     |
+| ---------------------- | ----------------------------------- |
+| **Type**               | `object`                            |
+| **Required**           | No                                  |
+| **Same definition as** | [billing_address](#billing_address) |
 
 </blockquote>
 </details>

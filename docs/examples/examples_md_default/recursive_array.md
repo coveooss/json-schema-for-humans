@@ -1,23 +1,22 @@
 # Person
 
-- [1. Property `Person > person`](#person)
+- [1. Property`Person > person`](#person)
   - [1.1. Person > person > person](#person_items)
-    - [1.1.1. Property `Person > person > person items > children`](#person_items_children)
+    - [1.1.1. Property`Person > person > person items > children`](#person_items_children)
       - [1.1.1.1. Person > person > person items > children > person](#person_items_children_items)
 
 **Title:** Person
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 | Property             | Pattern | Type  | Deprecated | Definition | Title/Description |
 | -------------------- | ------- | ----- | ---------- | ---------- | ----------------- |
 | - [person](#person ) | No      | array | No         | -          | A list of people  |
 
-## <a name="person"></a>1. Property `Person > person`
+## <a name="person"></a>1. Property`Person > person`
 
 |              |         |
 | ------------ | ------- |
@@ -40,12 +39,11 @@
 
 ### <a name="person_items"></a>1.1. Person > person > person
 
-|                           |                      |
-| ------------------------- | -------------------- |
-| **Type**                  | `object`             |
-| **Required**              | No                   |
-| **Additional properties** | Any type allowed     |
-| **Defined in**            | #/definitions/person |
+|                |                      |
+| -------------- | -------------------- |
+| **Type**       | `object`             |
+| **Required**   | No                   |
+| **Defined in** | #/definitions/person |
 
 **Description:** A human being
 
@@ -53,7 +51,7 @@
 | ------------------------------------- | ------- | ----- | ---------- | ---------- | --------------------- |
 | - [children](#person_items_children ) | No      | array | No         | -          | The children they had |
 
-#### <a name="person_items_children"></a>1.1.1. Property `Person > person > person items > children`
+#### <a name="person_items_children"></a>1.1.1. Property`Person > person > person items > children`
 
 |              |         |
 | ------------ | ------- |
@@ -76,12 +74,11 @@
 
 ##### <a name="person_items_children_items"></a>1.1.1.1. Person > person > person items > children > person
 
-|                           |                               |
-| ------------------------- | ----------------------------- |
-| **Type**                  | `object`                      |
-| **Required**              | No                            |
-| **Additional properties** | Any type allowed              |
-| **Same definition as**    | [person_items](#person_items) |
+|                        |                               |
+| ---------------------- | ----------------------------- |
+| **Type**               | `object`                      |
+| **Required**           | No                            |
+| **Same definition as** | [person_items](#person_items) |
 
 **Description:** A human being
 

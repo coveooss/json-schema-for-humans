@@ -6,11 +6,10 @@
 - [4. [Optional] ~~Property root > deprecated4~~](#deprecated4)
 - [5. [Optional] Property root > not_deprecated](#not_deprecated)
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 **Description:** Test schema with deprecated in description
 
@@ -21,12 +20,11 @@
 </summary>
 <blockquote>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Deprecated**            |
-| **Additional properties** | Any type allowed |
+|                |          |
+| -------------- | -------- |
+| **Type**       | `object` |
+| **Required**   | No       |
+| **Deprecated** |
 
 **Description:** [Deprecated]
 
@@ -40,12 +38,11 @@
 </summary>
 <blockquote>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Deprecated**            |
-| **Additional properties** | Any type allowed |
+|                |          |
+| -------------- | -------- |
+| **Type**       | `object` |
+| **Required**   | No       |
+| **Deprecated** |
 
 **Description:** [Deprecated - Use `not_deprecated` instead]
 
@@ -59,12 +56,11 @@
 </summary>
 <blockquote>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Deprecated**            |
-| **Additional properties** | Any type allowed |
+|                |          |
+| -------------- | -------- |
+| **Type**       | `object` |
+| **Required**   | No       |
+| **Deprecated** |
 
 **Description:** This is [Deprecated]
 
@@ -78,12 +74,11 @@
 </summary>
 <blockquote>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Deprecated**            |
-| **Additional properties** | Any type allowed |
+|                |          |
+| -------------- | -------- |
+| **Type**       | `object` |
+| **Required**   | No       |
+| **Deprecated** |
 
 **Description:** This is [Deprecated - Use `not_deprecated` instead]
 

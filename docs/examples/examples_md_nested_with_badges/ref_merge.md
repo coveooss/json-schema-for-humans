@@ -7,10 +7,9 @@
 
 **Title:** Test
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 <details>
 <summary>
@@ -43,12 +42,11 @@ Must be one of:
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Default**               | `{"a": "a", "b": "b"}`                                                      |
-| **Defined in**            | #/definitions/aDictProperty                                                 |
+|                |                             |
+| -------------- | --------------------------- |
+| **Type**       | `object`                    |
+| **Default**    | `{"a": "a", "b": "b"}`      |
+| **Defined in** | #/definitions/aDictProperty |
 
 <details>
 <summary>

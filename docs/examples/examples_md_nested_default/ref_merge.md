@@ -7,11 +7,10 @@
 
 **Title:** Test
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 <details>
 <summary>
@@ -45,13 +44,12 @@ Must be one of:
 </summary>
 <blockquote>
 
-|                           |                             |
-| ------------------------- | --------------------------- |
-| **Type**                  | `object`                    |
-| **Required**              | No                          |
-| **Additional properties** | Any type allowed            |
-| **Default**               | `{"a": "a", "b": "b"}`      |
-| **Defined in**            | #/definitions/aDictProperty |
+|                |                             |
+| -------------- | --------------------------- |
+| **Type**       | `object`                    |
+| **Required**   | No                          |
+| **Default**    | `{"a": "a", "b": "b"}`      |
+| **Defined in** | #/definitions/aDictProperty |
 
 <details>
 <summary>

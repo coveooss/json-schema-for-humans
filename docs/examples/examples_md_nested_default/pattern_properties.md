@@ -8,11 +8,10 @@
 
 **Title:** Person
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 <details>
 <summary>
@@ -64,11 +63,10 @@ must respect the following conditions
 
 **Title:** paperSize
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 **Description:** Review of a paper size.
 

@@ -3,11 +3,10 @@
 - [1. [Optional] Property root > a](#a)
 - [2. [Optional] Property root > b](#b)
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 <details>
 <summary>
@@ -16,13 +15,12 @@
 </summary>
 <blockquote>
 
-|                           |                      |
-| ------------------------- | -------------------- |
-| **Type**                  | `object`             |
-| **Required**              | No                   |
-| **Additional properties** | Any type allowed     |
-| **Default**               | `"Default from a"`   |
-| **Defined in**            | #/definitions/common |
+|                |                      |
+| -------------- | -------------------- |
+| **Type**       | `object`             |
+| **Required**   | No                   |
+| **Default**    | `"Default from a"`   |
+| **Defined in** | #/definitions/common |
 
 **Description:** Description of a
 
@@ -36,13 +34,12 @@
 </summary>
 <blockquote>
 
-|                           |                      |
-| ------------------------- | -------------------- |
-| **Type**                  | `object`             |
-| **Required**              | No                   |
-| **Additional properties** | Any type allowed     |
-| **Default**               | `"Default from b"`   |
-| **Defined in**            | #/definitions/common |
+|                |                      |
+| -------------- | -------------------- |
+| **Type**       | `object`             |
+| **Required**   | No                   |
+| **Default**    | `"Default from b"`   |
+| **Defined in** | #/definitions/common |
 
 **Description:** A common description
 

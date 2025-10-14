@@ -7,11 +7,10 @@
 
 **Title:** Person
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 <details>
 <summary>
@@ -20,12 +19,11 @@
 </summary>
 <blockquote>
 
-|                           |                                               |
-| ------------------------- | --------------------------------------------- |
-| **Type**                  | `object`                                      |
-| **Required**              | No                                            |
-| **Additional properties** | Any type allowed                              |
-| **Defined in**            | #/definitions/person/properties/relationships |
+|                |                                               |
+| -------------- | --------------------------------------------- |
+| **Type**       | `object`                                      |
+| **Required**   | No                                            |
+| **Defined in** | #/definitions/person/properties/relationships |
 
 **Description:** Relationships between this person and others
 
@@ -36,12 +34,11 @@
 </summary>
 <blockquote>
 
-|                           |                      |
-| ------------------------- | -------------------- |
-| **Type**                  | `object`             |
-| **Required**              | No                   |
-| **Additional properties** | Any type allowed     |
-| **Defined in**            | #/definitions/person |
+|                |                      |
+| -------------- | -------------------- |
+| **Type**       | `object`             |
+| **Required**   | No                   |
+| **Defined in** | #/definitions/person |
 
 **Description:** A human being
 
@@ -52,11 +49,10 @@
 </summary>
 <blockquote>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 **Description:** Relationships between this person and others
 
@@ -67,12 +63,11 @@
 </summary>
 <blockquote>
 
-|                           |                                 |
-| ------------------------- | ------------------------------- |
-| **Type**                  | `object`                        |
-| **Required**              | No                              |
-| **Additional properties** | Any type allowed                |
-| **Same definition as**    | [mother](#relationships_mother) |
+|                        |                                 |
+| ---------------------- | ------------------------------- |
+| **Type**               | `object`                        |
+| **Required**           | No                              |
+| **Same definition as** | [mother](#relationships_mother) |
 
 **Description:** A human being
 

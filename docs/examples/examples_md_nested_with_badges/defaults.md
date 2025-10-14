@@ -3,10 +3,9 @@
 - [1. [Optional] Property root > a](#a)
 - [2. [Optional] Property root > b](#b)
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 <details>
 <summary>
@@ -15,12 +14,11 @@
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Default**               | `"Default from a"`                                                          |
-| **Defined in**            | #/definitions/common                                                        |
+|                |                      |
+| -------------- | -------------------- |
+| **Type**       | `object`             |
+| **Default**    | `"Default from a"`   |
+| **Defined in** | #/definitions/common |
 
 **Description:** Description of a
 
@@ -34,12 +32,11 @@
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Default**               | `"Default from b"`                                                          |
-| **Defined in**            | #/definitions/common                                                        |
+|                |                      |
+| -------------- | -------------------- |
+| **Type**       | `object`             |
+| **Default**    | `"Default from b"`   |
+| **Defined in** | #/definitions/common |
 
 **Description:** A common description
 

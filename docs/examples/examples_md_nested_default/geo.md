@@ -5,11 +5,10 @@
 
 **Title:** Longitude and Latitude Values
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 **Description:** A geographical coordinate.
 

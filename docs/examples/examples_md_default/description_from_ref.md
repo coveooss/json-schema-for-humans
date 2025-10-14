@@ -1,7 +1,7 @@
 # Schema Docs
 
-- [1. Property `root > name`](#name)
-- [2. Property `root > alignment`](#alignment)
+- [1. Property`root > name`](#name)
+- [2. Property`root > alignment`](#alignment)
 
 |                           |             |
 | ------------------------- | ----------- |
@@ -14,7 +14,7 @@
 | - [name](#name )           | No      | string | No         | In #/definitions/filled_string | a filled string   |
 | - [alignment](#alignment ) | No      | string | No         | Same as [name](#name )         | a filled string   |
 
-## <a name="name"></a>1. Property `root > name`
+## <a name="name"></a>1. Property`root > name`
 
 |                |                             |
 | -------------- | --------------------------- |
@@ -28,7 +28,7 @@
 | -------------- | - |
 | **Min length** | 1 |
 
-## <a name="alignment"></a>2. Property `root > alignment`
+## <a name="alignment"></a>2. Property`root > alignment`
 
 |                        |               |
 | ---------------------- | ------------- |

@@ -9,11 +9,10 @@
 
 **Title:** Person
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 <details>
 <summary>
@@ -83,11 +82,10 @@
 </summary>
 <blockquote>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `combining`      |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |             |
+| ------------ | ----------- |
+| **Type**     | `combining` |
+| **Required** | No          |
 
 <blockquote>
 

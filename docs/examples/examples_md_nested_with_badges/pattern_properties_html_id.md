@@ -8,10 +8,9 @@
 
 **Title:** Person
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 <details>
 <summary>
@@ -20,10 +19,9 @@
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 <details>
 <summary>
@@ -37,10 +35,9 @@ must respect the following conditions
 
 **Title:** Title 4
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 **Description:** Description 4
 
@@ -62,10 +59,9 @@ must respect the following conditions
 
 **Title:** Title 1
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 **Description:** Description 1
 
@@ -84,10 +80,9 @@ must respect the following conditions
 
 **Title:** Title 2
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 **Description:** Description 2
 
@@ -106,10 +101,9 @@ must respect the following conditions
 
 **Title:** Title 3
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 **Description:** Description 3
 

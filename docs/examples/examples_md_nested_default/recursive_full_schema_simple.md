@@ -4,11 +4,10 @@
 
 **Title:** Person
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 <details>
 <summary>
@@ -19,12 +18,11 @@
 
 **Title:** Person
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
-| **Same definition as**    | [Person](#root)  |
+|                        |                 |
+| ---------------------- | --------------- |
+| **Type**               | `object`        |
+| **Required**           | No              |
+| **Same definition as** | [Person](#root) |
 
 </blockquote>
 </details>

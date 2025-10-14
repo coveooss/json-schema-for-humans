@@ -5,11 +5,10 @@
 
 **Title:** Circular reference Schema
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 <details>
 <summary>
@@ -18,12 +17,11 @@
 </summary>
 <blockquote>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
-| **Defined in**            | #/definitions/a  |
+|                |                 |
+| -------------- | --------------- |
+| **Type**       | `object`        |
+| **Required**   | No              |
+| **Defined in** | #/definitions/a |
 
 <details>
 <summary>

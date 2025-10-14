@@ -1,24 +1,23 @@
 # Test
 
-- [1. Property `Test > aProperty`](#aProperty)
-- [2. Property `Test > aDictPropertyARequired`](#aDictPropertyARequired)
-  - [2.1. Property `Test > aDictPropertyARequired > a`](#aDictPropertyARequired_a)
-  - [2.2. Property `Test > aDictPropertyARequired > b`](#aDictPropertyARequired_b)
+- [1. Property`Test > aProperty`](#aProperty)
+- [2. Property`Test > aDictPropertyARequired`](#aDictPropertyARequired)
+  - [2.1. Property`Test > aDictPropertyARequired > a`](#aDictPropertyARequired_a)
+  - [2.2. Property`Test > aDictPropertyARequired > b`](#aDictPropertyARequired_b)
 
 **Title:** Test
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 | Property                                             | Pattern | Type             | Deprecated | Definition                     | Title/Description     |
 | ---------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------------ | --------------------- |
 | - [aProperty](#aProperty )                           | No      | enum (of string) | No         | In #/definitions/aProperty     | Title from definition |
 | - [aDictPropertyARequired](#aDictPropertyARequired ) | No      | object           | No         | In #/definitions/aDictProperty | -                     |
 
-## <a name="aProperty"></a>1. Property `Test > aProperty`
+## <a name="aProperty"></a>1. Property`Test > aProperty`
 
 **Title:** Title from definition
 
@@ -35,29 +34,28 @@ Must be one of:
 * "value1"
 * "value2"
 
-## <a name="aDictPropertyARequired"></a>2. Property `Test > aDictPropertyARequired`
+## <a name="aDictPropertyARequired"></a>2. Property`Test > aDictPropertyARequired`
 
-|                           |                             |
-| ------------------------- | --------------------------- |
-| **Type**                  | `object`                    |
-| **Required**              | No                          |
-| **Additional properties** | Any type allowed            |
-| **Default**               | `{"a": "a", "b": "b"}`      |
-| **Defined in**            | #/definitions/aDictProperty |
+|                |                             |
+| -------------- | --------------------------- |
+| **Type**       | `object`                    |
+| **Required**   | No                          |
+| **Default**    | `{"a": "a", "b": "b"}`      |
+| **Defined in** | #/definitions/aDictProperty |
 
 | Property                          | Pattern | Type   | Deprecated | Definition | Title/Description |
 | --------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
 | + [a](#aDictPropertyARequired_a ) | No      | string | No         | -          | -                 |
 | + [b](#aDictPropertyARequired_b ) | No      | string | No         | -          | -                 |
 
-### <a name="aDictPropertyARequired_a"></a>2.1. Property `Test > aDictPropertyARequired > a`
+### <a name="aDictPropertyARequired_a"></a>2.1. Property`Test > aDictPropertyARequired > a`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | Yes      |
 
-### <a name="aDictPropertyARequired_b"></a>2.2. Property `Test > aDictPropertyARequired > b`
+### <a name="aDictPropertyARequired_b"></a>2.2. Property`Test > aDictPropertyARequired > b`
 
 |              |          |
 | ------------ | -------- |

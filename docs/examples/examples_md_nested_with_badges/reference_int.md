@@ -5,10 +5,9 @@
 
 **Title:** Person
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 <details>
 <summary>
@@ -17,11 +16,10 @@
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | #/definitions/extra_options/anyOf/0                                         |
+|                |                                     |
+| -------------- | ----------------------------------- |
+| **Type**       | `object`                            |
+| **Defined in** | #/definitions/extra_options/anyOf/0 |
 
 **Description:** This is the one
 
@@ -35,11 +33,10 @@
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | #/definitions/10                                                            |
+|                |                  |
+| -------------- | ---------------- |
+| **Type**       | `object`         |
+| **Defined in** | #/definitions/10 |
 
 **Description:** This is just to be annoying. The property name looks like an int
 

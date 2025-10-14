@@ -4,11 +4,10 @@
   - [1.1. [Optional] Property root > described > name](#described_name)
   - [1.2. [Optional] Property root > described > alignment](#described_alignment)
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 **Description:** Testing $ref of a remote $ref
 

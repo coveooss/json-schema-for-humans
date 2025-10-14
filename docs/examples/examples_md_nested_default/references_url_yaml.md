@@ -5,11 +5,10 @@
   - [1.2. [Required] Property root > address > city](#address_city)
   - [1.3. [Required] Property root > address > state](#address_state)
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 **Description:** Testing $ref with URL with YAML destination
 
@@ -20,12 +19,11 @@
 </summary>
 <blockquote>
 
-|                           |                                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                  |
-| **Required**              | No                                                                                                                        |
-| **Additional properties** | Any type allowed                                                                                                          |
-| **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/yaml.yaml#/definitions/address |
+|                |                                                                                                                           |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **Type**       | `object`                                                                                                                  |
+| **Required**   | No                                                                                                                        |
+| **Defined in** | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/yaml.yaml#/definitions/address |
 
 <details>
 <summary>

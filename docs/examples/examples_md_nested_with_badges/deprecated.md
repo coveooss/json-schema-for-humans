@@ -6,10 +6,9 @@
 - [4. [Optional] ~~Property root > deprecated4~~](#deprecated4)
 - [5. [Optional] Property root > not_deprecated](#not_deprecated)
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 **Description:** Test schema with deprecated in description
 
@@ -20,12 +19,11 @@
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Deprecated**            |
-| !                         | [                                                                           | D | e | p | r | e | c | a | t | e | d | ] | ( | h | t | t | p | s | : | / | / | i | m | g | . | s | h | i | e | l | d | s | . | i | o | / | b | a | d | g | e | / | D | e | p | r | e | c | a | t | e | d | - | r | e | d | ) |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|                |          |
+| -------------- | -------- |
+| **Type**       | `object` |
+| **Deprecated** |
+| !              | [        | D | e | p | r | e | c | a | t | e | d | ] | ( | h | t | t | p | s | : | / | / | i | m | g | . | s | h | i | e | l | d | s | . | i | o | / | b | a | d | g | e | / | D | e | p | r | e | c | a | t | e | d | - | r | e | d | ) |
 
 **Description:** [Deprecated]
 
@@ -39,12 +37,11 @@
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Deprecated**            |
-| !                         | [                                                                           | D | e | p | r | e | c | a | t | e | d | ] | ( | h | t | t | p | s | : | / | / | i | m | g | . | s | h | i | e | l | d | s | . | i | o | / | b | a | d | g | e | / | D | e | p | r | e | c | a | t | e | d | - | r | e | d | ) |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|                |          |
+| -------------- | -------- |
+| **Type**       | `object` |
+| **Deprecated** |
+| !              | [        | D | e | p | r | e | c | a | t | e | d | ] | ( | h | t | t | p | s | : | / | / | i | m | g | . | s | h | i | e | l | d | s | . | i | o | / | b | a | d | g | e | / | D | e | p | r | e | c | a | t | e | d | - | r | e | d | ) |
 
 **Description:** [Deprecated - Use `not_deprecated` instead]
 
@@ -58,12 +55,11 @@
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Deprecated**            |
-| !                         | [                                                                           | D | e | p | r | e | c | a | t | e | d | ] | ( | h | t | t | p | s | : | / | / | i | m | g | . | s | h | i | e | l | d | s | . | i | o | / | b | a | d | g | e | / | D | e | p | r | e | c | a | t | e | d | - | r | e | d | ) |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|                |          |
+| -------------- | -------- |
+| **Type**       | `object` |
+| **Deprecated** |
+| !              | [        | D | e | p | r | e | c | a | t | e | d | ] | ( | h | t | t | p | s | : | / | / | i | m | g | . | s | h | i | e | l | d | s | . | i | o | / | b | a | d | g | e | / | D | e | p | r | e | c | a | t | e | d | - | r | e | d | ) |
 
 **Description:** This is [Deprecated]
 
@@ -77,12 +73,11 @@
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Deprecated**            |
-| !                         | [                                                                           | D | e | p | r | e | c | a | t | e | d | ] | ( | h | t | t | p | s | : | / | / | i | m | g | . | s | h | i | e | l | d | s | . | i | o | / | b | a | d | g | e | / | D | e | p | r | e | c | a | t | e | d | - | r | e | d | ) |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|                |          |
+| -------------- | -------- |
+| **Type**       | `object` |
+| **Deprecated** |
+| !              | [        | D | e | p | r | e | c | a | t | e | d | ] | ( | h | t | t | p | s | : | / | / | i | m | g | . | s | h | i | e | l | d | s | . | i | o | / | b | a | d | g | e | / | D | e | p | r | e | c | a | t | e | d | - | r | e | d | ) |
 
 **Description:** This is [Deprecated - Use `not_deprecated` instead]
 

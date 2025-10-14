@@ -1,0 +1,41 @@
+{
+  "$id": "https://example.com/person.schema.json",
+  "$schema": "http://json-schema.org/draft-2019-09/schema#",
+  "title": "Person",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "properties": {
+    "subType1": {
+      "type": "object",
+      "description": "A sub type with additionalProperties false.",
+      "properties": {
+        "subProp1": {
+          "type": "number"
+        }
+      }
+    },
+    "subType2": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "A sub type with additionalProperties true.",
+      "properties": {
+        "subProp2": {
+          "type": "number"
+        }
+      }
+    },
+    "anInt": {
+      "type": "integer",
+      "description": "This is an integer, it should not show additional properties. (issue #132)"
+    }
+  },
+  "additionalProperties": {
+    "type": "object",
+    "description": "additionalProperties schema.",
+    "properties": {
+      "propA": {
+        "type": "number"
+      }
+    }
+  }
+}

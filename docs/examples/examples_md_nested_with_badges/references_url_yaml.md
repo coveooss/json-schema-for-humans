@@ -5,10 +5,9 @@
   - [1.2. [Required] Property root > address > city](#address_city)
   - [1.3. [Required] Property root > address > state](#address_state)
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 **Description:** Testing $ref with URL with YAML destination
 
@@ -19,11 +18,10 @@
 </summary>
 <blockquote>
 
-|                           |                                                                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                  |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)                                               |
-| **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/yaml.yaml#/definitions/address |
+|                |                                                                                                                           |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **Type**       | `object`                                                                                                                  |
+| **Defined in** | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/yaml.yaml#/definitions/address |
 
 <details>
 <summary>

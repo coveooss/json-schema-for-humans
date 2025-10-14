@@ -6,10 +6,9 @@
     - [1.2.1. [Optional] Property root > signingTimeInfo > signingTimeBounds > lowerBound](#signingTimeInfo_signingTimeBounds_lowerBound)
     - [1.2.2. [Optional] Property root > signingTimeInfo > signingTimeBounds > upperBound](#signingTimeInfo_signingTimeBounds_upperBound)
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 <details>
 <summary>
@@ -18,11 +17,10 @@
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | #/definitions/dss2-SigningTimeInfoType                                      |
+|                |                                        |
+| -------------- | -------------------------------------- |
+| **Type**       | `object`                               |
+| **Defined in** | #/definitions/dss2-SigningTimeInfoType |
 
 <details>
 <summary>
@@ -46,11 +44,10 @@
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | #/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries              |
+|                |                                                                |
+| -------------- | -------------------------------------------------------------- |
+| **Type**       | `object`                                                       |
+| **Defined in** | #/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries |
 
 <details>
 <summary>

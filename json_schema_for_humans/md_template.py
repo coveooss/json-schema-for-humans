@@ -321,14 +321,18 @@ class MarkdownTemplate(object):
         Generate list of properties ready to be rendered by generate_table filter
         """
         properties = []
-        for sub_property in schema.iterate_properties:
+        for sub_property in schema.iterate_properties:        # Skip additional/unevaluated properties that are just boolean true/false
+            if sub_property.is_additional_properties and not sub_property.is_additional_properties_schema:
+                continue
+            if sub_property.is_unevaluated_properties and not sub_property.is_unevaluated_properties_schema:
+                continue
             line: List[str] = []
             for field in self.config.template_md_options.get("properties_table_columns"):
                 if field == "Property":
                     # property name
                     property_name = "+ " if sub_property.is_required_property else "- "
                     property_name += self.format_link(
-                        escape_for_table(sub_property.property_name), sub_property.html_id
+                        escape_for_table(sub_property.property_display_name), sub_property.html_id
                     )
                     line.append(property_name)
                 elif field == "Pattern":
@@ -406,7 +410,10 @@ class MarkdownTemplate(object):
         if schema_format:
             type_info.append(["**Format**", f"`{schema_format}`"])
         if schema_type == const.TYPE_OBJECT:
-            type_info.append(["**Additional properties**", self.additional_properties(merged_schema)])
+            if merged_schema.additional_properties or merged_schema.explicit_no_additional_properties:
+                type_info.append(["**Additional properties**", self.additional_properties(merged_schema)])
+            if merged_schema.unevaluated_properties or merged_schema.explicit_no_unevaluated_properties:
+                type_info.append(["**Unevaluated properties**", self.unevaluated_properties(merged_schema)])
         if default_value:
             type_info.append(["**Default**", f"`{default_value}`"])
         if schema.should_be_a_link(self.config):
@@ -444,6 +451,31 @@ class MarkdownTemplate(object):
 
         return additional_properties
 
+    def unevaluated_properties(self, schema: SchemaNode) -> str:
+        """unevaluated properties badge generation"""
+        unevaluated_properties = ""
+
+        for sub_property in schema.iterate_properties:
+            if sub_property.is_unevaluated_properties:
+                if sub_property.is_unevaluated_properties_schema:
+                    html_id = sub_property.html_id
+                    if self.config.md_badge_as_image:
+                        unevaluated_properties = f"[{self.should_conform_badge}](#{html_id})"
+                    else:
+                        unevaluated_properties = f"[Each unevaluated property must conform to the schema](#{html_id})"
+                    break
+                else:
+                    unevaluated_properties = self.badge_allowed
+                    break
+
+        if not unevaluated_properties:
+            if schema.explicit_no_unevaluated_properties:
+                unevaluated_properties = self.badge_not_allowed
+            else:
+                unevaluated_properties = self.badge_allowed
+
+        return unevaluated_properties
+        
     def array_restrictions(self, schema: SchemaNode) -> List[List[str]]:
         """
         array restrictions: min/max items, items unicity, additional items, Tuple validation

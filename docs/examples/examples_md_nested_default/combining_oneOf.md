@@ -6,11 +6,10 @@
   - [1.3. Property `root > storage > oneOf > nfs`](#storage_oneOf_i2)
   - [1.4. Property `root > storage > oneOf > tmpfs`](#storage_oneOf_i3)
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 **Description:** JSON Schema for an fstab entry
 
@@ -21,11 +20,10 @@
 </summary>
 <blockquote>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `combining`      |
-| **Required**              | Yes              |
-| **Additional properties** | Any type allowed |
+|              |             |
+| ------------ | ----------- |
+| **Type**     | `combining` |
+| **Required** | Yes         |
 
 <blockquote>
 
@@ -40,48 +38,44 @@
 
 ### <a name="storage_oneOf_i0"></a>1.1. Property `root > storage > oneOf > diskDevice`
 
-|                           |                          |
-| ------------------------- | ------------------------ |
-| **Type**                  | `object`                 |
-| **Required**              | No                       |
-| **Additional properties** | Any type allowed         |
-| **Defined in**            | #/definitions/diskDevice |
+|                |                          |
+| -------------- | ------------------------ |
+| **Type**       | `object`                 |
+| **Required**   | No                       |
+| **Defined in** | #/definitions/diskDevice |
 
 </blockquote>
 <blockquote>
 
 ### <a name="storage_oneOf_i1"></a>1.2. Property `root > storage > oneOf > diskUUID`
 
-|                           |                        |
-| ------------------------- | ---------------------- |
-| **Type**                  | `object`               |
-| **Required**              | No                     |
-| **Additional properties** | Any type allowed       |
-| **Defined in**            | #/definitions/diskUUID |
+|                |                        |
+| -------------- | ---------------------- |
+| **Type**       | `object`               |
+| **Required**   | No                     |
+| **Defined in** | #/definitions/diskUUID |
 
 </blockquote>
 <blockquote>
 
 ### <a name="storage_oneOf_i2"></a>1.3. Property `root > storage > oneOf > nfs`
 
-|                           |                   |
-| ------------------------- | ----------------- |
-| **Type**                  | `object`          |
-| **Required**              | No                |
-| **Additional properties** | Any type allowed  |
-| **Defined in**            | #/definitions/nfs |
+|                |                   |
+| -------------- | ----------------- |
+| **Type**       | `object`          |
+| **Required**   | No                |
+| **Defined in** | #/definitions/nfs |
 
 </blockquote>
 <blockquote>
 
 ### <a name="storage_oneOf_i3"></a>1.4. Property `root > storage > oneOf > tmpfs`
 
-|                           |                     |
-| ------------------------- | ------------------- |
-| **Type**                  | `object`            |
-| **Required**              | No                  |
-| **Additional properties** | Any type allowed    |
-| **Defined in**            | #/definitions/tmpfs |
+|                |                     |
+| -------------- | ------------------- |
+| **Type**       | `object`            |
+| **Required**   | No                  |
+| **Defined in** | #/definitions/tmpfs |
 
 </blockquote>
 

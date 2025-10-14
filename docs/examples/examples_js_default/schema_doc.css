@@ -83,7 +83,7 @@ body {
     display: inline-block;
 }
 
-.badge.required-property,.badge.deprecated-property,.badge.pattern-property,.badge.no-additional {
+.badge.required-property,.badge.deprecated-property,.badge.pattern-property,.badge.no-additional,.badge.no-unevaluated {
     font-size: 100%;
     margin-left: 10px;
 }

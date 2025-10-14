@@ -32,11 +32,10 @@
 
 **Title:** JSON Schema for Humans configuration file
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 **Description:** Choose how to generate JSON Schema for Humans documentation file.
 
@@ -405,12 +404,11 @@ This is the old behaviour and is only needed for browsers that do not support HT
 </summary>
 <blockquote>
 
-|                           |                                                                                                                                     |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                            |
-| **Required**              | No                                                                                                                                  |
-| **Additional properties** | Any type allowed                                                                                                                    |
-| **Default**               | `{"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": null, "breaks": {"on_newline": true, "on_backslash": true}}` |
+|              |                                                                                                                                     |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**     | `object`                                                                                                                            |
+| **Required** | No                                                                                                                                  |
+| **Default**  | `{"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": null, "breaks": {"on_newline": true, "on_backslash": true}}` |
 
 **Description:** (Only used with `description_is_markdown`)
 [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for the descriptions.
@@ -438,11 +436,10 @@ This is the old behaviour and is only needed for browsers that do not support HT
 </summary>
 <blockquote>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 **Description:** specific options to md template
 

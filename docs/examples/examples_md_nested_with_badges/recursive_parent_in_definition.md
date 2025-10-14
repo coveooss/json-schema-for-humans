@@ -7,10 +7,9 @@
 
 **Title:** Person
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 <details>
 <summary>
@@ -19,11 +18,10 @@
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | #/definitions/person/properties/relationships                               |
+|                |                                               |
+| -------------- | --------------------------------------------- |
+| **Type**       | `object`                                      |
+| **Defined in** | #/definitions/person/properties/relationships |
 
 **Description:** Relationships between this person and others
 
@@ -34,11 +32,10 @@
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | #/definitions/person                                                        |
+|                |                      |
+| -------------- | -------------------- |
+| **Type**       | `object`             |
+| **Defined in** | #/definitions/person |
 
 **Description:** A human being
 
@@ -49,10 +46,9 @@
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 **Description:** Relationships between this person and others
 
@@ -63,11 +59,10 @@
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Same definition as**    | [mother](#relationships_mother)                                             |
+|                        |                                 |
+| ---------------------- | ------------------------------- |
+| **Type**               | `object`                        |
+| **Same definition as** | [mother](#relationships_mother) |
 
 **Description:** A human being
 
