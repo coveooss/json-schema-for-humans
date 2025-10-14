@@ -1,23 +1,22 @@
 # Personne
 
-- [1. [Optional] Property Personne > prénom](#prénom)
-- [2. [Optional] Property Personne > nomDeFamille](#nomDeFamille)
-- [3. [Optional] Property Personne > âge](#âge)
-- [4. [Optional] Property Personne > 0 de quoi d'autre](#0_de_quoi_dautre)
-- [5. [Optional] Property Personne > 名前](#名前)
-- [6. [Optional] Property Personne > 年齢](#年齢)
+- [1. [Optional] PropertyPersonne > prénom](#prénom)
+- [2. [Optional] PropertyPersonne > nomDeFamille](#nomDeFamille)
+- [3. [Optional] PropertyPersonne > âge](#âge)
+- [4. [Optional] PropertyPersonne > 0 de quoi d'autre](#0_de_quoi_dautre)
+- [5. [Optional] PropertyPersonne > 名前](#名前)
+- [6. [Optional] PropertyPersonne > 年齢](#年齢)
 
 **Title:** Personne
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 <details>
 <summary>
-<strong> <a name="prénom"></a>1. [Optional] Property Personne > prénom</strong>  
+<strong> <a name="prénom"></a>1. [Optional] PropertyPersonne > prénom</strong>  
 
 </summary>
 <blockquote>
@@ -34,7 +33,7 @@
 
 <details>
 <summary>
-<strong> <a name="nomDeFamille"></a>2. [Optional] Property Personne > nomDeFamille</strong>  
+<strong> <a name="nomDeFamille"></a>2. [Optional] PropertyPersonne > nomDeFamille</strong>  
 
 </summary>
 <blockquote>
@@ -51,7 +50,7 @@
 
 <details>
 <summary>
-<strong> <a name="âge"></a>3. [Optional] Property Personne > âge</strong>  
+<strong> <a name="âge"></a>3. [Optional] PropertyPersonne > âge</strong>  
 
 </summary>
 <blockquote>
@@ -72,7 +71,7 @@
 
 <details>
 <summary>
-<strong> <a name="0_de_quoi_dautre"></a>4. [Optional] Property Personne > 0 de quoi d'autre</strong>  
+<strong> <a name="0_de_quoi_dautre"></a>4. [Optional] PropertyPersonne > 0 de quoi d'autre</strong>  
 
 </summary>
 <blockquote>
@@ -101,7 +100,7 @@
 
 <details>
 <summary>
-<strong> <a name="名前"></a>5. [Optional] Property Personne > 名前</strong>  
+<strong> <a name="名前"></a>5. [Optional] PropertyPersonne > 名前</strong>  
 
 </summary>
 <blockquote>
@@ -118,7 +117,7 @@
 
 <details>
 <summary>
-<strong> <a name="年齢"></a>6. [Optional] Property Personne > 年齢</strong>  
+<strong> <a name="年齢"></a>6. [Optional] PropertyPersonne > 年齢</strong>  
 
 </summary>
 <blockquote>

@@ -42,3 +42,6 @@ with_examples:
 additional_properties:
   display_name: Additional Properties
   description: A schema using additionalProperties true, false and a complex type.
+unevaluated_properties:
+  display_name: Unevaluated Properties
+  description: A schema using unevaluatedProperties true, false and a complex type.

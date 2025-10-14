@@ -34,6 +34,7 @@ class SchemaKeyword(Enum):
     PROPERTIES = "properties"
     PATTERN_PROPERTIES = "patternProperties"
     ADDITIONAL_PROPERTIES = "additionalProperties"
+    UNEVALUATED_PROPERTIES = "unevaluatedProperties"
     FORMAT = "format"
     TYPE = "type"
     DEPRECATED = "deprecated"

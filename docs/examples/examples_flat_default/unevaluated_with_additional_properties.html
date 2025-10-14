@@ -1,0 +1,616 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,800">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="schema_doc.css">
+    <meta charset="utf-8"/>
+        
+    
+    <title>unevaluatedProperties with additionalProperties</title>
+</head>
+<body id="root"><h1>unevaluatedProperties with additionalProperties</h1>
+
+    <div class="breadcrumbs"></div><span class="badge badge-dark value-type">Type: object</span><br/>
+
+
+
+
+
+
+
+<p>Demonstrates the interaction between unevaluatedProperties and additionalProperties</p>
+
+
+
+
+ <span class="badge badge-primary no-unevaluated">No Unevaluated Properties</span>
+        
+
+        
+        
+
+        
+
+<div class="card">
+    <div class="card-header" id="name">
+        <h2 class="mb-0">
+            <a href="#name"><span class="property-name">name</span></a></h2>
+    </div>
+
+    <div class="card-body property-definition-div">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#name">name</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+
+
+
+
+
+
+
+<p>Name field</p>
+
+
+
+
+
+        
+
+        
+        
+
+        
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header" id="nested">
+        <h2 class="mb-0">
+            <a href="#nested"><span class="property-name">nested</span></a></h2>
+    </div>
+
+    <div class="card-body property-definition-div">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#nested">nested</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+
+
+
+
+
+
+
+<p>Nested object without explicit additional/unevaluated properties constraint</p>
+
+
+
+
+
+        
+
+        
+        
+
+        
+
+<div class="card">
+    <div class="card-header" id="nested_nestedProp">
+        <h2 class="mb-0">
+            <a href="#nested_nestedProp"><span class="property-name">nestedProp</span></a></h2>
+    </div>
+
+    <div class="card-body property-definition-div">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#nested">nested</a>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#nested_nestedProp">nestedProp</a></div><span class="badge badge-dark value-type">Type: number</span><br/>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        
+        
+
+        
+    </div>
+</div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header" id="withAdditionalFalse">
+        <h2 class="mb-0">
+            <a href="#withAdditionalFalse"><span class="property-name">withAdditionalFalse</span></a></h2>
+    </div>
+
+    <div class="card-body property-definition-div">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withAdditionalFalse">withAdditionalFalse</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+
+
+
+
+
+
+
+<p>Nested object with additionalProperties: false</p>
+
+
+
+
+ <span class="badge badge-info no-additional">No Additional Properties</span>
+        
+
+        
+        
+
+        
+
+<div class="card">
+    <div class="card-header" id="withAdditionalFalse_allowedProp">
+        <h2 class="mb-0">
+            <a href="#withAdditionalFalse_allowedProp"><span class="property-name">allowedProp</span></a></h2>
+    </div>
+
+    <div class="card-body property-definition-div">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withAdditionalFalse">withAdditionalFalse</a>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withAdditionalFalse_allowedProp">allowedProp</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        
+        
+
+        
+    </div>
+</div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header" id="withAdditionalSchema">
+        <h2 class="mb-0">
+            <a href="#withAdditionalSchema"><span class="property-name">withAdditionalSchema</span></a></h2>
+    </div>
+
+    <div class="card-body property-definition-div">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withAdditionalSchema">withAdditionalSchema</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+
+
+
+
+
+
+
+<p>Nested object with additionalProperties schema</p>
+
+
+
+
+
+        
+
+        
+        
+
+        
+
+<div class="card">
+    <div class="card-header" id="withAdditionalSchema_knownProp">
+        <h2 class="mb-0">
+            <a href="#withAdditionalSchema_knownProp"><span class="property-name">knownProp</span></a></h2>
+    </div>
+
+    <div class="card-body property-definition-div">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withAdditionalSchema">withAdditionalSchema</a>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withAdditionalSchema_knownProp">knownProp</a></div><span class="badge badge-dark value-type">Type: integer</span><br/>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        
+        
+
+        
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header" id="withAdditionalSchema_additionalProperties">
+        <h2 class="mb-0">
+            <a href="#withAdditionalSchema_additionalProperties"><em><span class="property-name">Additional Properties</span></em></a></h2>
+    </div>
+
+    <div class="card-body property-definition-div"><p class="additional-properties">Each additional property must conform to the following schema</p>
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withAdditionalSchema">withAdditionalSchema</a>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withAdditionalSchema_additionalProperties">additionalProperties</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+
+
+
+
+
+
+
+
+
+
+
+<span class="pattern-value" id="withAdditionalSchema_additionalProperties_pattern">Must match regular expression: <code>^[A-Z]</code></span>
+        
+
+        
+        
+
+        
+    </div>
+</div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header" id="withUnevaluatedFalse">
+        <h2 class="mb-0">
+            <a href="#withUnevaluatedFalse"><span class="property-name">withUnevaluatedFalse</span></a></h2>
+    </div>
+
+    <div class="card-body property-definition-div">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withUnevaluatedFalse">withUnevaluatedFalse</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+
+
+
+
+
+
+
+<p>Nested object with unevaluatedProperties: false and allOf</p>
+
+
+
+
+ <span class="badge badge-primary no-unevaluated">No Unevaluated Properties</span>
+        
+
+        
+        
+
+        
+
+<div class="card">
+    <div class="card-header" id="withUnevaluatedFalse_baseProp">
+        <h2 class="mb-0">
+            <a href="#withUnevaluatedFalse_baseProp"><span class="property-name">baseProp</span></a></h2>
+    </div>
+
+    <div class="card-body property-definition-div">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withUnevaluatedFalse">withUnevaluatedFalse</a>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withUnevaluatedFalse_baseProp">baseProp</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        
+        
+
+        
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header" id="withUnevaluatedFalse_extendedProp">
+        <h2 class="mb-0">
+            <a href="#withUnevaluatedFalse_extendedProp"><span class="property-name">extendedProp</span></a></h2>
+    </div>
+
+    <div class="card-body property-definition-div">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withUnevaluatedFalse">withUnevaluatedFalse</a>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withUnevaluatedFalse_extendedProp">extendedProp</a></div><span class="badge badge-dark value-type">Type: number</span><br/>
+
+
+
+
+
+
+
+<p>Property from allOf - should be evaluated</p>
+
+
+
+
+
+        
+
+        
+        
+
+        
+    </div>
+</div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header" id="anInt">
+        <h2 class="mb-0">
+            <a href="#anInt"><span class="property-name">anInt</span></a></h2>
+    </div>
+
+    <div class="card-body property-definition-div">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#anInt">anInt</a></div><span class="badge badge-dark value-type">Type: integer</span><br/>
+
+
+
+
+
+
+
+<p>This is an integer, it should not show additional properties. (issue #132)</p>
+
+
+
+
+
+        
+
+        
+        
+
+        
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header" id="additionalProperties">
+        <h2 class="mb-0">
+            <a href="#additionalProperties"><em><span class="property-name">Additional Properties</span></em></a></h2>
+    </div>
+
+    <div class="card-body property-definition-div"><p class="additional-properties">Each additional property must conform to the following schema</p>
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#additionalProperties">additionalProperties</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+
+
+
+
+
+
+
+<p>Additional properties must be objects with a type field</p>
+
+
+
+
+
+        
+
+        
+        
+
+        
+
+<div class="card">
+    <div class="card-header" id="additionalProperties_type">
+        <h2 class="mb-0">
+            <a href="#additionalProperties_type"><span class="property-name">type</span></a> <span class="badge badge-warning required-property">Required</span></h2>
+    </div>
+
+    <div class="card-body property-definition-div">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#additionalProperties">additionalProperties</a>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#additionalProperties_type">type</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+
+
+
+
+
+
+
+<p>Type of the additional property</p>
+
+
+
+
+
+        
+
+        
+        
+
+        
+    </div>
+</div>
+    </div>
+</div>
+
+    <footer>
+        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
+    </footer></body>
+</html>

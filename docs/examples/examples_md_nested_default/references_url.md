@@ -1,18 +1,17 @@
 # Schema Docs
 
-- [1. [Optional] Property root > firstName](#firstName)
+- [1. [Optional] Propertyroot > firstName](#firstName)
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 **Description:** Testing $ref with URL
 
 <details>
 <summary>
-<strong> <a name="firstName"></a>1. [Optional] Property root > firstName</strong>  
+<strong> <a name="firstName"></a>1. [Optional] Propertyroot > firstName</strong>  
 
 </summary>
 <blockquote>

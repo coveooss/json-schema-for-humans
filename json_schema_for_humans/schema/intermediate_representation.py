@@ -564,6 +564,25 @@ def _build_node(
                         parent=new_node,
                         parent_key=schema_key,
                     )
+            elif schema_key == SchemaKeyword.UNEVALUATED_PROPERTIES.value:
+                if schema_value is False:
+                    new_node.no_unevaluated_properties = True
+                else:
+                    new_node.unevaluated_properties = _build_node(
+                        config=config,
+                        resolved_references=resolved_references,
+                        reference_users=reference_users,
+                        loaded_schemas=loaded_schemas,
+                        depth=depth + 1,
+                        html_id=_add_html_id_part(html_id, SchemaKeyword.UNEVALUATED_PROPERTIES.value),
+                        breadcrumb_name=SchemaKeyword.UNEVALUATED_PROPERTIES.value,
+                        property_name=None,
+                        schema_file_path=schema_file_path,
+                        path_to_element=copy.deepcopy(path_to_element) + [SchemaKeyword.UNEVALUATED_PROPERTIES.value],
+                        schema=schema_value,
+                        parent=new_node,
+                        parent_key=schema_key,
+                    )
             elif schema_key == SchemaKeyword.PATTERN_PROPERTIES.value:
                 for new_property_name, new_property_schema in schema_value.items():
                     new_node.pattern_properties[new_property_name] = _build_node(

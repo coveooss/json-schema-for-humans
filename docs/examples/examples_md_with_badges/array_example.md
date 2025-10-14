@@ -1,12 +1,11 @@
 # Schema Docs
 
-- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > fruits`](#fruits)
+- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`root > fruits`](#fruits)
   - [1.1. root > fruits > fruits items](#fruits_items)
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 **Description:** A schema with an array
 
@@ -14,7 +13,7 @@
 | -------------------- | ------- | --------------- | ---------- | ---------- | ----------------- |
 | - [fruits](#fruits ) | No      | array of string | No         | -          | -                 |
 
-## <a name="fruits"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > fruits`
+## <a name="fruits"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`root > fruits`
 
 |          |                   |
 | -------- | ----------------- |

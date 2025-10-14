@@ -1,17 +1,16 @@
 # User Preference
 
-- [1. Property `User Preference > favorite_os`](#favorite_os)
-- [2. Property `User Preference > favorite_colors`](#favorite_colors)
+- [1. Property`User Preference > favorite_os`](#favorite_os)
+- [2. Property`User Preference > favorite_colors`](#favorite_colors)
   - [2.1. User Preference > favorite_colors > favorite_colors items](#favorite_colors_items)
-- [3. Property `User Preference > desired_number_of_shoes`](#desired_number_of_shoes)
+- [3. Property`User Preference > desired_number_of_shoes`](#desired_number_of_shoes)
 
 **Title:** User Preference
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 | Property                                               | Pattern | Type                      | Deprecated | Definition | Title/Description |
 | ------------------------------------------------------ | ------- | ------------------------- | ---------- | ---------- | ----------------- |
@@ -19,7 +18,7 @@
 | - [favorite_colors](#favorite_colors )                 | No      | array of enum (of string) | No         | -          | -                 |
 | - [desired_number_of_shoes](#desired_number_of_shoes ) | No      | integer                   | No         | -          | -                 |
 
-## <a name="favorite_os"></a>1. Property `User Preference > favorite_os`
+## <a name="favorite_os"></a>1. Property`User Preference > favorite_os`
 
 |              |                    |
 | ------------ | ------------------ |
@@ -32,7 +31,7 @@ Must be one of:
 * "Mac"
 * "Linux"
 
-## <a name="favorite_colors"></a>2. Property `User Preference > favorite_colors`
+## <a name="favorite_colors"></a>2. Property`User Preference > favorite_colors`
 
 |              |                             |
 | ------------ | --------------------------- |
@@ -67,7 +66,7 @@ Must be one of:
 * "white"
 * "black"
 
-## <a name="desired_number_of_shoes"></a>3. Property `User Preference > desired_number_of_shoes`
+## <a name="desired_number_of_shoes"></a>3. Property`User Preference > desired_number_of_shoes`
 
 |              |           |
 | ------------ | --------- |

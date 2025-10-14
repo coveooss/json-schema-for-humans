@@ -1,19 +1,18 @@
 # HTML in descriptions
 
-- [1. [Optional] Property HTML in descriptions > raw_html](#raw_html)
-- [2. [Optional] Property HTML in descriptions > html_in_markdown](#html_in_markdown)
-- [3. [Optional] Property HTML in descriptions > json_in_markdown](#json_in_markdown)
+- [1. [Optional] PropertyHTML in descriptions > raw_html](#raw_html)
+- [2. [Optional] PropertyHTML in descriptions > html_in_markdown](#html_in_markdown)
+- [3. [Optional] PropertyHTML in descriptions > json_in_markdown](#json_in_markdown)
 
 **Title:** HTML in descriptions
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 <details>
 <summary>
-<strong> <a name="raw_html"></a>1. [Optional] Property HTML in descriptions > raw_html</strong>  
+<strong> <a name="raw_html"></a>1. [Optional] PropertyHTML in descriptions > raw_html</strong>  
 
 </summary>
 <blockquote>
@@ -31,7 +30,7 @@
 
 <details>
 <summary>
-<strong> <a name="html_in_markdown"></a>2. [Optional] Property HTML in descriptions > html_in_markdown</strong>  
+<strong> <a name="html_in_markdown"></a>2. [Optional] PropertyHTML in descriptions > html_in_markdown</strong>  
 
 </summary>
 <blockquote>
@@ -52,7 +51,7 @@
 
 <details>
 <summary>
-<strong> <a name="json_in_markdown"></a>3. [Optional] Property HTML in descriptions > json_in_markdown</strong>  
+<strong> <a name="json_in_markdown"></a>3. [Optional] PropertyHTML in descriptions > json_in_markdown</strong>  
 
 </summary>
 <blockquote>

@@ -1,17 +1,16 @@
 # Person
 
-- [1. Property `Person > firstName`](#firstName)
-- [2. Property `Person > lastName`](#lastName)
-- [3. Property `Person > age`](#age)
-- [4. Property `Person > moreInfo`](#moreInfo)
+- [1. Property`Person > firstName`](#firstName)
+- [2. Property`Person > lastName`](#lastName)
+- [3. Property`Person > age`](#age)
+- [4. Property`Person > moreInfo`](#moreInfo)
 
 **Title:** Person
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 | Property                   | Pattern | Type    | Deprecated | Definition | Title/Description                   |
 | -------------------------- | ------- | ------- | ---------- | ---------- | ----------------------------------- |
@@ -20,7 +19,7 @@
 | - [age](#age )             | No      | integer | No         | -          | Person                              |
 | - [moreInfo](#moreInfo )   | No      | object  | No         | -          | Any more info you want as an object |
 
-## <a name="firstName"></a>1. Property `Person > firstName`
+## <a name="firstName"></a>1. Property`Person > firstName`
 
 **Title:** Person
 
@@ -41,7 +40,7 @@
 "BDFL"
 ```
 
-## <a name="lastName"></a>2. Property `Person > lastName`
+## <a name="lastName"></a>2. Property`Person > lastName`
 
 **Title:** Person
 
@@ -58,7 +57,7 @@
 "Van Rossum"
 ```
 
-## <a name="age"></a>3. Property `Person > age`
+## <a name="age"></a>3. Property`Person > age`
 
 **Title:** Person
 
@@ -79,13 +78,12 @@
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-## <a name="moreInfo"></a>4. Property `Person > moreInfo`
+## <a name="moreInfo"></a>4. Property`Person > moreInfo`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 **Description:** Any more info you want as an object
 

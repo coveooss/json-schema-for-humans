@@ -1,13 +1,12 @@
 # Schema Docs
 
-- [1. Property `root > fruits`](#fruits)
+- [1. Property`root > fruits`](#fruits)
   - [1.1. root > fruits > fruits items](#fruits_items)
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 **Description:** A schema with an array
 
@@ -15,7 +14,7 @@
 | -------------------- | ------- | --------------- | ---------- | ---------- | ----------------- |
 | - [fruits](#fruits ) | No      | array of string | No         | -          | -                 |
 
-## <a name="fruits"></a>1. Property `root > fruits`
+## <a name="fruits"></a>1. Property`root > fruits`
 
 |              |                   |
 | ------------ | ----------------- |

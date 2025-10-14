@@ -1,20 +1,19 @@
 # OF
 
-- [1. [Optional] Property OF > uuid](#uuid)
-- [2. [Optional] Property OF > firstName](#firstName)
-- [3. [Optional] Property OF > lastName](#lastName)
+- [1. [Optional] PropertyOF > uuid](#uuid)
+- [2. [Optional] PropertyOF > firstName](#firstName)
+- [3. [Optional] PropertyOF > lastName](#lastName)
 
 **Title:** OF
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 <details>
 <summary>
-<strong> <a name="uuid"></a>1. [Optional] Property OF > uuid</strong>  
+<strong> <a name="uuid"></a>1. [Optional] PropertyOF > uuid</strong>  
 
 </summary>
 <blockquote>
@@ -43,7 +42,7 @@
 
 <details>
 <summary>
-<strong> <a name="firstName"></a>2. [Optional] Property OF > firstName</strong>  
+<strong> <a name="firstName"></a>2. [Optional] PropertyOF > firstName</strong>  
 
 </summary>
 <blockquote>
@@ -72,7 +71,7 @@
 
 <details>
 <summary>
-<strong> <a name="lastName"></a>3. [Optional] Property OF > lastName</strong>  
+<strong> <a name="lastName"></a>3. [Optional] PropertyOF > lastName</strong>  
 
 </summary>
 <blockquote>

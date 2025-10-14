@@ -1,15 +1,14 @@
 # HTML in descriptions
 
-- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `HTML in descriptions > raw_html`](#raw_html)
-- [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `HTML in descriptions > html_in_markdown`](#html_in_markdown)
-- [3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `HTML in descriptions > json_in_markdown`](#json_in_markdown)
+- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`HTML in descriptions > raw_html`](#raw_html)
+- [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`HTML in descriptions > html_in_markdown`](#html_in_markdown)
+- [3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`HTML in descriptions > json_in_markdown`](#json_in_markdown)
 
 **Title:** HTML in descriptions
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 | Property                                 | Pattern | Type   | Deprecated | Definition | Title/Description     |
 | ---------------------------------------- | ------- | ------ | ---------- | ---------- | --------------------- |
@@ -17,7 +16,7 @@
 | - [html_in_markdown](#html_in_markdown ) | No      | string | No         | -          | Some HTML in Markdown |
 | - [json_in_markdown](#json_in_markdown ) | No      | string | No         | -          | Some JSON in Markdown |
 
-## <a name="raw_html"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `HTML in descriptions > raw_html`
+## <a name="raw_html"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`HTML in descriptions > raw_html`
 
 **Title:** Some raw HTML
 
@@ -27,7 +26,7 @@
 
 **Description:** <br/><br/><br/><br/><a href="https://example.com">A link to example.com</a>
 
-## <a name="html_in_markdown"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `HTML in descriptions > html_in_markdown`
+## <a name="html_in_markdown"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`HTML in descriptions > html_in_markdown`
 
 **Title:** Some HTML in Markdown
 
@@ -40,7 +39,7 @@
 <br/><br/><br/><br/><a href="https://example.com">A link to example.com</a>
 ```
 
-## <a name="json_in_markdown"></a>3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `HTML in descriptions > json_in_markdown`
+## <a name="json_in_markdown"></a>3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`HTML in descriptions > json_in_markdown`
 
 **Title:** Some JSON in Markdown
 

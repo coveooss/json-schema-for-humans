@@ -1,34 +1,32 @@
 # Circular reference Schema
 
-- [1. Property `Circular reference Schema > person`](#person)
-  - [1.1. Property `Circular reference Schema > person > a1`](#person_a1)
+- [1. Property`Circular reference Schema > person`](#person)
+  - [1.1. Property`Circular reference Schema > person > a1`](#person_a1)
 
 **Title:** Circular reference Schema
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 | Property             | Pattern | Type   | Deprecated | Definition         | Title/Description |
 | -------------------- | ------- | ------ | ---------- | ------------------ | ----------------- |
 | - [person](#person ) | No      | object | No         | In #/definitions/a | -                 |
 
-## <a name="person"></a>1. Property `Circular reference Schema > person`
+## <a name="person"></a>1. Property`Circular reference Schema > person`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
-| **Defined in**            | #/definitions/a  |
+|                |                 |
+| -------------- | --------------- |
+| **Type**       | `object`        |
+| **Required**   | No              |
+| **Defined in** | #/definitions/a |
 
 | Property            | Pattern | Type   | Deprecated | Definition         | Title/Description  |
 | ------------------- | ------- | ------ | ---------- | ------------------ | ------------------ |
 | - [a1](#person_a1 ) | No      | string | No         | In #/definitions/b | Description from b |
 
-### <a name="person_a1"></a>1.1. Property `Circular reference Schema > person > a1`
+### <a name="person_a1"></a>1.1. Property`Circular reference Schema > person > a1`
 
 |                |                    |
 | -------------- | ------------------ |

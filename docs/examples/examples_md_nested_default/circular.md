@@ -1,33 +1,31 @@
 # Circular reference Schema
 
-- [1. [Optional] Property Circular reference Schema > person](#person)
-  - [1.1. [Optional] Property Circular reference Schema > person > a1](#person_a1)
+- [1. [Optional] PropertyCircular reference Schema > person](#person)
+  - [1.1. [Optional] PropertyCircular reference Schema > person > a1](#person_a1)
 
 **Title:** Circular reference Schema
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 <details>
 <summary>
-<strong> <a name="person"></a>1. [Optional] Property Circular reference Schema > person</strong>  
+<strong> <a name="person"></a>1. [Optional] PropertyCircular reference Schema > person</strong>  
 
 </summary>
 <blockquote>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
-| **Defined in**            | #/definitions/a  |
+|                |                 |
+| -------------- | --------------- |
+| **Type**       | `object`        |
+| **Required**   | No              |
+| **Defined in** | #/definitions/a |
 
 <details>
 <summary>
-<strong> <a name="person_a1"></a>1.1. [Optional] Property Circular reference Schema > person > a1</strong>  
+<strong> <a name="person_a1"></a>1.1. [Optional] PropertyCircular reference Schema > person > a1</strong>  
 
 </summary>
 <blockquote>

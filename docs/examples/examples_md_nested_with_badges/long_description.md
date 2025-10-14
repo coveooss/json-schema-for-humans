@@ -1,17 +1,16 @@
 # Long description
 
-- [1. [Optional] Property Long description > it_s_hard_to_explain](#it_s_hard_to_explain)
+- [1. [Optional] PropertyLong description > it_s_hard_to_explain](#it_s_hard_to_explain)
 
 **Title:** Long description
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 <details>
 <summary>
-<strong> <a name="it_s_hard_to_explain"></a>1. [Optional] Property Long description > it_s_hard_to_explain</strong>  
+<strong> <a name="it_s_hard_to_explain"></a>1. [Optional] PropertyLong description > it_s_hard_to_explain</strong>  
 
 </summary>
 <blockquote>

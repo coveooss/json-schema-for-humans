@@ -1,21 +1,20 @@
 # Person
 
-- [1. Property `Person > prop1`](#prop1)
-  - [1.1. Property `Person > prop1 > lol`](#prop1_lol)
+- [1. Property`Person > prop1`](#prop1)
+  - [1.1. Property`Person > prop1 > lol`](#prop1_lol)
 
 **Title:** Person
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 | Property           | Pattern | Type           | Deprecated | Definition | Title/Description |
 | ------------------ | ------- | -------------- | ---------- | ---------- | ----------------- |
 | - [prop1](#prop1 ) | No      | object or null | No         | -          | -                 |
 
-## <a name="prop1"></a>1. Property `Person > prop1`
+## <a name="prop1"></a>1. Property`Person > prop1`
 
 |              |                  |
 | ------------ | ---------------- |
@@ -26,7 +25,7 @@
 | -------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
 | - [lol](#prop1_lol ) | No      | string | No         | -          | -                 |
 
-### <a name="prop1_lol"></a>1.1. Property `Person > prop1 > lol`
+### <a name="prop1_lol"></a>1.1. Property`Person > prop1 > lol`
 
 |              |          |
 | ------------ | -------- |

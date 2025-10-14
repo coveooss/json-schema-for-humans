@@ -4,11 +4,11 @@
     <div class="card-header" id="{{ html_id }}">
         <h2 class="mb-0">
             <a href="#{{ html_id }}">
-                {%- if sub_property.is_additional_properties -%}
+                {%- if sub_property.is_additional_properties or sub_property.is_unevaluated_properties -%}
                     <em>
                 {%- endif -%}
                 <span class="property-name">{{ sub_property.property_display_name | escape }}</span>
-                {%- if sub_property.is_additional_properties -%}
+                {%- if sub_property.is_additional_properties or sub_property.is_unevaluated_properties -%}
                     </em>
                 {%- endif -%}
             </a>
@@ -40,6 +40,14 @@
                 <p class="additional-properties">Each additional property must conform to the following schema</p>
             {%- else -%}
                 <p class="additional-properties">Additional Properties of any type are allowed.</p>
+            {%- endif -%}
+        {%- endif -%}
+
+        {%- if sub_property.is_unevaluated_properties -%}
+            {%- if sub_property.is_unevaluated_properties_schema -%}
+                <p class="unevaluated-properties">Each unevaluated property must conform to the following schema</p>
+            {%- else -%}
+                <p class="unevaluated-properties">Unevaluated Properties of any type are allowed.</p>
             {%- endif -%}
         {%- endif -%}
 

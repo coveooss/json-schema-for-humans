@@ -1,19 +1,18 @@
 # Empty property name
 
-- [1. Property `Empty property name > `](#root)
+- [1. Property`Empty property name > `](#root)
 
 **Title:** Empty property name
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 | Property     | Pattern | Type   | Deprecated | Definition | Title/Description                                   |
 | ------------ | ------- | ------ | ---------- | ---------- | --------------------------------------------------- |
 | - [](#root ) | No      | string | No         | -          | I don't know why you would want an empty property 🤷 |
 
-## <a name="root"></a>1. Property `Empty property name > `
+## <a name="root"></a>1. Property`Empty property name > `
 
 |          |          |
 | -------- | -------- |

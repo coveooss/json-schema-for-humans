@@ -1,42 +1,41 @@
 # JSON Schema for Humans configuration file
 
-- [1. Property `JSON Schema for Humans configuration file > description_is_markdown`](#description_is_markdown)
-- [2. Property `JSON Schema for Humans configuration file > description_safe_mode`](#description_safe_mode)
-- [3. Property `JSON Schema for Humans configuration file > expand_buttons`](#expand_buttons)
-- [4. Property `JSON Schema for Humans configuration file > show_breadcrumbs`](#show_breadcrumbs)
-- [5. Property `JSON Schema for Humans configuration file > collapse_long_descriptions`](#collapse_long_descriptions)
-- [6. Property `JSON Schema for Humans configuration file > collapse_long_examples`](#collapse_long_examples)
-- [7. Property `JSON Schema for Humans configuration file > link_to_reused_ref`](#link_to_reused_ref)
-- [8. Property `JSON Schema for Humans configuration file > recursive_detection_depth`](#recursive_detection_depth)
-- [9. Property `JSON Schema for Humans configuration file > deprecated_from_description`](#deprecated_from_description)
-- [10. Property `JSON Schema for Humans configuration file > default_from_description`](#default_from_description)
-- [11. Property `JSON Schema for Humans configuration file > copy_css`](#copy_css)
-- [12. Property `JSON Schema for Humans configuration file > copy_js`](#copy_js)
-- [13. Property `JSON Schema for Humans configuration file > template_name`](#template_name)
-- [14. Property `JSON Schema for Humans configuration file > custom_template_path`](#custom_template_path)
-- [15. Property `JSON Schema for Humans configuration file > show_toc`](#show_toc)
-- [16. Property `JSON Schema for Humans configuration file > examples_as_yaml`](#examples_as_yaml)
-- [17. Property `JSON Schema for Humans configuration file > old_anchor_links`](#old_anchor_links)
-- [18. Property `JSON Schema for Humans configuration file > markdown_options`](#markdown_options)
-- [19. Property `JSON Schema for Humans configuration file > template_md_options`](#template_md_options)
-  - [19.1. Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`](#template_md_options_badge_as_image)
-  - [19.2. Property `JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`](#template_md_options_show_heading_numbers)
-  - [19.3. Property `JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`](#template_md_options_show_array_restrictions)
-  - [19.4. Property `JSON Schema for Humans configuration file > template_md_options > properties_table_columns`](#template_md_options_properties_table_columns)
+- [1. Property`JSON Schema for Humans configuration file > description_is_markdown`](#description_is_markdown)
+- [2. Property`JSON Schema for Humans configuration file > description_safe_mode`](#description_safe_mode)
+- [3. Property`JSON Schema for Humans configuration file > expand_buttons`](#expand_buttons)
+- [4. Property`JSON Schema for Humans configuration file > show_breadcrumbs`](#show_breadcrumbs)
+- [5. Property`JSON Schema for Humans configuration file > collapse_long_descriptions`](#collapse_long_descriptions)
+- [6. Property`JSON Schema for Humans configuration file > collapse_long_examples`](#collapse_long_examples)
+- [7. Property`JSON Schema for Humans configuration file > link_to_reused_ref`](#link_to_reused_ref)
+- [8. Property`JSON Schema for Humans configuration file > recursive_detection_depth`](#recursive_detection_depth)
+- [9. Property`JSON Schema for Humans configuration file > deprecated_from_description`](#deprecated_from_description)
+- [10. Property`JSON Schema for Humans configuration file > default_from_description`](#default_from_description)
+- [11. Property`JSON Schema for Humans configuration file > copy_css`](#copy_css)
+- [12. Property`JSON Schema for Humans configuration file > copy_js`](#copy_js)
+- [13. Property`JSON Schema for Humans configuration file > template_name`](#template_name)
+- [14. Property`JSON Schema for Humans configuration file > custom_template_path`](#custom_template_path)
+- [15. Property`JSON Schema for Humans configuration file > show_toc`](#show_toc)
+- [16. Property`JSON Schema for Humans configuration file > examples_as_yaml`](#examples_as_yaml)
+- [17. Property`JSON Schema for Humans configuration file > old_anchor_links`](#old_anchor_links)
+- [18. Property`JSON Schema for Humans configuration file > markdown_options`](#markdown_options)
+- [19. Property`JSON Schema for Humans configuration file > template_md_options`](#template_md_options)
+  - [19.1. Property`JSON Schema for Humans configuration file > template_md_options > badge_as_image`](#template_md_options_badge_as_image)
+  - [19.2. Property`JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`](#template_md_options_show_heading_numbers)
+  - [19.3. Property`JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`](#template_md_options_show_array_restrictions)
+  - [19.4. Property`JSON Schema for Humans configuration file > template_md_options > properties_table_columns`](#template_md_options_properties_table_columns)
     - [19.4.1. JSON Schema for Humans configuration file > template_md_options > properties_table_columns > properties_table_columns items](#template_md_options_properties_table_columns_items)
-- [20. Property `JSON Schema for Humans configuration file > with_footer`](#with_footer)
-- [21. Property `JSON Schema for Humans configuration file > footer_show_time`](#footer_show_time)
-- [22. ~~Property `JSON Schema for Humans configuration file > allow_html_description`~~](#allow_html_description)
-- [23. ~~Property `JSON Schema for Humans configuration file > minify`~~](#minify)
-- [24. ~~Property `JSON Schema for Humans configuration file > templates_directory`~~](#templates_directory)
+- [20. Property`JSON Schema for Humans configuration file > with_footer`](#with_footer)
+- [21. Property`JSON Schema for Humans configuration file > footer_show_time`](#footer_show_time)
+- [22. ~~Property`JSON Schema for Humans configuration file > allow_html_description`~~](#allow_html_description)
+- [23. ~~Property`JSON Schema for Humans configuration file > minify`~~](#minify)
+- [24. ~~Property`JSON Schema for Humans configuration file > templates_directory`~~](#templates_directory)
 
 **Title:** JSON Schema for Humans configuration file
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 **Description:** Choose how to generate JSON Schema for Humans documentation file.
 
@@ -73,7 +72,7 @@ Configuration parameters can be provided in several ways:
 | - [minify](#minify )                                           | No      | boolean                  | Deprecated | -          | [Deprecated]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | - [templates_directory](#templates_directory )                 | No      | string                   | Deprecated | -          | [Deprecated]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
-## <a name="description_is_markdown"></a>1. Property `JSON Schema for Humans configuration file > description_is_markdown`
+## <a name="description_is_markdown"></a>1. Property`JSON Schema for Humans configuration file > description_is_markdown`
 
 |              |           |
 | ------------ | --------- |
@@ -84,7 +83,7 @@ Configuration parameters can be provided in several ways:
 **Description:** (HTML outputs only)
 Whether to consider the description as Markdown and render it accordingly.
 
-## <a name="description_safe_mode"></a>2. Property `JSON Schema for Humans configuration file > description_safe_mode`
+## <a name="description_safe_mode"></a>2. Property`JSON Schema for Humans configuration file > description_safe_mode`
 
 |              |                            |
 | ------------ | -------------------------- |
@@ -105,7 +104,7 @@ Must be one of:
 * "escape"
 * "replace"
 
-## <a name="expand_buttons"></a>3. Property `JSON Schema for Humans configuration file > expand_buttons`
+## <a name="expand_buttons"></a>3. Property`JSON Schema for Humans configuration file > expand_buttons`
 
 |              |           |
 | ------------ | --------- |
@@ -115,7 +114,7 @@ Must be one of:
 
 **Description:** Add an `Expand all` and a `Collapse all` button at the top of the generated documentation.
 
-## <a name="show_breadcrumbs"></a>4. Property `JSON Schema for Humans configuration file > show_breadcrumbs`
+## <a name="show_breadcrumbs"></a>4. Property`JSON Schema for Humans configuration file > show_breadcrumbs`
 
 |              |           |
 | ------------ | --------- |
@@ -125,7 +124,7 @@ Must be one of:
 
 **Description:** For each property, show the relative place of that property in the schema.
 
-## <a name="collapse_long_descriptions"></a>5. Property `JSON Schema for Humans configuration file > collapse_long_descriptions`
+## <a name="collapse_long_descriptions"></a>5. Property`JSON Schema for Humans configuration file > collapse_long_descriptions`
 
 |              |           |
 | ------------ | --------- |
@@ -135,7 +134,7 @@ Must be one of:
 
 **Description:** If a description is considered big, show only the beginning and add a `Read more` button.
 
-## <a name="collapse_long_examples"></a>6. Property `JSON Schema for Humans configuration file > collapse_long_examples`
+## <a name="collapse_long_examples"></a>6. Property`JSON Schema for Humans configuration file > collapse_long_examples`
 
 |              |           |
 | ------------ | --------- |
@@ -145,7 +144,7 @@ Must be one of:
 
 **Description:** If an example is considered big, collapse it, it can be displayed with a `Show` option.
 
-## <a name="link_to_reused_ref"></a>7. Property `JSON Schema for Humans configuration file > link_to_reused_ref`
+## <a name="link_to_reused_ref"></a>7. Property`JSON Schema for Humans configuration file > link_to_reused_ref`
 
 |              |           |
 | ------------ | --------- |
@@ -157,7 +156,7 @@ Must be one of:
 
 *Note*: If this option is off and the schema contains recursive definitions, the generation will crash!
 
-## <a name="recursive_detection_depth"></a>8. Property `JSON Schema for Humans configuration file > recursive_detection_depth`
+## <a name="recursive_detection_depth"></a>8. Property`JSON Schema for Humans configuration file > recursive_detection_depth`
 
 |              |           |
 | ------------ | --------- |
@@ -172,7 +171,7 @@ This option determines the number of times to recursively follow definitions loo
 
 In other words, if a schema has a deeply nested element that refers to itself, this option may need to be increased.
 
-## <a name="deprecated_from_description"></a>9. Property `JSON Schema for Humans configuration file > deprecated_from_description`
+## <a name="deprecated_from_description"></a>9. Property`JSON Schema for Humans configuration file > deprecated_from_description`
 
 |              |           |
 | ------------ | --------- |
@@ -182,7 +181,7 @@ In other words, if a schema has a deeply nested element that refers to itself, t
 
 **Description:** Mark a property as deprecated (with a big red badge) if the description contains the string `[​Deprecated`.
 
-## <a name="default_from_description"></a>10. Property `JSON Schema for Humans configuration file > default_from_description`
+## <a name="default_from_description"></a>10. Property`JSON Schema for Humans configuration file > default_from_description`
 
 |              |           |
 | ------------ | --------- |
@@ -194,7 +193,7 @@ In other words, if a schema has a deeply nested element that refers to itself, t
 
 The default value from the "default" attribute will be used in priority.
 
-## <a name="copy_css"></a>11. Property `JSON Schema for Humans configuration file > copy_css`
+## <a name="copy_css"></a>11. Property`JSON Schema for Humans configuration file > copy_css`
 
 |              |           |
 | ------------ | --------- |
@@ -204,7 +203,7 @@ The default value from the "default" attribute will be used in priority.
 
 **Description:** Copy `schema_doc.css` to the same directory as `RESULT_FILE` after generation.
 
-## <a name="copy_js"></a>12. Property `JSON Schema for Humans configuration file > copy_js`
+## <a name="copy_js"></a>12. Property`JSON Schema for Humans configuration file > copy_js`
 
 |              |           |
 | ------------ | --------- |
@@ -216,7 +215,7 @@ The default value from the "default" attribute will be used in priority.
 
 This file contains the logic for the anchor links.
 
-## <a name="template_name"></a>13. Property `JSON Schema for Humans configuration file > template_name`
+## <a name="template_name"></a>13. Property`JSON Schema for Humans configuration file > template_name`
 
 |              |                    |
 | ------------ | ------------------ |
@@ -243,7 +242,7 @@ Must be one of:
 * "md"
 * "md_nested"
 
-## <a name="custom_template_path"></a>14. Property `JSON Schema for Humans configuration file > custom_template_path`
+## <a name="custom_template_path"></a>14. Property`JSON Schema for Humans configuration file > custom_template_path`
 
 |              |          |
 | ------------ | -------- |
@@ -257,7 +256,7 @@ There can be multiple files to split the template, but this path should be the e
 
 If no output file is specified, the extension of the template file will be used to determine the output documentation extension. i.e. if the template is in ./custom_template/content.html, the resulting documentation will have the html extension.
 
-## <a name="show_toc"></a>15. Property `JSON Schema for Humans configuration file > show_toc`
+## <a name="show_toc"></a>15. Property`JSON Schema for Humans configuration file > show_toc`
 
 |              |           |
 | ------------ | --------- |
@@ -267,7 +266,7 @@ If no output file is specified, the extension of the template file will be used 
 
 **Description:** Whether to render table of contents.
 
-## <a name="examples_as_yaml"></a>16. Property `JSON Schema for Humans configuration file > examples_as_yaml`
+## <a name="examples_as_yaml"></a>16. Property`JSON Schema for Humans configuration file > examples_as_yaml`
 
 |              |           |
 | ------------ | --------- |
@@ -277,7 +276,7 @@ If no output file is specified, the extension of the template file will be used 
 
 **Description:** Whether to display examples as YAML instead of JSON
 
-## <a name="old_anchor_links"></a>17. Property `JSON Schema for Humans configuration file > old_anchor_links`
+## <a name="old_anchor_links"></a>17. Property`JSON Schema for Humans configuration file > old_anchor_links`
 
 |              |           |
 | ------------ | --------- |
@@ -289,14 +288,13 @@ If no output file is specified, the extension of the template file will be used 
 
 This is the old behaviour and is only needed for browsers that do not support HTML 5.
 
-## <a name="markdown_options"></a>18. Property `JSON Schema for Humans configuration file > markdown_options`
+## <a name="markdown_options"></a>18. Property`JSON Schema for Humans configuration file > markdown_options`
 
-|                           |                                                                                                                                     |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                            |
-| **Required**              | No                                                                                                                                  |
-| **Additional properties** | Any type allowed                                                                                                                    |
-| **Default**               | `{"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": null, "breaks": {"on_newline": true, "on_backslash": true}}` |
+|              |                                                                                                                                     |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**     | `object`                                                                                                                            |
+| **Required** | No                                                                                                                                  |
+| **Default**  | `{"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": null, "breaks": {"on_newline": true, "on_backslash": true}}` |
 
 **Description:** (Only used with `description_is_markdown`)
 [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for the descriptions.
@@ -314,13 +312,12 @@ This is the old behaviour and is only needed for browsers that do not support HT
 }
 ```
 
-## <a name="template_md_options"></a>19. Property `JSON Schema for Humans configuration file > template_md_options`
+## <a name="template_md_options"></a>19. Property`JSON Schema for Humans configuration file > template_md_options`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 **Description:** specific options to md template
 
@@ -331,7 +328,7 @@ This is the old behaviour and is only needed for browsers that do not support HT
 | - [show_array_restrictions](#template_md_options_show_array_restrictions )   | No      | boolean                   | No         | -          | if true generate array restrictions section.<br /><br /> if false, do not generate                                                                                         |
 | - [properties_table_columns](#template_md_options_properties_table_columns ) | No      | array of enum (of string) | No         | -          | array of column names to display in the properties table.<br /><br /> if empty, the default is ['Property','Pattern','Type','Deprecated','Definition','Title/Description'] |
 
-### <a name="template_md_options_badge_as_image"></a>19.1. Property `JSON Schema for Humans configuration file > template_md_options > badge_as_image`
+### <a name="template_md_options_badge_as_image"></a>19.1. Property`JSON Schema for Humans configuration file > template_md_options > badge_as_image`
 
 |              |           |
 | ------------ | --------- |
@@ -343,7 +340,7 @@ This is the old behaviour and is only needed for browsers that do not support HT
 
  if false, use text instead
 
-### <a name="template_md_options_show_heading_numbers"></a>19.2. Property `JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`
+### <a name="template_md_options_show_heading_numbers"></a>19.2. Property`JSON Schema for Humans configuration file > template_md_options > show_heading_numbers`
 
 |              |           |
 | ------------ | --------- |
@@ -355,7 +352,7 @@ This is the old behaviour and is only needed for browsers that do not support HT
 
  if false, do not generate heading numbers
 
-### <a name="template_md_options_show_array_restrictions"></a>19.3. Property `JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`
+### <a name="template_md_options_show_array_restrictions"></a>19.3. Property`JSON Schema for Humans configuration file > template_md_options > show_array_restrictions`
 
 |              |           |
 | ------------ | --------- |
@@ -367,7 +364,7 @@ This is the old behaviour and is only needed for browsers that do not support HT
 
  if false, do not generate
 
-### <a name="template_md_options_properties_table_columns"></a>19.4. Property `JSON Schema for Humans configuration file > template_md_options > properties_table_columns`
+### <a name="template_md_options_properties_table_columns"></a>19.4. Property`JSON Schema for Humans configuration file > template_md_options > properties_table_columns`
 
 |              |                             |
 | ------------ | --------------------------- |
@@ -405,7 +402,7 @@ Must be one of:
 * "Definition"
 * "Title/Description"
 
-## <a name="with_footer"></a>20. Property `JSON Schema for Humans configuration file > with_footer`
+## <a name="with_footer"></a>20. Property`JSON Schema for Humans configuration file > with_footer`
 
 |              |           |
 | ------------ | --------- |
@@ -415,7 +412,7 @@ Must be one of:
 
 **Description:** Whether to show the footer linking to the library repo and with the generation datetime
 
-## <a name="footer_show_time"></a>21. Property `JSON Schema for Humans configuration file > footer_show_time`
+## <a name="footer_show_time"></a>21. Property`JSON Schema for Humans configuration file > footer_show_time`
 
 |              |           |
 | ------------ | --------- |
@@ -425,7 +422,7 @@ Must be one of:
 
 **Description:** Whether the footer should display the generation time
 
-## <a name="allow_html_description"></a>22. ~~Property `JSON Schema for Humans configuration file > allow_html_description`~~
+## <a name="allow_html_description"></a>22. ~~Property`JSON Schema for Humans configuration file > allow_html_description`~~
 
 |                |           |
 | -------------- | --------- |
@@ -436,7 +433,7 @@ Must be one of:
 
 **Description:** [Deprecated]
 
-## <a name="minify"></a>23. ~~Property `JSON Schema for Humans configuration file > minify`~~
+## <a name="minify"></a>23. ~~Property`JSON Schema for Humans configuration file > minify`~~
 
 |                |           |
 | -------------- | --------- |
@@ -447,7 +444,7 @@ Must be one of:
 
 **Description:** [Deprecated]
 
-## <a name="templates_directory"></a>24. ~~Property `JSON Schema for Humans configuration file > templates_directory`~~
+## <a name="templates_directory"></a>24. ~~Property`JSON Schema for Humans configuration file > templates_directory`~~
 
 |                |          |
 | -------------- | -------- |

@@ -3395,6 +3395,138 @@ the description of an attribute
 [examples/examples_md_nested_with_badges/type_object_null.md](examples/examples_md_nested_with_badges/type_object_null.md ':include')
 </details>
 
+## --unevaluated_properties--
+### unevaluated_properties
+
+
+<details>
+<summary>Json schema - Click here to expand source code...</summary>
+
+[examples/cases/unevaluated_properties.json](examples/cases/unevaluated_properties.json ':include :type=code')
+</details>
+
+
+<details>
+<summary>JS template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/unevaluated_properties.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_default/unevaluated_properties.html](examples/examples_js_default/unevaluated_properties.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/unevaluated_properties.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/unevaluated_properties.html](examples/examples_js_offline_default/unevaluated_properties.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Flat template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/unevaluated_properties.html" target="_blank">Open it in full page</a>
+
+[examples/examples_flat_default/unevaluated_properties.html](examples/examples_flat_default/unevaluated_properties.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Markdown without badge template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_default/unevaluated_properties.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_default/unevaluated_properties.md](examples/examples_md_default/unevaluated_properties.md ':include')
+</details>
+
+
+<details>
+<summary>Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_with_badges/unevaluated_properties.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_with_badges/unevaluated_properties.md](examples/examples_md_with_badges/unevaluated_properties.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown without badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_nested_default/unevaluated_properties.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_default/unevaluated_properties.md](examples/examples_md_nested_default/unevaluated_properties.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_nested_with_badges/unevaluated_properties.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_with_badges/unevaluated_properties.md](examples/examples_md_nested_with_badges/unevaluated_properties.md ':include')
+</details>
+
+## --unevaluated_with_additional_properties--
+### unevaluated_with_additional_properties
+
+
+<details>
+<summary>Json schema - Click here to expand source code...</summary>
+
+[examples/cases/unevaluated_with_additional_properties.json](examples/cases/unevaluated_with_additional_properties.json ':include :type=code')
+</details>
+
+
+<details>
+<summary>JS template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/unevaluated_with_additional_properties.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_default/unevaluated_with_additional_properties.html](examples/examples_js_default/unevaluated_with_additional_properties.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>JS Offline template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_js_offline_default/unevaluated_with_additional_properties.html" target="_blank">Open it in full page</a>
+
+[examples/examples_js_offline_default/unevaluated_with_additional_properties.html](examples/examples_js_offline_default/unevaluated_with_additional_properties.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Flat template - Click here to expand the rendered result...</summary>
+<a href="https://coveooss.github.io/json-schema-for-humans/examples/examples_flat_default/unevaluated_with_additional_properties.html" target="_blank">Open it in full page</a>
+
+[examples/examples_flat_default/unevaluated_with_additional_properties.html](examples/examples_flat_default/unevaluated_with_additional_properties.html ':include :type=iframe width=100% height=400px')
+</details>
+
+
+<details>
+<summary>Markdown without badge template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_default/unevaluated_with_additional_properties.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_default/unevaluated_with_additional_properties.md](examples/examples_md_default/unevaluated_with_additional_properties.md ':include')
+</details>
+
+
+<details>
+<summary>Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_with_badges/unevaluated_with_additional_properties.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_with_badges/unevaluated_with_additional_properties.md](examples/examples_md_with_badges/unevaluated_with_additional_properties.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown without badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_nested_default/unevaluated_with_additional_properties.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_default/unevaluated_with_additional_properties.md](examples/examples_md_nested_default/unevaluated_with_additional_properties.md ':include')
+</details>
+
+
+<details>
+<summary>Nested Markdown with badges template - Click here to expand the rendered result...</summary>
+<a href="https://github.com/coveooss/json-schema-for-humans/blob/main/docs/examples/examples_md_nested_with_badges/unevaluated_with_additional_properties.md" target="_blank">Open it in github</a>
+
+[examples/examples_md_nested_with_badges/unevaluated_with_additional_properties.md](examples/examples_md_nested_with_badges/unevaluated_with_additional_properties.md ':include')
+</details>
+
 ## --with_default--
 ### With default value
 

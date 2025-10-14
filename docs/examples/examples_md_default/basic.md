@@ -1,19 +1,18 @@
 # Person
 
-- [1. Property `Person > firstName`](#firstName)
-- [2. Property `Person > lastName`](#lastName)
-- [3. Property `Person > age`](#age)
-- [4. Property `Person > driverLicenseId`](#driverLicenseId)
+- [1. Property`Person > firstName`](#firstName)
+- [2. Property`Person > lastName`](#lastName)
+- [3. Property`Person > age`](#age)
+- [4. Property`Person > driverLicenseId`](#driverLicenseId)
   - [4.1. Property `Person > driverLicenseId > allOf > no driver licence`](#driverLicenseId_allOf_i0)
   - [4.2. Property `Person > driverLicenseId > allOf > driver licence id`](#driverLicenseId_allOf_i1)
 
 **Title:** Person
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 | Property                               | Pattern | Type        | Deprecated | Definition | Title/Description |
 | -------------------------------------- | ------- | ----------- | ---------- | ---------- | ----------------- |
@@ -22,7 +21,7 @@
 | - [age](#age )                         | No      | integer     | No         | -          | Person            |
 | - [driverLicenseId](#driverLicenseId ) | No      | Combination | No         | -          | -                 |
 
-## <a name="firstName"></a>1. Property `Person > firstName`
+## <a name="firstName"></a>1. Property`Person > firstName`
 
 **Title:** Person
 
@@ -33,7 +32,7 @@
 
 **Description:** The person's first name.
 
-## <a name="lastName"></a>2. Property `Person > lastName`
+## <a name="lastName"></a>2. Property`Person > lastName`
 
 **Title:** Person
 
@@ -44,7 +43,7 @@
 
 **Description:** The person's last name.
 
-## <a name="age"></a>3. Property `Person > age`
+## <a name="age"></a>3. Property`Person > age`
 
 **Title:** Person
 
@@ -59,13 +58,12 @@
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-## <a name="driverLicenseId"></a>4. Property `Person > driverLicenseId`
+## <a name="driverLicenseId"></a>4. Property`Person > driverLicenseId`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `combining`      |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |             |
+| ------------ | ----------- |
+| **Type**     | `combining` |
+| **Required** | No          |
 
 | All of(Requirement)                            |
 | ---------------------------------------------- |
