@@ -14,9 +14,9 @@
 
 | Property                   | Pattern | Type    | Deprecated | Definition | Title/Description                   |
 | -------------------------- | ------- | ------- | ---------- | ---------- | ----------------------------------- |
-| - [firstName](#firstName ) | No      | string  | No         | -          | Person                              |
-| - [lastName](#lastName )   | No      | string  | No         | -          | Person                              |
-| - [age](#age )             | No      | integer | No         | -          | Person                              |
+| - [firstName](#firstName ) | No      | string  | No         | -          | Person [(read more)](#firstName)    |
+| - [lastName](#lastName )   | No      | string  | No         | -          | Person [(read more)](#lastName)     |
+| - [age](#age )             | No      | integer | No         | -          | Person [(read more)](#age)          |
 | - [moreInfo](#moreInfo )   | No      | object  | No         | -          | Any more info you want as an object |
 
 ## <a name="firstName"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > firstName`

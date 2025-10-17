@@ -13,12 +13,12 @@
 | **Type**                  | `object`                                                                    |
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
-| Property                           | Pattern | Type   | Deprecated | Definition | Title/Description |
-| ---------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [not_a_pattern](#not_a_pattern ) | No      | object | No         | -          | -                 |
-| - [.*](#pattern1 )                 | Yes     | object | No         | -          | Title 1           |
-| - [..](#pattern2 )                 | Yes     | object | No         | -          | Title 2           |
-| - [^.](#pattern3 )                 | Yes     | object | No         | -          | Title 3           |
+| Property                           | Pattern | Type   | Deprecated | Definition | Title/Description                |
+| ---------------------------------- | ------- | ------ | ---------- | ---------- | -------------------------------- |
+| - [not_a_pattern](#not_a_pattern ) | No      | object | No         | -          | -                                |
+| - [.*](#pattern1 )                 | Yes     | object | No         | -          | Title 1 [(read more)](#pattern1) |
+| - [..](#pattern2 )                 | Yes     | object | No         | -          | Title 2 [(read more)](#pattern2) |
+| - [^.](#pattern3 )                 | Yes     | object | No         | -          | Title 3 [(read more)](#pattern3) |
 
 ## <a name="not_a_pattern"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > not_a_pattern`
 
@@ -27,9 +27,9 @@
 | **Type**                  | `object`                                                                    |
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
-| Property                         | Pattern | Type   | Deprecated | Definition | Title/Description |
-| -------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [.$](#not_a_pattern_pattern1 ) | Yes     | object | No         | -          | Title 4           |
+| Property                         | Pattern | Type   | Deprecated | Definition | Title/Description                              |
+| -------------------------------- | ------- | ------ | ---------- | ---------- | ---------------------------------------------- |
+| - [.$](#not_a_pattern_pattern1 ) | Yes     | object | No         | -          | Title 4 [(read more)](#not_a_pattern_pattern1) |
 
 ### <a name="not_a_pattern_pattern1"></a>1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Pattern Property `Person > not_a_pattern > Title 4`
 > All properties whose name matches the regular expression

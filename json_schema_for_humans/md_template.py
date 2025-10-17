@@ -358,9 +358,15 @@ class MarkdownTemplate(object):
                         line.append("-")
                 elif field == "Title/Description":
                     # title or description
-                    description = sub_property.description or "-"
-                    if sub_property.title:
+                    if sub_property.title and sub_property.description:
+                        # Both title and description exist - show title with read more link
+                        description = f"{sub_property.title} [(read more)](#{sub_property.html_id})"
+                    elif sub_property.title:
+                        # Only title exists
                         description = sub_property.title
+                    else:
+                        # Only description exists (or neither)
+                        description = sub_property.description or "-"
                     line.append(escape_for_table(description))
                 else:
                     raise ValueError(f"Unknown field {field} for properties table")

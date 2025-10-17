@@ -6,6 +6,7 @@
 - [4. [Optional] Property Person > driverLicenseId](#driverLicenseId)
   - [4.1. Property `Person > driverLicenseId > allOf > no driver licence`](#driverLicenseId_allOf_i0)
   - [4.2. Property `Person > driverLicenseId > allOf > driver licence id`](#driverLicenseId_allOf_i1)
+- [5. [Optional] Property Person > middleName](#middleName)
 
 **Title:** Person
 
@@ -122,6 +123,23 @@
 </blockquote>
 
 </blockquote>
+
+</blockquote>
+</details>
+
+<details>
+<summary>
+<strong> <a name="middleName"></a>5. [Optional] Property Person > middleName</strong>  
+
+</summary>
+<blockquote>
+
+**Title:** Middle Name
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 </blockquote>
 </details>
