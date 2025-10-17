@@ -9,9 +9,9 @@
 
 **Description:** Testing $ref with URL
 
-| Property                   | Pattern | Type   | Deprecated | Definition                                                                                                                     | Title/Description |
-| -------------------------- | ------- | ------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
-| - [firstName](#firstName ) | No      | string | No         | In https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/basic.json#/properties/firstName | Person            |
+| Property                   | Pattern | Type   | Deprecated | Definition                                                                                                                     | Title/Description                |
+| -------------------------- | ------- | ------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- |
+| - [firstName](#firstName ) | No      | string | No         | In https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/basic.json#/properties/firstName | Person [(read more)](#firstName) |
 
 ## <a name="firstName"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > firstName`
 

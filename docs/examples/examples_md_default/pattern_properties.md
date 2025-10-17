@@ -14,11 +14,11 @@
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-| Property                     | Pattern | Type   | Deprecated | Definition | Title/Description |
-| ---------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [firstName](#firstName )   | No      | string | No         | -          | Person            |
-| - [lastName](#lastName )     | No      | string | No         | -          | Person            |
-| - [$[a-c][0-9]^](#pattern1 ) | Yes     | object | No         | -          | paperSize         |
+| Property                     | Pattern | Type   | Deprecated | Definition | Title/Description                  |
+| ---------------------------- | ------- | ------ | ---------- | ---------- | ---------------------------------- |
+| - [firstName](#firstName )   | No      | string | No         | -          | Person [(read more)](#firstName)   |
+| - [lastName](#lastName )     | No      | string | No         | -          | Person [(read more)](#lastName)    |
+| - [$[a-c][0-9]^](#pattern1 ) | Yes     | object | No         | -          | paperSize [(read more)](#pattern1) |
 
 ## <a name="firstName"></a>1. Property `Person > firstName`
 
@@ -57,10 +57,10 @@ must respect the following conditions
 
 **Description:** Review of a paper size.
 
-| Property                      | Pattern | Type    | Deprecated | Definition | Title/Description |
-| ----------------------------- | ------- | ------- | ---------- | ---------- | ----------------- |
-| + [rating](#pattern1_rating ) | No      | integer | No         | -          | Rating            |
-| + [review](#pattern1_review ) | No      | string  | No         | -          | Review            |
+| Property                      | Pattern | Type    | Deprecated | Definition | Title/Description                      |
+| ----------------------------- | ------- | ------- | ---------- | ---------- | -------------------------------------- |
+| + [rating](#pattern1_rating ) | No      | integer | No         | -          | Rating [(read more)](#pattern1_rating) |
+| + [review](#pattern1_review ) | No      | string  | No         | -          | Review [(read more)](#pattern1_review) |
 
 ### <a name="pattern1_rating"></a>3.1. Property `Person > paperSize > rating`
 
