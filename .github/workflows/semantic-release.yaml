@@ -34,6 +34,7 @@ jobs:
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        id: release
         run: npx semantic-release
 
       - name: Upload | Distribution Artifacts
@@ -44,7 +45,7 @@ jobs:
           if-no-files-found: error
 
     outputs:
-      released: ${{ steps.release.outputs.released || 'false' }}
+      released: ${{ steps.release.conclusion == "success" || 'false' }}
 
   deploy:
     # 1. Separate out the deploy step from the publish step to run each step at
