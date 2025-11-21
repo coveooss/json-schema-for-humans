@@ -45,7 +45,7 @@ jobs:
           if-no-files-found: error
 
     outputs:
-      released: ${{ steps.release.conclusion == "success" || 'false' }}
+      released: ${{ steps.release.conclusion == 'success' || 'false' }}
 
   deploy:
     # 1. Separate out the deploy step from the publish step to run each step at
