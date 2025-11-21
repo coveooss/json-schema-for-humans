@@ -54,7 +54,7 @@ jobs:
     #    and it won't require reversing the release.
     runs-on: ubuntu-latest
     needs: semantic-release
-    if: ${{ needs.release.outputs.released == 'true' }}
+    if: ${{ needs.semantic-release.outputs.released == 'true' }}
     permissions:
       contents: read
       id-token: write
