@@ -2,19 +2,23 @@
     {% set first_property =  schema.kw_if | get_first_property %}
 
     {% if schema.kw_then %}
-<h5>If (<code>{{ first_property.property_name | escape }} = {{ first_property.const_value | python_to_json }}</code>)</h5>
-<blockquote>
-{% with schema=schema.kw_then, skip_headers=False, depth=depth %}
-    {% include "content.md" %}
-{% endwith %}
-</blockquote>
+        {%- filter md_heading(depth) -%}If (
+            {{- first_property.property_name | md_escape_for_table -}}
+            {{- " = " -}}
+            {{- first_property.const_value | python_to_json -}}
+        ){%- endfilter -%}
+        {% with schema=schema.kw_then, skip_headers=False, depth=depth %}
+            {% include "content.md" %}
+        {% endwith %}
     {% endif %}
     {% if schema.kw_else %}
-<h5>Else (<code>{{ first_property.property_name | escape }} != {{ first_property.const_value | python_to_json }}</code>)</h5>
-<blockquote>
-{% with schema=schema.kw_else, skip_headers=False, depth=depth %}
-    {% include "content.md" %}
-{% endwith %}
-</blockquote>
+        {%- filter md_heading(depth) -%}Else (i.e. {{ " " }}
+            {{- first_property.property_name | md_escape_for_table -}}
+            {{- " != " -}}
+            {{- first_property.const_value | python_to_json -}}
+        ){%- endfilter -%}
+        {% with schema=schema.kw_else, skip_headers=False, depth=depth %}
+            {% include "content.md" %}
+        {% endwith %}
     {% endif %}
 {% endif %}

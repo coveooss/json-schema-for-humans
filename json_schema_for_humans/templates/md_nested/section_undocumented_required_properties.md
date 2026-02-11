@@ -1,9 +1,7 @@
 {% set undocumented_required_properties = schema | get_undocumented_required_properties %}
 {% if undocumented_required_properties%}
-<h5>The following properties are required:</h5>
-<ul>
+{{ "The following properties are required" | md_heading(depth+1) }}
 {% for required_property in undocumented_required_properties %}
-<li><code>{{ required_property }}</code></li>
+* {{ required_property }}
 {% endfor %}
-</ul>
 {% endif %}

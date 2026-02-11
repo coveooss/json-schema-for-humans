@@ -1,13 +1,16 @@
 {% set depth = 0 %}
-<h1>{{ schema.keywords.get("title").literal | default("Schema Docs") }}</h1>
-
+{{ schema.keywords.get("title").literal | default("Schema Docs") | md_heading(depth) }}
+{% set contentBase %}
 {% with schema=schema, skip_headers=False, depth=depth %}
     {% include "content.md" %}
 {% endwith %}
+{% endset %}
 
-<hr/>
+{{ md_get_toc() }}
+
+{{ contentBase }}
+
+----------------------------------------------------------------------------------------------------------------------------
 {% if config.with_footer -%}
-<footer>
-<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a>{% if config.footer_show_time %} on {{ get_local_time() }}{% endif %}</p>
-</footer>
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans){% if config.footer_show_time %} on {{ get_local_time() }}{% endif %}
 {%- endif -%}
