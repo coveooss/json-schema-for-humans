@@ -26,13 +26,11 @@ must respect the following conditions
   {% endif %}
 
 </summary>
-<blockquote>
 
   {% with schema=sub_property, skip_headers=False, depth=depth+1 %}
     {% include "content.md" %}
   {% endwith %}
 
-</blockquote>
 </details>
 
 {% endfor %}
