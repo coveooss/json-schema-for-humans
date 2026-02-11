@@ -10,13 +10,12 @@
 <summary>
   <strong>
   {%- if sub_property is deprecated -%}~~{%- endif -%}
-  <a name="{{ html_id }}"></a>{{ sub_property.property_display_name | escape }}
+  <a name="{{ html_id }}"></a>{% with schema=sub_property %}{%- include "breadcrumbs.md" %}{% endwith %}
   {%- if sub_property is deprecated -%}~~ ❗{%- endif -%}
   </strong>
   {%- if not skip_required and sub_property.property_name and sub_property.is_required_property -%}
     {{ " " }}<code>Required</code>
   {%- endif -%}
-  {%- if sub_property.is_pattern_property %} <code>Pattern</code>{%- endif -%}
 
 </summary>
 

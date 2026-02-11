@@ -2,7 +2,7 @@
 
 {% for node in current_node.array_items %}
 <blockquote>
-<h5><a name="{{ node.html_id }}"></a>{{ node.definition_name or ("Requirement" if operator == "allOf" else "Option") ~ " " ~ loop.index }}</h5>
+<h5><a name="{{ node.html_id }}"></a>{% with schema=node %}{%- include "breadcrumbs.md" %}{% endwith %}</h5>
 
 {% with schema=node, skip_headers=False, depth=depth+1 %}
     {% include "content.md" %}
