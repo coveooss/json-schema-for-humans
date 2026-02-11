@@ -59,31 +59,20 @@ def get_numeric_minimum_restriction(schema_node: SchemaNode, default: str = "N/A
 
 def generate_table(table: List[List[str]]) -> str:
     """
-    Pretty print markdown table using list of rows.
+    Generate an HTML table using list of rows.
     Assuming first row is header line.
-    Ending with empty line for rendering bottom border.
-    Each column is str padded to max size string in the column.
     """
     if len(table) == 0:
         return ""
 
-    # compute max length of each column
-    max_cell_length: Dict = {}
+    output = "<table>\n"
     for idx_row, row in enumerate(table):
-        for idx_col, cell in enumerate(row):
-            max_cell_length[idx_col] = max(max_cell_length.get(idx_col, 0), len(cell))
-
-    # generate md table
-    output = ""
-    for idx_row, row in enumerate(table):
-        for idx_col, cell in enumerate(row):
-            output += "| " + cell.ljust(max_cell_length[idx_col], " ") + " "
-        output += "|\n"
-        # add header line
-        if idx_row == 0:
-            for idx_col, cell in enumerate(row):
-                output += "| " + "".ljust(max_cell_length[idx_col], "-") + " "
-            output += "|\n"
+        output += "  <tr>\n"
+        tag = "th" if idx_row == 0 else "td"
+        for cell in row:
+            output += f"    <{tag}>{cell}</{tag}>\n"
+        output += "  </tr>\n"
+    output += "</table>\n"
 
     return output
 
