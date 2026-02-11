@@ -2,6 +2,7 @@ from typing import Callable, Dict, List, Optional, Union
 from urllib.parse import quote, quote_plus
 
 import jinja2
+import markdown2  # type: ignore  # No stubs available
 
 from json_schema_for_humans import const, jinja_filters
 from json_schema_for_humans.schema.schema_node import SchemaNode
@@ -212,14 +213,14 @@ class MarkdownTemplate(object):
 
     def _make_generate_table_filter(self, env: jinja2.Environment) -> Callable[[List[List[str]]], str]:
         """Create a generate_table filter that uses the markdown renderer from the environment."""
-        md_renderer = env.globals.get("jsfh_md")
+        md_renderer: markdown2.Markdown = env.globals.get("jsfh_md")
         if md_renderer:
             return lambda table: generate_table(table, md_renderer.convert)
         return generate_table
 
     def _make_md_render_filter(self, env: jinja2.Environment) -> Callable[[str], str]:
         """Create a filter that renders markdown to HTML."""
-        md_renderer = env.globals.get("jsfh_md")
+        md_renderer: markdown2.Markdown = env.globals.get("jsfh_md")
         if md_renderer:
             return lambda text: md_renderer.convert(text) if text else ""
         return lambda text: text or ""
