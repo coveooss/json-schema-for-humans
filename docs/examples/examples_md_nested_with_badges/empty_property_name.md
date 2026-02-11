@@ -1,18 +1,46 @@
-<h1>Empty property name</h1>
+# Empty property name
 
-<code>Type: object</code>
+- [1. Property Empty property name >](#root)
+
+**Title:** Empty property name
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 <details>
 <summary>
-  <strong><a name="root"></a></strong></summary>
+<strong> <a name="root"></a>1. Property Empty property name ></strong>  
 
-<code>Type: string</code>
+</summary>
+<blockquote>
 
-<p>I don't know why you would want an empty property 🤷</p>
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
+**Description:** I don't know why you would want an empty property 🤷
+
+</blockquote>
 </details>
 
-<hr/>
-<footer>
-<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
-</footer>
+----------------------------------------------------------------------------------------------------------------------------
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

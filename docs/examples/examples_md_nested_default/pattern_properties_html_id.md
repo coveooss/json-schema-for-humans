@@ -1,88 +1,204 @@
-<h1>Person</h1>
+# Person
 
-<code>Type: object</code>
+- [1. [Optional] Property Person > not_a_pattern](#not_a_pattern)
+  - [1.1. [Optional] Pattern Property Person > not_a_pattern > Title 4](#not_a_pattern_pattern1)
+- [2. [Optional] Pattern Property Person > Title 1](#pattern1)
+- [3. [Optional] Pattern Property Person > Title 2](#pattern2)
+- [4. [Optional] Pattern Property Person > Title 3](#pattern3)
+
+**Title:** Person
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 <details>
 <summary>
-  <strong><a name="not_a_pattern"></a>not_a_pattern</strong></summary>
+<strong> <a name="not_a_pattern"></a>1. [Optional] Property Person > not_a_pattern</strong>  
 
-<code>Type: object</code>
-
-<details>
-<summary>
-  <strong><a name="not_a_pattern_pattern1"></a>Title 4</strong> <code>Pattern</code></summary>
-
+</summary>
 <blockquote>
-All properties whose name matches the regular expression
-<code>.$</code> (<a href="https://regex101.com/?regex=.%24">Test</a>)
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
+
+<details>
+<summary>
+<strong> <a name="not_a_pattern_pattern1"></a>1.1. [Optional] Pattern Property Person > not_a_pattern > Title 4</strong>  
+> All properties whose name matches the regular expression
+```.$``` ([Test](https://regex101.com/?regex=.%24))
 must respect the following conditions
+
+</summary>
+<blockquote>
+
+**Title:** Title 4
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
+
+**Description:** Description 4
+
 </blockquote>
-
-<h4>Title 4</h4>
-
-<code>Type: object</code>
-
-<p>Description 4</p>
-
 </details>
 
+</blockquote>
 </details>
 
 <details>
 <summary>
-  <strong><a name="pattern1"></a>Title 1</strong> <code>Pattern</code></summary>
-
-<blockquote>
-All properties whose name matches the regular expression
-<code>.*</code> (<a href="https://regex101.com/?regex=.%2A">Test</a>)
+<strong> <a name="pattern1"></a>2. [Optional] Pattern Property Person > Title 1</strong>  
+> All properties whose name matches the regular expression
+```.*``` ([Test](https://regex101.com/?regex=.%2A))
 must respect the following conditions
+
+</summary>
+<blockquote>
+
+**Title:** Title 1
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
+
+**Description:** Description 1
+
 </blockquote>
-
-<h4>Title 1</h4>
-
-<code>Type: object</code>
-
-<p>Description 1</p>
-
 </details>
 
 <details>
 <summary>
-  <strong><a name="pattern2"></a>Title 2</strong> <code>Pattern</code></summary>
-
-<blockquote>
-All properties whose name matches the regular expression
-<code>..</code> (<a href="https://regex101.com/?regex=..">Test</a>)
+<strong> <a name="pattern2"></a>3. [Optional] Pattern Property Person > Title 2</strong>  
+> All properties whose name matches the regular expression
+```..``` ([Test](https://regex101.com/?regex=..))
 must respect the following conditions
+
+</summary>
+<blockquote>
+
+**Title:** Title 2
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
+
+**Description:** Description 2
+
 </blockquote>
-
-<h4>Title 2</h4>
-
-<code>Type: object</code>
-
-<p>Description 2</p>
-
 </details>
 
 <details>
 <summary>
-  <strong><a name="pattern3"></a>Title 3</strong> <code>Pattern</code></summary>
-
-<blockquote>
-All properties whose name matches the regular expression
-<code>^.</code> (<a href="https://regex101.com/?regex=%5E.">Test</a>)
+<strong> <a name="pattern3"></a>4. [Optional] Pattern Property Person > Title 3</strong>  
+> All properties whose name matches the regular expression
+```^.``` ([Test](https://regex101.com/?regex=%5E.))
 must respect the following conditions
+
+</summary>
+<blockquote>
+
+**Title:** Title 3
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
+
+**Description:** Description 3
+
 </blockquote>
-
-<h4>Title 3</h4>
-
-<code>Type: object</code>
-
-<p>Description 3</p>
-
 </details>
 
-<hr/>
-<footer>
-<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
-</footer>
+----------------------------------------------------------------------------------------------------------------------------
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

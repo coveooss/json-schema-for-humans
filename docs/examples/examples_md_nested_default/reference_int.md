@@ -1,28 +1,98 @@
-<h1>Person</h1>
+# Person
 
-<code>Type: object</code>
+- [1. [Optional] Property Person > extra_options_object](#extra_options_object)
+- [2. [Optional] Property Person > name_looks_like_an_int](#name_looks_like_an_int)
+
+**Title:** Person
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 <details>
 <summary>
-  <strong><a name="extra_options_object"></a>extra_options_object</strong></summary>
+<strong> <a name="extra_options_object"></a>1. [Optional] Property Person > extra_options_object</strong>  
 
-<code>Type: object</code>
+</summary>
+<blockquote>
 
-<p>This is the one</p>
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/extra_options/anyOf/0</h1></td>
+  </tr>
+</table>
 
+**Description:** This is the one
+
+</blockquote>
 </details>
 
 <details>
 <summary>
-  <strong><a name="name_looks_like_an_int"></a>name_looks_like_an_int</strong></summary>
+<strong> <a name="name_looks_like_an_int"></a>2. [Optional] Property Person > name_looks_like_an_int</strong>  
 
-<code>Type: object</code>
+</summary>
+<blockquote>
 
-<p>This is just to be annoying. The property name looks like an int</p>
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/10</h1></td>
+  </tr>
+</table>
 
+**Description:** This is just to be annoying. The property name looks like an int
+
+</blockquote>
 </details>
 
-<hr/>
-<footer>
-<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
-</footer>
+----------------------------------------------------------------------------------------------------------------------------
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

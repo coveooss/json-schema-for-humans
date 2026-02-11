@@ -1,77 +1,191 @@
-<h1>Person</h1>
+# Person
 
-<code>Type: object</code>
+- [1. [Optional] Property Person > firstName](#firstName)
+- [2. [Optional] Property Person > lastName](#lastName)
+- [3. [Optional] Property Person > age](#age)
+- [4. [Optional] Property Person > moreInfo](#moreInfo)
+
+**Title:** Person
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 <details>
 <summary>
-  <strong><a name="firstName"></a>firstName</strong></summary>
+<strong> <a name="firstName"></a>1. [Optional] Property Person > firstName</strong>  
 
-<h4>Person</h4>
+</summary>
+<blockquote>
 
-<code>Type: string</code>
+**Title:** Person
 
-<p>the person's first name</p>
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
-<strong>Examples:</strong>
+**Description:** the person's first name
 
-<pre><code class="language-json">"Guido"</code></pre>
-<pre><code class="language-json">"BDFL"</code></pre>
+**Examples:**
 
+```json
+"Guido"
+```
+
+```json
+"BDFL"
+```
+
+</blockquote>
 </details>
 
 <details>
 <summary>
-  <strong><a name="lastName"></a>lastName</strong></summary>
+<strong> <a name="lastName"></a>2. [Optional] Property Person > lastName</strong>  
 
-<h4>Person</h4>
+</summary>
+<blockquote>
 
-<code>Type: string</code>
+**Title:** Person
 
-<p>The person's last name.</p>
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
-<strong>Example:</strong>
+**Description:** The person's last name.
 
-<pre><code class="language-json">"Van Rossum"</code></pre>
+**Example:**
 
+```json
+"Van Rossum"
+```
+
+</blockquote>
 </details>
 
 <details>
 <summary>
-  <strong><a name="age"></a>age</strong></summary>
+<strong> <a name="age"></a>3. [Optional] Property Person > age</strong>  
 
-<h4>Person</h4>
+</summary>
+<blockquote>
 
-<code>Type: integer</code>
+**Title:** Person
 
-<p>Age in years which must be equal to or greater than zero.</p>
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
-<code>Value must be greater or equal to 0</code>
+**Description:** Age in years which must be equal to or greater than zero.
 
-<strong>Example:</strong>
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Minimum</strong></td>
+    <td>&ge; 0</td>
+  </tr>
+</table>
 
-<pre><code class="language-json">64</code></pre>
+**Example:**
 
+```json
+64
+```
+
+</blockquote>
 </details>
 
 <details>
 <summary>
-  <strong><a name="moreInfo"></a>moreInfo</strong></summary>
+<strong> <a name="moreInfo"></a>4. [Optional] Property Person > moreInfo</strong>  
 
-<code>Type: object</code>
+</summary>
+<blockquote>
 
-<p>Any more info you want as an object</p>
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
-<strong>Example:</strong>
+**Description:** Any more info you want as an object
 
-<pre><code class="language-json">{
+**Example:**
+
+```json
+{
     "birthplace": "Haarlem, Netherlands",
     "favorite_emoji": "🐍",
     "motto": "Beautiful is better than ugly.\\nExplicit is better than implicit.\\nSimple is better than complex.\\nComplex is better than complicated.\\nFlat is better than nested.\\nSparse is better than dense.\\nReadability counts.\\nSpecial cases aren't special enough to break the rules.\\nAlthough practicality beats purity.\\nErrors should never pass silently.\\nUnless explicitly silenced.\\nIn the face of ambiguity, refuse the temptation to guess.\\nThere should be one-- and preferably only one --obvious way to do it.\\nAlthough that way may not be obvious at first unless you're Dutch.\\nNow is better than never.\\nAlthough never is often better than *right* now.\\nIf the implementation is hard to explain, it's a bad idea.\\nIf the implementation is easy to explain, it may be a good idea.\\nNamespaces are one honking great idea -- let's do more of those!"
-}</code></pre>
+}
+```
 
+</blockquote>
 </details>
 
-<hr/>
-<footer>
-<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
-</footer>
+----------------------------------------------------------------------------------------------------------------------------
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

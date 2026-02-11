@@ -32,10 +32,20 @@
 
 **Title:** JSON Schema for Humans configuration file
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 **Description:** Choose how to generate JSON Schema for Humans documentation file.
 
@@ -52,10 +62,20 @@ Configuration parameters can be provided in several ways:
 </summary>
 <blockquote>
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `boolean` |
-| **Default** | `true`    |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>true</code></td>
+  </tr>
+</table>
 
 **Description:** (HTML outputs only)
 Whether to consider the description as Markdown and render it accordingly.
@@ -70,10 +90,20 @@ Whether to consider the description as Markdown and render it accordingly.
 </summary>
 <blockquote>
 
-|             |                            |
-| ----------- | -------------------------- |
-| **Type**    | `enum (of null or string)` |
-| **Default** | `"escape"`                 |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of null or string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>"escape"</code></td>
+  </tr>
+</table>
 
 **Description:** (HTML outputs only)
 (Only used with `description_is_markdown`)
@@ -98,10 +128,20 @@ Must be one of:
 </summary>
 <blockquote>
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `boolean` |
-| **Default** | `false`   |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>false</code></td>
+  </tr>
+</table>
 
 **Description:** Add an `Expand all` and a `Collapse all` button at the top of the generated documentation.
 
@@ -115,10 +155,20 @@ Must be one of:
 </summary>
 <blockquote>
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `boolean` |
-| **Default** | `true`    |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>true</code></td>
+  </tr>
+</table>
 
 **Description:** For each property, show the relative place of that property in the schema.
 
@@ -132,10 +182,20 @@ Must be one of:
 </summary>
 <blockquote>
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `boolean` |
-| **Default** | `true`    |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>true</code></td>
+  </tr>
+</table>
 
 **Description:** If a description is considered big, show only the beginning and add a `Read more` button.
 
@@ -149,10 +209,20 @@ Must be one of:
 </summary>
 <blockquote>
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `boolean` |
-| **Default** | `true`    |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>true</code></td>
+  </tr>
+</table>
 
 **Description:** If an example is considered big, collapse it, it can be displayed with a `Show` option.
 
@@ -166,10 +236,20 @@ Must be one of:
 </summary>
 <blockquote>
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `boolean` |
-| **Default** | `true`    |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>true</code></td>
+  </tr>
+</table>
 
 **Description:** If several `$ref` points to the same definition, only render the documentation for this definition the first time. All other occurrences are replaced by an anchor link to the first occurrence. The first occurrence is the one that is the least nested from the top of the schema and appears first in that nesting level.
 
@@ -185,10 +265,20 @@ Must be one of:
 </summary>
 <blockquote>
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `25`      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>25</code></td>
+  </tr>
+</table>
 
 **Description:** *Advanced option*
 If `link_to_reused_ref` is false and a `$ref` in the schema refers to a parent of itself, we would get a `RecursionError` trying to render the documentation. To avoid this, each reference is checked for circular references.
@@ -207,10 +297,20 @@ In other words, if a schema has a deeply nested element that refers to itself, t
 </summary>
 <blockquote>
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `boolean` |
-| **Default** | `false`   |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>false</code></td>
+  </tr>
+</table>
 
 **Description:** Mark a property as deprecated (with a big red badge) if the description contains the string `[​Deprecated`.
 
@@ -224,10 +324,20 @@ In other words, if a schema has a deeply nested element that refers to itself, t
 </summary>
 <blockquote>
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `boolean` |
-| **Default** | `false`   |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>false</code></td>
+  </tr>
+</table>
 
 **Description:** Extract the default value of a property from the description like this: ``[Default `the_default_value`]``.
 
@@ -243,10 +353,20 @@ The default value from the "default" attribute will be used in priority.
 </summary>
 <blockquote>
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `boolean` |
-| **Default** | `true`    |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>true</code></td>
+  </tr>
+</table>
 
 **Description:** Copy `schema_doc.css` to the same directory as `RESULT_FILE` after generation.
 
@@ -260,10 +380,20 @@ The default value from the "default" attribute will be used in priority.
 </summary>
 <blockquote>
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `boolean` |
-| **Default** | `true`    |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>true</code></td>
+  </tr>
+</table>
 
 **Description:** Copy `schema_doc.min.js` to the same directory as `RESULT_FILE` after generation.
 
@@ -279,10 +409,20 @@ This file contains the logic for the anchor links.
 </summary>
 <blockquote>
 
-|             |                    |
-| ----------- | ------------------ |
-| **Type**    | `enum (of string)` |
-| **Default** | `"js"`             |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>"js"</code></td>
+  </tr>
+</table>
 
 **Description:** The name of the built-in template to use to render the documentation.
 
@@ -296,12 +436,16 @@ This file contains the logic for the anchor links.
 
 `md_nested` is the markdown template with collapsible nested sections.
 
+`techdocs` is optimized for TechDocs/MkDocs Material with collapsible admonitions.
+
 Must be one of:
 * "flat"
 * "js"
 * "js_offline"
 * "md"
 * "md_nested"
+* "md_sober"
+* "techdocs"
 
 </blockquote>
 </details>
@@ -313,10 +457,20 @@ Must be one of:
 </summary>
 <blockquote>
 
-|             |          |
-| ----------- | -------- |
-| **Type**    | `string` |
-| **Default** | `null`   |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>null</code></td>
+  </tr>
+</table>
 
 **Description:** Path to a custom Jinja2 template file.
 
@@ -334,10 +488,20 @@ If no output file is specified, the extension of the template file will be used 
 </summary>
 <blockquote>
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `boolean` |
-| **Default** | `true`    |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>true</code></td>
+  </tr>
+</table>
 
 **Description:** Whether to render table of contents.
 
@@ -351,10 +515,20 @@ If no output file is specified, the extension of the template file will be used 
 </summary>
 <blockquote>
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `boolean` |
-| **Default** | `false`   |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>false</code></td>
+  </tr>
+</table>
 
 **Description:** Whether to display examples as YAML instead of JSON
 
@@ -368,10 +542,20 @@ If no output file is specified, the extension of the template file will be used 
 </summary>
 <blockquote>
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `boolean` |
-| **Default** | `false`   |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>false</code></td>
+  </tr>
+</table>
 
 **Description:** Generate HTML ids for anchor links without special characters (keep only letters, digits, `_`, and `-`).
 
@@ -387,11 +571,24 @@ This is the old behaviour and is only needed for browsers that do not support HT
 </summary>
 <blockquote>
 
-|                           |                                                                                                                                     |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                            |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)                                                         |
-| **Default**               | `{"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": null, "breaks": {"on_newline": true, "on_backslash": true}}` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>{"fenced-code-blocks": {"cssclass": "highlight jumbotron"}, "tables": null, "breaks": {"on_newline": true, "on_backslash": true}}</code></td>
+  </tr>
+</table>
 
 **Description:** (Only used with `description_is_markdown`)
 [Markdown 2 options](https://github.com/trentm/python-markdown2/wiki/Extras) for the descriptions.
@@ -419,10 +616,20 @@ This is the old behaviour and is only needed for browsers that do not support HT
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 **Description:** specific options to md template
 
@@ -433,10 +640,20 @@ This is the old behaviour and is only needed for browsers that do not support HT
 </summary>
 <blockquote>
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `boolean` |
-| **Default** | `false`   |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>false</code></td>
+  </tr>
+</table>
 
 **Description:** if true generate badges(eg: optional, required) using embedded image (https://img.shields.io).
 
@@ -452,10 +669,20 @@ This is the old behaviour and is only needed for browsers that do not support HT
 </summary>
 <blockquote>
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `boolean` |
-| **Default** | `true`    |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>true</code></td>
+  </tr>
+</table>
 
 **Description:** if true generate heading numbers to correspond to table of contents.
 
@@ -471,10 +698,20 @@ This is the old behaviour and is only needed for browsers that do not support HT
 </summary>
 <blockquote>
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `boolean` |
-| **Default** | `true`    |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>true</code></td>
+  </tr>
+</table>
 
 **Description:** if true generate array restrictions section.
 
@@ -490,31 +727,71 @@ This is the old behaviour and is only needed for browsers that do not support HT
 </summary>
 <blockquote>
 
-|          |                             |
-| -------- | --------------------------- |
-| **Type** | `array of enum (of string)` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>array of enum (of string)</code></td>
+  </tr>
+</table>
 
 **Description:** array of column names to display in the properties table.
 
  if empty, the default is ['Property','Pattern','Type','Deprecated','Definition','Title/Description']
 
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
+<table>
+  <tr>
+    <th></th>
+    <th>Array restrictions</th>
+  </tr>
+  <tr>
+    <td><strong>Min items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Max items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Items unicity</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Additional items</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Tuple validation</strong></td>
+    <td>See below</td>
+  </tr>
+</table>
 
-| Each item of this array must be                                                       | Description |
-| ------------------------------------------------------------------------------------- | ----------- |
-| [properties_table_columns items](#template_md_options_properties_table_columns_items) | -           |
+<table>
+  <tr>
+    <th>Each item of this array must be</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="#template_md_options_properties_table_columns_items">properties<em>table</em>columns items</a></td>
+    <td>-</td>
+  </tr>
+</table>
 
 #### <a name="autogenerated_heading_2"></a>19.4.1. JSON Schema for Humans configuration file > template_md_options > properties_table_columns > properties_table_columns items
 
-|          |                    |
-| -------- | ------------------ |
-| **Type** | `enum (of string)` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+</table>
 
 Must be one of:
 * "Property"
@@ -537,10 +814,20 @@ Must be one of:
 </summary>
 <blockquote>
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `boolean` |
-| **Default** | `true`    |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>true</code></td>
+  </tr>
+</table>
 
 **Description:** Whether to show the footer linking to the library repo and with the generation datetime
 
@@ -554,10 +841,20 @@ Must be one of:
 </summary>
 <blockquote>
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `boolean` |
-| **Default** | `true`    |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>true</code></td>
+  </tr>
+</table>
 
 **Description:** Whether the footer should display the generation time
 
@@ -571,12 +868,83 @@ Must be one of:
 </summary>
 <blockquote>
 
-|                |           |
-| -------------- | --------- |
-| **Type**       | `boolean` |
-| **Deprecated** |
-| !              | [         | D | e | p | r | e | c | a | t | e | d | ] | ( | h | t | t | p | s | : | / | / | i | m | g | . | s | h | i | e | l | d | s | . | i | o | / | b | a | d | g | e | / | D | e | p | r | e | c | a | t | e | d | - | r | e | d | ) |
-| **Default**    | `false`   |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Deprecated</strong></td>
+  </tr>
+  <tr>
+    <td>!</td>
+    <td>[</td>
+    <td>D</td>
+    <td>e</td>
+    <td>p</td>
+    <td>r</td>
+    <td>e</td>
+    <td>c</td>
+    <td>a</td>
+    <td>t</td>
+    <td>e</td>
+    <td>d</td>
+    <td>]</td>
+    <td>(</td>
+    <td>h</td>
+    <td>t</td>
+    <td>t</td>
+    <td>p</td>
+    <td>s</td>
+    <td>:</td>
+    <td>/</td>
+    <td>/</td>
+    <td>i</td>
+    <td>m</td>
+    <td>g</td>
+    <td>.</td>
+    <td>s</td>
+    <td>h</td>
+    <td>i</td>
+    <td>e</td>
+    <td>l</td>
+    <td>d</td>
+    <td>s</td>
+    <td>.</td>
+    <td>i</td>
+    <td>o</td>
+    <td>/</td>
+    <td>b</td>
+    <td>a</td>
+    <td>d</td>
+    <td>g</td>
+    <td>e</td>
+    <td>/</td>
+    <td>D</td>
+    <td>e</td>
+    <td>p</td>
+    <td>r</td>
+    <td>e</td>
+    <td>c</td>
+    <td>a</td>
+    <td>t</td>
+    <td>e</td>
+    <td>d</td>
+    <td>-</td>
+    <td>r</td>
+    <td>e</td>
+    <td>d</td>
+    <td>)</td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>false</code></td>
+  </tr>
+</table>
 
 **Description:** [Deprecated]
 
@@ -590,12 +958,83 @@ Must be one of:
 </summary>
 <blockquote>
 
-|                |           |
-| -------------- | --------- |
-| **Type**       | `boolean` |
-| **Deprecated** |
-| !              | [         | D | e | p | r | e | c | a | t | e | d | ] | ( | h | t | t | p | s | : | / | / | i | m | g | . | s | h | i | e | l | d | s | . | i | o | / | b | a | d | g | e | / | D | e | p | r | e | c | a | t | e | d | - | r | e | d | ) |
-| **Default**    | `true`    |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Deprecated</strong></td>
+  </tr>
+  <tr>
+    <td>!</td>
+    <td>[</td>
+    <td>D</td>
+    <td>e</td>
+    <td>p</td>
+    <td>r</td>
+    <td>e</td>
+    <td>c</td>
+    <td>a</td>
+    <td>t</td>
+    <td>e</td>
+    <td>d</td>
+    <td>]</td>
+    <td>(</td>
+    <td>h</td>
+    <td>t</td>
+    <td>t</td>
+    <td>p</td>
+    <td>s</td>
+    <td>:</td>
+    <td>/</td>
+    <td>/</td>
+    <td>i</td>
+    <td>m</td>
+    <td>g</td>
+    <td>.</td>
+    <td>s</td>
+    <td>h</td>
+    <td>i</td>
+    <td>e</td>
+    <td>l</td>
+    <td>d</td>
+    <td>s</td>
+    <td>.</td>
+    <td>i</td>
+    <td>o</td>
+    <td>/</td>
+    <td>b</td>
+    <td>a</td>
+    <td>d</td>
+    <td>g</td>
+    <td>e</td>
+    <td>/</td>
+    <td>D</td>
+    <td>e</td>
+    <td>p</td>
+    <td>r</td>
+    <td>e</td>
+    <td>c</td>
+    <td>a</td>
+    <td>t</td>
+    <td>e</td>
+    <td>d</td>
+    <td>-</td>
+    <td>r</td>
+    <td>e</td>
+    <td>d</td>
+    <td>)</td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>true</code></td>
+  </tr>
+</table>
 
 **Description:** [Deprecated]
 
@@ -609,11 +1048,79 @@ Must be one of:
 </summary>
 <blockquote>
 
-|                |          |
-| -------------- | -------- |
-| **Type**       | `string` |
-| **Deprecated** |
-| !              | [        | D | e | p | r | e | c | a | t | e | d | ] | ( | h | t | t | p | s | : | / | / | i | m | g | . | s | h | i | e | l | d | s | . | i | o | / | b | a | d | g | e | / | D | e | p | r | e | c | a | t | e | d | - | r | e | d | ) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Deprecated</strong></td>
+  </tr>
+  <tr>
+    <td>!</td>
+    <td>[</td>
+    <td>D</td>
+    <td>e</td>
+    <td>p</td>
+    <td>r</td>
+    <td>e</td>
+    <td>c</td>
+    <td>a</td>
+    <td>t</td>
+    <td>e</td>
+    <td>d</td>
+    <td>]</td>
+    <td>(</td>
+    <td>h</td>
+    <td>t</td>
+    <td>t</td>
+    <td>p</td>
+    <td>s</td>
+    <td>:</td>
+    <td>/</td>
+    <td>/</td>
+    <td>i</td>
+    <td>m</td>
+    <td>g</td>
+    <td>.</td>
+    <td>s</td>
+    <td>h</td>
+    <td>i</td>
+    <td>e</td>
+    <td>l</td>
+    <td>d</td>
+    <td>s</td>
+    <td>.</td>
+    <td>i</td>
+    <td>o</td>
+    <td>/</td>
+    <td>b</td>
+    <td>a</td>
+    <td>d</td>
+    <td>g</td>
+    <td>e</td>
+    <td>/</td>
+    <td>D</td>
+    <td>e</td>
+    <td>p</td>
+    <td>r</td>
+    <td>e</td>
+    <td>c</td>
+    <td>a</td>
+    <td>t</td>
+    <td>e</td>
+    <td>d</td>
+    <td>-</td>
+    <td>r</td>
+    <td>e</td>
+    <td>d</td>
+    <td>)</td>
+  </tr>
+</table>
 
 **Description:** [Deprecated]
 

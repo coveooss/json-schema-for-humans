@@ -1,34 +1,87 @@
-<h1>Schema Docs</h1>
+# Schema Docs
 
-<code>Type: object</code>
+- [1. [Optional] Property root > name](#name)
+- [2. [Optional] Property root > alignment](#alignment)
 
-<code>No Additional Properties</code>
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Not%20allowed-red" alt="Not allowed" /></td>
+  </tr>
+</table>
 
 <details>
 <summary>
-  <strong><a name="name"></a>name</strong></summary>
+<strong> <a name="name"></a>1. [Optional] Property root > name</strong>  
 
-<code>Type: string</code>
+</summary>
+<blockquote>
 
-<p>a filled string</p>
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/filled_string</h1></td>
+  </tr>
+</table>
 
-<code>Min length: 1</code>
+**Description:** a filled string
 
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Min length</strong></td>
+    <td>1</td>
+  </tr>
+</table>
+
+</blockquote>
 </details>
 
 <details>
 <summary>
-  <strong><a name="alignment"></a>alignment</strong></summary>
+<strong> <a name="alignment"></a>2. [Optional] Property root > alignment</strong>  
 
-<code>Type: string</code>
+</summary>
+<blockquote>
 
-<p>a filled string</p>
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#name">name</a></td>
+  </tr>
+</table>
 
-<a href="#name">Same definition as name</a>
+**Description:** a filled string
 
+</blockquote>
 </details>
 
-<hr/>
-<footer>
-<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
-</footer>
+----------------------------------------------------------------------------------------------------------------------------
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

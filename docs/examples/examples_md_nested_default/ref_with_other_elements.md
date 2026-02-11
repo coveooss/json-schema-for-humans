@@ -1,56 +1,185 @@
-<h1>OF</h1>
+# OF
 
-<code>Type: object</code>
+- [1. [Optional] Property OF > uuid](#uuid)
+- [2. [Optional] Property OF > firstName](#firstName)
+- [3. [Optional] Property OF > lastName](#lastName)
+
+**Title:** OF
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 <details>
 <summary>
-  <strong><a name="uuid"></a>uuid</strong></summary>
+<strong> <a name="uuid"></a>1. [Optional] Property OF > uuid</strong>  
 
-<code>Type: string</code>
+</summary>
+<blockquote>
 
-<p>Unique Identifer</p>
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/$defs/ofString</h1></td>
+  </tr>
+</table>
 
-<code>Min length: 5</code><code>Max length: 250</code>
+**Description:** Unique Identifer
 
-<strong>Example:</strong>
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Min length</strong></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td><strong>Max length</strong></td>
+    <td>250</td>
+  </tr>
+</table>
 
-<pre><code class="language-json">"29292929292929292929292"</code></pre>
+**Example:**
 
+```json
+"29292929292929292929292"
+```
+
+</blockquote>
 </details>
 
 <details>
 <summary>
-  <strong><a name="firstName"></a>firstName</strong></summary>
+<strong> <a name="firstName"></a>2. [Optional] Property OF > firstName</strong>  
 
-<code>Type: string</code>
+</summary>
+<blockquote>
 
-<p>first name</p>
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/$defs/ofString</h1></td>
+  </tr>
+</table>
 
-<code>Min length: 10</code><code>Max length: 250</code>
+**Description:** first name
 
-<strong>Example:</strong>
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Min length</strong></td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td><strong>Max length</strong></td>
+    <td>250</td>
+  </tr>
+</table>
 
-<pre><code class="language-json">"John"</code></pre>
+**Example:**
 
+```json
+"John"
+```
+
+</blockquote>
 </details>
 
 <details>
 <summary>
-  <strong><a name="lastName"></a>lastName</strong></summary>
+<strong> <a name="lastName"></a>3. [Optional] Property OF > lastName</strong>  
 
-<code>Type: string</code>
+</summary>
+<blockquote>
 
-<p>last name</p>
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/$defs/ofString</h1></td>
+  </tr>
+</table>
 
-<code>Min length: 5</code><code>Max length: 10</code>
+**Description:** last name
 
-<strong>Example:</strong>
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Min length</strong></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td><strong>Max length</strong></td>
+    <td>10</td>
+  </tr>
+</table>
 
-<pre><code class="language-json">"Doe"</code></pre>
+**Example:**
 
+```json
+"Doe"
+```
+
+</blockquote>
 </details>
 
-<hr/>
-<footer>
-<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
-</footer>
+----------------------------------------------------------------------------------------------------------------------------
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
