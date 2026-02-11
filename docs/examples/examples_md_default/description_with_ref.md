@@ -4,49 +4,147 @@
   - [1.1. Property `root > outer > inner`](#outer_inner)
 - [2. Property `root > outer2`](#outer2)
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+</table>
 
-| Property             | Pattern | Type   | Deprecated | Definition                    | Title/Description      |
-| -------------------- | ------- | ------ | ---------- | ----------------------------- | ---------------------- |
-| + [outer](#outer )   | No      | object | No         | In #/definitions/inner schema | We should see this     |
-| - [outer2](#outer2 ) | No      | object | No         | Same as [outer](#outer )      | We should see this too |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">outer</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>In #/definitions/inner schema</td>
+    <td>We should see this</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">outer2</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>Same as <a href="#">outer</a></td>
+    <td>We should see this too</td>
+  </tr>
+</table>
 
 ## <a name="outer"></a>1. Property `root > outer`
 
-|                           |                            |
-| ------------------------- | -------------------------- |
-| **Type**                  | `object`                   |
-| **Required**              | Yes                        |
-| **Additional properties** | Not allowed                |
-| **Defined in**            | #/definitions/inner schema |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/inner schema</h1></td>
+  </tr>
+</table>
 
 **Description:** We should see this
 
-| Property                 | Pattern | Type   | Deprecated | Definition | Title/Description |
-| ------------------------ | ------- | ------ | ---------- | ---------- | ----------------- |
-| + [inner](#outer_inner ) | No      | string | No         | -          | inner description |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">inner</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>inner description</td>
+  </tr>
+</table>
 
 ### <a name="outer_inner"></a>1.1. Property `root > outer > inner`
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** inner description
 
 ## <a name="outer2"></a>2. Property `root > outer2`
 
-|                           |                 |
-| ------------------------- | --------------- |
-| **Type**                  | `object`        |
-| **Required**              | No              |
-| **Additional properties** | Not allowed     |
-| **Same definition as**    | [outer](#outer) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#outer">outer</a></td>
+  </tr>
+</table>
 
 **Description:** We should see this too
 

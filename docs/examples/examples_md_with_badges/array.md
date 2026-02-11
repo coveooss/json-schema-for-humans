@@ -7,86 +7,248 @@
     - [2.1.1. Property `root > vegetables > vegetables items > veggieName`](#vegetables_items_veggieName)
     - [2.1.2. Property `root > vegetables > vegetables items > veggieLike`](#vegetables_items_veggieLike)
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 **Description:** A schema with an array
 
-| Property                     | Pattern | Type            | Deprecated | Definition | Title/Description |
-| ---------------------------- | ------- | --------------- | ---------- | ---------- | ----------------- |
-| - [fruits](#fruits )         | No      | array of string | No         | -          | -                 |
-| - [vegetables](#vegetables ) | No      | array           | No         | -          | -                 |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">fruits</a></li>
+</ul></td>
+    <td>No</td>
+    <td>array of string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">vegetables</a></li>
+</ul></td>
+    <td>No</td>
+    <td>array</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
 
 ## <a name="fruits"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > fruits`
 
-|          |                   |
-| -------- | ----------------- |
-| **Type** | `array of string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>array of string</code></td>
+  </tr>
+</table>
 
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
+<table>
+  <tr>
+    <th></th>
+    <th>Array restrictions</th>
+  </tr>
+  <tr>
+    <td><strong>Min items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Max items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Items unicity</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Additional items</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Tuple validation</strong></td>
+    <td>See below</td>
+  </tr>
+</table>
 
-| Each item of this array must be | Description |
-| ------------------------------- | ----------- |
-| [fruits items](#fruits_items)   | -           |
+<table>
+  <tr>
+    <th>Each item of this array must be</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="#fruits_items">fruits items</a></td>
+    <td>-</td>
+  </tr>
+</table>
 
 ### <a name="fruits_items"></a>1.1. root > fruits > fruits items
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
 ## <a name="vegetables"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > vegetables`
 
-|          |         |
-| -------- | ------- |
-| **Type** | `array` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>array</code></td>
+  </tr>
+</table>
 
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
+<table>
+  <tr>
+    <th></th>
+    <th>Array restrictions</th>
+  </tr>
+  <tr>
+    <td><strong>Min items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Max items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Items unicity</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Additional items</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Tuple validation</strong></td>
+    <td>See below</td>
+  </tr>
+</table>
 
-| Each item of this array must be | Description |
-| ------------------------------- | ----------- |
-| [veggie](#vegetables_items)     | -           |
+<table>
+  <tr>
+    <th>Each item of this array must be</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="#vegetables_items">veggie</a></td>
+    <td>-</td>
+  </tr>
+</table>
 
 ### <a name="vegetables_items"></a>2.1. root > vegetables > veggie
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | #/definitions/veggie                                                        |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/veggie</h1></td>
+  </tr>
+</table>
 
-| Property                                      | Pattern | Type    | Deprecated | Definition | Title/Description          |
-| --------------------------------------------- | ------- | ------- | ---------- | ---------- | -------------------------- |
-| + [veggieName](#vegetables_items_veggieName ) | No      | string  | No         | -          | The name of the vegetable. |
-| + [veggieLike](#vegetables_items_veggieLike ) | No      | boolean | No         | -          | Do I like this vegetable?  |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">veggieName</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>The name of the vegetable.</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">veggieLike</a></li>
+</ul></td>
+    <td>No</td>
+    <td>boolean</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Do I like this vegetable?</td>
+  </tr>
+</table>
 
 #### <a name="vegetables_items_veggieName"></a>2.1.1. Property `root > vegetables > vegetables items > veggieName`
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
 **Description:** The name of the vegetable.
 
 #### <a name="vegetables_items_veggieLike"></a>2.1.2. Property `root > vegetables > vegetables items > veggieLike`
 
-|          |           |
-| -------- | --------- |
-| **Type** | `boolean` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+</table>
 
 **Description:** Do I like this vegetable?
 

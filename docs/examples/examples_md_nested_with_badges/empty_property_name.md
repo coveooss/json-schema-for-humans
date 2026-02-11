@@ -2,27 +2,42 @@
 
 - [1. Property Empty property name >](#root)
 
-**Title:** Empty property name
+<p><strong>Title:</strong> Empty property name</p>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="root"></a>1. Property Empty property name ></strong>  
 
 </summary>
-<blockquote>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
-**Description:** I don't know why you would want an empty property 🤷
+<p><strong>Description:</strong> I don't know why you would want an empty property 🤷</p>
 
-</blockquote>
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------

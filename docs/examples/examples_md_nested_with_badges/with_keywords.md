@@ -12,27 +12,42 @@
 - [10. [Optional] Property Person > patternProperties](#patternProperties)
 - [11. [Optional] Property Person > required](#required)
 
-**Title:** Person
+<p><strong>Title:</strong> Person</p>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="default"></a>1. [Required] Property Person > default</strong>  
 
 </summary>
-<blockquote>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
-**Description:** default
+<p><strong>Description:</strong> default</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -40,15 +55,20 @@
 <strong> <a name="examples"></a>2. [Required] Property Person > examples</strong>  
 
 </summary>
-<blockquote>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
-**Description:** examples
+<p><strong>Description:</strong> examples</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -56,16 +76,24 @@
 <strong> <a name="if"></a>3. [Optional] Property Person > if</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-**Description:** if
+<p><strong>Description:</strong> if</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -73,16 +101,24 @@
 <strong> <a name="then"></a>4. [Optional] Property Person > then</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-**Description:** then
+<p><strong>Description:</strong> then</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -90,16 +126,24 @@
 <strong> <a name="else"></a>5. [Optional] Property Person > else</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-**Description:** else
+<p><strong>Description:</strong> else</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -107,16 +151,24 @@
 <strong> <a name="anyOf"></a>6. [Optional] Property Person > anyOf</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-**Description:** anyOf
+<p><strong>Description:</strong> anyOf</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -124,16 +176,24 @@
 <strong> <a name="allOf"></a>7. [Optional] Property Person > allOf</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-**Description:** allOf
+<p><strong>Description:</strong> allOf</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -141,16 +201,24 @@
 <strong> <a name="not"></a>8. [Optional] Property Person > not</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-**Description:** not
+<p><strong>Description:</strong> not</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -158,16 +226,24 @@
 <strong> <a name="properties"></a>9. [Optional] Property Person > properties</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-**Description:** properties
+<p><strong>Description:</strong> properties</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -175,16 +251,24 @@
 <strong> <a name="patternProperties"></a>10. [Optional] Property Person > patternProperties</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-**Description:** patternProperties
+<p><strong>Description:</strong> patternProperties</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -192,16 +276,24 @@
 <strong> <a name="required"></a>11. [Optional] Property Person > required</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-**Description:** required
+<p><strong>Description:</strong> required</p>
 
-</blockquote>
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------

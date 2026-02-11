@@ -127,122 +127,390 @@
         - [2.1.3.5.1. root > objectA > signature > oneOf > item 0 > signers > Signature > excludes > excludes items](#objectA_signature_oneOf_i0_signers_items_excludes_items)
       - [2.1.3.6. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > value`](#objectA_signature_oneOf_i0_signers_items_value)
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
-| Property               | Pattern | Type   | Deprecated | Definition | Title/Description |
-| ---------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [objectA](#objectA ) | No      | object | No         | -          | -                 |
-| - [objectB](#objectB ) | No      | object | No         | -          | -                 |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">objectA</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">objectB</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
 
 ## <a name="objectA"></a>1. Property `root > objectA`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
-| Property                           | Pattern | Type   | Deprecated | Definition                 | Title/Description |
-| ---------------------------------- | ------- | ------ | ---------- | -------------------------- | ----------------- |
-| - [signature](#objectA_signature ) | No      | object | No         | In #/definitions/signature | Signature         |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">signature</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>In #/definitions/signature</td>
+    <td>Signature</td>
+  </tr>
+</table>
 
 ### <a name="objectA_signature"></a>1.1. Property `root > objectA > signature`
 
 **Title:** Signature
 
-|                           |                         |
-| ------------------------- | ----------------------- |
-| **Type**                  | `combining`             |
-| **Required**              | No                      |
-| **Additional properties** | Any type allowed        |
-| **Defined in**            | #/definitions/signature |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>combining</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/signature</h1></td>
+  </tr>
+</table>
 
-| One of(Option)                           |
-| ---------------------------------------- |
-| [item 0](#objectA_signature_oneOf_i0)    |
-| [item 1](#objectA_signature_oneOf_i1)    |
-| [Signature](#objectA_signature_oneOf_i2) |
+<table>
+  <tr>
+    <th>One of(Option)</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0">item 0</a></td>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i1">item 1</a></td>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i2">Signature</a></td>
+  </tr>
+</table>
 
 #### <a name="objectA_signature_oneOf_i0"></a>1.1.1. Property `root > objectA > signature > oneOf > item 0`
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+</table>
 
-| Property                                          | Pattern | Type  | Deprecated | Definition | Title/Description |
-| ------------------------------------------------- | ------- | ----- | ---------- | ---------- | ----------------- |
-| - [signers](#objectA_signature_oneOf_i0_signers ) | No      | array | No         | -          | Signature         |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">signers</a></li>
+</ul></td>
+    <td>No</td>
+    <td>array</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Signature</td>
+  </tr>
+</table>
 
 ##### <a name="objectA_signature_oneOf_i0_signers"></a>1.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers`
 
 **Title:** Signature
 
-|              |         |
-| ------------ | ------- |
-| **Type**     | `array` |
-| **Required** | No      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>array</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Unique top level property for Multiple Signatures. (multisignature)
 
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
+<table>
+  <tr>
+    <th></th>
+    <th>Array restrictions</th>
+  </tr>
+  <tr>
+    <td><strong>Min items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Max items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Items unicity</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Additional items</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Tuple validation</strong></td>
+    <td>See below</td>
+  </tr>
+</table>
 
-| Each item of this array must be                        | Description |
-| ------------------------------------------------------ | ----------- |
-| [Signature](#objectA_signature_oneOf_i0_signers_items) | -           |
+<table>
+  <tr>
+    <th>Each item of this array must be</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items">Signature</a></td>
+    <td>-</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items"></a>1.1.1.1.1. root > objectA > signature > oneOf > item 0 > signers > Signature
 
 **Title:** Signature
 
-|                           |                      |
-| ------------------------- | -------------------- |
-| **Type**                  | `object`             |
-| **Required**              | No                   |
-| **Additional properties** | Not allowed          |
-| **Defined in**            | #/definitions/signer |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/signer</h1></td>
+  </tr>
+</table>
 
-| Property                                                                        | Pattern | Type            | Deprecated | Definition                 | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | --------------- | ---------- | -------------------------- | ----------------- |
-| + [algorithm](#objectA_signature_oneOf_i0_signers_items_algorithm )             | No      | Combination     | No         | -                          | -                 |
-| - [keyId](#objectA_signature_oneOf_i0_signers_items_keyId )                     | No      | string          | No         | -                          | Key ID            |
-| - [publicKey](#objectA_signature_oneOf_i0_signers_items_publicKey )             | No      | object          | No         | In #/definitions/publicKey | Public key        |
-| - [certificatePath](#objectA_signature_oneOf_i0_signers_items_certificatePath ) | No      | array of string | No         | -                          | Certificate path  |
-| - [excludes](#objectA_signature_oneOf_i0_signers_items_excludes )               | No      | array of string | No         | -                          | Excludes          |
-| + [value](#objectA_signature_oneOf_i0_signers_items_value )                     | No      | string          | No         | -                          | Signature         |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">algorithm</a></li>
+</ul></td>
+    <td>No</td>
+    <td>Combination</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">keyId</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Key ID</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">publicKey</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>In #/definitions/publicKey</td>
+    <td>Public key</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">certificatePath</a></li>
+</ul></td>
+    <td>No</td>
+    <td>array of string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Certificate path</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">excludes</a></li>
+</ul></td>
+    <td>No</td>
+    <td>array of string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Excludes</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">value</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Signature</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_algorithm"></a>1.1.1.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `combining`      |
-| **Required**              | Yes              |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>combining</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
-| One of(Option)                                                            |
-| ------------------------------------------------------------------------- |
-| [Algorithm](#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i0) |
-| [Algorithm](#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i1) |
+<table>
+  <tr>
+    <th>One of(Option)</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i0">Algorithm</a></td>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i1">Algorithm</a></td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i0"></a>1.1.1.1.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm > oneOf > Algorithm`
 
 **Title:** Algorithm
 
-|              |                    |
-| ------------ | ------------------ |
-| **Type**     | `enum (of string)` |
-| **Required** | No                 |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Signature algorithm. The currently recognized JWA [RFC7518] and RFC8037 [RFC8037] asymmetric key algorithms. Note: Unlike RFC8037 [RFC8037] JSF requires explicit Ed* algorithm names instead of "EdDSA".
 
@@ -266,11 +534,24 @@ Must be one of:
 
 **Title:** Algorithm
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
-| **Format**   | `uri`    |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Format</strong></td>
+    <td><code>uri</code></td>
+  </tr>
+</table>
 
 **Description:** Signature algorithm. Note: If proprietary signature algorithms are added, they must be expressed as URIs.
 
@@ -278,10 +559,20 @@ Must be one of:
 
 **Title:** Key ID
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Optional. Application specific string identifying the signature key.
 
@@ -289,58 +580,192 @@ Must be one of:
 
 **Title:** Public key
 
-|                           |                         |
-| ------------------------- | ----------------------- |
-| **Type**                  | `combining`             |
-| **Required**              | No                      |
-| **Additional properties** | Any type allowed        |
-| **Defined in**            | #/definitions/publicKey |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>combining</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/publicKey</h1></td>
+  </tr>
+</table>
 
 **Description:** Optional. Public key object.
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition               | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------ | ----------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty )               | No      | enum (of string) | No         | In #/definitions/keyType | Key type          |
-| - [](#objectA_signature_oneOf_i0_signers_items_publicKey_additionalProperties ) | No      | object           | No         | -                        | -                 |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">kty</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>In #/definitions/keyType</td>
+    <td>Key type</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#"></a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
 
-| All of(Requirement)                                                    |
-| ---------------------------------------------------------------------- |
-| [item 0](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0) |
-| [item 1](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1) |
-| [item 2](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2) |
+<table>
+  <tr>
+    <th>All of(Requirement)</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0">item 0</a></td>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1">item 1</a></td>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2">item 2</a></td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0"></a>1.1.1.1.1.3.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 ###### <a name="autogenerated_heading_2"></a>1.1.1.1.1.3.1.1. If (kty = "EC")
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+</table>
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
-| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name        |
-| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_x )     | No      | string           | No         | -                                                                       | Coordinate        |
-| + [y](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_y )     | No      | string           | No         | -                                                                       | Coordinate        |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">kty</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>Same as <a href="#">kty</a></td>
+    <td>Key type</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">crv</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Curve name</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">x</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Coordinate</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">y</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Coordinate</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty"></a>1.1.1.1.1.3.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0 > then > kty`
 
 **Title:** Key type
 
-|                        |                                                                |
-| ---------------------- | -------------------------------------------------------------- |
-| **Type**               | `enum (of string)`                                             |
-| **Required**           | Yes                                                            |
-| **Same definition as** | [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_kty">kty</a></td>
+  </tr>
+</table>
 
 **Description:** Key type indicator.
 
@@ -348,10 +773,20 @@ Must be one of:
 
 **Title:** Curve name
 
-|              |                    |
-| ------------ | ------------------ |
-| **Type**     | `enum (of string)` |
-| **Required** | Yes                |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EC curve name.
 
@@ -364,10 +799,20 @@ Must be one of:
 
 **Title:** Coordinate
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EC curve point X. The length of this field must be the full size of a coordinate for the curve specified in the "crv" parameter. For example, if the value of "crv" is "P-521", the decoded argument must be 66 bytes.
 
@@ -375,44 +820,128 @@ Must be one of:
 
 **Title:** Coordinate
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EC curve point Y. The length of this field must be the full size of a coordinate for the curve specified in the "crv" parameter. For example, if the value of "crv" is "P-256", the decoded argument must be 32 bytes.
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1"></a>1.1.1.1.1.3.2. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 ###### <a name="autogenerated_heading_3"></a>1.1.1.1.1.3.2.1. If (kty = "OKP")
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+</table>
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
-| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name        |
-| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_x )     | No      | string           | No         | -                                                                       | Coordinate        |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">kty</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>Same as <a href="#">kty</a></td>
+    <td>Key type</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">crv</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Curve name</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">x</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Coordinate</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty"></a>1.1.1.1.1.3.2.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1 > then > kty`
 
 **Title:** Key type
 
-|                        |                                                                |
-| ---------------------- | -------------------------------------------------------------- |
-| **Type**               | `enum (of string)`                                             |
-| **Required**           | Yes                                                            |
-| **Same definition as** | [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_kty">kty</a></td>
+  </tr>
+</table>
 
 **Description:** Key type indicator.
 
@@ -420,10 +949,20 @@ Must be one of:
 
 **Title:** Curve name
 
-|              |                    |
-| ------------ | ------------------ |
-| **Type**     | `enum (of string)` |
-| **Required** | Yes                |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EdDSA curve name.
 
@@ -435,44 +974,128 @@ Must be one of:
 
 **Title:** Coordinate
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EdDSA curve point X. The length of this field must be the full size of a coordinate for the curve specified in the "crv" parameter. For example, if the value of "crv" is "Ed25519", the decoded argument must be 32 bytes.
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2"></a>1.1.1.1.1.3.3. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 ###### <a name="autogenerated_heading_4"></a>1.1.1.1.1.3.3.1. If (kty = "RSA")
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+</table>
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
-| + [n](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_n )     | No      | string           | No         | -                                                                       | Modulus           |
-| + [e](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_e )     | No      | string           | No         | -                                                                       | Exponent          |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">kty</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>Same as <a href="#">kty</a></td>
+    <td>Key type</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">n</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Modulus</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">e</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Exponent</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty"></a>1.1.1.1.1.3.3.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2 > then > kty`
 
 **Title:** Key type
 
-|                        |                                                                |
-| ---------------------- | -------------------------------------------------------------- |
-| **Type**               | `enum (of string)`                                             |
-| **Required**           | Yes                                                            |
-| **Same definition as** | [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_kty">kty</a></td>
+  </tr>
+</table>
 
 **Description:** Key type indicator.
 
@@ -480,10 +1103,20 @@ Must be one of:
 
 **Title:** Modulus
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** RSA modulus.
 
@@ -491,10 +1124,20 @@ Must be one of:
 
 **Title:** Exponent
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** RSA exponent.
 
@@ -502,11 +1145,24 @@ Must be one of:
 
 **Title:** Key type
 
-|                |                       |
-| -------------- | --------------------- |
-| **Type**       | `enum (of string)`    |
-| **Required**   | Yes                   |
-| **Defined in** | #/definitions/keyType |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/keyType</h1></td>
+  </tr>
+</table>
 
 **Description:** Key type indicator.
 
@@ -519,162 +1175,454 @@ Must be one of:
 
 **Title:** Certificate path
 
-|              |                   |
-| ------------ | ----------------- |
-| **Type**     | `array of string` |
-| **Required** | No                |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>array of string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Optional. Sorted array of X.509 [RFC5280] certificates, where the first element must contain the signature certificate. The certificate path must be contiguous but is not required to be complete.
 
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
+<table>
+  <tr>
+    <th></th>
+    <th>Array restrictions</th>
+  </tr>
+  <tr>
+    <td><strong>Min items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Max items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Items unicity</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Additional items</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Tuple validation</strong></td>
+    <td>See below</td>
+  </tr>
+</table>
 
-| Each item of this array must be                                                          | Description |
-| ---------------------------------------------------------------------------------------- | ----------- |
-| [certificatePath items](#objectA_signature_oneOf_i0_signers_items_certificatePath_items) | -           |
+<table>
+  <tr>
+    <th>Each item of this array must be</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_certificatePath_items">certificatePath items</a></td>
+    <td>-</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_certificatePath_items"></a>1.1.1.1.1.4.1. root > objectA > signature > oneOf > item 0 > signers > Signature > certificatePath > certificatePath items
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_excludes"></a>1.1.1.1.1.5. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > excludes`
 
 **Title:** Excludes
 
-|              |                   |
-| ------------ | ----------------- |
-| **Type**     | `array of string` |
-| **Required** | No                |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>array of string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Optional. Array holding the names of one or more application level properties that must be excluded from the signature process. Note that the "excludes" property itself, must also be excluded from the signature process. Since both the "excludes" property and the associated data it points to are unsigned, a conforming JSF implementation must provide options for specifying which properties to accept.
 
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
+<table>
+  <tr>
+    <th></th>
+    <th>Array restrictions</th>
+  </tr>
+  <tr>
+    <td><strong>Min items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Max items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Items unicity</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Additional items</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Tuple validation</strong></td>
+    <td>See below</td>
+  </tr>
+</table>
 
-| Each item of this array must be                                            | Description |
-| -------------------------------------------------------------------------- | ----------- |
-| [excludes items](#objectA_signature_oneOf_i0_signers_items_excludes_items) | -           |
+<table>
+  <tr>
+    <th>Each item of this array must be</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_excludes_items">excludes items</a></td>
+    <td>-</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_excludes_items"></a>1.1.1.1.1.5.1. root > objectA > signature > oneOf > item 0 > signers > Signature > excludes > excludes items
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_value"></a>1.1.1.1.1.6. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > value`
 
 **Title:** Signature
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** The signature data. Note that the binary representation must follow the JWA [RFC7518] specifications.
 
 #### <a name="objectA_signature_oneOf_i1"></a>1.1.2. Property `root > objectA > signature > oneOf > item 1`
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+</table>
 
-| Property                                      | Pattern | Type  | Deprecated | Definition | Title/Description |
-| --------------------------------------------- | ------- | ----- | ---------- | ---------- | ----------------- |
-| - [chain](#objectA_signature_oneOf_i1_chain ) | No      | array | No         | -          | Signature         |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">chain</a></li>
+</ul></td>
+    <td>No</td>
+    <td>array</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Signature</td>
+  </tr>
+</table>
 
 ##### <a name="objectA_signature_oneOf_i1_chain"></a>1.1.2.1. Property `root > objectA > signature > oneOf > item 1 > chain`
 
 **Title:** Signature
 
-|              |         |
-| ------------ | ------- |
-| **Type**     | `array` |
-| **Required** | No      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>array</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Unique top level property for Signature Chains. (signaturechain)
 
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
+<table>
+  <tr>
+    <th></th>
+    <th>Array restrictions</th>
+  </tr>
+  <tr>
+    <td><strong>Min items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Max items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Items unicity</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Additional items</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Tuple validation</strong></td>
+    <td>See below</td>
+  </tr>
+</table>
 
-| Each item of this array must be                      | Description |
-| ---------------------------------------------------- | ----------- |
-| [Signature](#objectA_signature_oneOf_i1_chain_items) | -           |
+<table>
+  <tr>
+    <th>Each item of this array must be</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i1_chain_items">Signature</a></td>
+    <td>-</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i1_chain_items"></a>1.1.2.1.1. root > objectA > signature > oneOf > item 1 > chain > Signature
 
 **Title:** Signature
 
-|                           |                                                        |
-| ------------------------- | ------------------------------------------------------ |
-| **Type**                  | `object`                                               |
-| **Required**              | No                                                     |
-| **Additional properties** | Not allowed                                            |
-| **Same definition as**    | [Signature](#objectA_signature_oneOf_i0_signers_items) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items">Signature</a></td>
+  </tr>
+</table>
 
 #### <a name="objectA_signature_oneOf_i2"></a>1.1.3. Property `root > objectA > signature > oneOf > Signature`
 
 **Title:** Signature
 
-|                           |                      |
-| ------------------------- | -------------------- |
-| **Type**                  | `object`             |
-| **Required**              | No                   |
-| **Additional properties** | Not allowed          |
-| **Defined in**            | #/definitions/signer |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/signer</h1></td>
+  </tr>
+</table>
 
 **Description:** Unique top level property for simple signatures. (signaturecore)
 
-| Property                                                                        | Pattern | Type            | Deprecated | Definition                 | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | --------------- | ---------- | -------------------------- | ----------------- |
-| + [algorithm](#objectA_signature_oneOf_i0_signers_items_algorithm )             | No      | Combination     | No         | -                          | -                 |
-| - [keyId](#objectA_signature_oneOf_i0_signers_items_keyId )                     | No      | string          | No         | -                          | Key ID            |
-| - [publicKey](#objectA_signature_oneOf_i0_signers_items_publicKey )             | No      | object          | No         | In #/definitions/publicKey | Public key        |
-| - [certificatePath](#objectA_signature_oneOf_i0_signers_items_certificatePath ) | No      | array of string | No         | -                          | Certificate path  |
-| - [excludes](#objectA_signature_oneOf_i0_signers_items_excludes )               | No      | array of string | No         | -                          | Excludes          |
-| + [value](#objectA_signature_oneOf_i0_signers_items_value )                     | No      | string          | No         | -                          | Signature         |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">algorithm</a></li>
+</ul></td>
+    <td>No</td>
+    <td>Combination</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">keyId</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Key ID</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">publicKey</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>In #/definitions/publicKey</td>
+    <td>Public key</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">certificatePath</a></li>
+</ul></td>
+    <td>No</td>
+    <td>array of string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Certificate path</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">excludes</a></li>
+</ul></td>
+    <td>No</td>
+    <td>array of string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Excludes</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">value</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Signature</td>
+  </tr>
+</table>
 
 ##### <a name="objectA_signature_oneOf_i0_signers_items_algorithm"></a>1.1.3.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `combining`      |
-| **Required**              | Yes              |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>combining</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
-| One of(Option)                                                            |
-| ------------------------------------------------------------------------- |
-| [Algorithm](#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i0) |
-| [Algorithm](#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i1) |
+<table>
+  <tr>
+    <th>One of(Option)</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i0">Algorithm</a></td>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i1">Algorithm</a></td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i0"></a>1.1.3.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm > oneOf > Algorithm`
 
 **Title:** Algorithm
 
-|              |                    |
-| ------------ | ------------------ |
-| **Type**     | `enum (of string)` |
-| **Required** | No                 |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Signature algorithm. The currently recognized JWA [RFC7518] and RFC8037 [RFC8037] asymmetric key algorithms. Note: Unlike RFC8037 [RFC8037] JSF requires explicit Ed* algorithm names instead of "EdDSA".
 
@@ -698,11 +1646,24 @@ Must be one of:
 
 **Title:** Algorithm
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
-| **Format**   | `uri`    |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Format</strong></td>
+    <td><code>uri</code></td>
+  </tr>
+</table>
 
 **Description:** Signature algorithm. Note: If proprietary signature algorithms are added, they must be expressed as URIs.
 
@@ -710,10 +1671,20 @@ Must be one of:
 
 **Title:** Key ID
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Optional. Application specific string identifying the signature key.
 
@@ -721,58 +1692,192 @@ Must be one of:
 
 **Title:** Public key
 
-|                           |                         |
-| ------------------------- | ----------------------- |
-| **Type**                  | `combining`             |
-| **Required**              | No                      |
-| **Additional properties** | Any type allowed        |
-| **Defined in**            | #/definitions/publicKey |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>combining</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/publicKey</h1></td>
+  </tr>
+</table>
 
 **Description:** Optional. Public key object.
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition               | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------ | ----------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty )               | No      | enum (of string) | No         | In #/definitions/keyType | Key type          |
-| - [](#objectA_signature_oneOf_i0_signers_items_publicKey_additionalProperties ) | No      | object           | No         | -                        | -                 |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">kty</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>In #/definitions/keyType</td>
+    <td>Key type</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#"></a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
 
-| All of(Requirement)                                                    |
-| ---------------------------------------------------------------------- |
-| [item 0](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0) |
-| [item 1](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1) |
-| [item 2](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2) |
+<table>
+  <tr>
+    <th>All of(Requirement)</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0">item 0</a></td>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1">item 1</a></td>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2">item 2</a></td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0"></a>1.1.3.3.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 ###### <a name="autogenerated_heading_5"></a>1.1.3.3.1.1. If (kty = "EC")
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+</table>
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
-| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name        |
-| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_x )     | No      | string           | No         | -                                                                       | Coordinate        |
-| + [y](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_y )     | No      | string           | No         | -                                                                       | Coordinate        |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">kty</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>Same as <a href="#">kty</a></td>
+    <td>Key type</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">crv</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Curve name</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">x</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Coordinate</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">y</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Coordinate</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty"></a>1.1.3.3.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0 > then > kty`
 
 **Title:** Key type
 
-|                        |                                                                |
-| ---------------------- | -------------------------------------------------------------- |
-| **Type**               | `enum (of string)`                                             |
-| **Required**           | Yes                                                            |
-| **Same definition as** | [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_kty">kty</a></td>
+  </tr>
+</table>
 
 **Description:** Key type indicator.
 
@@ -780,10 +1885,20 @@ Must be one of:
 
 **Title:** Curve name
 
-|              |                    |
-| ------------ | ------------------ |
-| **Type**     | `enum (of string)` |
-| **Required** | Yes                |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EC curve name.
 
@@ -796,10 +1911,20 @@ Must be one of:
 
 **Title:** Coordinate
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EC curve point X. The length of this field must be the full size of a coordinate for the curve specified in the "crv" parameter. For example, if the value of "crv" is "P-521", the decoded argument must be 66 bytes.
 
@@ -807,44 +1932,128 @@ Must be one of:
 
 **Title:** Coordinate
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EC curve point Y. The length of this field must be the full size of a coordinate for the curve specified in the "crv" parameter. For example, if the value of "crv" is "P-256", the decoded argument must be 32 bytes.
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1"></a>1.1.3.3.2. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 ###### <a name="autogenerated_heading_6"></a>1.1.3.3.2.1. If (kty = "OKP")
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+</table>
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
-| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name        |
-| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_x )     | No      | string           | No         | -                                                                       | Coordinate        |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">kty</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>Same as <a href="#">kty</a></td>
+    <td>Key type</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">crv</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Curve name</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">x</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Coordinate</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty"></a>1.1.3.3.2.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1 > then > kty`
 
 **Title:** Key type
 
-|                        |                                                                |
-| ---------------------- | -------------------------------------------------------------- |
-| **Type**               | `enum (of string)`                                             |
-| **Required**           | Yes                                                            |
-| **Same definition as** | [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_kty">kty</a></td>
+  </tr>
+</table>
 
 **Description:** Key type indicator.
 
@@ -852,10 +2061,20 @@ Must be one of:
 
 **Title:** Curve name
 
-|              |                    |
-| ------------ | ------------------ |
-| **Type**     | `enum (of string)` |
-| **Required** | Yes                |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EdDSA curve name.
 
@@ -867,44 +2086,128 @@ Must be one of:
 
 **Title:** Coordinate
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EdDSA curve point X. The length of this field must be the full size of a coordinate for the curve specified in the "crv" parameter. For example, if the value of "crv" is "Ed25519", the decoded argument must be 32 bytes.
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2"></a>1.1.3.3.3. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 ###### <a name="autogenerated_heading_7"></a>1.1.3.3.3.1. If (kty = "RSA")
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+</table>
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
-| + [n](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_n )     | No      | string           | No         | -                                                                       | Modulus           |
-| + [e](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_e )     | No      | string           | No         | -                                                                       | Exponent          |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">kty</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>Same as <a href="#">kty</a></td>
+    <td>Key type</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">n</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Modulus</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">e</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Exponent</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty"></a>1.1.3.3.3.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2 > then > kty`
 
 **Title:** Key type
 
-|                        |                                                                |
-| ---------------------- | -------------------------------------------------------------- |
-| **Type**               | `enum (of string)`                                             |
-| **Required**           | Yes                                                            |
-| **Same definition as** | [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_kty">kty</a></td>
+  </tr>
+</table>
 
 **Description:** Key type indicator.
 
@@ -912,10 +2215,20 @@ Must be one of:
 
 **Title:** Modulus
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** RSA modulus.
 
@@ -923,10 +2236,20 @@ Must be one of:
 
 **Title:** Exponent
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** RSA exponent.
 
@@ -934,11 +2257,24 @@ Must be one of:
 
 **Title:** Key type
 
-|                |                       |
-| -------------- | --------------------- |
-| **Type**       | `enum (of string)`    |
-| **Required**   | Yes                   |
-| **Defined in** | #/definitions/keyType |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/keyType</h1></td>
+  </tr>
+</table>
 
 **Description:** Key type indicator.
 
@@ -951,178 +2287,509 @@ Must be one of:
 
 **Title:** Certificate path
 
-|              |                   |
-| ------------ | ----------------- |
-| **Type**     | `array of string` |
-| **Required** | No                |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>array of string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Optional. Sorted array of X.509 [RFC5280] certificates, where the first element must contain the signature certificate. The certificate path must be contiguous but is not required to be complete.
 
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
+<table>
+  <tr>
+    <th></th>
+    <th>Array restrictions</th>
+  </tr>
+  <tr>
+    <td><strong>Min items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Max items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Items unicity</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Additional items</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Tuple validation</strong></td>
+    <td>See below</td>
+  </tr>
+</table>
 
-| Each item of this array must be                                                          | Description |
-| ---------------------------------------------------------------------------------------- | ----------- |
-| [certificatePath items](#objectA_signature_oneOf_i0_signers_items_certificatePath_items) | -           |
+<table>
+  <tr>
+    <th>Each item of this array must be</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_certificatePath_items">certificatePath items</a></td>
+    <td>-</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_certificatePath_items"></a>1.1.3.4.1. root > objectA > signature > oneOf > item 0 > signers > Signature > certificatePath > certificatePath items
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 ##### <a name="objectA_signature_oneOf_i0_signers_items_excludes"></a>1.1.3.5. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > excludes`
 
 **Title:** Excludes
 
-|              |                   |
-| ------------ | ----------------- |
-| **Type**     | `array of string` |
-| **Required** | No                |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>array of string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Optional. Array holding the names of one or more application level properties that must be excluded from the signature process. Note that the "excludes" property itself, must also be excluded from the signature process. Since both the "excludes" property and the associated data it points to are unsigned, a conforming JSF implementation must provide options for specifying which properties to accept.
 
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
+<table>
+  <tr>
+    <th></th>
+    <th>Array restrictions</th>
+  </tr>
+  <tr>
+    <td><strong>Min items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Max items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Items unicity</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Additional items</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Tuple validation</strong></td>
+    <td>See below</td>
+  </tr>
+</table>
 
-| Each item of this array must be                                            | Description |
-| -------------------------------------------------------------------------- | ----------- |
-| [excludes items](#objectA_signature_oneOf_i0_signers_items_excludes_items) | -           |
+<table>
+  <tr>
+    <th>Each item of this array must be</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_excludes_items">excludes items</a></td>
+    <td>-</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_excludes_items"></a>1.1.3.5.1. root > objectA > signature > oneOf > item 0 > signers > Signature > excludes > excludes items
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 ##### <a name="objectA_signature_oneOf_i0_signers_items_value"></a>1.1.3.6. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > value`
 
 **Title:** Signature
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** The signature data. Note that the binary representation must follow the JWA [RFC7518] specifications.
 
 ## <a name="objectB"></a>2. Property `root > objectB`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
-| Property                           | Pattern | Type   | Deprecated | Definition                 | Title/Description |
-| ---------------------------------- | ------- | ------ | ---------- | -------------------------- | ----------------- |
-| - [signature](#objectB_signature ) | No      | object | No         | In #/definitions/signature | Signature         |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">signature</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>In #/definitions/signature</td>
+    <td>Signature</td>
+  </tr>
+</table>
 
 ### <a name="objectB_signature"></a>2.1. Property `root > objectB > signature`
 
 **Title:** Signature
 
-|                           |                         |
-| ------------------------- | ----------------------- |
-| **Type**                  | `combining`             |
-| **Required**              | No                      |
-| **Additional properties** | Any type allowed        |
-| **Defined in**            | #/definitions/signature |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>combining</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/signature</h1></td>
+  </tr>
+</table>
 
-| One of(Option)                           |
-| ---------------------------------------- |
-| [item 0](#objectA_signature_oneOf_i0)    |
-| [item 1](#objectA_signature_oneOf_i1)    |
-| [Signature](#objectA_signature_oneOf_i2) |
+<table>
+  <tr>
+    <th>One of(Option)</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0">item 0</a></td>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i1">item 1</a></td>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i2">Signature</a></td>
+  </tr>
+</table>
 
 #### <a name="objectA_signature_oneOf_i0"></a>2.1.1. Property `root > objectA > signature > oneOf > item 0`
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+</table>
 
-| Property                                          | Pattern | Type  | Deprecated | Definition | Title/Description |
-| ------------------------------------------------- | ------- | ----- | ---------- | ---------- | ----------------- |
-| - [signers](#objectA_signature_oneOf_i0_signers ) | No      | array | No         | -          | Signature         |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">signers</a></li>
+</ul></td>
+    <td>No</td>
+    <td>array</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Signature</td>
+  </tr>
+</table>
 
 ##### <a name="objectA_signature_oneOf_i0_signers"></a>2.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers`
 
 **Title:** Signature
 
-|              |         |
-| ------------ | ------- |
-| **Type**     | `array` |
-| **Required** | No      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>array</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Unique top level property for Multiple Signatures. (multisignature)
 
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
+<table>
+  <tr>
+    <th></th>
+    <th>Array restrictions</th>
+  </tr>
+  <tr>
+    <td><strong>Min items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Max items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Items unicity</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Additional items</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Tuple validation</strong></td>
+    <td>See below</td>
+  </tr>
+</table>
 
-| Each item of this array must be                        | Description |
-| ------------------------------------------------------ | ----------- |
-| [Signature](#objectA_signature_oneOf_i0_signers_items) | -           |
+<table>
+  <tr>
+    <th>Each item of this array must be</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items">Signature</a></td>
+    <td>-</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items"></a>2.1.1.1.1. root > objectA > signature > oneOf > item 0 > signers > Signature
 
 **Title:** Signature
 
-|                           |                      |
-| ------------------------- | -------------------- |
-| **Type**                  | `object`             |
-| **Required**              | No                   |
-| **Additional properties** | Not allowed          |
-| **Defined in**            | #/definitions/signer |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/signer</h1></td>
+  </tr>
+</table>
 
-| Property                                                                        | Pattern | Type            | Deprecated | Definition                 | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | --------------- | ---------- | -------------------------- | ----------------- |
-| + [algorithm](#objectA_signature_oneOf_i0_signers_items_algorithm )             | No      | Combination     | No         | -                          | -                 |
-| - [keyId](#objectA_signature_oneOf_i0_signers_items_keyId )                     | No      | string          | No         | -                          | Key ID            |
-| - [publicKey](#objectA_signature_oneOf_i0_signers_items_publicKey )             | No      | object          | No         | In #/definitions/publicKey | Public key        |
-| - [certificatePath](#objectA_signature_oneOf_i0_signers_items_certificatePath ) | No      | array of string | No         | -                          | Certificate path  |
-| - [excludes](#objectA_signature_oneOf_i0_signers_items_excludes )               | No      | array of string | No         | -                          | Excludes          |
-| + [value](#objectA_signature_oneOf_i0_signers_items_value )                     | No      | string          | No         | -                          | Signature         |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">algorithm</a></li>
+</ul></td>
+    <td>No</td>
+    <td>Combination</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">keyId</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Key ID</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">publicKey</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>In #/definitions/publicKey</td>
+    <td>Public key</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">certificatePath</a></li>
+</ul></td>
+    <td>No</td>
+    <td>array of string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Certificate path</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">excludes</a></li>
+</ul></td>
+    <td>No</td>
+    <td>array of string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Excludes</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">value</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Signature</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_algorithm"></a>2.1.1.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `combining`      |
-| **Required**              | Yes              |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>combining</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
-| One of(Option)                                                            |
-| ------------------------------------------------------------------------- |
-| [Algorithm](#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i0) |
-| [Algorithm](#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i1) |
+<table>
+  <tr>
+    <th>One of(Option)</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i0">Algorithm</a></td>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i1">Algorithm</a></td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i0"></a>2.1.1.1.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm > oneOf > Algorithm`
 
 **Title:** Algorithm
 
-|              |                    |
-| ------------ | ------------------ |
-| **Type**     | `enum (of string)` |
-| **Required** | No                 |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Signature algorithm. The currently recognized JWA [RFC7518] and RFC8037 [RFC8037] asymmetric key algorithms. Note: Unlike RFC8037 [RFC8037] JSF requires explicit Ed* algorithm names instead of "EdDSA".
 
@@ -1146,11 +2813,24 @@ Must be one of:
 
 **Title:** Algorithm
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
-| **Format**   | `uri`    |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Format</strong></td>
+    <td><code>uri</code></td>
+  </tr>
+</table>
 
 **Description:** Signature algorithm. Note: If proprietary signature algorithms are added, they must be expressed as URIs.
 
@@ -1158,10 +2838,20 @@ Must be one of:
 
 **Title:** Key ID
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Optional. Application specific string identifying the signature key.
 
@@ -1169,58 +2859,192 @@ Must be one of:
 
 **Title:** Public key
 
-|                           |                         |
-| ------------------------- | ----------------------- |
-| **Type**                  | `combining`             |
-| **Required**              | No                      |
-| **Additional properties** | Any type allowed        |
-| **Defined in**            | #/definitions/publicKey |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>combining</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/publicKey</h1></td>
+  </tr>
+</table>
 
 **Description:** Optional. Public key object.
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition               | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------ | ----------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty )               | No      | enum (of string) | No         | In #/definitions/keyType | Key type          |
-| - [](#objectA_signature_oneOf_i0_signers_items_publicKey_additionalProperties ) | No      | object           | No         | -                        | -                 |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">kty</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>In #/definitions/keyType</td>
+    <td>Key type</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#"></a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
 
-| All of(Requirement)                                                    |
-| ---------------------------------------------------------------------- |
-| [item 0](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0) |
-| [item 1](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1) |
-| [item 2](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2) |
+<table>
+  <tr>
+    <th>All of(Requirement)</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0">item 0</a></td>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1">item 1</a></td>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2">item 2</a></td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0"></a>2.1.1.1.1.3.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 ###### <a name="autogenerated_heading_8"></a>2.1.1.1.1.3.1.1. If (kty = "EC")
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+</table>
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
-| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name        |
-| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_x )     | No      | string           | No         | -                                                                       | Coordinate        |
-| + [y](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_y )     | No      | string           | No         | -                                                                       | Coordinate        |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">kty</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>Same as <a href="#">kty</a></td>
+    <td>Key type</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">crv</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Curve name</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">x</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Coordinate</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">y</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Coordinate</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty"></a>2.1.1.1.1.3.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0 > then > kty`
 
 **Title:** Key type
 
-|                        |                                                                |
-| ---------------------- | -------------------------------------------------------------- |
-| **Type**               | `enum (of string)`                                             |
-| **Required**           | Yes                                                            |
-| **Same definition as** | [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_kty">kty</a></td>
+  </tr>
+</table>
 
 **Description:** Key type indicator.
 
@@ -1228,10 +3052,20 @@ Must be one of:
 
 **Title:** Curve name
 
-|              |                    |
-| ------------ | ------------------ |
-| **Type**     | `enum (of string)` |
-| **Required** | Yes                |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EC curve name.
 
@@ -1244,10 +3078,20 @@ Must be one of:
 
 **Title:** Coordinate
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EC curve point X. The length of this field must be the full size of a coordinate for the curve specified in the "crv" parameter. For example, if the value of "crv" is "P-521", the decoded argument must be 66 bytes.
 
@@ -1255,44 +3099,128 @@ Must be one of:
 
 **Title:** Coordinate
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EC curve point Y. The length of this field must be the full size of a coordinate for the curve specified in the "crv" parameter. For example, if the value of "crv" is "P-256", the decoded argument must be 32 bytes.
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1"></a>2.1.1.1.1.3.2. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 ###### <a name="autogenerated_heading_9"></a>2.1.1.1.1.3.2.1. If (kty = "OKP")
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+</table>
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
-| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name        |
-| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_x )     | No      | string           | No         | -                                                                       | Coordinate        |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">kty</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>Same as <a href="#">kty</a></td>
+    <td>Key type</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">crv</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Curve name</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">x</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Coordinate</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty"></a>2.1.1.1.1.3.2.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1 > then > kty`
 
 **Title:** Key type
 
-|                        |                                                                |
-| ---------------------- | -------------------------------------------------------------- |
-| **Type**               | `enum (of string)`                                             |
-| **Required**           | Yes                                                            |
-| **Same definition as** | [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_kty">kty</a></td>
+  </tr>
+</table>
 
 **Description:** Key type indicator.
 
@@ -1300,10 +3228,20 @@ Must be one of:
 
 **Title:** Curve name
 
-|              |                    |
-| ------------ | ------------------ |
-| **Type**     | `enum (of string)` |
-| **Required** | Yes                |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EdDSA curve name.
 
@@ -1315,44 +3253,128 @@ Must be one of:
 
 **Title:** Coordinate
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EdDSA curve point X. The length of this field must be the full size of a coordinate for the curve specified in the "crv" parameter. For example, if the value of "crv" is "Ed25519", the decoded argument must be 32 bytes.
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2"></a>2.1.1.1.1.3.3. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 ###### <a name="autogenerated_heading_10"></a>2.1.1.1.1.3.3.1. If (kty = "RSA")
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+</table>
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
-| + [n](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_n )     | No      | string           | No         | -                                                                       | Modulus           |
-| + [e](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_e )     | No      | string           | No         | -                                                                       | Exponent          |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">kty</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>Same as <a href="#">kty</a></td>
+    <td>Key type</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">n</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Modulus</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">e</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Exponent</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty"></a>2.1.1.1.1.3.3.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2 > then > kty`
 
 **Title:** Key type
 
-|                        |                                                                |
-| ---------------------- | -------------------------------------------------------------- |
-| **Type**               | `enum (of string)`                                             |
-| **Required**           | Yes                                                            |
-| **Same definition as** | [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_kty">kty</a></td>
+  </tr>
+</table>
 
 **Description:** Key type indicator.
 
@@ -1360,10 +3382,20 @@ Must be one of:
 
 **Title:** Modulus
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** RSA modulus.
 
@@ -1371,10 +3403,20 @@ Must be one of:
 
 **Title:** Exponent
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** RSA exponent.
 
@@ -1382,11 +3424,24 @@ Must be one of:
 
 **Title:** Key type
 
-|                |                       |
-| -------------- | --------------------- |
-| **Type**       | `enum (of string)`    |
-| **Required**   | Yes                   |
-| **Defined in** | #/definitions/keyType |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/keyType</h1></td>
+  </tr>
+</table>
 
 **Description:** Key type indicator.
 
@@ -1399,162 +3454,454 @@ Must be one of:
 
 **Title:** Certificate path
 
-|              |                   |
-| ------------ | ----------------- |
-| **Type**     | `array of string` |
-| **Required** | No                |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>array of string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Optional. Sorted array of X.509 [RFC5280] certificates, where the first element must contain the signature certificate. The certificate path must be contiguous but is not required to be complete.
 
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
+<table>
+  <tr>
+    <th></th>
+    <th>Array restrictions</th>
+  </tr>
+  <tr>
+    <td><strong>Min items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Max items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Items unicity</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Additional items</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Tuple validation</strong></td>
+    <td>See below</td>
+  </tr>
+</table>
 
-| Each item of this array must be                                                          | Description |
-| ---------------------------------------------------------------------------------------- | ----------- |
-| [certificatePath items](#objectA_signature_oneOf_i0_signers_items_certificatePath_items) | -           |
+<table>
+  <tr>
+    <th>Each item of this array must be</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_certificatePath_items">certificatePath items</a></td>
+    <td>-</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_certificatePath_items"></a>2.1.1.1.1.4.1. root > objectA > signature > oneOf > item 0 > signers > Signature > certificatePath > certificatePath items
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_excludes"></a>2.1.1.1.1.5. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > excludes`
 
 **Title:** Excludes
 
-|              |                   |
-| ------------ | ----------------- |
-| **Type**     | `array of string` |
-| **Required** | No                |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>array of string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Optional. Array holding the names of one or more application level properties that must be excluded from the signature process. Note that the "excludes" property itself, must also be excluded from the signature process. Since both the "excludes" property and the associated data it points to are unsigned, a conforming JSF implementation must provide options for specifying which properties to accept.
 
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
+<table>
+  <tr>
+    <th></th>
+    <th>Array restrictions</th>
+  </tr>
+  <tr>
+    <td><strong>Min items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Max items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Items unicity</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Additional items</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Tuple validation</strong></td>
+    <td>See below</td>
+  </tr>
+</table>
 
-| Each item of this array must be                                            | Description |
-| -------------------------------------------------------------------------- | ----------- |
-| [excludes items](#objectA_signature_oneOf_i0_signers_items_excludes_items) | -           |
+<table>
+  <tr>
+    <th>Each item of this array must be</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_excludes_items">excludes items</a></td>
+    <td>-</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_excludes_items"></a>2.1.1.1.1.5.1. root > objectA > signature > oneOf > item 0 > signers > Signature > excludes > excludes items
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_value"></a>2.1.1.1.1.6. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > value`
 
 **Title:** Signature
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** The signature data. Note that the binary representation must follow the JWA [RFC7518] specifications.
 
 #### <a name="objectA_signature_oneOf_i1"></a>2.1.2. Property `root > objectA > signature > oneOf > item 1`
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+</table>
 
-| Property                                      | Pattern | Type  | Deprecated | Definition | Title/Description |
-| --------------------------------------------- | ------- | ----- | ---------- | ---------- | ----------------- |
-| - [chain](#objectA_signature_oneOf_i1_chain ) | No      | array | No         | -          | Signature         |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">chain</a></li>
+</ul></td>
+    <td>No</td>
+    <td>array</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Signature</td>
+  </tr>
+</table>
 
 ##### <a name="objectA_signature_oneOf_i1_chain"></a>2.1.2.1. Property `root > objectA > signature > oneOf > item 1 > chain`
 
 **Title:** Signature
 
-|              |         |
-| ------------ | ------- |
-| **Type**     | `array` |
-| **Required** | No      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>array</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Unique top level property for Signature Chains. (signaturechain)
 
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
+<table>
+  <tr>
+    <th></th>
+    <th>Array restrictions</th>
+  </tr>
+  <tr>
+    <td><strong>Min items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Max items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Items unicity</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Additional items</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Tuple validation</strong></td>
+    <td>See below</td>
+  </tr>
+</table>
 
-| Each item of this array must be                      | Description |
-| ---------------------------------------------------- | ----------- |
-| [Signature](#objectA_signature_oneOf_i1_chain_items) | -           |
+<table>
+  <tr>
+    <th>Each item of this array must be</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i1_chain_items">Signature</a></td>
+    <td>-</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i1_chain_items"></a>2.1.2.1.1. root > objectA > signature > oneOf > item 1 > chain > Signature
 
 **Title:** Signature
 
-|                           |                                                        |
-| ------------------------- | ------------------------------------------------------ |
-| **Type**                  | `object`                                               |
-| **Required**              | No                                                     |
-| **Additional properties** | Not allowed                                            |
-| **Same definition as**    | [Signature](#objectA_signature_oneOf_i0_signers_items) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items">Signature</a></td>
+  </tr>
+</table>
 
 #### <a name="objectA_signature_oneOf_i2"></a>2.1.3. Property `root > objectA > signature > oneOf > Signature`
 
 **Title:** Signature
 
-|                           |                      |
-| ------------------------- | -------------------- |
-| **Type**                  | `object`             |
-| **Required**              | No                   |
-| **Additional properties** | Not allowed          |
-| **Defined in**            | #/definitions/signer |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/signer</h1></td>
+  </tr>
+</table>
 
 **Description:** Unique top level property for simple signatures. (signaturecore)
 
-| Property                                                                        | Pattern | Type            | Deprecated | Definition                 | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | --------------- | ---------- | -------------------------- | ----------------- |
-| + [algorithm](#objectA_signature_oneOf_i0_signers_items_algorithm )             | No      | Combination     | No         | -                          | -                 |
-| - [keyId](#objectA_signature_oneOf_i0_signers_items_keyId )                     | No      | string          | No         | -                          | Key ID            |
-| - [publicKey](#objectA_signature_oneOf_i0_signers_items_publicKey )             | No      | object          | No         | In #/definitions/publicKey | Public key        |
-| - [certificatePath](#objectA_signature_oneOf_i0_signers_items_certificatePath ) | No      | array of string | No         | -                          | Certificate path  |
-| - [excludes](#objectA_signature_oneOf_i0_signers_items_excludes )               | No      | array of string | No         | -                          | Excludes          |
-| + [value](#objectA_signature_oneOf_i0_signers_items_value )                     | No      | string          | No         | -                          | Signature         |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">algorithm</a></li>
+</ul></td>
+    <td>No</td>
+    <td>Combination</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">keyId</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Key ID</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">publicKey</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>In #/definitions/publicKey</td>
+    <td>Public key</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">certificatePath</a></li>
+</ul></td>
+    <td>No</td>
+    <td>array of string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Certificate path</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">excludes</a></li>
+</ul></td>
+    <td>No</td>
+    <td>array of string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Excludes</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">value</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Signature</td>
+  </tr>
+</table>
 
 ##### <a name="objectA_signature_oneOf_i0_signers_items_algorithm"></a>2.1.3.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `combining`      |
-| **Required**              | Yes              |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>combining</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
-| One of(Option)                                                            |
-| ------------------------------------------------------------------------- |
-| [Algorithm](#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i0) |
-| [Algorithm](#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i1) |
+<table>
+  <tr>
+    <th>One of(Option)</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i0">Algorithm</a></td>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i1">Algorithm</a></td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_algorithm_oneOf_i0"></a>2.1.3.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > algorithm > oneOf > Algorithm`
 
 **Title:** Algorithm
 
-|              |                    |
-| ------------ | ------------------ |
-| **Type**     | `enum (of string)` |
-| **Required** | No                 |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Signature algorithm. The currently recognized JWA [RFC7518] and RFC8037 [RFC8037] asymmetric key algorithms. Note: Unlike RFC8037 [RFC8037] JSF requires explicit Ed* algorithm names instead of "EdDSA".
 
@@ -1578,11 +3925,24 @@ Must be one of:
 
 **Title:** Algorithm
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
-| **Format**   | `uri`    |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Format</strong></td>
+    <td><code>uri</code></td>
+  </tr>
+</table>
 
 **Description:** Signature algorithm. Note: If proprietary signature algorithms are added, they must be expressed as URIs.
 
@@ -1590,10 +3950,20 @@ Must be one of:
 
 **Title:** Key ID
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Optional. Application specific string identifying the signature key.
 
@@ -1601,58 +3971,192 @@ Must be one of:
 
 **Title:** Public key
 
-|                           |                         |
-| ------------------------- | ----------------------- |
-| **Type**                  | `combining`             |
-| **Required**              | No                      |
-| **Additional properties** | Any type allowed        |
-| **Defined in**            | #/definitions/publicKey |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>combining</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/publicKey</h1></td>
+  </tr>
+</table>
 
 **Description:** Optional. Public key object.
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition               | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------ | ----------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty )               | No      | enum (of string) | No         | In #/definitions/keyType | Key type          |
-| - [](#objectA_signature_oneOf_i0_signers_items_publicKey_additionalProperties ) | No      | object           | No         | -                        | -                 |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">kty</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>In #/definitions/keyType</td>
+    <td>Key type</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#"></a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
 
-| All of(Requirement)                                                    |
-| ---------------------------------------------------------------------- |
-| [item 0](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0) |
-| [item 1](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1) |
-| [item 2](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2) |
+<table>
+  <tr>
+    <th>All of(Requirement)</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0">item 0</a></td>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1">item 1</a></td>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2">item 2</a></td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0"></a>2.1.3.3.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 ###### <a name="autogenerated_heading_11"></a>2.1.3.3.1.1. If (kty = "EC")
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+</table>
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
-| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name        |
-| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_x )     | No      | string           | No         | -                                                                       | Coordinate        |
-| + [y](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_y )     | No      | string           | No         | -                                                                       | Coordinate        |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">kty</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>Same as <a href="#">kty</a></td>
+    <td>Key type</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">crv</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Curve name</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">x</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Coordinate</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">y</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Coordinate</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i0_then_kty"></a>2.1.3.3.1.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 0 > then > kty`
 
 **Title:** Key type
 
-|                        |                                                                |
-| ---------------------- | -------------------------------------------------------------- |
-| **Type**               | `enum (of string)`                                             |
-| **Required**           | Yes                                                            |
-| **Same definition as** | [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_kty">kty</a></td>
+  </tr>
+</table>
 
 **Description:** Key type indicator.
 
@@ -1660,10 +4164,20 @@ Must be one of:
 
 **Title:** Curve name
 
-|              |                    |
-| ------------ | ------------------ |
-| **Type**     | `enum (of string)` |
-| **Required** | Yes                |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EC curve name.
 
@@ -1676,10 +4190,20 @@ Must be one of:
 
 **Title:** Coordinate
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EC curve point X. The length of this field must be the full size of a coordinate for the curve specified in the "crv" parameter. For example, if the value of "crv" is "P-521", the decoded argument must be 66 bytes.
 
@@ -1687,44 +4211,128 @@ Must be one of:
 
 **Title:** Coordinate
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EC curve point Y. The length of this field must be the full size of a coordinate for the curve specified in the "crv" parameter. For example, if the value of "crv" is "P-256", the decoded argument must be 32 bytes.
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1"></a>2.1.3.3.2. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 ###### <a name="autogenerated_heading_12"></a>2.1.3.3.2.1. If (kty = "OKP")
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+</table>
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
-| + [crv](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_crv ) | No      | enum (of string) | No         | -                                                                       | Curve name        |
-| + [x](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_x )     | No      | string           | No         | -                                                                       | Coordinate        |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">kty</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>Same as <a href="#">kty</a></td>
+    <td>Key type</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">crv</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Curve name</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">x</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Coordinate</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i1_then_kty"></a>2.1.3.3.2.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 1 > then > kty`
 
 **Title:** Key type
 
-|                        |                                                                |
-| ---------------------- | -------------------------------------------------------------- |
-| **Type**               | `enum (of string)`                                             |
-| **Required**           | Yes                                                            |
-| **Same definition as** | [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_kty">kty</a></td>
+  </tr>
+</table>
 
 **Description:** Key type indicator.
 
@@ -1732,10 +4340,20 @@ Must be one of:
 
 **Title:** Curve name
 
-|              |                    |
-| ------------ | ------------------ |
-| **Type**     | `enum (of string)` |
-| **Required** | Yes                |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EdDSA curve name.
 
@@ -1747,44 +4365,128 @@ Must be one of:
 
 **Title:** Coordinate
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** EdDSA curve point X. The length of this field must be the full size of a coordinate for the curve specified in the "crv" parameter. For example, if the value of "crv" is "Ed25519", the decoded argument must be 32 bytes.
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2"></a>2.1.3.3.3. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 ###### <a name="autogenerated_heading_13"></a>2.1.3.3.3.1. If (kty = "RSA")
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+</table>
 
-| Property                                                                        | Pattern | Type             | Deprecated | Definition                                                              | Title/Description |
-| ------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------------------------------------- | ----------------- |
-| + [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty ) | No      | enum (of string) | No         | Same as [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty ) | Key type          |
-| + [n](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_n )     | No      | string           | No         | -                                                                       | Modulus           |
-| + [e](#objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_e )     | No      | string           | No         | -                                                                       | Exponent          |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">kty</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>Same as <a href="#">kty</a></td>
+    <td>Key type</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">n</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Modulus</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">e</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Exponent</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_publicKey_allOf_i2_then_kty"></a>2.1.3.3.3.1.1. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > publicKey > allOf > item 2 > then > kty`
 
 **Title:** Key type
 
-|                        |                                                                |
-| ---------------------- | -------------------------------------------------------------- |
-| **Type**               | `enum (of string)`                                             |
-| **Required**           | Yes                                                            |
-| **Same definition as** | [kty](#objectA_signature_oneOf_i0_signers_items_publicKey_kty) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_publicKey_kty">kty</a></td>
+  </tr>
+</table>
 
 **Description:** Key type indicator.
 
@@ -1792,10 +4494,20 @@ Must be one of:
 
 **Title:** Modulus
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** RSA modulus.
 
@@ -1803,10 +4515,20 @@ Must be one of:
 
 **Title:** Exponent
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** RSA exponent.
 
@@ -1814,11 +4536,24 @@ Must be one of:
 
 **Title:** Key type
 
-|                |                       |
-| -------------- | --------------------- |
-| **Type**       | `enum (of string)`    |
-| **Required**   | Yes                   |
-| **Defined in** | #/definitions/keyType |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/keyType</h1></td>
+  </tr>
+</table>
 
 **Description:** Key type indicator.
 
@@ -1831,70 +4566,172 @@ Must be one of:
 
 **Title:** Certificate path
 
-|              |                   |
-| ------------ | ----------------- |
-| **Type**     | `array of string` |
-| **Required** | No                |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>array of string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Optional. Sorted array of X.509 [RFC5280] certificates, where the first element must contain the signature certificate. The certificate path must be contiguous but is not required to be complete.
 
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
+<table>
+  <tr>
+    <th></th>
+    <th>Array restrictions</th>
+  </tr>
+  <tr>
+    <td><strong>Min items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Max items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Items unicity</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Additional items</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Tuple validation</strong></td>
+    <td>See below</td>
+  </tr>
+</table>
 
-| Each item of this array must be                                                          | Description |
-| ---------------------------------------------------------------------------------------- | ----------- |
-| [certificatePath items](#objectA_signature_oneOf_i0_signers_items_certificatePath_items) | -           |
+<table>
+  <tr>
+    <th>Each item of this array must be</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_certificatePath_items">certificatePath items</a></td>
+    <td>-</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_certificatePath_items"></a>2.1.3.4.1. root > objectA > signature > oneOf > item 0 > signers > Signature > certificatePath > certificatePath items
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 ##### <a name="objectA_signature_oneOf_i0_signers_items_excludes"></a>2.1.3.5. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > excludes`
 
 **Title:** Excludes
 
-|              |                   |
-| ------------ | ----------------- |
-| **Type**     | `array of string` |
-| **Required** | No                |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>array of string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Optional. Array holding the names of one or more application level properties that must be excluded from the signature process. Note that the "excludes" property itself, must also be excluded from the signature process. Since both the "excludes" property and the associated data it points to are unsigned, a conforming JSF implementation must provide options for specifying which properties to accept.
 
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
+<table>
+  <tr>
+    <th></th>
+    <th>Array restrictions</th>
+  </tr>
+  <tr>
+    <td><strong>Min items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Max items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Items unicity</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Additional items</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Tuple validation</strong></td>
+    <td>See below</td>
+  </tr>
+</table>
 
-| Each item of this array must be                                            | Description |
-| -------------------------------------------------------------------------- | ----------- |
-| [excludes items](#objectA_signature_oneOf_i0_signers_items_excludes_items) | -           |
+<table>
+  <tr>
+    <th>Each item of this array must be</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="#objectA_signature_oneOf_i0_signers_items_excludes_items">excludes items</a></td>
+    <td>-</td>
+  </tr>
+</table>
 
 ###### <a name="objectA_signature_oneOf_i0_signers_items_excludes_items"></a>2.1.3.5.1. root > objectA > signature > oneOf > item 0 > signers > Signature > excludes > excludes items
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 ##### <a name="objectA_signature_oneOf_i0_signers_items_value"></a>2.1.3.6. Property `root > objectA > signature > oneOf > item 0 > signers > Signature > value`
 
 **Title:** Signature
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 **Description:** The signature data. Note that the binary representation must follow the JWA [RFC7518] specifications.
 

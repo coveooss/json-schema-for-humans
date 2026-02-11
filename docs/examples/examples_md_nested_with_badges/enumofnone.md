@@ -2,30 +2,46 @@
 
 - [1. [Optional] Property Enum of None > enumOfNone](#enumOfNone)
 
-**Title:** Enum of None
+<p><strong>Title:</strong> Enum of None</p>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="enumOfNone"></a>1. [Optional] Property Enum of None > enumOfNone</strong>  
 
 </summary>
-<blockquote>
 
-|          |                  |
-| -------- | ---------------- |
-| **Type** | `enum (of null)` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of null)</code></td>
+  </tr>
+</table>
 
-**Description:** enumOfNone
+<p><strong>Description:</strong> enumOfNone</p>
 
-Must be one of:
+<p>Must be one of:</p>
+
 * null
 
-</blockquote>
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------

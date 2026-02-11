@@ -8,42 +8,65 @@
 - [4. Property Person > additionalProperties](#additionalProperties)
   - [4.1. [Optional] Property Person > additionalProperties > propA](#additionalProperties_propA)
 
-**Title:** Person
+<p><strong>Title:</strong> Person</p>
 
-|                           |                                                                                              |
-| ------------------------- | -------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                     |
-| **Additional properties** | [![Should-conform](https://img.shields.io/badge/Should-conform-blue)](#additionalProperties) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><a href="#additionalProperties"><img src="https://img.shields.io/badge/Should-conform-blue" alt="Should-conform" /></a></td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="subType1"></a>1. [Optional] Property Person > subType1</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                                                                |
-| ------------------------- | -------------------------------------------------------------- |
-| **Type**                  | `object`                                                       |
-| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Not%20allowed-red" alt="Not allowed" /></td>
+  </tr>
+</table>
 
-**Description:** A sub type with additionalProperties false.
+<p><strong>Description:</strong> A sub type with additionalProperties false.</p>
 
 <details>
 <summary>
 <strong> <a name="subType1_subProp1"></a>1.1. [Optional] Property Person > subType1 > subProp1</strong>  
 
 </summary>
-<blockquote>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `number` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>number</code></td>
+  </tr>
+</table>
 
-</blockquote>
 </details>
 
-</blockquote>
 </details>
 
 <details>
@@ -51,30 +74,43 @@
 <strong> <a name="subType2"></a>2. [Optional] Property Person > subType2</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-**Description:** A sub type with additionalProperties true.
+<p><strong>Description:</strong> A sub type with additionalProperties true.</p>
 
 <details>
 <summary>
 <strong> <a name="subType2_subProp2"></a>2.1. [Optional] Property Person > subType2 > subProp2</strong>  
 
 </summary>
-<blockquote>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `number` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>number</code></td>
+  </tr>
+</table>
 
-</blockquote>
 </details>
 
-</blockquote>
 </details>
 
 <details>
@@ -82,15 +118,20 @@
 <strong> <a name="anInt"></a>3. [Optional] Property Person > anInt</strong>  
 
 </summary>
-<blockquote>
 
-|          |           |
-| -------- | --------- |
-| **Type** | `integer` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer</code></td>
+  </tr>
+</table>
 
-**Description:** This is an integer, it should not show additional properties. (issue #132)
+<p><strong>Description:</strong> This is an integer, it should not show additional properties. (issue #132)</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -98,30 +139,43 @@
 <strong> <a name="additionalProperties"></a>4. Property Person > additionalProperties</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-**Description:** additionalProperties schema.
+<p><strong>Description:</strong> additionalProperties schema.</p>
 
 <details>
 <summary>
 <strong> <a name="additionalProperties_propA"></a>4.1. [Optional] Property Person > additionalProperties > propA</strong>  
 
 </summary>
-<blockquote>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `number` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>number</code></td>
+  </tr>
+</table>
 
-</blockquote>
 </details>
 
-</blockquote>
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------

@@ -4,29 +4,44 @@
 - [2. [Optional] Property HTML in descriptions > html_in_markdown](#html_in_markdown)
 - [3. [Optional] Property HTML in descriptions > json_in_markdown](#json_in_markdown)
 
-**Title:** HTML in descriptions
+<p><strong>Title:</strong> HTML in descriptions</p>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="raw_html"></a>1. [Optional] Property HTML in descriptions > raw_html</strong>  
 
 </summary>
-<blockquote>
 
-**Title:** Some raw HTML
+<p><strong>Title:</strong> Some raw HTML</p>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
-**Description:** <br/><br/><br/><br/><a href="https://example.com">A link to example.com</a>
+<p><strong>Description:</strong> &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a href="https://example.com"&gt;A link to example.com&lt;/a&gt;</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -34,20 +49,27 @@
 <strong> <a name="html_in_markdown"></a>2. [Optional] Property HTML in descriptions > html_in_markdown</strong>  
 
 </summary>
-<blockquote>
 
-**Title:** Some HTML in Markdown
+<p><strong>Title:</strong> Some HTML in Markdown</p>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
-**Description:** Here is some HTML:
-```html
-<br/><br/><br/><br/><a href="https://example.com">A link to example.com</a>
-```
+<p><strong>Description:</strong> Here is some HTML:</p>
 
-</blockquote>
+<div class="highlight jumbotron">
+<pre><span></span><code><span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;&lt;</span><span class="nt">br</span><span class="p">/&gt;&lt;</span><span class="nt">br</span><span class="p">/&gt;&lt;</span><span class="nt">br</span><span class="p">/&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://example.com&quot;</span><span class="p">&gt;</span>A link to example.com<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre>
+</div>
+
 </details>
 
 <details>
@@ -55,22 +77,29 @@
 <strong> <a name="json_in_markdown"></a>3. [Optional] Property HTML in descriptions > json_in_markdown</strong>  
 
 </summary>
-<blockquote>
 
-**Title:** Some JSON in Markdown
+<p><strong>Title:</strong> Some JSON in Markdown</p>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
-**Description:** Here is some JSON:
-```json
-{
-  "property": "value"
-}
-```
+<p><strong>Description:</strong> Here is some JSON:</p>
 
-</blockquote>
+<div class="highlight jumbotron">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;property&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------

@@ -4,20 +4,54 @@
 
 **Title:** Hello
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-| Property                   | Pattern | Type   | Deprecated | Definition | Title/Description |
-| -------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [property1](#property1 ) | No      | string | No         | -          | Line1<br />Line2  |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">property1</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Line1&lt;br /&gt;Line2</td>
+  </tr>
+</table>
 
 ## <a name="property1"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Hello > property1`
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
 **Description:** Line1
 Line2

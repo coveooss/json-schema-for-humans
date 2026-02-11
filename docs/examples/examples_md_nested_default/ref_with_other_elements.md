@@ -4,41 +4,75 @@
 - [2. [Optional] Property OF > firstName](#firstName)
 - [3. [Optional] Property OF > lastName](#lastName)
 
-**Title:** OF
+<p><strong>Title:</strong> OF</p>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="uuid"></a>1. [Optional] Property OF > uuid</strong>  
 
 </summary>
-<blockquote>
 
-|                |                  |
-| -------------- | ---------------- |
-| **Type**       | `string`         |
-| **Required**   | No               |
-| **Defined in** | #/$defs/ofString |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/$defs/ofString</h1></td>
+  </tr>
+</table>
 
-**Description:** Unique Identifer
+<p><strong>Description:</strong> Unique Identifer</p>
 
-| Restrictions   |     |
-| -------------- | --- |
-| **Min length** | 5   |
-| **Max length** | 250 |
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Min length</strong></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td><strong>Max length</strong></td>
+    <td>250</td>
+  </tr>
+</table>
 
-**Example:**
+<p><strong>Example:</strong></p>
 
 ```json
 "29292929292929292929292"
 ```
 
-</blockquote>
 </details>
 
 <details>
@@ -46,28 +80,49 @@
 <strong> <a name="firstName"></a>2. [Optional] Property OF > firstName</strong>  
 
 </summary>
-<blockquote>
 
-|                |                  |
-| -------------- | ---------------- |
-| **Type**       | `string`         |
-| **Required**   | No               |
-| **Defined in** | #/$defs/ofString |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/$defs/ofString</h1></td>
+  </tr>
+</table>
 
-**Description:** first name
+<p><strong>Description:</strong> first name</p>
 
-| Restrictions   |     |
-| -------------- | --- |
-| **Min length** | 10  |
-| **Max length** | 250 |
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Min length</strong></td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td><strong>Max length</strong></td>
+    <td>250</td>
+  </tr>
+</table>
 
-**Example:**
+<p><strong>Example:</strong></p>
 
 ```json
 "John"
 ```
 
-</blockquote>
 </details>
 
 <details>
@@ -75,28 +130,49 @@
 <strong> <a name="lastName"></a>3. [Optional] Property OF > lastName</strong>  
 
 </summary>
-<blockquote>
 
-|                |                  |
-| -------------- | ---------------- |
-| **Type**       | `string`         |
-| **Required**   | No               |
-| **Defined in** | #/$defs/ofString |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/$defs/ofString</h1></td>
+  </tr>
+</table>
 
-**Description:** last name
+<p><strong>Description:</strong> last name</p>
 
-| Restrictions   |    |
-| -------------- | -- |
-| **Min length** | 5  |
-| **Max length** | 10 |
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Min length</strong></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td><strong>Max length</strong></td>
+    <td>10</td>
+  </tr>
+</table>
 
-**Example:**
+<p><strong>Example:</strong></p>
 
 ```json
 "Doe"
 ```
 
-</blockquote>
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------

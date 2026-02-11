@@ -3,42 +3,71 @@
 - [1. [Optional] Property Person > prop1](#prop1)
   - [1.1. [Optional] Property Person > prop1 > lol](#prop1_lol)
 
-**Title:** Person
+<p><strong>Title:</strong> Person</p>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="prop1"></a>1. [Optional] Property Person > prop1</strong>  
 
 </summary>
-<blockquote>
 
-|              |                  |
-| ------------ | ---------------- |
-| **Type**     | `object or null` |
-| **Required** | No               |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object or null</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="prop1_lol"></a>1.1. [Optional] Property Person > prop1 > lol</strong>  
 
 </summary>
-<blockquote>
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
-</blockquote>
 </details>
 
-</blockquote>
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------

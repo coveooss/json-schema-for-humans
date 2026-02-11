@@ -7,29 +7,44 @@
   - [4.1. Property `Person > driverLicenseId > allOf > no driver licence`](#driverLicenseId_allOf_i0)
   - [4.2. Property `Person > driverLicenseId > allOf > driver licence id`](#driverLicenseId_allOf_i1)
 
-**Title:** Person
+<p><strong>Title:</strong> Person</p>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="firstName"></a>1. [Optional] Property Person > firstName</strong>  
 
 </summary>
-<blockquote>
 
-**Title:** Person
+<p><strong>Title:</strong> Person</p>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
-**Description:** The person's first name.
+<p><strong>Description:</strong> The person's first name.</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -37,17 +52,22 @@
 <strong> <a name="lastName"></a>2. [Optional] Property Person > lastName</strong>  
 
 </summary>
-<blockquote>
 
-**Title:** Person
+<p><strong>Title:</strong> Person</p>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
-**Description:** The person's last name.
+<p><strong>Description:</strong> The person's last name.</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -55,21 +75,33 @@
 <strong> <a name="age"></a>3. [Optional] Property Person > age</strong>  
 
 </summary>
-<blockquote>
 
-**Title:** Person
+<p><strong>Title:</strong> Person</p>
 
-|          |           |
-| -------- | --------- |
-| **Type** | `integer` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer</code></td>
+  </tr>
+</table>
 
-**Description:** Age in years which must be equal to or greater than zero.
+<p><strong>Description:</strong> Age in years which must be equal to or greater than zero.</p>
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Minimum</strong></td>
+    <td>&ge; 0</td>
+  </tr>
+</table>
 
-</blockquote>
 </details>
 
 <details>
@@ -77,46 +109,76 @@
 <strong> <a name="driverLicenseId"></a>4. [Optional] Property Person > driverLicenseId</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `combining`                                                                 |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>combining</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-<blockquote>
+<details>
+<summary>All of(Requirement)</summary>
 
-| All of(Requirement)                            |
-| ---------------------------------------------- |
-| [no driver licence](#driverLicenseId_allOf_i0) |
-| [driver licence id](#driverLicenseId_allOf_i1) |
+<table>
+  <tr>
+    <th>All of(Requirement)</th>
+  </tr>
+  <tr>
+    <td><a href="#driverLicenseId_allOf_i0">no driver licence</a></td>
+  </tr>
+  <tr>
+    <td><a href="#driverLicenseId_allOf_i1">driver licence id</a></td>
+  </tr>
+</table>
 
-<blockquote>
+<details>
+<summary>
+### <a name="driverLicenseId_allOf_i0"></a>4.1. Property `Person > driverLicenseId > allOf > no driver licence`</summary>
 
-### <a name="driverLicenseId_allOf_i0"></a>4.1. Property `Person > driverLicenseId > allOf > no driver licence`
+<p><strong>Title:</strong> no driver licence</p>
 
-**Title:** no driver licence
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>null</code></td>
+  </tr>
+</table>
 
-|          |        |
-| -------- | ------ |
-| **Type** | `null` |
+</details>
+<details>
+<summary>
+### <a name="driverLicenseId_allOf_i1"></a>4.2. Property `Person > driverLicenseId > allOf > driver licence id`</summary>
 
-</blockquote>
-<blockquote>
+<p><strong>Title:</strong> driver licence id</p>
 
-### <a name="driverLicenseId_allOf_i1"></a>4.2. Property `Person > driverLicenseId > allOf > driver licence id`
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
-**Title:** driver licence id
+</details>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+</details>
 
-</blockquote>
-
-</blockquote>
-
-</blockquote>
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------

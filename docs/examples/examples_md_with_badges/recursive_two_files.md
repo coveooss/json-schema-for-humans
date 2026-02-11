@@ -7,67 +7,192 @@
 
 **Title:** Person
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-| Property             | Pattern | Type   | Deprecated | Definition              | Title/Description |
-| -------------------- | ------- | ------ | ---------- | ----------------------- | ----------------- |
-| - [person](#person ) | No      | object | No         | In #/definitions/person | A human being     |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">person</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>In #/definitions/person</td>
+    <td>A human being</td>
+  </tr>
+</table>
 
 ## <a name="person"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > person`
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | #/definitions/person                                                        |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/person</h1></td>
+  </tr>
+</table>
 
 **Description:** A human being
 
-| Property                        | Pattern | Type   | Deprecated | Definition                                               | Title/Description                                 |
-| ------------------------------- | ------- | ------ | ---------- | -------------------------------------------------------- | ------------------------------------------------- |
-| - [children](#person_children ) | No      | array  | No         | -                                                        | The children they had                             |
-| - [siblings](#person_siblings ) | No      | object | No         | Same as [person_children_items](#person_children_items ) | Person definition from second file. Not the same! |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">children</a></li>
+</ul></td>
+    <td>No</td>
+    <td>array</td>
+    <td>No</td>
+    <td>-</td>
+    <td>The children they had</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">siblings</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>Same as <a href="#">person<em>children</em>items</a></td>
+    <td>Person definition from second file. Not the same!</td>
+  </tr>
+</table>
 
 ### <a name="person_children"></a>1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > person > children`
 
-|          |         |
-| -------- | ------- |
-| **Type** | `array` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>array</code></td>
+  </tr>
+</table>
 
 **Description:** The children they had
 
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
+<table>
+  <tr>
+    <th></th>
+    <th>Array restrictions</th>
+  </tr>
+  <tr>
+    <td><strong>Min items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Max items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Items unicity</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Additional items</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Tuple validation</strong></td>
+    <td>See below</td>
+  </tr>
+</table>
 
-| Each item of this array must be  | Description                                       |
-| -------------------------------- | ------------------------------------------------- |
-| [person](#person_children_items) | Person definition from second file. Not the same! |
+<table>
+  <tr>
+    <th>Each item of this array must be</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="#person_children_items">person</a></td>
+    <td>Person definition from second file. Not the same!</td>
+  </tr>
+</table>
 
 #### <a name="person_children_items"></a>1.1.1. Person > person > children > person
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | recursive_two_files2.json#/definitions/person                               |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td>recursive<em>two</em>files2.json#/definitions/person</td>
+  </tr>
+</table>
 
 **Description:** Person definition from second file. Not the same!
 
 ### <a name="person_siblings"></a>1.2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > person > siblings`
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Same definition as**    | [person_children_items](#person_children_items)                             |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#person_children_items">person<em>children</em>items</a></td>
+  </tr>
+</table>
 
 **Description:** Person definition from second file. Not the same!
 

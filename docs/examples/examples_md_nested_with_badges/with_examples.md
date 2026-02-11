@@ -5,29 +5,45 @@
 - [3. [Optional] Property Person > age](#age)
 - [4. [Optional] Property Person > moreInfo](#moreInfo)
 
-**Title:** Person
+<p><strong>Title:</strong> Person</p>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="firstName"></a>1. [Optional] Property Person > firstName</strong>  
 
 </summary>
-<blockquote>
 
-**Title:** Person
+<p><strong>Title:</strong> Person</p>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
-**Description:** the person's first name
+<p><strong>Description:</strong> the person's first name</p>
 
-**Examples:**
+<p><strong>Examples:</strong></p>
 
 ```json
 "Guido"
@@ -37,7 +53,6 @@
 "BDFL"
 ```
 
-</blockquote>
 </details>
 
 <details>
@@ -45,23 +60,28 @@
 <strong> <a name="lastName"></a>2. [Optional] Property Person > lastName</strong>  
 
 </summary>
-<blockquote>
 
-**Title:** Person
+<p><strong>Title:</strong> Person</p>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
-**Description:** The person's last name.
+<p><strong>Description:</strong> The person's last name.</p>
 
-**Example:**
+<p><strong>Example:</strong></p>
 
 ```json
 "Van Rossum"
 ```
 
-</blockquote>
 </details>
 
 <details>
@@ -69,27 +89,39 @@
 <strong> <a name="age"></a>3. [Optional] Property Person > age</strong>  
 
 </summary>
-<blockquote>
 
-**Title:** Person
+<p><strong>Title:</strong> Person</p>
 
-|          |           |
-| -------- | --------- |
-| **Type** | `integer` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer</code></td>
+  </tr>
+</table>
 
-**Description:** Age in years which must be equal to or greater than zero.
+<p><strong>Description:</strong> Age in years which must be equal to or greater than zero.</p>
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Minimum</strong></td>
+    <td>&ge; 0</td>
+  </tr>
+</table>
 
-**Example:**
+<p><strong>Example:</strong></p>
 
 ```json
 64
 ```
 
-</blockquote>
 </details>
 
 <details>
@@ -97,16 +129,25 @@
 <strong> <a name="moreInfo"></a>4. [Optional] Property Person > moreInfo</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-**Description:** Any more info you want as an object
+<p><strong>Description:</strong> Any more info you want as an object</p>
 
-**Example:**
+<p><strong>Example:</strong></p>
 
 ```json
 {
@@ -116,7 +157,6 @@
 }
 ```
 
-</blockquote>
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------

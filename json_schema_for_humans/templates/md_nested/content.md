@@ -15,7 +15,7 @@
 {%- if not skip_headers %}
 
 {% if schema.title and schema.title | length > 0 %}
-**Title:** {{ schema.title }}
+{{ ("**Title:** " ~ schema.title) | md_render }}
 {% endif %}
 
 {{ schema | md_type_info_table | md_generate_table }}
@@ -56,7 +56,7 @@
         {% include "section_one_of.md" %}
     {%- endif %}
     {%- if schema.is_const -%}
-        Specific value: `{{ schema.const_value | python_to_json }}`
+        {{ ("Specific value: `" ~ (schema.const_value | python_to_json) ~ "`") | md_render }}
     {%- endif -%}
 
     {# Conditional subschema, or if-then-else section #}

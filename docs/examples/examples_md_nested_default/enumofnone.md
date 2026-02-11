@@ -2,32 +2,54 @@
 
 - [1. [Optional] Property Enum of None > enumOfNone](#enumOfNone)
 
-**Title:** Enum of None
+<p><strong>Title:</strong> Enum of None</p>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="enumOfNone"></a>1. [Optional] Property Enum of None > enumOfNone</strong>  
 
 </summary>
-<blockquote>
 
-|              |                  |
-| ------------ | ---------------- |
-| **Type**     | `enum (of null)` |
-| **Required** | No               |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of null)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
-**Description:** enumOfNone
+<p><strong>Description:</strong> enumOfNone</p>
 
-Must be one of:
+<p>Must be one of:</p>
+
 * null
 
-</blockquote>
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------

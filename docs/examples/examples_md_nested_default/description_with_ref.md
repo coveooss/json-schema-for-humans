@@ -4,46 +4,81 @@
   - [1.1. [Required] Property root > outer > inner](#outer_inner)
 - [2. [Optional] Property root > outer2](#outer2)
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="outer"></a>1. [Required] Property root > outer</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                            |
-| ------------------------- | -------------------------- |
-| **Type**                  | `object`                   |
-| **Required**              | Yes                        |
-| **Additional properties** | Not allowed                |
-| **Defined in**            | #/definitions/inner schema |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/inner schema</h1></td>
+  </tr>
+</table>
 
-**Description:** We should see this
+<p><strong>Description:</strong> We should see this</p>
 
 <details>
 <summary>
 <strong> <a name="outer_inner"></a>1.1. [Required] Property root > outer > inner</strong>  
 
 </summary>
-<blockquote>
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+</table>
 
-**Description:** inner description
+<p><strong>Description:</strong> inner description</p>
 
-</blockquote>
 </details>
 
-</blockquote>
 </details>
 
 <details>
@@ -51,18 +86,32 @@
 <strong> <a name="outer2"></a>2. [Optional] Property root > outer2</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                 |
-| ------------------------- | --------------- |
-| **Type**                  | `object`        |
-| **Required**              | No              |
-| **Additional properties** | Not allowed     |
-| **Same definition as**    | [outer](#outer) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#outer">outer</a></td>
+  </tr>
+</table>
 
-**Description:** We should see this too
+<p><strong>Description:</strong> We should see this too</p>
 
-</blockquote>
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------

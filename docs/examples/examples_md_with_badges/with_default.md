@@ -7,23 +7,78 @@
 
 **Title:** User Preference
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-| Property                                               | Pattern | Type                      | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------ | ------- | ------------------------- | ---------- | ---------- | ----------------- |
-| - [favorite_os](#favorite_os )                         | No      | enum (of string)          | No         | -          | -                 |
-| - [favorite_colors](#favorite_colors )                 | No      | array of enum (of string) | No         | -          | -                 |
-| - [desired_number_of_shoes](#desired_number_of_shoes ) | No      | integer                   | No         | -          | -                 |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">favorite_os</a></li>
+</ul></td>
+    <td>No</td>
+    <td>enum (of string)</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">favorite_colors</a></li>
+</ul></td>
+    <td>No</td>
+    <td>array of enum (of string)</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">desired<em>number</em>of_shoes</a></li>
+</ul></td>
+    <td>No</td>
+    <td>integer</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
 
 ## <a name="favorite_os"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `User Preference > favorite_os`
 
-|             |                    |
-| ----------- | ------------------ |
-| **Type**    | `enum (of string)` |
-| **Default** | `"Linux"`          |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>"Linux"</code></td>
+  </tr>
+</table>
 
 Must be one of:
 * "Windows"
@@ -32,28 +87,71 @@ Must be one of:
 
 ## <a name="favorite_colors"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `User Preference > favorite_colors`
 
-|             |                             |
-| ----------- | --------------------------- |
-| **Type**    | `array of enum (of string)` |
-| **Default** | `["white", "blue"]`         |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>array of enum (of string)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>["white", "blue"]</code></td>
+  </tr>
+</table>
 
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
+<table>
+  <tr>
+    <th></th>
+    <th>Array restrictions</th>
+  </tr>
+  <tr>
+    <td><strong>Min items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Max items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Items unicity</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Additional items</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Tuple validation</strong></td>
+    <td>See below</td>
+  </tr>
+</table>
 
-| Each item of this array must be                 | Description |
-| ----------------------------------------------- | ----------- |
-| [favorite_colors items](#favorite_colors_items) | -           |
+<table>
+  <tr>
+    <th>Each item of this array must be</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="#favorite_colors_items">favorite_colors items</a></td>
+    <td>-</td>
+  </tr>
+</table>
 
 ### <a name="favorite_colors_items"></a>2.1. User Preference > favorite_colors > favorite_colors items
 
-|          |                    |
-| -------- | ------------------ |
-| **Type** | `enum (of string)` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>enum (of string)</code></td>
+  </tr>
+</table>
 
 Must be one of:
 * "green"
@@ -65,15 +163,35 @@ Must be one of:
 
 ## <a name="desired_number_of_shoes"></a>3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `User Preference > desired_number_of_shoes`
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `2`       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer</code></td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>2</code></td>
+  </tr>
+</table>
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
-| **Maximum**  | &le; 2 |
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Minimum</strong></td>
+    <td>&ge; 0</td>
+  </tr>
+  <tr>
+    <td><strong>Maximum</strong></td>
+    <td>&le; 2</td>
+  </tr>
+</table>
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

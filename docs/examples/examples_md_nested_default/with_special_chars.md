@@ -7,29 +7,50 @@
 - [5. [Optional] Property Personne > 名前](#名前)
 - [6. [Optional] Property Personne > 年齢](#年齢)
 
-**Title:** Personne
+<p><strong>Title:</strong> Personne</p>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="prénom"></a>1. [Optional] Property Personne > prénom</strong>  
 
 </summary>
-<blockquote>
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
-**Description:** Le prénom de la personne.
+<p><strong>Description:</strong> Le prénom de la personne.</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -37,16 +58,24 @@
 <strong> <a name="nomDeFamille"></a>2. [Optional] Property Personne > nomDeFamille</strong>  
 
 </summary>
-<blockquote>
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
-**Description:** Le nom de famille de la personne.
+<p><strong>Description:</strong> Le nom de famille de la personne.</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -54,20 +83,35 @@
 <strong> <a name="âge"></a>3. [Optional] Property Personne > âge</strong>  
 
 </summary>
-<blockquote>
 
-|              |           |
-| ------------ | --------- |
-| **Type**     | `integer` |
-| **Required** | No        |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
-**Description:** L'âge en années qui doit être plus grand ou égal à 0.
+<p><strong>Description:</strong> L'âge en années qui doit être plus grand ou égal à 0.</p>
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Minimum</strong></td>
+    <td>&ge; 0</td>
+  </tr>
+</table>
 
-</blockquote>
 </details>
 
 <details>
@@ -75,14 +119,23 @@
 <strong> <a name="0_de_quoi_dautre"></a>4. [Optional] Property Personne > 0 de quoi d'autre</strong>  
 
 </summary>
-<blockquote>
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
-**Examples:**
+<p><strong>Examples:</strong></p>
 
 ```json
 "🖖"
@@ -96,7 +149,6 @@
 "你好"
 ```
 
-</blockquote>
 </details>
 
 <details>
@@ -104,16 +156,24 @@
 <strong> <a name="名前"></a>5. [Optional] Property Personne > 名前</strong>  
 
 </summary>
-<blockquote>
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
-**Description:** 顧客の名前
+<p><strong>Description:</strong> 顧客の名前</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -121,16 +181,24 @@
 <strong> <a name="年齢"></a>6. [Optional] Property Personne > 年齢</strong>  
 
 </summary>
-<blockquote>
 
-|              |           |
-| ------------ | --------- |
-| **Type**     | `integer` |
-| **Required** | No        |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
-**Description:** 顧客の年齢
+<p><strong>Description:</strong> 顧客の年齢</p>
 
-</blockquote>
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------

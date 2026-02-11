@@ -9,53 +9,160 @@
 
 **Title:** Personne
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-| Property                                  | Pattern | Type    | Deprecated | Definition | Title/Description                                     |
-| ----------------------------------------- | ------- | ------- | ---------- | ---------- | ----------------------------------------------------- |
-| - [prénom](#prénom )                      | No      | string  | No         | -          | Le prénom de la personne.                             |
-| - [nomDeFamille](#nomDeFamille )          | No      | string  | No         | -          | Le nom de famille de la personne.                     |
-| - [âge](#âge )                            | No      | integer | No         | -          | L'âge en années qui doit être plus grand ou égal à 0. |
-| - [0 de quoi d'autre](#0_de_quoi_dautre ) | No      | string  | No         | -          | -                                                     |
-| - [名前](#名前 )                              | No      | string  | No         | -          | 顧客の名前                                                 |
-| - [年齢](#年齢 )                              | No      | integer | No         | -          | 顧客の年齢                                                 |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">prénom</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Le prénom de la personne.</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">nomDeFamille</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Le nom de famille de la personne.</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">âge</a></li>
+</ul></td>
+    <td>No</td>
+    <td>integer</td>
+    <td>No</td>
+    <td>-</td>
+    <td>L'âge en années qui doit être plus grand ou égal à 0.</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">0 de quoi d'autre</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">名前</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>顧客の名前</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">年齢</a></li>
+</ul></td>
+    <td>No</td>
+    <td>integer</td>
+    <td>No</td>
+    <td>-</td>
+    <td>顧客の年齢</td>
+  </tr>
+</table>
 
 ## <a name="prénom"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Personne > prénom`
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
 **Description:** Le prénom de la personne.
 
 ## <a name="nomDeFamille"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Personne > nomDeFamille`
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
 **Description:** Le nom de famille de la personne.
 
 ## <a name="âge"></a>3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Personne > âge`
 
-|          |           |
-| -------- | --------- |
-| **Type** | `integer` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer</code></td>
+  </tr>
+</table>
 
 **Description:** L'âge en années qui doit être plus grand ou égal à 0.
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Minimum</strong></td>
+    <td>&ge; 0</td>
+  </tr>
+</table>
 
 ## <a name="0_de_quoi_dautre"></a>4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Personne > 0 de quoi d'autre`
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
 **Examples:**
 
@@ -73,17 +180,31 @@
 
 ## <a name="名前"></a>5. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Personne > 名前`
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
 **Description:** 顧客の名前
 
 ## <a name="年齢"></a>6. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Personne > 年齢`
 
-|          |           |
-| -------- | --------- |
-| **Type** | `integer` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer</code></td>
+  </tr>
+</table>
 
 **Description:** 顧客の年齢
 

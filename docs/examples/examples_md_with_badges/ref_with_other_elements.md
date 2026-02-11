@@ -6,23 +6,78 @@
 
 **Title:** OF
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-| Property                   | Pattern | Type   | Deprecated | Definition          | Title/Description |
-| -------------------------- | ------- | ------ | ---------- | ------------------- | ----------------- |
-| - [uuid](#uuid )           | No      | string | No         | In #/$defs/ofString | Unique Identifer  |
-| - [firstName](#firstName ) | No      | string | No         | In #/$defs/ofString | first name        |
-| - [lastName](#lastName )   | No      | string | No         | In #/$defs/ofString | last name         |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">uuid</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>In #/$defs/ofString</td>
+    <td>Unique Identifer</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">firstName</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>In #/$defs/ofString</td>
+    <td>first name</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">lastName</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>In #/$defs/ofString</td>
+    <td>last name</td>
+  </tr>
+</table>
 
 ## <a name="uuid"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `OF > uuid`
 
-|                |                  |
-| -------------- | ---------------- |
-| **Type**       | `string`         |
-| **Defined in** | #/$defs/ofString |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/$defs/ofString</h1></td>
+  </tr>
+</table>
 
 **Description:** Unique Identifer
 
@@ -38,17 +93,37 @@
 "29292929292929292929292"
 ```
 
-| Restrictions   |     |
-| -------------- | --- |
-| **Min length** | 5   |
-| **Max length** | 250 |
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Min length</strong></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td><strong>Max length</strong></td>
+    <td>250</td>
+  </tr>
+</table>
 
 ## <a name="firstName"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `OF > firstName`
 
-|                |                  |
-| -------------- | ---------------- |
-| **Type**       | `string`         |
-| **Defined in** | #/$defs/ofString |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/$defs/ofString</h1></td>
+  </tr>
+</table>
 
 **Description:** first name
 
@@ -64,17 +139,37 @@
 "John"
 ```
 
-| Restrictions   |     |
-| -------------- | --- |
-| **Min length** | 10  |
-| **Max length** | 250 |
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Min length</strong></td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td><strong>Max length</strong></td>
+    <td>250</td>
+  </tr>
+</table>
 
 ## <a name="lastName"></a>3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `OF > lastName`
 
-|                |                  |
-| -------------- | ---------------- |
-| **Type**       | `string`         |
-| **Defined in** | #/$defs/ofString |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/$defs/ofString</h1></td>
+  </tr>
+</table>
 
 **Description:** last name
 
@@ -90,10 +185,20 @@
 "Doe"
 ```
 
-| Restrictions   |    |
-| -------------- | -- |
-| **Min length** | 5  |
-| **Max length** | 10 |
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Min length</strong></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td><strong>Max length</strong></td>
+    <td>10</td>
+  </tr>
+</table>
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

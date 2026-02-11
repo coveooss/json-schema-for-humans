@@ -3,29 +3,44 @@
 - [1. [Optional] Property Person > firstName](#firstName)
 - [2. [Optional] Property Person > lastName](#lastName)
 
-**Title:** Person
+<p><strong>Title:</strong> Person</p>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="firstName"></a>1. [Optional] Property Person > firstName</strong>  
 
 </summary>
-<blockquote>
 
-**Title:** Person
+<p><strong>Title:</strong> Person</p>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
-**Description:** The person's first name.
+<p><strong>Description:</strong> The person's first name.</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -33,17 +48,28 @@
 <strong> <a name="lastName"></a>2. [Optional] Property Person > lastName</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | a_file_that_does_not_exist_and_will_never_i_hope.lol.json                   |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td>a<em>file</em>that<em>does</em>not<em>exist</em>and<em>will</em>never<em>i</em>hope.lol.json</td>
+  </tr>
+</table>
 
-**Description:** 😅 ERROR in schema generation, a referenced schema could not be loaded, no documentation here unfortunately 🏜️
+<p><strong>Description:</strong> 😅 ERROR in schema generation, a referenced schema could not be loaded, no documentation here unfortunately 🏜️</p>
 
-</blockquote>
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------

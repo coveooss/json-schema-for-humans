@@ -1,4 +1,4 @@
-from typing import Dict, List, Optional, Union
+from typing import Callable, Dict, List, Optional, Union
 from urllib.parse import quote, quote_plus
 
 import jinja2
@@ -57,10 +57,11 @@ def get_numeric_minimum_restriction(schema_node: SchemaNode, default: str = "N/A
     return minimum_fragment
 
 
-def generate_table(table: List[List[str]]) -> str:
+def generate_table(table: List[List[str]], md_renderer: Optional[Callable[[str], str]] = None) -> str:
     """
     Generate an HTML table using list of rows.
     Assuming first row is header line.
+    If md_renderer is provided, cell content will be passed through it.
     """
     if len(table) == 0:
         return ""
@@ -70,7 +71,14 @@ def generate_table(table: List[List[str]]) -> str:
         output += "  <tr>\n"
         tag = "th" if idx_row == 0 else "td"
         for cell in row:
-            output += f"    <{tag}>{cell}</{tag}>\n"
+            cell_content = cell
+            # Render markdown for non-header cells if renderer is provided
+            if md_renderer and idx_row > 0 and cell:
+                cell_content = md_renderer(cell).strip()
+                # Remove surrounding <p> tags if present
+                if cell_content.startswith("<p>") and cell_content.endswith("</p>"):
+                    cell_content = cell_content[3:-4]
+            output += f"    <{tag}>{cell_content}</{tag}>\n"
         output += "  </tr>\n"
     output += "</table>\n"
 
@@ -195,11 +203,26 @@ class MarkdownTemplate(object):
         env.filters["md_array_items_restrictions"] = array_items_restrictions
         env.filters["md_array_items"] = array_items
         env.filters["md_restrictions_table"] = restrictions_table
-        env.filters["md_generate_table"] = generate_table
+        env.filters["md_generate_table"] = self._make_generate_table_filter(env)
+        env.filters["md_render"] = self._make_md_render_filter(env)
 
         env.globals["required_badge"] = self.required_badge
         env.globals["optional_badge"] = self.optional_badge
         env.globals["md_get_toc"] = self.get_toc
+
+    def _make_generate_table_filter(self, env: jinja2.Environment) -> Callable[[List[List[str]]], str]:
+        """Create a generate_table filter that uses the markdown renderer from the environment."""
+        md_renderer = env.globals.get("jsfh_md")
+        if md_renderer:
+            return lambda table: generate_table(table, md_renderer.convert)
+        return generate_table
+
+    def _make_md_render_filter(self, env: jinja2.Environment) -> Callable[[str], str]:
+        """Create a filter that renders markdown to HTML."""
+        md_renderer = env.globals.get("jsfh_md")
+        if md_renderer:
+            return lambda text: md_renderer.convert(text) if text else ""
+        return lambda text: text or ""
 
     def heading(self, title: str, depth: int, html_id: Union[bool, str] = False, nested: bool = False) -> str:
         """

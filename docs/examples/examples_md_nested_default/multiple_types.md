@@ -5,29 +5,50 @@
 - [3. [Optional] Property Person > age](#age)
 - [4. [Optional] Property Person > anything](#anything)
 
-**Title:** Person
+<p><strong>Title:</strong> Person</p>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="firstName"></a>1. [Optional] Property Person > firstName</strong>  
 
 </summary>
-<blockquote>
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
-**Description:** The person's first name.
+<p><strong>Description:</strong> The person's first name.</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -35,16 +56,24 @@
 <strong> <a name="lastName"></a>2. [Optional] Property Person > lastName</strong>  
 
 </summary>
-<blockquote>
 
-|              |                  |
-| ------------ | ---------------- |
-| **Type**     | `string or null` |
-| **Required** | No               |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string or null</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
-**Description:** The person's last name.
+<p><strong>Description:</strong> The person's last name.</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -52,20 +81,35 @@
 <strong> <a name="age"></a>3. [Optional] Property Person > age</strong>  
 
 </summary>
-<blockquote>
 
-|              |                     |
-| ------------ | ------------------- |
-| **Type**     | `integer or number` |
-| **Required** | No                  |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer or number</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
-**Description:** Age in years which must be equal to or greater than zero.
+<p><strong>Description:</strong> Age in years which must be equal to or greater than zero.</p>
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Minimum</strong></td>
+    <td>&ge; 0</td>
+  </tr>
+</table>
 
-</blockquote>
 </details>
 
 <details>
@@ -73,16 +117,24 @@
 <strong> <a name="anything"></a>4. [Optional] Property Person > anything</strong>  
 
 </summary>
-<blockquote>
 
-|              |                                   |
-| ------------ | --------------------------------- |
-| **Type**     | `integer, string, number or null` |
-| **Required** | No                                |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer, string, number or null</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
-**Description:** Ay other info you like
+<p><strong>Description:</strong> Ay other info you like</p>
 
-</blockquote>
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------

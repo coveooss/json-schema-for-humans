@@ -20,229 +20,714 @@
 - [13. Property `root > multi_hierarchy_reference`](#multi_hierarchy_reference)
   - [13.1. Property `root > multi_hierarchy_reference > propertyA`](#multi_hierarchy_reference_propertyA)
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 **Description:** Testing $ref
 
-| Property                                                       | Pattern | Type            | Deprecated | Definition                                                              | Title/Description                           |
-| -------------------------------------------------------------- | ------- | --------------- | ---------- | ----------------------------------------------------------------------- | ------------------------------------------- |
-| - [a_gift](#a_gift )                                           | No      | string          | No         | In #/definitions/gift                                                   | A gift, or is it?                           |
-| - [file_prefix](#file_prefix )                                 | No      | string          | No         | Same as [a_gift](#a_gift )                                              | A gift, or is it?                           |
-| - [anchor_with_slash](#anchor_with_slash )                     | No      | object          | No         | In #/definitions/object_def                                             | -                                           |
-| - [anchor_no_slash](#anchor_no_slash )                         | No      | array of string | No         | In #definitions/array_def                                               | Description for array_def                   |
-| - [anchor_nested_reference](#anchor_nested_reference )         | No      | string          | No         | In #/definitions/reference_def                                          | -                                           |
-| - [same_file_anchor_with_slash](#same_file_anchor_with_slash ) | No      | string          | No         | In references.json#/definitions/string_def                              | Description for string_def                  |
-| - [same_file_anchor_no_slash](#same_file_anchor_no_slash )     | No      | object          | No         | Same as [anchor_with_slash](#anchor_with_slash )                        | -                                           |
-| - [same_file_nested_reference](#same_file_nested_reference )   | No      | string          | No         | Same as [anchor_nested_reference](#anchor_nested_reference )            | -                                           |
-| - [other_file_anchor](#other_file_anchor )                     | No      | object          | No         | In with_descriptions.json#/definitions/gift                             | The delivery is a gift, no prices displayed |
-| - [other_file_dot_anchor](#other_file_dot_anchor )             | No      | object          | No         | Same as [other_file_anchor](#other_file_anchor )                        | The delivery is a gift, no prices displayed |
-| - [other_file_dot_dot_anchor](#other_file_dot_dot_anchor )     | No      | object          | No         | Same as [other_file_anchor](#other_file_anchor )                        | The delivery is a gift, no prices displayed |
-| - [other_file_only](#other_file_only )                         | No      | object          | No         | In combining_not.json                                                   | Test schema with a not                      |
-| - [multi_hierarchy_reference](#multi_hierarchy_reference )     | No      | object          | No         | In reference_schemas/intermediate.json#/properties/cross_file_reference | -                                           |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">a_gift</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>In #/definitions/gift</td>
+    <td>A gift, or is it?</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">file_prefix</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>Same as <a href="#">a_gift</a></td>
+    <td>A gift, or is it?</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">anchor<em>with</em>slash</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>In #/definitions/object_def</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">anchor<em>no</em>slash</a></li>
+</ul></td>
+    <td>No</td>
+    <td>array of string</td>
+    <td>No</td>
+    <td>In #definitions/array_def</td>
+    <td>Description for array_def</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">anchor<em>nested</em>reference</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>In #/definitions/reference_def</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">same<em>file</em>anchor<em>with</em>slash</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>In references.json#/definitions/string_def</td>
+    <td>Description for string_def</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">same<em>file</em>anchor<em>no</em>slash</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>Same as <a href="#">anchor<em>with</em>slash</a></td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">same<em>file</em>nested_reference</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>Same as <a href="#">anchor<em>nested</em>reference</a></td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">other<em>file</em>anchor</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>In with_descriptions.json#/definitions/gift</td>
+    <td>The delivery is a gift, no prices displayed</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">other<em>file</em>dot_anchor</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>Same as <a href="#">other<em>file</em>anchor</a></td>
+    <td>The delivery is a gift, no prices displayed</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">other<em>file</em>dot<em>dot</em>anchor</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>Same as <a href="#">other<em>file</em>anchor</a></td>
+    <td>The delivery is a gift, no prices displayed</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">other<em>file</em>only</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>In combining_not.json</td>
+    <td>Test schema with a not</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">multi<em>hierarchy</em>reference</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>In reference<em>schemas/intermediate.json#/properties/cross</em>file_reference</td>
+    <td>-</td>
+  </tr>
+</table>
 
 ## <a name="a_gift"></a>1. Property `root > a_gift`
 
-|                |                    |
-| -------------- | ------------------ |
-| **Type**       | `string`           |
-| **Required**   | No                 |
-| **Defined in** | #/definitions/gift |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/gift</h1></td>
+  </tr>
+</table>
 
 **Description:** A gift, or is it?
 
 ## <a name="file_prefix"></a>2. Property `root > file_prefix`
 
-|                        |                   |
-| ---------------------- | ----------------- |
-| **Type**               | `string`          |
-| **Required**           | No                |
-| **Same definition as** | [a_gift](#a_gift) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#a_gift">a_gift</a></td>
+  </tr>
+</table>
 
 **Description:** A gift, or is it?
 
 ## <a name="anchor_with_slash"></a>3. Property `root > anchor_with_slash`
 
-|                           |                          |
-| ------------------------- | ------------------------ |
-| **Type**                  | `object`                 |
-| **Required**              | No                       |
-| **Additional properties** | Not allowed              |
-| **Defined in**            | #/definitions/object_def |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/object_def</h1></td>
+  </tr>
+</table>
 
-| Property                                     | Pattern | Type   | Deprecated | Definition | Title/Description                          |
-| -------------------------------------------- | ------- | ------ | ---------- | ---------- | ------------------------------------------ |
-| - [propertyA](#anchor_with_slash_propertyA ) | No      | string | No         | -          | Description for object_def/items/propertyA |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">propertyA</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Description for object_def/items/propertyA</td>
+  </tr>
+</table>
 
 ### <a name="anchor_with_slash_propertyA"></a>3.1. Property `root > anchor_with_slash > propertyA`
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Description for object_def/items/propertyA
 
 ## <a name="anchor_no_slash"></a>4. Property `root > anchor_no_slash`
 
-|                |                        |
-| -------------- | ---------------------- |
-| **Type**       | `array of string`      |
-| **Required**   | No                     |
-| **Defined in** | #definitions/array_def |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>array of string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>definitions/array_def</h1></td>
+  </tr>
+</table>
 
 **Description:** Description for array_def
 
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
+<table>
+  <tr>
+    <th></th>
+    <th>Array restrictions</th>
+  </tr>
+  <tr>
+    <td><strong>Min items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Max items</strong></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><strong>Items unicity</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Additional items</strong></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td><strong>Tuple validation</strong></td>
+    <td>See below</td>
+  </tr>
+</table>
 
-| Each item of this array must be                 | Description |
-| ----------------------------------------------- | ----------- |
-| [anchor_no_slash items](#anchor_no_slash_items) | -           |
+<table>
+  <tr>
+    <th>Each item of this array must be</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="#anchor_no_slash_items">anchor<em>no</em>slash items</a></td>
+    <td>-</td>
+  </tr>
+</table>
 
 ### <a name="anchor_no_slash_items"></a>4.1. root > anchor_no_slash > anchor_no_slash items
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 ## <a name="anchor_nested_reference"></a>5. Property `root > anchor_nested_reference`
 
-|                |                             |
-| -------------- | --------------------------- |
-| **Type**       | `string`                    |
-| **Required**   | No                          |
-| **Defined in** | #/definitions/reference_def |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/reference_def</h1></td>
+  </tr>
+</table>
 
 ## <a name="same_file_anchor_with_slash"></a>6. Property `root > same_file_anchor_with_slash`
 
-|                |                                         |
-| -------------- | --------------------------------------- |
-| **Type**       | `string`                                |
-| **Required**   | No                                      |
-| **Defined in** | references.json#/definitions/string_def |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td>references.json#/definitions/string_def</td>
+  </tr>
+</table>
 
 **Description:** Description for string_def
 
 ## <a name="same_file_anchor_no_slash"></a>7. Property `root > same_file_anchor_no_slash`
 
-|                           |                                         |
-| ------------------------- | --------------------------------------- |
-| **Type**                  | `object`                                |
-| **Required**              | No                                      |
-| **Additional properties** | Not allowed                             |
-| **Same definition as**    | [anchor_with_slash](#anchor_with_slash) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#anchor_with_slash">anchor<em>with</em>slash</a></td>
+  </tr>
+</table>
 
 ## <a name="same_file_nested_reference"></a>8. Property `root > same_file_nested_reference`
 
-|                        |                                                     |
-| ---------------------- | --------------------------------------------------- |
-| **Type**               | `string`                                            |
-| **Required**           | No                                                  |
-| **Same definition as** | [anchor_nested_reference](#anchor_nested_reference) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#anchor_nested_reference">anchor<em>nested</em>reference</a></td>
+  </tr>
+</table>
 
 ## <a name="other_file_anchor"></a>9. Property `root > other_file_anchor`
 
-|                           |                                          |
-| ------------------------- | ---------------------------------------- |
-| **Type**                  | `object`                                 |
-| **Required**              | No                                       |
-| **Additional properties** | Any type allowed                         |
-| **Defined in**            | with_descriptions.json#/definitions/gift |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td>with_descriptions.json#/definitions/gift</td>
+  </tr>
+</table>
 
 **Description:** The delivery is a gift, no prices displayed
 
-| Property                                     | Pattern | Type    | Deprecated | Definition | Title/Description |
-| -------------------------------------------- | ------- | ------- | ---------- | ---------- | ----------------- |
-| - [with_wrap](#other_file_anchor_with_wrap ) | No      | boolean | No         | -          | -                 |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">with_wrap</a></li>
+</ul></td>
+    <td>No</td>
+    <td>boolean</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
 
 ### <a name="other_file_anchor_with_wrap"></a>9.1. Property `root > other_file_anchor > with_wrap`
 
-|              |           |
-| ------------ | --------- |
-| **Type**     | `boolean` |
-| **Required** | No        |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>boolean</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 ## <a name="other_file_dot_anchor"></a>10. Property `root > other_file_dot_anchor`
 
-|                           |                                         |
-| ------------------------- | --------------------------------------- |
-| **Type**                  | `object`                                |
-| **Required**              | No                                      |
-| **Additional properties** | Any type allowed                        |
-| **Same definition as**    | [other_file_anchor](#other_file_anchor) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#other_file_anchor">other<em>file</em>anchor</a></td>
+  </tr>
+</table>
 
 **Description:** The delivery is a gift, no prices displayed
 
 ## <a name="other_file_dot_dot_anchor"></a>11. Property `root > other_file_dot_dot_anchor`
 
-|                           |                                         |
-| ------------------------- | --------------------------------------- |
-| **Type**                  | `object`                                |
-| **Required**              | No                                      |
-| **Additional properties** | Any type allowed                        |
-| **Same definition as**    | [other_file_anchor](#other_file_anchor) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#other_file_anchor">other<em>file</em>anchor</a></td>
+  </tr>
+</table>
 
 **Description:** The delivery is a gift, no prices displayed
 
 ## <a name="other_file_only"></a>12. Property `root > other_file_only`
 
-|                           |                    |
-| ------------------------- | ------------------ |
-| **Type**                  | `object`           |
-| **Required**              | No                 |
-| **Additional properties** | Any type allowed   |
-| **Defined in**            | combining_not.json |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td>combining_not.json</td>
+  </tr>
+</table>
 
 **Description:** Test schema with a not
 
-| Property                                         | Pattern | Type        | Deprecated | Definition | Title/Description |
-| ------------------------------------------------ | ------- | ----------- | ---------- | ---------- | ----------------- |
-| + [not_a_string](#other_file_only_not_a_string ) | No      | Combination | No         | -          | -                 |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">not<em>a</em>string</a></li>
+</ul></td>
+    <td>No</td>
+    <td>Combination</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
 
 ### <a name="other_file_only_not_a_string"></a>12.1. Property `root > other_file_only > not_a_string`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `combining`      |
-| **Required**              | Yes              |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>combining</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 #### <a name="autogenerated_heading_2"></a>12.1.1. Must **not** be
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 ## <a name="multi_hierarchy_reference"></a>13. Property `root > multi_hierarchy_reference`
 
-|                           |                                                                      |
-| ------------------------- | -------------------------------------------------------------------- |
-| **Type**                  | `object`                                                             |
-| **Required**              | No                                                                   |
-| **Additional properties** | Any type allowed                                                     |
-| **Defined in**            | reference_schemas/intermediate.json#/properties/cross_file_reference |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td>reference<em>schemas/intermediate.json#/properties/cross</em>file_reference</td>
+  </tr>
+</table>
 
-| Property                                             | Pattern | Type   | Deprecated | Definition | Title/Description                   |
-| ---------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------------------------- |
-| - [propertyA](#multi_hierarchy_reference_propertyA ) | No      | string | No         | -          | Contents of propertyA in final.json |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">propertyA</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Contents of propertyA in final.json</td>
+  </tr>
+</table>
 
 ### <a name="multi_hierarchy_reference_propertyA"></a>13.1. Property `root > multi_hierarchy_reference > propertyA`
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
 **Description:** Contents of propertyA in final.json
 

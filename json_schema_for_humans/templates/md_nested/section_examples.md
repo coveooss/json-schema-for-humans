@@ -1,4 +1,4 @@
-**Example{% if examples|length > 1 %}s{% endif %}:**{{- "" -}}
+{{ ("**Example" ~ ("s" if examples|length > 1 else "") ~ ":**") | md_render }}{{- "" -}}
 
 {% for example in examples %}
     {%- if loop.first %}{{ "\n\n" }}{% endif -%}

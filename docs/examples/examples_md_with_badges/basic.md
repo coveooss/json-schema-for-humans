@@ -9,25 +9,86 @@
 
 **Title:** Person
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-| Property                               | Pattern | Type        | Deprecated | Definition | Title/Description |
-| -------------------------------------- | ------- | ----------- | ---------- | ---------- | ----------------- |
-| - [firstName](#firstName )             | No      | string      | No         | -          | Person            |
-| - [lastName](#lastName )               | No      | string      | No         | -          | Person            |
-| - [age](#age )                         | No      | integer     | No         | -          | Person            |
-| - [driverLicenseId](#driverLicenseId ) | No      | Combination | No         | -          | -                 |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">firstName</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Person</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">lastName</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Person</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">age</a></li>
+</ul></td>
+    <td>No</td>
+    <td>integer</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Person</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">driverLicenseId</a></li>
+</ul></td>
+    <td>No</td>
+    <td>Combination</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
 
 ## <a name="firstName"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > firstName`
 
 **Title:** Person
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
 **Description:** The person's first name.
 
@@ -35,9 +96,16 @@
 
 **Title:** Person
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
 **Description:** The person's last name.
 
@@ -45,43 +113,88 @@
 
 **Title:** Person
 
-|          |           |
-| -------- | --------- |
-| **Type** | `integer` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer</code></td>
+  </tr>
+</table>
 
 **Description:** Age in years which must be equal to or greater than zero.
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Minimum</strong></td>
+    <td>&ge; 0</td>
+  </tr>
+</table>
 
 ## <a name="driverLicenseId"></a>4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > driverLicenseId`
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `combining`                                                                 |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>combining</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-| All of(Requirement)                            |
-| ---------------------------------------------- |
-| [no driver licence](#driverLicenseId_allOf_i0) |
-| [driver licence id](#driverLicenseId_allOf_i1) |
+<table>
+  <tr>
+    <th>All of(Requirement)</th>
+  </tr>
+  <tr>
+    <td><a href="#driverLicenseId_allOf_i0">no driver licence</a></td>
+  </tr>
+  <tr>
+    <td><a href="#driverLicenseId_allOf_i1">driver licence id</a></td>
+  </tr>
+</table>
 
 ### <a name="driverLicenseId_allOf_i0"></a>4.1. Property `Person > driverLicenseId > allOf > no driver licence`
 
 **Title:** no driver licence
 
-|          |        |
-| -------- | ------ |
-| **Type** | `null` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>null</code></td>
+  </tr>
+</table>
 
 ### <a name="driverLicenseId_allOf_i1"></a>4.2. Property `Person > driverLicenseId > allOf > driver licence id`
 
 **Title:** driver licence id
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

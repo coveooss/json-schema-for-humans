@@ -5,39 +5,109 @@
 
 **Title:** Longitude and Latitude Values
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 **Description:** A geographical coordinate.
 
-| Property                   | Pattern | Type   | Deprecated | Definition | Title/Description |
-| -------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| + [latitude](#latitude )   | No      | number | No         | -          | -                 |
-| + [longitude](#longitude ) | No      | number | No         | -          | -                 |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">latitude</a></li>
+</ul></td>
+    <td>No</td>
+    <td>number</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">longitude</a></li>
+</ul></td>
+    <td>No</td>
+    <td>number</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
 
 ## <a name="latitude"></a>1. ![Required](https://img.shields.io/badge/Required-blue) Property `Longitude and Latitude Values > latitude`
 
-|          |          |
-| -------- | -------- |
-| **Type** | `number` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>number</code></td>
+  </tr>
+</table>
 
-| Restrictions |          |
-| ------------ | -------- |
-| **Minimum**  | &ge; -90 |
-| **Maximum**  | &le; 90  |
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Minimum</strong></td>
+    <td>&ge; -90</td>
+  </tr>
+  <tr>
+    <td><strong>Maximum</strong></td>
+    <td>&le; 90</td>
+  </tr>
+</table>
 
 ## <a name="longitude"></a>2. ![Required](https://img.shields.io/badge/Required-blue) Property `Longitude and Latitude Values > longitude`
 
-|          |          |
-| -------- | -------- |
-| **Type** | `number` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>number</code></td>
+  </tr>
+</table>
 
-| Restrictions |           |
-| ------------ | --------- |
-| **Minimum**  | &ge; -180 |
-| **Maximum**  | &le; 180  |
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Minimum</strong></td>
+    <td>&ge; -180</td>
+  </tr>
+  <tr>
+    <td><strong>Maximum</strong></td>
+    <td>&le; 180</td>
+  </tr>
+</table>
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

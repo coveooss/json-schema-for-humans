@@ -3,35 +3,98 @@
 - [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > name`](#name)
 - [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > alignment`](#alignment)
 
-|                           |                                                                |
-| ------------------------- | -------------------------------------------------------------- |
-| **Type**                  | `object`                                                       |
-| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Not%20allowed-red" alt="Not allowed" /></td>
+  </tr>
+</table>
 
-| Property                   | Pattern | Type   | Deprecated | Definition                     | Title/Description |
-| -------------------------- | ------- | ------ | ---------- | ------------------------------ | ----------------- |
-| - [name](#name )           | No      | string | No         | In #/definitions/filled_string | a filled string   |
-| - [alignment](#alignment ) | No      | string | No         | Same as [name](#name )         | a filled string   |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">name</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>In #/definitions/filled_string</td>
+    <td>a filled string</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">alignment</a></li>
+</ul></td>
+    <td>No</td>
+    <td>string</td>
+    <td>No</td>
+    <td>Same as <a href="#">name</a></td>
+    <td>a filled string</td>
+  </tr>
+</table>
 
 ## <a name="name"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > name`
 
-|                |                             |
-| -------------- | --------------------------- |
-| **Type**       | `string`                    |
-| **Defined in** | #/definitions/filled_string |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/filled_string</h1></td>
+  </tr>
+</table>
 
 **Description:** a filled string
 
-| Restrictions   |   |
-| -------------- | - |
-| **Min length** | 1 |
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Min length</strong></td>
+    <td>1</td>
+  </tr>
+</table>
 
 ## <a name="alignment"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > alignment`
 
-|                        |               |
-| ---------------------- | ------------- |
-| **Type**               | `string`      |
-| **Same definition as** | [name](#name) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#name">name</a></td>
+  </tr>
+</table>
 
 **Description:** a filled string
 

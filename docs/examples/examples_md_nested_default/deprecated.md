@@ -6,31 +6,57 @@
 - [4. [Optional] ~~Property root > deprecated4~~](#deprecated4)
 - [5. [Optional] Property root > not_deprecated](#not_deprecated)
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
-**Description:** Test schema with deprecated in description
+<p><strong>Description:</strong> Test schema with deprecated in description</p>
 
 <details>
 <summary>
 <strong> <a name="deprecated1"></a>1. [Optional] ~~Property root > deprecated1~~</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Deprecated**            |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Deprecated</strong></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
-**Description:** [Deprecated]
+<p><strong>Description:</strong> [Deprecated]</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -38,18 +64,31 @@
 <strong> <a name="deprecated2"></a>2. [Optional] ~~Property root > deprecated2~~</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Deprecated**            |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Deprecated</strong></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
-**Description:** [Deprecated - Use `not_deprecated` instead]
+<p><strong>Description:</strong> [Deprecated - Use <code>not_deprecated</code> instead]</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -57,18 +96,31 @@
 <strong> <a name="deprecated3"></a>3. [Optional] ~~Property root > deprecated3~~</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Deprecated**            |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Deprecated</strong></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
-**Description:** This is [Deprecated]
+<p><strong>Description:</strong> This is [Deprecated]</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -76,18 +128,31 @@
 <strong> <a name="deprecated4"></a>4. [Optional] ~~Property root > deprecated4~~</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Deprecated**            |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Deprecated</strong></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
-**Description:** This is [Deprecated - Use `not_deprecated` instead]
+<p><strong>Description:</strong> This is [Deprecated - Use <code>not_deprecated</code> instead]</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -95,14 +160,22 @@
 <strong> <a name="not_deprecated"></a>5. [Optional] Property root > not_deprecated</strong>  
 
 </summary>
-<blockquote>
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
-</blockquote>
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------

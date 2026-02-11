@@ -7,68 +7,210 @@
 
 **Title:** Person
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
-| Property                           | Pattern | Type   | Deprecated | Definition                                       | Title/Description                            |
-| ---------------------------------- | ------- | ------ | ---------- | ------------------------------------------------ | -------------------------------------------- |
-| - [relationships](#relationships ) | No      | object | No         | In #/definitions/person/properties/relationships | Relationships between this person and others |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">relationships</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>In #/definitions/person/properties/relationships</td>
+    <td>Relationships between this person and others</td>
+  </tr>
+</table>
 
 ## <a name="relationships"></a>1. Property `Person > relationships`
 
-|                           |                                               |
-| ------------------------- | --------------------------------------------- |
-| **Type**                  | `object`                                      |
-| **Required**              | No                                            |
-| **Additional properties** | Any type allowed                              |
-| **Defined in**            | #/definitions/person/properties/relationships |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/person/properties/relationships</h1></td>
+  </tr>
+</table>
 
 **Description:** Relationships between this person and others
 
-| Property                           | Pattern | Type   | Deprecated | Definition              | Title/Description |
-| ---------------------------------- | ------- | ------ | ---------- | ----------------------- | ----------------- |
-| - [mother](#relationships_mother ) | No      | object | No         | In #/definitions/person | A human being     |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">mother</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>In #/definitions/person</td>
+    <td>A human being</td>
+  </tr>
+</table>
 
 ### <a name="relationships_mother"></a>1.1. Property `Person > relationships > mother`
 
-|                           |                      |
-| ------------------------- | -------------------- |
-| **Type**                  | `object`             |
-| **Required**              | No                   |
-| **Additional properties** | Any type allowed     |
-| **Defined in**            | #/definitions/person |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/person</h1></td>
+  </tr>
+</table>
 
 **Description:** A human being
 
-| Property                                                | Pattern | Type   | Deprecated | Definition | Title/Description                            |
-| ------------------------------------------------------- | ------- | ------ | ---------- | ---------- | -------------------------------------------- |
-| - [relationships](#relationships_mother_relationships ) | No      | object | No         | -          | Relationships between this person and others |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">relationships</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Relationships between this person and others</td>
+  </tr>
+</table>
 
 #### <a name="relationships_mother_relationships"></a>1.1.1. Property `Person > relationships > mother > relationships`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 **Description:** Relationships between this person and others
 
-| Property                                                | Pattern | Type   | Deprecated | Definition                               | Title/Description |
-| ------------------------------------------------------- | ------- | ------ | ---------- | ---------------------------------------- | ----------------- |
-| - [mother](#relationships_mother_relationships_mother ) | No      | object | No         | Same as [mother](#relationships_mother ) | A human being     |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">mother</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>Same as <a href="#">mother</a></td>
+    <td>A human being</td>
+  </tr>
+</table>
 
 ##### <a name="relationships_mother_relationships_mother"></a>1.1.1.1. Property `Person > relationships > mother > relationships > mother`
 
-|                           |                                 |
-| ------------------------- | ------------------------------- |
-| **Type**                  | `object`                        |
-| **Required**              | No                              |
-| **Additional properties** | Any type allowed                |
-| **Same definition as**    | [mother](#relationships_mother) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#relationships_mother">mother</a></td>
+  </tr>
+</table>
 
 **Description:** A human being
 

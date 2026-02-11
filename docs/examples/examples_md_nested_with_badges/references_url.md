@@ -2,30 +2,48 @@
 
 - [1. [Optional] Property root > firstName](#firstName)
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
-**Description:** Testing $ref with URL
+<p><strong>Description:</strong> Testing $ref with URL</p>
 
 <details>
 <summary>
 <strong> <a name="firstName"></a>1. [Optional] Property root > firstName</strong>  
 
 </summary>
-<blockquote>
 
-**Title:** Person
+<p><strong>Title:</strong> Person</p>
 
-|                |                                                                                                                             |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| **Type**       | `string`                                                                                                                    |
-| **Defined in** | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/basic.json#/properties/firstName |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td>https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/basic.json#/properties/firstName</td>
+  </tr>
+</table>
 
-**Description:** The person's first name.
+<p><strong>Description:</strong> The person's first name.</p>
 
-</blockquote>
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------

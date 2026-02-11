@@ -6,37 +6,67 @@
     - [1.2.1. [Optional] Property root > signingTimeInfo > signingTimeBounds > lowerBound](#signingTimeInfo_signingTimeBounds_lowerBound)
     - [1.2.2. [Optional] Property root > signingTimeInfo > signingTimeBounds > upperBound](#signingTimeInfo_signingTimeBounds_upperBound)
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="signingTimeInfo"></a>1. [Optional] Property root > signingTimeInfo</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | #/definitions/dss2-SigningTimeInfoType                                      |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/dss2-SigningTimeInfoType</h1></td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="signingTimeInfo_signingTime"></a>1.1. [Required] Property root > signingTimeInfo > signingTime</strong>  
 
 </summary>
-<blockquote>
 
-|            |                |
-| ---------- | -------------- |
-| **Type**   | `integer`      |
-| **Format** | `utc-millisec` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer</code></td>
+  </tr>
+  <tr>
+    <td><strong>Format</strong></td>
+    <td><code>utc-millisec</code></td>
+  </tr>
+</table>
 
-</blockquote>
 </details>
 
 <details>
@@ -44,27 +74,47 @@
 <strong> <a name="signingTimeInfo_signingTimeBounds"></a>1.2. [Optional] Property root > signingTimeInfo > signingTimeBounds</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | #/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries              |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries</h1></td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="signingTimeInfo_signingTimeBounds_lowerBound"></a>1.2.1. [Optional] Property root > signingTimeInfo > signingTimeBounds > lowerBound</strong>  
 
 </summary>
-<blockquote>
 
-|            |                |
-| ---------- | -------------- |
-| **Type**   | `integer`      |
-| **Format** | `utc-millisec` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer</code></td>
+  </tr>
+  <tr>
+    <td><strong>Format</strong></td>
+    <td><code>utc-millisec</code></td>
+  </tr>
+</table>
 
-</blockquote>
 </details>
 
 <details>
@@ -72,20 +122,26 @@
 <strong> <a name="signingTimeInfo_signingTimeBounds_upperBound"></a>1.2.2. [Optional] Property root > signingTimeInfo > signingTimeBounds > upperBound</strong>  
 
 </summary>
-<blockquote>
 
-|            |                |
-| ---------- | -------------- |
-| **Type**   | `integer`      |
-| **Format** | `utc-millisec` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer</code></td>
+  </tr>
+  <tr>
+    <td><strong>Format</strong></td>
+    <td><code>utc-millisec</code></td>
+  </tr>
+</table>
 
-</blockquote>
 </details>
 
-</blockquote>
 </details>
 
-</blockquote>
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------

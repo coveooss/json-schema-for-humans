@@ -10,83 +10,255 @@
 
 **Title:** Person
 
-|                           |                                                                                              |
-| ------------------------- | -------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                     |
-| **Additional properties** | [![Should-conform](https://img.shields.io/badge/Should-conform-blue)](#additionalProperties) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><a href="#additionalProperties"><img src="https://img.shields.io/badge/Should-conform-blue" alt="Should-conform" /></a></td>
+  </tr>
+</table>
 
-| Property                     | Pattern | Type    | Deprecated | Definition | Title/Description                                                          |
-| ---------------------------- | ------- | ------- | ---------- | ---------- | -------------------------------------------------------------------------- |
-| - [subType1](#subType1 )     | No      | object  | No         | -          | A sub type with additionalProperties false.                                |
-| - [subType2](#subType2 )     | No      | object  | No         | -          | A sub type with additionalProperties true.                                 |
-| - [anInt](#anInt )           | No      | integer | No         | -          | This is an integer, it should not show additional properties. (issue #132) |
-| - [](#additionalProperties ) | No      | object  | No         | -          | additionalProperties schema.                                               |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">subType1</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A sub type with additionalProperties false.</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">subType2</a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A sub type with additionalProperties true.</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">anInt</a></li>
+</ul></td>
+    <td>No</td>
+    <td>integer</td>
+    <td>No</td>
+    <td>-</td>
+    <td>This is an integer, it should not show additional properties. (issue #132)</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#"></a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>-</td>
+    <td>additionalProperties schema.</td>
+  </tr>
+</table>
 
 ## <a name="subType1"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType1`
 
-|                           |                                                                |
-| ------------------------- | -------------------------------------------------------------- |
-| **Type**                  | `object`                                                       |
-| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Not%20allowed-red" alt="Not allowed" /></td>
+  </tr>
+</table>
 
 **Description:** A sub type with additionalProperties false.
 
-| Property                          | Pattern | Type   | Deprecated | Definition | Title/Description |
-| --------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [subProp1](#subType1_subProp1 ) | No      | number | No         | -          | -                 |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">subProp1</a></li>
+</ul></td>
+    <td>No</td>
+    <td>number</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
 
 ### <a name="subType1_subProp1"></a>1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType1 > subProp1`
 
-|          |          |
-| -------- | -------- |
-| **Type** | `number` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>number</code></td>
+  </tr>
+</table>
 
 ## <a name="subType2"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType2`
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 **Description:** A sub type with additionalProperties true.
 
-| Property                              | Pattern | Type   | Deprecated | Definition | Title/Description |
-| ------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [subProp2](#subType2_subProp2 )     | No      | number | No         | -          | -                 |
-| - [](#subType2_additionalProperties ) | No      | object | No         | -          | -                 |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">subProp2</a></li>
+</ul></td>
+    <td>No</td>
+    <td>number</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#"></a></li>
+</ul></td>
+    <td>No</td>
+    <td>object</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
 
 ### <a name="subType2_subProp2"></a>2.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > subType2 > subProp2`
 
-|          |          |
-| -------- | -------- |
-| **Type** | `number` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>number</code></td>
+  </tr>
+</table>
 
 ## <a name="anInt"></a>3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > anInt`
 
-|          |           |
-| -------- | --------- |
-| **Type** | `integer` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer</code></td>
+  </tr>
+</table>
 
 **Description:** This is an integer, it should not show additional properties. (issue #132)
 
 ## <a name="additionalProperties"></a>4. Property `Person > additionalProperties`
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 **Description:** additionalProperties schema.
 
-| Property                                | Pattern | Type   | Deprecated | Definition | Title/Description |
-| --------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [propA](#additionalProperties_propA ) | No      | number | No         | -          | -                 |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Pattern</th>
+    <th>Type</th>
+    <th>Deprecated</th>
+    <th>Definition</th>
+    <th>Title/Description</th>
+  </tr>
+  <tr>
+    <td><ul>
+<li><a href="#">propA</a></li>
+</ul></td>
+    <td>No</td>
+    <td>number</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
 
 ### <a name="additionalProperties_propA"></a>4.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > additionalProperties > propA`
 
-|          |          |
-| -------- | -------- |
-| **Type** | `number` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>number</code></td>
+  </tr>
+</table>
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

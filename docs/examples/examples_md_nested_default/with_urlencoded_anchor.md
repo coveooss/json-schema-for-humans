@@ -6,40 +6,79 @@
     - [1.2.1. [Optional] Property root > signingTimeInfo > signingTimeBounds > lowerBound](#signingTimeInfo_signingTimeBounds_lowerBound)
     - [1.2.2. [Optional] Property root > signingTimeInfo > signingTimeBounds > upperBound](#signingTimeInfo_signingTimeBounds_upperBound)
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="signingTimeInfo"></a>1. [Optional] Property root > signingTimeInfo</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                                        |
-| ------------------------- | -------------------------------------- |
-| **Type**                  | `object`                               |
-| **Required**              | No                                     |
-| **Additional properties** | Any type allowed                       |
-| **Defined in**            | #/definitions/dss2-SigningTimeInfoType |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/dss2-SigningTimeInfoType</h1></td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="signingTimeInfo_signingTime"></a>1.1. [Required] Property root > signingTimeInfo > signingTime</strong>  
 
 </summary>
-<blockquote>
 
-|              |                |
-| ------------ | -------------- |
-| **Type**     | `integer`      |
-| **Required** | Yes            |
-| **Format**   | `utc-millisec` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Format</strong></td>
+    <td><code>utc-millisec</code></td>
+  </tr>
+</table>
 
-</blockquote>
 </details>
 
 <details>
@@ -47,29 +86,55 @@
 <strong> <a name="signingTimeInfo_signingTimeBounds"></a>1.2. [Optional] Property root > signingTimeInfo > signingTimeBounds</strong>  
 
 </summary>
-<blockquote>
 
-|                           |                                                                |
-| ------------------------- | -------------------------------------------------------------- |
-| **Type**                  | `object`                                                       |
-| **Required**              | No                                                             |
-| **Additional properties** | Any type allowed                                               |
-| **Defined in**            | #/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries</h1></td>
+  </tr>
+</table>
 
 <details>
 <summary>
 <strong> <a name="signingTimeInfo_signingTimeBounds_lowerBound"></a>1.2.1. [Optional] Property root > signingTimeInfo > signingTimeBounds > lowerBound</strong>  
 
 </summary>
-<blockquote>
 
-|              |                |
-| ------------ | -------------- |
-| **Type**     | `integer`      |
-| **Required** | No             |
-| **Format**   | `utc-millisec` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Format</strong></td>
+    <td><code>utc-millisec</code></td>
+  </tr>
+</table>
 
-</blockquote>
 </details>
 
 <details>
@@ -77,21 +142,30 @@
 <strong> <a name="signingTimeInfo_signingTimeBounds_upperBound"></a>1.2.2. [Optional] Property root > signingTimeInfo > signingTimeBounds > upperBound</strong>  
 
 </summary>
-<blockquote>
 
-|              |                |
-| ------------ | -------------- |
-| **Type**     | `integer`      |
-| **Required** | No             |
-| **Format**   | `utc-millisec` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Format</strong></td>
+    <td><code>utc-millisec</code></td>
+  </tr>
+</table>
 
-</blockquote>
 </details>
 
-</blockquote>
 </details>
 
-</blockquote>
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------

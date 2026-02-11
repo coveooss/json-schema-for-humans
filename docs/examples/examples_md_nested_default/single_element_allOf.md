@@ -3,33 +3,60 @@
 - [1. [Optional] Property Schema containing a single-element allOf > prop1](#prop1)
 - [2. [Optional] Property Schema containing a single-element allOf > prop2](#prop2)
 
-**Title:** Schema containing a single-element allOf
+<p><strong>Title:</strong> Schema containing a single-element allOf</p>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Any type allowed</td>
+  </tr>
+</table>
 
-**Description:** Schema containing a single-element allOf
+<p><strong>Description:</strong> Schema containing a single-element allOf</p>
 
 <details>
 <summary>
 <strong> <a name="prop1"></a>1. [Optional] Property Schema containing a single-element allOf > prop1</strong>  
 
 </summary>
-<blockquote>
 
-|                |          |
-| -------------- | -------- |
-| **Type**       | `string` |
-| **Required**   | No       |
-| **Default**    | `"hi"`   |
-| **Defined in** |          |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Default</strong></td>
+    <td><code>"hi"</code></td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td></td>
+  </tr>
+</table>
 
-**Description:** My string definition
+<p><strong>Description:</strong> My string definition</p>
 
-</blockquote>
 </details>
 
 <details>
@@ -37,14 +64,22 @@
 <strong> <a name="prop2"></a>2. [Optional] Property Schema containing a single-element allOf > prop2</strong>  
 
 </summary>
-<blockquote>
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `number` |
-| **Required** | No       |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>number</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+</table>
 
-</blockquote>
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------
