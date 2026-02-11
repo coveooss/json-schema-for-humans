@@ -6,31 +6,20 @@
   {% set html_id = sub_property.html_id %}
 
   {% set description = sub_property | get_description %}
-<details>
-<summary>
-  <strong>
-  {%- if sub_property is deprecated -%}~~{%- endif -%}
-  <a name="{{ html_id }}"></a>{% with schema=sub_property %}{%- include "breadcrumbs.md" %}{% endwith %}
-  {%- if sub_property is deprecated -%}~~ ❗{%- endif -%}
-  </strong>
-  {%- if not skip_required and sub_property.property_name and sub_property.is_required_property -%}
-    {{ " " }}<code>Required</code>
-  {%- endif -%}
-
-</summary>
+<a id="{{ html_id }}"></a>
+??? quote "[{% if sub_property is deprecated %}~~{% endif %}{% with schema=sub_property %}{% include "breadcrumbs.md" %}{% endwith %}{% if sub_property is deprecated %}~~{% endif %}{% if not skip_required and sub_property.property_name and sub_property.is_required_property %} `Required`{% endif %}](#{{ html_id }})"
 
   {% if sub_property.is_pattern_property %}
-<blockquote>
-All properties whose name matches the regular expression
-<code>{{ sub_property.property_name }}</code> (<a href="https://regex101.com/?regex={{ sub_property.property_name | urlencode }}">Test</a>)
-must respect the following conditions
-</blockquote>
+    !!! info "Pattern Property"
+        All properties whose name matches the regular expression
+        `{{ sub_property.property_name }}` ([Test](https://regex101.com/?regex={{ sub_property.property_name | urlencode }}))
+        must respect the following conditions
+
   {% endif %}
-
-  {% with schema=sub_property, skip_headers=False, depth=depth+1 %}
-    {% include "content.md" %}
-  {% endwith %}
-
-</details>
+{% filter indent(4) %}
+{% with schema=sub_property, skip_headers=False, depth=depth+1 %}
+{% include "content.md" %}
+{% endwith %}
+{% endfilter %}
 
 {% endfor %}

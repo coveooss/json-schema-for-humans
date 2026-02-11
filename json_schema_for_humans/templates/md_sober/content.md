@@ -15,19 +15,19 @@
 {%- if not skip_headers %}
 
 {% if schema.title and schema.title | length > 0 and schema.depth > 0 %}
-<h4>{{ schema.title }}</h4>
+#### {{ schema.title }}
 {% endif %}
 
 {# Display type as badge #}
 {% if not schema is combining %}
-<code>Type: {{ schema.type_name }}</code>
+`Type: {{ schema.type_name }}`
 {% endif %}
 {% if schema.format %}
-<code>Format: {{ schema.format }}</code>
+`Format: {{ schema.format }}`
 {% endif %}
 {% set default_value = schema.default_value %}
 {% if default_value %}
-<code>Default: {{ default_value }}</code>
+`Default: {{ default_value }}`
 {% endif %}
 
 {% set description = (schema | get_description) %}
@@ -35,7 +35,7 @@
 {% endif %}
 
 {% if schema.should_be_a_link(config) %}
-<a href="#{{ schema.links_to.html_id }}">Same definition as {{ schema.links_to.link_name }}</a>
+[Same definition as {{ schema.links_to.link_name }}](#{{ schema.links_to.html_id }})
 {% elif schema.refers_to -%}
     {%- with schema=schema.refers_to_merged, skip_headers=True, depth=depth -%}
         {% include "content.md" %}
@@ -43,7 +43,7 @@
 {% else %}
    
     {% if schema.explicit_no_additional_properties %}
-<code>No Additional Properties</code>
+`No Additional Properties`
     {% endif %}
 
     {# Combining: allOf, anyOf, oneOf, not #}
@@ -71,12 +71,12 @@
         {% include "section_one_of.md" %}
     {%- endif %}
     {%- if schema.is_const -%}
-<code>Specific value: {{ schema.const_value | python_to_json }}</code>
+`Specific value: {{ schema.const_value | python_to_json }}`
     {%- endif -%}
 
     {# Pattern (Regular Expression) #}
     {% if schema.kw_pattern %}
-<code>Must match regex: {{ schema.kw_pattern.literal | escape }}</code>
+`Must match regex: {{ schema.kw_pattern.literal | escape }}`
     {% endif %}
 
     {# Conditional subschema, or if-then-else section #}

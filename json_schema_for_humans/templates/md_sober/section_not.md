@@ -1,6 +1,7 @@
-<h4>Must <strong>not</strong> be:</h4>
-<blockquote>
+!!! warning "Must **not** be:"
+
+{% filter indent(4) %}
 {% with schema=schema.kw_not, skip_headers=False, depth=depth+1, skip_required=True %}
-    {% include "content.md" %}
+{% include "content.md" %}
 {% endwith %}
-</blockquote>
+{% endfilter %}
