@@ -1,179 +1,56 @@
-# OF
+<h1>OF</h1>
 
-- [1. [Optional] Property OF > uuid](#uuid)
-- [2. [Optional] Property OF > firstName](#firstName)
-- [3. [Optional] Property OF > lastName](#lastName)
-
-<p><strong>Title:</strong> OF</p>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
+<code>Type: object</code>
 
 <details>
 <summary>
-<strong> <a name="uuid"></a>1. [Optional] Property OF > uuid</strong>  
+  <strong><a name="uuid"></a>uuid</strong></summary>
 
-</summary>
+<code>Type: string</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/$defs/ofString</h1></td>
-  </tr>
-</table>
+<p>Unique Identifer</p>
 
-<p><strong>Description:</strong> Unique Identifer</p>
+<code>Min length: 5</code><code>Max length: 250</code>
 
-<table>
-  <tr>
-    <th>Restrictions</th>
-    <th> </th>
-  </tr>
-  <tr>
-    <td><strong>Min length</strong></td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td><strong>Max length</strong></td>
-    <td>250</td>
-  </tr>
-</table>
+<strong>Example:</strong>
 
-<p><strong>Example:</strong></p>
-
-```json
-"29292929292929292929292"
-```
+<pre><code class="language-json">"29292929292929292929292"</code></pre>
 
 </details>
 
 <details>
 <summary>
-<strong> <a name="firstName"></a>2. [Optional] Property OF > firstName</strong>  
+  <strong><a name="firstName"></a>firstName</strong></summary>
 
-</summary>
+<code>Type: string</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/$defs/ofString</h1></td>
-  </tr>
-</table>
+<p>first name</p>
 
-<p><strong>Description:</strong> first name</p>
+<code>Min length: 10</code><code>Max length: 250</code>
 
-<table>
-  <tr>
-    <th>Restrictions</th>
-    <th> </th>
-  </tr>
-  <tr>
-    <td><strong>Min length</strong></td>
-    <td>10</td>
-  </tr>
-  <tr>
-    <td><strong>Max length</strong></td>
-    <td>250</td>
-  </tr>
-</table>
+<strong>Example:</strong>
 
-<p><strong>Example:</strong></p>
-
-```json
-"John"
-```
+<pre><code class="language-json">"John"</code></pre>
 
 </details>
 
 <details>
 <summary>
-<strong> <a name="lastName"></a>3. [Optional] Property OF > lastName</strong>  
+  <strong><a name="lastName"></a>lastName</strong></summary>
 
-</summary>
+<code>Type: string</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/$defs/ofString</h1></td>
-  </tr>
-</table>
+<p>last name</p>
 
-<p><strong>Description:</strong> last name</p>
+<code>Min length: 5</code><code>Max length: 10</code>
 
-<table>
-  <tr>
-    <th>Restrictions</th>
-    <th> </th>
-  </tr>
-  <tr>
-    <td><strong>Min length</strong></td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td><strong>Max length</strong></td>
-    <td>10</td>
-  </tr>
-</table>
+<strong>Example:</strong>
 
-<p><strong>Example:</strong></p>
-
-```json
-"Doe"
-```
+<pre><code class="language-json">"Doe"</code></pre>
 
 </details>
 
-----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
+<hr/>
+<footer>
+<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
+</footer>

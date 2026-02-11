@@ -1,166 +1,43 @@
-# Schema Docs
+<h1>Schema Docs</h1>
 
-- [1. [Required] Property root > storage](#storage)
-  - [1.1. Property `root > storage > anyOf > diskDevice`](#storage_anyOf_i0)
-  - [1.2. Property `root > storage > anyOf > diskUUID`](#storage_anyOf_i1)
-  - [1.3. Property `root > storage > anyOf > item 2`](#storage_anyOf_i2)
-  - [1.4. Property `root > storage > anyOf > tmpfs`](#storage_anyOf_i3)
+<code>Type: object</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
-
-<p><strong>Description:</strong> JSON Schema for an fstab entry</p>
+<p>JSON Schema for an fstab entry</p>
 
 <details>
 <summary>
-<strong> <a name="storage"></a>1. [Required] Property root > storage</strong>  
+  <strong><a name="storage"></a>storage</strong> <code>Required</code></summary>
 
-</summary>
+<h4>Any of</h4>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>combining</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+<blockquote>
+<h5><a name="storage_anyOf_i0"></a>diskDevice</h5>
 
-<details>
-<summary>Any of(Option)</summary>
+<code>Type: object</code>
 
-<table>
-  <tr>
-    <th>Any of(Option)</th>
-  </tr>
-  <tr>
-    <td><a href="#storage_anyOf_i0">diskDevice</a></td>
-  </tr>
-  <tr>
-    <td><a href="#storage_anyOf_i1">diskUUID</a></td>
-  </tr>
-  <tr>
-    <td><a href="#storage_anyOf_i2">item 2</a></td>
-  </tr>
-  <tr>
-    <td><a href="#storage_anyOf_i3">tmpfs</a></td>
-  </tr>
-</table>
+</blockquote>
+<blockquote>
+<h5><a name="storage_anyOf_i1"></a>diskUUID</h5>
 
-<details>
-<summary>
-### <a name="storage_anyOf_i0"></a>1.1. Property `root > storage > anyOf > diskDevice`</summary>
+<code>Type: object</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/diskDevice</h1></td>
-  </tr>
-</table>
+</blockquote>
+<blockquote>
+<h5><a name="storage_anyOf_i2"></a>Option 3</h5>
 
-</details>
-<details>
-<summary>
-### <a name="storage_anyOf_i1"></a>1.2. Property `root > storage > anyOf > diskUUID`</summary>
+<code>Type: object</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/diskUUID</h1></td>
-  </tr>
-</table>
+</blockquote>
+<blockquote>
+<h5><a name="storage_anyOf_i3"></a>tmpfs</h5>
 
-</details>
-<details>
-<summary>
-### <a name="storage_anyOf_i2"></a>1.3. Property `root > storage > anyOf > item 2`</summary>
+<code>Type: object</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
-
-</details>
-<details>
-<summary>
-### <a name="storage_anyOf_i3"></a>1.4. Property `root > storage > anyOf > tmpfs`</summary>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/tmpfs</h1></td>
-  </tr>
-</table>
+</blockquote>
 
 </details>
 
-</details>
-
-</details>
-
-----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
+<hr/>
+<footer>
+<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
+</footer>

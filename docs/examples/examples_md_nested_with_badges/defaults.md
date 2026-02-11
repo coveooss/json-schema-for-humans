@@ -1,88 +1,30 @@
-# Schema Docs
+<h1>Schema Docs</h1>
 
-- [1. [Optional] Property root > a](#a)
-- [2. [Optional] Property root > b](#b)
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+<code>Type: object</code>
 
 <details>
 <summary>
-<strong> <a name="a"></a>1. [Optional] Property root > a</strong>  
+  <strong><a name="a"></a>a</strong></summary>
 
-</summary>
+<code>Type: object</code>
+<code>Default: "Default from a"</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Default</strong></td>
-    <td><code>"Default from a"</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/common</h1></td>
-  </tr>
-</table>
-
-<p><strong>Description:</strong> Description of a</p>
+<p>Description of a</p>
 
 </details>
 
 <details>
 <summary>
-<strong> <a name="b"></a>2. [Optional] Property root > b</strong>  
+  <strong><a name="b"></a>b</strong></summary>
 
-</summary>
+<code>Type: object</code>
+<code>Default: "Default from b"</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Default</strong></td>
-    <td><code>"Default from b"</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/common</h1></td>
-  </tr>
-</table>
-
-<p><strong>Description:</strong> A common description</p>
+<p>A common description</p>
 
 </details>
 
-----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
+<hr/>
+<footer>
+<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
+</footer>

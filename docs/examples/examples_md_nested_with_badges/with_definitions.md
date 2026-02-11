@@ -1,125 +1,42 @@
-# Schema Docs
+<h1>Schema Docs</h1>
 
-- [1. [Optional] Property root > billing_address](#billing_address)
-  - [1.1. [Required] Property root > billing_address > street_address](#billing_address_street_address)
-  - [1.2. [Required] Property root > billing_address > city](#billing_address_city)
-  - [1.3. [Required] Property root > billing_address > state](#billing_address_state)
-  - [1.4. [Optional] Property root > billing_address > futureProperty](#billing_address_futureProperty)
-- [2. [Optional] Property root > shipping_address](#shipping_address)
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+<code>Type: object</code>
 
 <details>
 <summary>
-<strong> <a name="billing_address"></a>1. [Optional] Property root > billing_address</strong>  
+  <strong><a name="billing_address"></a>billing_address</strong></summary>
 
-</summary>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/address</h1></td>
-  </tr>
-</table>
+<code>Type: object</code>
 
 <details>
 <summary>
-<strong> <a name="billing_address_street_address"></a>1.1. [Required] Property root > billing_address > street_address</strong>  
+  <strong><a name="billing_address_street_address"></a>street_address</strong> <code>Required</code></summary>
 
-</summary>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-</table>
+<code>Type: string</code>
 
 </details>
 
 <details>
 <summary>
-<strong> <a name="billing_address_city"></a>1.2. [Required] Property root > billing_address > city</strong>  
+  <strong><a name="billing_address_city"></a>city</strong> <code>Required</code></summary>
 
-</summary>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-</table>
+<code>Type: string</code>
 
 </details>
 
 <details>
 <summary>
-<strong> <a name="billing_address_state"></a>1.3. [Required] Property root > billing_address > state</strong>  
+  <strong><a name="billing_address_state"></a>state</strong> <code>Required</code></summary>
 
-</summary>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-</table>
+<code>Type: string</code>
 
 </details>
 
 <details>
 <summary>
-<strong> <a name="billing_address_futureProperty"></a>1.4. [Optional] Property root > billing_address > futureProperty</strong>  
+  <strong><a name="billing_address_futureProperty"></a>futureProperty</strong></summary>
 
-</summary>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>null</code></td>
-  </tr>
-</table>
+<code>Type: null</code>
 
 </details>
 
@@ -127,30 +44,15 @@
 
 <details>
 <summary>
-<strong> <a name="shipping_address"></a>2. [Optional] Property root > shipping_address</strong>  
+  <strong><a name="shipping_address"></a>shipping_address</strong></summary>
 
-</summary>
+<code>Type: object</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Same definition as</strong></td>
-    <td><a href="#billing_address">billing_address</a></td>
-  </tr>
-</table>
+<a href="#billing_address">Same definition as billing_address</a>
 
 </details>
 
-----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
+<hr/>
+<footer>
+<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
+</footer>

@@ -1,48 +1,23 @@
-# Enum of None
+<h1>Enum of None</h1>
 
-- [1. [Optional] Property Enum of None > enumOfNone](#enumOfNone)
-
-<p><strong>Title:</strong> Enum of None</p>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+<code>Type: object</code>
 
 <details>
 <summary>
-<strong> <a name="enumOfNone"></a>1. [Optional] Property Enum of None > enumOfNone</strong>  
+  <strong><a name="enumOfNone"></a>enumOfNone</strong></summary>
 
-</summary>
+<code>Type: enum (of null)</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>enum (of null)</code></td>
-  </tr>
-</table>
+<p>enumOfNone</p>
 
-<p><strong>Description:</strong> enumOfNone</p>
-
-<p>Must be one of:</p>
-
-* null
+<h4>Must be one of:</h4>
+<ul>
+<li><code>null</code></li>
+</ul>
 
 </details>
 
-----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
+<hr/>
+<footer>
+<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
+</footer>

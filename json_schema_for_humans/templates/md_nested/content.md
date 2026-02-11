@@ -14,23 +14,38 @@
 {% set keys = schema.keywords %}
 {%- if not skip_headers %}
 
-{% if schema.title and schema.title | length > 0 %}
-{{ ("**Title:** " ~ schema.title) | md_render }}
+{% if schema.title and schema.title | length > 0 and schema.depth > 0 %}
+<h4>{{ schema.title }}</h4>
 {% endif %}
 
-{{ schema | md_type_info_table | md_generate_table }}
+{# Display type as badge #}
+{% if not schema is combining %}
+<code>Type: {{ schema.type_name }}</code>
+{% endif %}
+{% if schema.format %}
+<code>Format: {{ schema.format }}</code>
+{% endif %}
+{% set default_value = schema.default_value %}
+{% if default_value %}
+<code>Default: {{ default_value }}</code>
+{% endif %}
 
 {% set description = (schema | get_description) %}
 {% include "section_description.md" %}
 {% endif %}
 
 {% if schema.should_be_a_link(config) %}
+<a href="#{{ schema.links_to.html_id }}">Same definition as {{ schema.links_to.link_name }}</a>
 {% elif schema.refers_to -%}
     {%- with schema=schema.refers_to_merged, skip_headers=True, depth=depth -%}
         {% include "content.md" %}
     {% endwith %}
 {% else %}
    
+    {% if schema.explicit_no_additional_properties %}
+<code>No Additional Properties</code>
+    {% endif %}
+
     {# Combining: allOf, anyOf, oneOf, not #}
     {% if schema.kw_all_of %}
         {% with operator="allOf", title="All of(Requirement)", current_node=schema.kw_all_of, skip_required=True %}
@@ -56,8 +71,13 @@
         {% include "section_one_of.md" %}
     {%- endif %}
     {%- if schema.is_const -%}
-        {{ ("Specific value: `" ~ (schema.const_value | python_to_json) ~ "`") | md_render }}
+<code>Specific value: {{ schema.const_value | python_to_json }}</code>
     {%- endif -%}
+
+    {# Pattern (Regular Expression) #}
+    {% if schema.kw_pattern %}
+<code>Must match regex: {{ schema.kw_pattern.literal | escape }}</code>
+    {% endif %}
 
     {# Conditional subschema, or if-then-else section #}
     {% if schema.has_conditional %}
@@ -70,7 +90,7 @@
     {% include "section_undocumented_required_properties.md" %}
 
     {# Show the requested type(s) #}
-    {{- schema | md_restrictions_table | md_generate_table -}}
+    {% include "badge_type.md" %}
 
     {# Show array restrictions #}
     {% if schema.type_name.startswith("array") %}

@@ -1,60 +1,20 @@
-# Person
+<h1>Person</h1>
 
-- [1. [Optional] Property Person > itself](#itself)
-
-<p><strong>Title:</strong> Person</p>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
+<code>Type: object</code>
 
 <details>
 <summary>
-<strong> <a name="itself"></a>1. [Optional] Property Person > itself</strong>  
+  <strong><a name="itself"></a>itself</strong></summary>
 
-</summary>
+<h4>Person</h4>
 
-<p><strong>Title:</strong> Person</p>
+<code>Type: object</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-  <tr>
-    <td><strong>Same definition as</strong></td>
-    <td><a href="#root">Person</a></td>
-  </tr>
-</table>
+<a href="#root">Same definition as Person</a>
 
 </details>
 
-----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
+<hr/>
+<footer>
+<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
+</footer>

@@ -1,81 +1,26 @@
-# Schema Docs
+<h1>Schema Docs</h1>
 
-- [1. [Required] Property root > outer](#outer)
-  - [1.1. [Required] Property root > outer > inner](#outer_inner)
-- [2. [Optional] Property root > outer2](#outer2)
+<code>Type: object</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Not allowed</td>
-  </tr>
-</table>
+<code>No Additional Properties</code>
 
 <details>
 <summary>
-<strong> <a name="outer"></a>1. [Required] Property root > outer</strong>  
+  <strong><a name="outer"></a>outer</strong> <code>Required</code></summary>
 
-</summary>
+<code>Type: object</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Not allowed</td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/inner schema</h1></td>
-  </tr>
-</table>
+<p>We should see this</p>
 
-<p><strong>Description:</strong> We should see this</p>
+<code>No Additional Properties</code>
 
 <details>
 <summary>
-<strong> <a name="outer_inner"></a>1.1. [Required] Property root > outer > inner</strong>  
+  <strong><a name="outer_inner"></a>inner</strong> <code>Required</code></summary>
 
-</summary>
+<code>Type: string</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>Yes</td>
-  </tr>
-</table>
-
-<p><strong>Description:</strong> inner description</p>
+<p>inner description</p>
 
 </details>
 
@@ -83,36 +28,17 @@
 
 <details>
 <summary>
-<strong> <a name="outer2"></a>2. [Optional] Property root > outer2</strong>  
+  <strong><a name="outer2"></a>outer2</strong></summary>
 
-</summary>
+<code>Type: object</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Not allowed</td>
-  </tr>
-  <tr>
-    <td><strong>Same definition as</strong></td>
-    <td><a href="#outer">outer</a></td>
-  </tr>
-</table>
+<p>We should see this too</p>
 
-<p><strong>Description:</strong> We should see this too</p>
+<a href="#outer">Same definition as outer</a>
 
 </details>
 
-----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
+<hr/>
+<footer>
+<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
+</footer>

@@ -1,213 +1,71 @@
-# Person
+<h1>Person</h1>
 
-- [1. [Optional] Property Person > firstName](#firstName)
-- [2. [Optional] Property Person > lastName](#lastName)
-- [3. [Optional] Property Person > age](#age)
-- [4. [Optional] Property Person > driverLicenseId](#driverLicenseId)
-  - [4.1. Property `Person > driverLicenseId > allOf > no driver licence`](#driverLicenseId_allOf_i0)
-  - [4.2. Property `Person > driverLicenseId > allOf > driver licence id`](#driverLicenseId_allOf_i1)
-
-<p><strong>Title:</strong> Person</p>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
+<code>Type: object</code>
 
 <details>
 <summary>
-<strong> <a name="firstName"></a>1. [Optional] Property Person > firstName</strong>  
+  <strong><a name="firstName"></a>firstName</strong></summary>
 
-</summary>
+<h4>Person</h4>
 
-<p><strong>Title:</strong> Person</p>
+<code>Type: string</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
-
-<p><strong>Description:</strong> The person's first name.</p>
+<p>The person's first name.</p>
 
 </details>
 
 <details>
 <summary>
-<strong> <a name="lastName"></a>2. [Optional] Property Person > lastName</strong>  
+  <strong><a name="lastName"></a>lastName</strong></summary>
 
-</summary>
+<h4>Person</h4>
 
-<p><strong>Title:</strong> Person</p>
+<code>Type: string</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
-
-<p><strong>Description:</strong> The person's last name.</p>
+<p>The person's last name.</p>
 
 </details>
 
 <details>
 <summary>
-<strong> <a name="age"></a>3. [Optional] Property Person > age</strong>  
+  <strong><a name="age"></a>age</strong></summary>
 
-</summary>
+<h4>Person</h4>
 
-<p><strong>Title:</strong> Person</p>
+<code>Type: integer</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>integer</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+<p>Age in years which must be equal to or greater than zero.</p>
 
-<p><strong>Description:</strong> Age in years which must be equal to or greater than zero.</p>
-
-<table>
-  <tr>
-    <th>Restrictions</th>
-    <th> </th>
-  </tr>
-  <tr>
-    <td><strong>Minimum</strong></td>
-    <td>&ge; 0</td>
-  </tr>
-</table>
+<code>Value must be greater or equal to 0</code>
 
 </details>
 
 <details>
 <summary>
-<strong> <a name="driverLicenseId"></a>4. [Optional] Property Person > driverLicenseId</strong>  
+  <strong><a name="driverLicenseId"></a>driverLicenseId</strong></summary>
 
-</summary>
+<h4>All of</h4>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>combining</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
+<blockquote>
+<h5><a name="driverLicenseId_allOf_i0"></a>no driver licence</h5>
 
-<details>
-<summary>All of(Requirement)</summary>
+<h4>no driver licence</h4>
 
-<table>
-  <tr>
-    <th>All of(Requirement)</th>
-  </tr>
-  <tr>
-    <td><a href="#driverLicenseId_allOf_i0">no driver licence</a></td>
-  </tr>
-  <tr>
-    <td><a href="#driverLicenseId_allOf_i1">driver licence id</a></td>
-  </tr>
-</table>
+<code>Type: null</code>
 
-<details>
-<summary>
-### <a name="driverLicenseId_allOf_i0"></a>4.1. Property `Person > driverLicenseId > allOf > no driver licence`</summary>
+</blockquote>
+<blockquote>
+<h5><a name="driverLicenseId_allOf_i1"></a>driver licence id</h5>
 
-<p><strong>Title:</strong> no driver licence</p>
+<h4>driver licence id</h4>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>null</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+<code>Type: string</code>
 
-</details>
-<details>
-<summary>
-### <a name="driverLicenseId_allOf_i1"></a>4.2. Property `Person > driverLicenseId > allOf > driver licence id`</summary>
-
-<p><strong>Title:</strong> driver licence id</p>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+</blockquote>
 
 </details>
 
-</details>
-
-</details>
-
-----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
+<hr/>
+<footer>
+<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
+</footer>

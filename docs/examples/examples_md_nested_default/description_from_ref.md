@@ -1,95 +1,34 @@
-# Schema Docs
+<h1>Schema Docs</h1>
 
-- [1. [Optional] Property root > name](#name)
-- [2. [Optional] Property root > alignment](#alignment)
+<code>Type: object</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Not allowed</td>
-  </tr>
-</table>
+<code>No Additional Properties</code>
 
 <details>
 <summary>
-<strong> <a name="name"></a>1. [Optional] Property root > name</strong>  
+  <strong><a name="name"></a>name</strong></summary>
 
-</summary>
+<code>Type: string</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/filled_string</h1></td>
-  </tr>
-</table>
+<p>a filled string</p>
 
-<p><strong>Description:</strong> a filled string</p>
-
-<table>
-  <tr>
-    <th>Restrictions</th>
-    <th> </th>
-  </tr>
-  <tr>
-    <td><strong>Min length</strong></td>
-    <td>1</td>
-  </tr>
-</table>
+<code>Min length: 1</code>
 
 </details>
 
 <details>
 <summary>
-<strong> <a name="alignment"></a>2. [Optional] Property root > alignment</strong>  
+  <strong><a name="alignment"></a>alignment</strong></summary>
 
-</summary>
+<code>Type: string</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Same definition as</strong></td>
-    <td><a href="#name">name</a></td>
-  </tr>
-</table>
+<p>a filled string</p>
 
-<p><strong>Description:</strong> a filled string</p>
+<a href="#name">Same definition as name</a>
 
 </details>
 
-----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
+<hr/>
+<footer>
+<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
+</footer>

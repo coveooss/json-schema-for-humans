@@ -1,50 +1,22 @@
-# Schema Docs
+<h1>Schema Docs</h1>
 
-- [1. [Optional] Property root > firstName](#firstName)
+<code>Type: object</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
-
-<p><strong>Description:</strong> Testing $ref with URL</p>
+<p>Testing $ref with URL</p>
 
 <details>
 <summary>
-<strong> <a name="firstName"></a>1. [Optional] Property root > firstName</strong>  
+  <strong><a name="firstName"></a>firstName</strong></summary>
 
-</summary>
+<h4>Person</h4>
 
-<p><strong>Title:</strong> Person</p>
+<code>Type: string</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td>https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/basic.json#/properties/firstName</td>
-  </tr>
-</table>
-
-<p><strong>Description:</strong> The person's first name.</p>
+<p>The person's first name.</p>
 
 </details>
 
-----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
+<hr/>
+<footer>
+<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
+</footer>

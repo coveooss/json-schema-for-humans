@@ -1,157 +1,55 @@
-# Schema Docs
+<h1>Schema Docs</h1>
 
-- [1. Property `root > oneOf > 1st constant`](#oneOf_i0)
-- [2. Property `root > oneOf > 2nd constant`](#oneOf_i1)
-- [3. Property `root > oneOf > 0`](#oneOf_i2)
-- [4. Property `root > oneOf > null`](#oneOf_i3)
+<h4>One of</h4>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>combining</code></td>
-  </tr>
-</table>
+<blockquote>
+<h5><a name="oneOf_i0"></a>1st constant</h5>
 
-<details>
-<summary>One of(Option)</summary>
+<h4>1st constant</h4>
 
-<table>
-  <tr>
-    <th>One of(Option)</th>
-  </tr>
-  <tr>
-    <td><a href="#oneOf_i0">1st constant</a></td>
-  </tr>
-  <tr>
-    <td><a href="#oneOf_i1">2nd constant</a></td>
-  </tr>
-  <tr>
-    <td><a href="#oneOf_i2">0</a></td>
-  </tr>
-  <tr>
-    <td><a href="#oneOf_i3">null</a></td>
-  </tr>
-</table>
+<code>Type: const</code>
 
-<details>
-<summary>
-## <a name="oneOf_i0"></a>1. Property `root > oneOf > 1st constant`</summary>
-
-<p><strong>Title:</strong> 1st constant</p>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>const</code></td>
-  </tr>
-</table>
-
-<p>Specific value: <code>[
+<code>Specific value: [
     1,
     2
-]</code></p>
+]</code>
 
-</details>
-<details>
-<summary>
-## <a name="oneOf_i1"></a>2. Property `root > oneOf > 2nd constant`</summary>
+</blockquote>
+<blockquote>
+<h5><a name="oneOf_i1"></a>2nd constant</h5>
 
-<p><strong>Title:</strong> 2nd constant</p>
+<h4>2nd constant</h4>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>const</code></td>
-  </tr>
-</table>
+<code>Type: const</code>
 
-<p>Specific value: <code>{
+<code>Specific value: {
     "a_key": "a_value",
     "another_key": "another_value"
-}</code></p>
+}</code>
 
-</details>
-<details>
-<summary>
-## <a name="oneOf_i2"></a>3. Property `root > oneOf > 0`</summary>
+</blockquote>
+<blockquote>
+<h5><a name="oneOf_i2"></a>0</h5>
 
-<p><strong>Title:</strong> 0</p>
+<h4>0</h4>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>const</code></td>
-  </tr>
-</table>
+<code>Type: const</code>
 
-<p>Specific value: <code>0</code></p>
+<code>Specific value: 0</code>
 
-</details>
-<details>
-<summary>
-## <a name="oneOf_i3"></a>4. Property `root > oneOf > null`</summary>
+</blockquote>
+<blockquote>
+<h5><a name="oneOf_i3"></a>null</h5>
 
-<p><strong>Title:</strong> null</p>
+<h4>null</h4>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>const</code></td>
-  </tr>
-</table>
+<code>Type: const</code>
 
-<p>Specific value: <code>null</code></p>
+<code>Specific value: null</code>
 
-</details>
+</blockquote>
 
-</details>
-
-<table>
-  <tr>
-    <th></th>
-    <th>Array restrictions</th>
-  </tr>
-  <tr>
-    <td><strong>Min items</strong></td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td><strong>Max items</strong></td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td><strong>Items unicity</strong></td>
-    <td>False</td>
-  </tr>
-  <tr>
-    <td><strong>Additional items</strong></td>
-    <td>False</td>
-  </tr>
-  <tr>
-    <td><strong>Tuple validation</strong></td>
-    <td>N/A</td>
-  </tr>
-</table>
-
-----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
+<hr/>
+<footer>
+<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
+</footer>

@@ -1,131 +1,52 @@
-# Test
+<h1>Test</h1>
 
-- [1. [Optional] Property Test > aProperty](#aProperty)
-- [2. [Optional] Property Test > aDictPropertyARequired](#aDictPropertyARequired)
-  - [2.1. [Required] Property Test > aDictPropertyARequired > a](#aDictPropertyARequired_a)
-  - [2.2. [Required] Property Test > aDictPropertyARequired > b](#aDictPropertyARequired_b)
-
-<p><strong>Title:</strong> Test</p>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+<code>Type: object</code>
 
 <details>
 <summary>
-<strong> <a name="aProperty"></a>1. [Optional] Property Test > aProperty</strong>  
+  <strong><a name="aProperty"></a>aProperty</strong></summary>
 
-</summary>
+<h4>Title from definition</h4>
 
-<p><strong>Title:</strong> Title from definition</p>
+<code>Type: enum (of string)</code>
+<code>Default: "Default from property"</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>enum (of string)</code></td>
-  </tr>
-  <tr>
-    <td><strong>Default</strong></td>
-    <td><code>"Default from property"</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/aProperty</h1></td>
-  </tr>
-</table>
+<p>This is the description from the definition</p>
 
-<p><strong>Description:</strong> This is the description from the definition</p>
-
-<p>Must be one of:</p>
-
-* "value1"
-* "value2"
+<h4>Must be one of:</h4>
+<ul>
+<li><code>"value1"</code></li>
+<li><code>"value2"</code></li>
+</ul>
 
 </details>
 
 <details>
 <summary>
-<strong> <a name="aDictPropertyARequired"></a>2. [Optional] Property Test > aDictPropertyARequired</strong>  
+  <strong><a name="aDictPropertyARequired"></a>aDictPropertyARequired</strong></summary>
 
-</summary>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Default</strong></td>
-    <td><code>{"a": "a", "b": "b"}</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/aDictProperty</h1></td>
-  </tr>
-</table>
+<code>Type: object</code>
+<code>Default: {"a": "a", "b": "b"}</code>
 
 <details>
 <summary>
-<strong> <a name="aDictPropertyARequired_a"></a>2.1. [Required] Property Test > aDictPropertyARequired > a</strong>  
+  <strong><a name="aDictPropertyARequired_a"></a>a</strong> <code>Required</code></summary>
 
-</summary>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-</table>
+<code>Type: string</code>
 
 </details>
 
 <details>
 <summary>
-<strong> <a name="aDictPropertyARequired_b"></a>2.2. [Required] Property Test > aDictPropertyARequired > b</strong>  
+  <strong><a name="aDictPropertyARequired_b"></a>b</strong> <code>Required</code></summary>
 
-</summary>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-</table>
+<code>Type: string</code>
 
 </details>
 
 </details>
 
-----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
+<hr/>
+<footer>
+<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
+</footer>

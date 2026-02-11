@@ -1,141 +1,48 @@
-# Person
+<h1>Person</h1>
 
-- [1. [Optional] Property Person > firstName](#firstName)
-- [2. [Optional] Property Person > lastName](#lastName)
-- [3. [Optional] Property Person > age](#age)
-- [4. [Optional] Property Person > anything](#anything)
-
-<p><strong>Title:</strong> Person</p>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
+<code>Type: object</code>
 
 <details>
 <summary>
-<strong> <a name="firstName"></a>1. [Optional] Property Person > firstName</strong>  
+  <strong><a name="firstName"></a>firstName</strong></summary>
 
-</summary>
+<code>Type: string</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
-
-<p><strong>Description:</strong> The person's first name.</p>
+<p>The person's first name.</p>
 
 </details>
 
 <details>
 <summary>
-<strong> <a name="lastName"></a>2. [Optional] Property Person > lastName</strong>  
+  <strong><a name="lastName"></a>lastName</strong></summary>
 
-</summary>
+<code>Type: string or null</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string or null</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
-
-<p><strong>Description:</strong> The person's last name.</p>
+<p>The person's last name.</p>
 
 </details>
 
 <details>
 <summary>
-<strong> <a name="age"></a>3. [Optional] Property Person > age</strong>  
+  <strong><a name="age"></a>age</strong></summary>
 
-</summary>
+<code>Type: integer or number</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>integer or number</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
-
-<p><strong>Description:</strong> Age in years which must be equal to or greater than zero.</p>
-
-<table>
-  <tr>
-    <th>Restrictions</th>
-    <th> </th>
-  </tr>
-  <tr>
-    <td><strong>Minimum</strong></td>
-    <td>&ge; 0</td>
-  </tr>
-</table>
+<p>Age in years which must be equal to or greater than zero.</p>
 
 </details>
 
 <details>
 <summary>
-<strong> <a name="anything"></a>4. [Optional] Property Person > anything</strong>  
+  <strong><a name="anything"></a>anything</strong></summary>
 
-</summary>
+<code>Type: integer, string, number or null</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>integer, string, number or null</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
-
-<p><strong>Description:</strong> Ay other info you like</p>
+<p>Ay other info you like</p>
 
 </details>
 
-----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
+<hr/>
+<footer>
+<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
+</footer>

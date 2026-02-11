@@ -1,21 +1,12 @@
-<details>
-<summary>{{ title }}</summary>
-
-{{ current_node | md_array_items(title) | md_generate_table }}
+<h4>{% if operator == "allOf" %}All of{% elif operator == "anyOf" %}Any of{% elif operator == "oneOf" %}One of{% endif %}</h4>
 
 {% for node in current_node.array_items %}
-<details>
-<summary>
-    {% filter md_heading(depth+1, node.html_id) -%}
-        {% if node.is_pattern_property %}Pattern{% endif %} Property `{% with schema=node %}{%- include "breadcrumbs.md" %}{% endwith %}`
-    {%- endfilter %}
-</summary>
+<blockquote>
+<h5><a name="{{ node.html_id }}"></a>{{ node.definition_name or ("Requirement" if operator == "allOf" else "Option") ~ " " ~ loop.index }}</h5>
 
-    {% with schema=node, skip_headers=False, depth=depth+1 %}
-        {% include "content.md" %}
-    {% endwith %}
+{% with schema=node, skip_headers=False, depth=depth+1 %}
+    {% include "content.md" %}
+{% endwith %}
 
-</details>
+</blockquote>
 {% endfor %}
-
-</details>

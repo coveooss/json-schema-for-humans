@@ -1,76 +1,28 @@
-# Person
+<h1>Person</h1>
 
-- [1. [Optional] Property Person > not_a_pattern](#not_a_pattern)
-  - [1.1. [Optional] Pattern Property Person > not_a_pattern > Title 4](#not_a_pattern_pattern1)
-- [2. [Optional] Pattern Property Person > Title 1](#pattern1)
-- [3. [Optional] Pattern Property Person > Title 2](#pattern2)
-- [4. [Optional] Pattern Property Person > Title 3](#pattern3)
-
-<p><strong>Title:</strong> Person</p>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+<code>Type: object</code>
 
 <details>
 <summary>
-<strong> <a name="not_a_pattern"></a>1. [Optional] Property Person > not_a_pattern</strong>  
+  <strong><a name="not_a_pattern"></a>not_a_pattern</strong></summary>
 
-</summary>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+<code>Type: object</code>
 
 <details>
 <summary>
-<strong> <a name="not_a_pattern_pattern1"></a>1.1. [Optional] Pattern Property Person > not_a_pattern > Title 4</strong>  
-> All properties whose name matches the regular expression
-```.$``` ([Test](https://regex101.com/?regex=.%24))
+  <strong><a name="not_a_pattern_pattern1"></a>Title 4</strong> <code>Pattern</code></summary>
+
+<blockquote>
+All properties whose name matches the regular expression
+<code>.$</code> (<a href="https://regex101.com/?regex=.%24">Test</a>)
 must respect the following conditions
+</blockquote>
 
-</summary>
+<h4>Title 4</h4>
 
-<p><strong>Title:</strong> Title 4</p>
+<code>Type: object</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
-
-<p><strong>Description:</strong> Description 4</p>
+<p>Description 4</p>
 
 </details>
 
@@ -78,93 +30,59 @@ must respect the following conditions
 
 <details>
 <summary>
-<strong> <a name="pattern1"></a>2. [Optional] Pattern Property Person > Title 1</strong>  
-> All properties whose name matches the regular expression
-```.*``` ([Test](https://regex101.com/?regex=.%2A))
+  <strong><a name="pattern1"></a>Title 1</strong> <code>Pattern</code></summary>
+
+<blockquote>
+All properties whose name matches the regular expression
+<code>.*</code> (<a href="https://regex101.com/?regex=.%2A">Test</a>)
 must respect the following conditions
+</blockquote>
 
-</summary>
+<h4>Title 1</h4>
 
-<p><strong>Title:</strong> Title 1</p>
+<code>Type: object</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
-
-<p><strong>Description:</strong> Description 1</p>
+<p>Description 1</p>
 
 </details>
 
 <details>
 <summary>
-<strong> <a name="pattern2"></a>3. [Optional] Pattern Property Person > Title 2</strong>  
-> All properties whose name matches the regular expression
-```..``` ([Test](https://regex101.com/?regex=..))
+  <strong><a name="pattern2"></a>Title 2</strong> <code>Pattern</code></summary>
+
+<blockquote>
+All properties whose name matches the regular expression
+<code>..</code> (<a href="https://regex101.com/?regex=..">Test</a>)
 must respect the following conditions
+</blockquote>
 
-</summary>
+<h4>Title 2</h4>
 
-<p><strong>Title:</strong> Title 2</p>
+<code>Type: object</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
-
-<p><strong>Description:</strong> Description 2</p>
+<p>Description 2</p>
 
 </details>
 
 <details>
 <summary>
-<strong> <a name="pattern3"></a>4. [Optional] Pattern Property Person > Title 3</strong>  
-> All properties whose name matches the regular expression
-```^.``` ([Test](https://regex101.com/?regex=%5E.))
+  <strong><a name="pattern3"></a>Title 3</strong> <code>Pattern</code></summary>
+
+<blockquote>
+All properties whose name matches the regular expression
+<code>^.</code> (<a href="https://regex101.com/?regex=%5E.">Test</a>)
 must respect the following conditions
+</blockquote>
 
-</summary>
+<h4>Title 3</h4>
 
-<p><strong>Title:</strong> Title 3</p>
+<code>Type: object</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
-
-<p><strong>Description:</strong> Description 3</p>
+<p>Description 3</p>
 
 </details>
 
-----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
+<hr/>
+<footer>
+<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
+</footer>

@@ -1,81 +1,22 @@
-# Person
+<h1>Person</h1>
 
-- [1. [Optional] Property Person > subType1](#subType1)
-  - [1.1. [Optional] Property Person > subType1 > subProp1](#subType1_subProp1)
-- [2. [Optional] Property Person > subType2](#subType2)
-  - [2.1. [Optional] Property Person > subType2 > subProp2](#subType2_subProp2)
-- [3. [Optional] Property Person > anInt](#anInt)
-- [4. Property Person > additionalProperties](#additionalProperties)
-  - [4.1. [Optional] Property Person > additionalProperties > propA](#additionalProperties_propA)
-
-<p><strong>Title:</strong> Person</p>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><a href="#additionalProperties">Each additional property must conform to the schema</a></td>
-  </tr>
-</table>
+<code>Type: object</code>
 
 <details>
 <summary>
-<strong> <a name="subType1"></a>1. [Optional] Property Person > subType1</strong>  
+  <strong><a name="subType1"></a>subType1</strong></summary>
 
-</summary>
+<code>Type: object</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Not allowed</td>
-  </tr>
-</table>
+<p>A sub type with additionalProperties false.</p>
 
-<p><strong>Description:</strong> A sub type with additionalProperties false.</p>
+<code>No Additional Properties</code>
 
 <details>
 <summary>
-<strong> <a name="subType1_subProp1"></a>1.1. [Optional] Property Person > subType1 > subProp1</strong>  
+  <strong><a name="subType1_subProp1"></a>subProp1</strong></summary>
 
-</summary>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>number</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+<code>Type: number</code>
 
 </details>
 
@@ -83,51 +24,17 @@
 
 <details>
 <summary>
-<strong> <a name="subType2"></a>2. [Optional] Property Person > subType2</strong>  
+  <strong><a name="subType2"></a>subType2</strong></summary>
 
-</summary>
+<code>Type: object</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
-
-<p><strong>Description:</strong> A sub type with additionalProperties true.</p>
+<p>A sub type with additionalProperties true.</p>
 
 <details>
 <summary>
-<strong> <a name="subType2_subProp2"></a>2.1. [Optional] Property Person > subType2 > subProp2</strong>  
+  <strong><a name="subType2_subProp2"></a>subProp2</strong></summary>
 
-</summary>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>number</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+<code>Type: number</code>
 
 </details>
 
@@ -135,80 +42,33 @@
 
 <details>
 <summary>
-<strong> <a name="anInt"></a>3. [Optional] Property Person > anInt</strong>  
+  <strong><a name="anInt"></a>anInt</strong></summary>
 
-</summary>
+<code>Type: integer</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>integer</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
-
-<p><strong>Description:</strong> This is an integer, it should not show additional properties. (issue #132)</p>
+<p>This is an integer, it should not show additional properties. (issue #132)</p>
 
 </details>
 
 <details>
 <summary>
-<strong> <a name="additionalProperties"></a>4. Property Person > additionalProperties</strong>  
+  <strong><a name="additionalProperties"></a>Additional Properties</strong></summary>
 
-</summary>
+<code>Type: object</code>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
-
-<p><strong>Description:</strong> additionalProperties schema.</p>
+<p>additionalProperties schema.</p>
 
 <details>
 <summary>
-<strong> <a name="additionalProperties_propA"></a>4.1. [Optional] Property Person > additionalProperties > propA</strong>  
+  <strong><a name="additionalProperties_propA"></a>propA</strong></summary>
 
-</summary>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>number</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+<code>Type: number</code>
 
 </details>
 
 </details>
 
-----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
+<hr/>
+<footer>
+<p>Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
+</footer>
