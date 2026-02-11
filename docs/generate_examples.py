@@ -20,7 +20,7 @@ from json_schema_for_humans.generation_configuration import \
 EXAMPLES_DIR = os.path.join(CURRENT_DIR, "examples")
 JSON_EXAMPLES_DIR = os.path.join(EXAMPLES_DIR, "cases")
 
-TEMPLATE_NAMES = ["js", "js_offline", "flat", "md", "md_nested"]
+TEMPLATE_NAMES = ["js", "js_offline", "flat", "md", "md_nested", "md_sober"]
 if len(sys.argv) >= 2:
     TEMPLATE_NAMES = [sys.argv[1]]
 
