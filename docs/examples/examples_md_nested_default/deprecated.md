@@ -20,7 +20,7 @@
 
 <code>Type: object</code>
 
-<p>[Deprecated - Use `not_deprecated` instead]</p>
+<p>[Deprecated - Use <code>not_deprecated</code> instead]</p>
 
 </details>
 
@@ -40,7 +40,7 @@
 
 <code>Type: object</code>
 
-<p>This is [Deprecated - Use `not_deprecated` instead]</p>
+<p>This is [Deprecated - Use <code>not_deprecated</code> instead]</p>
 
 </details>
 

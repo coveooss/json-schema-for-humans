@@ -1,4 +1,4 @@
 {# Display description #}
 {% if description %}
-<p>{{ description }}</p>
+{{ description | md_render }}
 {% endif %}

@@ -8,7 +8,7 @@
 
 <code>Type: string</code>
 
-<p>Line1
+<p>Line1<br />
 Line2</p>
 
 </details>

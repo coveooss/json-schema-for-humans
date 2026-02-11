@@ -10,7 +10,7 @@
 
 <code>Type: string</code>
 
-<p><br/><br/><br/><br/><a href="https://example.com">A link to example.com</a></p>
+<p>&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a href="https://example.com"&gt;A link to example.com&lt;/a&gt;</p>
 
 </details>
 
@@ -22,10 +22,12 @@
 
 <code>Type: string</code>
 
-<p>Here is some HTML:
-```html
-<br/><br/><br/><br/><a href="https://example.com">A link to example.com</a>
-```</p>
+<p>Here is some HTML:</p>
+
+<div class="highlight jumbotron">
+<pre><span></span><code><span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;&lt;</span><span class="nt">br</span><span class="p">/&gt;&lt;</span><span class="nt">br</span><span class="p">/&gt;&lt;</span><span class="nt">br</span><span class="p">/&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://example.com&quot;</span><span class="p">&gt;</span>A link to example.com<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre>
+</div>
 
 </details>
 
@@ -37,12 +39,14 @@
 
 <code>Type: string</code>
 
-<p>Here is some JSON:
-```json
-{
-  "property": "value"
-}
-```</p>
+<p>Here is some JSON:</p>
+
+<div class="highlight jumbotron">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;property&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
 </details>
 

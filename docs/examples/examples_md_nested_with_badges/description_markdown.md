@@ -2,10 +2,9 @@
 
 <code>Type: object</code>
 
-<p>DOC 
-* List 1
-* List 2
-</p>
+<p>DOC<br />
+* List 1<br />
+* List 2</p>
 
 <hr/>
 <footer>
