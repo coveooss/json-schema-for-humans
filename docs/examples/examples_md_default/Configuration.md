@@ -650,7 +650,6 @@ Must be one of:
 * "js_offline"
 * "md"
 * "md_nested"
-* "md_sober"
 * "techdocs"
 
 ## <a name="custom_template_path"></a>14. Property `JSON Schema for Humans configuration file > custom_template_path`

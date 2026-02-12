@@ -500,7 +500,6 @@ Must be one of:
 * "js_offline"
 * "md"
 * "md_nested"
-* "md_sober"
 * "techdocs"
 
 </blockquote>

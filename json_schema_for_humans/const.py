@@ -38,14 +38,13 @@ class DocumentationTemplate(Enum):
     JS_OFFLINE = "js_offline"
     MD = "md"
     MD_NESTED = "md_nested"
-    MD_SOBER = "md_sober"
     TECHDOCS = "techdocs"
 
     @property
     def result_extension(self) -> str:
         if self in [self.FLAT, self.JS, self.JS_OFFLINE]:
             return "html"
-        if self in [self.MD, self.MD_NESTED, self.MD_SOBER, self.TECHDOCS]:
+        if self in [self.MD, self.MD_NESTED, self.TECHDOCS]:
             return "md"
         return "html"
 
