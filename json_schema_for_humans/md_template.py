@@ -95,9 +95,7 @@ def generate_table(
         max_cell_length: Dict = {}
         for idx_row, row in enumerate(table):
             for idx_col, cell in enumerate(row):
-                max_cell_length[idx_col] = max(
-                    max_cell_length.get(idx_col, 0), len(cell)
-                )
+                max_cell_length[idx_col] = max(max_cell_length.get(idx_col, 0), len(cell))
 
         # generate md table
         output = ""
@@ -245,9 +243,7 @@ class MarkdownTemplate(object):
         # Only use HTML tables for techdocs template
         use_html = self.config.template_name == "techdocs"
         if md_renderer and use_html:
-            return lambda table: generate_table(
-                table, md_renderer.convert, use_html=True
-            )
+            return lambda table: generate_table(table, md_renderer.convert, use_html=True)
         return lambda table: generate_table(table, use_html=use_html)
 
     def _make_md_render_filter(self, env: jinja2.Environment) -> Callable[[str], str]:
