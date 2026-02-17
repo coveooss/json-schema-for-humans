@@ -4,10 +4,20 @@
   - [1.1. [Optional] Property root > described > name](#described_name)
   - [1.2. [Optional] Property root > described > alignment](#described_alignment)
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 **Description:** Testing $ref of a remote $ref
 
@@ -18,11 +28,24 @@
 </summary>
 <blockquote>
 
-|                           |                                                                                                                      |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                             |
-| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red)                                                       |
-| **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/description_from_ref.json |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Not%20allowed-red" alt="Not allowed" /></td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td>https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/description<em>from</em>ref.json</td>
+  </tr>
+</table>
 
 <details>
 <summary>
@@ -31,16 +54,33 @@
 </summary>
 <blockquote>
 
-|                |                             |
-| -------------- | --------------------------- |
-| **Type**       | `string`                    |
-| **Defined in** | #/definitions/filled_string |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/filled_string</h1></td>
+  </tr>
+</table>
 
 **Description:** a filled string
 
-| Restrictions   |   |
-| -------------- | - |
-| **Min length** | 1 |
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Min length</strong></td>
+    <td>1</td>
+  </tr>
+</table>
 
 </blockquote>
 </details>
@@ -52,10 +92,20 @@
 </summary>
 <blockquote>
 
-|                        |                         |
-| ---------------------- | ----------------------- |
-| **Type**               | `string`                |
-| **Same definition as** | [name](#described_name) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#described_name">name</a></td>
+  </tr>
+</table>
 
 **Description:** a filled string
 

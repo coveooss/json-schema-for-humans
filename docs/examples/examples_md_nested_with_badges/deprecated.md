@@ -6,10 +6,20 @@
 - [4. [Optional] ~~Property root > deprecated4~~](#deprecated4)
 - [5. [Optional] Property root > not_deprecated](#not_deprecated)
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 **Description:** Test schema with deprecated in description
 
@@ -20,12 +30,83 @@
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Deprecated**            |
-| !                         | [                                                                           | D | e | p | r | e | c | a | t | e | d | ] | ( | h | t | t | p | s | : | / | / | i | m | g | . | s | h | i | e | l | d | s | . | i | o | / | b | a | d | g | e | / | D | e | p | r | e | c | a | t | e | d | - | r | e | d | ) |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Deprecated</strong></td>
+  </tr>
+  <tr>
+    <td>!</td>
+    <td>[</td>
+    <td>D</td>
+    <td>e</td>
+    <td>p</td>
+    <td>r</td>
+    <td>e</td>
+    <td>c</td>
+    <td>a</td>
+    <td>t</td>
+    <td>e</td>
+    <td>d</td>
+    <td>]</td>
+    <td>(</td>
+    <td>h</td>
+    <td>t</td>
+    <td>t</td>
+    <td>p</td>
+    <td>s</td>
+    <td>:</td>
+    <td>/</td>
+    <td>/</td>
+    <td>i</td>
+    <td>m</td>
+    <td>g</td>
+    <td>.</td>
+    <td>s</td>
+    <td>h</td>
+    <td>i</td>
+    <td>e</td>
+    <td>l</td>
+    <td>d</td>
+    <td>s</td>
+    <td>.</td>
+    <td>i</td>
+    <td>o</td>
+    <td>/</td>
+    <td>b</td>
+    <td>a</td>
+    <td>d</td>
+    <td>g</td>
+    <td>e</td>
+    <td>/</td>
+    <td>D</td>
+    <td>e</td>
+    <td>p</td>
+    <td>r</td>
+    <td>e</td>
+    <td>c</td>
+    <td>a</td>
+    <td>t</td>
+    <td>e</td>
+    <td>d</td>
+    <td>-</td>
+    <td>r</td>
+    <td>e</td>
+    <td>d</td>
+    <td>)</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 **Description:** [Deprecated]
 
@@ -39,12 +120,83 @@
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Deprecated**            |
-| !                         | [                                                                           | D | e | p | r | e | c | a | t | e | d | ] | ( | h | t | t | p | s | : | / | / | i | m | g | . | s | h | i | e | l | d | s | . | i | o | / | b | a | d | g | e | / | D | e | p | r | e | c | a | t | e | d | - | r | e | d | ) |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Deprecated</strong></td>
+  </tr>
+  <tr>
+    <td>!</td>
+    <td>[</td>
+    <td>D</td>
+    <td>e</td>
+    <td>p</td>
+    <td>r</td>
+    <td>e</td>
+    <td>c</td>
+    <td>a</td>
+    <td>t</td>
+    <td>e</td>
+    <td>d</td>
+    <td>]</td>
+    <td>(</td>
+    <td>h</td>
+    <td>t</td>
+    <td>t</td>
+    <td>p</td>
+    <td>s</td>
+    <td>:</td>
+    <td>/</td>
+    <td>/</td>
+    <td>i</td>
+    <td>m</td>
+    <td>g</td>
+    <td>.</td>
+    <td>s</td>
+    <td>h</td>
+    <td>i</td>
+    <td>e</td>
+    <td>l</td>
+    <td>d</td>
+    <td>s</td>
+    <td>.</td>
+    <td>i</td>
+    <td>o</td>
+    <td>/</td>
+    <td>b</td>
+    <td>a</td>
+    <td>d</td>
+    <td>g</td>
+    <td>e</td>
+    <td>/</td>
+    <td>D</td>
+    <td>e</td>
+    <td>p</td>
+    <td>r</td>
+    <td>e</td>
+    <td>c</td>
+    <td>a</td>
+    <td>t</td>
+    <td>e</td>
+    <td>d</td>
+    <td>-</td>
+    <td>r</td>
+    <td>e</td>
+    <td>d</td>
+    <td>)</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 **Description:** [Deprecated - Use `not_deprecated` instead]
 
@@ -58,12 +210,83 @@
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Deprecated**            |
-| !                         | [                                                                           | D | e | p | r | e | c | a | t | e | d | ] | ( | h | t | t | p | s | : | / | / | i | m | g | . | s | h | i | e | l | d | s | . | i | o | / | b | a | d | g | e | / | D | e | p | r | e | c | a | t | e | d | - | r | e | d | ) |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Deprecated</strong></td>
+  </tr>
+  <tr>
+    <td>!</td>
+    <td>[</td>
+    <td>D</td>
+    <td>e</td>
+    <td>p</td>
+    <td>r</td>
+    <td>e</td>
+    <td>c</td>
+    <td>a</td>
+    <td>t</td>
+    <td>e</td>
+    <td>d</td>
+    <td>]</td>
+    <td>(</td>
+    <td>h</td>
+    <td>t</td>
+    <td>t</td>
+    <td>p</td>
+    <td>s</td>
+    <td>:</td>
+    <td>/</td>
+    <td>/</td>
+    <td>i</td>
+    <td>m</td>
+    <td>g</td>
+    <td>.</td>
+    <td>s</td>
+    <td>h</td>
+    <td>i</td>
+    <td>e</td>
+    <td>l</td>
+    <td>d</td>
+    <td>s</td>
+    <td>.</td>
+    <td>i</td>
+    <td>o</td>
+    <td>/</td>
+    <td>b</td>
+    <td>a</td>
+    <td>d</td>
+    <td>g</td>
+    <td>e</td>
+    <td>/</td>
+    <td>D</td>
+    <td>e</td>
+    <td>p</td>
+    <td>r</td>
+    <td>e</td>
+    <td>c</td>
+    <td>a</td>
+    <td>t</td>
+    <td>e</td>
+    <td>d</td>
+    <td>-</td>
+    <td>r</td>
+    <td>e</td>
+    <td>d</td>
+    <td>)</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 **Description:** This is [Deprecated]
 
@@ -77,12 +300,83 @@
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Deprecated**            |
-| !                         | [                                                                           | D | e | p | r | e | c | a | t | e | d | ] | ( | h | t | t | p | s | : | / | / | i | m | g | . | s | h | i | e | l | d | s | . | i | o | / | b | a | d | g | e | / | D | e | p | r | e | c | a | t | e | d | - | r | e | d | ) |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Deprecated</strong></td>
+  </tr>
+  <tr>
+    <td>!</td>
+    <td>[</td>
+    <td>D</td>
+    <td>e</td>
+    <td>p</td>
+    <td>r</td>
+    <td>e</td>
+    <td>c</td>
+    <td>a</td>
+    <td>t</td>
+    <td>e</td>
+    <td>d</td>
+    <td>]</td>
+    <td>(</td>
+    <td>h</td>
+    <td>t</td>
+    <td>t</td>
+    <td>p</td>
+    <td>s</td>
+    <td>:</td>
+    <td>/</td>
+    <td>/</td>
+    <td>i</td>
+    <td>m</td>
+    <td>g</td>
+    <td>.</td>
+    <td>s</td>
+    <td>h</td>
+    <td>i</td>
+    <td>e</td>
+    <td>l</td>
+    <td>d</td>
+    <td>s</td>
+    <td>.</td>
+    <td>i</td>
+    <td>o</td>
+    <td>/</td>
+    <td>b</td>
+    <td>a</td>
+    <td>d</td>
+    <td>g</td>
+    <td>e</td>
+    <td>/</td>
+    <td>D</td>
+    <td>e</td>
+    <td>p</td>
+    <td>r</td>
+    <td>e</td>
+    <td>c</td>
+    <td>a</td>
+    <td>t</td>
+    <td>e</td>
+    <td>d</td>
+    <td>-</td>
+    <td>r</td>
+    <td>e</td>
+    <td>d</td>
+    <td>)</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 **Description:** This is [Deprecated - Use `not_deprecated` instead]
 
@@ -96,9 +390,16 @@
 </summary>
 <blockquote>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
 </blockquote>
 </details>

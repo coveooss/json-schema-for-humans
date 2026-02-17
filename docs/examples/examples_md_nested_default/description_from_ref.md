@@ -3,11 +3,24 @@
 - [1. [Optional] Property root > name](#name)
 - [2. [Optional] Property root > alignment](#alignment)
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td>Not allowed</td>
+  </tr>
+</table>
 
 <details>
 <summary>
@@ -16,17 +29,37 @@
 </summary>
 <blockquote>
 
-|                |                             |
-| -------------- | --------------------------- |
-| **Type**       | `string`                    |
-| **Required**   | No                          |
-| **Defined in** | #/definitions/filled_string |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Defined in</strong></td>
+    <td><h1>/definitions/filled_string</h1></td>
+  </tr>
+</table>
 
 **Description:** a filled string
 
-| Restrictions   |   |
-| -------------- | - |
-| **Min length** | 1 |
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Min length</strong></td>
+    <td>1</td>
+  </tr>
+</table>
 
 </blockquote>
 </details>
@@ -38,11 +71,24 @@
 </summary>
 <blockquote>
 
-|                        |               |
-| ---------------------- | ------------- |
-| **Type**               | `string`      |
-| **Required**           | No            |
-| **Same definition as** | [name](#name) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+  <tr>
+    <td><strong>Required</strong></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>Same definition as</strong></td>
+    <td><a href="#name">name</a></td>
+  </tr>
+</table>
 
 **Description:** a filled string
 

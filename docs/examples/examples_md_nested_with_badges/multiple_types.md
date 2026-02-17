@@ -7,10 +7,20 @@
 
 **Title:** Person
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>object</code></td>
+  </tr>
+  <tr>
+    <td><strong>Additional properties</strong></td>
+    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
+  </tr>
+</table>
 
 <details>
 <summary>
@@ -19,9 +29,16 @@
 </summary>
 <blockquote>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string</code></td>
+  </tr>
+</table>
 
 **Description:** The person's first name.
 
@@ -35,9 +52,16 @@
 </summary>
 <blockquote>
 
-|          |                  |
-| -------- | ---------------- |
-| **Type** | `string or null` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>string or null</code></td>
+  </tr>
+</table>
 
 **Description:** The person's last name.
 
@@ -51,15 +75,29 @@
 </summary>
 <blockquote>
 
-|          |                     |
-| -------- | ------------------- |
-| **Type** | `integer or number` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer or number</code></td>
+  </tr>
+</table>
 
 **Description:** Age in years which must be equal to or greater than zero.
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+<table>
+  <tr>
+    <th>Restrictions</th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td><strong>Minimum</strong></td>
+    <td>&ge; 0</td>
+  </tr>
+</table>
 
 </blockquote>
 </details>
@@ -71,9 +109,16 @@
 </summary>
 <blockquote>
 
-|          |                                   |
-| -------- | --------------------------------- |
-| **Type** | `integer, string, number or null` |
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Type</strong></td>
+    <td><code>integer, string, number or null</code></td>
+  </tr>
+</table>
 
 **Description:** Ay other info you like
 
