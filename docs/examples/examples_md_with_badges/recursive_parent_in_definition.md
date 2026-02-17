@@ -7,190 +7,63 @@
 
 **Title:** Person
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Pattern</th>
-    <th>Type</th>
-    <th>Deprecated</th>
-    <th>Definition</th>
-    <th>Title/Description</th>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">relationships</a></li>
-</ul></td>
-    <td>No</td>
-    <td>object</td>
-    <td>No</td>
-    <td>In #/definitions/person/properties/relationships</td>
-    <td>Relationships between this person and others</td>
-  </tr>
-</table>
+| Property                           | Pattern | Type   | Deprecated | Definition                                       | Title/Description                            |
+| ---------------------------------- | ------- | ------ | ---------- | ------------------------------------------------ | -------------------------------------------- |
+| - [relationships](#relationships ) | No      | object | No         | In #/definitions/person/properties/relationships | Relationships between this person and others |
 
 ## <a name="relationships"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > relationships`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/person/properties/relationships</h1></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Defined in**            | #/definitions/person/properties/relationships                               |
 
 **Description:** Relationships between this person and others
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Pattern</th>
-    <th>Type</th>
-    <th>Deprecated</th>
-    <th>Definition</th>
-    <th>Title/Description</th>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">mother</a></li>
-</ul></td>
-    <td>No</td>
-    <td>object</td>
-    <td>No</td>
-    <td>In #/definitions/person</td>
-    <td>A human being</td>
-  </tr>
-</table>
+| Property                           | Pattern | Type   | Deprecated | Definition              | Title/Description |
+| ---------------------------------- | ------- | ------ | ---------- | ----------------------- | ----------------- |
+| - [mother](#relationships_mother ) | No      | object | No         | In #/definitions/person | A human being     |
 
 ### <a name="relationships_mother"></a>1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > relationships > mother`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/person</h1></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Defined in**            | #/definitions/person                                                        |
 
 **Description:** A human being
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Pattern</th>
-    <th>Type</th>
-    <th>Deprecated</th>
-    <th>Definition</th>
-    <th>Title/Description</th>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">relationships</a></li>
-</ul></td>
-    <td>No</td>
-    <td>object</td>
-    <td>No</td>
-    <td>-</td>
-    <td>Relationships between this person and others</td>
-  </tr>
-</table>
+| Property                                                | Pattern | Type   | Deprecated | Definition | Title/Description                            |
+| ------------------------------------------------------- | ------- | ------ | ---------- | ---------- | -------------------------------------------- |
+| - [relationships](#relationships_mother_relationships ) | No      | object | No         | -          | Relationships between this person and others |
 
 #### <a name="relationships_mother_relationships"></a>1.1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > relationships > mother > relationships`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 **Description:** Relationships between this person and others
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Pattern</th>
-    <th>Type</th>
-    <th>Deprecated</th>
-    <th>Definition</th>
-    <th>Title/Description</th>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">mother</a></li>
-</ul></td>
-    <td>No</td>
-    <td>object</td>
-    <td>No</td>
-    <td>Same as <a href="#">mother</a></td>
-    <td>A human being</td>
-  </tr>
-</table>
+| Property                                                | Pattern | Type   | Deprecated | Definition                               | Title/Description |
+| ------------------------------------------------------- | ------- | ------ | ---------- | ---------------------------------------- | ----------------- |
+| - [mother](#relationships_mother_relationships_mother ) | No      | object | No         | Same as [mother](#relationships_mother ) | A human being     |
 
 ##### <a name="relationships_mother_relationships_mother"></a>1.1.1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > relationships > mother > relationships > mother`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Same definition as</strong></td>
-    <td><a href="#relationships_mother">mother</a></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Same definition as**    | [mother](#relationships_mother)                                             |
 
 **Description:** A human being
 

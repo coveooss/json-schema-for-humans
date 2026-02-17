@@ -5,95 +5,33 @@
 
 **Title:** Person
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Pattern</th>
-    <th>Type</th>
-    <th>Deprecated</th>
-    <th>Definition</th>
-    <th>Title/Description</th>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">extra<em>options</em>object</a></li>
-</ul></td>
-    <td>No</td>
-    <td>object</td>
-    <td>No</td>
-    <td>In #/definitions/extra_options/anyOf/0</td>
-    <td>This is the one</td>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">name<em>looks</em>like<em>an</em>int</a></li>
-</ul></td>
-    <td>No</td>
-    <td>object</td>
-    <td>No</td>
-    <td>In #/definitions/10</td>
-    <td>This is just to be annoying. The property name looks like an int</td>
-  </tr>
-</table>
+| Property                                             | Pattern | Type   | Deprecated | Definition                             | Title/Description                                                |
+| ---------------------------------------------------- | ------- | ------ | ---------- | -------------------------------------- | ---------------------------------------------------------------- |
+| - [extra_options_object](#extra_options_object )     | No      | object | No         | In #/definitions/extra_options/anyOf/0 | This is the one                                                  |
+| - [name_looks_like_an_int](#name_looks_like_an_int ) | No      | object | No         | In #/definitions/10                    | This is just to be annoying. The property name looks like an int |
 
 ## <a name="extra_options_object"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > extra_options_object`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/extra_options/anyOf/0</h1></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Defined in**            | #/definitions/extra_options/anyOf/0                                         |
 
 **Description:** This is the one
 
 ## <a name="name_looks_like_an_int"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > name_looks_like_an_int`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/10</h1></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Defined in**            | #/definitions/10                                                            |
 
 **Description:** This is just to be annoying. The property name looks like an int
 

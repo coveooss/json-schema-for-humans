@@ -6,20 +6,10 @@
     - [1.2.1. [Optional] Property root > signingTimeInfo > signingTimeBounds > lowerBound](#signingTimeInfo_signingTimeBounds_lowerBound)
     - [1.2.2. [Optional] Property root > signingTimeInfo > signingTimeBounds > upperBound](#signingTimeInfo_signingTimeBounds_upperBound)
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 <details>
 <summary>
@@ -28,24 +18,11 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/dss2-SigningTimeInfoType</h1></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Defined in**            | #/definitions/dss2-SigningTimeInfoType                                      |
 
 <details>
 <summary>
@@ -54,20 +31,10 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>integer</code></td>
-  </tr>
-  <tr>
-    <td><strong>Format</strong></td>
-    <td><code>utc-millisec</code></td>
-  </tr>
-</table>
+|            |                |
+| ---------- | -------------- |
+| **Type**   | `integer`      |
+| **Format** | `utc-millisec` |
 
 </blockquote>
 </details>
@@ -79,24 +46,11 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries</h1></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Defined in**            | #/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries              |
 
 <details>
 <summary>
@@ -105,20 +59,10 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>integer</code></td>
-  </tr>
-  <tr>
-    <td><strong>Format</strong></td>
-    <td><code>utc-millisec</code></td>
-  </tr>
-</table>
+|            |                |
+| ---------- | -------------- |
+| **Type**   | `integer`      |
+| **Format** | `utc-millisec` |
 
 </blockquote>
 </details>
@@ -130,20 +74,10 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>integer</code></td>
-  </tr>
-  <tr>
-    <td><strong>Format</strong></td>
-    <td><code>utc-millisec</code></td>
-  </tr>
-</table>
+|            |                |
+| ---------- | -------------- |
+| **Type**   | `integer`      |
+| **Format** | `utc-millisec` |
 
 </blockquote>
 </details>

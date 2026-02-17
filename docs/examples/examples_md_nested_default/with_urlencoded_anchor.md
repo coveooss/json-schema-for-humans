@@ -6,24 +6,11 @@
     - [1.2.1. [Optional] Property root > signingTimeInfo > signingTimeBounds > lowerBound](#signingTimeInfo_signingTimeBounds_lowerBound)
     - [1.2.2. [Optional] Property root > signingTimeInfo > signingTimeBounds > upperBound](#signingTimeInfo_signingTimeBounds_upperBound)
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 <details>
 <summary>
@@ -32,28 +19,12 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/dss2-SigningTimeInfoType</h1></td>
-  </tr>
-</table>
+|                           |                                        |
+| ------------------------- | -------------------------------------- |
+| **Type**                  | `object`                               |
+| **Required**              | No                                     |
+| **Additional properties** | Any type allowed                       |
+| **Defined in**            | #/definitions/dss2-SigningTimeInfoType |
 
 <details>
 <summary>
@@ -62,24 +33,11 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>integer</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td><strong>Format</strong></td>
-    <td><code>utc-millisec</code></td>
-  </tr>
-</table>
+|              |                |
+| ------------ | -------------- |
+| **Type**     | `integer`      |
+| **Required** | Yes            |
+| **Format**   | `utc-millisec` |
 
 </blockquote>
 </details>
@@ -91,28 +49,12 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries</h1></td>
-  </tr>
-</table>
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Required**              | No                                                             |
+| **Additional properties** | Any type allowed                                               |
+| **Defined in**            | #/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries |
 
 <details>
 <summary>
@@ -121,24 +63,11 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>integer</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Format</strong></td>
-    <td><code>utc-millisec</code></td>
-  </tr>
-</table>
+|              |                |
+| ------------ | -------------- |
+| **Type**     | `integer`      |
+| **Required** | No             |
+| **Format**   | `utc-millisec` |
 
 </blockquote>
 </details>
@@ -150,24 +79,11 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>integer</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Format</strong></td>
-    <td><code>utc-millisec</code></td>
-  </tr>
-</table>
+|              |                |
+| ------------ | -------------- |
+| **Type**     | `integer`      |
+| **Required** | No             |
+| **Format**   | `utc-millisec` |
 
 </blockquote>
 </details>

@@ -4,20 +4,10 @@
 
 **Title:** Empty property name
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 <details>
 <summary>
@@ -26,16 +16,9 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-</table>
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 **Description:** I don't know why you would want an empty property 🤷
 

@@ -3,20 +3,10 @@
 - [1. [Optional] Property root > a](#a)
 - [2. [Optional] Property root > b](#b)
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 <details>
 <summary>
@@ -25,28 +15,12 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Default</strong></td>
-    <td><code>"Default from a"</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/common</h1></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `"Default from a"`                                                          |
+| **Defined in**            | #/definitions/common                                                        |
 
 **Description:** Description of a
 
@@ -60,28 +34,12 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Default</strong></td>
-    <td><code>"Default from b"</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/common</h1></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `"Default from b"`                                                          |
+| **Defined in**            | #/definitions/common                                                        |
 
 **Description:** A common description
 

@@ -9,20 +9,10 @@
 
 **Title:** Person
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 <details>
 <summary>
@@ -33,16 +23,9 @@
 
 **Title:** Person
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-</table>
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 **Description:** The person's first name.
 
@@ -58,16 +41,9 @@
 
 **Title:** Person
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-</table>
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 **Description:** The person's last name.
 
@@ -83,29 +59,15 @@
 
 **Title:** Person
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>integer</code></td>
-  </tr>
-</table>
+|          |           |
+| -------- | --------- |
+| **Type** | `integer` |
 
 **Description:** Age in years which must be equal to or greater than zero.
 
-<table>
-  <tr>
-    <th>Restrictions</th>
-    <th> </th>
-  </tr>
-  <tr>
-    <td><strong>Minimum</strong></td>
-    <td>&ge; 0</td>
-  </tr>
-</table>
+| Restrictions |        |
+| ------------ | ------ |
+| **Minimum**  | &ge; 0 |
 
 </blockquote>
 </details>
@@ -117,34 +79,17 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>combining</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 <blockquote>
 
-<table>
-  <tr>
-    <th>All of(Requirement)</th>
-  </tr>
-  <tr>
-    <td><a href="#driverLicenseId_allOf_i0">no driver licence</a></td>
-  </tr>
-  <tr>
-    <td><a href="#driverLicenseId_allOf_i1">driver licence id</a></td>
-  </tr>
-</table>
+| All of(Requirement)                            |
+| ---------------------------------------------- |
+| [no driver licence](#driverLicenseId_allOf_i0) |
+| [driver licence id](#driverLicenseId_allOf_i1) |
 
 <blockquote>
 
@@ -152,16 +97,9 @@
 
 **Title:** no driver licence
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>null</code></td>
-  </tr>
-</table>
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
 
 </blockquote>
 <blockquote>
@@ -170,16 +108,9 @@
 
 **Title:** driver licence id
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-</table>
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 </blockquote>
 

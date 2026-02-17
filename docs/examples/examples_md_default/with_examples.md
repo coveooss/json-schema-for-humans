@@ -7,94 +7,27 @@
 
 **Title:** Person
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Pattern</th>
-    <th>Type</th>
-    <th>Deprecated</th>
-    <th>Definition</th>
-    <th>Title/Description</th>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">firstName</a></li>
-</ul></td>
-    <td>No</td>
-    <td>string</td>
-    <td>No</td>
-    <td>-</td>
-    <td>Person</td>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">lastName</a></li>
-</ul></td>
-    <td>No</td>
-    <td>string</td>
-    <td>No</td>
-    <td>-</td>
-    <td>Person</td>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">age</a></li>
-</ul></td>
-    <td>No</td>
-    <td>integer</td>
-    <td>No</td>
-    <td>-</td>
-    <td>Person</td>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">moreInfo</a></li>
-</ul></td>
-    <td>No</td>
-    <td>object</td>
-    <td>No</td>
-    <td>-</td>
-    <td>Any more info you want as an object</td>
-  </tr>
-</table>
+| Property                   | Pattern | Type    | Deprecated | Definition | Title/Description                   |
+| -------------------------- | ------- | ------- | ---------- | ---------- | ----------------------------------- |
+| - [firstName](#firstName ) | No      | string  | No         | -          | Person                              |
+| - [lastName](#lastName )   | No      | string  | No         | -          | Person                              |
+| - [age](#age )             | No      | integer | No         | -          | Person                              |
+| - [moreInfo](#moreInfo )   | No      | object  | No         | -          | Any more info you want as an object |
 
 ## <a name="firstName"></a>1. Property `Person > firstName`
 
 **Title:** Person
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Description:** the person's first name
 
@@ -112,20 +45,10 @@
 
 **Title:** Person
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Description:** The person's last name.
 
@@ -139,20 +62,10 @@
 
 **Title:** Person
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>integer</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+|              |           |
+| ------------ | --------- |
+| **Type**     | `integer` |
+| **Required** | No        |
 
 **Description:** Age in years which must be equal to or greater than zero.
 
@@ -162,37 +75,17 @@
 64
 ```
 
-<table>
-  <tr>
-    <th>Restrictions</th>
-    <th> </th>
-  </tr>
-  <tr>
-    <td><strong>Minimum</strong></td>
-    <td>&ge; 0</td>
-  </tr>
-</table>
+| Restrictions |        |
+| ------------ | ------ |
+| **Minimum**  | &ge; 0 |
 
 ## <a name="moreInfo"></a>4. Property `Person > moreInfo`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 **Description:** Any more info you want as an object
 

@@ -9,24 +9,11 @@
 
 **Title:** Personne
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 <details>
 <summary>
@@ -35,20 +22,10 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Description:** Le prénom de la personne.
 
@@ -62,20 +39,10 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Description:** Le nom de famille de la personne.
 
@@ -89,33 +56,16 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>integer</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+|              |           |
+| ------------ | --------- |
+| **Type**     | `integer` |
+| **Required** | No        |
 
 **Description:** L'âge en années qui doit être plus grand ou égal à 0.
 
-<table>
-  <tr>
-    <th>Restrictions</th>
-    <th> </th>
-  </tr>
-  <tr>
-    <td><strong>Minimum</strong></td>
-    <td>&ge; 0</td>
-  </tr>
-</table>
+| Restrictions |        |
+| ------------ | ------ |
+| **Minimum**  | &ge; 0 |
 
 </blockquote>
 </details>
@@ -127,20 +77,10 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Examples:**
 
@@ -166,20 +106,10 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Description:** 顧客の名前
 
@@ -193,20 +123,10 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>integer</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+|              |           |
+| ------------ | --------- |
+| **Type**     | `integer` |
+| **Required** | No        |
 
 **Description:** 顧客の年齢
 

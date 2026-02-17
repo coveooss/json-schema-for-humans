@@ -5,20 +5,10 @@
 
 **Title:** Schema containing a single-element allOf
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 **Description:** Schema containing a single-element allOf
 
@@ -29,24 +19,11 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Default</strong></td>
-    <td><code>"hi"</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td></td>
-  </tr>
-</table>
+|                |          |
+| -------------- | -------- |
+| **Type**       | `string` |
+| **Default**    | `"hi"`   |
+| **Defined in** |          |
 
 **Description:** My string definition
 
@@ -60,16 +37,9 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>number</code></td>
-  </tr>
-</table>
+|          |          |
+| -------- | -------- |
+| **Type** | `number` |
 
 </blockquote>
 </details>

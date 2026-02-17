@@ -8,84 +8,26 @@
 
 **Title:** Person
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Pattern</th>
-    <th>Type</th>
-    <th>Deprecated</th>
-    <th>Definition</th>
-    <th>Title/Description</th>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">firstName</a></li>
-</ul></td>
-    <td>No</td>
-    <td>string</td>
-    <td>No</td>
-    <td>-</td>
-    <td>Person</td>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">lastName</a></li>
-</ul></td>
-    <td>No</td>
-    <td>string</td>
-    <td>No</td>
-    <td>-</td>
-    <td>Person</td>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">$[a-c][0-9]^</a></li>
-</ul></td>
-    <td>Yes</td>
-    <td>object</td>
-    <td>No</td>
-    <td>-</td>
-    <td>paperSize</td>
-  </tr>
-</table>
+| Property                     | Pattern | Type   | Deprecated | Definition | Title/Description |
+| ---------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
+| - [firstName](#firstName )   | No      | string | No         | -          | Person            |
+| - [lastName](#lastName )     | No      | string | No         | -          | Person            |
+| - [$[a-c][0-9]^](#pattern1 ) | Yes     | object | No         | -          | paperSize         |
 
 ## <a name="firstName"></a>1. Property `Person > firstName`
 
 **Title:** Person
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Description:** The person's first name.
 
@@ -93,20 +35,10 @@
 
 **Title:** Person
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 **Description:** The person's last name.
 
@@ -117,76 +49,27 @@ must respect the following conditions
 
 **Title:** paperSize
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 **Description:** Review of a paper size.
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Pattern</th>
-    <th>Type</th>
-    <th>Deprecated</th>
-    <th>Definition</th>
-    <th>Title/Description</th>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">rating</a></li>
-</ul></td>
-    <td>No</td>
-    <td>integer</td>
-    <td>No</td>
-    <td>-</td>
-    <td>Rating</td>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">review</a></li>
-</ul></td>
-    <td>No</td>
-    <td>string</td>
-    <td>No</td>
-    <td>-</td>
-    <td>Review</td>
-  </tr>
-</table>
+| Property                      | Pattern | Type    | Deprecated | Definition | Title/Description |
+| ----------------------------- | ------- | ------- | ---------- | ---------- | ----------------- |
+| + [rating](#pattern1_rating ) | No      | integer | No         | -          | Rating            |
+| + [review](#pattern1_review ) | No      | string  | No         | -          | Review            |
 
 ### <a name="pattern1_rating"></a>3.1. Property `Person > paperSize > rating`
 
 **Title:** Rating
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>integer</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>Yes</td>
-  </tr>
-</table>
+|              |           |
+| ------------ | --------- |
+| **Type**     | `integer` |
+| **Required** | Yes       |
 
 **Description:** Numerical rating for paper size.
 
@@ -194,20 +77,10 @@ must respect the following conditions
 
 **Title:** Review
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>Yes</td>
-  </tr>
-</table>
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
 
 **Description:** Narrative review of the paper size.
 

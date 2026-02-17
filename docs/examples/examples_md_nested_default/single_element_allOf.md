@@ -5,24 +5,11 @@
 
 **Title:** Schema containing a single-element allOf
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 **Description:** Schema containing a single-element allOf
 
@@ -33,28 +20,12 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Default</strong></td>
-    <td><code>"hi"</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td></td>
-  </tr>
-</table>
+|                |          |
+| -------------- | -------- |
+| **Type**       | `string` |
+| **Required**   | No       |
+| **Default**    | `"hi"`   |
+| **Defined in** |          |
 
 **Description:** My string definition
 
@@ -68,20 +39,10 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>number</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+|              |          |
+| ------------ | -------- |
+| **Type**     | `number` |
+| **Required** | No       |
 
 </blockquote>
 </details>

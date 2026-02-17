@@ -6,220 +6,67 @@
     - [1.2.1. Property `root > signingTimeInfo > signingTimeBounds > lowerBound`](#signingTimeInfo_signingTimeBounds_lowerBound)
     - [1.2.2. Property `root > signingTimeInfo > signingTimeBounds > upperBound`](#signingTimeInfo_signingTimeBounds_upperBound)
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Pattern</th>
-    <th>Type</th>
-    <th>Deprecated</th>
-    <th>Definition</th>
-    <th>Title/Description</th>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">signingTimeInfo</a></li>
-</ul></td>
-    <td>No</td>
-    <td>object</td>
-    <td>No</td>
-    <td>In #/definitions/dss2-SigningTimeInfoType</td>
-    <td>-</td>
-  </tr>
-</table>
+| Property                               | Pattern | Type   | Deprecated | Definition                                | Title/Description |
+| -------------------------------------- | ------- | ------ | ---------- | ----------------------------------------- | ----------------- |
+| - [signingTimeInfo](#signingTimeInfo ) | No      | object | No         | In #/definitions/dss2-SigningTimeInfoType | -                 |
 
 ## <a name="signingTimeInfo"></a>1. Property `root > signingTimeInfo`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/dss2-SigningTimeInfoType</h1></td>
-  </tr>
-</table>
+|                           |                                        |
+| ------------------------- | -------------------------------------- |
+| **Type**                  | `object`                               |
+| **Required**              | No                                     |
+| **Additional properties** | Any type allowed                       |
+| **Defined in**            | #/definitions/dss2-SigningTimeInfoType |
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Pattern</th>
-    <th>Type</th>
-    <th>Deprecated</th>
-    <th>Definition</th>
-    <th>Title/Description</th>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">signingTime</a></li>
-</ul></td>
-    <td>No</td>
-    <td>integer</td>
-    <td>No</td>
-    <td>-</td>
-    <td>-</td>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">signingTimeBounds</a></li>
-</ul></td>
-    <td>No</td>
-    <td>object</td>
-    <td>No</td>
-    <td>In #/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries</td>
-    <td>-</td>
-  </tr>
-</table>
+| Property                                                   | Pattern | Type    | Deprecated | Definition                                                        | Title/Description |
+| ---------------------------------------------------------- | ------- | ------- | ---------- | ----------------------------------------------------------------- | ----------------- |
+| + [signingTime](#signingTimeInfo_signingTime )             | No      | integer | No         | -                                                                 | -                 |
+| - [signingTimeBounds](#signingTimeInfo_signingTimeBounds ) | No      | object  | No         | In #/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries | -                 |
 
 ### <a name="signingTimeInfo_signingTime"></a>1.1. Property `root > signingTimeInfo > signingTime`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>integer</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td><strong>Format</strong></td>
-    <td><code>utc-millisec</code></td>
-  </tr>
-</table>
+|              |                |
+| ------------ | -------------- |
+| **Type**     | `integer`      |
+| **Required** | Yes            |
+| **Format**   | `utc-millisec` |
 
 ### <a name="signingTimeInfo_signingTimeBounds"></a>1.2. Property `root > signingTimeInfo > signingTimeBounds`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries</h1></td>
-  </tr>
-</table>
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Required**              | No                                                             |
+| **Additional properties** | Any type allowed                                               |
+| **Defined in**            | #/definitions/dss2-SigningTimeInfoType%3ASigningTimeBoundaries |
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Pattern</th>
-    <th>Type</th>
-    <th>Deprecated</th>
-    <th>Definition</th>
-    <th>Title/Description</th>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">lowerBound</a></li>
-</ul></td>
-    <td>No</td>
-    <td>integer</td>
-    <td>No</td>
-    <td>-</td>
-    <td>-</td>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">upperBound</a></li>
-</ul></td>
-    <td>No</td>
-    <td>integer</td>
-    <td>No</td>
-    <td>-</td>
-    <td>-</td>
-  </tr>
-</table>
+| Property                                                       | Pattern | Type    | Deprecated | Definition | Title/Description |
+| -------------------------------------------------------------- | ------- | ------- | ---------- | ---------- | ----------------- |
+| - [lowerBound](#signingTimeInfo_signingTimeBounds_lowerBound ) | No      | integer | No         | -          | -                 |
+| - [upperBound](#signingTimeInfo_signingTimeBounds_upperBound ) | No      | integer | No         | -          | -                 |
 
 #### <a name="signingTimeInfo_signingTimeBounds_lowerBound"></a>1.2.1. Property `root > signingTimeInfo > signingTimeBounds > lowerBound`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>integer</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Format</strong></td>
-    <td><code>utc-millisec</code></td>
-  </tr>
-</table>
+|              |                |
+| ------------ | -------------- |
+| **Type**     | `integer`      |
+| **Required** | No             |
+| **Format**   | `utc-millisec` |
 
 #### <a name="signingTimeInfo_signingTimeBounds_upperBound"></a>1.2.2. Property `root > signingTimeInfo > signingTimeBounds > upperBound`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>integer</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Format</strong></td>
-    <td><code>utc-millisec</code></td>
-  </tr>
-</table>
+|              |                |
+| ------------ | -------------- |
+| **Type**     | `integer`      |
+| **Required** | No             |
+| **Format**   | `utc-millisec` |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

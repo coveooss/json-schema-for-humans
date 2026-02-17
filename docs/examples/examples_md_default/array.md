@@ -7,276 +7,93 @@
     - [2.1.1. Property `root > vegetables > vegetables items > veggieName`](#vegetables_items_veggieName)
     - [2.1.2. Property `root > vegetables > vegetables items > veggieLike`](#vegetables_items_veggieLike)
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 **Description:** A schema with an array
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Pattern</th>
-    <th>Type</th>
-    <th>Deprecated</th>
-    <th>Definition</th>
-    <th>Title/Description</th>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">fruits</a></li>
-</ul></td>
-    <td>No</td>
-    <td>array of string</td>
-    <td>No</td>
-    <td>-</td>
-    <td>-</td>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">vegetables</a></li>
-</ul></td>
-    <td>No</td>
-    <td>array</td>
-    <td>No</td>
-    <td>-</td>
-    <td>-</td>
-  </tr>
-</table>
+| Property                     | Pattern | Type            | Deprecated | Definition | Title/Description |
+| ---------------------------- | ------- | --------------- | ---------- | ---------- | ----------------- |
+| - [fruits](#fruits )         | No      | array of string | No         | -          | -                 |
+| - [vegetables](#vegetables ) | No      | array           | No         | -          | -                 |
 
 ## <a name="fruits"></a>1. Property `root > fruits`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>array of string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+|              |                   |
+| ------------ | ----------------- |
+| **Type**     | `array of string` |
+| **Required** | No                |
 
-<table>
-  <tr>
-    <th></th>
-    <th>Array restrictions</th>
-  </tr>
-  <tr>
-    <td><strong>Min items</strong></td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td><strong>Max items</strong></td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td><strong>Items unicity</strong></td>
-    <td>False</td>
-  </tr>
-  <tr>
-    <td><strong>Additional items</strong></td>
-    <td>False</td>
-  </tr>
-  <tr>
-    <td><strong>Tuple validation</strong></td>
-    <td>See below</td>
-  </tr>
-</table>
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
 
-<table>
-  <tr>
-    <th>Each item of this array must be</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td><a href="#fruits_items">fruits items</a></td>
-    <td>-</td>
-  </tr>
-</table>
+| Each item of this array must be | Description |
+| ------------------------------- | ----------- |
+| [fruits items](#fruits_items)   | -           |
 
 ### <a name="fruits_items"></a>1.1. root > fruits > fruits items
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
 
 ## <a name="vegetables"></a>2. Property `root > vegetables`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>array</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+|              |         |
+| ------------ | ------- |
+| **Type**     | `array` |
+| **Required** | No      |
 
-<table>
-  <tr>
-    <th></th>
-    <th>Array restrictions</th>
-  </tr>
-  <tr>
-    <td><strong>Min items</strong></td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td><strong>Max items</strong></td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td><strong>Items unicity</strong></td>
-    <td>False</td>
-  </tr>
-  <tr>
-    <td><strong>Additional items</strong></td>
-    <td>False</td>
-  </tr>
-  <tr>
-    <td><strong>Tuple validation</strong></td>
-    <td>See below</td>
-  </tr>
-</table>
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
 
-<table>
-  <tr>
-    <th>Each item of this array must be</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td><a href="#vegetables_items">veggie</a></td>
-    <td>-</td>
-  </tr>
-</table>
+| Each item of this array must be | Description |
+| ------------------------------- | ----------- |
+| [veggie](#vegetables_items)     | -           |
 
 ### <a name="vegetables_items"></a>2.1. root > vegetables > veggie
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/veggie</h1></td>
-  </tr>
-</table>
+|                           |                      |
+| ------------------------- | -------------------- |
+| **Type**                  | `object`             |
+| **Required**              | No                   |
+| **Additional properties** | Any type allowed     |
+| **Defined in**            | #/definitions/veggie |
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Pattern</th>
-    <th>Type</th>
-    <th>Deprecated</th>
-    <th>Definition</th>
-    <th>Title/Description</th>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">veggieName</a></li>
-</ul></td>
-    <td>No</td>
-    <td>string</td>
-    <td>No</td>
-    <td>-</td>
-    <td>The name of the vegetable.</td>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">veggieLike</a></li>
-</ul></td>
-    <td>No</td>
-    <td>boolean</td>
-    <td>No</td>
-    <td>-</td>
-    <td>Do I like this vegetable?</td>
-  </tr>
-</table>
+| Property                                      | Pattern | Type    | Deprecated | Definition | Title/Description          |
+| --------------------------------------------- | ------- | ------- | ---------- | ---------- | -------------------------- |
+| + [veggieName](#vegetables_items_veggieName ) | No      | string  | No         | -          | The name of the vegetable. |
+| + [veggieLike](#vegetables_items_veggieLike ) | No      | boolean | No         | -          | Do I like this vegetable?  |
 
 #### <a name="vegetables_items_veggieName"></a>2.1.1. Property `root > vegetables > vegetables items > veggieName`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>Yes</td>
-  </tr>
-</table>
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
 
 **Description:** The name of the vegetable.
 
 #### <a name="vegetables_items_veggieLike"></a>2.1.2. Property `root > vegetables > vegetables items > veggieLike`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>boolean</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>Yes</td>
-  </tr>
-</table>
+|              |           |
+| ------------ | --------- |
+| **Type**     | `boolean` |
+| **Required** | Yes       |
 
 **Description:** Do I like this vegetable?
 

@@ -20,20 +20,10 @@
 - [13. [Optional] Property root > multi_hierarchy_reference](#multi_hierarchy_reference)
   - [13.1. [Optional] Property root > multi_hierarchy_reference > propertyA](#multi_hierarchy_reference_propertyA)
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 **Description:** Testing $ref
 
@@ -44,20 +34,10 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/gift</h1></td>
-  </tr>
-</table>
+|                |                    |
+| -------------- | ------------------ |
+| **Type**       | `string`           |
+| **Defined in** | #/definitions/gift |
 
 **Description:** A gift, or is it?
 
@@ -71,20 +51,10 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Same definition as</strong></td>
-    <td><a href="#a_gift">a_gift</a></td>
-  </tr>
-</table>
+|                        |                   |
+| ---------------------- | ----------------- |
+| **Type**               | `string`          |
+| **Same definition as** | [a_gift](#a_gift) |
 
 **Description:** A gift, or is it?
 
@@ -98,24 +68,11 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Not%20allowed-red" alt="Not allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/object_def</h1></td>
-  </tr>
-</table>
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
+| **Defined in**            | #/definitions/object_def                                       |
 
 <details>
 <summary>
@@ -124,16 +81,9 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-</table>
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 **Description:** Description for object_def/items/propertyA
 
@@ -150,73 +100,30 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>array of string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>definitions/array_def</h1></td>
-  </tr>
-</table>
+|                |                        |
+| -------------- | ---------------------- |
+| **Type**       | `array of string`      |
+| **Defined in** | #definitions/array_def |
 
 **Description:** Description for array_def
 
-<table>
-  <tr>
-    <th></th>
-    <th>Array restrictions</th>
-  </tr>
-  <tr>
-    <td><strong>Min items</strong></td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td><strong>Max items</strong></td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td><strong>Items unicity</strong></td>
-    <td>False</td>
-  </tr>
-  <tr>
-    <td><strong>Additional items</strong></td>
-    <td>False</td>
-  </tr>
-  <tr>
-    <td><strong>Tuple validation</strong></td>
-    <td>See below</td>
-  </tr>
-</table>
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
 
-<table>
-  <tr>
-    <th>Each item of this array must be</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td><a href="#anchor_no_slash_items">anchor<em>no</em>slash items</a></td>
-    <td>-</td>
-  </tr>
-</table>
+| Each item of this array must be                 | Description |
+| ----------------------------------------------- | ----------- |
+| [anchor_no_slash items](#anchor_no_slash_items) | -           |
 
 ### <a name="autogenerated_heading_2"></a>4.1. root > anchor_no_slash > anchor_no_slash items
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-</table>
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 </blockquote>
 </details>
@@ -228,20 +135,10 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/reference_def</h1></td>
-  </tr>
-</table>
+|                |                             |
+| -------------- | --------------------------- |
+| **Type**       | `string`                    |
+| **Defined in** | #/definitions/reference_def |
 
 </blockquote>
 </details>
@@ -253,20 +150,10 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td>references.json#/definitions/string_def</td>
-  </tr>
-</table>
+|                |                                         |
+| -------------- | --------------------------------------- |
+| **Type**       | `string`                                |
+| **Defined in** | references.json#/definitions/string_def |
 
 **Description:** Description for string_def
 
@@ -280,24 +167,11 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Not%20allowed-red" alt="Not allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Same definition as</strong></td>
-    <td><a href="#anchor_with_slash">anchor<em>with</em>slash</a></td>
-  </tr>
-</table>
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
+| **Same definition as**    | [anchor_with_slash](#anchor_with_slash)                        |
 
 </blockquote>
 </details>
@@ -309,20 +183,10 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Same definition as</strong></td>
-    <td><a href="#anchor_nested_reference">anchor<em>nested</em>reference</a></td>
-  </tr>
-</table>
+|                        |                                                     |
+| ---------------------- | --------------------------------------------------- |
+| **Type**               | `string`                                            |
+| **Same definition as** | [anchor_nested_reference](#anchor_nested_reference) |
 
 </blockquote>
 </details>
@@ -334,24 +198,11 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td>with_descriptions.json#/definitions/gift</td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Defined in**            | with_descriptions.json#/definitions/gift                                    |
 
 **Description:** The delivery is a gift, no prices displayed
 
@@ -362,16 +213,9 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>boolean</code></td>
-  </tr>
-</table>
+|          |           |
+| -------- | --------- |
+| **Type** | `boolean` |
 
 </blockquote>
 </details>
@@ -386,24 +230,11 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Same definition as</strong></td>
-    <td><a href="#other_file_anchor">other<em>file</em>anchor</a></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Same definition as**    | [other_file_anchor](#other_file_anchor)                                     |
 
 **Description:** The delivery is a gift, no prices displayed
 
@@ -417,24 +248,11 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Same definition as</strong></td>
-    <td><a href="#other_file_anchor">other<em>file</em>anchor</a></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Same definition as**    | [other_file_anchor](#other_file_anchor)                                     |
 
 **Description:** The delivery is a gift, no prices displayed
 
@@ -448,24 +266,11 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td>combining_not.json</td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Defined in**            | combining_not.json                                                          |
 
 **Description:** Test schema with a not
 
@@ -476,33 +281,16 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>combining</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 #### <a name="autogenerated_heading_3"></a>12.1.1. Must **not** be
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-</table>
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 </blockquote>
 </details>
@@ -517,24 +305,11 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td>reference<em>schemas/intermediate.json#/properties/cross</em>file_reference</td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Defined in**            | reference_schemas/intermediate.json#/properties/cross_file_reference        |
 
 <details>
 <summary>
@@ -543,16 +318,9 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-</table>
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 **Description:** Contents of propertyA in final.json
 

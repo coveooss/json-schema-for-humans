@@ -4,62 +4,22 @@
 
 **Title:** Enum of None
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Pattern</th>
-    <th>Type</th>
-    <th>Deprecated</th>
-    <th>Definition</th>
-    <th>Title/Description</th>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">enumOfNone</a></li>
-</ul></td>
-    <td>No</td>
-    <td>enum (of null)</td>
-    <td>No</td>
-    <td>-</td>
-    <td>enumOfNone</td>
-  </tr>
-</table>
+| Property                     | Pattern | Type           | Deprecated | Definition | Title/Description |
+| ---------------------------- | ------- | -------------- | ---------- | ---------- | ----------------- |
+| - [enumOfNone](#enumOfNone ) | No      | enum (of null) | No         | -          | enumOfNone        |
 
 ## <a name="enumOfNone"></a>1. Property `Enum of None > enumOfNone`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>enum (of null)</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-</table>
+|              |                  |
+| ------------ | ---------------- |
+| **Type**     | `enum (of null)` |
+| **Required** | No               |
 
 **Description:** enumOfNone
 

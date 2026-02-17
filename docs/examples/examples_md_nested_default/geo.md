@@ -5,24 +5,11 @@
 
 **Title:** Longitude and Latitude Values
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 **Description:** A geographical coordinate.
 
@@ -33,35 +20,15 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>number</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>Yes</td>
-  </tr>
-</table>
+|              |          |
+| ------------ | -------- |
+| **Type**     | `number` |
+| **Required** | Yes      |
 
-<table>
-  <tr>
-    <th>Restrictions</th>
-    <th> </th>
-  </tr>
-  <tr>
-    <td><strong>Minimum</strong></td>
-    <td>&ge; -90</td>
-  </tr>
-  <tr>
-    <td><strong>Maximum</strong></td>
-    <td>&le; 90</td>
-  </tr>
-</table>
+| Restrictions |          |
+| ------------ | -------- |
+| **Minimum**  | &ge; -90 |
+| **Maximum**  | &le; 90  |
 
 </blockquote>
 </details>
@@ -73,35 +40,15 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>number</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>Yes</td>
-  </tr>
-</table>
+|              |          |
+| ------------ | -------- |
+| **Type**     | `number` |
+| **Required** | Yes      |
 
-<table>
-  <tr>
-    <th>Restrictions</th>
-    <th> </th>
-  </tr>
-  <tr>
-    <td><strong>Minimum</strong></td>
-    <td>&ge; -180</td>
-  </tr>
-  <tr>
-    <td><strong>Maximum</strong></td>
-    <td>&le; 180</td>
-  </tr>
-</table>
+| Restrictions |           |
+| ------------ | --------- |
+| **Minimum**  | &ge; -180 |
+| **Maximum**  | &le; 180  |
 
 </blockquote>
 </details>

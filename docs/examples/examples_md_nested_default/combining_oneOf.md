@@ -6,24 +6,11 @@
   - [1.3. Property `root > storage > oneOf > nfs`](#storage_oneOf_i2)
   - [1.4. Property `root > storage > oneOf > tmpfs`](#storage_oneOf_i3)
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 **Description:** JSON Schema for an fstab entry
 
@@ -34,155 +21,67 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>combining</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `combining`      |
+| **Required**              | Yes              |
+| **Additional properties** | Any type allowed |
 
 <blockquote>
 
-<table>
-  <tr>
-    <th>One of(Option)</th>
-  </tr>
-  <tr>
-    <td><a href="#storage_oneOf_i0">diskDevice</a></td>
-  </tr>
-  <tr>
-    <td><a href="#storage_oneOf_i1">diskUUID</a></td>
-  </tr>
-  <tr>
-    <td><a href="#storage_oneOf_i2">nfs</a></td>
-  </tr>
-  <tr>
-    <td><a href="#storage_oneOf_i3">tmpfs</a></td>
-  </tr>
-</table>
+| One of(Option)                  |
+| ------------------------------- |
+| [diskDevice](#storage_oneOf_i0) |
+| [diskUUID](#storage_oneOf_i1)   |
+| [nfs](#storage_oneOf_i2)        |
+| [tmpfs](#storage_oneOf_i3)      |
 
 <blockquote>
 
 ### <a name="storage_oneOf_i0"></a>1.1. Property `root > storage > oneOf > diskDevice`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/diskDevice</h1></td>
-  </tr>
-</table>
+|                           |                          |
+| ------------------------- | ------------------------ |
+| **Type**                  | `object`                 |
+| **Required**              | No                       |
+| **Additional properties** | Any type allowed         |
+| **Defined in**            | #/definitions/diskDevice |
 
 </blockquote>
 <blockquote>
 
 ### <a name="storage_oneOf_i1"></a>1.2. Property `root > storage > oneOf > diskUUID`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/diskUUID</h1></td>
-  </tr>
-</table>
+|                           |                        |
+| ------------------------- | ---------------------- |
+| **Type**                  | `object`               |
+| **Required**              | No                     |
+| **Additional properties** | Any type allowed       |
+| **Defined in**            | #/definitions/diskUUID |
 
 </blockquote>
 <blockquote>
 
 ### <a name="storage_oneOf_i2"></a>1.3. Property `root > storage > oneOf > nfs`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/nfs</h1></td>
-  </tr>
-</table>
+|                           |                   |
+| ------------------------- | ----------------- |
+| **Type**                  | `object`          |
+| **Required**              | No                |
+| **Additional properties** | Any type allowed  |
+| **Defined in**            | #/definitions/nfs |
 
 </blockquote>
 <blockquote>
 
 ### <a name="storage_oneOf_i3"></a>1.4. Property `root > storage > oneOf > tmpfs`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/tmpfs</h1></td>
-  </tr>
-</table>
+|                           |                     |
+| ------------------------- | ------------------- |
+| **Type**                  | `object`            |
+| **Required**              | No                  |
+| **Additional properties** | Any type allowed    |
+| **Defined in**            | #/definitions/tmpfs |
 
 </blockquote>
 

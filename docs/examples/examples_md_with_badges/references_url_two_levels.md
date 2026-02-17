@@ -4,142 +4,49 @@
   - [1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > described > name`](#described_name)
   - [1.2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > described > alignment`](#described_alignment)
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 **Description:** Testing $ref of a remote $ref
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Pattern</th>
-    <th>Type</th>
-    <th>Deprecated</th>
-    <th>Definition</th>
-    <th>Title/Description</th>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">described</a></li>
-</ul></td>
-    <td>No</td>
-    <td>object</td>
-    <td>No</td>
-    <td>In https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/description<em>from</em>ref.json</td>
-    <td>-</td>
-  </tr>
-</table>
+| Property                   | Pattern | Type   | Deprecated | Definition                                                                                                              | Title/Description |
+| -------------------------- | ------- | ------ | ---------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| - [described](#described ) | No      | object | No         | In https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/description_from_ref.json | -                 |
 
 ## <a name="described"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > described`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Not%20allowed-red" alt="Not allowed" /></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td>https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/description<em>from</em>ref.json</td>
-  </tr>
-</table>
+|                           |                                                                                                                      |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                             |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red)                                                       |
+| **Defined in**            | https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/description_from_ref.json |
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Pattern</th>
-    <th>Type</th>
-    <th>Deprecated</th>
-    <th>Definition</th>
-    <th>Title/Description</th>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">name</a></li>
-</ul></td>
-    <td>No</td>
-    <td>string</td>
-    <td>No</td>
-    <td>In #/definitions/filled_string</td>
-    <td>a filled string</td>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">alignment</a></li>
-</ul></td>
-    <td>No</td>
-    <td>string</td>
-    <td>No</td>
-    <td>Same as <a href="#">name</a></td>
-    <td>a filled string</td>
-  </tr>
-</table>
+| Property                             | Pattern | Type   | Deprecated | Definition                       | Title/Description |
+| ------------------------------------ | ------- | ------ | ---------- | -------------------------------- | ----------------- |
+| - [name](#described_name )           | No      | string | No         | In #/definitions/filled_string   | a filled string   |
+| - [alignment](#described_alignment ) | No      | string | No         | Same as [name](#described_name ) | a filled string   |
 
 ### <a name="described_name"></a>1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > described > name`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/filled_string</h1></td>
-  </tr>
-</table>
+|                |                             |
+| -------------- | --------------------------- |
+| **Type**       | `string`                    |
+| **Defined in** | #/definitions/filled_string |
 
 **Description:** a filled string
 
-<table>
-  <tr>
-    <th>Restrictions</th>
-    <th> </th>
-  </tr>
-  <tr>
-    <td><strong>Min length</strong></td>
-    <td>1</td>
-  </tr>
-</table>
+| Restrictions   |   |
+| -------------- | - |
+| **Min length** | 1 |
 
 ### <a name="described_alignment"></a>1.2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > described > alignment`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Same definition as</strong></td>
-    <td><a href="#described_name">name</a></td>
-  </tr>
-</table>
+|                        |                         |
+| ---------------------- | ----------------------- |
+| **Type**               | `string`                |
+| **Same definition as** | [name](#described_name) |
 
 **Description:** a filled string
 

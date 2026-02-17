@@ -8,109 +8,28 @@
 
 **Title:** Person
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Pattern</th>
-    <th>Type</th>
-    <th>Deprecated</th>
-    <th>Definition</th>
-    <th>Title/Description</th>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">not<em>a</em>pattern</a></li>
-</ul></td>
-    <td>No</td>
-    <td>object</td>
-    <td>No</td>
-    <td>-</td>
-    <td>-</td>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">.*</a></li>
-</ul></td>
-    <td>Yes</td>
-    <td>object</td>
-    <td>No</td>
-    <td>-</td>
-    <td>Title 1</td>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">..</a></li>
-</ul></td>
-    <td>Yes</td>
-    <td>object</td>
-    <td>No</td>
-    <td>-</td>
-    <td>Title 2</td>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">^.</a></li>
-</ul></td>
-    <td>Yes</td>
-    <td>object</td>
-    <td>No</td>
-    <td>-</td>
-    <td>Title 3</td>
-  </tr>
-</table>
+| Property                           | Pattern | Type   | Deprecated | Definition | Title/Description |
+| ---------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
+| - [not_a_pattern](#not_a_pattern ) | No      | object | No         | -          | -                 |
+| - [.*](#pattern1 )                 | Yes     | object | No         | -          | Title 1           |
+| - [..](#pattern2 )                 | Yes     | object | No         | -          | Title 2           |
+| - [^.](#pattern3 )                 | Yes     | object | No         | -          | Title 3           |
 
 ## <a name="not_a_pattern"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > not_a_pattern`
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Pattern</th>
-    <th>Type</th>
-    <th>Deprecated</th>
-    <th>Definition</th>
-    <th>Title/Description</th>
-  </tr>
-  <tr>
-    <td><ul>
-<li><a href="#">.$</a></li>
-</ul></td>
-    <td>Yes</td>
-    <td>object</td>
-    <td>No</td>
-    <td>-</td>
-    <td>Title 4</td>
-  </tr>
-</table>
+| Property                         | Pattern | Type   | Deprecated | Definition | Title/Description |
+| -------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
+| - [.$](#not_a_pattern_pattern1 ) | Yes     | object | No         | -          | Title 4           |
 
 ### <a name="not_a_pattern_pattern1"></a>1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Pattern Property `Person > not_a_pattern > Title 4`
 > All properties whose name matches the regular expression
@@ -119,20 +38,10 @@ must respect the following conditions
 
 **Title:** Title 4
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 **Description:** Description 4
 
@@ -143,20 +52,10 @@ must respect the following conditions
 
 **Title:** Title 1
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 **Description:** Description 1
 
@@ -167,20 +66,10 @@ must respect the following conditions
 
 **Title:** Title 2
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 **Description:** Description 2
 
@@ -191,20 +80,10 @@ must respect the following conditions
 
 **Title:** Title 3
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 **Description:** Description 3
 
