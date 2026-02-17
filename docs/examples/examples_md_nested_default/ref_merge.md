@@ -7,24 +7,11 @@
 
 **Title:** Test
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-</table>
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 <details>
 <summary>
@@ -35,28 +22,12 @@
 
 **Title:** Title from definition
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>enum (of string)</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Default</strong></td>
-    <td><code>"Default from property"</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/aProperty</h1></td>
-  </tr>
-</table>
+|                |                           |
+| -------------- | ------------------------- |
+| **Type**       | `enum (of string)`        |
+| **Required**   | No                        |
+| **Default**    | `"Default from property"` |
+| **Defined in** | #/definitions/aProperty   |
 
 **Description:** This is the description from the definition
 
@@ -74,32 +45,13 @@ Must be one of:
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td>Any type allowed</td>
-  </tr>
-  <tr>
-    <td><strong>Default</strong></td>
-    <td><code>{"a": "a", "b": "b"}</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/aDictProperty</h1></td>
-  </tr>
-</table>
+|                           |                             |
+| ------------------------- | --------------------------- |
+| **Type**                  | `object`                    |
+| **Required**              | No                          |
+| **Additional properties** | Any type allowed            |
+| **Default**               | `{"a": "a", "b": "b"}`      |
+| **Defined in**            | #/definitions/aDictProperty |
 
 <details>
 <summary>
@@ -108,20 +60,10 @@ Must be one of:
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>Yes</td>
-  </tr>
-</table>
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
 
 </blockquote>
 </details>
@@ -133,20 +75,10 @@ Must be one of:
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Required</strong></td>
-    <td>Yes</td>
-  </tr>
-</table>
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
 
 </blockquote>
 </details>

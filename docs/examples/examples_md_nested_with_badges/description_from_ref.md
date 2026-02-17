@@ -3,20 +3,10 @@
 - [1. [Optional] Property root > name](#name)
 - [2. [Optional] Property root > alignment](#alignment)
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Not%20allowed-red" alt="Not allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                |
+| ------------------------- | -------------------------------------------------------------- |
+| **Type**                  | `object`                                                       |
+| **Additional properties** | ![Not allowed](https://img.shields.io/badge/Not%20allowed-red) |
 
 <details>
 <summary>
@@ -25,33 +15,16 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/definitions/filled_string</h1></td>
-  </tr>
-</table>
+|                |                             |
+| -------------- | --------------------------- |
+| **Type**       | `string`                    |
+| **Defined in** | #/definitions/filled_string |
 
 **Description:** a filled string
 
-<table>
-  <tr>
-    <th>Restrictions</th>
-    <th> </th>
-  </tr>
-  <tr>
-    <td><strong>Min length</strong></td>
-    <td>1</td>
-  </tr>
-</table>
+| Restrictions   |   |
+| -------------- | - |
+| **Min length** | 1 |
 
 </blockquote>
 </details>
@@ -63,20 +36,10 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Same definition as</strong></td>
-    <td><a href="#name">name</a></td>
-  </tr>
-</table>
+|                        |               |
+| ---------------------- | ------------- |
+| **Type**               | `string`      |
+| **Same definition as** | [name](#name) |
 
 **Description:** a filled string
 

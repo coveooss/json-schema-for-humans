@@ -6,20 +6,10 @@
 
 **Title:** OF
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>object</code></td>
-  </tr>
-  <tr>
-    <td><strong>Additional properties</strong></td>
-    <td><img src="https://img.shields.io/badge/Any%20type-allowed-green" alt="Any type: allowed" /></td>
-  </tr>
-</table>
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
 <details>
 <summary>
@@ -28,37 +18,17 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/$defs/ofString</h1></td>
-  </tr>
-</table>
+|                |                  |
+| -------------- | ---------------- |
+| **Type**       | `string`         |
+| **Defined in** | #/$defs/ofString |
 
 **Description:** Unique Identifer
 
-<table>
-  <tr>
-    <th>Restrictions</th>
-    <th> </th>
-  </tr>
-  <tr>
-    <td><strong>Min length</strong></td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td><strong>Max length</strong></td>
-    <td>250</td>
-  </tr>
-</table>
+| Restrictions   |     |
+| -------------- | --- |
+| **Min length** | 5   |
+| **Max length** | 250 |
 
 **Example:**
 
@@ -76,37 +46,17 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/$defs/ofString</h1></td>
-  </tr>
-</table>
+|                |                  |
+| -------------- | ---------------- |
+| **Type**       | `string`         |
+| **Defined in** | #/$defs/ofString |
 
 **Description:** first name
 
-<table>
-  <tr>
-    <th>Restrictions</th>
-    <th> </th>
-  </tr>
-  <tr>
-    <td><strong>Min length</strong></td>
-    <td>10</td>
-  </tr>
-  <tr>
-    <td><strong>Max length</strong></td>
-    <td>250</td>
-  </tr>
-</table>
+| Restrictions   |     |
+| -------------- | --- |
+| **Min length** | 10  |
+| **Max length** | 250 |
 
 **Example:**
 
@@ -124,37 +74,17 @@
 </summary>
 <blockquote>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><strong>Type</strong></td>
-    <td><code>string</code></td>
-  </tr>
-  <tr>
-    <td><strong>Defined in</strong></td>
-    <td><h1>/$defs/ofString</h1></td>
-  </tr>
-</table>
+|                |                  |
+| -------------- | ---------------- |
+| **Type**       | `string`         |
+| **Defined in** | #/$defs/ofString |
 
 **Description:** last name
 
-<table>
-  <tr>
-    <th>Restrictions</th>
-    <th> </th>
-  </tr>
-  <tr>
-    <td><strong>Min length</strong></td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td><strong>Max length</strong></td>
-    <td>10</td>
-  </tr>
-</table>
+| Restrictions   |    |
+| -------------- | -- |
+| **Min length** | 5  |
+| **Max length** | 10 |
 
 **Example:**
 
