@@ -25,6 +25,10 @@
         {"type": "null", "title": "no driver licence"},
         {"type": "string", "title": "driver licence id"}
       ]
+    },
+    "middleName": {
+      "type": "string",
+      "title": "Middle Name"
     }
   }
 }
