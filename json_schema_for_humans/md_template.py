@@ -1,7 +1,8 @@
-from typing import Dict, List, Optional, Union
+from typing import Callable, Dict, List, Optional, Union
 from urllib.parse import quote, quote_plus
 
 import jinja2
+import markdown2  # type: ignore  # No stubs available
 
 from json_schema_for_humans import const, jinja_filters
 from json_schema_for_humans.schema.schema_node import SchemaNode
@@ -57,33 +58,56 @@ def get_numeric_minimum_restriction(schema_node: SchemaNode, default: str = "N/A
     return minimum_fragment
 
 
-def generate_table(table: List[List[str]]) -> str:
+def generate_table(
+    table: List[List[str]],
+    md_renderer: Optional[Callable[[str], str]] = None,
+    use_html: bool = False,
+) -> str:
     """
-    Pretty print markdown table using list of rows.
+    Generate a table using list of rows.
     Assuming first row is header line.
-    Ending with empty line for rendering bottom border.
-    Each column is str padded to max size string in the column.
+    If md_renderer is provided, cell content will be passed through it (HTML mode only).
+    If use_html is True, generates an HTML table, otherwise generates a Markdown table.
     """
     if len(table) == 0:
         return ""
 
-    # compute max length of each column
-    max_cell_length: Dict = {}
-    for idx_row, row in enumerate(table):
-        for idx_col, cell in enumerate(row):
-            max_cell_length[idx_col] = max(max_cell_length.get(idx_col, 0), len(cell))
-
-    # generate md table
-    output = ""
-    for idx_row, row in enumerate(table):
-        for idx_col, cell in enumerate(row):
-            output += "| " + cell.ljust(max_cell_length[idx_col], " ") + " "
-        output += "|\n"
-        # add header line
-        if idx_row == 0:
+    if use_html:
+        # Generate HTML table
+        output = "<table>\n"
+        for idx_row, row in enumerate(table):
+            output += "  <tr>\n"
+            tag = "th" if idx_row == 0 else "td"
+            for cell in row:
+                cell_content = cell
+                # Render markdown for non-header cells if renderer is provided
+                if md_renderer and idx_row > 0 and cell:
+                    cell_content = md_renderer(cell).strip()
+                    # Remove surrounding <p> tags if present
+                    if cell_content.startswith("<p>") and cell_content.endswith("</p>"):
+                        cell_content = cell_content[3:-4]
+                output += f"    <{tag}>{cell_content}</{tag}>\n"
+            output += "  </tr>\n"
+        output += "</table>\n"
+    else:
+        # Generate Markdown table
+        # compute max length of each column
+        max_cell_length: Dict = {}
+        for idx_row, row in enumerate(table):
             for idx_col, cell in enumerate(row):
-                output += "| " + "".ljust(max_cell_length[idx_col], "-") + " "
+                max_cell_length[idx_col] = max(max_cell_length.get(idx_col, 0), len(cell))
+
+        # generate md table
+        output = ""
+        for idx_row, row in enumerate(table):
+            for idx_col, cell in enumerate(row):
+                output += "| " + cell.ljust(max_cell_length[idx_col], " ") + " "
             output += "|\n"
+            # add header line
+            if idx_row == 0:
+                for idx_col, cell in enumerate(row):
+                    output += "| " + "".ljust(max_cell_length[idx_col], "-") + " "
+                output += "|\n"
 
     return output
 
@@ -206,11 +230,28 @@ class MarkdownTemplate(object):
         env.filters["md_array_items_restrictions"] = array_items_restrictions
         env.filters["md_array_items"] = array_items
         env.filters["md_restrictions_table"] = restrictions_table
-        env.filters["md_generate_table"] = generate_table
+        env.filters["md_generate_table"] = self._make_generate_table_filter(env)
+        env.filters["md_render"] = self._make_md_render_filter(env)
 
         env.globals["required_badge"] = self.required_badge
         env.globals["optional_badge"] = self.optional_badge
         env.globals["md_get_toc"] = self.get_toc
+
+    def _make_generate_table_filter(self, env: jinja2.Environment) -> Callable[[List[List[str]]], str]:
+        """Create a generate_table filter that uses the markdown renderer from the environment."""
+        md_renderer: markdown2.Markdown = env.globals.get("jsfh_md")
+        # Only use HTML tables for techdocs template
+        use_html = self.config.template_name == "techdocs"
+        if md_renderer and use_html:
+            return lambda table: generate_table(table, md_renderer.convert, use_html=True)
+        return lambda table: generate_table(table, use_html=use_html)
+
+    def _make_md_render_filter(self, env: jinja2.Environment) -> Callable[[str], str]:
+        """Create a filter that renders markdown to HTML."""
+        md_renderer: markdown2.Markdown = env.globals.get("jsfh_md")
+        if md_renderer:
+            return lambda text: md_renderer.convert(text) if text else ""
+        return lambda text: text or ""
 
     def heading(self, title: str, depth: int, html_id: Union[bool, str] = False, nested: bool = False) -> str:
         """

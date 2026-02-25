@@ -310,12 +310,15 @@ This file contains the logic for the anchor links.
 
 `md_nested` is the markdown template with collapsible nested sections.
 
+`techdocs` is optimized for TechDocs/MkDocs Material with collapsible admonitions.
+
 Must be one of:
 * "flat"
 * "js"
 * "js_offline"
 * "md"
 * "md_nested"
+* "techdocs"
 
 </blockquote>
 </details>
