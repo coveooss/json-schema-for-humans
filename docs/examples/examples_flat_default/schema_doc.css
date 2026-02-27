@@ -70,18 +70,18 @@ body {
 }
 
 .badge.value-type,.badge.no-additional,.badge.default-value {
-  font-size: 120%;
-  margin-right: 5px;
-  margin-bottom: 10px;
+    font-size: 120%;
+    margin-right: 5px;
+    margin-bottom: 10px;
 }
 
 .badge.default-value {
-  max-width: 100%;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  white-space: normal;
-  display: inline-block;
-  vertical-align: top;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .badge.restriction {
