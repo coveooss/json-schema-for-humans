@@ -8,7 +8,6 @@ readme = "README.md"
 repository = "https://github.com/coveooss/json-schema-for-humans"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -27,7 +26,7 @@ include = [
 
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.10"
 click = "^8.0.1"
 dataclasses-json = "^0.6.7"
 Jinja2 = ">3"
