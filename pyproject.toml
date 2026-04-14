@@ -8,11 +8,11 @@ readme = "README.md"
 repository = "https://github.com/coveooss/json-schema-for-humans"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
     "Development Status :: 6 - Mature",
@@ -27,7 +27,7 @@ include = [
 
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.10"
 click = "^8.0.1"
 dataclasses-json = "^0.6.7"
 Jinja2 = ">3"
@@ -45,7 +45,7 @@ generate-schema-doc = "json_schema_for_humans.cli:main"
 [tool.poetry.group.dev.dependencies]
 beautifulsoup4 = "^4.10.0"
 black = "^24.8.0"
-pytest = "^8.3.2"
+pytest = "^9.0.0"
 mypy = "^1.11.2"
 types-requests = "^2.32.0"
 types-pygments = "^2.18.0.20240506"
