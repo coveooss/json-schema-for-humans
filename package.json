@@ -6,6 +6,6 @@
     "@semantic-release/github": "^10.0.3",
     "conventional-changelog-conventionalcommits": "^7.0.2",
     "semantic-release": "^23.0.8",
-    "semantic-release-pypi": "^4.0.0"
+    "semantic-release-pypi": "^5.0.0"
   }
 }
