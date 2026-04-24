@@ -34,7 +34,7 @@ def escape_for_table(example_text: Optional[str]) -> str:
     """Filter. escape characters('|', '`') in string to be inserted into Markdown table"""
     if example_text is None:
         return ""
-    return example_text.translate(str.maketrans({"|": "\\|", "`": "\\`", "\n": "<br />"}))  # type:ignore[arg-type]
+    return example_text.translate(str.maketrans({"|": "\\|", "`": "\\`", "\n": "<br />"}))  # type: ignore[arg-type]
 
 
 def get_numeric_minimum_restriction(schema_node: SchemaNode, default: str = "N/A") -> str:
@@ -170,7 +170,7 @@ def array_items(schema: SchemaNode, title: str) -> List[List[str]]:
 
 def first_line_fixed(example_text: str) -> str:
     """first_line but replace ` with ' to avoid unbalanced `s in markdown"""
-    return jinja_filters.first_line(example_text).translate(str.maketrans({"`": "'"}))  # type:ignore[arg-type]
+    return jinja_filters.first_line(example_text).translate(str.maketrans({"`": "'"}))  # type: ignore[arg-type]
 
 
 def array_items_restrictions(schema: SchemaNode) -> List[List[str]]:

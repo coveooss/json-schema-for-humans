@@ -173,7 +173,7 @@ def get_final_config(
 
 
 def _load_config(
-    config_parameter: Union[str, Path, FileLikeType, Dict[str, Any], GenerationConfiguration]
+    config_parameter: Union[str, Path, FileLikeType, Dict[str, Any], GenerationConfiguration],
 ) -> GenerationConfiguration:
     """Load the configuration from either the path (as str or Path) to a config file, the open config file object,
     The loaded config as a dict or the GenerateConfiguration object directly.
