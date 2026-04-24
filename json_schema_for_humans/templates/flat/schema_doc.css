@@ -75,6 +75,15 @@ body {
     margin-bottom: 10px;
 }
 
+.badge.default-value {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    display: inline-block;
+    vertical-align: top;
+}
+
 .badge.restriction {
     display: inline-block;
 }
