@@ -28,7 +28,14 @@ def assert_cli_runner_result(result: Result) -> None:
 
 def assert_cli_runner_exited(result: Result, expected_exception_text: str) -> None:
     assert result.exit_code > 0
-    assert expected_exception_text in result.stdout
+    # Click 8.2+ changed CliRunner's mix_stderr default to False, so ClickException
+    # messages now go to stderr instead of being mixed into stdout.
+    stderr_output = ""
+    try:
+        stderr_output = result.stderr
+    except ValueError:
+        pass  # mix_stderr=True: stderr already merged into output
+    assert expected_exception_text in result.output + stderr_output
 
 
 def test_generate_using_cli_default() -> None:
