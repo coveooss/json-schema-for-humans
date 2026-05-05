@@ -1,0 +1,556 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,800">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="schema_doc.css">
+    <script src="https://use.fontawesome.com/facf9fa52c.js"></script>
+    <script src="schema_doc.min.js"></script>
+    <meta charset="utf-8"/>
+        
+    
+    <title>unevaluatedProperties with additionalProperties</title>
+</head>
+<body onload="anchorOnLoad();" id="root"><div class="text-right">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
+        </div>
+
+    <div class="breadcrumbs"></div> <h1>unevaluatedProperties with additionalProperties</h1><span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p>Demonstrates the interaction between unevaluatedProperties and additionalProperties</p>
+</span> <span class="badge badge-primary no-unevaluated">No Unevaluated Properties</span>
+        
+
+        
+        
+
+        
+<div class="accordion" id="accordionname">
+    <div class="card">
+        <div class="card-header" id="headingname">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#name"
+                        aria-expanded="" aria-controls="name" onclick="setAnchor('#name')"><span class="property-name">name</span></button>
+            </h2>
+        </div>
+
+        <div id="name"
+             class="collapse property-definition-div" aria-labelledby="headingname"
+             data-parent="#accordionname">
+            <div class="card-body pl-5">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#name" onclick="anchorLink('name')">name</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Name field</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionnested">
+    <div class="card">
+        <div class="card-header" id="headingnested">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#nested"
+                        aria-expanded="" aria-controls="nested" onclick="setAnchor('#nested')"><span class="property-name">nested</span></button>
+            </h2>
+        </div>
+
+        <div id="nested"
+             class="collapse property-definition-div" aria-labelledby="headingnested"
+             data-parent="#accordionnested">
+            <div class="card-body pl-5">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#nested" onclick="anchorLink('nested')">nested</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p>Nested object without explicit additional/unevaluated properties constraint</p>
+</span>
+        
+
+        
+        
+
+        
+<div class="accordion" id="accordionnested_nestedProp">
+    <div class="card">
+        <div class="card-header" id="headingnested_nestedProp">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#nested_nestedProp"
+                        aria-expanded="" aria-controls="nested_nestedProp" onclick="setAnchor('#nested_nestedProp')"><span class="property-name">nestedProp</span></button>
+            </h2>
+        </div>
+
+        <div id="nested_nestedProp"
+             class="collapse property-definition-div" aria-labelledby="headingnested_nestedProp"
+             data-parent="#accordionnested_nestedProp">
+            <div class="card-body pl-5">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#nested" onclick="anchorLink('nested')">nested</a>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#nested_nestedProp" onclick="anchorLink('nested_nestedProp')">nestedProp</a></div><span class="badge badge-dark value-type">Type: number</span><br/>
+
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionwithAdditionalFalse">
+    <div class="card">
+        <div class="card-header" id="headingwithAdditionalFalse">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#withAdditionalFalse"
+                        aria-expanded="" aria-controls="withAdditionalFalse" onclick="setAnchor('#withAdditionalFalse')"><span class="property-name">withAdditionalFalse</span></button>
+            </h2>
+        </div>
+
+        <div id="withAdditionalFalse"
+             class="collapse property-definition-div" aria-labelledby="headingwithAdditionalFalse"
+             data-parent="#accordionwithAdditionalFalse">
+            <div class="card-body pl-5">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withAdditionalFalse" onclick="anchorLink('withAdditionalFalse')">withAdditionalFalse</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p>Nested object with additionalProperties: false</p>
+</span> <span class="badge badge-info no-additional">No Additional Properties</span>
+        
+
+        
+        
+
+        
+<div class="accordion" id="accordionwithAdditionalFalse_allowedProp">
+    <div class="card">
+        <div class="card-header" id="headingwithAdditionalFalse_allowedProp">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#withAdditionalFalse_allowedProp"
+                        aria-expanded="" aria-controls="withAdditionalFalse_allowedProp" onclick="setAnchor('#withAdditionalFalse_allowedProp')"><span class="property-name">allowedProp</span></button>
+            </h2>
+        </div>
+
+        <div id="withAdditionalFalse_allowedProp"
+             class="collapse property-definition-div" aria-labelledby="headingwithAdditionalFalse_allowedProp"
+             data-parent="#accordionwithAdditionalFalse_allowedProp">
+            <div class="card-body pl-5">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withAdditionalFalse" onclick="anchorLink('withAdditionalFalse')">withAdditionalFalse</a>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withAdditionalFalse_allowedProp" onclick="anchorLink('withAdditionalFalse_allowedProp')">allowedProp</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionwithAdditionalSchema">
+    <div class="card">
+        <div class="card-header" id="headingwithAdditionalSchema">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#withAdditionalSchema"
+                        aria-expanded="" aria-controls="withAdditionalSchema" onclick="setAnchor('#withAdditionalSchema')"><span class="property-name">withAdditionalSchema</span></button>
+            </h2>
+        </div>
+
+        <div id="withAdditionalSchema"
+             class="collapse property-definition-div" aria-labelledby="headingwithAdditionalSchema"
+             data-parent="#accordionwithAdditionalSchema">
+            <div class="card-body pl-5">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withAdditionalSchema" onclick="anchorLink('withAdditionalSchema')">withAdditionalSchema</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p>Nested object with additionalProperties schema</p>
+</span>
+        
+
+        
+        
+
+        
+<div class="accordion" id="accordionwithAdditionalSchema_knownProp">
+    <div class="card">
+        <div class="card-header" id="headingwithAdditionalSchema_knownProp">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#withAdditionalSchema_knownProp"
+                        aria-expanded="" aria-controls="withAdditionalSchema_knownProp" onclick="setAnchor('#withAdditionalSchema_knownProp')"><span class="property-name">knownProp</span></button>
+            </h2>
+        </div>
+
+        <div id="withAdditionalSchema_knownProp"
+             class="collapse property-definition-div" aria-labelledby="headingwithAdditionalSchema_knownProp"
+             data-parent="#accordionwithAdditionalSchema_knownProp">
+            <div class="card-body pl-5">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withAdditionalSchema" onclick="anchorLink('withAdditionalSchema')">withAdditionalSchema</a>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withAdditionalSchema_knownProp" onclick="anchorLink('withAdditionalSchema_knownProp')">knownProp</a></div><span class="badge badge-dark value-type">Type: integer</span><br/>
+
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionwithAdditionalSchema_additionalProperties">
+    <div class="card">
+        <div class="card-header" id="headingwithAdditionalSchema_additionalProperties">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#withAdditionalSchema_additionalProperties"
+                        aria-expanded="" aria-controls="withAdditionalSchema_additionalProperties" onclick="setAnchor('#withAdditionalSchema_additionalProperties')"><em><span class="property-name">Additional Properties</span></em></button>
+            </h2>
+        </div>
+
+        <div id="withAdditionalSchema_additionalProperties"
+             class="collapse property-definition-div" aria-labelledby="headingwithAdditionalSchema_additionalProperties"
+             data-parent="#accordionwithAdditionalSchema_additionalProperties">
+            <div class="card-body pl-5"><p class="additional-properties">Each additional property must conform to the following schema</p>
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withAdditionalSchema" onclick="anchorLink('withAdditionalSchema')">withAdditionalSchema</a>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withAdditionalSchema_additionalProperties" onclick="anchorLink('withAdditionalSchema_additionalProperties')">additionalProperties</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="pattern-value" id="withAdditionalSchema_additionalProperties_pattern">Must match regular expression: <code>^[A-Z]</code></span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionwithUnevaluatedFalse">
+    <div class="card">
+        <div class="card-header" id="headingwithUnevaluatedFalse">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#withUnevaluatedFalse"
+                        aria-expanded="" aria-controls="withUnevaluatedFalse" onclick="setAnchor('#withUnevaluatedFalse')"><span class="property-name">withUnevaluatedFalse</span></button>
+            </h2>
+        </div>
+
+        <div id="withUnevaluatedFalse"
+             class="collapse property-definition-div" aria-labelledby="headingwithUnevaluatedFalse"
+             data-parent="#accordionwithUnevaluatedFalse">
+            <div class="card-body pl-5">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withUnevaluatedFalse" onclick="anchorLink('withUnevaluatedFalse')">withUnevaluatedFalse</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p>Nested object with unevaluatedProperties: false and allOf</p>
+</span> <span class="badge badge-primary no-unevaluated">No Unevaluated Properties</span>
+        
+
+        
+        
+
+        
+<div class="accordion" id="accordionwithUnevaluatedFalse_baseProp">
+    <div class="card">
+        <div class="card-header" id="headingwithUnevaluatedFalse_baseProp">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#withUnevaluatedFalse_baseProp"
+                        aria-expanded="" aria-controls="withUnevaluatedFalse_baseProp" onclick="setAnchor('#withUnevaluatedFalse_baseProp')"><span class="property-name">baseProp</span></button>
+            </h2>
+        </div>
+
+        <div id="withUnevaluatedFalse_baseProp"
+             class="collapse property-definition-div" aria-labelledby="headingwithUnevaluatedFalse_baseProp"
+             data-parent="#accordionwithUnevaluatedFalse_baseProp">
+            <div class="card-body pl-5">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withUnevaluatedFalse" onclick="anchorLink('withUnevaluatedFalse')">withUnevaluatedFalse</a>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withUnevaluatedFalse_baseProp" onclick="anchorLink('withUnevaluatedFalse_baseProp')">baseProp</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionwithUnevaluatedFalse_extendedProp">
+    <div class="card">
+        <div class="card-header" id="headingwithUnevaluatedFalse_extendedProp">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#withUnevaluatedFalse_extendedProp"
+                        aria-expanded="" aria-controls="withUnevaluatedFalse_extendedProp" onclick="setAnchor('#withUnevaluatedFalse_extendedProp')"><span class="property-name">extendedProp</span></button>
+            </h2>
+        </div>
+
+        <div id="withUnevaluatedFalse_extendedProp"
+             class="collapse property-definition-div" aria-labelledby="headingwithUnevaluatedFalse_extendedProp"
+             data-parent="#accordionwithUnevaluatedFalse_extendedProp">
+            <div class="card-body pl-5">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withUnevaluatedFalse" onclick="anchorLink('withUnevaluatedFalse')">withUnevaluatedFalse</a>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#withUnevaluatedFalse_extendedProp" onclick="anchorLink('withUnevaluatedFalse_extendedProp')">extendedProp</a></div><span class="badge badge-dark value-type">Type: number</span><br/>
+<span class="description"><p>Property from allOf - should be evaluated</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionanInt">
+    <div class="card">
+        <div class="card-header" id="headinganInt">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#anInt"
+                        aria-expanded="" aria-controls="anInt" onclick="setAnchor('#anInt')"><span class="property-name">anInt</span></button>
+            </h2>
+        </div>
+
+        <div id="anInt"
+             class="collapse property-definition-div" aria-labelledby="headinganInt"
+             data-parent="#accordionanInt">
+            <div class="card-body pl-5">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#anInt" onclick="anchorLink('anInt')">anInt</a></div><span class="badge badge-dark value-type">Type: integer</span><br/>
+<span class="description"><p>This is an integer, it should not show additional properties. (issue #132)</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionadditionalProperties">
+    <div class="card">
+        <div class="card-header" id="headingadditionalProperties">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#additionalProperties"
+                        aria-expanded="" aria-controls="additionalProperties" onclick="setAnchor('#additionalProperties')"><em><span class="property-name">Additional Properties</span></em></button>
+            </h2>
+        </div>
+
+        <div id="additionalProperties"
+             class="collapse property-definition-div" aria-labelledby="headingadditionalProperties"
+             data-parent="#accordionadditionalProperties">
+            <div class="card-body pl-5"><p class="additional-properties">Each additional property must conform to the following schema</p>
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#additionalProperties" onclick="anchorLink('additionalProperties')">additionalProperties</a></div><span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p>Additional properties must be objects with a type field</p>
+</span>
+        
+
+        
+        
+
+        
+<div class="accordion" id="accordionadditionalProperties_type">
+    <div class="card">
+        <div class="card-header" id="headingadditionalProperties_type">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#additionalProperties_type"
+                        aria-expanded="" aria-controls="additionalProperties_type" onclick="setAnchor('#additionalProperties_type')"><span class="property-name">type</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="additionalProperties_type"
+             class="collapse property-definition-div" aria-labelledby="headingadditionalProperties_type"
+             data-parent="#accordionadditionalProperties_type">
+            <div class="card-body pl-5">
+
+    <div class="breadcrumbs">root
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#additionalProperties" onclick="anchorLink('additionalProperties')">additionalProperties</a>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            />
+        </svg>
+    <a href="#additionalProperties_type" onclick="anchorLink('additionalProperties_type')">type</a></div><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Type of the additional property</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a></p>
+    </footer></body>
+</html>

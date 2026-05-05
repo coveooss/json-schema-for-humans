@@ -1,12 +1,11 @@
 # Schema Docs
 
-- [1. Property `root > firstName`](#firstName)
+- [1. Property`root > firstName`](#firstName)
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 **Description:** Testing $ref with URL
 
@@ -14,7 +13,7 @@
 | -------------------------- | ------- | ------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
 | - [firstName](#firstName ) | No      | string | No         | In https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/basic.json#/properties/firstName | Person            |
 
-## <a name="firstName"></a>1. Property `root > firstName`
+## <a name="firstName"></a>1. Property`root > firstName`
 
 **Title:** Person
 

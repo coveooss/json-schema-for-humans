@@ -1,18 +1,17 @@
 # Long description
 
-- [1. [Optional] Property Long description > it_s_hard_to_explain](#it_s_hard_to_explain)
+- [1. [Optional] PropertyLong description > it_s_hard_to_explain](#it_s_hard_to_explain)
 
 **Title:** Long description
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 <details>
 <summary>
-<strong> <a name="it_s_hard_to_explain"></a>1. [Optional] Property Long description > it_s_hard_to_explain</strong>  
+<strong> <a name="it_s_hard_to_explain"></a>1. [Optional] PropertyLong description > it_s_hard_to_explain</strong>  
 
 </summary>
 <blockquote>

@@ -1,0 +1,92 @@
+{
+  "$id": "https://example.com/unevaluated-properties.schema.json",
+  "$schema": "http://json-schema.org/draft-2019-09/schema#",
+  "title": "Schema with unevaluatedProperties",
+  "description": "Demonstrates unevaluatedProperties with schema composition",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "properties": {
+    "directProperty": {
+      "type": "string",
+      "description": "A property defined directly on the schema"
+    },
+    "nestedObject": {
+      "type": "object",
+      "description": "Nested object with unevaluatedProperties schema constraint",
+      "unevaluatedProperties": {
+        "type": "string",
+        "pattern": "^[A-Z]",
+        "description": "Unevaluated properties must be strings starting with uppercase letter"
+      },
+      "properties": {
+        "knownProp": {
+          "type": "number",
+          "description": "A known property in the nested object"
+        }
+      },
+      "allOf": [
+        {
+          "properties": {
+            "extendedProp": {
+              "type": "boolean",
+              "description": "Property from allOf in nested object"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "properties": {
+        "fromAllOf1": {
+          "type": "number",
+          "description": "Property evaluated from first allOf branch"
+        }
+      }
+    },
+    {
+      "properties": {
+        "fromAllOf2": {
+          "type": "boolean",
+          "description": "Property evaluated from second allOf branch"
+        }
+      }
+    }
+  ],
+  "oneOf": [
+    {
+      "properties": {
+        "option1": {
+          "type": "string",
+          "description": "Property for option 1"
+        }
+      },
+      "required": ["option1"]
+    },
+    {
+      "properties": {
+        "option2": {
+          "type": "integer",
+          "description": "Property for option 2"
+        }
+      },
+      "required": ["option2"]
+    }
+  ],
+  "if": {
+    "properties": {
+      "directProperty": {
+        "const": "special"
+      }
+    }
+  },
+  "then": {
+    "properties": {
+      "conditionalProp": {
+        "type": "string",
+        "description": "Property evaluated when directProperty is 'special'"
+      }
+    }
+  }
+}

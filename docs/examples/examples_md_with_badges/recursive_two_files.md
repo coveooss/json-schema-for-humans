@@ -1,28 +1,26 @@
 # Person
 
-- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > person`](#person)
-  - [1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > person > children`](#person_children)
+- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`Person > person`](#person)
+  - [1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`Person > person > children`](#person_children)
     - [1.1.1. Person > person > children > person](#person_children_items)
-  - [1.2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > person > siblings`](#person_siblings)
+  - [1.2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`Person > person > siblings`](#person_siblings)
 
 **Title:** Person
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 | Property             | Pattern | Type   | Deprecated | Definition              | Title/Description |
 | -------------------- | ------- | ------ | ---------- | ----------------------- | ----------------- |
 | - [person](#person ) | No      | object | No         | In #/definitions/person | A human being     |
 
-## <a name="person"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > person`
+## <a name="person"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`Person > person`
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | #/definitions/person                                                        |
+|                |                      |
+| -------------- | -------------------- |
+| **Type**       | `object`             |
+| **Defined in** | #/definitions/person |
 
 **Description:** A human being
 
@@ -31,7 +29,7 @@
 | - [children](#person_children ) | No      | array  | No         | -                                                        | The children they had                             |
 | - [siblings](#person_siblings ) | No      | object | No         | Same as [person_children_items](#person_children_items ) | Person definition from second file. Not the same! |
 
-### <a name="person_children"></a>1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > person > children`
+### <a name="person_children"></a>1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`Person > person > children`
 
 |          |         |
 | -------- | ------- |
@@ -53,21 +51,19 @@
 
 #### <a name="person_children_items"></a>1.1.1. Person > person > children > person
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | recursive_two_files2.json#/definitions/person                               |
+|                |                                               |
+| -------------- | --------------------------------------------- |
+| **Type**       | `object`                                      |
+| **Defined in** | recursive_two_files2.json#/definitions/person |
 
 **Description:** Person definition from second file. Not the same!
 
-### <a name="person_siblings"></a>1.2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > person > siblings`
+### <a name="person_siblings"></a>1.2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`Person > person > siblings`
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Same definition as**    | [person_children_items](#person_children_items)                             |
+|                        |                                                 |
+| ---------------------- | ----------------------------------------------- |
+| **Type**               | `object`                                        |
+| **Same definition as** | [person_children_items](#person_children_items) |
 
 **Description:** Person definition from second file. Not the same!
 

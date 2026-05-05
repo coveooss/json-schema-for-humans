@@ -1,16 +1,15 @@
 # Schema Docs
 
-- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > fruits`](#fruits)
+- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`root > fruits`](#fruits)
   - [1.1. root > fruits > fruits items](#fruits_items)
-- [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > vegetables`](#vegetables)
+- [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`root > vegetables`](#vegetables)
   - [2.1. root > vegetables > veggie](#vegetables_items)
-    - [2.1.1. Property `root > vegetables > vegetables items > veggieName`](#vegetables_items_veggieName)
-    - [2.1.2. Property `root > vegetables > vegetables items > veggieLike`](#vegetables_items_veggieLike)
+    - [2.1.1. Property`root > vegetables > vegetables items > veggieName`](#vegetables_items_veggieName)
+    - [2.1.2. Property`root > vegetables > vegetables items > veggieLike`](#vegetables_items_veggieLike)
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 **Description:** A schema with an array
 
@@ -19,7 +18,7 @@
 | - [fruits](#fruits )         | No      | array of string | No         | -          | -                 |
 | - [vegetables](#vegetables ) | No      | array           | No         | -          | -                 |
 
-## <a name="fruits"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > fruits`
+## <a name="fruits"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`root > fruits`
 
 |          |                   |
 | -------- | ----------------- |
@@ -43,7 +42,7 @@
 | -------- | -------- |
 | **Type** | `string` |
 
-## <a name="vegetables"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > vegetables`
+## <a name="vegetables"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`root > vegetables`
 
 |          |         |
 | -------- | ------- |
@@ -63,18 +62,17 @@
 
 ### <a name="vegetables_items"></a>2.1. root > vegetables > veggie
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | #/definitions/veggie                                                        |
+|                |                      |
+| -------------- | -------------------- |
+| **Type**       | `object`             |
+| **Defined in** | #/definitions/veggie |
 
 | Property                                      | Pattern | Type    | Deprecated | Definition | Title/Description          |
 | --------------------------------------------- | ------- | ------- | ---------- | ---------- | -------------------------- |
 | + [veggieName](#vegetables_items_veggieName ) | No      | string  | No         | -          | The name of the vegetable. |
 | + [veggieLike](#vegetables_items_veggieLike ) | No      | boolean | No         | -          | Do I like this vegetable?  |
 
-#### <a name="vegetables_items_veggieName"></a>2.1.1. Property `root > vegetables > vegetables items > veggieName`
+#### <a name="vegetables_items_veggieName"></a>2.1.1. Property`root > vegetables > vegetables items > veggieName`
 
 |          |          |
 | -------- | -------- |
@@ -82,7 +80,7 @@
 
 **Description:** The name of the vegetable.
 
-#### <a name="vegetables_items_veggieLike"></a>2.1.2. Property `root > vegetables > vegetables items > veggieLike`
+#### <a name="vegetables_items_veggieLike"></a>2.1.2. Property`root > vegetables > vegetables items > veggieLike`
 
 |          |           |
 | -------- | --------- |

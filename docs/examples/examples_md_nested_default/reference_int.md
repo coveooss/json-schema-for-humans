@@ -1,29 +1,27 @@
 # Person
 
-- [1. [Optional] Property Person > extra_options_object](#extra_options_object)
-- [2. [Optional] Property Person > name_looks_like_an_int](#name_looks_like_an_int)
+- [1. [Optional] PropertyPerson > extra_options_object](#extra_options_object)
+- [2. [Optional] PropertyPerson > name_looks_like_an_int](#name_looks_like_an_int)
 
 **Title:** Person
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 <details>
 <summary>
-<strong> <a name="extra_options_object"></a>1. [Optional] Property Person > extra_options_object</strong>  
+<strong> <a name="extra_options_object"></a>1. [Optional] PropertyPerson > extra_options_object</strong>  
 
 </summary>
 <blockquote>
 
-|                           |                                     |
-| ------------------------- | ----------------------------------- |
-| **Type**                  | `object`                            |
-| **Required**              | No                                  |
-| **Additional properties** | Any type allowed                    |
-| **Defined in**            | #/definitions/extra_options/anyOf/0 |
+|                |                                     |
+| -------------- | ----------------------------------- |
+| **Type**       | `object`                            |
+| **Required**   | No                                  |
+| **Defined in** | #/definitions/extra_options/anyOf/0 |
 
 **Description:** This is the one
 
@@ -32,17 +30,16 @@
 
 <details>
 <summary>
-<strong> <a name="name_looks_like_an_int"></a>2. [Optional] Property Person > name_looks_like_an_int</strong>  
+<strong> <a name="name_looks_like_an_int"></a>2. [Optional] PropertyPerson > name_looks_like_an_int</strong>  
 
 </summary>
 <blockquote>
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
-| **Defined in**            | #/definitions/10 |
+|                |                  |
+| -------------- | ---------------- |
+| **Type**       | `object`         |
+| **Required**   | No               |
+| **Defined in** | #/definitions/10 |
 
 **Description:** This is just to be annoying. The property name looks like an int
 

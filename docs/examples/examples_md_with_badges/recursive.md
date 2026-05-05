@@ -1,27 +1,25 @@
 # Person
 
-- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > person`](#person)
-  - [1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > person > children`](#person_children)
+- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`Person > person`](#person)
+  - [1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`Person > person > children`](#person_children)
     - [1.1.1. Person > person > children > person](#person_children_items)
 
 **Title:** Person
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 | Property             | Pattern | Type   | Deprecated | Definition              | Title/Description |
 | -------------------- | ------- | ------ | ---------- | ----------------------- | ----------------- |
 | - [person](#person ) | No      | object | No         | In #/definitions/person | A human being     |
 
-## <a name="person"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > person`
+## <a name="person"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`Person > person`
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | #/definitions/person                                                        |
+|                |                      |
+| -------------- | -------------------- |
+| **Type**       | `object`             |
+| **Defined in** | #/definitions/person |
 
 **Description:** A human being
 
@@ -29,7 +27,7 @@
 | ------------------------------- | ------- | ----- | ---------- | ---------- | --------------------- |
 | - [children](#person_children ) | No      | array | No         | -          | The children they had |
 
-### <a name="person_children"></a>1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > person > children`
+### <a name="person_children"></a>1.1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`Person > person > children`
 
 |          |         |
 | -------- | ------- |
@@ -51,11 +49,10 @@
 
 #### <a name="person_children_items"></a>1.1.1. Person > person > children > person
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Same definition as**    | [person](#person)                                                           |
+|                        |                   |
+| ---------------------- | ----------------- |
+| **Type**               | `object`          |
+| **Same definition as** | [person](#person) |
 
 **Description:** A human being
 

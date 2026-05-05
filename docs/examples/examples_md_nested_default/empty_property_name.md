@@ -1,18 +1,17 @@
 # Empty property name
 
-- [1. Property Empty property name >](#root)
+- [1. PropertyEmpty property name >](#root)
 
 **Title:** Empty property name
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 <details>
 <summary>
-<strong> <a name="root"></a>1. Property Empty property name ></strong>  
+<strong> <a name="root"></a>1. PropertyEmpty property name ></strong>  
 
 </summary>
 <blockquote>

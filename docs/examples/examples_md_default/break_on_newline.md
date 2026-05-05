@@ -1,20 +1,19 @@
 # Hello
 
-- [1. Property `Hello > property1`](#property1)
+- [1. Property`Hello > property1`](#property1)
 
 **Title:** Hello
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 | Property                   | Pattern | Type   | Deprecated | Definition | Title/Description |
 | -------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
 | - [property1](#property1 ) | No      | string | No         | -          | Line1<br />Line2  |
 
-## <a name="property1"></a>1. Property `Hello > property1`
+## <a name="property1"></a>1. Property`Hello > property1`
 
 |              |          |
 | ------------ | -------- |

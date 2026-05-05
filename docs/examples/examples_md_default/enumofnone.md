@@ -1,20 +1,19 @@
 # Enum of None
 
-- [1. Property `Enum of None > enumOfNone`](#enumOfNone)
+- [1. Property`Enum of None > enumOfNone`](#enumOfNone)
 
 **Title:** Enum of None
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 | Property                     | Pattern | Type           | Deprecated | Definition | Title/Description |
 | ---------------------------- | ------- | -------------- | ---------- | ---------- | ----------------- |
 | - [enumOfNone](#enumOfNone ) | No      | enum (of null) | No         | -          | enumOfNone        |
 
-## <a name="enumOfNone"></a>1. Property `Enum of None > enumOfNone`
+## <a name="enumOfNone"></a>1. Property`Enum of None > enumOfNone`
 
 |              |                  |
 | ------------ | ---------------- |

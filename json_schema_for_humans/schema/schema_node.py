@@ -113,6 +113,10 @@ class SchemaNode:
         # If True, it means additionalProperties is there and false. If False, additionalProperties is either not set
         # or is set but is not false (depends on self.additional_properties)
         self.no_additional_properties: bool = False
+        self.unevaluated_properties: Optional["SchemaNode"] = None
+        # If True, it means unevaluatedProperties is there and false. If False, unevaluatedProperties is either not set
+        # or is set but is not false (depends on self.unevaluated_properties)
+        self.no_unevaluated_properties: bool = False
         self.pattern_properties: Dict[str, "SchemaNode"] = {}
         self.array_items_def: Optional["SchemaNode"] = array_items_def
         self.array_additional_items_def: Optional["SchemaNode"] = array_additional_items_def
@@ -128,6 +132,15 @@ class SchemaNode:
             (self.properties or self.pattern_properties)
             and self.no_additional_properties
             and not self.additional_properties
+        )
+
+    @property
+    def explicit_no_unevaluated_properties(self) -> bool:
+        """Return True if unevaluatedProperties is set and false (to differentiate from not set)"""
+        return bool(
+            (self.properties or self.pattern_properties)
+            and self.no_unevaluated_properties
+            and not self.unevaluated_properties
         )
 
     @property
@@ -164,11 +177,20 @@ class SchemaNode:
 
     @property
     def is_a_property_node(self) -> bool:
-        return self.is_property or self.is_pattern_property or self.is_additional_properties
+        return self.is_property or self.is_pattern_property or self.is_additional_properties or self.is_unevaluated_properties
 
     @property
     def is_additional_properties_schema(self) -> bool:
         return self.is_additional_properties and self.literal is not True
+
+
+    @property
+    def is_unevaluated_properties(self) -> bool:
+        return self.parent_key == SchemaKeyword.UNEVALUATED_PROPERTIES.value
+
+    @property
+    def is_unevaluated_properties_schema(self) -> bool:
+        return self.is_unevaluated_properties and self.literal is not True
 
     @property
     def iterate_properties(self) -> Iterable["SchemaNode"]:
@@ -180,6 +202,9 @@ class SchemaNode:
 
         if self.additional_properties:
             yield self.additional_properties
+
+        if self.unevaluated_properties:
+            yield self.unevaluated_properties
 
     @property
     def required_properties(self) -> List[str]:
@@ -216,7 +241,7 @@ class SchemaNode:
         path_without_properties = [
             p
             for p in self.path_to_element
-            if p not in [SchemaKeyword.PROPERTIES.value, SchemaKeyword.PATTERN_PROPERTIES.value]
+            if p not in [SchemaKeyword.PROPERTIES.value, SchemaKeyword.PATTERN_PROPERTIES.value ]
         ]
         return " -> ".join([p if isinstance(p, str) else f"Item {p}" for p in path_without_properties])
 
@@ -387,6 +412,10 @@ class SchemaNode:
         return self.get_keyword(SchemaKeyword.ADDITIONAL_PROPERTIES)
 
     @property
+    def kw_unevaluated_properties(self) -> Optional["SchemaNode"]:
+        return self.get_keyword(SchemaKeyword.UNEVALUATED_PROPERTIES)
+
+    @property
     def kw_min_length(self) -> Optional["SchemaNode"]:
         return self.get_keyword(SchemaKeyword.MIN_LENGTH)
 
@@ -469,6 +498,8 @@ class SchemaNode:
             return self.title or self.property_name
         if self.is_additional_properties:
             return "Additional Properties"
+        if self.is_unevaluated_properties:
+            return "Unevaluated Properties"
         return self.breadcrumb_name
 
     @property

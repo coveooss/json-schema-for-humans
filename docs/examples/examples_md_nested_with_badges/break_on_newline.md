@@ -1,17 +1,16 @@
 # Hello
 
-- [1. [Optional] Property Hello > property1](#property1)
+- [1. [Optional] PropertyHello > property1](#property1)
 
 **Title:** Hello
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 <details>
 <summary>
-<strong> <a name="property1"></a>1. [Optional] Property Hello > property1</strong>  
+<strong> <a name="property1"></a>1. [Optional] PropertyHello > property1</strong>  
 
 </summary>
 <blockquote>

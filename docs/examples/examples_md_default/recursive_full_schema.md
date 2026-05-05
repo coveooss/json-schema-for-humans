@@ -1,20 +1,19 @@
 # Bug
 
-- [1. Property `Bug > Code`](#Code)
-- [2. Property `Bug > RecursiveArray`](#RecursiveArray)
+- [1. Property`Bug > Code`](#Code)
+- [2. Property`Bug > RecursiveArray`](#RecursiveArray)
   - [2.1. Bug > RecursiveArray > Bug](#RecursiveArray_items)
-- [3. Property `Bug > DecoratedRecursiveArray`](#DecoratedRecursiveArray)
+- [3. Property`Bug > DecoratedRecursiveArray`](#DecoratedRecursiveArray)
   - [3.1. Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items](#DecoratedRecursiveArray_items)
-    - [3.1.1. Property `Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > SomeName`](#DecoratedRecursiveArray_items_SomeName)
-    - [3.1.2. Property `Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > TheThing`](#DecoratedRecursiveArray_items_TheThing)
+    - [3.1.1. Property`Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > SomeName`](#DecoratedRecursiveArray_items_SomeName)
+    - [3.1.2. Property`Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > TheThing`](#DecoratedRecursiveArray_items_TheThing)
 
 **Title:** Bug
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 **Description:** Display the issue.
 
@@ -24,7 +23,7 @@
 | - [RecursiveArray](#RecursiveArray )                   | No      | array           | No         | -          | RecursiveArray property          |
 | - [DecoratedRecursiveArray](#DecoratedRecursiveArray ) | No      | array of object | No         | -          | DecoratedRecursiveArray property |
 
-## <a name="Code"></a>1. Property `Bug > Code`
+## <a name="Code"></a>1. Property`Bug > Code`
 
 |              |          |
 | ------------ | -------- |
@@ -33,7 +32,7 @@
 
 **Description:** Code property
 
-## <a name="RecursiveArray"></a>2. Property `Bug > RecursiveArray`
+## <a name="RecursiveArray"></a>2. Property`Bug > RecursiveArray`
 
 |              |         |
 | ------------ | ------- |
@@ -58,16 +57,15 @@
 
 **Title:** Bug
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
-| **Same definition as**    | [Bug](#root)     |
+|                        |              |
+| ---------------------- | ------------ |
+| **Type**               | `object`     |
+| **Required**           | No           |
+| **Same definition as** | [Bug](#root) |
 
 **Description:** Display the issue.
 
-## <a name="DecoratedRecursiveArray"></a>3. Property `Bug > DecoratedRecursiveArray`
+## <a name="DecoratedRecursiveArray"></a>3. Property`Bug > DecoratedRecursiveArray`
 
 |              |                   |
 | ------------ | ----------------- |
@@ -90,34 +88,32 @@
 
 ### <a name="DecoratedRecursiveArray_items"></a>3.1. Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
+|              |          |
+| ------------ | -------- |
+| **Type**     | `object` |
+| **Required** | No       |
 
 | Property                                               | Pattern | Type   | Deprecated | Definition            | Title/Description |
 | ------------------------------------------------------ | ------- | ------ | ---------- | --------------------- | ----------------- |
 | - [SomeName](#DecoratedRecursiveArray_items_SomeName ) | No      | string | No         | -                     | -                 |
 | - [TheThing](#DecoratedRecursiveArray_items_TheThing ) | No      | object | No         | Same as [Bug](#root ) | Bug               |
 
-#### <a name="DecoratedRecursiveArray_items_SomeName"></a>3.1.1. Property `Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > SomeName`
+#### <a name="DecoratedRecursiveArray_items_SomeName"></a>3.1.1. Property`Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > SomeName`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-#### <a name="DecoratedRecursiveArray_items_TheThing"></a>3.1.2. Property `Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > TheThing`
+#### <a name="DecoratedRecursiveArray_items_TheThing"></a>3.1.2. Property`Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > TheThing`
 
 **Title:** Bug
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `object`         |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
-| **Same definition as**    | [Bug](#root)     |
+|                        |              |
+| ---------------------- | ------------ |
+| **Type**               | `object`     |
+| **Required**           | No           |
+| **Same definition as** | [Bug](#root) |
 
 **Description:** Display the issue.
 

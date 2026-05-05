@@ -1,16 +1,15 @@
 # Person
 
-- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > firstName`](#firstName)
-- [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > lastName`](#lastName)
-- [3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > age`](#age)
-- [4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > moreInfo`](#moreInfo)
+- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`Person > firstName`](#firstName)
+- [2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`Person > lastName`](#lastName)
+- [3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`Person > age`](#age)
+- [4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`Person > moreInfo`](#moreInfo)
 
 **Title:** Person
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 | Property                   | Pattern | Type    | Deprecated | Definition | Title/Description                   |
 | -------------------------- | ------- | ------- | ---------- | ---------- | ----------------------------------- |
@@ -19,7 +18,7 @@
 | - [age](#age )             | No      | integer | No         | -          | Person                              |
 | - [moreInfo](#moreInfo )   | No      | object  | No         | -          | Any more info you want as an object |
 
-## <a name="firstName"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > firstName`
+## <a name="firstName"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`Person > firstName`
 
 **Title:** Person
 
@@ -39,7 +38,7 @@
 "BDFL"
 ```
 
-## <a name="lastName"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > lastName`
+## <a name="lastName"></a>2. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`Person > lastName`
 
 **Title:** Person
 
@@ -55,7 +54,7 @@
 "Van Rossum"
 ```
 
-## <a name="age"></a>3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > age`
+## <a name="age"></a>3. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`Person > age`
 
 **Title:** Person
 
@@ -75,12 +74,11 @@
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 
-## <a name="moreInfo"></a>4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > moreInfo`
+## <a name="moreInfo"></a>4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`Person > moreInfo`
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 **Description:** Any more info you want as an object
 

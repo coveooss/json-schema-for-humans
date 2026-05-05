@@ -1,7 +1,7 @@
 # Schema Docs
 
-- [1. [Optional] Property root > name](#name)
-- [2. [Optional] Property root > alignment](#alignment)
+- [1. [Optional] Propertyroot > name](#name)
+- [2. [Optional] Propertyroot > alignment](#alignment)
 
 |                           |             |
 | ------------------------- | ----------- |
@@ -11,7 +11,7 @@
 
 <details>
 <summary>
-<strong> <a name="name"></a>1. [Optional] Property root > name</strong>  
+<strong> <a name="name"></a>1. [Optional] Propertyroot > name</strong>  
 
 </summary>
 <blockquote>
@@ -33,7 +33,7 @@
 
 <details>
 <summary>
-<strong> <a name="alignment"></a>2. [Optional] Property root > alignment</strong>  
+<strong> <a name="alignment"></a>2. [Optional] Propertyroot > alignment</strong>  
 
 </summary>
 <blockquote>

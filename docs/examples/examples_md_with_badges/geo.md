@@ -1,14 +1,13 @@
 # Longitude and Latitude Values
 
-- [1. ![Required](https://img.shields.io/badge/Required-blue) Property `Longitude and Latitude Values > latitude`](#latitude)
-- [2. ![Required](https://img.shields.io/badge/Required-blue) Property `Longitude and Latitude Values > longitude`](#longitude)
+- [1. ![Required](https://img.shields.io/badge/Required-blue) Property`Longitude and Latitude Values > latitude`](#latitude)
+- [2. ![Required](https://img.shields.io/badge/Required-blue) Property`Longitude and Latitude Values > longitude`](#longitude)
 
 **Title:** Longitude and Latitude Values
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 **Description:** A geographical coordinate.
 
@@ -17,7 +16,7 @@
 | + [latitude](#latitude )   | No      | number | No         | -          | -                 |
 | + [longitude](#longitude ) | No      | number | No         | -          | -                 |
 
-## <a name="latitude"></a>1. ![Required](https://img.shields.io/badge/Required-blue) Property `Longitude and Latitude Values > latitude`
+## <a name="latitude"></a>1. ![Required](https://img.shields.io/badge/Required-blue) Property`Longitude and Latitude Values > latitude`
 
 |          |          |
 | -------- | -------- |
@@ -28,7 +27,7 @@
 | **Minimum**  | &ge; -90 |
 | **Maximum**  | &le; 90  |
 
-## <a name="longitude"></a>2. ![Required](https://img.shields.io/badge/Required-blue) Property `Longitude and Latitude Values > longitude`
+## <a name="longitude"></a>2. ![Required](https://img.shields.io/badge/Required-blue) Property`Longitude and Latitude Values > longitude`
 
 |          |          |
 | -------- | -------- |

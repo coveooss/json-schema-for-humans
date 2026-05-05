@@ -1,11 +1,10 @@
 # Schema Docs
 
-- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > firstName`](#firstName)
+- [1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`root > firstName`](#firstName)
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 **Description:** Testing $ref with URL
 
@@ -13,7 +12,7 @@
 | -------------------------- | ------- | ------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
 | - [firstName](#firstName ) | No      | string | No         | In https://raw.githubusercontent.com/coveooss/json-schema-for-humans/main/docs/examples/cases/basic.json#/properties/firstName | Person            |
 
-## <a name="firstName"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `root > firstName`
+## <a name="firstName"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property`root > firstName`
 
 **Title:** Person
 

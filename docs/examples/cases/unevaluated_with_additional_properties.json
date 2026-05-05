@@ -1,0 +1,81 @@
+{
+  "$id": "https://example.com/unevaluated-with-additional.schema.json",
+  "$schema": "http://json-schema.org/draft-2019-09/schema#",
+  "title": "unevaluatedProperties with additionalProperties",
+  "description": "Demonstrates the interaction between unevaluatedProperties and additionalProperties",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name field"
+    },
+    "nested": {
+      "type": "object",
+      "description": "Nested object without explicit additional/unevaluated properties constraint",
+      "properties": {
+        "nestedProp": {
+          "type": "number"
+        }
+      }
+    },
+    "withAdditionalFalse": {
+      "type": "object",
+      "description": "Nested object with additionalProperties: false",
+      "additionalProperties": false,
+      "properties": {
+        "allowedProp": {
+          "type": "string"
+        }
+      }
+    },
+    "withAdditionalSchema": {
+      "type": "object",
+      "description": "Nested object with additionalProperties schema",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[A-Z]"
+      },
+      "properties": {
+        "knownProp": {
+          "type": "integer"
+        }
+      }
+    },
+    "withUnevaluatedFalse": {
+      "type": "object",
+      "description": "Nested object with unevaluatedProperties: false and allOf",
+      "unevaluatedProperties": false,
+      "properties": {
+        "baseProp": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "properties": {
+            "extendedProp": {
+              "type": "number",
+              "description": "Property from allOf - should be evaluated"
+            }
+          }
+        }
+      ]
+    },
+    "anInt": {
+      "type": "integer",
+      "description": "This is an integer, it should not show additional properties. (issue #132)"
+    }
+  },
+  "additionalProperties": {
+    "type": "object",
+    "description": "Additional properties must be objects with a type field",
+    "properties": {
+      "type": {
+        "type": "string",
+        "description": "Type of the additional property"
+      }
+    },
+    "required": ["type"]
+  }
+}

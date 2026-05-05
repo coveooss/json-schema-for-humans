@@ -1,18 +1,17 @@
 # Person
 
-- [1. [Optional] Property Person > firstName](#firstName)
-- [2. [Optional] Property Person > lastName](#lastName)
+- [1. [Optional] PropertyPerson > firstName](#firstName)
+- [2. [Optional] PropertyPerson > lastName](#lastName)
 
 **Title:** Person
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 <details>
 <summary>
-<strong> <a name="firstName"></a>1. [Optional] Property Person > firstName</strong>  
+<strong> <a name="firstName"></a>1. [Optional] PropertyPerson > firstName</strong>  
 
 </summary>
 <blockquote>
@@ -30,16 +29,15 @@
 
 <details>
 <summary>
-<strong> <a name="lastName"></a>2. [Optional] Property Person > lastName</strong>  
+<strong> <a name="lastName"></a>2. [Optional] PropertyPerson > lastName</strong>  
 
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | a_file_that_does_not_exist_and_will_never_i_hope.lol.json                   |
+|                |                                                           |
+| -------------- | --------------------------------------------------------- |
+| **Type**       | `object`                                                  |
+| **Defined in** | a_file_that_does_not_exist_and_will_never_i_hope.lol.json |
 
 **Description:** 😅 ERROR in schema generation, a referenced schema could not be loaded, no documentation here unfortunately 🏜️
 

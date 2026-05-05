@@ -1,26 +1,24 @@
 # Schema Docs
 
-- [1. [Optional] Property root > a](#a)
-- [2. [Optional] Property root > b](#b)
+- [1. [Optional] Propertyroot > a](#a)
+- [2. [Optional] Propertyroot > b](#b)
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 <details>
 <summary>
-<strong> <a name="a"></a>1. [Optional] Property root > a</strong>  
+<strong> <a name="a"></a>1. [Optional] Propertyroot > a</strong>  
 
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Default**               | `"Default from a"`                                                          |
-| **Defined in**            | #/definitions/common                                                        |
+|                |                      |
+| -------------- | -------------------- |
+| **Type**       | `object`             |
+| **Default**    | `"Default from a"`   |
+| **Defined in** | #/definitions/common |
 
 **Description:** Description of a
 
@@ -29,17 +27,16 @@
 
 <details>
 <summary>
-<strong> <a name="b"></a>2. [Optional] Property root > b</strong>  
+<strong> <a name="b"></a>2. [Optional] Propertyroot > b</strong>  
 
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Default**               | `"Default from b"`                                                          |
-| **Defined in**            | #/definitions/common                                                        |
+|                |                      |
+| -------------- | -------------------- |
+| **Type**       | `object`             |
+| **Default**    | `"Default from b"`   |
+| **Defined in** | #/definitions/common |
 
 **Description:** A common description
 

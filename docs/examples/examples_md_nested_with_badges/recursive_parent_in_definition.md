@@ -1,73 +1,68 @@
 # Person
 
-- [1. [Optional] Property Person > relationships](#relationships)
-  - [1.1. [Optional] Property Person > relationships > mother](#relationships_mother)
-    - [1.1.1. [Optional] Property Person > relationships > mother > relationships](#relationships_mother_relationships)
-      - [1.1.1.1. [Optional] Property Person > relationships > mother > relationships > mother](#relationships_mother_relationships_mother)
+- [1. [Optional] PropertyPerson > relationships](#relationships)
+  - [1.1. [Optional] PropertyPerson > relationships > mother](#relationships_mother)
+    - [1.1.1. [Optional] PropertyPerson > relationships > mother > relationships](#relationships_mother_relationships)
+      - [1.1.1.1. [Optional] PropertyPerson > relationships > mother > relationships > mother](#relationships_mother_relationships_mother)
 
 **Title:** Person
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 <details>
 <summary>
-<strong> <a name="relationships"></a>1. [Optional] Property Person > relationships</strong>  
+<strong> <a name="relationships"></a>1. [Optional] PropertyPerson > relationships</strong>  
 
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | #/definitions/person/properties/relationships                               |
+|                |                                               |
+| -------------- | --------------------------------------------- |
+| **Type**       | `object`                                      |
+| **Defined in** | #/definitions/person/properties/relationships |
 
 **Description:** Relationships between this person and others
 
 <details>
 <summary>
-<strong> <a name="relationships_mother"></a>1.1. [Optional] Property Person > relationships > mother</strong>  
+<strong> <a name="relationships_mother"></a>1.1. [Optional] PropertyPerson > relationships > mother</strong>  
 
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | #/definitions/person                                                        |
+|                |                      |
+| -------------- | -------------------- |
+| **Type**       | `object`             |
+| **Defined in** | #/definitions/person |
 
 **Description:** A human being
 
 <details>
 <summary>
-<strong> <a name="relationships_mother_relationships"></a>1.1.1. [Optional] Property Person > relationships > mother > relationships</strong>  
+<strong> <a name="relationships_mother_relationships"></a>1.1.1. [Optional] PropertyPerson > relationships > mother > relationships</strong>  
 
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+|          |          |
+| -------- | -------- |
+| **Type** | `object` |
 
 **Description:** Relationships between this person and others
 
 <details>
 <summary>
-<strong> <a name="relationships_mother_relationships_mother"></a>1.1.1.1. [Optional] Property Person > relationships > mother > relationships > mother</strong>  
+<strong> <a name="relationships_mother_relationships_mother"></a>1.1.1.1. [Optional] PropertyPerson > relationships > mother > relationships > mother</strong>  
 
 </summary>
 <blockquote>
 
-|                           |                                                                             |
-| ------------------------- | --------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                    |
-| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Same definition as**    | [mother](#relationships_mother)                                             |
+|                        |                                 |
+| ---------------------- | ------------------------------- |
+| **Type**               | `object`                        |
+| **Same definition as** | [mother](#relationships_mother) |
 
 **Description:** A human being
 
