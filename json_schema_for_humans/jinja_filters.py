@@ -88,6 +88,23 @@ def python_to_json(value: Any) -> Any:
     return json.dumps(value, indent=4, separators=(",", ": "), ensure_ascii=False)
 
 
+def fromjson(value: Any) -> str:
+    """Filter. Convert a SchemaNode literal value to a display string for badges.
+
+    Used to render extra-field badge values. The literal is the raw Python value
+    stored by the intermediate representation (string, int, bool, list, etc.).
+
+    - None → empty string
+    - str → returned as-is
+    - Other types → compact JSON representation
+    """
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        return value
+    return json.dumps(value, separators=(",", ": "), ensure_ascii=False)
+
+
 @pass_environment
 def get_description(env: Environment, schema_node: SchemaNode) -> str:
     """Filter. Get the description of a property or an empty string"""
