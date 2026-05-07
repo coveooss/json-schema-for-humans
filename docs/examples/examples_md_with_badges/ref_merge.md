@@ -12,10 +12,10 @@
 | **Type**                  | `object`                                                                    |
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
-| Property                                             | Pattern | Type             | Deprecated | Definition                     | Title/Description     |
-| ---------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------------ | --------------------- |
-| - [aProperty](#aProperty )                           | No      | enum (of string) | No         | In #/definitions/aProperty     | Title from definition |
-| - [aDictPropertyARequired](#aDictPropertyARequired ) | No      | object           | No         | In #/definitions/aDictProperty | -                     |
+| Property                                             | Pattern | Type             | Deprecated | Definition                     | Title/Description                               |
+| ---------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------------ | ----------------------------------------------- |
+| - [aProperty](#aProperty )                           | No      | enum (of string) | No         | In #/definitions/aProperty     | Title from definition [(read more)](#aProperty) |
+| - [aDictPropertyARequired](#aDictPropertyARequired ) | No      | object           | No         | In #/definitions/aDictProperty | -                                               |
 
 ## <a name="aProperty"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Test > aProperty`
 

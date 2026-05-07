@@ -90,10 +90,10 @@
 | **Type**                  | `object`                                                                    |
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
-| Property                                               | Pattern | Type   | Deprecated | Definition            | Title/Description |
-| ------------------------------------------------------ | ------- | ------ | ---------- | --------------------- | ----------------- |
-| - [SomeName](#DecoratedRecursiveArray_items_SomeName ) | No      | string | No         | -                     | -                 |
-| - [TheThing](#DecoratedRecursiveArray_items_TheThing ) | No      | object | No         | Same as [Bug](#root ) | Bug               |
+| Property                                               | Pattern | Type   | Deprecated | Definition            | Title/Description                                          |
+| ------------------------------------------------------ | ------- | ------ | ---------- | --------------------- | ---------------------------------------------------------- |
+| - [SomeName](#DecoratedRecursiveArray_items_SomeName ) | No      | string | No         | -                     | -                                                          |
+| - [TheThing](#DecoratedRecursiveArray_items_TheThing ) | No      | object | No         | Same as [Bug](#root ) | Bug [(read more)](#DecoratedRecursiveArray_items_TheThing) |
 
 #### <a name="DecoratedRecursiveArray_items_SomeName"></a>3.1.1. Property `Bug > DecoratedRecursiveArray > DecoratedRecursiveArray items > SomeName`
 

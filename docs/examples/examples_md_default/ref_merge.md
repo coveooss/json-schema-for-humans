@@ -13,10 +13,10 @@
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-| Property                                             | Pattern | Type             | Deprecated | Definition                     | Title/Description     |
-| ---------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------------ | --------------------- |
-| - [aProperty](#aProperty )                           | No      | enum (of string) | No         | In #/definitions/aProperty     | Title from definition |
-| - [aDictPropertyARequired](#aDictPropertyARequired ) | No      | object           | No         | In #/definitions/aDictProperty | -                     |
+| Property                                             | Pattern | Type             | Deprecated | Definition                     | Title/Description                               |
+| ---------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------------ | ----------------------------------------------- |
+| - [aProperty](#aProperty )                           | No      | enum (of string) | No         | In #/definitions/aProperty     | Title from definition [(read more)](#aProperty) |
+| - [aDictPropertyARequired](#aDictPropertyARequired ) | No      | object           | No         | In #/definitions/aDictProperty | -                                               |
 
 ## <a name="aProperty"></a>1. Property `Test > aProperty`
 

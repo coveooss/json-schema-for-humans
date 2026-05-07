@@ -6,6 +6,7 @@
 - [4. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > driverLicenseId`](#driverLicenseId)
   - [4.1. Property `Person > driverLicenseId > allOf > no driver licence`](#driverLicenseId_allOf_i0)
   - [4.2. Property `Person > driverLicenseId > allOf > driver licence id`](#driverLicenseId_allOf_i1)
+- [5. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > middleName`](#middleName)
 
 **Title:** Person
 
@@ -14,12 +15,13 @@
 | **Type**                  | `object`                                                                    |
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
-| Property                               | Pattern | Type        | Deprecated | Definition | Title/Description |
-| -------------------------------------- | ------- | ----------- | ---------- | ---------- | ----------------- |
-| - [firstName](#firstName )             | No      | string      | No         | -          | Person            |
-| - [lastName](#lastName )               | No      | string      | No         | -          | Person            |
-| - [age](#age )                         | No      | integer     | No         | -          | Person            |
-| - [driverLicenseId](#driverLicenseId ) | No      | Combination | No         | -          | -                 |
+| Property                               | Pattern | Type        | Deprecated | Definition | Title/Description                |
+| -------------------------------------- | ------- | ----------- | ---------- | ---------- | -------------------------------- |
+| - [firstName](#firstName )             | No      | string      | No         | -          | Person [(read more)](#firstName) |
+| - [lastName](#lastName )               | No      | string      | No         | -          | Person [(read more)](#lastName)  |
+| - [age](#age )                         | No      | integer     | No         | -          | Person [(read more)](#age)       |
+| - [driverLicenseId](#driverLicenseId ) | No      | Combination | No         | -          | -                                |
+| - [middleName](#middleName )           | No      | string      | No         | -          | Middle Name                      |
 
 ## <a name="firstName"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > firstName`
 
@@ -78,6 +80,14 @@
 ### <a name="driverLicenseId_allOf_i1"></a>4.2. Property `Person > driverLicenseId > allOf > driver licence id`
 
 **Title:** driver licence id
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
+
+## <a name="middleName"></a>5. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `Person > middleName`
+
+**Title:** Middle Name
 
 |          |          |
 | -------- | -------- |
