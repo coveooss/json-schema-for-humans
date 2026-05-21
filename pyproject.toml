@@ -28,7 +28,7 @@ include = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-click = ">=8.0.1,<8.2"
+click = ">=8.3.3,<8.4"
 dataclasses-json = "^0.6.7"
 Jinja2 = ">3"
 markdown2 = "2.5.5"
