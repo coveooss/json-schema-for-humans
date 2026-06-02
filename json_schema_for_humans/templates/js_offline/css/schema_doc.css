@@ -68,14 +68,19 @@ body {
 
 .badge.value-type {
     font-size: 120%;
-    margin-right: 5px;
+    margin-right: 10px;
     margin-bottom: 10px;
 }
 
-
 .badge.default-value {
     font-size: 120%;
-    margin-left: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.badge.extra-field-value {
+    font-size: 120%;
+    margin-right: 10px;
     margin-bottom: 10px;
 }
 
