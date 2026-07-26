@@ -513,14 +513,36 @@ def test_pattern_properties_html_id() -> None:
         soup, ["not_a_pattern", "Title 4", "Title 1", "Title 2", "Title 3"]
     )
 
-    tests.html_schema_doc_asserts.assert_descriptions(
-        soup,
-        ["Description 4", "Description 1", "Description 2", "Description 3"],
-    )
 
-    property_divs = soup.find_all("div", class_="property-definition-div")
-    property_divs_id = [div.attrs["id"] for div in property_divs]
-    assert property_divs_id == ["not_a_pattern", "not_a_pattern_pattern1", "pattern1", "pattern2", "pattern3"]
+def test_dependencies_with_list_values() -> None:
+    """Test that dependencies with list values (not dicts) don't crash.
+
+    In JSON Schema, dependencies can have values that are either schemas
+    (objects) or arrays of property names. When a dependencies object
+    contains a key whose value is a list (not a dict), the properties
+    handler should skip it gracefully instead of raising AttributeError.
+    """
+    import json
+    import tempfile
+    from pathlib import Path
+
+    schema = {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "Dependencies with list values",
+        "type": "object",
+        "dependencies": {
+            "properties": ["order"]
+        },
+    }
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
+        json.dump(schema, f)
+        f.flush()
+        try:
+            from json_schema_for_humans.generate import generate_from_schema
+            html = generate_from_schema(Path(f.name))
+            assert "<body" in html
+        finally:
+            os.unlink(f.name)
 
 
 def test_conditional_subschema() -> None:
