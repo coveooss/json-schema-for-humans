@@ -529,6 +529,8 @@ def _build_node(
                 continue
 
             if schema_key == SchemaKeyword.PROPERTIES.value:
+                if not isinstance(schema_value, dict):
+                    continue
                 for new_property_name, new_property_schema in schema_value.items():
                     new_node.properties[new_property_name] = _build_node(
                         config=config,
@@ -565,6 +567,8 @@ def _build_node(
                         parent_key=schema_key,
                     )
             elif schema_key == SchemaKeyword.PATTERN_PROPERTIES.value:
+                if not isinstance(schema_value, dict):
+                    continue
                 for new_property_name, new_property_schema in schema_value.items():
                     new_node.pattern_properties[new_property_name] = _build_node(
                         config=config,
