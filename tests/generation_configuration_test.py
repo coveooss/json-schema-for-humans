@@ -1,5 +1,8 @@
 from json_schema_for_humans.const import DocumentationTemplate
+from json_schema_for_humans.generate import generate_from_schema
 from json_schema_for_humans.generation_configuration import GenerationConfiguration
+
+from tests.test_utils import get_test_case_path
 
 
 def test_default_values() -> None:
@@ -97,3 +100,44 @@ def test_override_template_md_options() -> None:
     )
     assert config.template_md_options is not None
     assert config.template_md_options["badge_as_image"] is True
+
+
+class TestExtraFields:
+    def test_extra_fields_default_values(self) -> None:
+        """Test that extra_fields defaults to an empty dict."""
+        config = GenerationConfiguration()
+        assert config.extra_fields == {}
+
+    def test_extra_fields_badges_appear_after_default(self) -> None:
+        """Extra-field badges are rendered after Default and before <br/>."""
+        config = GenerationConfiguration(
+            extra_fields={"Unit": "#1a3a5c", "User Level": "#c47c00"},
+        )
+        result = generate_from_schema(get_test_case_path("extra_fields"), config=config)
+        assert '<span class="badge extra-field-value" style="background-color: #1a3a5c' in result
+        assert "Unit: seconds" in result
+        assert "User Level: basic" in result
+        # buffer_size has Unit but not User Level
+        assert "Unit: bytes" in result
+
+    def test_extra_fields_empty_dict_renders_no_badges(self) -> None:
+        """An empty extra_fields dict (the default) produces no extra-field badges."""
+        config = GenerationConfiguration()
+        result = generate_from_schema(get_test_case_path("extra_fields"), config=config)
+        assert "extra-field-value" not in result
+
+    def test_extra_fields_absent_key_is_skipped(self) -> None:
+        """A key in extra_fields that doesn't exist in a schema node is silently skipped."""
+        config = GenerationConfiguration(
+            extra_fields={"NonExistentKey": None},
+        )
+        result = generate_from_schema(get_test_case_path("extra_fields"), config=config)
+        assert "NonExistentKey" not in result
+
+    def test_extra_fields_none_color_uses_default(self) -> None:
+        """A key in extra_fields with a None color uses the default color #1a3a5c."""
+        config = GenerationConfiguration(
+            extra_fields={"Unit": None},
+        )
+        result = generate_from_schema(get_test_case_path("extra_fields"), config=config)
+        assert "background-color: #1a3a5c" in result

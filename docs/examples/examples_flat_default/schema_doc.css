@@ -71,7 +71,13 @@ body {
 
 .badge.value-type,.badge.no-additional,.badge.default-value {
     font-size: 120%;
-    margin-right: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.badge.extra-field-value {
+    font-size: 120%;
+    margin-right: 10px;
     margin-bottom: 10px;
 }
 

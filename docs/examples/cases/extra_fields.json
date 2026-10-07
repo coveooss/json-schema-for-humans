@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Configuration With Extra Fields",
+    "type": "object",
+    "properties": {
+        "timeout": {
+            "type": "integer",
+            "default": 30,
+            "Unit": "seconds",
+            "User Level": "basic",
+            "description": "Connection timeout."
+        },
+        "buffer_size": {
+            "type": "integer",
+            "default": 4096,
+            "Unit": "bytes",
+            "description": "Read buffer size."
+        },
+        "name": {
+            "type": "string",
+            "description": "Identifier (no extra fields, for coverage of the absent-key path)."
+        }
+    }
+}

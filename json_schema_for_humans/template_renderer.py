@@ -34,6 +34,7 @@ class TemplateRenderer:
             md_template.register_jinja(env)
 
         env.filters["python_to_json"] = jinja_filters.python_to_json
+        env.filters["fromjson"] = jinja_filters.fromjson
         env.filters["get_default"] = (
             jinja_filters.get_default_look_in_description
             if self.config.default_from_description
