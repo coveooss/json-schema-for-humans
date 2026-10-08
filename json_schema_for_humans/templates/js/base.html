@@ -17,11 +17,68 @@
     {% endif %}
     <title>{%- if title -%}{{ title }}{%- else -%}Schema Docs{%- endif -%}</title>
 </head>
+<script>
+function collapseAll() {
+    // Select all currently open elements
+    const closedNodes = document.querySelectorAll('.collapse.show');
+    closedNodes.forEach(node => {
+        node.classList.remove('show');
+        node.setAttribute('aria-expanded', 'false');
+    });
+}
+function expandAll() {
+    // Select all currently open elements
+    const closedNodes = document.querySelectorAll('.collapse:not(.show)');
+    let pos = 0;
+    expandNext();
+
+    function expandNext() {
+        if (pos >= closedNodes.length) {
+            return;
+        }
+
+        if (pos > 1) {
+            // if the prior node is not visible on the page, then assume the rest are not either
+            const priorNode = closedNodes[pos - 1];
+            if (!isVisible(priorNode)) {
+                // Use the "Fast" instant method for everything off-screen
+                while (pos < closedNodes.length) {
+                    const offscreenNode = closedNodes[pos];
+                    offscreenNode.classList.add('show');
+                    offscreenNode.setAttribute('aria-expanded', 'true');
+                    pos++;
+                }
+                return;
+            }
+        }
+
+        const node = closedNodes[pos];
+        $(node).collapse('show');
+        pos++;
+        setTimeout(expandNext);
+    }
+
+    function isVisible(node) {
+        const rect = node.getBoundingClientRect();
+        const height = (window.innerHeight || document.documentElement.clientHeight);
+
+        // Check if the node is within the visible viewport
+        const isVisible = (
+            rect.top >= 0 &&
+            rect.bottom <= height
+        );
+
+        return isVisible
+    }
+}
+    </script>
+
+
 <body onload="anchorOnLoad();" id="root">
     {%- if config.expand_buttons -%}
         <div class="text-right">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
+            <button class="btn btn-primary" onclick="expandAll()">Expand all</button>
+            <button class="btn btn-primary" onclick="collapseAll()">Collapse all</button>
         </div>
     {%- endif -%}
 
