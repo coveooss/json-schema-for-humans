@@ -269,6 +269,8 @@ def _resolve_ref(
             referenced_schema_path = uri_part
         elif uri_part.startswith("file:"):
             referenced_schema_path = os.path.realpath(os.path.join(os.path.dirname(current_node.file), uri_part[5:]))
+        elif current_node.file.startswith("http"):
+            referenced_schema_path = urllib.parse.urljoin(current_node.file, uri_part)
         else:
             referenced_schema_path = os.path.realpath(os.path.join(os.path.dirname(current_node.file), uri_part))
     elif current_node.file.startswith("http"):
