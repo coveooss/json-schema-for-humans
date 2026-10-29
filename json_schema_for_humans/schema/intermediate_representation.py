@@ -282,6 +282,21 @@ def _resolve_ref(
     found_reference = resolved_references[referenced_schema_path].get(anchor_part)
     reference_users[referenced_schema_path][anchor_part].append(current_node)
 
+    # Check for circular reference by walking up the parent chain
+    # If we find the same reference path being built, we have a cycle
+    parent_node = current_node.parent
+    while parent_node:
+        if (parent_node.file == referenced_schema_path and
+            "/".join(parent_node.path_to_element) == anchor_part):
+            # Found circular reference - create a link instead of infinite recursion
+            current_node.is_displayed = False
+            if found_reference:
+                return found_reference, found_reference
+            else:
+                # Create a placeholder that indicates circular reference
+                return None, None
+        parent_node = parent_node.parent
+
     if found_reference and found_reference != current_node:
         if config.link_to_reused_ref:
             return _find_ref(
