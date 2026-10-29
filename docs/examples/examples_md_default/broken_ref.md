@@ -13,7 +13,7 @@
 
 | Property                   | Pattern | Type   | Deprecated | Definition                                                   | Title/Description                                                                                             |
 | -------------------------- | ------- | ------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
-| - [firstName](#firstName ) | No      | string | No         | -                                                            | Person                                                                                                        |
+| - [firstName](#firstName ) | No      | string | No         | -                                                            | Person [(read more)](#firstName)                                                                              |
 | - [lastName](#lastName )   | No      | object | No         | In a_file_that_does_not_exist_and_will_never_i_hope.lol.json | 😅 ERROR in schema generation, a referenced schema could not be loaded, no documentation here unfortunately 🏜️ |
 
 ## <a name="firstName"></a>1. Property `Person > firstName`
