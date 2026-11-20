@@ -11,11 +11,11 @@
 | **Type**                  | `object`                                                                    |
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 
-| Property                                 | Pattern | Type   | Deprecated | Definition | Title/Description     |
-| ---------------------------------------- | ------- | ------ | ---------- | ---------- | --------------------- |
-| - [raw_html](#raw_html )                 | No      | string | No         | -          | Some raw HTML         |
-| - [html_in_markdown](#html_in_markdown ) | No      | string | No         | -          | Some HTML in Markdown |
-| - [json_in_markdown](#json_in_markdown ) | No      | string | No         | -          | Some JSON in Markdown |
+| Property                                 | Pattern | Type   | Deprecated | Definition | Title/Description                                      |
+| ---------------------------------------- | ------- | ------ | ---------- | ---------- | ------------------------------------------------------ |
+| - [raw_html](#raw_html )                 | No      | string | No         | -          | Some raw HTML [(read more)](#raw_html)                 |
+| - [html_in_markdown](#html_in_markdown ) | No      | string | No         | -          | Some HTML in Markdown [(read more)](#html_in_markdown) |
+| - [json_in_markdown](#json_in_markdown ) | No      | string | No         | -          | Some JSON in Markdown [(read more)](#json_in_markdown) |
 
 ## <a name="raw_html"></a>1. ![Optional](https://img.shields.io/badge/Optional-yellow) Property `HTML in descriptions > raw_html`
 
