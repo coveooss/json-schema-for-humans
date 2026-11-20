@@ -91,6 +91,7 @@ def build_intermediate_representation(
         schema_file_path=absolute_schema_path,
         path_to_element=[],
         schema=loaded_schema,
+        ref_stack=[],
     )
 
     return intermediate_representation
@@ -147,10 +148,10 @@ def _find_ref(
 ) -> Tuple[Optional[SchemaNode], Optional[SchemaNode]]:
     reference_users_for_this_schema = reference_users[found_reference.file][anchor_part]
 
-    # Detect infinite loop
+    # Detect infinite loop and fall back to a link to the already built node.
     if _has_recursive_reference(reference_users, current_node):
-        # Huh oh, this node refers to the current node, let's break the cycle!
-        return None, None
+        current_node.is_displayed = False
+        return found_reference, found_reference
 
     # Check if the node has already been documented (also for infinite loops)
     already_resolved: Optional[SchemaNode] = resolved_references.get(referenced_schema_path, {}).get(anchor_part)
@@ -220,6 +221,7 @@ def _resolve_ref(
     current_node: SchemaNode,
     schema: Union[Dict, List, int, str],
     loaded_schemas: Dict[str, Any],
+    ref_stack: Optional[List[Tuple[str, str]]],
 ) -> Tuple[Optional[SchemaNode], Optional[SchemaNode]]:
     """Resolve the $ref keyword
 
@@ -282,7 +284,21 @@ def _resolve_ref(
     found_reference = resolved_references[referenced_schema_path].get(anchor_part)
     reference_users[referenced_schema_path][anchor_part].append(current_node)
 
-    if found_reference and found_reference != current_node:
+    ref_key = (referenced_schema_path, anchor_part)
+    if ref_stack is not None and ref_key in ref_stack:
+        cycle_reference = found_reference or resolved_references.get(referenced_schema_path, {}).get(anchor_part)
+        if cycle_reference:
+            current_node.is_displayed = False
+            return cycle_reference, cycle_reference
+        return None, None
+
+    if found_reference:
+        is_recursive = _has_recursive_reference(reference_users, current_node) or _has_reference_to_parent(
+            referenced_schema_path, anchor_part, current_node
+        )
+        if is_recursive:
+            current_node.is_displayed = False
+            return found_reference, found_reference
         if config.link_to_reused_ref:
             return _find_ref(
                 found_reference,
@@ -292,30 +308,31 @@ def _resolve_ref(
                 anchor_part,
                 current_node,
             )
-        else:
-            if _has_recursive_reference(reference_users, current_node) or _has_reference_to_parent(
-                referenced_schema_path, anchor_part, current_node
-            ):
-                current_node.is_displayed = False
-                return found_reference, found_reference
 
     # Not an existing reference, so it shall be built
     referenced_schema_path_to_element = anchor_part.split("/")
-    new_reference = _build_node(
-        config=config,
-        resolved_references=resolved_references,
-        reference_users=reference_users,
-        loaded_schemas=loaded_schemas,
-        depth=current_node.depth,
-        html_id=current_node.html_id,
-        breadcrumb_name=current_node.breadcrumb_name,
-        property_name=current_node.property_name,
-        schema_file_path=referenced_schema_path,
-        path_to_element=referenced_schema_path_to_element,
-        schema=_load_schema(referenced_schema_path, referenced_schema_path_to_element, loaded_schemas),
-        parent=current_node.parent,
-        parent_key=current_node.parent_key,
-    )
+    if ref_stack is None:
+        ref_stack = []
+    ref_stack.append(ref_key)
+    try:
+        new_reference = _build_node(
+            config=config,
+            resolved_references=resolved_references,
+            reference_users=reference_users,
+            loaded_schemas=loaded_schemas,
+            depth=current_node.depth,
+            html_id=current_node.html_id,
+            breadcrumb_name=current_node.breadcrumb_name,
+            property_name=current_node.property_name,
+            schema_file_path=referenced_schema_path,
+            path_to_element=referenced_schema_path_to_element,
+            schema=_load_schema(referenced_schema_path, referenced_schema_path_to_element, loaded_schemas),
+            parent=current_node.parent,
+            parent_key=current_node.parent_key,
+            ref_stack=ref_stack,
+        )
+    finally:
+        ref_stack.pop()
     return new_reference, new_reference
 
 
@@ -424,6 +441,7 @@ def _build_node(
     schema: Optional[Union[Dict, List, int, str]],
     parent: Optional[SchemaNode] = None,
     parent_key: Optional[str] = None,
+    ref_stack: Optional[List[Tuple[str, str]]] = None,
 ) -> SchemaNode:
     """Recursively build a schema representation
 
@@ -439,6 +457,9 @@ def _build_node(
     """
     if not schema_file_path.startswith("http"):
         schema_file_path = os.path.realpath(schema_file_path)
+
+    if ref_stack is None:
+        ref_stack = []
 
     html_id = _escape_html_id(config, html_id)
     new_node = SchemaNode(
@@ -544,6 +565,7 @@ def _build_node(
                         schema=new_property_schema,
                         parent=new_node,
                         parent_key=schema_key,
+                        ref_stack=ref_stack,
                     )
             elif schema_key == SchemaKeyword.ADDITIONAL_PROPERTIES.value:
                 if schema_value is False:
@@ -563,6 +585,7 @@ def _build_node(
                         schema=schema_value,
                         parent=new_node,
                         parent_key=schema_key,
+                        ref_stack=ref_stack,
                     )
             elif schema_key == SchemaKeyword.PATTERN_PROPERTIES.value:
                 for new_property_name, new_property_schema in schema_value.items():
@@ -580,6 +603,7 @@ def _build_node(
                         schema=new_property_schema,
                         parent=new_node,
                         parent_key=schema_key,
+                        ref_stack=ref_stack,
                     )
                     pattern_id += 1
             elif schema_key in [SchemaKeyword.ITEMS.value, SchemaKeyword.PREFIX_ITEMS.value]:
@@ -603,6 +627,7 @@ def _build_node(
                                 schema=array_item_schema,
                                 parent=new_node,
                                 parent_key=schema_key,
+                                ref_stack=ref_stack,
                             )
                         )
                 elif not isinstance(schema_value, bool):
@@ -622,6 +647,7 @@ def _build_node(
                             schema=schema_value,
                             parent=new_node,
                             parent_key=schema_key,
+                            ref_stack=ref_stack,
                         )
                     else:
                         breadcrumb_name = f"{breadcrumb_name} additional items"
@@ -639,6 +665,7 @@ def _build_node(
                             schema=schema_value,
                             parent=new_node,
                             parent_key=schema_key,
+                            ref_stack=ref_stack,
                         )
                 else:
                     new_node.array_additional_items = schema_value
@@ -672,6 +699,7 @@ def _build_node(
                     schema=schema_value,
                     parent=new_node,
                     parent_key=schema_key,
+                    ref_stack=ref_stack,
                 )
         new_node.keywords = keywords
     elif isinstance(schema, list):
@@ -692,6 +720,7 @@ def _build_node(
                     path_to_element=path_to_element + [str(i)],
                     schema=element,
                     parent=new_node,
+                    ref_stack=ref_stack,
                 )
             )
         new_node.array_items = array_items
@@ -700,7 +729,7 @@ def _build_node(
         new_node.literal = schema
 
     new_node.links_to, new_node.refers_to = _resolve_ref(
-        config, resolved_references, reference_users, new_node, schema, loaded_schemas
+        config, resolved_references, reference_users, new_node, schema, loaded_schemas, ref_stack
     )
 
     return new_node
