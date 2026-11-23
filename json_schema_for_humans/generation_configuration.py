@@ -59,8 +59,10 @@ class GenerationConfiguration:
     template_md_options: Optional[Dict[str, Any]] = None
     with_footer: bool = True
     footer_show_time: bool = True
+    extra_fields: Optional[Dict[str, Optional[str]]] = None
 
     def __post_init__(self) -> None:
+        self.extra_fields = self.extra_fields or {}
         self.markdown_options = self.markdown_options or {}
         default_markdown_options: Dict[str, Any] = {
             "fenced-code-blocks": {"cssclass": "highlight jumbotron"},
@@ -173,7 +175,7 @@ def get_final_config(
 
 
 def _load_config(
-    config_parameter: Union[str, Path, FileLikeType, Dict[str, Any], GenerationConfiguration]
+    config_parameter: Union[str, Path, FileLikeType, Dict[str, Any], GenerationConfiguration],
 ) -> GenerationConfiguration:
     """Load the configuration from either the path (as str or Path) to a config file, the open config file object,
     The loaded config as a dict or the GenerateConfiguration object directly.
