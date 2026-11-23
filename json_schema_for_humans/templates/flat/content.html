@@ -25,6 +25,16 @@
         {%- if default_value -%}
             {{ " " }}<span class="badge badge-success default-value">Default: {{ default_value }}</span>
         {%- endif -%}
+
+        {# Display extra fields from json_schema_extra #}
+        {%- for field_key, field_color in config.extra_fields.items() -%}
+            {%- set field_node = keys.get(field_key) -%}
+            {%- if field_node is not none and field_node.literal is not none -%}
+                {%- set field_value = field_node.literal | fromjson -%}
+                {%- set resolved_color = field_color if field_color else "#1a3a5c" -%}
+                {{ " " }}<span class="badge extra-field-value" style="background-color: {{ resolved_color }}; color: #ffffff;">{{ field_key }}: {{ field_value }}</span>
+            {%- endif -%}
+        {%- endfor -%}
         <br/>
 
         {%- set description = (schema | get_description) -%}

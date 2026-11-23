@@ -164,6 +164,12 @@
       "description": "Whether the footer should display the generation time",
       "default": true
     },
+    "extra_fields": {
+      "type": "object",
+      "additionalProperties": { "type": ["string", "null"] },
+      "default": {},
+      "description": "(HTML outputs only)\nMapping of JSON schema extra-field keys to display as colored badges alongside the Type, Format, and Default badges.\n\nKeys are matched case-sensitively against property names in the generated JSON schema. A key present in this map but absent from a schema node is silently skipped.\n\nThe value for each key is the CSS color string for the badge background, or null to use the default color (#1a3a5c).\n\nAn empty object (the default) disables the feature.\n\nExample: {\"Unit\": \"#1a3a5c\", \"User Level\": \"#c47c00\", \"user\": null}"
+    },
     "allow_html_description": {
       "type": "boolean",
       "default": false,
