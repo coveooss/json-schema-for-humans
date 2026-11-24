@@ -28,7 +28,7 @@ def assert_cli_runner_result(result: Result) -> None:
 
 def assert_cli_runner_exited(result: Result, expected_exception_text: str) -> None:
     assert result.exit_code > 0
-    assert expected_exception_text in result.stdout
+    assert expected_exception_text in result.output
 
 
 def test_generate_using_cli_default() -> None:
