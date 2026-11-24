@@ -82,6 +82,12 @@ body {
     font-size: 120%;
     margin-right: 10px;
     margin-bottom: 10px;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .badge.restriction {
