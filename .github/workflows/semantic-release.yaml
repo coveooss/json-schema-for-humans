@@ -39,7 +39,18 @@ jobs:
         id: release
         run: npx semantic-release
 
+      - name: Check | Distribution Artifacts
+        id: dist
+        shell: bash
+        run: |
+          if compgen -G "dist/*" > /dev/null; then
+            echo "built=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "built=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Upload | Distribution Artifacts
+        if: ${{ steps.dist.outputs.built == 'true' }}
         uses: actions/upload-artifact@v7
         with:
           name: distribution-artifacts
@@ -47,7 +58,7 @@ jobs:
           if-no-files-found: error
 
     outputs:
-      released: ${{ steps.release.conclusion == 'success' || 'false' }}
+      released: ${{ steps.dist.outputs.built }}
 
   deploy:
     # 1. Separate out the deploy step from the publish step to run each step at
